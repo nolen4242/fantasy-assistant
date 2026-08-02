@@ -7,8 +7,8 @@ services:
       - "7687:7687"   # bolt
     environment:
       - NEO4J_AUTH=${NEO4J_AUTH:-neo4j/fantasy-dev-password}
-      - NEO4J_PLUGINS=["apoc"]
-      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_PLUGINS=["apoc","graph-data-science"]
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*,gds.*
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
