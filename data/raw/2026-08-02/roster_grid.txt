@@ -1,0 +1,81 @@
+source: https://buecker.baseball.cbssports.com/teams/roster-grid
+captured: 2026-08-02 ~11:35 ET
+legend: (R)=reserve (I)=injured (M)=minors; grouped by lineup position C/1B/2B/3B/SS/MI/CI/OF/U/P
+
+Big Sticks
+C: S Perez | 1B: B Harper | 2B: B Lowe | 3B: J Caminero | SS: G Perdomo | MI: B Stott | CI: A Burleson
+OF: O Cruz, J Rodriguez, M Moniak, T Ward, R O'Hearn(I)
+U: N Hoerner, B Doyle(I), J Baez(M)
+P: J Hader, L Roupp, J Latz, R Suarez, H Brown, J Romano, J Luzardo, N Eovaldi, J Soriano, C Beeter(R), M Gore(R), T Santillan(I), D Palencia(I)
+
+Dawg
+C: D Dingler | 1B: W Contreras | 2B: F Tatis Jr. | 3B: R Lewis | SS: J Pena | MI: C Seager, M Semien(R), B Donovan(I) | CI: M Murakami
+OF: J Altuve, S Suzuki, R Arozarena, B Reynolds
+U: S Ohtani (Batter)
+P: A Ashby, K Gausman, N Martinez, K Jansen, T Bibee, M Fried, E Diaz, Y Yamamoto, S Manaea, J Estrada(R), C Rodon(I), J Flaherty(I), C Holmes(I)
+
+Gashouse Gang
+C: W Contreras | 1B: C Walker | 2B: L Garcia | 3B: A Bregman | SS: B Bichette | MI: K McGonigle | CI: J Bell
+OF: M Dubon, B Nimmo, G Springer, B Marsh
+U: D Baldwin, J.P. Crawford(I)
+P: J Misiorowski, J Ryan, M Boyd, T Skubal, A Morejon, G Whitlock, C Smith, B Singer, C Mize, B King(R), J Leiter(I), B Brown(I), S Smith(M)
+
+Guillotine
+C: G Moreno | 1B: J Caglianone | 2B: S Antonacci | 3B: M Muncy | SS: G Henderson | MI: Z Neto | CI: J Caballero
+OF: J Chourio, H Ramos, J Duran, T Soderstrom, C Smith(R), J Marsee(R)
+U: B Montgomery
+P: B Garcia, J Cantillo, N McLean, L Gilbert, D Williams, C Cavalli, W Warren, J Bennett, D Rasmussen, R Pepiot(I), C Early(I), M Meyer(I), N Lodolo(I), J Steele(I), C Ponce(I), S Schwellenbach(I), R Suarez(I)
+
+Like a Nightmare
+C: R Jeffers | 1B: F Freeman | 2B: K Marte | 3B: M Machado | SS: C Meidroth, B Witt(I) | MI: B Turang | CI: M Vargas
+OF: J Merrill, C Rafaela, C Simpson, L Butler, W Abreu(R), B Buxton(I)
+U: J Chisholm Jr.
+P: R Sasaki, B Baker, A Nola, R Detmers, B Miller, D Bednar, J Jones, B Ashcraft, G Jax, E Sheehan(R), Y Kikuchi(I), E Cabrera(I)
+
+Long Balls
+C: L Hicks, A Rutschman(I) | 1B: T France | 2B: O Albies | 3B: S Stewart, J Lawlar(I) | SS: J Wilson | MI: L Keaschall | CI: N Kurtz, C Encarnacion-Strand(R), E Suarez(R)
+OF: H Hernandez, J Adell, L Thomas, M Clark, J Soto(I), A Barger(I), S Jones(M)
+U: Y Alvarez
+P: C Sanchez, I Seymour, Y Gomez, D Cease, M Miller, P Lambert, F Peralta, B Pfaadt, G Taylor, R Snelling(I), K Harrison(I)
+
+Maga Doge
+C: H Goodman | 1B: R Devers | 2B: J Wetherholt | 3B: N Arenado | SS: C.J. Abrams | MI: C Pratt, Z Gelof(I), T Story(I), M McLain(I) | CI: S Torkelson
+OF: M Harris II, J Bauers, J Wood, J.J. Bleday
+U: J Hoo Lee, B Eldridge(R)
+P: T Yesavage, C Burns, T Wells, T Bradley, H Harris, B Elder, G Williams, M King, G Soto, M McGreevy(R), R Nelson(I), R Helsley(I), G Crochet(I), K Anderson(M)
+
+Magnum GI
+C: F Alvarez, S Basallo(I), A Ramirez(M) | 1B: V Guerrero Jr. | 2B: X Edwards | 3B: N Gonzales | SS: T Turner | MI: C Young | CI: J Burger
+OF: E Valdez, K Tucker, A Pages, J Mangum, B Rooker(I)
+U: K Karros, G Stanton(I)
+P: D Martin, R Ray, S Burke, C Scott, A Munoz, S Alcantara, R Iglesias, B Young, B Sproat, S Drohan(R), R O'Brien(R), K Bubic(I), T Glasnow(I)
+
+Rieken Havoc
+C: C Jensen | 1B: J Aranda | 2B: N Nunez | 3B: K Okamoto | SS: F Lindor | MI: X Bogaerts | CI: J Ramirez, T Rumfield(R)
+OF: L Robert, C Benge, D Lile, W Langford, C DeLauter(R), C Bellinger(I)
+U: K Schwarber
+P: H Greene, K Bradish, J Duran, T Rogers, E Hancock, Z Thornton, C Schlittler, T Scott, L Varland, M Abel(I), C Estevez(I), E Uceta(I), Q Mathews(M)
+
+Runtime Terror
+C: D Rushing, W Smith(I) | 1B: P Alonso | 2B: T Bazzana | 3B: C Durbin | SS: D Swanson | MI: K Clemens | CI: C Montgomery, M Busch(R), J Jung(I)
+OF: S Kwan, D Canzone, C Carroll, G Mitchell, A Judge(I)
+U: Y Diaz
+P: D May, L Henderson, J deGrom, E Perez, A Chapman, W Urena, T Melton, S Gray, A Uribe, S Ohtani (Pitcher)(R), C Dollander(I), L Gil(M), R Ryan(M)
+
+Simba's Dublin Green Sox
+C: C Raleigh | 1B: J Naylor | 2B: A Martinez | 3B: B Lee, C Mead(I), M Garcia(I) | SS: B Rocchio | MI: W Adames | CI: E Duran
+OF: K Stowers, J McCarthy, J Walker, T Grisham
+U: T Hernandez, C Yelich(R), J Tibbs(M)
+P: E Pagan, A Pallante, K Montero, E Rodriguez, S Cruz, B Woo, M Wacha, C Sale, G Soriano, J Musgrove(I), J.T. Ginn(I), M Soroka(I)
+
+Trex
+C: I Herrera, S Langeliers(I) | 1B: V Pasquantino(I) | 2B: J Holliday | 3B: E Clement, M Chapman(I) | SS: M Betts | MI: T Edman, K Griffin(I) | CI: C Keith, S Horwitz(I)
+OF: P Crow-Armstrong, V Mesa Jr., M Trout, J Dominguez
+U: R Acuna Jr.
+P: R Blanco, R Weathers, S Dominguez, T Megill, G Kirby, F Valdez, L Webb, P Messick, P Sewald, S Lugo(R), S Strider(I)
+
+Young Guns
+C: B Rice | 1B: M Olson | 2B: O Lopez, C Schmitt(I) | 3B: A Riley | SS: C Emerson | MI: E De La Cruz | CI: I Paredes, C Condon(M)
+OF: C Carrigg, I Happ, A.J. Ewing, R Greene, R Anthony(I)
+U: D Varsho
+P: J Wrobleski, S McClanahan, S Imanaga, Z Wheeler, J Webb, P Tolle, G Cole, P Fairbanks, P Skenes, F Griffin(R), C Kilian(R), B Woodruff(I), N Pivetta(I), B Snell(I)
