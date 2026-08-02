@@ -200,3 +200,54 @@ if __name__ == "__main__":
         print(f"  [{r['tier']:<15}] give {r['give']:<20} get {r['get']:<20} "
               f"({r['with']:<13}) us {r['our_delta']:+.1f} them {r['their_delta']:+.1f} "
               f"q {r['q_give']:.1f}->{r['q_get']:.1f}{fr}{flag}")
+
+
+def evaluate_2for1(ev: TradeEvaluator, us: str, rival: str,
+                   give1: dict, give2: dict, get: dict) -> dict:
+    base_pts = ev._team_points(ev.base)
+    g1, g2, tw = ros_weekly(give1), ros_weekly(give2), ros_weekly(get)
+    adj = ev.base
+    for team, wk, sign in ((us, g1, -1), (us, g2, -1), (us, tw, +1),
+                           (rival, g1, +1), (rival, g2, +1), (rival, tw, -1)):
+        keep, ev.base = ev.base, adj
+        adj = ev._adjusted(team, wk, sign)
+        ev.base = keep
+    new_pts = ev._team_points(adj)
+    return {"give": f"{give1['name']} + {give2['name']}", "get": get["name"],
+            "our_delta": round(new_pts[us] - base_pts[us], 1),
+            "their_delta": round(new_pts[rival] - base_pts[rival], 1)}
+
+
+def scan_2for1(counterparties: list[str], top: int = 10) -> list[dict]:
+    """Consolidation: two of ours for one star. The counterparty gains
+    active-roster depth (they fill the extra spot from waivers — modeled
+    conservatively as zero, so their_delta here is a LOWER bound)."""
+    from itertools import combinations
+    ev = TradeEvaluator()
+    us = ev.race["us"]
+    ours = [p for p in roster_players(us) if p["status"] in ("active", "reserve", "il")]
+    results = []
+    for rival in counterparties:
+        theirs = [p for p in roster_players(rival)
+                  if p["status"] in ("active", "reserve", "il")]
+        stars = sorted(theirs, key=quality, reverse=True)[:8]
+        for get in stars:
+            qt = quality(get)
+            for g1, g2 in combinations(ours, 2):
+                if quality(g1) + quality(g2) < qt * 0.9:
+                    continue  # they won't consolidate down in total quality? no —
+                              # they consolidate UP in per-slot quality; this floor
+                              # keeps total value plausible
+                r = evaluate_2for1(ev, us, rival, g1, g2, get)
+                if r["our_delta"] > 0 and r["their_delta"] >= -0.5:
+                    r["with"] = rival
+                    r["q"] = f"{quality(g1):.1f}+{quality(g2):.1f}->{qt:.1f}"
+                    results.append(r)
+    results.sort(key=lambda r: -(r["our_delta"] + min(r["their_delta"], 0)))
+    seen: dict[str, int] = {}
+    out = []
+    for r in results:
+        if seen.get(r["get"], 0) < 2:
+            out.append(r)
+            seen[r["get"]] = seen.get(r["get"], 0) + 1
+    return out[:top]
