@@ -14,11 +14,16 @@ import random
 from collections import defaultdict
 
 from fantasy_assistant.analytics import races
+from fantasy_assistant.analytics.recompute import recompute_v2
 from fantasy_assistant.graph.client import session
 
-MODEL_VERSION = "variance-v2"
+RATE_COMP = {"OBP": ("ob", "pa", 1.0), "ERA": ("er", "outs", 27.0),
+             "WHIP": ("wh", "outs", 3.0)}
+
+MODEL_VERSION = "variance-v3"
 N_SIMS = 5000
-RATE_ROS_WEIGHT = 0.30  # remaining-volume share dampening for rate noise
+# v3: rate categories simulated via components (num/denom weekly draws),
+# replacing the v2 RATE_ROS_WEIGHT dampening hack
 
 
 def weekly_history() -> dict:
@@ -100,18 +105,30 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
     us = race["us"]
     teams = [t for t, _ in race["projected_final"]]
 
-    # per (cat, team): (mean_final, sd_final, direction, is_rate, ytd_value)
+    # counting cats: (mean_final, sd_final); rate cats: component params
+    comps = recompute_v2()["components"]
+    comp_hist: dict = {}
+    for (team, period, side), c in comps.items():
+        for k, v in c.items():
+            comp_hist.setdefault((team, k), []).append(v)
     params = {}
+    rate_params = {}
     for cat, d in race["categories"].items():
         direction = d["direction"]
         is_rate = d["kind"] == "rate"
         for team, proj_v, _ in d["proj_leaderboard"]:
-            wk_sd = _sd(hist.get((cat, team), []))
             if is_rate:
-                sd_final = wk_sd * RATE_ROS_WEIGHT / math.sqrt(R)
+                nk, dk, scale = RATE_COMP[cat]
+                nh, dh = comp_hist.get((team, nk), [0]), comp_hist.get((team, dk), [1])
+                n0, d0 = sum(nh), sum(dh)
+                rate_params[(cat, team)] = {
+                    "n0": n0, "d0": d0, "scale": scale,
+                    "n_mu": sum(nh[-4:]) / min(len(nh), 4), "n_sd": _sd(nh),
+                    "d_mu": sum(dh[-4:]) / min(len(dh), 4), "d_sd": _sd(dh)}
+                params[(cat, team)] = (proj_v, 0.0, direction, True)
             else:
-                sd_final = wk_sd * math.sqrt(R)
-            params[(cat, team)] = (proj_v, sd_final, direction, is_rate)
+                wk_sd = _sd(hist.get((cat, team), []))
+                params[(cat, team)] = (proj_v, wk_sd * math.sqrt(R), direction, False)
 
     cats = list(race["categories"].keys())
     L = cholesky(weekly_matrix(cats, teams))
@@ -129,7 +146,17 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
             corr_z = [sum(L[i][m] * z[m] for m in range(i + 1)) for i in range(k)]
             for i, cat in enumerate(cats):
                 mean, sd, direction, is_rate = params[(cat, team)]
-                draws_by_cat[cat][team] = mean + sd * corr_z[i]
+                if is_rate:
+                    rp = rate_params[(cat, team)]
+                    # correlated shock drives the numerator (runs/baserunners
+                    # co-move with team form); denominator gets its own noise
+                    n_ros = max(0.0, rp["n_mu"] * R + rp["n_sd"] * math.sqrt(R) * corr_z[i])
+                    d_ros = max(1.0, rp["d_mu"] * R + rp["d_sd"] * math.sqrt(R) * rng.gauss(0, 1))
+                    tot_d = rp["d0"] + d_ros
+                    draws_by_cat[cat][team] = ((rp["n0"] * (mean * rp["d0"] / rp["scale"] / max(rp["n0"], 1e-9))
+                                                + n_ros) * rp["scale"] / tot_d) if tot_d else mean
+                else:
+                    draws_by_cat[cat][team] = mean + sd * corr_z[i]
         totals = defaultdict(float)
         for cat, d in race["categories"].items():
             pts = races._points_for(draws_by_cat[cat], d["direction"])
