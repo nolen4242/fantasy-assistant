@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams/roster-report/<team>/<period>/ (periods 1-19)
-captured: 2026-08-02T14:06:46
+captured: 2026-08-02T15:12:40
 ---
 Like a Nightmare|1|active|C|Samuel Basallo C • BAL
 Like a Nightmare|1|active|1B|Freddie Freeman 1B • LAD
@@ -6512,7 +6512,7 @@ Runtime Terror|11|active|P|Aroldis Chapman P • BOS
 Runtime Terror|11|active|P|Sonny Gray P • BOS
 Runtime Terror|11|active|P|Jared Jones P • PIT
 Runtime Terror|11|active|P|Shohei Ohtani (Pitcher) P • LAD
-Runtime Terror|11|active|P|River Ryan P • LAD
+Runtime Terror|11|active|P|River Ryan P • DET
 Runtime Terror|11|active|P|Roki Sasaki P • LAD
 Runtime Terror|11|active|P|Walbert Urena P • LAA
 Runtime Terror|11|active|P|Abner Uribe P • MIL
@@ -6550,7 +6550,7 @@ Runtime Terror|12|bench|P|Chase Dollander P • COL
 Runtime Terror|12|bench|P|Logan Henderson P • MIL
 Runtime Terror|12|bench|P|Eury Perez P • MIA
 Runtime Terror|12|injured|P|Luis Gil P • NYY
-Runtime Terror|12|injured|P|River Ryan P • LAD
+Runtime Terror|12|injured|P|River Ryan P • DET
 Runtime Terror|13|active|C|Dalton Rushing C • LAD
 Runtime Terror|13|active|1B|Michael Busch 1B • CHC
 Runtime Terror|13|active|2B|Travis Bazzana 2B • CLE
@@ -6580,7 +6580,7 @@ Runtime Terror|13|bench|P|Chase Dollander P • COL
 Runtime Terror|13|bench|P|Logan Henderson P • MIL
 Runtime Terror|13|bench|P|Eury Perez P • MIA
 Runtime Terror|13|injured|P|Luis Gil P • NYY
-Runtime Terror|13|injured|P|River Ryan P • LAD
+Runtime Terror|13|injured|P|River Ryan P • DET
 Runtime Terror|14|active|C|Logan O'Hoppe C • TEX
 Runtime Terror|14|active|1B|Pete Alonso 1B • BAL
 Runtime Terror|14|active|2B|Travis Bazzana 2B • CLE
@@ -6610,7 +6610,7 @@ Runtime Terror|14|bench|P|Chase Dollander P • COL
 Runtime Terror|14|bench|P|Logan Henderson P • MIL
 Runtime Terror|14|bench|P|Eury Perez P • MIA
 Runtime Terror|14|injured|P|Luis Gil P • NYY
-Runtime Terror|14|injured|P|River Ryan P • LAD
+Runtime Terror|14|injured|P|River Ryan P • DET
 Runtime Terror|15|active|C|Logan O'Hoppe C • TEX
 Runtime Terror|15|active|1B|Pete Alonso 1B • BAL
 Runtime Terror|15|active|2B|Travis Bazzana 2B • CLE
@@ -6639,7 +6639,7 @@ Runtime Terror|15|active|P|Roki Sasaki P • LAD
 Runtime Terror|15|bench|P|Chase Dollander P • COL
 Runtime Terror|15|bench|P|Logan Henderson P • MIL
 Runtime Terror|15|injured|P|Luis Gil P • NYY
-Runtime Terror|15|injured|P|River Ryan P • LAD
+Runtime Terror|15|injured|P|River Ryan P • DET
 Runtime Terror|16|active|C|Dalton Rushing C • LAD
 Runtime Terror|16|active|1B|Pete Alonso 1B • BAL
 Runtime Terror|16|active|2B|Travis Bazzana 2B • CLE
@@ -6668,7 +6668,7 @@ Runtime Terror|16|active|P|Dustin May P • STL
 Runtime Terror|16|bench|P|Chase Dollander P • COL
 Runtime Terror|16|bench|P|Logan Henderson P • MIL
 Runtime Terror|16|injured|P|Luis Gil P • NYY
-Runtime Terror|16|injured|P|River Ryan P • LAD
+Runtime Terror|16|injured|P|River Ryan P • DET
 Runtime Terror|17|active|C|Dalton Rushing C • LAD
 Runtime Terror|17|active|1B|Pete Alonso 1B • BAL
 Runtime Terror|17|active|2B|Travis Bazzana 2B • CLE
@@ -6696,7 +6696,7 @@ Runtime Terror|17|active|P|Abner Uribe P • MIL
 Runtime Terror|17|active|P|Jacob deGrom P • TEX
 Runtime Terror|17|bench|P|Chase Dollander P • COL
 Runtime Terror|17|injured|P|Luis Gil P • NYY
-Runtime Terror|17|injured|P|River Ryan P • LAD
+Runtime Terror|17|injured|P|River Ryan P • DET
 Runtime Terror|18|active|C|Dalton Rushing C • LAD
 Runtime Terror|18|active|1B|Pete Alonso 1B • BAL
 Runtime Terror|18|active|2B|Travis Bazzana 2B • CLE
@@ -6724,7 +6724,7 @@ Runtime Terror|18|active|P|Jacob deGrom P • TEX
 Runtime Terror|18|active|P|Shohei Ohtani (Pitcher) P • LAD
 Runtime Terror|18|bench|P|Chase Dollander P • COL
 Runtime Terror|18|injured|P|Luis Gil P • NYY
-Runtime Terror|18|injured|P|River Ryan P • LAD
+Runtime Terror|18|injured|P|River Ryan P • DET
 Runtime Terror|19|active|C|Dalton Rushing C • LAD
 Runtime Terror|19|active|1B|Pete Alonso 1B • BAL
 Runtime Terror|19|active|2B|Travis Bazzana 2B • CLE
@@ -6753,4 +6753,4 @@ Runtime Terror|19|active|P|Jacob deGrom P • TEX
 Runtime Terror|19|active|P|Shohei Ohtani (Pitcher) P • LAD
 Runtime Terror|19|bench|P|Chase Dollander P • COL
 Runtime Terror|19|injured|P|Luis Gil P • NYY
-Runtime Terror|19|injured|P|River Ryan P • LAD
+Runtime Terror|19|injured|P|River Ryan P • DET

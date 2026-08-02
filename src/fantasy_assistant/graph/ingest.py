@@ -333,7 +333,7 @@ def ingest_lineups(capture_dir: Path) -> dict:
                 "tuid": team_uid(r.team), "puid": player_uid(r.player_name),
                 "period_uid": f"period:2026:{r.period}",
                 "name": r.player_name, "norm": parsers.normalize_name(r.player_name),
-                "slot": r.slot, "section": r.section,
+                "slot": r.slot, "section": r.section, "cbs_id": r.cbs_id,
             }
             for r in rows
         ]
@@ -345,6 +345,7 @@ def ingest_lineups(capture_dir: Path) -> dict:
                 MATCH (t:FantasyTeam {uid:row.tuid}), (per:ScoringPeriod {uid:row.period_uid})
                 MERGE (p:Player {uid:row.puid})
                 ON CREATE SET p.name_full=row.name, p.name_normalized=row.norm
+                SET p.cbs_id = coalesce(row.cbs_id, p.cbs_id)
                 MERGE (l:LineupAssignment {uid:row.uid})
                 SET l.slot=row.slot, l.section=row.section
                 MERGE (l)-[:BY_TEAM]->(t)

@@ -533,6 +533,7 @@ class LineupRow:
     player_name: str
     positions: str
     mlb_team: str
+    cbs_id: str | None = None
 
 
 def parse_lineups(path: Path) -> tuple[list[LineupRow], list[str]]:
@@ -540,16 +541,21 @@ def parse_lineups(path: Path) -> tuple[list[LineupRow], list[str]]:
     rejects: list[str] = []
     for line in _strip_stamp(path.read_text(encoding="utf-8")).splitlines():
         parts = line.split("|")
-        if len(parts) != 5:
+        if len(parts) == 6:
+            team, period, section, slot, cbs_id, cell = parts
+        elif len(parts) == 5:
+            team, period, section, slot, cell = parts
+            cbs_id = ""
+        else:
             if line.strip():
                 rejects.append(line)
             continue
-        team, period, section, slot, cell = parts
         pm = _PLAYER_CELL_RE.match(cell.strip())
         if team not in TEAM_NAMES or not pm:
             rejects.append(line)
             continue
         rows.append(LineupRow(team=team, period=int(period), section=section,
                               slot=slot, player_name=pm.group("name").strip(),
-                              positions=pm.group("pos"), mlb_team=pm.group("team")))
+                              positions=pm.group("pos"), mlb_team=pm.group("team"),
+                              cbs_id=cbs_id or None))
     return rows, rejects

@@ -25,7 +25,12 @@ SWAP = {"OBP": {"vol": 240.0, "edge": 0.040},   # ROS plate appearances, OBP edg
         "ERA": {"vol": 60.0, "edge": 1.00},     # ROS innings, ERA edge
         "WHIP": {"vol": 60.0, "edge": 0.12}}
 
-MODEL_VERSION = "races-v2"
+MODEL_VERSION = "races-v3"
+# Backtest-fitted (2026 periods 8/11/14 -> 19): pure recent-form pace LOSES to
+# season-average baseline (17.95 vs 16.87 pts-MAE); a 0.35 recent-weight blend
+# beats both (16.46). Team weekly production is mostly noise around season
+# averages — shrink hard toward the mean.
+FORM_WEIGHT = 0.35
 FORM_PERIODS = 4
 FINAL_PERIOD = 27
 
@@ -117,6 +122,8 @@ def analyze() -> dict:
             denom0, num_wk, den_wk = y.get("outs", 0), rec.get("wh", 0), rec.get("outs", 0)
         scale = 27.0 if cat == "ERA" else (1.0 if cat == "OBP" else 3.0)
         num0 = ytd_value * denom0 / scale
+        num_wk = FORM_WEIGHT * num_wk + (1 - FORM_WEIGHT) * num0 / latest_period
+        den_wk = FORM_WEIGHT * den_wk + (1 - FORM_WEIGHT) * denom0 / latest_period
         denom_f = denom0 + den_wk * remaining
         num_f = num0 + num_wk * remaining
         rate = num_f * scale / denom_f if denom_f else ytd_value
@@ -126,7 +133,11 @@ def analyze() -> dict:
         kind, direction = meta[cat]["kind"], meta[cat]["direction"]
         rate_denoms: dict[str, float] = {}
         if kind == "counting":
-            proj = {t: v + pace.get((cat, t), 0.0) * remaining for t, v in values.items()}
+            proj = {}
+            for t, v in values.items():
+                blended = (FORM_WEIGHT * pace.get((cat, t), 0.0)
+                           + (1 - FORM_WEIGHT) * v / latest_period)
+                proj[t] = v + blended * remaining
         else:
             proj = {}
             for t, v in values.items():
