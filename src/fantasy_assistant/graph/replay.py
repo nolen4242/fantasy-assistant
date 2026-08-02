@@ -31,7 +31,7 @@ def replay(capture_dir: Path, posted_cutoff: str | None = None) -> dict:
     a future effective date — so snapshot diffs must cut by posted time, not
     effective date."""
     picks, _ = parsers.parse_draft(capture_dir / "draft_results.txt")
-    txns, _ = parsers.parse_transactions(capture_dir / "transactions_all_raw.txt")
+    txns, _ = parsers.sniff_and_parse_transactions(capture_dir / "transactions_all_raw.txt")
     # CBS lists newest-first; waiver-run batches share one timestamp, so a
     # plain stable sort would keep newest-first order *within* each batch.
     # Reverse first: ties then preserve true chronological (bottom-up) order.
@@ -117,7 +117,7 @@ def grid_captured_at(capture_dir: Path) -> str:
     """Read the capture timestamp from the grid snapshot header, e.g.
     'captured: 2026-08-02 ~11:35 ET' -> '2026-08-02T11:35:00'."""
     for line in (capture_dir / "roster_grid.txt").read_text().splitlines():
-        m = re.match(r"captured: (\d{4}-\d{2}-\d{2}) ~?(\d{1,2}):(\d{2})", line)
+        m = re.match(r"captured: (\d{4}-\d{2}-\d{2})[T ~]+(\d{1,2}):(\d{2})", line)
         if m:
             d, hh, mm = m.groups()
             return f"{d}T{int(hh):02d}:{mm}:00"
@@ -147,7 +147,7 @@ def reconcile(capture_dir: Path, write_graph: bool = True) -> dict:
     # cut replay at the moment the grid was captured (transactions posted
     # later — even minutes later — are not reflected in the grid)
     state = replay(capture_dir, posted_cutoff=grid_captured_at(capture_dir))
-    grid = parsers.parse_roster_grid(capture_dir / "roster_grid.txt")
+    grid = parsers.sniff_and_parse_roster_grid(capture_dir / "roster_grid.txt")
 
     derived: dict[str, dict[tuple, dict]] = {t: {} for t in TEAMS}
     for st in state["open"].values():

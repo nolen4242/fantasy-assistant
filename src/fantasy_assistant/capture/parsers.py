@@ -371,3 +371,154 @@ def parse_draft(path: Path) -> tuple[list[DraftPickRow], list[str]]:
             mlb_team=m.group("mlb"), auto=auto, queued=queued,
         ))
     return picks, rejects
+
+
+# ---------------------------------------------------------------------------
+# Runner-format (v2) inputs — pipe-delimited tables with a 3-line source stamp
+# ---------------------------------------------------------------------------
+
+def _strip_stamp(text: str) -> str:
+    text = text.replace("\xa0", " ")  # CBS renders nbsp inside date cells
+    if text.startswith("source:"):
+        return text.split("---\n", 1)[-1]
+    return text
+
+
+def parse_transactions_v2(path: Path) -> tuple[list[Txn], list[str]]:
+    """Runner format: DATE|TEAM|PLAYERS|EFFECTIVE|COST, one complete
+    transaction per row; multiple player-actions joined with '; '. A literal
+    '|' can appear inside the players cell (CBS sometimes renders 'POS | TEAM')
+    so middle columns are re-joined before parsing."""
+    seg_re = re.compile(
+        r"^(?P<name>.+?) (?P<pos>[A-Z0-9]{1,3}(?:,[A-Z0-9]{1,3})*) ?[\u2022\ufffd|] ?"
+        r"(?P<team>[A-Z]{2,3}) ?-? ?"
+        r"(?P<action>Added off Waivers|Added|Dropped|Moved to IR|Move to Injured|"
+        r"Moved to Minors|Sent to Minors|Activated|Called Up|Traded (?:from|to) .+)$"
+    )
+    txns: list[Txn] = []
+    rejects: list[str] = []
+    for line in _strip_stamp(path.read_text(encoding="utf-8")).splitlines():
+        parts = [x.strip() for x in line.split("|")]
+        if len(parts) < 5 or parts[0] in ("DATE", "Date"):
+            continue
+        if len(parts) > 5:
+            parts = [parts[0], parts[1], "|".join(parts[2:-2]), parts[-2], parts[-1]]
+        date_time, team, players, effective, cost_s = parts
+        m = re.match(r"^(\d{1,2}/\d{1,2}/\d{2}) (\d{1,2}:\d{2} [AP]M) ET$", date_time)
+        if not m or team not in TEAM_NAMES:
+            rejects.append(line)
+            continue
+        actions = []
+        bad = False
+        for seg in players.split("; "):
+            sm = seg_re.match(seg.strip())
+            if not sm:
+                bad = True
+                break
+            action_text = sm.group("action")
+            trade_cp = None
+            tm = _TRADE_RE.match(action_text)
+            if tm:
+                trade_cp = tm.group(1).strip()
+                action_text = "Traded"
+            actions.append(TxnAction(
+                player_name=sm.group("name").strip(),
+                positions=sm.group("pos"), mlb_team=sm.group("team"),
+                action=_ACTION_NORM.get(action_text, action_text),
+                trade_counterparty=trade_cp,
+            ))
+        if bad or not actions:
+            rejects.append(line)
+            continue
+        eff_iso = None
+        if effective:
+            eff_iso = datetime.strptime(effective, "%m/%d/%y").date().isoformat()
+        cost = float(cost_s.lstrip("$")) if cost_s.startswith("$") else None
+        txns.append(Txn(posted_at=parse_posted_at(m.group(1), m.group(2)),
+                        team=team, actions=actions, effective_date=eff_iso,
+                        cost=cost, raw=line))
+    return txns, rejects
+
+
+def parse_roster_grid_v2(path: Path) -> list[GridEntry]:
+    """Runner format: TEAM|C|1B|...|P rows; players in a cell joined by '; '."""
+    entries: list[GridEntry] = []
+    slots: list[str] = []
+    for line in _strip_stamp(path.read_text(encoding="utf-8")).splitlines():
+        parts = [p.strip() for p in line.split("|")]
+        if len(parts) < 5:
+            continue
+        if parts[0] in ("TEAM", "Team"):
+            slots = parts[1:]
+            continue
+        if parts[0] not in TEAM_NAMES or not slots:
+            continue
+        for slot, cell in zip(slots, parts[1:]):
+            for raw_name in cell.split("; "):
+                raw_name = raw_name.strip()
+                if not raw_name:
+                    continue
+                status = "active"
+                tag = re.search(r"\(([RIM])\)$", raw_name)
+                if tag:
+                    status = _TAG_MAP[tag.group(1)]
+                    raw_name = raw_name[: tag.start()].strip()
+                entries.append(GridEntry(team=parts[0], slot_group=slot,
+                                         label=raw_name, status=status))
+    return entries
+
+
+def sniff_and_parse_transactions(path: Path) -> tuple[list[Txn], list[str]]:
+    head = _strip_stamp(path.read_text(encoding="utf-8"))[:200]
+    if "DATE|TEAM|PLAYERS" in head or "|" in head.split("\n", 1)[0]:
+        return parse_transactions_v2(path)
+    return parse_transactions(path)
+
+
+def sniff_and_parse_roster_grid(path: Path) -> list[GridEntry]:
+    body = _strip_stamp(path.read_text(encoding="utf-8"))
+    first = next((line for line in body.splitlines() if line.strip()), "")
+    if first.startswith(("TEAM|", "Team|")):
+        return parse_roster_grid_v2(path)
+    return parse_roster_grid(path)
+
+
+def parse_byperiod(path: Path) -> dict[int, dict]:
+    """standings_byperiod_all.txt -> {period: {overall: [...], categories:
+    {CODE: [{team, value, points, dif}]}}}"""
+    out: dict[int, dict] = {}
+    period = None
+    cat = None
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        pm = re.match(r"^=== Period (\d+) ", line)
+        if pm:
+            period = int(pm.group(1))
+            out[period] = {"overall": [], "categories": {}}
+            cat = None
+            continue
+        if period is None or not line:
+            continue
+        parts = [p.strip() for p in line.split("|")]
+        if parts[0] in ("Rank", "Team"):
+            if parts[0] == "Team" and len(parts) == 4:
+                cat = parts[1]  # e.g. Team|HR|Pts|Dif
+                out[period]["categories"].setdefault(cat, [])
+            else:
+                cat = None
+            continue
+        if cat and len(parts) == 4 and parts[0] in TEAM_NAMES:
+            # category tables repeat in the source (breakdown block + table);
+            # keep first occurrence only
+            rows = out[period]["categories"][cat]
+            if not any(r["team"] == parts[0] for r in rows):
+                rows.append({"team": parts[0], "value": float(parts[1]),
+                             "points": float(parts[2]), "dif": float(parts[3])})
+        elif len(parts) == 7 and parts[1] in TEAM_NAMES:
+            out[period]["overall"].append({
+                "rank": int(parts[0]), "team": parts[1],
+                "batting": float(parts[2]), "pitching": float(parts[3]),
+                "total": float(parts[4]), "dif": float(parts[5]),
+                "behind": float(parts[6]),
+            })
+    return out

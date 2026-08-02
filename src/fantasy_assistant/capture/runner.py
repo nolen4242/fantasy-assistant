@@ -17,6 +17,8 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
+from fantasy_assistant.graph.refdata import period_for_date
+
 BASE = "https://buecker.baseball.cbssports.com"
 PROFILE_DIR = Path.home() / ".fantasy-assistant" / "cbs-profile"
 RAW_ROOT = Path(__file__).resolve().parents[3] / "data" / "raw"
@@ -43,7 +45,9 @@ TABLE_EXTRACT_JS = """
         const m = (c.innerHTML || '').match(/default_add=([A-Z0-9]+):(\\d+)/);
         vals.push(m ? m[2] : ''); vals.push(m ? m[1] : '');
       } else {
-        vals.push(c.textContent.trim().replace(/\\s+/g, ' '));
+        // innerText preserves line breaks between players/actions within a
+        // cell; join them with '; ' so multi-entry cells stay parseable
+        vals.push(c.innerText.trim().replace(/\\s*\\n\\s*/g, '; ').replace(/[ \\t]+/g, ' '));
       }
     }
     rows.push(vals.join('|'));
@@ -88,25 +92,23 @@ def snapshot(out_dir: Path | None = None) -> None:
         if not _logged_in(page):
             sys.exit("Session expired — run `python -m fantasy_assistant.capture.runner login` first.")
 
-        for path, fname in PAGES.items():
-            page.goto(BASE + path, wait_until="domcontentloaded")
-            page.wait_for_timeout(1500)
-            text = page.evaluate(TABLE_EXTRACT_JS) if "print_rows" in path or "roster" in path \
-                else page.inner_text("body")
-            stamp = f"source: {BASE + path}\ncaptured: {datetime.now().isoformat(timespec='seconds')}\n---\n"
-            (out / fname).write_text(stamp + text)
-            captured.append((path, fname, len(text)))
+        period = period_for_date(date.today())
+        pages = dict(PAGES)
+        pages["/stats/stats-main?print_rows=9999"] = "fa_pool_batters.psv"
+        pages[f"/stats/stats-main/fa:P/period-{period}:p/standard/projections?print_rows=9999"] = "fa_pool_pitchers.psv"
 
-        # FA pools with SportsLine projections (batters, then pitcher report)
-        for path, fname in [
-            ("/stats/stats-main?print_rows=9999", "fa_pool_batters.psv"),
-            ("/stats/stats-main/fa:P/period-all:p/standard/projections?print_rows=9999", "fa_pool_pitchers.psv"),
-        ]:
-            page.goto(BASE + path, wait_until="domcontentloaded")
-            page.wait_for_timeout(2500)
-            text = page.evaluate(TABLE_EXTRACT_JS)
-            (out / fname).write_text(text)
-            captured.append((path, fname, len(text)))
+        for path, fname in pages.items():
+            try:
+                page.goto(BASE + path, wait_until="domcontentloaded")
+                page.wait_for_timeout(2500 if "stats-main" in path else 1500)
+                text = page.evaluate(TABLE_EXTRACT_JS) if ("print_rows" in path or "roster" in path) \
+                    else page.inner_text("body")
+                stamp = f"source: {BASE + path}\ncaptured: {datetime.now().isoformat(timespec='seconds')}\n---\n"
+                (out / fname).write_text(stamp + text)
+                captured.append((path, fname, len(text)))
+            except Exception as exc:  # one bad page must not kill the snapshot
+                captured.append((path, fname, -1))
+                print(f"  ERROR capturing {path}: {exc}", file=sys.stderr)
 
         # by-period standings: every closed period via the page's own select
         page.goto(BASE + "/standings/byperiod", wait_until="domcontentloaded")

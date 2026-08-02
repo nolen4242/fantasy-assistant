@@ -263,3 +263,60 @@ def ingest_draft(capture_dir: Path) -> dict:
             suid=SEASON_2026, run=run_uid, batch=batch,
         )
     return {"picks": len(picks), "rejects": len(rejects)}
+
+
+def ingest_byperiod(capture_dir: Path) -> dict:
+    data = parsers.parse_byperiod(capture_dir / "standings_byperiod_all.txt")
+    n_lines = 0
+    with session() as s:
+        run_uid = _capture_run(s, capture_dir, "standings_byperiod")
+        for period, pdata in data.items():
+            snap_uid = f"cbs:standings:period:{period}"
+            s.run(
+                """
+                MATCH (c:CaptureRun {uid:$run}), (p:ScoringPeriod {uid:$puid})
+                MERGE (st:StandingsSnapshot {uid:$uid})
+                SET st.as_of=datetime($as_of), st.scope='period'
+                MERGE (st)-[:FOR_PERIOD]->(p)
+                MERGE (st)-[:OBSERVED_IN]->(c)
+                """,
+                run=run_uid, uid=snap_uid, puid=f"period:2026:{period}",
+                as_of=capture_dir.name + "T12:00:00",
+            )
+            batch = []
+            for code, rows in pdata["categories"].items():
+                for rank, row in enumerate(rows, start=1):
+                    batch.append({
+                        "uid": f"{snap_uid}:{code}:{team_uid(row['team'])}",
+                        "tuid": team_uid(row["team"]), "cuid": f"category:{code}",
+                        "value": row["value"], "points": row["points"],
+                        "dif": row["dif"], "rank": rank,
+                    })
+            s.run(
+                """
+                MATCH (st:StandingsSnapshot {uid:$snap})
+                UNWIND $batch AS row
+                MATCH (t:FantasyTeam {uid:row.tuid}), (cat:Category {uid:row.cuid})
+                MERGE (l:CategoryStandingLine {uid:row.uid})
+                SET l.value_reported=row.value, l.points=row.points,
+                    l.rank=row.rank, l.dif=row.dif
+                MERGE (st)-[:HAS_LINE]->(l)
+                MERGE (l)-[:FOR_TEAM]->(t)
+                MERGE (l)-[:IN_CATEGORY]->(cat)
+                """,
+                snap=snap_uid, batch=batch,
+            )
+            n_lines += len(batch)
+            for row in pdata["overall"]:
+                s.run(
+                    """
+                    MATCH (st:StandingsSnapshot {uid:$snap}), (t:FantasyTeam {uid:$tuid})
+                    MERGE (st)-[r:OVERALL]->(t)
+                    SET r.rank=$rank, r.batting=$b, r.pitching=$p, r.total=$tot,
+                        r.dif=$dif, r.behind=$behind
+                    """,
+                    snap=snap_uid, tuid=team_uid(row["team"]), rank=row["rank"],
+                    b=row["batting"], p=row["pitching"], tot=row["total"],
+                    dif=row["dif"], behind=row["behind"],
+                )
+    return {"periods": len(data), "category_lines": n_lines}

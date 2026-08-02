@@ -1,0 +1,193 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-08-02T13:52:49
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(9th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+4 / 13
+WAIVER #
+PERIOD
+PERIOD 19 (MON, JULY 27 - SUN, AUG 02)
+
+	
+
+
+		Runtime Terror		
+NCP
++0.50
+		
+YGN	85.50
+RHV	85.50
+MD	83.50
+BST	82.00
+DWG	80.50
+LAN	80.00
+LB	72.50
+GTN	71.50
+		
+RTT	63.50
+GHG	59.50
+MGI	50.50
+SIM	48.00
+TRX	47.50
+	
+
+63.50	
+NCT
+-0.50
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+D. Rushing C  	
+LAD v BOS 6:20 CDT
+BOS +155, LAD -189
+	 
+P. Alonso 1B  	
+BAL 0 v PHI 2 (Delayed)
+	1-1, 1.000 OBP
+T. Bazzana 2B  	
+CLE 2 v ARI 0 Bot 5th
+	1-1, BB, 1.000 OBP
+C. Durbin 3B  	
+BOS @ LAD 6:20 CDT
+BOS +155, LAD -189
+	 
+D. Swanson SS  	
+CHC 0 v NYY 0 Top 3rd
+	 
+K. Clemens MI  	
+MIN @ SEA 3:10 CDT
+MIN +115, SEA -139
+	 
+M. Busch CI  	
+CHC 0 v NYY 0 Top 3rd
+	0-1
+D. Canzone OF  	
+SEA v MIN 3:10 CDT
+MIN +115, SEA -139
+	 
+C. Carroll OF  	
+ARI 0 @ CLE 2 Bot 5th
+	0-2
+S. Kwan OF  	
+CLE 2 v ARI 0 Bot 5th
+vs. M. Kelly
+	1-1, BB, 1.000 OBP
+G. Mitchell OF  	
+MIL @ LAA 2:15 CDT
+MIL -227, LAA +185
+	 
+Y. Diaz U  	
+TB 0 v CHW 3 Top 5th
+	0-2
+A. Chapman P  	
+BOS @ LAD 6:20 CDT
+BOS +155, LAD -189
+	 
+S. Gray P  	
+BOS @ LAD 6:20 CDT
+BOS +155, LAD -189
+	 
+L. Henderson P  	
+MIL @ LAA 2:15 CDT
+MIL -227, LAA +185
+	 
+D. May P  	
+STL 1 @ TOR 0 Top 6th
+	 
+T. Melton P  	
+DET @ ATH 3:05 CDT
+DET -128, ATH +105
+	 
+E. Perez P  	
+MIA 1 @ NYM 0 Top 5th
+	 
+W. Urena P   	
+LAA v MIL 2:15 CDT
+MIL -227, LAA +185
+	 
+A. Uribe P  	
+MIL @ LAA 2:15 CDT
+MIL -227, LAA +185
+	 
+J. deGrom P  	
+TEX 0 @ HOU 0 Bot 3rd
+	 
+Today	3-8, 2 BB, 0.500 OBP
+Total	1101-4474, 211 2B, 29 3B, 174 HR, 609 RBI, 654 R, 86 SB, 571 BB, 29 CS, 0.338 OBP
+817 INN, 13432 PC, 708 HA, 310 BBI, 816 K, 325 ER, 3.580 ERA, 1.246 WHIP, 57 W, 42 L, 35 S, 108 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	YGN	209	633	683	95	0.336	939	3.94	1.19	17	137	85.50
+1st	RHV	151	595	623	129	0.330	902	3.36	1.17	66	114	85.50
+3rd	MD	235	698	733	98	0.337	902	4.35	1.23	38	114	83.50
+4th	BST	199	680	664	98	0.328	938	3.91	1.24	44	116	82.00
+5th	DWG	206	641	726	95	0.352	775	3.81	1.21	22	116	80.50
+6th	LAN	196	581	635	127	0.314	947	3.88	1.15	61	107	80.00
+7th	LB	174	617	570	75	0.328	1049	3.56	1.23	40	123	72.50
+8th	GTN	165	546	626	107	0.312	972	3.53	1.20	20	133	71.50
+9th	RTT	174	609	654	86	0.338	816	3.58	1.25	35	108	63.50
+10th	GHG	150	545	623	63	0.333	836	3.38	1.12	39	100	59.50
+11th	MGI	143	590	605	93	0.320	833	3.94	1.27	62	118	50.50
+12th	SIM	170	614	565	107	0.312	819	4.27	1.28	22	132	48.00
+13th	TRX	143	487	606	108	0.337	813	4.20	1.25	45	99	47.50
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

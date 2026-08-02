@@ -1,0 +1,168 @@
+source: https://buecker.baseball.cbssports.com/teams
+captured: 2026-08-02T13:52:46
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror 
+Nolen Smith
+(9th)
+ 
+ADD/DROP
+ 
+TRADES
+4 / 13
+WAIVER #
+YEAR
+2026
+PERIOD
+20
+OVERVIEW
+STATS
+PROJECTIONS
+RANKINGS
+SCHEDULE
+MATCHUP
+NEWS
+3 YEAR AVERAGE
+YEAR TO DATE
+YESTERDAY
+LAST 7
+LAST 14
+LAST 21
+LAST 28
+BATTERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	AB	R	H	1B	2B	3B	HR	RBI	BB	KO	SB	CS	BA	OBP	SLG	ROTO RANK
+
+	C	Dalton Rushing C • LAD	217	37	55	31	12	0	12	36	23	70	0	0	.254	.335	.475	258
+
+	1B	Pete Alonso 1B • BAL	417	68	104	60	21	0	23	69	56	120	5	1	.249	.345	.465	29
+
+	2B	Travis Bazzana 2B • CLE	300	37	73	47	15	2	9	34	40	77	15	4	.243	.337	.397	192
+
+	3B	Caleb Durbin 3B • BOS	342	49	83	52	20	1	10	44	26	52	12	4	.243	.309	.395	147
+
+	SS	Dansby Swanson SS • CHC	363	68	77	45	13	3	16	61	41	96	15	0	.212	.291	.397	57
+
+	MI	Kody Clemens 1B,2B,OF • MIN	356	51	85	41	20	5	19	53	24	88	7	2	.239	.296	.483	97
+
+	CI	Colson Montgomery 3B,SS • CHW	391	50	84	42	17	0	25	63	36	140	1	1	.215	.295	.450	107
+
+	OF	Dominic Canzone OF • SEA	279	39	72	36	17	1	18	49	30	65	1	1	.258	.337	.520	155
+
+	OF	Corbin Carroll OF • ARI 	402	67	100	50	22	12	16	52	54	104	15	2	.249	.344	.483	45
+
+	OF	Steven Kwan OF • CLE 	351	43	90	73	14	2	1	21	53	41	8	2	.256	.356	.316	330
+
+	OF	Garrett Mitchell OF • MIL	314	48	84	50	23	3	8	49	44	116	9	5	.268	.362	.436	135
+
+	U	Yandy Diaz 1B • TB	411	59	125	90	19	1	15	63	42	68	2	1	.304	.379	.465	44
+RESERVES
+
+	CI	Michael Busch 1B • CHC	416	48	100	67	18	2	13	59	66	112	2	1	.240	.355	.387	167
+INJURED
+
+	C	Will Smith C • LAD 	173	23	43	32	5	0	6	23	23	34	0	0	.249	.338	.382	475
+
+	CI	Josh Jung 3B • TEX 	354	46	104	71	23	1	9	35	33	71	1	1	.294	.361	.441	187
+
+	OF	Aaron Judge OF • NYY 	214	43	53	26	10	0	17	38	42	72	5	3	.248	.374	.533	163
+MINORS
+PITCHERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
+
+	P	Aroldis Chapman P • BOS 	37	0	0	0	2	3	27	2	50	17	28	1.67	1.19	153
+
+	P	Sonny Gray P • BOS	113	20	13	0	13	2	0	0	98	30	103	2.93	1.17	74
+
+	P	Logan Henderson P • MIL	44	9	1	0	5	1	0	0	54	9	31	2.66	0.91	292
+
+	P	Dustin May P • STL	109	21	10	1	5	7	0	0	106	35	105	4.38	1.28	361
+
+	P	Troy Melton P • DET	67	11	6	0	6	1	0	0	60	21	41	1.75	0.93	177
+
+	P	Eury Perez P • MIA	104	19	9	0	5	8	0	0	112	40	75	3.44	1.10	195
+
+	P	Walbert Urena P • LAA	93	17	8	0	6	7	0	0	88	49	69	2.70	1.26	234
+
+	P	Abner Uribe P • MIL	44	0	0	0	4	2	6	2	44	15	31	2.23	1.04	284
+
+	P	Jacob deGrom P • TEX 	113	21	8	0	7	7	0	0	135	29	101	3.96	1.14	168
+RESERVES
+
+	P	Shohei Ohtani (Pitcher) P • LAD	85	14	12	0	8	2	0	0	95	26	55	1.79	0.95	75
+INJURED
+
+	P	Chase Dollander P • COL 	44	3	1	0	3	3	0	0	47	18	39	3.89	1.30	556
+MINORS
+
+	P	Luis Gil P • NYY 
+	19	4	1	0	1	2	0	0	9	11	15	6.05	1.34	1025
+
+	P	River Ryan P • LAD 
+	0	0	0	0	0	0	0	0	0	0	0	0.00	0.00	9999
+ACTIVE: 21 RESERVE: 2 INJURED: 4 MINORS: 2
+Min/Max Info
+	IP
+Year to Date	817.0
+On Pace	1203.2
+Rules	1000-1300
+Status	On-Pace
+Note: stats in the 'matchups' view represent each player's career totals vs opponent as labeled.
+Blue = Player is cold vs this pitcher/team.
+Red = Player is hot vs this pitcher/team.
+Probable StartStarting TodayInjurySuspendedPlayer NewsHot PlayerCold Player
+Game may be delayed or rained outGame is likely to be delayed or rained out
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
