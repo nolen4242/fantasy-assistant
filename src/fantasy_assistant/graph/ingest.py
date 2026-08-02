@@ -365,6 +365,21 @@ def ingest_lineups(capture_dir: Path) -> dict:
     return {"lineup_rows": len(rows), "rejects": len(rejects)}
 
 
+def _est_return_weeks(text: str) -> float | None:
+    import re as _re
+    m = _re.search(r"(\d+)(?:[- ]to[- ](\d+))?[- ]weeks?", text or "", _re.I)
+    if not m:
+        m2 = _re.search(r"(\d+)(?:[- ]to[- ](\d+))?[- ]months?", text or "", _re.I)
+        if not m2:
+            return None
+        lo = float(m2.group(1)) * 4
+        hi = float(m2.group(2)) * 4 if m2.group(2) else lo
+        return (lo + hi) / 2
+    lo = float(m.group(1))
+    hi = float(m.group(2)) if m.group(2) else lo
+    return (lo + hi) / 2
+
+
 def ingest_news(capture_dir: Path) -> dict:
     path = capture_dir / "player_news_raw.txt"
     if not path.exists():
@@ -380,6 +395,7 @@ def ingest_news(capture_dir: Path) -> dict:
             "name": r.player_name,
             "norm": parsers.normalize_name(r.player_name),
             "headline": r.headline, "body": r.body, "age": r.age_text,
+            "est_weeks": _est_return_weeks(r.body or r.headline),
         } for r in rows]
         created = s.run(
             """
@@ -392,6 +408,10 @@ def ingest_news(capture_dir: Path) -> dict:
             SET nw.headline = row.headline, nw.body = row.body,
                 nw.age_at_capture = row.age, nw.source = 'cbs_rotowire'
             MERGE (nw)-[:ABOUT]->(p)
+            WITH row, nw, p
+            FOREACH (_ IN CASE WHEN row.est_weeks IS NULL THEN [] ELSE [1] END |
+                SET p.est_return_weeks = row.est_weeks,
+                    p.est_return_src = row.headline)
             RETURN row.name AS name, row.headline AS h, nw.is_new AS fresh
             """,
             batch=batch, ts=ts,

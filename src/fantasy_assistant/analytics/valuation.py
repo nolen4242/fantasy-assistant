@@ -165,6 +165,13 @@ def scan(counterparties: list[str], top: int = 12) -> list[dict]:
                 r["q_give"], r["q_get"] = qg, quality(get)
                 r["tier"] = _tier(r)
                 if r["tier"]:
+                    # sensitivity: does the win survive the target hitting
+                    # 20% below his season rate? fragile wins say so
+                    damp = dict(get)
+                    for k_ in ("hr", "r", "rbi", "sb", "k", "sv", "wqs", "ob"):
+                        damp[k_] = (damp.get(k_) or 0) * 0.8
+                    r2 = ev.evaluate_trade(us, rival, give, damp)
+                    r["fragile"] = r2["our_delta"] <= 0
                     results.append(r)
     order = {"win-win": 0, "fair-swap": 1, "needs-sweetener": 2}
     results.sort(key=lambda r: (order[r["tier"]], -r["our_delta"]))
@@ -184,6 +191,7 @@ if __name__ == "__main__":
           f"1-for-1, both sides valued in projected final points\n")
     for r in scan(targets):
         flag = " [IP-CAP WATCH]" if r["ip_pace_delta"] > 80 else ""
+        fr = " [FRAGILE]" if r.get("fragile") else ""
         print(f"  [{r['tier']:<15}] give {r['give']:<20} get {r['get']:<20} "
               f"({r['with']:<13}) us {r['our_delta']:+.1f} them {r['their_delta']:+.1f} "
-              f"q {r['q_give']:.1f}->{r['q_get']:.1f}{flag}")
+              f"q {r['q_give']:.1f}->{r['q_get']:.1f}{fr}{flag}")

@@ -83,6 +83,9 @@ def cycle(st: dict, n: int) -> None:
         sigs = velocity.velocity_signals()
         el = asyncio.run(eligibility.collect())
         from fantasy_assistant.analytics import hotstreak, schedule
+        from fantasy_assistant.capture import batted
+        asyncio.run(batted.collect(2))
+        batted.contact_signals()
         heat = hotstreak.run()
         n_heat = sum(len(v) for v in heat.values())
         if n % (SLOW_EVERY * 4) == 0:

@@ -30,6 +30,12 @@ def _status(ok: bool, warn: bool = False) -> str:
     return "healthy" if ok else ("stale" if warn else "down")
 
 
+@app.get("/static/vis-network.min.js")
+def visjs():
+    from flask import send_file
+    return send_file(Path(__file__).parent / "vis-network.min.js")
+
+
 @app.get("/api/overview")
 def overview():
     out: dict = {"generated": datetime.now().isoformat(timespec="seconds")}
@@ -142,7 +148,7 @@ def graph_sample():
 
 
 PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assistant ops</title>
-<script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
+<script src="/static/vis-network.min.js"></script>
 <style>
  :root{--bg:#101418;--panel:#1a2027;--ink:#e6ebf0;--ink2:#93a1af;--muted:#5d6b78;
    --good:#3fb27f;--warn:#d9a03f;--crit:#d95f4c;--line:#2a323b}

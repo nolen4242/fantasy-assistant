@@ -28,6 +28,16 @@ V0 = {"bat": 150.0, "pit": 120.0}
 BENCH_W = 0.35
 
 
+CBS_TO_MLB = {"CHW": "CWS", "WAS": "WSH"}
+
+
+def _sched_factors() -> dict[str, float]:
+    with session() as s:
+        return {r["t"]: r["f"] for r in s.run(
+            "MATCH (f:ScheduleFactor) RETURN f.mlb_team AS t, f.ros_factor AS f"
+        ).data()}
+
+
 def _player_weeks(as_of_period: int) -> list[dict]:
     """Per-player summed production and side, using day lines <= period T."""
     end = period_dates(as_of_period)[1].isoformat()
@@ -36,7 +46,7 @@ def _player_weeks(as_of_period: int) -> list[dict]:
             """
             MATCH (d:PlayerDayLine)-[:OF_PLAYER]->(p:Player)
             WHERE d.date <= date($end)
-            WITH p.uid AS uid, d.side AS side,
+            WITH p.uid AS uid, p.cbs_mlb_team AS team, d.side AS side,
                  sum(coalesce(d.hr,0)) AS hr, sum(coalesce(d.r,0)) AS r,
                  sum(coalesce(d.rbi,0)) AS rbi, sum(coalesce(d.sb,0)) AS sb,
                  sum(coalesce(d.h,0)+coalesce(d.bb,0)+coalesce(d.hbp,0)) AS ob,
@@ -45,7 +55,7 @@ def _player_weeks(as_of_period: int) -> list[dict]:
                  sum(coalesce(d.w,0)+coalesce(d.qs,0)) AS wqs,
                  sum(coalesce(d.er,0)) AS er, sum(coalesce(d.outs,0)) AS outs,
                  sum(coalesce(d.ha,0)+coalesce(d.bbi,0)) AS wh
-            RETURN uid, side, hr, r, rbi, sb, ob, pa, k, sv, wqs, er, outs, wh
+            RETURN uid, team, side, hr, r, rbi, sb, ob, pa, k, sv, wqs, er, outs, wh
             """,
             end=end,
         ).data()
@@ -106,12 +116,18 @@ def team_weekly_ros(as_of_period: int) -> dict[str, dict[str, float]]:
 
     rosters = _rosters(as_of_period)
     lineup = _active_lineup(as_of_period)
+    sched = _sched_factors()
+    team_of: dict[str, str] = {}
+    for row in players:
+        team_of[row["uid"]] = row.get("team")
     out: dict[str, dict[str, float]] = {}
     for team, uids in rosters.items():
         tot = defaultdict(float)
         act = lineup.get(team, set())
         for uid in uids:
             w_avail = 1.0 if uid in act else BENCH_W
+            mlb = CBS_TO_MLB.get(team_of.get(uid), team_of.get(uid))
+            w_avail *= sched.get(mlb, 1.0)  # schedule-aware ROS volume
             for side, row in by_uid.get(uid, {}).items():
                 vol = (row.get("pa") or 0) if side == "bat" else (row.get("outs") or 0)
                 alpha = vol / (vol + V0[side])
