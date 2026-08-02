@@ -102,6 +102,7 @@ def main() -> None:
         try:
             cycle(st, n)
             _save_state(st)
+            (STATE.parent / "bus.heartbeat").touch()
         except Exception as exc:
             print(f"[{datetime.now():%H:%M}] cycle error: {exc}", flush=True)
         n += 1

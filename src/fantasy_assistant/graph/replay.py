@@ -216,6 +216,8 @@ def _write(state: dict, result: dict, capture_dir: Path) -> None:
             } for st in all_stints],
         )
         run_uid = f"recon:{capture_dir.name}:roster"
+        s.run("MATCH (:ReconciliationRun {uid:$u})-[:FOUND]->(d:Discrepancy) "
+              "DETACH DELETE d", u=run_uid)
         s.run(
             """
             MERGE (r:ReconciliationRun {uid:$uid})
