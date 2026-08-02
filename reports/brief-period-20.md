@@ -1,9 +1,11 @@
 # Weekly Brief — Period 20 (locks Monday, per-player)
-Generated 2026-08-02T14:36 · model races-v2 · through period 19
+Generated 2026-08-02T14:49 · model races-v2 · through period 19
 
 ## Standings picture
 - Projected final on current pace: **9th, 63.0 pts**
 - Projected leader: Young Guns (96.0 pts)
+- Season odds (MC sim): P(win) 0.0%, P(top-5 money) 0.3%; points p10/p50/p90 = 57.0/63.0/69.0
+- Title race: Young Guns 66%, Maga Doge 34%, Big Sticks 0%
 
 ## Category battle plan (cheapest points first)
 - **WQS**: +6.0 season units passes Rieken Havoc (+1.5 pts); our pace 5.0/wk
@@ -35,6 +37,14 @@ Generated 2026-08-02T14:36 · model races-v2 · through period 19
 - Alex Lange (P, KC) — clears 8/3, SportsLine wk rank 272
 - Zebby Matthews (P, MIN) — clears 8/4, SportsLine wk rank 510
 - Luis Arraez (1B,2B, SF) — clears 8/4, SportsLine wk rank 577
+
+## Trade board (deadline Sun 8/24; both sides valued; tiers model acceptance)
+- [win-win] give **Will Smith** for **Michael McGreevy** (Maga Doge): us +1.5 pts, them +1.0
+- [win-win] give **Will Smith** for **Michael King** (Maga Doge): us +1.0 pts, them +1.0
+- [win-win] give **Steven Kwan** for **Michael McGreevy** (Maga Doge): us +1.0 pts, them +2.0
+- [win-win] give **Steven Kwan** for **Bryce Elder** (Maga Doge): us +1.0 pts, them +0.5
+- [win-win] give **Aroldis Chapman** for **Chase Burns** (Maga Doge): us +0.5 pts, them +2.5
+- [win-win] give **Steven Kwan** for **Michael King** (Maga Doge): us +0.5 pts, them +2.0
 
 ## IP pacing
 - 817.0 IP YTD; CBS on-pace 1203 vs cap 1300 (≈97 IP of unused headroom → streaming budget)

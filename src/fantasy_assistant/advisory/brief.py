@@ -14,7 +14,7 @@ import json
 from datetime import date, datetime
 from pathlib import Path
 
-from fantasy_assistant.analytics import races
+from fantasy_assistant.analytics import races, valuation, variance
 from fantasy_assistant.graph.client import session
 from fantasy_assistant.graph.refdata import period_for_date
 
@@ -89,6 +89,12 @@ def compose(as_of: str | None = None) -> str:
             break
     leader = race["projected_final"][0]
     add(f"- Projected leader: {leader[0]} ({leader[1]} pts)")
+    sim = variance.simulate(n_sims=2000)
+    p10, p50, p90 = sim["our_pts_p10_p50_p90"]
+    add(f"- Season odds (MC sim): P(win) {sim['p_win'][us]:.1%}, "
+        f"P(top-5 money) {sim['p_top5'][us]:.1%}; points p10/p50/p90 = {p10}/{p50}/{p90}")
+    add(f"- Title race: " + ", ".join(f"{t} {sim['p_win'][t]:.0%}"
+        for t in sorted(sim['p_win'], key=lambda t: -sim['p_win'][t])[:3]))
     add("")
 
     add("## Category battle plan (cheapest points first)")
@@ -149,6 +155,14 @@ def compose(as_of: str | None = None) -> str:
         add("- none")
     add("")
 
+    add("## Trade board (deadline Sun 8/24; both sides valued; tiers model acceptance)")
+    for t in valuation.scan(["Gashouse Gang", "Dawg", "Maga Doge"], top=6):
+        add(f"- [{t['tier']}] give **{t['give']}** for **{t['get']}** ({t['with']}): "
+            f"us {t['our_delta']:+.1f} pts, them {t['their_delta']:+.1f}")
+        recs.append({"kind": "trade_proposal", "player": t["get"],
+                     "rationale": f"{t['tier']}: give {t['give']} to {t['with']}, "
+                                  f"us {t['our_delta']:+.1f}/them {t['their_delta']:+.1f}"})
+    add("")
     add("## IP pacing")
     add(f"- {pace['ip_used']} IP YTD; CBS on-pace {pace['pace_final']:.0f} vs cap {pace['cap']} "
         f"(≈{pace['headroom_vs_cap']:.0f} IP of unused headroom → streaming budget)")

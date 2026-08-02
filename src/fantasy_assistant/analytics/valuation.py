@@ -121,7 +121,36 @@ class TradeEvaluator:
         }
 
 
-def scan(counterparties: list[str], top: int = 10) -> list[dict]:
+QUALITY_WEEKS = 19.0
+# per-week stat weights approximating market value of production (both sides
+# on one scale so cross-type trades can be compared)
+QUALITY_W = {"hr": 1.0, "r": 0.45, "rbi": 0.45, "sb": 1.1, "ob": 0.30,
+             "k": 0.28, "sv": 1.6, "wqs": 1.4, "outs": 0.02}
+FAIRNESS_MAX = 1.45   # counterparty won't accept giving up a much better player
+
+
+def quality(p: dict) -> float:
+    wk = ros_weekly(p)
+    return round(sum(w * wk.get(k, 0.0) for k, w in QUALITY_W.items()), 2)
+
+
+def _tier(r: dict) -> str | None:
+    """Acceptance tiers modeling how the counterparty actually decides:
+    they see player quality (public perception) and their own interests,
+    not our projections."""
+    if r["our_delta"] <= 0:
+        return None
+    qg, qt = r["q_give"], r["q_get"]
+    if r["their_delta"] >= 0.5 and qg >= qt * 0.55:
+        return "win-win"          # they gain points and the swap isn't absurd
+    if abs(r["their_delta"]) <= 0.5 and qt <= qg * FAIRNESS_MAX:
+        return "fair-swap"        # points-neutral for them, quality comparable
+    if r["their_delta"] >= -1.0 and qg >= qt * 1.05:
+        return "needs-sweetener"  # we send the better player; close on points
+    return None
+
+
+def scan(counterparties: list[str], top: int = 12) -> list[dict]:
     ev = TradeEvaluator()
     us = ev.race["us"]
     ours = [p for p in roster_players(us) if p["status"] in ("active", "reserve")]
@@ -129,14 +158,24 @@ def scan(counterparties: list[str], top: int = 10) -> list[dict]:
     for rival in counterparties:
         theirs = [p for p in roster_players(rival) if p["status"] in ("active", "reserve")]
         for give in ours:
+            qg = quality(give)
             for get in theirs:
-                # only cross-type or same-type swaps that could make sense
                 r = ev.evaluate_trade(us, rival, give, get)
                 r["with"] = rival
-                results.append(r)
-    results.sort(key=lambda r: -(r["our_delta"] + min(r["their_delta"], 0)))
-    plausible = [r for r in results if r["their_delta"] >= -0.6 and r["our_delta"] > 0]
-    return plausible[:top]
+                r["q_give"], r["q_get"] = qg, quality(get)
+                r["tier"] = _tier(r)
+                if r["tier"]:
+                    results.append(r)
+    order = {"win-win": 0, "fair-swap": 1, "needs-sweetener": 2}
+    results.sort(key=lambda r: (order[r["tier"]], -r["our_delta"]))
+    # keep at most 2 per (get) target so one star doesn't flood the board
+    seen: dict[str, int] = {}
+    out = []
+    for r in results:
+        if seen.get(r["get"], 0) < 2:
+            out.append(r)
+            seen[r["get"]] = seen.get(r["get"], 0) + 1
+    return out[:top]
 
 
 if __name__ == "__main__":
@@ -145,6 +184,6 @@ if __name__ == "__main__":
           f"1-for-1, both sides valued in projected final points\n")
     for r in scan(targets):
         flag = " [IP-CAP WATCH]" if r["ip_pace_delta"] > 80 else ""
-        print(f"  give {r['give']:<24} get {r['get']:<24} ({r['with']:<14}) "
-              f"us {r['our_delta']:+.1f}  them {r['their_delta']:+.1f}  "
-              f"IP pace {r['ip_pace_delta']:+.0f}{flag}")
+        print(f"  [{r['tier']:<15}] give {r['give']:<20} get {r['get']:<20} "
+              f"({r['with']:<13}) us {r['our_delta']:+.1f} them {r['their_delta']:+.1f} "
+              f"q {r['q_give']:.1f}->{r['q_get']:.1f}{flag}")

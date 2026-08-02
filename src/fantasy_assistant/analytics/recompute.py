@@ -240,6 +240,10 @@ def recompute_v2() -> dict:
             "inferred_nonparticipants": inferred, "components": components}
 
 
+import functools
+
+
+@functools.cache
 def team_rate_inputs(form_periods: int = 4) -> dict:
     """Per-team rate components: YTD totals + recent-form weekly means, from
     the lock-solved attribution. Feeds component-based rate projection."""

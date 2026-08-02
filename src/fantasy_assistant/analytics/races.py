@@ -79,7 +79,12 @@ def load_inputs():
     return ytd, recent, latest_period, us
 
 
+_CACHE: dict = {}
+
+
 def analyze() -> dict:
+    if "result" in _CACHE:
+        return _CACHE["result"]
     ytd, recent, latest_period, us = load_inputs()
     remaining = FINAL_PERIOD - latest_period
     meta = {c[0]: {"kind": c[1], "direction": c[2]} for c in CATEGORIES}
@@ -176,6 +181,7 @@ def analyze() -> dict:
 
     result["projected_final"] = sorted(projected_totals.items(),
                                        key=lambda kv: -kv[1])
+    _CACHE["result"] = result
     return result
 
 
