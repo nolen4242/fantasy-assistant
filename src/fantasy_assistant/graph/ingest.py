@@ -320,3 +320,38 @@ def ingest_byperiod(capture_dir: Path) -> dict:
                     dif=row["dif"], behind=row["behind"],
                 )
     return {"periods": len(data), "category_lines": n_lines}
+
+
+def ingest_lineups(capture_dir: Path) -> dict:
+    rows, rejects = parsers.parse_lineups(capture_dir / "lineups_all.psv")
+    with session() as s:
+        run_uid = _capture_run(s, capture_dir, "lineups")
+        batch = [
+            {
+                "uid": (f"lineup:2026:{r.period}:{team_uid(r.team)}:{r.section}:"
+                        f"{r.slot}:{parsers.normalize_name(r.player_name).replace(' ', '_')}"),
+                "tuid": team_uid(r.team), "puid": player_uid(r.player_name),
+                "period_uid": f"period:2026:{r.period}",
+                "name": r.player_name, "norm": parsers.normalize_name(r.player_name),
+                "slot": r.slot, "section": r.section,
+            }
+            for r in rows
+        ]
+        for i in range(0, len(batch), 2000):
+            s.run(
+                """
+                MATCH (c:CaptureRun {uid:$run})
+                UNWIND $batch AS row
+                MATCH (t:FantasyTeam {uid:row.tuid}), (per:ScoringPeriod {uid:row.period_uid})
+                MERGE (p:Player {uid:row.puid})
+                ON CREATE SET p.name_full=row.name, p.name_normalized=row.norm
+                MERGE (l:LineupAssignment {uid:row.uid})
+                SET l.slot=row.slot, l.section=row.section
+                MERGE (l)-[:BY_TEAM]->(t)
+                MERGE (l)-[:IN_PERIOD]->(per)
+                MERGE (l)-[:FILLED_BY]->(p)
+                MERGE (l)-[:OBSERVED_IN]->(c)
+                """,
+                run=run_uid, batch=batch[i:i + 2000],
+            )
+    return {"lineup_rows": len(rows), "rejects": len(rejects)}

@@ -149,11 +149,67 @@ def snapshot(out_dir: Path | None = None) -> None:
     print(f"snapshot complete: {out}")
 
 
+
+
+TEAM_IDS = {  # discovered from the standings page team links, 2026 season
+    "Like a Nightmare": 1, "Young Guns": 2, "Guillotine": 3, "Magnum GI": 4,
+    "Rieken Havoc": 5, "Dawg": 7, "Gashouse Gang": 8, "Big Sticks": 9,
+    "Long Balls": 10, "Maga Doge": 11, "Simba's Dublin Green Sox": 12,
+    "Trex": 16, "Runtime Terror": 18,
+}
+
+LINEUP_FETCH_JS = """
+async (pairs) => {
+  const out = [];
+  for (const [team, tid, period] of pairs) {
+    const r = await fetch(`/teams/roster-report/${tid}/${period}/`, {credentials: 'same-origin'});
+    const doc = new DOMParser().parseFromString(await r.text(), 'text/html');
+    let section = 'active';
+    for (const tr of doc.querySelectorAll('table tr')) {
+      const cells = tr.cells; if (!cells || cells.length < 3) continue;
+      const pos = cells[1].textContent.trim();
+      const player = cells[2].textContent.trim().replace(/\\s+/g, ' ');
+      if (pos === 'Pos') { section = 'active'; continue; }
+      if (['Bench', 'Injured', 'Minors'].includes(pos)) {
+        section = pos.toLowerCase(); continue;
+      }
+      if (!pos || player === 'EMPTY') continue;
+      out.push([team, period, section, pos, player].join('|'));
+    }
+  }
+  return out.join('\\n');
+}
+"""
+
+
+def capture_lineups(out_dir: Path | None = None, through_period: int | None = None) -> None:
+    """Capture per-period lineup assignments for every team, periods 1..N."""
+    out = out_dir or (RAW_ROOT / date.today().isoformat())
+    out.mkdir(parents=True, exist_ok=True)
+    n = through_period or period_for_date(date.today())
+    pairs = [[team, tid, p] for team, tid in TEAM_IDS.items() for p in range(1, n + 1)]
+    with sync_playwright() as pw:
+        ctx = pw.chromium.launch_persistent_context(PROFILE_DIR, headless=True)
+        page = ctx.pages[0] if ctx.pages else ctx.new_page()
+        page.goto(BASE, wait_until="domcontentloaded")
+        if not _logged_in(page):
+            sys.exit("Session expired — run `runner login` first.")
+        text = page.evaluate(LINEUP_FETCH_JS, pairs)
+        ctx.close()
+    stamp = (f"source: {BASE}/teams/roster-report/<team>/<period>/ (periods 1-{n})\n"
+             f"captured: {datetime.now().isoformat(timespec='seconds')}\n---\n")
+    (out / "lineups_all.psv").write_text(stamp + text)
+    print(f"lineups: {len(text.splitlines()):,} rows across {len(pairs)} team-periods -> {out / 'lineups_all.psv'}")
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "snapshot"
     if cmd == "login":
         login()
     elif cmd == "snapshot":
         snapshot()
+        capture_lineups()
+    elif cmd == "lineups":
+        capture_lineups()
     else:
         sys.exit(f"unknown command: {cmd}")

@@ -522,3 +522,34 @@ def parse_byperiod(path: Path) -> dict[int, dict]:
                 "behind": float(parts[6]),
             })
     return out
+
+
+@dataclass
+class LineupRow:
+    team: str
+    period: int
+    section: str              # active|bench|injured|minors
+    slot: str                 # C/1B/../U/P (active) or listed position
+    player_name: str
+    positions: str
+    mlb_team: str
+
+
+def parse_lineups(path: Path) -> tuple[list[LineupRow], list[str]]:
+    rows: list[LineupRow] = []
+    rejects: list[str] = []
+    for line in _strip_stamp(path.read_text(encoding="utf-8")).splitlines():
+        parts = line.split("|")
+        if len(parts) != 5:
+            if line.strip():
+                rejects.append(line)
+            continue
+        team, period, section, slot, cell = parts
+        pm = _PLAYER_CELL_RE.match(cell.strip())
+        if team not in TEAM_NAMES or not pm:
+            rejects.append(line)
+            continue
+        rows.append(LineupRow(team=team, period=int(period), section=section,
+                              slot=slot, player_name=pm.group("name").strip(),
+                              positions=pm.group("pos"), mlb_team=pm.group("team")))
+    return rows, rejects

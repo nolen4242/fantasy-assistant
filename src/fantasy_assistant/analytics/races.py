@@ -1,0 +1,191 @@
+"""Race analysis v1: pace-based projections + marginal standings curves.
+
+For each category, projects end-of-season values (YTD + recent-form pace for
+counting stats; YTD held for rates), re-ranks into projected final standings
+points, and computes our marginal curves — how many category units buy each
+additional standings point. This is the valuation substrate PROBLEM.md asks
+for: value denominated in expected standings movement, not raw stats.
+
+v1 simplifications (each recorded on the AnalyticsRun):
+- rate categories (OBP/ERA/WHIP) projected flat at current YTD value
+- pace = mean of the last FORM_PERIODS by-period values
+- no variance model yet — curves are deterministic distances
+"""
+from __future__ import annotations
+
+import json
+from datetime import datetime
+
+from fantasy_assistant.graph.client import session
+from fantasy_assistant.graph.refdata import CATEGORIES
+
+MODEL_VERSION = "races-v1"
+FORM_PERIODS = 4
+FINAL_PERIOD = 27
+
+
+def _points_for(values: dict[str, float], direction: str) -> dict[str, float]:
+    """Roto points with ties sharing the average of tied ranks."""
+    reverse = direction == "higher"
+    ordered = sorted(values.items(), key=lambda kv: kv[1], reverse=reverse)
+    pts: dict[str, float] = {}
+    i = 0
+    n = len(ordered)
+    while i < n:
+        j = i
+        while j + 1 < n and ordered[j + 1][1] == ordered[i][1]:
+            j += 1
+        # ranks i..j (0-based) share points; rank r earns n - r
+        share = sum(n - r for r in range(i, j + 1)) / (j - i + 1)
+        for k in range(i, j + 1):
+            pts[ordered[k][0]] = share
+        i = j + 1
+    return pts
+
+
+def load_inputs():
+    with session() as s:
+        ytd = s.run(
+            """
+            MATCH (st:StandingsSnapshot {scope:'ytd'})-[:HAS_LINE]->(l)
+                  -[:FOR_TEAM]->(t:FantasyTeam), (l)-[:IN_CATEGORY]->(c:Category)
+            RETURN c.code AS cat, t.cbs_name AS team, l.value_reported AS value,
+                   l.points AS points
+            """
+        ).data()
+        latest_period = s.run(
+            "MATCH (st:StandingsSnapshot {scope:'period'})-[:FOR_PERIOD]->(p) "
+            "RETURN max(p.number) AS n"
+        ).single()["n"]
+        recent = s.run(
+            """
+            MATCH (st:StandingsSnapshot {scope:'period'})-[:FOR_PERIOD]->(p:ScoringPeriod),
+                  (st)-[:HAS_LINE]->(l)-[:FOR_TEAM]->(t:FantasyTeam),
+                  (l)-[:IN_CATEGORY]->(c:Category)
+            WHERE p.number > $cut
+            RETURN c.code AS cat, t.cbs_name AS team, avg(l.value_reported) AS mean
+            """,
+            cut=latest_period - FORM_PERIODS,
+        ).data()
+        us = s.run(
+            "MATCH (t:FantasyTeam {is_us:true}) RETURN t.cbs_name AS n"
+        ).single()["n"]
+    return ytd, recent, latest_period, us
+
+
+def analyze() -> dict:
+    ytd, recent, latest_period, us = load_inputs()
+    remaining = FINAL_PERIOD - latest_period
+    meta = {c[0]: {"kind": c[1], "direction": c[2]} for c in CATEGORIES}
+
+    ytd_by_cat: dict[str, dict[str, float]] = {}
+    for row in ytd:
+        ytd_by_cat.setdefault(row["cat"], {})[row["team"]] = row["value"]
+    pace: dict[tuple[str, str], float] = {
+        (r["cat"], r["team"]): r["mean"] for r in recent
+    }
+
+    result: dict = {"model": MODEL_VERSION, "as_of_period": latest_period,
+                    "remaining_periods": remaining, "categories": {}, "us": us}
+    projected_totals: dict[str, float] = {}
+
+    for cat, values in ytd_by_cat.items():
+        kind, direction = meta[cat]["kind"], meta[cat]["direction"]
+        if kind == "counting":
+            proj = {t: v + pace.get((cat, t), 0.0) * remaining for t, v in values.items()}
+        else:
+            proj = dict(values)
+        pts_now = _points_for(values, direction)
+        pts_proj = _points_for(proj, direction)
+        for t, p in pts_proj.items():
+            projected_totals[t] = projected_totals.get(t, 0.0) + p
+
+        ordered = sorted(proj.items(), key=lambda kv: kv[1],
+                         reverse=(direction == "higher"))
+        our_idx = next(i for i, (t, _) in enumerate(ordered) if t == us)
+        curve = []
+        if kind == "counting":
+            # units of season-total production needed to pass each team above
+            for i in range(our_idx - 1, -1, -1):
+                gap = abs(ordered[i][1] - proj[us])
+                curve.append({"pass": ordered[i][0], "units_needed": round(gap, 1),
+                              "pts_gain": round(pts_proj[ordered[i][0]] - pts_proj[us], 1)})
+            cushion = (abs(proj[us] - ordered[our_idx + 1][1])
+                       if our_idx + 1 < len(ordered) else None)
+        else:
+            cushion = None
+
+        result["categories"][cat] = {
+            "kind": kind, "direction": direction,
+            "ytd_value": values[us], "ytd_pts": pts_now[us],
+            "proj_value": round(proj[us], 4), "proj_pts": pts_proj[us],
+            "our_pace_per_period": round(pace.get((cat, us), 0.0), 2),
+            "curve_up": curve[:4], "cushion_down": cushion,
+            "proj_leaderboard": [(t, round(v, 3), pts_proj[t]) for t, v in ordered],
+        }
+
+    result["projected_final"] = sorted(projected_totals.items(),
+                                       key=lambda kv: -kv[1])
+    return result
+
+
+def write_graph(result: dict) -> None:
+    ts = datetime.now().isoformat(timespec="seconds")
+    run_uid = f"analytics:races:{ts}"
+    with session() as s:
+        s.run(
+            """
+            MERGE (a:AnalyticsRun {uid:$uid})
+            SET a.agent='races', a.model_version=$mv, a.finished_at=datetime($ts),
+                a.status='complete', a.as_of_period=$p
+            """,
+            uid=run_uid, mv=MODEL_VERSION, ts=ts, p=result["as_of_period"],
+        )
+        for cat, data in result["categories"].items():
+            s.run(
+                """
+                MATCH (a:AnalyticsRun {uid:$run}), (c:Category {uid:$cuid})
+                MERGE (r:RaceAnalysis {uid:$uid})
+                SET r.as_of_period=$p, r.model_version=$mv, r.payload=$payload,
+                    r.computed_at=datetime($ts)
+                MERGE (r)-[:IN_CATEGORY]->(c)
+                MERGE (r)-[:PRODUCED_BY]->(a)
+                """,
+                run=run_uid, cuid=f"category:{cat}",
+                uid=f"race:{cat}:p{result['as_of_period']}:{MODEL_VERSION}",
+                p=result["as_of_period"], mv=MODEL_VERSION,
+                payload=json.dumps(data), ts=ts,
+            )
+
+
+def report(result: dict) -> str:
+    us = result["us"]
+    lines = [f"RACE ANALYSIS — through period {result['as_of_period']}, "
+             f"{result['remaining_periods']} periods left  [{result['model']}]", ""]
+    lines.append("Projected final standings:")
+    for i, (t, pts) in enumerate(result["projected_final"], 1):
+        marker = " <== us" if t == us else ""
+        lines.append(f"  {i:>2}. {t:<26} {pts:5.1f}{marker}")
+    lines.append("")
+    lines.append(f"{us} categories (sorted by opportunity):")
+
+    def opportunity(item):
+        cat, d = item
+        first = d["curve_up"][0] if d["curve_up"] else None
+        return first["units_needed"] if first else 1e9
+
+    for cat, d in sorted(result["categories"].items(), key=opportunity):
+        lines.append(f"  {cat:<5} ytd {d['ytd_value']:<8g} pts {d['ytd_pts']:>4} -> "
+                     f"proj pts {d['proj_pts']:>4}  pace/wk {d['our_pace_per_period']}")
+        for step in d["curve_up"]:
+            lines.append(f"        +{step['units_needed']:<7} season units passes "
+                         f"{step['pass']:<26} (+{step['pts_gain']} pts)")
+        if d["cushion_down"] is not None:
+            lines.append(f"        cushion below: {round(d['cushion_down'], 1)} units")
+    return "\n".join(lines)
+
+
+if __name__ == "__main__":
+    result = analyze()
+    write_graph(result)
+    print(report(result))
