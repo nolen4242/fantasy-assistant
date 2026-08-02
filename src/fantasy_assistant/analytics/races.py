@@ -18,8 +18,14 @@ from datetime import datetime
 
 from fantasy_assistant.graph.client import session
 from fantasy_assistant.graph.refdata import CATEGORIES
+from fantasy_assistant.analytics.recompute import team_rate_inputs
 
-MODEL_VERSION = "races-v1"
+# one-roster-spot swap assumptions for rate-category curves (explicit v2 model)
+SWAP = {"OBP": {"vol": 240.0, "edge": 0.040},   # ROS plate appearances, OBP edge
+        "ERA": {"vol": 60.0, "edge": 1.00},     # ROS innings, ERA edge
+        "WHIP": {"vol": 60.0, "edge": 0.12}}
+
+MODEL_VERSION = "races-v2"
 FORM_PERIODS = 4
 FINAL_PERIOD = 27
 
@@ -88,13 +94,38 @@ def analyze() -> dict:
     result: dict = {"model": MODEL_VERSION, "as_of_period": latest_period,
                     "remaining_periods": remaining, "categories": {}, "us": us}
     projected_totals: dict[str, float] = {}
+    rate_in = team_rate_inputs()
+
+    def project_rate(cat: str, team: str, ytd_value: float) -> tuple[float, float]:
+        """Official-anchored: official YTD rate over derived YTD volume, plus
+        derived recent-form components for the remaining weeks. Returns
+        (projected_rate, projected_final_denominator)."""
+        ri = rate_in.get(team)
+        if not ri:
+            return ytd_value, 0.0
+        y, rec = ri["ytd"], ri["recent"]
+        if cat == "OBP":
+            denom0, num_wk, den_wk = y.get("pa", 0), rec.get("ob", 0), rec.get("pa", 0)
+        elif cat == "ERA":
+            denom0, num_wk, den_wk = y.get("outs", 0), rec.get("er", 0), rec.get("outs", 0)
+        else:  # WHIP
+            denom0, num_wk, den_wk = y.get("outs", 0), rec.get("wh", 0), rec.get("outs", 0)
+        scale = 27.0 if cat == "ERA" else (1.0 if cat == "OBP" else 3.0)
+        num0 = ytd_value * denom0 / scale
+        denom_f = denom0 + den_wk * remaining
+        num_f = num0 + num_wk * remaining
+        rate = num_f * scale / denom_f if denom_f else ytd_value
+        return round(rate, 4), denom_f
 
     for cat, values in ytd_by_cat.items():
         kind, direction = meta[cat]["kind"], meta[cat]["direction"]
+        rate_denoms: dict[str, float] = {}
         if kind == "counting":
             proj = {t: v + pace.get((cat, t), 0.0) * remaining for t, v in values.items()}
         else:
-            proj = dict(values)
+            proj = {}
+            for t, v in values.items():
+                proj[t], rate_denoms[t] = project_rate(cat, t, v)
         pts_now = _points_for(values, direction)
         pts_proj = _points_for(proj, direction)
         for t, p in pts_proj.items():
@@ -113,7 +144,24 @@ def analyze() -> dict:
             cushion = (abs(proj[us] - ordered[our_idx + 1][1])
                        if our_idx + 1 < len(ordered) else None)
         else:
-            cushion = None
+            # rate curves in one-roster-spot swap equivalents
+            sw = SWAP[cat]
+            denom_f = rate_denoms.get(us) or 1.0
+            scale = 27.0 if cat == "ERA" else (1.0 if cat == "OBP" else 3.0)
+            impact = sw["vol"] * (3.0 if cat != "OBP" else 1.0) * sw["edge"] * scale / (
+                denom_f * (9.0 if cat == "ERA" else (3.0 if cat == "WHIP" else 1.0)))
+            # impact = |rate change| from converting one roster spot's ROS
+            # volume to a player better by `edge`
+            for i in range(our_idx - 1, -1, -1):
+                gap = abs(ordered[i][1] - proj[us])
+                curve.append({"pass": ordered[i][0],
+                              "units_needed": round(gap, 4),
+                              "swaps": round(gap / impact, 1) if impact else None,
+                              "pts_gain": round(pts_proj[ordered[i][0]] - pts_proj[us], 1)})
+            cushion = (abs(proj[us] - ordered[our_idx + 1][1])
+                       if our_idx + 1 < len(ordered) else None)
+            if cushion is not None and impact:
+                cushion = round(cushion / impact, 2)  # in swap equivalents
 
         result["categories"][cat] = {
             "kind": kind, "direction": direction,
@@ -121,6 +169,8 @@ def analyze() -> dict:
             "proj_value": round(proj[us], 4), "proj_pts": pts_proj[us],
             "our_pace_per_period": round(pace.get((cat, us), 0.0), 2),
             "curve_up": curve[:4], "cushion_down": cushion,
+            "cushion_unit": "swaps" if kind == "rate" else "units",
+            "swap_impact": (impact if kind == "rate" else None),
             "proj_leaderboard": [(t, round(v, 3), pts_proj[t]) for t, v in ordered],
         }
 

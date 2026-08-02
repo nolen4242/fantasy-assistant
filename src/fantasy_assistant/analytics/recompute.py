@@ -208,10 +208,20 @@ def recompute_v2() -> dict:
     outcomes = defaultdict(int)
     misses = []
     inferred = []
+    components: dict = {}
     for (team, period, side), players in groups.items():
         off = official.get((team, period), {})
         kept, totals, outcome = solve(players, side, off)
         outcomes[outcome] += 1
+        zc = lambda k: sum((p[k] or 0) for p in kept)
+        if side == "bat":
+            components[(team, period, "bat")] = {
+                "ob": zc("h") + zc("bb") + zc("hbp"),
+                "pa": zc("ab") + zc("bb") + zc("hbp") + zc("sf")}
+        else:
+            components[(team, period, "pit")] = {
+                "er": zc("er"), "outs": zc("outs"),
+                "wh": zc("ha") + zc("bbi")}
         if outcome == "solved":
             dropped = {p["name"] for p in players} - {p["name"] for p in kept}
             inferred.append((team, period, side, sorted(dropped)))
@@ -227,4 +237,22 @@ def recompute_v2() -> dict:
                 stats[cat]["miss"] += 1
                 misses.append((team, period, cat, off[cat], ours))
     return {"stats": dict(stats), "misses": misses, "outcomes": dict(outcomes),
-            "inferred_nonparticipants": inferred}
+            "inferred_nonparticipants": inferred, "components": components}
+
+
+def team_rate_inputs(form_periods: int = 4) -> dict:
+    """Per-team rate components: YTD totals + recent-form weekly means, from
+    the lock-solved attribution. Feeds component-based rate projection."""
+    comps = recompute_v2()["components"]
+    latest = max(p for (_, p, _) in comps)
+    out: dict = {}
+    for (team, period, side), c in comps.items():
+        t = out.setdefault(team, {"ytd": defaultdict(float), "recent": defaultdict(float)})
+        for k, v in c.items():
+            t["ytd"][k] += v
+            if period > latest - form_periods:
+                t["recent"][k] += v / form_periods
+    for t in out.values():
+        t["ytd"] = dict(t["ytd"])
+        t["recent"] = dict(t["recent"])
+    return out

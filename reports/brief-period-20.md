@@ -1,16 +1,17 @@
 # Weekly Brief — Period 20 (locks Monday, per-player)
-Generated 2026-08-02T14:23 · model races-v1 · through period 19
+Generated 2026-08-02T14:36 · model races-v2 · through period 19
 
 ## Standings picture
-- Projected final on current pace: **9th, 64.0 pts**
-- Projected leader: Young Guns (90.0 pts)
+- Projected final on current pace: **9th, 63.0 pts**
+- Projected leader: Young Guns (96.0 pts)
 
 ## Category battle plan (cheapest points first)
 - **WQS**: +6.0 season units passes Rieken Havoc (+1.5 pts); our pace 5.0/wk
+- **OBP**: ~0.1 roster-swaps passes Gashouse Gang (+1.0 pts); proj 0.3291
+- **WHIP**: ~0.2 roster-swaps passes Long Balls (+1.0 pts); proj 1.2458
 - **K**: +6.0 season units passes Gashouse Gang (+1.0 pts); our pace 42.25/wk
 - **S**: +7.0 season units passes Long Balls (+1.0 pts); our pace 2.5/wk
 - **HR**: +8.0 season units passes Simba's Dublin Green Sox (+1.0 pts); our pace 5.75/wk
-- **RBI**: +10.0 season units passes Rieken Havoc (+1.0 pts); our pace 22.5/wk
 
 ## Stream targets (K/WQS are our cheapest points; IP headroom exists)
 - Slade Cecconi (CLE) (2-START) — proj 9.6 K, 0.7 QS, 0.5 W, ERA 3.77 [FA]

@@ -93,14 +93,18 @@ def compose(as_of: str | None = None) -> str:
 
     add("## Category battle plan (cheapest points first)")
     for cat, d in sorted(race["categories"].items(),
-                         key=lambda kv: (kv[1]["curve_up"][0]["units_needed"]
-                                         if kv[1]["curve_up"] else 1e9))[:5:]:
+                         key=lambda kv: ((kv[1]["curve_up"][0].get("swaps") or kv[1]["curve_up"][0]["units_needed"])
+                                         if kv[1]["curve_up"] else 1e9))[:6:]:
         steps = [c for c in d["curve_up"] if c["pts_gain"] > 0]
         if not steps:
             continue
         first = steps[0]
-        add(f"- **{cat}**: +{first['units_needed']} season units passes "
-            f"{first['pass']} (+{first['pts_gain']} pts); our pace {d['our_pace_per_period']}/wk")
+        if d["kind"] == "rate":
+            add(f"- **{cat}**: ~{first.get('swaps')} roster-swaps passes "
+                f"{first['pass']} (+{first['pts_gain']} pts); proj {d['proj_value']}")
+        else:
+            add(f"- **{cat}**: +{first['units_needed']} season units passes "
+                f"{first['pass']} (+{first['pts_gain']} pts); our pace {d['our_pace_per_period']}/wk")
     add("")
 
     # streaming targets: two-start or high-K SPs, sane ratios
