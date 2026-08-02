@@ -153,10 +153,10 @@ def _tier(r: dict) -> str | None:
 def scan(counterparties: list[str], top: int = 12) -> list[dict]:
     ev = TradeEvaluator()
     us = ev.race["us"]
-    ours = [p for p in roster_players(us) if p["status"] in ("active", "reserve")]
+    ours = [p for p in roster_players(us) if p["status"] in ("active", "reserve", "il")]
     results = []
     for rival in counterparties:
-        theirs = [p for p in roster_players(rival) if p["status"] in ("active", "reserve")]
+        theirs = [p for p in roster_players(rival) if p["status"] in ("active", "reserve", "il")]
         for give in ours:
             qg = quality(give)
             for get in theirs:
@@ -189,7 +189,12 @@ if __name__ == "__main__":
     targets = ["Gashouse Gang", "Dawg", "Maga Doge"]
     print(f"TRADE SCAN [{MODEL_VERSION}] vs {', '.join(targets)} — "
           f"1-for-1, both sides valued in projected final points\n")
-    for r in scan(targets):
+    board = scan(targets)
+    if not board:
+        print("  (no 1-for-1 clears the acceptance tiers under current "
+              "projections — races-v3 shrinkage compresses category gaps; "
+              "consolidation 2-for-1s are the open lane, queued)")
+    for r in board:
         flag = " [IP-CAP WATCH]" if r["ip_pace_delta"] > 80 else ""
         fr = " [FRAGILE]" if r.get("fragile") else ""
         print(f"  [{r['tier']:<15}] give {r['give']:<20} get {r['get']:<20} "
