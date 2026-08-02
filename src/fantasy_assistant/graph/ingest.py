@@ -81,6 +81,13 @@ def ingest_transactions(capture_dir: Path) -> dict:
     return {"transactions": len(txns), "rejects": len(rejects)}
 
 
+def _pool_target_period(capture_dir: Path) -> int:
+    from datetime import date as _date
+    from fantasy_assistant.graph.refdata import period_for_date
+    d = _date.fromisoformat(capture_dir.name)
+    return period_for_date(d) + (1 if d.weekday() == 6 else 0)
+
+
 def ingest_pool(capture_dir: Path, as_of: str) -> dict:
     counts = {}
     with session() as s:
@@ -90,10 +97,10 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
             """
             MATCH (c:CaptureRun {uid:$run})
             MERGE (f:FreeAgentPoolSnapshot {uid:$uid})
-            SET f.as_of=datetime($as_of), f.period_projected=20
+            SET f.as_of=datetime($as_of), f.period_projected=$pp
             MERGE (f)-[:OBSERVED_IN]->(c)
             """,
-            run=run_uid, uid=snap_uid, as_of=as_of,
+            run=run_uid, uid=snap_uid, as_of=as_of, pp=_pool_target_period(capture_dir),
         )
         for kind, fname in (("bat", "fa_pool_batters_period20.psv"),
                             ("pit", "fa_pool_pitchers_period20.psv")):
@@ -189,7 +196,7 @@ def ingest_roster_grid(capture_dir: Path, as_of: str) -> dict:
             SET g.as_of=datetime($as_of)
             MERGE (g)-[:OBSERVED_IN]->(c)
             """,
-            run=run_uid, uid=snap_uid, as_of=as_of,
+            run=run_uid, uid=snap_uid, as_of=as_of, pp=_pool_target_period(capture_dir),
         )
         batch = [
             {

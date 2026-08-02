@@ -66,6 +66,7 @@ def fetch_status_events(start: str, end: str) -> dict:
                 UNWIND $batch AS row
                 MATCH (p:Player {uid: row.puid})
                 MERGE (e:MlbStatusEvent {uid: row.uid})
+                ON CREATE SET e.first_seen = datetime()
                 SET e.type_desc=row.type_desc, e.date=date(row.date),
                     e.effective=row.effective, e.description=row.description,
                     e.to_team=row.to_team, e.from_team=row.from_team,

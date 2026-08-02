@@ -93,6 +93,8 @@ def snapshot(out_dir: Path | None = None) -> None:
             sys.exit("Session expired — run `python -m fantasy_assistant.capture.runner login` first.")
 
         period = period_for_date(date.today())
+        if date.today().weekday() == 6:  # Sunday: SportsLine shows next week
+            period += 1
         pages = dict(PAGES)
         pages["/stats/stats-main?print_rows=9999"] = "fa_pool_batters.psv"
         pages[f"/stats/stats-main/fa:P/period-{period}:p/standard/projections?print_rows=9999"] = "fa_pool_pitchers.psv"
