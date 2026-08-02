@@ -120,7 +120,7 @@ def velocity_signals() -> list[dict]:
             WHERE v.ff_avg IS NOT NULL AND v.n_ff >= 8
             WITH p, v ORDER BY v.date DESC
             WITH p, collect({d: v.date, ff: v.ff_avg})[..7] AS games
-            WHERE size(games) >= 4
+            WHERE size(games) >= 4 AND games[0].d >= date() - duration('P10D') AND games[0].d >= date() - duration('P10D')
             RETURN p.uid AS uid, p.name_full AS name, games
             """
         ).data()
@@ -160,7 +160,7 @@ def stuff_signals() -> list[dict]:
             WITH p, v ORDER BY v.date DESC
             WITH p, collect({d: v.date, csw: v.csw_pct, whiff: v.whiff_pct,
                              mix: v.mix})[..7] AS g
-            WHERE size(g) >= 4
+            WHERE size(g) >= 4 AND g[0].d >= date() - duration('P10D') AND g[0].d >= date() - duration('P10D')
             RETURN p.uid AS uid, p.name_full AS name, g
             """
         ).data()

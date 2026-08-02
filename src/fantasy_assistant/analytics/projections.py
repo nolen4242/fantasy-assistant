@@ -46,7 +46,8 @@ def _player_weeks(as_of_period: int) -> list[dict]:
             """
             MATCH (d:PlayerDayLine)-[:OF_PLAYER]->(p:Player)
             WHERE d.date <= date($end)
-            WITH p.uid AS uid, p.cbs_mlb_team AS team, d.side AS side,
+            WITH p.uid AS uid, p.cbs_mlb_team AS team,
+                 p.primary_position AS ppos, d.side AS side,
                  sum(coalesce(d.hr,0)) AS hr, sum(coalesce(d.r,0)) AS r,
                  sum(coalesce(d.rbi,0)) AS rbi, sum(coalesce(d.sb,0)) AS sb,
                  sum(coalesce(d.h,0)+coalesce(d.bb,0)+coalesce(d.hbp,0)) AS ob,
@@ -55,7 +56,7 @@ def _player_weeks(as_of_period: int) -> list[dict]:
                  sum(coalesce(d.w,0)+coalesce(d.qs,0)) AS wqs,
                  sum(coalesce(d.er,0)) AS er, sum(coalesce(d.outs,0)) AS outs,
                  sum(coalesce(d.ha,0)+coalesce(d.bbi,0)) AS wh
-            RETURN uid, team, side, hr, r, rbi, sb, ob, pa, k, sv, wqs, er, outs, wh
+            RETURN uid, team, ppos, side, hr, r, rbi, sb, ob, pa, k, sv, wqs, er, outs, wh
             """,
             end=end,
         ).data()
@@ -103,16 +104,35 @@ def team_weekly_ros(as_of_period: int) -> dict[str, dict[str, float]]:
     for row in players:
         by_uid[row["uid"]][row["side"]] = row
 
-    # positional-group weekly means (per side), volume-weighted
-    grp_tot = {"bat": defaultdict(float), "pit": defaultdict(float)}
-    grp_n = {"bat": 0, "pit": 0}
+    # hierarchical group means: role level (C/IF/OF bats; SP/RP arms via
+    # start share), falling back to side level for thin roles
+    def role_of(row):
+        if row["side"] == "pit":
+            gs_share = (row.get("wqs") or 0) / max((row.get("outs") or 1) / 18, 1)
+            return "SP" if (row.get("outs") or 0) >= 90 and gs_share > 0.15 else                    ("RP" if (row.get("sv") or 0) + (row.get("outs") or 0) < 200 else "SP")
+        pp = row.get("ppos") or ""
+        if pp == "C":
+            return "C"
+        if pp in ("1B", "2B", "3B", "SS"):
+            return "IF"
+        return "OF"
+
+    grp_tot: dict = defaultdict(lambda: defaultdict(float))
+    grp_n: dict = defaultdict(int)
+    side_tot: dict = {"bat": defaultdict(float), "pit": defaultdict(float)}
+    side_n = {"bat": 0, "pit": 0}
     for row in players:
-        side = row["side"]
-        grp_n[side] += 1
+        role, side = role_of(row), row["side"]
+        grp_n[role] += 1
+        side_n[side] += 1
         for st in STATS:
-            grp_tot[side][st] += (row.get(st) or 0)
-    grp_mu = {side: {st: (grp_tot[side][st] / grp_n[side] / weeks if grp_n[side] else 0.0)
-                     for st in STATS} for side in ("bat", "pit")}
+            grp_tot[role][st] += (row.get(st) or 0)
+            side_tot[side][st] += (row.get(st) or 0)
+    def mu(role, side, st):
+        if grp_n.get(role, 0) >= 15:
+            return grp_tot[role][st] / grp_n[role] / weeks
+        return side_tot[side][st] / side_n[side] / weeks if side_n[side] else 0.0
+    role_by_uid = {row["uid"]: role_of(row) for row in players}
 
     rosters = _rosters(as_of_period)
     lineup = _active_lineup(as_of_period)
@@ -131,9 +151,10 @@ def team_weekly_ros(as_of_period: int) -> dict[str, dict[str, float]]:
             for side, row in by_uid.get(uid, {}).items():
                 vol = (row.get("pa") or 0) if side == "bat" else (row.get("outs") or 0)
                 alpha = vol / (vol + V0[side])
+                role = role_by_uid.get(uid, side)
                 for st in STATS:
                     player_wk = (row.get(st) or 0) / weeks
-                    shrunk = alpha * player_wk + (1 - alpha) * grp_mu[side][st] * 0.5
+                    shrunk = alpha * player_wk + (1 - alpha) * mu(role, side, st) * 0.5
                     tot[st] += w_avail * shrunk
         out[team] = dict(tot)
     return out

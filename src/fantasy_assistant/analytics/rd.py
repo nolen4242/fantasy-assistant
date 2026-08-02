@@ -148,3 +148,73 @@ if __name__ == "__main__":
         if r:
             print("scored sportsline:", r)
     print(report())
+
+
+def signal_backtest(stands=range(8, 19)) -> dict:
+    """Fit signal thresholds against history: at each period boundary T,
+    compute the velo-trend condition from data <= T and measure whether the
+    flagged pitcher's NEXT-period production actually moved. Writes
+    SignalEval nodes; the fitted threshold replaces the hand-set one when
+    it clearly wins."""
+    from collections import defaultdict as dd
+    with session() as s:
+        rows = s.run(
+            """
+            MATCH (v:PitcherGameVelo)-[:OF_PLAYER]->(p:Player)
+            WHERE v.ff_avg IS NOT NULL AND v.n_ff >= 8
+            MATCH (d:PlayerDayLine {side:'pit'})-[:OF_PLAYER]->(p)
+            WITH p.uid AS uid, collect(DISTINCT {d: v.date, ff: v.ff_avg}) AS velos,
+                 collect(DISTINCT {d: d.date, k: d.k, outs: d.outs, er: d.er}) AS lines
+            RETURN uid, velos, lines
+            """
+        ).data()
+        per = {n: period_dates(n) for n in range(1, 28)}
+        results = dd(lambda: {"flag_deltas": [], "base_deltas": []})
+        for thresh in (0.6, 0.8, 1.0, 1.2):
+            for r in rows:
+                velos = sorted(r["velos"], key=lambda x: str(x["d"]))
+                for T in stands:
+                    t_end, nxt = per[T][1], per[T + 1]
+                    hist = [v for v in velos if str(v["d"]) <= t_end.isoformat()]
+                    if len(hist) < 4:
+                        continue
+                    rec = [v["ff"] for v in hist[-2:]]
+                    pri = [v["ff"] for v in hist[-7:-2]]
+                    if not pri:
+                        continue
+                    delta = sum(rec) / len(rec) - sum(pri) / len(pri)
+                    nl = [x for x in r["lines"]
+                          if nxt[0].isoformat() <= str(x["d"]) <= nxt[1].isoformat()]
+                    pl = [x for x in r["lines"] if str(x["d"]) <= t_end.isoformat()]
+                    if not nl or not pl:
+                        continue
+                    n_outs = sum(x["outs"] or 0 for x in nl)
+                    p_outs = sum(x["outs"] or 0 for x in pl)
+                    if n_outs < 9 or p_outs < 90:
+                        continue
+                    next_kr = sum(x["k"] or 0 for x in nl) / n_outs
+                    base_kr = sum(x["k"] or 0 for x in pl) / p_outs
+                    move = next_kr - base_kr
+                    if delta <= -thresh:
+                        results[thresh]["flag_deltas"].append(move)
+                    elif abs(delta) < 0.3:
+                        results[thresh]["base_deltas"].append(move)
+        out = {}
+        for thresh, r_ in results.items():
+            f, b = r_["flag_deltas"], r_["base_deltas"]
+            if len(f) < 8:
+                continue
+            fm = sum(f) / len(f)
+            bm = sum(b) / len(b) if b else 0.0
+            out[thresh] = {"n_flagged": len(f), "flagged_next_k_rate_move": round(fm, 4),
+                           "baseline_move": round(bm, 4), "edge": round(fm - bm, 4)}
+            s.run(
+                """
+                MERGE (e:SignalEval {uid:$uid})
+                SET e.rule='velocity_down', e.threshold=$t, e.n=$n,
+                    e.flagged_move=$fm, e.baseline_move=$bm, e.edge=$edge,
+                    e.recorded=datetime()
+                """, uid=f"sigeval:velo_down:{thresh}", t=thresh, n=len(f),
+                fm=out[thresh]["flagged_next_k_rate_move"], bm=out[thresh]["baseline_move"],
+                edge=out[thresh]["edge"])
+        return out
