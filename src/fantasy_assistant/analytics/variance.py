@@ -1,10 +1,11 @@
-"""Monte Carlo standings simulation (v1): P(win), P(top-5), rank distributions.
+"""Monte Carlo standings simulation (v2): P(win), P(top-5), rank distributions.
 
-Simulates the remaining weeks per (team, category): counting production drawn
-weekly ~ Normal(recent-form mean, season weekly sd); rate categories drawn as
-final-rate around the component projection, scaled by the remaining-volume
-share. Categories are simulated independently (no cross-cat correlation, no
-roster-change dynamics — both noted on the run).
+v2 adds within-team category correlation: a hot offense lifts HR/R/RBI/OBP
+together, pitching volume links K/WQS, etc. The 10x10 weekly correlation
+matrix is estimated from the by-period history (per-team demeaned weekly
+values, pooled across teams) and applied via Cholesky to each team's draws.
+Teams remain independent of each other (they play different opponents), and
+roster-change dynamics are still not modeled.
 """
 from __future__ import annotations
 
@@ -15,7 +16,7 @@ from collections import defaultdict
 from fantasy_assistant.analytics import races
 from fantasy_assistant.graph.client import session
 
-MODEL_VERSION = "variance-v1"
+MODEL_VERSION = "variance-v2"
 N_SIMS = 5000
 RATE_ROS_WEIGHT = 0.30  # remaining-volume share dampening for rate noise
 
@@ -41,6 +42,56 @@ def _sd(vals: list[float]) -> float:
     return math.sqrt(sum((v - m) ** 2 for v in vals) / (len(vals) - 1))
 
 
+def weekly_matrix(cats: list[str], teams: list[str]) -> list[list[float]]:
+    """Pooled within-team weekly correlation across categories, via per
+    (team, cat) z-scored weekly values."""
+    with session() as s:
+        rows = s.run(
+            """
+            MATCH (st:StandingsSnapshot {scope:'period'})-[:FOR_PERIOD]->(p),
+                  (st)-[:HAS_LINE]->(l)-[:FOR_TEAM]->(t:FantasyTeam),
+                  (l)-[:IN_CATEGORY]->(c:Category)
+            RETURN t.cbs_name AS team, c.code AS cat, p.number AS period,
+                   l.value_reported AS v
+            """
+        ).data()
+    series: dict = {}
+    for r in rows:
+        series.setdefault((r["team"], r["cat"]), {})[r["period"]] = r["v"]
+    # z-score per (team, cat), then pool observations as vectors per (team, period)
+    zs: dict = {}
+    for (team, cat), by_p in series.items():
+        vals = list(by_p.values())
+        m = sum(vals) / len(vals)
+        sd = _sd(vals) or 1.0
+        for period, v in by_p.items():
+            zs.setdefault((team, period), {})[cat] = (v - m) / sd
+    obs = [[vec.get(c, 0.0) for c in cats]
+           for vec in zs.values() if len(vec) == len(cats)]
+    n = len(obs)
+    k = len(cats)
+    corr = [[0.0] * k for _ in range(k)]
+    for i in range(k):
+        for j in range(k):
+            corr[i][j] = sum(o[i] * o[j] for o in obs) / max(n - 1, 1)
+    for i in range(k):
+        corr[i][i] = 1.0 + 1e-6  # jitter for Cholesky stability
+    return corr
+
+
+def cholesky(a: list[list[float]]) -> list[list[float]]:
+    k = len(a)
+    L = [[0.0] * k for _ in range(k)]
+    for i in range(k):
+        for j in range(i + 1):
+            s_ = sum(L[i][m] * L[j][m] for m in range(j))
+            if i == j:
+                L[i][j] = math.sqrt(max(a[i][i] - s_, 1e-9))
+            else:
+                L[i][j] = (a[i][j] - s_) / L[j][j]
+    return L
+
+
 def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
     rng = random.Random(seed)
     race = races.analyze()
@@ -62,18 +113,26 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
                 sd_final = wk_sd * math.sqrt(R)
             params[(cat, team)] = (proj_v, sd_final, direction, is_rate)
 
+    cats = list(race["categories"].keys())
+    L = cholesky(weekly_matrix(cats, teams))
+    k = len(cats)
+
     win = defaultdict(int)
     top5 = defaultdict(int)
     rank_sum = defaultdict(float)
     our_pts_samples = []
     for _ in range(n_sims):
+        # correlated shocks per team across categories
+        draws_by_cat: dict = {c: {} for c in cats}
+        for team in teams:
+            z = [rng.gauss(0.0, 1.0) for _ in range(k)]
+            corr_z = [sum(L[i][m] * z[m] for m in range(i + 1)) for i in range(k)]
+            for i, cat in enumerate(cats):
+                mean, sd, direction, is_rate = params[(cat, team)]
+                draws_by_cat[cat][team] = mean + sd * corr_z[i]
         totals = defaultdict(float)
         for cat, d in race["categories"].items():
-            draws = {}
-            for team in teams:
-                mean, sd, direction, is_rate = params[(cat, team)]
-                draws[team] = rng.gauss(mean, sd) if sd else mean
-            pts = races._points_for(draws, d["direction"])
+            pts = races._points_for(draws_by_cat[cat], d["direction"])
             for t, p in pts.items():
                 totals[t] += p
         order = sorted(teams, key=lambda t: -totals[t])

@@ -41,7 +41,7 @@ def _capture_run(s, capture_dir: Path, agent: str) -> str:
 
 
 def ingest_transactions(capture_dir: Path) -> dict:
-    txns, rejects = parsers.parse_transactions(capture_dir / "transactions_all_raw.txt")
+    txns, rejects = parsers.sniff_and_parse_transactions(capture_dir / "transactions_all_raw.txt")
     with session() as s:
         run_uid = _capture_run(s, capture_dir, "transactions")
         for t in txns:
@@ -178,7 +178,7 @@ def ingest_standings(capture_dir: Path, as_of: str, period: int) -> dict:
 
 
 def ingest_roster_grid(capture_dir: Path, as_of: str) -> dict:
-    entries = parsers.parse_roster_grid(capture_dir / "roster_grid.txt")
+    entries = parsers.sniff_and_parse_roster_grid(capture_dir / "roster_grid.txt")
     snap_uid = f"cbs:rostergrid:{capture_dir.name}"
     with session() as s:
         run_uid = _capture_run(s, capture_dir, "roster_grid")
