@@ -1,19 +1,19 @@
 # Weekly Brief — Period 20 (locks Monday, per-player)
-Generated 2026-08-02T14:49 · model races-v2 · through period 19
+Generated 2026-08-02T15:21 · model races-v3 · through period 19
 
 ## Standings picture
-- Projected final on current pace: **9th, 63.0 pts**
-- Projected leader: Young Guns (96.0 pts)
-- Season odds (MC sim): P(win) 0.0%, P(top-5 money) 0.3%; points p10/p50/p90 = 57.0/63.0/69.0
-- Title race: Young Guns 66%, Maga Doge 34%, Big Sticks 0%
+- Projected final on current pace: **9th, 62.0 pts**
+- Projected leader: Young Guns (90.0 pts)
+- Season odds (MC sim): P(win) 0.0%, P(top-5 money) 0.0%; points p10/p50/p90 = 57.0/62.0/68.0
+- Title race: Young Guns 52%, Maga Doge 29%, Rieken Havoc 9%
 
 ## Category battle plan (cheapest points first)
-- **WQS**: +6.0 season units passes Rieken Havoc (+1.5 pts); our pace 5.0/wk
-- **OBP**: ~0.1 roster-swaps passes Gashouse Gang (+1.0 pts); proj 0.3291
-- **WHIP**: ~0.2 roster-swaps passes Long Balls (+1.0 pts); proj 1.2458
-- **K**: +6.0 season units passes Gashouse Gang (+1.0 pts); our pace 42.25/wk
-- **S**: +7.0 season units passes Long Balls (+1.0 pts); our pace 2.5/wk
-- **HR**: +8.0 season units passes Simba's Dublin Green Sox (+1.0 pts); our pace 5.75/wk
+- **S**: +0.9 season units passes Gashouse Gang (+1.0 pts); our pace 2.5/wk
+- **OBP**: ~1.0 roster-swaps passes Young Guns (+1.0 pts); proj 0.334
+- **ERA**: ~1.1 roster-swaps passes Rieken Havoc (+1.0 pts); proj 3.5309
+- **WHIP**: ~2.6 roster-swaps passes Long Balls (+1.0 pts); proj 1.2533
+- **SB**: +2.6 season units passes Magnum GI (+1.0 pts); our pace 6.0/wk
+- **K**: +6.6 season units passes Simba's Dublin Green Sox (+1.0 pts); our pace 42.25/wk
 
 ## Stream targets (K/WQS are our cheapest points; IP headroom exists)
 - Slade Cecconi (CLE) (2-START) — proj 9.6 K, 0.7 QS, 0.5 W, ERA 3.77 [FA]
@@ -39,12 +39,6 @@ Generated 2026-08-02T14:49 · model races-v2 · through period 19
 - Luis Arraez (1B,2B, SF) — clears 8/4, SportsLine wk rank 577
 
 ## Trade board (deadline Sun 8/24; both sides valued; tiers model acceptance)
-- [win-win] give **Will Smith** for **Michael McGreevy** (Maga Doge): us +1.5 pts, them +1.0
-- [win-win] give **Will Smith** for **Michael King** (Maga Doge): us +1.0 pts, them +1.0
-- [win-win] give **Steven Kwan** for **Michael McGreevy** (Maga Doge): us +1.0 pts, them +2.0
-- [win-win] give **Steven Kwan** for **Bryce Elder** (Maga Doge): us +1.0 pts, them +0.5
-- [win-win] give **Aroldis Chapman** for **Chase Burns** (Maga Doge): us +0.5 pts, them +2.5
-- [win-win] give **Steven Kwan** for **Michael King** (Maga Doge): us +0.5 pts, them +2.0
 
 ## IP pacing
 - 817.0 IP YTD; CBS on-pace 1203 vs cap 1300 (≈97 IP of unused headroom → streaming budget)

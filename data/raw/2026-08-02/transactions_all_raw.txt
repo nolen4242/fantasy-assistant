@@ -1,7 +1,8 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-02T13:52:40
+captured: 2026-08-02T15:16:24
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
+8/2/26 4:08 PM ET|Runtime Terror|Slade Cecconi P • CLE - Added; Abner Uribe P • MIL - Dropped|8/3/26|$2.50
 8/2/26 11:38 AM ET|Dawg|Jeremiah Estrada P • SD - Dropped|8/3/26|$0.00
 8/2/26 11:37 AM ET|Dawg|Esteury Ruiz OF • MIA - Added|8/3/26|$2.50
 8/2/26 11:33 AM ET|Dawg|Sean Manaea P • NYM - Added|8/3/26|$2.50
@@ -215,7 +216,7 @@ DATE|TEAM|PLAYERS|EFFECTIVE|COST
 6/2/26 6:35 PM ET|Big Sticks|Brenton Doyle OF • COL - Added; Ramon Laureano OF • SD - Moved to IR|6/8/26|$2.50
 6/1/26 2:48 PM ET|Big Sticks|Mitch Keller P • PIT - Dropped|6/1/26|$0.00
 6/1/26 1:36 PM ET|Young Guns|Oswald Peraza 2B,3B • LAA - Added|6/1/26|$2.50
-6/1/26 8:27 AM ET|Runtime Terror|River Ryan P • LAD - Added|6/1/26|$2.50
+6/1/26 8:27 AM ET|Runtime Terror|River Ryan P • DET - Added|6/1/26|$2.50
 5/31/26 11:15 PM ET|Like a Nightmare|Dylan Crews OF • WAS - Dropped|6/1/26|$0.00
 5/31/26 3:29 PM ET|Trex|Nolan Gorman 2B,3B • STL - Dropped|6/1/26|$0.00
 5/31/26 3:29 PM ET|Trex|Jorge Mateo SS,OF • ATL - Added|6/1/26|$2.50

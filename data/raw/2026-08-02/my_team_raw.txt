@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams
-captured: 2026-08-02T13:52:46
+captured: 2026-08-02T15:16:30
 ---
 League
 My Team
@@ -16,6 +16,7 @@ Nolen Smith
 ADD/DROP
  
 TRADES
+1
 4 / 13
 WAIVER #
 YEAR
@@ -80,6 +81,8 @@ SET YOUR DEFAULT VIEW
 
 EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
 
+	P	Slade Cecconi P • CLE	107	21	5	0	4	7	0	0	84	35	123	4.78	1.47	699
+
 	P	Aroldis Chapman P • BOS 	37	0	0	0	2	3	27	2	50	17	28	1.67	1.19	153
 
 	P	Sonny Gray P • BOS	113	20	13	0	13	2	0	0	98	30	103	2.93	1.17	74
@@ -94,8 +97,6 @@ EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
 
 	P	Walbert Urena P • LAA	93	17	8	0	6	7	0	0	88	49	69	2.70	1.26	234
 
-	P	Abner Uribe P • MIL	44	0	0	0	4	2	6	2	44	15	31	2.23	1.04	284
-
 	P	Jacob deGrom P • TEX 	113	21	8	0	7	7	0	0	135	29	101	3.96	1.14	168
 RESERVES
 
@@ -108,7 +109,7 @@ MINORS
 	P	Luis Gil P • NYY 
 	19	4	1	0	1	2	0	0	9	11	15	6.05	1.34	1025
 
-	P	River Ryan P • LAD 
+	P	River Ryan P • DET 
 	0	0	0	0	0	0	0	0	0	0	0	0.00	0.00	9999
 ACTIVE: 21 RESERVE: 2 INJURED: 4 MINORS: 2
 Min/Max Info
