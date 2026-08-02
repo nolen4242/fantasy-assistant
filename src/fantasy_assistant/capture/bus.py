@@ -82,6 +82,11 @@ def cycle(st: dict, n: int) -> None:
         asyncio.run(velocity.collect(2))
         sigs = velocity.velocity_signals()
         el = asyncio.run(eligibility.collect())
+        from fantasy_assistant.analytics import hotstreak, schedule
+        heat = hotstreak.run()
+        n_heat = sum(len(v) for v in heat.values())
+        if n % (SLOW_EVERY * 4) == 0:
+            schedule.refresh()
         news = {"news": 0, "our_roster_fresh": []}
         if runner.capture_news(quiet=True):  # None if CBS profile is busy
             news = ingest.ingest_news(runner.RAW_ROOT / date.today().isoformat())
@@ -91,7 +96,7 @@ def cycle(st: dict, n: int) -> None:
                 _notify("Roster news", f"{name}: {headline}")
         print(f"[{datetime.now():%H:%M}] slow lane: {p['probables']} probables, "
               f"{len(sigs)} velo signals, {len(el['windows_opening'])} eligibility "
-              f"windows, {news.get('fresh', 0)} fresh news", flush=True)
+              f"windows, {news.get('fresh', 0)} fresh news, {n_heat} heat signals", flush=True)
 
 
 def main() -> None:
