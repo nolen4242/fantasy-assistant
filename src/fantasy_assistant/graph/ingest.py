@@ -225,3 +225,41 @@ def ingest_capture(capture_dir: Path) -> None:
 if __name__ == "__main__":
     import sys
     ingest_capture(Path(sys.argv[1] if len(sys.argv) > 1 else "data/raw/2026-08-02"))
+
+
+def ingest_draft(capture_dir: Path) -> dict:
+    picks, rejects = parsers.parse_draft(capture_dir / "draft_results.txt")
+    with session() as s:
+        run_uid = _capture_run(s, capture_dir, "draft")
+        batch = [
+            {
+                "uid": f"draft:2026:{p.overall}",
+                "round": p.round, "pick": p.pick_in_round, "overall": p.overall,
+                "auto": p.auto, "queued": p.queued,
+                "tuid": team_uid(p.team),
+                "puid": player_uid(p.player_name),
+                "name": p.player_name,
+                "norm": parsers.normalize_name(p.player_name),
+                "pos": p.positions, "mlb": p.mlb_team,
+            }
+            for p in picks
+        ]
+        s.run(
+            """
+            MATCH (se:Season {uid:$suid}), (c:CaptureRun {uid:$run})
+            UNWIND $batch AS row
+            MATCH (t:FantasyTeam {uid:row.tuid})
+            MERGE (p:Player {uid:row.puid})
+            ON CREATE SET p.name_full=row.name, p.name_normalized=row.norm,
+                          p.cbs_positions=row.pos, p.cbs_mlb_team=row.mlb
+            MERGE (d:DraftPick {uid:row.uid})
+            SET d.round=row.round, d.pick_in_round=row.pick, d.overall=row.overall,
+                d.auto=row.auto, d.queued=row.queued
+            MERGE (d)-[:IN_SEASON]->(se)
+            MERGE (d)-[:BY_TEAM]->(t)
+            MERGE (d)-[:SELECTED]->(p)
+            MERGE (d)-[:OBSERVED_IN]->(c)
+            """,
+            suid=SEASON_2026, run=run_uid, batch=batch,
+        )
+    return {"picks": len(picks), "rejects": len(rejects)}

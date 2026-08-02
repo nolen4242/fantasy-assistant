@@ -313,3 +313,61 @@ def parse_roster_grid(path: Path) -> list[GridEntry]:
                 entries.append(GridEntry(team=team, slot_group=slot.strip(),
                                          label=raw_name, status=status))
     return entries
+
+
+# ---------------------------------------------------------------------------
+# Draft results (our transcribed format)
+# ---------------------------------------------------------------------------
+
+@dataclass
+class DraftPickRow:
+    round: int
+    pick_in_round: int
+    overall: int
+    team: str
+    player_name: str
+    positions: str
+    mlb_team: str
+    auto: bool
+    queued: bool
+
+
+_DRAFT_LINE_RE = re.compile(
+    r"^(?P<pick>\d{1,2}) (?P<rest>.+?) (?P<pos>[A-Z0-9]{1,3}(?:,[A-Z0-9]{1,3})*) [•�] (?P<mlb>[A-Z]{2,3})\b"
+)
+
+
+def parse_draft(path: Path) -> tuple[list[DraftPickRow], list[str]]:
+    picks: list[DraftPickRow] = []
+    rejects: list[str] = []
+    rnd = 0
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        rm = re.match(r"^ROUND (\d+)$", line)
+        if rm:
+            rnd = int(rm.group(1))
+            continue
+        if not rnd or not line or line.startswith("==="):
+            if line.startswith("==="):
+                break  # chat log section
+            continue
+        m = _DRAFT_LINE_RE.match(line)
+        if not m:
+            rejects.append(f"R{rnd}: {line}")
+            continue
+        rest = m.group("rest")
+        team = next((t for t in TEAM_NAMES if rest.startswith(t)), None)
+        if team is None:
+            rejects.append(f"R{rnd}: {line}")
+            continue
+        name = rest[len(team):].strip()
+        auto = name.startswith("*") and not name.startswith("**")
+        queued = name.startswith("**")
+        name = name.lstrip("*").strip()
+        pick = int(m.group("pick"))
+        picks.append(DraftPickRow(
+            round=rnd, pick_in_round=pick, overall=(rnd - 1) * 13 + pick,
+            team=team, player_name=name, positions=m.group("pos"),
+            mlb_team=m.group("mlb"), auto=auto, queued=queued,
+        ))
+    return picks, rejects

@@ -35,3 +35,25 @@ CBS report pages accept `?print_rows=9999` (full listing, no pagination) and
 deep-link report paths like `/stats/stats-main/fa:P/period-20:p/standard/projections`.
 Prefer these parameterized URLs over UI-driving. Session: user-authenticated
 browser session (or exported session cookies — never credentials).
+
+**In-page fetch loop works** (proven 2026-08-02): from an authenticated CBS
+page, same-origin `fetch()` + `DOMParser` retrieved all 19 by-period standings
+pages in one JS call (~132KB). The per-period option URLs come from the page's
+own PERIOD `<select>` values.
+
+**Exfiltration constraint**: getting bulk data out of the interactive Chrome
+session is the bottleneck, not capture. Clipboard (`navigator.clipboard`) works
+only with fresh user activation and Chrome eventually hard-denied it;
+`fetch()` to a localhost collector is silently stalled by Chrome's local
+network access policy (PNA preflight answered, still blocked). For the real
+pipeline, do NOT scrape via the user's interactive Chrome: run capture in a
+dedicated browser context (e.g. Playwright with a persisted CBS session the
+user logs into once) where page content is read directly by the driver.
+
+## Still pending backfill
+
+- By-period standings, periods 1–19 (fetch loop ready; blocked only on the
+  dedicated-browser capture runner). Also grab periods 20+ as they close.
+- Draft results: captured 2026-08-02 (`draft_results.txt`) including the
+  draft-room chat log (opponent intel + written confirmation of the
+  2026 rule change to plain Saves and 2 reserve slots).
