@@ -65,6 +65,25 @@ def ip_pace(capture_date: str) -> dict:
             "note": "source: CBS my-team Min/Max block"}
 
 
+def _signal_map() -> dict[str, list[str]]:
+    with session() as s:
+        rows = s.run(
+            """
+            MATCH (sig:Signal)-[:ABOUT]->(p:Player)
+            WHERE sig.as_of >= date() - duration('P7D')
+            RETURN p.name_full AS n, collect(DISTINCT sig.kind) AS ks
+            """
+        ).data()
+    return {r["n"]: r["ks"] for r in rows}
+
+
+def _games_next() -> dict[str, int]:
+    with session() as s:
+        return {r["t"]: r["g"] for r in s.run(
+            "MATCH (f:ScheduleFactor) RETURN f.mlb_team AS t, f.games_next_period AS g"
+        ).data()}
+
+
 def compose(as_of: str | None = None) -> str:
     today = as_of or date.today().isoformat()
     next_period = period_for_date(date.today()) + (1 if True else 0)
@@ -76,6 +95,17 @@ def compose(as_of: str | None = None) -> str:
     recs: list[dict] = []
     lines: list[str] = []
     add = lines.append
+    sig_map = _signal_map()
+    games_next = _games_next()
+    CBS_TO_MLB = {"CHW": "CWS", "WAS": "WSH"}
+
+    def tag(name: str) -> str:
+        ks = sig_map.get(name, [])
+        return (" ⚡" + ",".join(sorted(set(ks)))) if ks else ""
+
+    def gp(mlb: str) -> str:
+        g = games_next.get(CBS_TO_MLB.get(mlb, mlb))
+        return f", {g}g" if g else ""
 
     add(f"# Weekly Brief — Period {next_period} (locks Monday, per-player)")
     add(f"Generated {datetime.now().isoformat(timespec='minutes')} · model {race['model']} "
@@ -127,7 +157,7 @@ def compose(as_of: str | None = None) -> str:
         st = e["stats"]
         two = " (2-START)" if st.get("gs", 0) >= 2 else ""
         avail = f"W until {e['clear']}" if e["avail"] == "W" else "FA"
-        add(f"- {e['name']} ({e['mlb']}){two} — proj {st.get('k', 0):g} K, "
+        add(f"- {e['name']} ({e['mlb']}{gp(e['mlb'])}){two}{tag(e['name'])} — proj {st.get('k', 0):g} K, "
             f"{st.get('qs', 0):g} QS, {st.get('w', 0):g} W, ERA {st.get('era', 0):g} [{avail}]")
         recs.append({
             "kind": "claim" if e["avail"] == "W" else "add",
@@ -142,7 +172,7 @@ def compose(as_of: str | None = None) -> str:
     for e in closers[:4]:
         st = e["stats"]
         avail = f"W until {e['clear']}" if e["avail"] == "W" else "FA"
-        add(f"- {e['name']} ({e['mlb']}) — proj {st.get('sv', 0):g} SV, ERA {st.get('era', 0):g} [{avail}]")
+        add(f"- {e['name']} ({e['mlb']}{gp(e['mlb'])}){tag(e['name'])} — proj {st.get('sv', 0):g} SV, ERA {st.get('era', 0):g} [{avail}]")
     add("")
 
     pending = [e for e in bat + pit if e["avail"] == "W"]
@@ -156,12 +186,33 @@ def compose(as_of: str | None = None) -> str:
     add("")
 
     add("## Trade board (deadline Sun 8/24; both sides valued; tiers model acceptance)")
-    for t in valuation.scan(["Gashouse Gang", "Dawg", "Maga Doge"], top=6):
+    board = valuation.scan(["Gashouse Gang", "Dawg", "Maga Doge"], top=6)
+    if not board:
+        add("- no 1-for-1 clears acceptance under current projections — points "
+            "this week live on the wire (streams above), not the trade market")
+    for t in board:
         add(f"- [{t['tier']}] give **{t['give']}** for **{t['get']}** ({t['with']}): "
             f"us {t['our_delta']:+.1f} pts, them {t['their_delta']:+.1f}")
         recs.append({"kind": "trade_proposal", "player": t["get"],
                      "rationale": f"{t['tier']}: give {t['give']} to {t['with']}, "
                                   f"us {t['our_delta']:+.1f}/them {t['their_delta']:+.1f}"})
+    add("")
+    add("## Scouting signals on our roster (last 7 days)")
+    with session() as s_:
+        ours_sig = s_.run(
+            """
+            MATCH (sig:Signal)-[:ABOUT]->(p:Player)<-[:OF_PLAYER]-(st:RosterStint)
+                  -[:ON_TEAM]->(:FantasyTeam {is_us:true})
+            WHERE st.to_date IS NULL AND sig.as_of >= date() - duration('P7D')
+            RETURN p.name_full AS n, sig.kind AS k, sig.rationale AS r
+            ORDER BY sig.as_of DESC LIMIT 12
+            """
+        ).data()
+    if ours_sig:
+        for x in ours_sig:
+            add(f"- {x['n']}: **{x['k']}** — {x['r']}")
+    else:
+        add("- none")
     add("")
     add("## IP pacing")
     add(f"- {pace['ip_used']} IP YTD; CBS on-pace {pace['pace_final']:.0f} vs cap {pace['cap']} "
