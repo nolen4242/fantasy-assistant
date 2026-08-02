@@ -176,25 +176,55 @@ def recompute_v2() -> dict:
                 "ERA": round(z("er") * 27 / outs, 3) if outs else 0.0,
                 "WHIP": round((z("ha") + z("bbi")) / (outs / 3), 4) if outs else 0.0}
 
+    CAPACITY = {"bat": 11, "pit": 9}
+    RATE_TOL = {"OBP": 0.0011, "ERA": 0.011, "WHIP": 0.011}
+
+    def _accept(totals, off, counts, rates):
+        if not all(abs(totals[c] - off.get(c, -1)) < 1e-9 for c in counts):
+            return False
+        # rate check breaks degeneracy: a 0-K blowup reliever's exclusion is
+        # invisible to counting cats but not to ERA/WHIP
+        return all(abs(totals[c] - off[c]) <= RATE_TOL[c]
+                   for c in rates if c in off)
+
     def solve(players, side, off):
         counts = BAT_COUNT if side == "bat" else PIT_COUNT
+        rates = ["OBP"] if side == "bat" else ["ERA", "WHIP"]
         by_slot: dict[str, list] = defaultdict(list)
         for p in players:
             by_slot[p["slot"]].append(p)
-        # candidate exclusion sets: per over-occupied slot choose the excess
         options = []
         for slot, occ in by_slot.items():
             cap = SLOT_CAP.get(slot, 1)
             if len(occ) > cap:
                 options.append(list(combinations(occ, len(occ) - cap)))
-        if not options:
+        if not options and len(players) <= CAPACITY[side]:
             return players, cat_totals(players, side), "no-excess"
-        for combo in product(*options):
-            excluded = {p["puid"] for group in combo for p in group}
-            kept = [p for p in players if p["puid"] not in excluded]
-            totals = cat_totals(kept, side)
-            if all(abs(totals[c] - off.get(c, -1)) < 1e-9 for c in counts):
-                return kept, totals, "solved"
+
+        def search(strict: bool):
+            for combo in product(*options):
+                excluded = {p["puid"] for group in combo for p in group}
+                kept = [p for p in players if p["puid"] not in excluded]
+                totals = cat_totals(kept, side)
+                ok = (_accept(totals, off, counts, rates) if strict else
+                      all(abs(totals[c] - off.get(c, -1)) < 1e-9 for c in counts))
+                if ok:
+                    return kept, totals, "solved"
+            k = len(players) - CAPACITY[side]
+            if 0 < k <= 4:
+                for excl in combinations(players, k):
+                    excluded = {p["puid"] for p in excl}
+                    kept = [p for p in players if p["puid"] not in excluded]
+                    totals = cat_totals(kept, side)
+                    ok = (_accept(totals, off, counts, rates) if strict else
+                          all(abs(totals[c] - off.get(c, -1)) < 1e-9 for c in counts))
+                    if ok:
+                        return kept, totals, "solved-crossslot"
+            return None
+
+        hit = search(strict=True) or search(strict=False)
+        if hit:
+            return hit
         return players, cat_totals(players, side), "unsolved"
 
     groups: dict[tuple[str, int, str], list] = defaultdict(list)
@@ -209,7 +239,10 @@ def recompute_v2() -> dict:
     misses = []
     inferred = []
     components: dict = {}
+    last_complete = max(p for (_, p, _) in groups) - 1
     for (team, period, side), players in groups.items():
+        if period > last_complete:
+            continue  # in-progress period: CBS live-updates, our logs lag
         off = official.get((team, period), {})
         kept, totals, outcome = solve(players, side, off)
         outcomes[outcome] += 1

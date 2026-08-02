@@ -185,3 +185,29 @@ def run_crosswalk(season: int = 2026) -> dict:
 if __name__ == "__main__":
     import json
     print(json.dumps(run_crosswalk(), indent=1, default=str)[:2000])
+
+
+# Hand-verified identity overrides for name collisions the automated passes
+# can't safely resolve (same name, same position type, multiple MLB players).
+# Keyed by (normalized CBS name, CBS MLB team) -> mlbam_id.
+OVERRIDES = {
+    ("luis garcia", "WAS"): 671277,   # Luis García Jr., WSH 2B (not the two pitchers)
+    ("max muncy", "LAD"): 571970,     # veteran LAD/CBS-3B Muncy (ATH kid is 691777)
+}
+
+
+def apply_overrides() -> int:
+    with session() as s:
+        n = 0
+        for (norm, team), mlbam in OVERRIDES.items():
+            res = s.run(
+                """
+                MATCH (p:Player {name_normalized:$norm})
+                WHERE p.cbs_mlb_team = $team OR $team IS NULL
+                SET p.mlbam_id = $mlbam
+                RETURN count(p) AS c
+                """,
+                norm=norm, team=team, mlbam=mlbam,
+            ).single()
+            n += res["c"]
+    return n
