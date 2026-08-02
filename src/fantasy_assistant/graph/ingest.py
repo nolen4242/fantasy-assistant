@@ -356,3 +356,48 @@ def ingest_lineups(capture_dir: Path) -> dict:
                 run=run_uid, batch=batch[i:i + 2000],
             )
     return {"lineup_rows": len(rows), "rejects": len(rejects)}
+
+
+def ingest_news(capture_dir: Path) -> dict:
+    path = capture_dir / "player_news_raw.txt"
+    if not path.exists():
+        return {"news": 0, "skipped": "no capture"}
+    rows, rejects = parsers.parse_player_news(path)
+    from datetime import datetime as _dt
+    ts = _dt.now().isoformat(timespec="seconds")
+    our_new = []
+    with session() as s:
+        batch = [{
+            "uid": "cbsnews:" + parsers.uid_hash(r.player_name, r.headline),
+            "puid": player_uid(r.player_name),
+            "name": r.player_name,
+            "norm": parsers.normalize_name(r.player_name),
+            "headline": r.headline, "body": r.body, "age": r.age_text,
+        } for r in rows]
+        created = s.run(
+            """
+            UNWIND $batch AS row
+            MERGE (p:Player {uid: row.puid})
+            ON CREATE SET p.name_full = row.name, p.name_normalized = row.norm
+            MERGE (nw:NewsItem {uid: row.uid})
+            ON CREATE SET nw.first_seen = datetime($ts), nw.is_new = true
+            ON MATCH SET nw.is_new = false
+            SET nw.headline = row.headline, nw.body = row.body,
+                nw.age_at_capture = row.age, nw.source = 'cbs_rotowire'
+            MERGE (nw)-[:ABOUT]->(p)
+            RETURN row.name AS name, row.headline AS h, nw.is_new AS fresh
+            """,
+            batch=batch, ts=ts,
+        ).data()
+        our_new = s.run(
+            """
+            MATCH (nw:NewsItem {is_new: true, source:'cbs_rotowire'})-[:ABOUT]->(p:Player),
+                  (st:RosterStint)-[:OF_PLAYER]->(p),
+                  (st)-[:ON_TEAM]->(:FantasyTeam {is_us:true})
+            WHERE st.to_date IS NULL
+            RETURN p.name_full AS n, nw.headline AS h
+            """
+        ).data()
+    return {"news": len(rows), "rejects": len(rejects),
+            "fresh": sum(1 for c in created if c["fresh"]),
+            "our_roster_fresh": [(x["n"], x["h"]) for x in our_new]}

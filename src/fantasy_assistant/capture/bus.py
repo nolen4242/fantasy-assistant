@@ -76,14 +76,22 @@ def cycle(st: dict, n: int) -> None:
         print(f"[{datetime.now():%H:%M}] NEWS {item.get('headline','')[:100]}", flush=True)
     if n % SLOW_EVERY == 0:
         import asyncio
-        from fantasy_assistant.capture import eligibility
+        from fantasy_assistant.capture import eligibility, runner
+        from fantasy_assistant.graph import ingest
         p = mlb_status.fetch_probables()
         asyncio.run(velocity.collect(2))
         sigs = velocity.velocity_signals()
         el = asyncio.run(eligibility.collect())
+        news = {"news": 0, "our_roster_fresh": []}
+        if runner.capture_news(quiet=True):  # None if CBS profile is busy
+            news = ingest.ingest_news(runner.RAW_ROOT / date.today().isoformat())
+            for name, headline in news.get("our_roster_fresh", []):
+                _alert({"uid": "cbsnews:" + name + ":" + headline[:40],
+                        "description": f"{name}: {headline}"}, "cbs_rotowire")
+                _notify("Roster news", f"{name}: {headline}")
         print(f"[{datetime.now():%H:%M}] slow lane: {p['probables']} probables, "
-              f"{len(sigs)} velo signals, {len(el['windows_opening'])} eligibility windows",
-              flush=True)
+              f"{len(sigs)} velo signals, {len(el['windows_opening'])} eligibility "
+              f"windows, {news.get('fresh', 0)} fresh news", flush=True)
 
 
 def main() -> None:

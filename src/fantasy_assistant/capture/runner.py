@@ -202,6 +202,36 @@ def capture_lineups(out_dir: Path | None = None, through_period: int | None = No
     print(f"lineups: {len(text.splitlines()):,} rows across {len(pairs)} team-periods -> {out / 'lineups_all.psv'}")
 
 
+
+
+
+def capture_news(out_dir: Path | None = None, quiet: bool = False) -> Path | None:
+    """Capture the all-player-updates stream (RotoWire content syndicated
+    into our CBS league subscription — timestamped player blurbs)."""
+    out = out_dir or (RAW_ROOT / date.today().isoformat())
+    out.mkdir(parents=True, exist_ok=True)
+    try:
+        with sync_playwright() as pw:
+            ctx = pw.chromium.launch_persistent_context(PROFILE_DIR, headless=True)
+            page = ctx.pages[0] if ctx.pages else ctx.new_page()
+            page.goto(BASE + "/players/all-player-updates?print_rows=9999",
+                      wait_until="domcontentloaded")
+            page.wait_for_timeout(2000)
+            text = page.inner_text("body")
+            ctx.close()
+    except Exception as exc:  # profile locked by another capture — skip cycle
+        if not quiet:
+            print(f"news capture skipped: {exc}", file=sys.stderr)
+        return None
+    stamp = (f"source: {BASE}/players/all-player-updates\n"
+             f"captured: {datetime.now().isoformat(timespec='seconds')}\n---\n")
+    f = out / "player_news_raw.txt"
+    f.write_text(stamp + text)
+    if not quiet:
+        print(f"news: {len(text):,} chars -> {f}")
+    return f
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "snapshot"
     if cmd == "login":
@@ -209,6 +239,9 @@ if __name__ == "__main__":
     elif cmd == "snapshot":
         snapshot()
         capture_lineups()
+        capture_news()
+    elif cmd == "news":
+        capture_news()
     elif cmd == "lineups":
         capture_lineups()
     else:

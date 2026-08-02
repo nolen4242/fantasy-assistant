@@ -559,3 +559,50 @@ def parse_lineups(path: Path) -> tuple[list[LineupRow], list[str]]:
                               positions=pm.group("pos"), mlb_team=pm.group("team"),
                               cbs_id=cbs_id or None))
     return rows, rejects
+
+
+@dataclass
+class NewsRow:
+    player_name: str
+    positions: str
+    mlb_team: str
+    headline: str
+    age_text: str             # "(12 mins ago)" / "(2 hrs ago)" / date
+    body: str
+
+
+def parse_player_news(path: Path) -> tuple[list[NewsRow], list[str]]:
+    """CBS all-player-updates stream: blocks of
+    'Name POS • TEAM' / '<Team's> Name: Headline' / 'by RotoWire' /
+    '(age) body...' [/ analysis paragraph]."""
+    lines = _strip_stamp(path.read_text(encoding="utf-8")).splitlines()
+    rows: list[NewsRow] = []
+    rejects: list[str] = []
+    i = 0
+    n = len(lines)
+    while i < n:
+        pm = _PLAYER_CELL_RE.match(lines[i].strip())
+        if not pm or i + 2 >= n:
+            i += 1
+            continue
+        headline = lines[i + 1].strip()
+        j = i + 2
+        if lines[j].strip().lower().startswith("by "):
+            j += 1
+        body_parts = []
+        while j < n and not _PLAYER_CELL_RE.match(lines[j].strip()):
+            body_parts.append(lines[j].strip())
+            j += 1
+        body = " ".join(bp for bp in body_parts if bp)
+        am = re.match(r"^\(([^)]+)\)\s*(.*)$", body)
+        age, body_text = (am.group(1), am.group(2)) if am else ("", body)
+        if ":" in headline:
+            rows.append(NewsRow(player_name=pm.group("name").strip(),
+                                positions=pm.group("pos"),
+                                mlb_team=pm.group("team"),
+                                headline=headline, age_text=age,
+                                body=body_text[:2000]))
+        else:
+            rejects.append(lines[i])
+        i = j
+    return rows, rejects
