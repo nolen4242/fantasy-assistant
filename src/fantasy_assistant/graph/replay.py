@@ -120,7 +120,11 @@ def grid_captured_at(capture_dir: Path) -> str:
         m = re.match(r"captured: (\d{4}-\d{2}-\d{2})[T ~]+(\d{1,2}):(\d{2})", line)
         if m:
             d, hh, mm = m.groups()
-            return f"{d}T{int(hh):02d}:{mm}:00"
+            # capture stamps are local (CT); CBS posted_at timestamps are ET —
+            # shift +1h so the cutoff compares in league time
+            from datetime import datetime as _dt, timedelta as _td
+            t = _dt.fromisoformat(f"{d}T{int(hh):02d}:{mm}:00") + _td(hours=1)
+            return t.isoformat()
     return capture_dir.name + "T23:59:59"
 
 
@@ -222,10 +226,11 @@ def _write(state: dict, result: dict, capture_dir: Path) -> None:
             """
             MERGE (r:ReconciliationRun {uid:$uid})
             SET r.ran_at=datetime($ts), r.kind='roster_replay_vs_grid',
-                r.discrepancy_count=$n, r.anomaly_count=$a
+                r.discrepancy_count=$n, r.anomaly_count=$a, r.diffs_json=$dj
             """,
             uid=run_uid, ts=ts, n=len(result["diffs"]),
             a=len(result["replay_anomalies"]),
+            dj=__import__('json').dumps(result['diffs'][:10]),
         )
         s.run(
             """

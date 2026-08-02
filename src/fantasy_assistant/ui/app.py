@@ -7,12 +7,13 @@ Installed as launchd agent com.fantasy-assistant.ui. Local only; binds
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import time
 from datetime import date, datetime
 from pathlib import Path
 
-from flask import Flask, jsonify, render_template_string
+from flask import Flask, jsonify, render_template_string, request
 
 from fantasy_assistant.graph.client import session
 
@@ -175,7 +176,22 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
  <div class="panel"><h2>Latest brief</h2><pre id="brief" style="max-height:520px"></pre></div>
  <div class="panel"><h2>Scouting signals</h2><table id="signals"></table>
    <h2 style="margin-top:12px">Integrity (orphans / open discrepancies)</h2><table id="orphans"></table></div>
- <div class="panel"><h2>Roster graph (signals ⚡, IL, 2-starts)</h2><div id="net"></div></div>
+ <div class="panel" style="grid-column:1/-1"><h2>Ask the graph
+   <span class="ts">natural language → Cypher (claude) → table + graph</span></h2>
+   <div style="display:flex;gap:8px;margin-bottom:8px">
+     <input id="q" style="flex:1;background:#0c1013;border:1px solid var(--line);border-radius:8px;
+       color:var(--ink);padding:8px" placeholder="e.g. which rival pitchers have a buy_low signal and a 2-start week coming?"/>
+     <button onclick="ask()" style="background:#2a4a72;color:#fff;border:0;border-radius:8px;padding:8px 16px">Ask</button>
+   </div>
+   <pre id="cy" style="max-height:60px"></pre>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+     <div style="overflow:auto;max-height:420px"><table id="askrows"></table></div>
+     <div id="asknet" style="height:420px;background:#0c1013;border-radius:8px"></div>
+   </div></div>
+ <div class="panel"><h2>Graph
+   <button onclick="net('schema')" style="background:#22303c;color:#cfd8e0;border:0;border-radius:6px;padding:3px 10px">whole schema</button>
+   <button onclick="net('roster')" style="background:#22303c;color:#cfd8e0;border:0;border-radius:6px;padding:3px 10px">my roster</button></h2>
+   <div id="net"></div></div>
  <div class="panel"><h2>Graph inventory · capture freshness</h2><table id="labels"></table>
    <table id="caps" style="margin-top:10px"></table></div>
 </div>
@@ -213,17 +229,132 @@ async function refresh(){
  document.getElementById('caps').innerHTML = row(['capture agent','last run'],1)+
    d.captures.map(c=>row([c.agent,c.last])).join('');
 }
-async function net(){
- const g = await (await fetch('/api/graph')).json();
- new vis.Network(document.getElementById('net'),
-  {nodes:new vis.DataSet(g.nodes), edges:new vis.DataSet(g.edges)},
-  {nodes:{shape:'dot',font:{color:'#e6ebf0',size:11}},
-   groups:{team:{color:'#4f7ec2'},player:{color:'#3fb27f'},
+const OPTS = {nodes:{shape:'dot',font:{color:'#e6ebf0',size:11}},
+   groups:{team:{color:'#4f7ec2'},player:{color:'#3fb27f'},meta:{color:'#4f7ec2'},
            il:{color:'#5d6b78'},signal:{color:'#d9a03f'}},
-   edges:{color:{color:'#2a323b'}},physics:{stabilization:{iterations:120}}});
+   edges:{color:{color:'#2a323b'},font:{color:'#5d6b78'}},
+   physics:{stabilization:{iterations:150}}};
+async function net(mode){
+ const g = await (await fetch(mode==='roster' ? '/api/graph' : '/api/schema')).json();
+ new vis.Network(document.getElementById('net'),
+  {nodes:new vis.DataSet(g.nodes), edges:new vis.DataSet(g.edges)}, OPTS);
 }
-refresh(); net(); setInterval(refresh, 30000);
+async function ask(){
+ const q = document.getElementById('q').value;
+ document.getElementById('cy').textContent = 'thinking…';
+ const d = await (await fetch('/api/ask', {method:'POST',
+   headers:{'Content-Type':'application/json'}, body:JSON.stringify({q})})).json();
+ if(d.error){ document.getElementById('cy').textContent = d.error + (d.cypher? '\n'+d.cypher:''); return; }
+ document.getElementById('cy').textContent = d.cypher;
+ const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${c}</${h?'th':'td'}>`).join('')}</tr>`;
+ document.getElementById('askrows').innerHTML = row(d.columns,1)+
+   d.rows.map(r=>row(d.columns.map(c=>r[c]))).join('');
+ new vis.Network(document.getElementById('asknet'),
+  {nodes:new vis.DataSet(d.graph.nodes), edges:new vis.DataSet(d.graph.edges)}, OPTS);
+}
+document.getElementById('q').addEventListener('keydown', e=>{if(e.key==='Enter')ask()});
+refresh(); net('schema'); setInterval(refresh, 30000);
 </script></body></html>"""
+
+
+@app.get("/api/schema")
+def schema_graph():
+    with session() as s:
+        rec = s.run("CALL db.schema.visualization()").single()
+        counts = {r["l"]: r["c"] for r in s.run(
+            "MATCH (n) UNWIND labels(n) AS l RETURN l, count(*) AS c").data()}
+    nodes = [{"id": n.element_id, "label": f"{list(n.labels)[0]}\n{counts.get(list(n.labels)[0], 0):,}",
+              "group": "meta", "value": max(8, min(40, (counts.get(list(n.labels)[0], 1)) ** 0.35))}
+             for n in rec["nodes"]]
+    edges = [{"from": r.start_node.element_id, "to": r.end_node.element_id,
+              "label": r.type, "arrows": "to", "font": {"size": 8}}
+             for r in rec["relationships"]]
+    return jsonify({"nodes": nodes, "edges": edges})
+
+
+SCHEMA_HINT = """Labels/properties: Player(name_full,name_normalized,mlbam_id,cbs_id,cbs_positions,
+primary_position,woba,xwoba,luck_gap,xera,pit_luck_gap), FantasyTeam(cbs_name,abbrev,is_us),
+RosterStint(status[active|il|minors],from_date,to_date NULL=current,acquired_via)-[:ON_TEAM]->FantasyTeam,
+-[:OF_PLAYER]->Player, LineupAssignment(slot,section[active|bench|injured|minors])-[:IN_PERIOD]->
+ScoringPeriod(number,start_date,end_date), -[:BY_TEAM]->FantasyTeam, -[:FILLED_BY]->Player,
+PlayerDayLine(date,side[bat|pit],hr,r,rbi,sb,k,sv,w,qs,outs,er,ha,bbi,ob? h,bb)-[:OF_PLAYER]->Player,
+TransactionEvent(posted_at,effective_date,fee,kinds)-[:BY_TEAM]->FantasyTeam,-[:ADDS|DROPS|MOVES]->Player,
+DraftPick(round,overall)-[:BY_TEAM]->,-[:SELECTED]->Player, StandingsSnapshot(scope[ytd|period])
+-[:FOR_PERIOD]->ScoringPeriod,-[:HAS_LINE]->CategoryStandingLine(value_reported,points,rank)
+-[:FOR_TEAM]->FantasyTeam,-[:IN_CATEGORY]->Category(code), PitcherGameVelo(date,ff_avg,whiff_pct,
+csw_pct,mix)-[:OF_PLAYER]->Player, Signal(kind,rationale,as_of,agent)-[:ABOUT]->Player,
+ProbableStart(date)-[:OF_PLAYER]->Player, Alert(raised_at,source,text), NewsItem(headline,body)
+-[:ABOUT]->Player, PoolEntry(avail,sportsline_rank,side)-[:OF_PLAYER]->Player,
+MlbStatusEvent(type_desc,date,description)-[:OF_PLAYER]->Player, Recommendation(kind,status,rationale),
+ModelEval(model,stand_at,pts_mae), Brief-[:CONTAINS]->Recommendation."""
+
+FORBIDDEN = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|LOAD|CALL\s+apoc\.(?!convert))\b", re.I)
+
+
+@app.post("/api/ask")
+def ask():
+    import re as _re
+    import subprocess as sp
+    q = (request.get_json() or {}).get("q", "").strip()
+    if not q:
+        return jsonify({"error": "empty question"})
+    prompt = (f"Translate to ONE read-only Cypher query for Neo4j 5.\n{SCHEMA_HINT}\n"
+              f"Team names: Runtime Terror (is_us:true), Rieken Havoc, Young Guns, Big Sticks, "
+              f"Maga Doge, Like a Nightmare, Dawg, Guillotine, Long Balls, Gashouse Gang, "
+              f"Magnum GI, Simba's Dublin Green Sox, Trex.\n"
+              f"Question: {q}\nReply with ONLY the Cypher, no fences, no prose.")
+    claude = None
+    for cand in ("claude", str(Path.home() / ".claude/local/claude"),
+                 "/opt/homebrew/bin/claude", "/usr/local/bin/claude"):
+        try:
+            sp.run([cand, "--version"], capture_output=True, timeout=10)
+            claude = cand
+            break
+        except Exception:
+            continue
+    if not claude:
+        return jsonify({"error": "claude CLI not found — install with: "
+                        "npm install -g @anthropic-ai/claude-code  (then run `claude` once to sign in)"})
+    try:
+        r = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001"],
+                   input=prompt, capture_output=True, text=True, timeout=90)
+        cypher = r.stdout.strip()
+    except Exception as exc:
+        return jsonify({"error": f"claude call failed: {exc}"})
+    m = _re.search(r"```(?:cypher)?\s*(.*?)```", cypher, _re.S)
+    if m:
+        cypher = m.group(1).strip()
+    if not cypher or FORBIDDEN.search(cypher):
+        return jsonify({"error": "refused (write clause or empty)", "cypher": cypher})
+    if not _re.search(r"\bLIMIT\b", cypher, _re.I):
+        cypher = cypher.rstrip("; \n") + " LIMIT 200"
+    try:
+        with session() as s:
+            res = s.run(cypher)
+            keys = res.keys()
+            nodes, edges, rows = {}, [], []
+            for rec in res:
+                row = {}
+                for k in keys:
+                    v = rec[k]
+                    if hasattr(v, "labels"):
+                        nodes[v.element_id] = {
+                            "id": v.element_id,
+                            "label": v.get("name_full") or v.get("cbs_name") or v.get("code")
+                                     or v.get("headline") or list(v.labels)[0],
+                            "group": list(v.labels)[0]}
+                        row[k] = nodes[v.element_id]["label"]
+                    elif hasattr(v, "type") and hasattr(v, "start_node"):
+                        edges.append({"from": v.start_node.element_id,
+                                      "to": v.end_node.element_id, "label": v.type})
+                        row[k] = v.type
+                    else:
+                        row[k] = str(v) if v is not None else ""
+                rows.append(row)
+    except Exception as exc:
+        return jsonify({"error": f"cypher failed: {exc}", "cypher": cypher})
+    return jsonify({"cypher": cypher, "columns": list(keys), "rows": rows[:200],
+                    "graph": {"nodes": list(nodes.values()), "edges": edges}})
 
 
 @app.get("/")

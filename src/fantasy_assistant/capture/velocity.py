@@ -38,7 +38,11 @@ async def _game_velo(client: httpx.AsyncClient, pk: int, sem) -> list[dict]:
         return []
     data = r.json()
     game_date = data.get("gameData", {}).get("datetime", {}).get("officialDate")
-    agg: dict[int, dict] = defaultdict(lambda: {"ff": [], "all": []})
+    SWING = {"S", "W", "F", "T", "L", "X", "D", "E"}   # swings incl. in-play
+    WHIFF = {"S", "W"}                                  # swinging strikes
+    agg: dict[int, dict] = defaultdict(
+        lambda: {"ff": [], "all": [], "swing": 0, "whiff": 0, "called": 0,
+                 "mix": defaultdict(int)})
     for play in data.get("liveData", {}).get("plays", {}).get("allPlays", []):
         pid = (play.get("matchup", {}).get("pitcher") or {}).get("id")
         if not pid:
@@ -46,18 +50,35 @@ async def _game_velo(client: httpx.AsyncClient, pk: int, sem) -> list[dict]:
         for ev in play.get("playEvents", []):
             if not ev.get("isPitch"):
                 continue
+            det = ev.get("details") or {}
+            code = (det.get("type") or {}).get("code")
+            call = (det.get("call") or {}).get("code")
+            a = agg[pid]
             speed = (ev.get("pitchData") or {}).get("startSpeed")
-            if speed is None:
-                continue
-            code = ((ev.get("details") or {}).get("type") or {}).get("code")
-            agg[pid]["all"].append(speed)
-            if code in FASTBALLS:
-                agg[pid]["ff"].append(speed)
-    return [{"uid": f"velo:{pid}:{pk}", "mlbam": pid, "game_pk": pk,
-             "date": game_date,
-             "ff_avg": round(sum(a["ff"]) / len(a["ff"]), 2) if a["ff"] else None,
-             "n_ff": len(a["ff"]), "n_pitches": len(a["all"])}
-            for pid, a in agg.items()]
+            if speed is not None:
+                a["all"].append(speed)
+                if code in FASTBALLS:
+                    a["ff"].append(speed)
+            if code:
+                a["mix"][code] += 1
+            if call in SWING:
+                a["swing"] += 1
+            if call in WHIFF:
+                a["whiff"] += 1
+            if call == "C":
+                a["called"] += 1
+    out = []
+    for pid, a in agg.items():
+        n = len(a["all"]) or 1
+        mix = {k: round(v / n, 3) for k, v in a["mix"].items()}
+        out.append({"uid": f"velo:{pid}:{pk}", "mlbam": pid, "game_pk": pk,
+                    "date": game_date,
+                    "ff_avg": round(sum(a["ff"]) / len(a["ff"]), 2) if a["ff"] else None,
+                    "n_ff": len(a["ff"]), "n_pitches": len(a["all"]),
+                    "whiff_pct": round(a["whiff"] / max(a["swing"], 1), 3),
+                    "csw_pct": round((a["whiff"] + a["called"]) / n, 3),
+                    "mix": __import__("json").dumps(mix)})
+    return out
 
 
 async def collect(days_back: int = 3) -> dict:
@@ -80,7 +101,8 @@ async def collect(days_back: int = 3) -> dict:
             MERGE (v:PitcherGameVelo {uid: row.uid})
             SET v.date=date(row.date), v.game_pk=row.game_pk,
                 v.ff_avg=row.ff_avg, v.n_ff=row.n_ff,
-                v.n_pitches=row.n_pitches, v.source='mlb_feed'
+                v.n_pitches=row.n_pitches, v.whiff_pct=row.whiff_pct,
+                v.csw_pct=row.csw_pct, v.mix=row.mix, v.source='mlb_feed'
             MERGE (v)-[:OF_PLAYER]->(p)
             """,
             batch=rows,
@@ -126,11 +148,64 @@ def velocity_signals() -> list[dict]:
         return sorted(out, key=lambda x: -abs(x["delta"]))
 
 
+def stuff_signals() -> list[dict]:
+    """Whiff/CSW trend + pitch-mix change: last 2 apps vs prior 5."""
+    import json as _json
+    from datetime import datetime
+    with session() as s:
+        rows = s.run(
+            """
+            MATCH (v:PitcherGameVelo)-[:OF_PLAYER]->(p:Player)
+            WHERE v.n_pitches >= 25 AND v.csw_pct IS NOT NULL
+            WITH p, v ORDER BY v.date DESC
+            WITH p, collect({d: v.date, csw: v.csw_pct, whiff: v.whiff_pct,
+                             mix: v.mix})[..7] AS g
+            WHERE size(g) >= 4
+            RETURN p.uid AS uid, p.name_full AS name, g
+            """
+        ).data()
+        out = []
+        for r in rows:
+            rec, pri = r["g"][:2], r["g"][2:]
+            csw_d = round(sum(x["csw"] for x in rec)/2 - sum(x["csw"] for x in pri)/len(pri), 3)
+            findings = []
+            if abs(csw_d) >= 0.05:
+                findings.append(("csw_up" if csw_d > 0 else "csw_down",
+                                 f"CSW last2 vs prior5: {csw_d:+.1%}", abs(csw_d)/0.12))
+            mix_r = _json.loads(rec[0]["mix"] or "{}")
+            mix_p: dict = {}
+            for x in pri:
+                for k, v in _json.loads(x["mix"] or "{}").items():
+                    mix_p[k] = mix_p.get(k, 0) + v / len(pri)
+            for pitch, use in mix_r.items():
+                base = mix_p.get(pitch, 0)
+                if use - base >= 0.10 and use >= 0.08:
+                    findings.append(("mix_change",
+                                     f"{pitch} usage {base:.0%} -> {use:.0%}",
+                                     min(1.0, (use - base) / 0.25)))
+                    break
+            for kind, why, strength in findings:
+                out.append({"name": r["name"], "kind": kind, "why": why})
+                s.run(
+                    """
+                    MATCH (p:Player {uid:$uid})
+                    MERGE (sig:Signal {uid:$suid})
+                    SET sig.kind=$kind, sig.strength=$st, sig.as_of=date(),
+                        sig.rationale=$why, sig.agent='stuff', sig.model_version='stuff-v1'
+                    MERGE (sig)-[:ABOUT]->(p)
+                    """,
+                    uid=r["uid"], suid=f"signal:stuff:{kind}:{r['uid']}:{r['g'][0]['d']}",
+                    kind=kind, st=min(1.0, strength), why=why)
+        return out
+
+
 if __name__ == "__main__":
     import sys
     days = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     print(asyncio.run(collect(days)))
     sigs = velocity_signals()
-    print(f"{len(sigs)} velocity signals:")
-    for x in sigs[:10]:
-        print(f"  {x['kind']:<14} {x['name']:<24} {x['delta']:+.2f} mph")
+    print(f"{len(sigs)} velocity signals")
+    st = stuff_signals()
+    print(f"{len(st)} stuff signals:")
+    for x in st[:10]:
+        print(f"  {x['kind']:<12} {x['name']:<24} {x['why']}")
