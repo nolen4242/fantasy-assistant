@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-02T15:16:28
+captured: 2026-08-02T18:59:57
 ---
 League
 My Team
@@ -16,7 +16,6 @@ Standings
 ADD/DROP
  
 TRADES
-1
 4 / 13
 WAIVER #
 OVERALL
@@ -195,7 +194,7 @@ Runtime Terror	108	4.0	1.0
 Like a Nightmare	107	3.0	-1.0
 Gashouse Gang	100	2.0	0.0
 Trex	99	1.0	0.0
-STANDINGS UPDATED AS OF 08/02/26 04:16 PM ET
+STANDINGS UPDATED AS OF 08/02/26 07:59 PM ET
 More
 Pick'em Games
 Fantasy Sports

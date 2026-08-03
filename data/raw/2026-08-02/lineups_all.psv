@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams/roster-report/<team>/<period>/ (periods 1-19)
-captured: 2026-08-02T15:19:36
+captured: 2026-08-02T19:03:49
 ---
 Like a Nightmare|1|active|C|Samuel Basallo C • BAL
 Like a Nightmare|1|active|1B|Freddie Freeman 1B • LAD
@@ -1085,7 +1085,7 @@ Guillotine|2|active|P|Cody Ponce P • TOR
 Guillotine|2|active|P|Drew Rasmussen P • TB
 Guillotine|2|active|P|Matt Strahm P • KC
 Guillotine|2|active|P|Robert Suarez P • ATL
-Guillotine|2|active|P|Jameson Taillon P • CHC
+Guillotine|2|active|P|Jameson Taillon P • TOR
 Guillotine|2|active|P|Devin Williams P • NYM
 Guillotine|2|active|P|Max Meyer P • MIA
 Guillotine|2|bench|P|Nick Lodolo P • CIN
@@ -1111,7 +1111,7 @@ Guillotine|3|active|P|Seth Lugo P • KC
 Guillotine|3|active|P|Nolan McLean P • NYM
 Guillotine|3|active|P|Max Meyer P • MIA
 Guillotine|3|active|P|Drew Rasmussen P • TB
-Guillotine|3|active|P|Jameson Taillon P • CHC
+Guillotine|3|active|P|Jameson Taillon P • TOR
 Guillotine|3|active|P|Will Warren P • NYY
 Guillotine|3|active|P|Devin Williams P • NYM
 Guillotine|3|active|P|Robert Suarez P • ATL
@@ -3405,7 +3405,7 @@ Gashouse Gang|8|active|P|Jacob Misiorowski P • MIL
 Gashouse Gang|8|active|P|Aaron Nola P • PHI
 Gashouse Gang|8|active|P|Joe Ryan P • MIN
 Gashouse Gang|8|active|P|Cade Smith P • CLE
-Gashouse Gang|8|active|P|Jameson Taillon P • CHC
+Gashouse Gang|8|active|P|Jameson Taillon P • TOR
 Gashouse Gang|8|active|P|Garrett Cleavinger P • TB
 Gashouse Gang|8|bench|P|Matthew Boyd P • CHC
 Gashouse Gang|8|bench|P|Casey Mize P • DET
@@ -3431,7 +3431,7 @@ Gashouse Gang|9|active|P|Jacob Misiorowski P • MIL
 Gashouse Gang|9|active|P|Casey Mize P • DET
 Gashouse Gang|9|active|P|Joe Ryan P • MIN
 Gashouse Gang|9|active|P|Cade Smith P • CLE
-Gashouse Gang|9|active|P|Jameson Taillon P • CHC
+Gashouse Gang|9|active|P|Jameson Taillon P • TOR
 Gashouse Gang|9|active|P|Garrett Cleavinger P • TB
 Gashouse Gang|9|active|P|Aaron Nola P • PHI
 Gashouse Gang|9|bench|P|Matthew Boyd P • CHC
@@ -4222,7 +4222,7 @@ Long Balls|1|active|P|Zac Gallen P • ARI
 Long Balls|1|active|P|Kevin Ginkel P • ARI
 Long Balls|1|active|P|Jack Leiter P • TEX
 Long Balls|1|active|P|Mason Miller P • SD
-Long Balls|1|active|P|Freddy Peralta P • NYM
+Long Balls|1|active|P|Freddy Peralta P • TB
 Long Balls|1|active|P|Cristopher Sanchez P • PHI
 Long Balls|1|active|P|Kodai Senga P • NYM
 Long Balls|1|bench|P|Grayson Rodriguez P • LAA
@@ -4245,7 +4245,7 @@ Long Balls|2|active|P|Zac Gallen P • ARI
 Long Balls|2|active|P|Kevin Ginkel P • ARI
 Long Balls|2|active|P|Jack Leiter P • TEX
 Long Balls|2|active|P|Mason Miller P • SD
-Long Balls|2|active|P|Freddy Peralta P • NYM
+Long Balls|2|active|P|Freddy Peralta P • TB
 Long Balls|2|active|P|Cristopher Sanchez P • PHI
 Long Balls|2|active|P|Kodai Senga P • NYM
 Long Balls|2|bench|P|Grayson Rodriguez P • LAA
@@ -4270,7 +4270,7 @@ Long Balls|3|active|P|Zac Gallen P • ARI
 Long Balls|3|active|P|Kyle Harrison P • MIL
 Long Balls|3|active|P|Jack Leiter P • TEX
 Long Balls|3|active|P|Mason Miller P • SD
-Long Balls|3|active|P|Freddy Peralta P • NYM
+Long Balls|3|active|P|Freddy Peralta P • TB
 Long Balls|3|active|P|Cristopher Sanchez P • PHI
 Long Balls|3|active|P|Kodai Senga P • NYM
 Long Balls|3|bench|P|Grayson Rodriguez P • LAA
@@ -4297,7 +4297,7 @@ Long Balls|4|active|P|Zac Gallen P • ARI
 Long Balls|4|active|P|Kyle Harrison P • MIL
 Long Balls|4|active|P|Jack Leiter P • TEX
 Long Balls|4|active|P|Mason Miller P • SD
-Long Balls|4|active|P|Freddy Peralta P • NYM
+Long Balls|4|active|P|Freddy Peralta P • TB
 Long Balls|4|active|P|Cristopher Sanchez P • PHI
 Long Balls|4|active|P|Kodai Senga P • NYM
 Long Balls|4|bench|P|Grayson Rodriguez P • LAA
@@ -4326,7 +4326,7 @@ Long Balls|5|active|P|Zac Gallen P • ARI
 Long Balls|5|active|P|Kyle Harrison P • MIL
 Long Balls|5|active|P|Jack Leiter P • TEX
 Long Balls|5|active|P|Mason Miller P • SD
-Long Balls|5|active|P|Freddy Peralta P • NYM
+Long Balls|5|active|P|Freddy Peralta P • TB
 Long Balls|5|active|P|Cristopher Sanchez P • PHI
 Long Balls|5|active|P|Kodai Senga P • NYM
 Long Balls|5|bench|P|Grayson Rodriguez P • LAA
@@ -4354,7 +4354,7 @@ Long Balls|6|active|P|Zac Gallen P • ARI
 Long Balls|6|active|P|Kyle Harrison P • MIL
 Long Balls|6|active|P|Jack Leiter P • TEX
 Long Balls|6|active|P|Mason Miller P • SD
-Long Balls|6|active|P|Freddy Peralta P • NYM
+Long Balls|6|active|P|Freddy Peralta P • TB
 Long Balls|6|active|P|Cristopher Sanchez P • PHI
 Long Balls|6|bench|P|Grayson Rodriguez P • LAA
 Long Balls|7|active|C|Adley Rutschman C • BAL
@@ -4380,7 +4380,7 @@ Long Balls|7|active|P|Cade Cavalli P • WAS
 Long Balls|7|active|P|Dylan Cease P • TOR
 Long Balls|7|active|P|Kyle Harrison P • MIL
 Long Balls|7|active|P|Mason Miller P • SD
-Long Balls|7|active|P|Freddy Peralta P • NYM
+Long Balls|7|active|P|Freddy Peralta P • TB
 Long Balls|7|active|P|Jack Perkins P • ATH
 Long Balls|7|active|P|Cristopher Sanchez P • PHI
 Long Balls|7|active|P|Zac Gallen P • ARI
@@ -4407,7 +4407,7 @@ Long Balls|8|active|P|Chase Burns P • CIN
 Long Balls|8|active|P|Dylan Cease P • TOR
 Long Balls|8|active|P|Kyle Harrison P • MIL
 Long Balls|8|active|P|Mason Miller P • SD
-Long Balls|8|active|P|Freddy Peralta P • NYM
+Long Balls|8|active|P|Freddy Peralta P • TB
 Long Balls|8|active|P|Jack Perkins P • ATH
 Long Balls|8|active|P|Cristopher Sanchez P • PHI
 Long Balls|8|active|P|Robby Snelling P • MIA
@@ -4436,7 +4436,7 @@ Long Balls|9|active|P|Dylan Cease P • TOR
 Long Balls|9|active|P|Zac Gallen P • ARI
 Long Balls|9|active|P|Kyle Harrison P • MIL
 Long Balls|9|active|P|Mason Miller P • SD
-Long Balls|9|active|P|Freddy Peralta P • NYM
+Long Balls|9|active|P|Freddy Peralta P • TB
 Long Balls|9|active|P|Jack Perkins P • ATH
 Long Balls|9|active|P|Cristopher Sanchez P • PHI
 Long Balls|9|bench|P|Grayson Rodriguez P • LAA
@@ -4465,7 +4465,7 @@ Long Balls|10|active|P|Dylan Cease P • TOR
 Long Balls|10|active|P|Zac Gallen P • ARI
 Long Balls|10|active|P|Kyle Harrison P • MIL
 Long Balls|10|active|P|Mason Miller P • SD
-Long Balls|10|active|P|Freddy Peralta P • NYM
+Long Balls|10|active|P|Freddy Peralta P • TB
 Long Balls|10|active|P|Cristopher Sanchez P • PHI
 Long Balls|10|active|P|Grant Taylor P • CHW
 Long Balls|10|bench|P|Grayson Rodriguez P • LAA
@@ -4493,7 +4493,7 @@ Long Balls|11|active|P|Chase Burns P • CIN
 Long Balls|11|active|P|Zac Gallen P • ARI
 Long Balls|11|active|P|Kyle Harrison P • MIL
 Long Balls|11|active|P|Mason Miller P • SD
-Long Balls|11|active|P|Freddy Peralta P • NYM
+Long Balls|11|active|P|Freddy Peralta P • TB
 Long Balls|11|active|P|Grayson Rodriguez P • LAA
 Long Balls|11|active|P|Cristopher Sanchez P • PHI
 Long Balls|11|active|P|Grant Taylor P • CHW
@@ -4521,7 +4521,7 @@ Long Balls|12|active|P|Chase Burns P • CIN
 Long Balls|12|active|P|Yoendrys Gomez P • MIN
 Long Balls|12|active|P|Kyle Harrison P • MIL
 Long Balls|12|active|P|Mason Miller P • SD
-Long Balls|12|active|P|Freddy Peralta P • NYM
+Long Balls|12|active|P|Freddy Peralta P • TB
 Long Balls|12|active|P|Grayson Rodriguez P • LAA
 Long Balls|12|active|P|Cristopher Sanchez P • PHI
 Long Balls|12|active|P|Grant Taylor P • CHW
@@ -4551,7 +4551,7 @@ Long Balls|13|active|P|Dylan Cease P • TOR
 Long Balls|13|active|P|Yoendrys Gomez P • MIN
 Long Balls|13|active|P|Kyle Harrison P • MIL
 Long Balls|13|active|P|Mason Miller P • SD
-Long Balls|13|active|P|Freddy Peralta P • NYM
+Long Balls|13|active|P|Freddy Peralta P • TB
 Long Balls|13|active|P|Cristopher Sanchez P • PHI
 Long Balls|13|active|P|Grant Taylor P • CHW
 Long Balls|13|bench|P|Robby Snelling P • MIA
@@ -4579,7 +4579,7 @@ Long Balls|14|active|P|Dylan Cease P • TOR
 Long Balls|14|active|P|Yoendrys Gomez P • MIN
 Long Balls|14|active|P|Kyle Harrison P • MIL
 Long Balls|14|active|P|Mason Miller P • SD
-Long Balls|14|active|P|Freddy Peralta P • NYM
+Long Balls|14|active|P|Freddy Peralta P • TB
 Long Balls|14|active|P|Cristopher Sanchez P • PHI
 Long Balls|14|active|P|Grant Taylor P • CHW
 Long Balls|14|bench|P|Robby Snelling P • MIA
@@ -4607,7 +4607,7 @@ Long Balls|15|active|P|Dylan Cease P • TOR
 Long Balls|15|active|P|Yoendrys Gomez P • MIN
 Long Balls|15|active|P|Kyle Harrison P • MIL
 Long Balls|15|active|P|Mason Miller P • SD
-Long Balls|15|active|P|Freddy Peralta P • NYM
+Long Balls|15|active|P|Freddy Peralta P • TB
 Long Balls|15|active|P|Cristopher Sanchez P • PHI
 Long Balls|15|active|P|Grant Taylor P • CHW
 Long Balls|15|bench|P|Robby Snelling P • MIA
@@ -4632,7 +4632,7 @@ Long Balls|16|active|P|Dylan Cease P • TOR
 Long Balls|16|active|P|Kyle Harrison P • MIL
 Long Balls|16|active|P|Peter Lambert P • HOU
 Long Balls|16|active|P|Mason Miller P • SD
-Long Balls|16|active|P|Freddy Peralta P • NYM
+Long Balls|16|active|P|Freddy Peralta P • TB
 Long Balls|16|active|P|Kumar Rocker P • TEX
 Long Balls|16|active|P|Cristopher Sanchez P • PHI
 Long Balls|16|active|P|Ian Seymour P • TB
@@ -4661,7 +4661,7 @@ Long Balls|17|active|P|Dylan Cease P • TOR
 Long Balls|17|active|P|Yoendrys Gomez P • MIN
 Long Balls|17|active|P|Peter Lambert P • HOU
 Long Balls|17|active|P|Mason Miller P • SD
-Long Balls|17|active|P|Freddy Peralta P • NYM
+Long Balls|17|active|P|Freddy Peralta P • TB
 Long Balls|17|active|P|Kumar Rocker P • TEX
 Long Balls|17|active|P|Cristopher Sanchez P • PHI
 Long Balls|17|active|P|Ian Seymour P • TB
@@ -4690,7 +4690,7 @@ Long Balls|18|active|P|Dylan Cease P • TOR
 Long Balls|18|active|P|Yoendrys Gomez P • MIN
 Long Balls|18|active|P|Peter Lambert P • HOU
 Long Balls|18|active|P|Mason Miller P • SD
-Long Balls|18|active|P|Freddy Peralta P • NYM
+Long Balls|18|active|P|Freddy Peralta P • TB
 Long Balls|18|active|P|Brandon Pfaadt P • ARI
 Long Balls|18|active|P|Cristopher Sanchez P • PHI
 Long Balls|18|active|P|Ian Seymour P • TB
@@ -4720,7 +4720,7 @@ Long Balls|19|active|P|Dylan Cease P • TOR
 Long Balls|19|active|P|Yoendrys Gomez P • MIN
 Long Balls|19|active|P|Peter Lambert P • HOU
 Long Balls|19|active|P|Mason Miller P • SD
-Long Balls|19|active|P|Freddy Peralta P • NYM
+Long Balls|19|active|P|Freddy Peralta P • TB
 Long Balls|19|active|P|Brandon Pfaadt P • ARI
 Long Balls|19|active|P|Cristopher Sanchez P • PHI
 Long Balls|19|active|P|Ian Seymour P • TB

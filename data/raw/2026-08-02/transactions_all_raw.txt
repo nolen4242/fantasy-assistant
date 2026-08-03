@@ -1,7 +1,8 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-02T15:16:24
+captured: 2026-08-02T18:59:53
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
+8/2/26 7:49 PM ET|Runtime Terror|Erik Miller P • SF - Added; Garrett Mitchell OF • MIL - Dropped|8/3/26|$2.50
 8/2/26 4:08 PM ET|Runtime Terror|Slade Cecconi P • CLE - Added; Abner Uribe P • MIL - Dropped|8/3/26|$2.50
 8/2/26 11:38 AM ET|Dawg|Jeremiah Estrada P • SD - Dropped|8/3/26|$0.00
 8/2/26 11:37 AM ET|Dawg|Esteury Ruiz OF • MIA - Added|8/3/26|$2.50
@@ -246,7 +247,7 @@ DATE|TEAM|PLAYERS|EFFECTIVE|COST
 5/24/26 9:00 AM ET|Dawg|Ernie Clement 2B,3B,SS • TOR - Added|5/25/26|$2.50
 5/24/26 1:39 AM ET|Big Sticks|Noah Cameron P • KC - Added; Jeffrey Springs P • ATH - Dropped|5/25/26|$2.50
 5/23/26 6:48 AM ET|Big Sticks|Ramon Laureano OF • SD - Added; Mickey Moniak OF • COL - Moved to IR|5/25/26|$2.50
-5/22/26 8:18 PM ET|Gashouse Gang|Griffin Jax P • TB - Added; Jameson Taillon P • CHC - Dropped|5/25/26|$2.50
+5/22/26 8:18 PM ET|Gashouse Gang|Griffin Jax P • TB - Added; Jameson Taillon P • TOR - Dropped|5/25/26|$2.50
 5/22/26 11:05 AM ET|Runtime Terror|Roki Sasaki P • LAD - Added|5/25/26|$2.50
 5/21/26 8:50 PM ET|Gashouse Gang|Josh Bell 1B • MIN - Added; Drake Baldwin C • ATL - Moved to IR|5/25/26|$2.50
 5/21/26 7:27 PM ET|Like a Nightmare|Keibert Ruiz C • WAS - Added; Ryan Jeffers C • MIN - Moved to IR|5/25/26|$2.50
@@ -302,7 +303,7 @@ DATE|TEAM|PLAYERS|EFFECTIVE|COST
 5/10/26 8:01 PM ET|Simba's Dublin Green Sox|Brayan Rocchio 2B,SS • CLE - Added; Kerry Carpenter OF • DET - Moved to IR|5/11/26|$2.50
 5/10/26 1:31 AM ET|Magnum GI|Andre Pallante P • STL - Added; Tyler Glasnow P • LAD - Moved to IR|5/11/26|$2.50
 5/10/26 12:18 AM ET|Like a Nightmare|Matt Wallner OF • MIN - Dropped|5/11/26|$0.00
-5/9/26 7:22 PM ET|Gashouse Gang|Jameson Taillon P • CHC - Added; Matthew Boyd P • CHC - Moved to IR|5/11/26|$2.50
+5/9/26 7:22 PM ET|Gashouse Gang|Jameson Taillon P • TOR - Added; Matthew Boyd P • CHC - Moved to IR|5/11/26|$2.50
 5/9/26 7:15 PM ET|Gashouse Gang|Nate Lowe 1B • CIN - Added; Dominic Smith 1B • ATL - Dropped|5/11/26|$2.50
 5/9/26 6:01 PM ET|Young Guns|Luke Raley 1B,OF • SEA - Added|5/11/26|$2.50
 5/8/26 5:22 PM ET|Simba's Dublin Green Sox|Willy Adames SS • SF - Traded from Like a Nightmare; Paul Skenes P • PIT - Traded from Like a Nightmare|5/11/26|$2.50
@@ -429,7 +430,7 @@ DATE|TEAM|PLAYERS|EFFECTIVE|COST
 4/9/26 10:07 PM ET|Guillotine|Michael Burrows P • HOU - Added; Luis Arraez 1B,2B • SF - Dropped|4/13/26|$2.50
 4/9/26 3:24 PM ET|Runtime Terror|Mark Vientos 1B,3B • NYM - Added; Alec Bohm 3B • PHI - Dropped|4/13/26|$2.50
 4/9/26 3:20 PM ET|Big Sticks|Jeffrey Springs P • ATH - Added; Rhett Lowder P • CIN - Dropped|4/13/26|$2.50
-4/9/26 11:12 AM ET|Guillotine|Jameson Taillon P • CHC - Dropped|4/13/26|$0.00
+4/9/26 11:12 AM ET|Guillotine|Jameson Taillon P • TOR - Dropped|4/13/26|$0.00
 4/9/26 10:27 AM ET|Long Balls|Colt Emerson SS • SEA - Added|4/13/26|$2.50
 4/9/26 9:52 AM ET|Runtime Terror|Luis Gil P • NYY - Added; Joe Boyle P • TB - Dropped|4/13/26|$2.50
 4/9/26 1:42 AM ET|Guillotine|Daulton Varsho OF • TOR - Added off Waivers|4/13/26|$2.50
@@ -489,7 +490,7 @@ DATE|TEAM|PLAYERS|EFFECTIVE|COST
 3/29/26 5:53 AM ET|Simba's Dublin Green Sox|Michael Wacha P • KC - Added; Luis Garcia 1B,2B • WAS - Dropped|3/30/26|$2.50
 3/29/26 3:21 AM ET|Simba's Dublin Green Sox|Dylan Beavers OF • BAL - Added; Dylan Moore 2B,OF • PHI - Dropped|3/30/26|$2.50
 3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Mike Soroka P • ARI - Activated|3/30/26|$0.00
-3/29/26 2:42 AM ET|Guillotine|Jameson Taillon P • CHC - Added off Waivers; Ryan Pepiot P • TB - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Guillotine|Jameson Taillon P • TOR - Added off Waivers; Ryan Pepiot P • TB - Moved to IR|3/30/26|$2.50
 3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Mike Soroka P • ARI - Added off Waivers; Merrill Kelly P • ARI - Moved to IR|3/30/26|$2.50
 3/29/26 2:42 AM ET|Young Guns|Cristian Javier P • HOU - Added off Waivers; Payton Tolle P • BOS - Sent to Minors|3/30/26|$2.50
 3/29/26 2:42 AM ET|Trex|Parker Messick P • CLE - Added off Waivers|3/30/26|$2.50

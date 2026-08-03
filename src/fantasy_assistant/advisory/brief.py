@@ -173,6 +173,9 @@ def compose(as_of: str | None = None) -> str:
         st = e["stats"]
         avail = f"W until {e['clear']}" if e["avail"] == "W" else "FA"
         add(f"- {e['name']} ({e['mlb']}{gp(e['mlb'])}){tag(e['name'])} — proj {st.get('sv', 0):g} SV, ERA {st.get('era', 0):g} [{avail}]")
+        recs.append({"kind": "claim" if e["avail"] == "W" else "add",
+                     "player": e["name"],
+                     "rationale": f"Saves target: proj {st.get('sv',0):g} SV wk{next_period}"})
     add("")
 
     pending = [e for e in bat + pit if e["avail"] == "W"]

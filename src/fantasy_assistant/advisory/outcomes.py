@@ -26,10 +26,11 @@ def match_decisions() -> dict:
             """
             MATCH (rec:Recommendation {status:'open'})
             WHERE rec.kind IN ['add', 'claim']
-            MATCH (rec)<-[:CONTAINS]-(b:Brief)
+            MATCH (rec)<-[:CONTAINS]-(b:Brief)-[:FOR_PERIOD]->(per:ScoringPeriod)
             MATCH (e:TransactionEvent)-[:BY_TEAM]->(:FantasyTeam {is_us:true}),
                   (e)-[:ADDS]->(p:Player)
-            WHERE e.posted_at >= rec.created_at
+            WHERE date(e.posted_at) >= per.start_date - duration('P2D')
+              AND date(e.posted_at) <= per.end_date
               AND p.name_full = apoc.convert.fromJsonMap(rec.action_blob)['player']
             MERGE (d:DecisionRecord {uid: 'decision:' + rec.uid})
             SET d.decided_at = e.posted_at, d.matches_recommendation = 'full',

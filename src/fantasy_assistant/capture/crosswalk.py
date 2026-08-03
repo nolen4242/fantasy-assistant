@@ -126,13 +126,13 @@ def run_crosswalk(season: int = 2026) -> dict:
             # CBS renders Ohtani as two entities; strip the qualifier for matching
             norm = (gp["norm"] or "").replace(" (batter)", "").replace(" (pitcher)", "")
             cands = narrow(by_norm.get(norm, []), gp)
-            if not cands:
+            if not cands and gp["uid"] in rostered:
+                # fuzzy passes are rostered-only: on the 8k pool longtail they
+                # mass-assign wrong ids (seth_gray -> Sonny Gray's mlbam)
                 cands = narrow(by_stripped.get(_strip_suffix(norm), []), gp)
-            if not cands:
-                # first-name variants (Josh/Joshua): last name + first initial,
-                # accepted only when it narrows to exactly one candidate
-                last, first = _last_first(norm)
-                cands = narrow(by_last_fi.get((last, first[:1]), []), gp)
+                if not cands:
+                    last, first = _last_first(norm)
+                    cands = narrow(by_last_fi.get((last, first[:1]), []), gp)
             if len(cands) == 1:
                 matched.append((gp["uid"], cands[0]))
             elif len(cands) > 1:
@@ -173,7 +173,9 @@ def run_crosswalk(season: int = 2026) -> dict:
             """,
             batch=[{"uid": uid, "m": m} for uid, m in matched],
         )
+    n_over = apply_overrides()
     return {
+        "overrides_applied": n_over,
         "mlb_universe": len(universe),
         "graph_players": len(graph_players),
         "matched": len(matched),
@@ -190,24 +192,17 @@ if __name__ == "__main__":
 # Hand-verified identity overrides for name collisions the automated passes
 # can't safely resolve (same name, same position type, multiple MLB players).
 # Keyed by (normalized CBS name, CBS MLB team) -> mlbam_id.
-OVERRIDES = {
-    ("luis garcia", "WAS"): 671277,   # Luis García Jr., WSH 2B (not the two pitchers)
-    ("max muncy", "LAD"): 571970,     # veteran LAD/CBS-3B Muncy (ATH kid is 691777)
+OVERRIDES_BY_UID = {
+    "player:name:luis_garcia": {"mlbam_id": 671277, "primary_position": "2B"},
+    "player:name:max_muncy": {"mlbam_id": 571970, "primary_position": "3B"},
+    "player:name:max_muncy_ath": {"mlbam_id": 691777, "primary_position": "3B"},
 }
 
 
 def apply_overrides() -> int:
     with session() as s:
         n = 0
-        for (norm, team), mlbam in OVERRIDES.items():
-            res = s.run(
-                """
-                MATCH (p:Player {name_normalized:$norm})
-                WHERE p.cbs_mlb_team = $team OR $team IS NULL
-                SET p.mlbam_id = $mlbam
-                RETURN count(p) AS c
-                """,
-                norm=norm, team=team, mlbam=mlbam,
-            ).single()
-            n += res["c"]
+        for uid, props in OVERRIDES_BY_UID.items():
+            n += s.run("MATCH (p:Player {uid:$uid}) SET p += $props RETURN count(p) AS c",
+                       uid=uid, props=props).single()["c"]
     return n
