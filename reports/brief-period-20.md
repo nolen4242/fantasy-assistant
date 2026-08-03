@@ -1,5 +1,5 @@
 # Weekly Brief — Period 20 (locks Monday, per-player)
-Generated 2026-08-02T19:49 · model races-v3 · through period 19
+Generated 2026-08-02T21:27 · model races-v3 · through period 19
 
 ## Standings picture
 - Projected final on current pace: **9th, 62.0 pts**
@@ -10,9 +10,9 @@ Generated 2026-08-02T19:49 · model races-v3 · through period 19
 ## Category battle plan (cheapest points first)
 - **S**: +0.9 season units passes Gashouse Gang (+1.0 pts); our pace 2.5/wk
 - **OBP**: ~1.0 roster-swaps passes Young Guns (+1.0 pts); proj 0.334
-- **ERA**: ~1.1 roster-swaps passes Rieken Havoc (+1.0 pts); proj 3.5309
 - **WHIP**: ~2.6 roster-swaps passes Long Balls (+1.0 pts); proj 1.2533
 - **SB**: +2.6 season units passes Magnum GI (+1.0 pts); our pace 6.0/wk
+- **ERA**: ~3.4 roster-swaps passes Rieken Havoc (+1.0 pts); proj 3.5309
 - **K**: +6.6 season units passes Simba's Dublin Green Sox (+1.0 pts); our pace 42.25/wk
 
 ## Stream targets (K/WQS are our cheapest points; IP headroom exists)
@@ -39,17 +39,22 @@ Generated 2026-08-02T19:49 · model races-v3 · through period 19
 - Luis Arraez (1B,2B, SF) — clears 8/4, SportsLine wk rank 577
 
 ## Trade board (deadline Sun 8/24; both sides valued; tiers model acceptance)
-- no 1-for-1 clears acceptance under current projections — points this week live on the wire (streams above), not the trade market
+- [win-win] give **Colson Montgomery** for **Cade Smith** (Gashouse Gang): us +5.0 pts, them +1.0
+- [win-win] give **Kody Clemens** for **Cade Smith** (Gashouse Gang): us +5.0 pts, them +1.0
+- [win-win] give **Aroldis Chapman** for **Tarik Skubal** (Gashouse Gang): us +4.0 pts, them +1.0
+- [win-win] give **Aroldis Chapman** for **Joe Ryan** (Gashouse Gang): us +3.0 pts, them +1.0
+- [win-win] give **Aroldis Chapman** for **Casey Mize** (Gashouse Gang): us +3.0 pts, them +1.0
+- [win-win] give **Colson Montgomery** for **Adrian Morejon** (Gashouse Gang): us +2.0 pts, them +1.0
 
 ## Hot on the wire (unrostered, skill-based heat)
+- Javier Assad (P, wk-rank 29): **csw_up** — CSW last2 vs prior5: +5.0%
 - Javier Assad (P, wk-rank 29): **hot_arm** — CSW +4.9%, velo +0.1 mph (skill-based)
+- Jake Irvin (P, wk-rank 39): **velocity_up** — FF velo last2 vs prior5: +1.57 mph
+- Noah Cameron (P, wk-rank 42): **csw_up** — CSW last2 vs prior5: +7.0%
+- Noah Cameron (P, wk-rank 42): **velocity_up** — FF velo last2 vs prior5: +1.49 mph
 - Noah Cameron (P, wk-rank 42): **hot_arm** — CSW +5.5%, velo +1.6 mph (skill-based)
+- Randy Dobnak (P, wk-rank 65): **csw_up** — CSW last2 vs prior5: +6.1%
 - Randy Dobnak (P, wk-rank 65): **hot_arm** — CSW +6.1%, velo -0.5 mph (skill-based)
-- Martin Perez (P, wk-rank 71): **hot_arm** — CSW +3.8%, velo +1.7 mph (skill-based)
-- Colin Rea (P, wk-rank 78): **hot_arm** — CSW +1.3%, velo +1.0 mph (skill-based)
-- Jovani Moran (P, wk-rank 144): **hot_arm** — CSW +14.5%, velo +0.1 mph (skill-based)
-- Kumar Rocker (P, wk-rank 164): **hot_arm** — CSW +5.5%, velo +0.1 mph (skill-based)
-- Tyler Mahle (P, wk-rank 171): **hot_arm** — CSW +7.8%, velo +1.1 mph (skill-based)
 
 ## Scouting signals on our roster (last 7 days)
 - Colson Montgomery: **contact_cold** — hard-hit% last 25 BBE 24% vs season 42% (z=-1.8)
