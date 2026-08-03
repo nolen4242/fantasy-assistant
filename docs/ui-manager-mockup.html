@@ -1,0 +1,130 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Manager view — mockup</title>
+<style>
+ :root{--bg:#101418;--panel:#1a2027;--ink:#e6ebf0;--ink2:#93a1af;--muted:#5d6b78;
+   --good:#3fb27f;--warn:#d9a03f;--crit:#d95f4c;--line:#2a323b;--acc:#4f7ec2}
+ body{background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,system-ui,sans-serif;margin:0;padding:18px}
+ h1{font-size:17px;margin:0 0 4px} .sub{color:var(--muted);font-size:12px;margin-bottom:14px}
+ h2{font-size:12px;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px}
+ .tabs{display:flex;gap:2px;margin-bottom:14px}
+ .tab{padding:6px 16px;border-radius:8px 8px 0 0;background:var(--panel);color:var(--ink2);font-size:13px}
+ .tab.on{color:var(--ink);border-bottom:2px solid var(--acc)}
+ .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:14px}
+ .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+ .stat b{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+ .stat .v{font-size:22px;font-weight:600} .stat .d{font-size:12px;color:var(--ink2);margin-top:2px}
+ .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+ .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto}
+ table{border-collapse:collapse;width:100%;font-size:13px}
+ td,th{padding:4px 8px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+ th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+ .k{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;margin-right:4px}
+ .k.swap{background:#2a3d5c;color:#9cc2f0}.k.add{background:#1f3d31;color:#7fd6ac}
+ .k.claim{background:#42391f;color:#e8c987}.k.hazard{background:#472a26;color:#f0a396}
+ .k.trade{background:#3a2a47;color:#cfa3e8}
+ .hot{color:var(--good)}.cold{color:#7fb2e8}.warnc{color:var(--warn)}.critc{color:var(--crit)}
+ .why{color:var(--ink2);font-size:12px}
+ .bar{height:6px;border-radius:3px;background:#242c35;position:relative;margin-top:6px}
+ .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--acc)}
+ .cheap td:first-child{font-weight:600}
+ .note{color:var(--muted);font-size:12px;margin-top:8px}
+ .adopt{border:1px solid var(--line);border-radius:6px;padding:1px 8px;font-size:11px;color:var(--ink2)}
+</style></head><body>
+<h1>Runtime Terror — manager view <span style="color:var(--muted);font-weight:400">(mockup, real data 8/2 9pm)</span></h1>
+<div class="sub">every number links to its source: rec → rationale, signal → why, curve → races-v3</div>
+<div class="tabs"><div class="tab on">Manager</div><div class="tab">Ops</div></div>
+
+<div class="strip">
+ <div class="stat"><b>Standings</b><span class="v">64.0 <span style="font-size:14px;color:var(--ink2)">pts · 9th</span></span>
+   <span class="d">bat 39.0 · pit 25.0 · Δwk —</span></div>
+ <div class="stat"><b>Season odds</b><span class="v">0.2<span style="font-size:14px">%</span> <span style="font-size:14px;color:var(--ink2)">top-5</span></span>
+   <span class="d">P(win) 0.0% · variance-v3 · testbed year</span></div>
+ <div class="stat"><b>Next lock</b><span class="v warnc">Mon 8/3</span>
+   <span class="d">period 20 · first pitch ~6:40p ET · claims process overnight</span></div>
+ <div class="stat"><b>IP pace</b><span class="v">1203 <span style="font-size:14px;color:var(--ink2)">/ 1300</span></span>
+   <div class="bar"><i style="width:74%"></i></div><span class="d">97 IP streaming budget · floor 1000 safe</span></div>
+ <div class="stat"><b>Alerts 24h</b><span class="v">48</span>
+   <span class="d">latest: Rushing scratched (arm)</span></div>
+</div>
+
+<div class="grid">
+ <div class="panel"><h2>Before Monday's lock</h2>
+  <table>
+   <tr><th></th><th>action</th><th class="why">why</th><th></th></tr>
+   <tr><td><span class="k hazard">hazard</span></td><td><b>Aaron Judge → IL slot</b></td><td class="why">moved to IL tonight — open roster spot before lock</td><td><span class="adopt">seen</span></td></tr>
+   <tr><td><span class="k claim">claim</span></td><td><b>Bubba Chandler</b> (clears 8/3)</td><td class="why">stream K/WQS: proj 8.9K/0.3QS wk20 (2-START)</td><td><span class="adopt">adopt</span></td></tr>
+   <tr><td><span class="k add">add</span></td><td><b>Noah Cameron</b></td><td class="why">hot_arm: CSW +5.5%, velo +1.6 · SL rank 43</td><td><span class="adopt">adopt</span></td></tr>
+   <tr><td><span class="k add">add</span></td><td><b>Javier Assad</b></td><td class="why">hot_arm: CSW +4.9% · SL rank 40</td><td><span class="adopt">adopt</span></td></tr>
+   <tr><td><span class="k trade">trade</span></td><td><b>Chapman → Gashouse</b> for Mize or Joe Ryan</td><td class="why">win-win: us +3.0 / them +1.0 (sell_high on Chapman)</td><td><span class="adopt">adopt</span></td></tr>
+  </table>
+  <div class="note">21 add · 3 claim · 9 trade recs open — showing top by projected impact. "Adopt" only marks the rec; the decision matcher confirms it against the real CBS transaction.</div>
+ </div>
+
+ <div class="panel"><h2>Category battle plan — cheapest points first</h2>
+  <table class="cheap">
+   <tr><th>cat</th><th>pts → proj</th><th>next point costs</th><th>cushion</th></tr>
+   <tr><td>S</td><td>— → +1.0</td><td class="hot">+0.9 saves passes Gashouse</td><td></td></tr>
+   <tr><td>OBP</td><td>— → +1.0</td><td class="hot">1.0 swap passes Young Guns</td><td></td></tr>
+   <tr><td>WHIP</td><td>— → +1.0</td><td>2.6 swaps passes Long Balls</td><td></td></tr>
+   <tr><td>SB</td><td>— → +1.0</td><td>+2.6 bags passes Magnum GI</td><td></td></tr>
+   <tr><td>ERA</td><td>— → +1.0</td><td>3.4 swaps passes Rieken</td><td></td></tr>
+   <tr><td>K</td><td>— → +1.0</td><td>+6.6 K passes Simba's</td><td></td></tr>
+   <tr><td>HR</td><td>8.0 → 7.0</td><td>+10.6 HR passes Long Balls</td><td class="critc">⚠ 0.9 HR above Young Guns</td></tr>
+   <tr><td>R</td><td>9.0 → 9.0</td><td>+14.8 R passes Big Sticks</td><td>26.3 R</td></tr>
+  </table>
+  <div class="note">races-v3 · swap = one roster spot's ROS volume at a realistic edge · defend flags when cushion &lt; 1 swap</div>
+ </div>
+
+ <div class="panel"><h2>Roster pulse</h2>
+  <table>
+   <tr><th>player</th><th>signal</th><th class="why">note</th></tr>
+   <tr><td>Corbin Carroll</td><td class="hot">contact_hot</td><td class="why">EV +1.9 over last 25 BBE</td></tr>
+   <tr><td>Aroldis Chapman</td><td class="warnc">sell_high · velocity_up</td><td class="why">xERA −1.13 vs ERA — trade board has takers</td></tr>
+   <tr><td>Jacob deGrom</td><td class="cold">cold_arm · csw_down</td><td class="why">CSW trending down 2 starts</td></tr>
+   <tr><td>Caleb Durbin</td><td class="cold">contact_cold</td><td class="why">no internal replacement — hold</td></tr>
+   <tr><td>Chase Dollander</td><td class="cold">cold_arm · velo_down</td><td class="why">on IL — stash decision at return</td></tr>
+  </table>
+  <table style="margin-top:10px">
+   <tr><th>IL / minors (6)</th><th>my starts next 7d (3)</th></tr>
+   <tr><td class="why">Judge (IL — new), Jung, W. Smith <span class="hot">buy_low</span>, Dollander, Gil (min), R. Ryan (min)</td>
+       <td class="why">Henderson 8/4 · Cecconi 8/5 · Eury 8/5 — probables fill in daily</td></tr>
+  </table>
+ </div>
+
+ <div class="panel"><h2>The wire</h2>
+  <table>
+   <tr><th>hot free agents</th><th>sig</th><th>SL rank</th></tr>
+   <tr><td>Javier Assad</td><td class="hot">csw_up · hot_arm</td><td>40</td></tr>
+   <tr><td>Noah Cameron</td><td class="hot">velo_up · csw_up · hot_arm</td><td>43</td></tr>
+   <tr><td>Jake Irvin</td><td class="hot">velocity_up</td><td>55</td></tr>
+   <tr><td>Martin Perez</td><td class="hot">velo_up · hot_arm</td><td>56</td></tr>
+  </table>
+  <table style="margin-top:10px">
+   <tr><th>pending waivers</th><th>clears</th></tr>
+   <tr><td>Shane Bieber · Bubba Chandler · Alex Lange</td><td>8/3</td></tr>
+   <tr><td>Arraez · Abbott · Estrada · Weaver · Matthews</td><td>8/4</td></tr>
+  </table>
+  <div class="note">⚠ snipe risk: Like a Nightmare & Maga Doge claim fastest (3× each vs Big Sticks this season)</div>
+ </div>
+
+ <div class="panel"><h2>League activity — last 48h</h2>
+  <table>
+   <tr><th>team</th><th>moves</th><th class="why">read</th></tr>
+   <tr><td>Dawg</td><td>7</td><td class="why">churning hard — 4 IL moves tonight</td></tr>
+   <tr><td>Like a Nightmare</td><td>2</td><td class="why">Nola add (dropped Bieber to waivers)</td></tr>
+   <tr><td>Runtime Terror</td><td>2</td><td class="why">Cecconi, E. Miller (both advised ✓)</td></tr>
+   <tr><td>Maga Doge · Guillotine</td><td>1 · 1</td><td class="why"></td></tr>
+  </table>
+  <div class="note">trade board verdict: 3 win-win 1-for-1s vs Gashouse; wider market: points live on the wire, not in trades</div>
+ </div>
+
+ <div class="panel"><h2>Race detail — projected final</h2>
+  <table>
+   <tr><th>#</th><th>team</th><th>proj pts</th></tr>
+   <tr><td>1</td><td>Rieken Havoc</td><td>85+</td></tr>
+   <tr><td>2–3</td><td>Maga Doge · Young Guns</td><td>…</td></tr>
+   <tr><td class="warnc">9</td><td class="warnc">Runtime Terror</td><td class="warnc">~64 · band p10–p90: 58–69</td></tr>
+  </table>
+  <div class="note">eligibility windows opening: 10 players at 15+ games off-position (Baez SS, Yordan OF, Eldridge 1B…)</div>
+ </div>
+</div>
+</body></html>
