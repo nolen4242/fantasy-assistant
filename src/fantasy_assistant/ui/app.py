@@ -278,7 +278,34 @@ def schema_graph():
     return jsonify({"nodes": nodes, "edges": edges})
 
 
-SCHEMA_HINT = """CRITICAL — relationship directions: ALL data edges point INTO Player:
+SCHEMA_HINT = """NEO4J 5 SYNTAX: pattern expressions cannot introduce new variables —
+WHERE NOT (p)-[:R]->(x:Label) is ILLEGAL. Use EXISTS/COUNT subqueries:
+WHERE NOT EXISTS { MATCH (p)-[:R]->(x:Label) WHERE ... }.
+
+HOT/COLD/TRENDING questions: use Signal nodes — (sig:Signal)-[:ABOUT]->(p:Player) with
+sig.kind (hot_bat, cold_bat, hot_arm, cold_arm, contact_hot, contact_cold, velocity_up,
+velocity_down, csw_up, csw_down, mix_change, buy_low, sell_high, speed_decline),
+sig.strength, sig.as_of, and sig.fa=true meaning the player is a FREE AGENT (unrostered).
+Every Signal carries sig.fa. Do not recompute hotness from raw game lines.
+
+DATA SHAPES:
+- e.kinds on TransactionEvent is a LIST — filter with 'trade' IN e.kinds (CONTAINS is
+  for strings and silently matches nothing on lists).
+- NewsItem has NO published_at/date: use n.first_seen (datetime), n.headline, n.body,
+  n.age_at_capture (e.g. '2h' at capture time); (n:NewsItem)-[:ABOUT]->(p:Player).
+- Position eligibility: (g:PositionGameCount)-[:OF_PLAYER]->(p:Player) with g.position,
+  g.games, g.as_of. 'Close to eligibility' = g.games >= 15 AND g.position NOT IN
+  split(p.cbs_positions, ','). No other filters needed.
+- StandingsSnapshot points all live on the OVERALL relationship: o.total, o.batting,
+  o.pitching, o.rank. There are NO BATTING/PITCHING relationships.
+
+CYPHER CRAFT: matching extra edges MULTIPLIES rows — aggregating an
+event/node property after such a match double-counts it. When summing properties of X,
+collapse first (WITH DISTINCT x) or don't expand X's other edges. Example: fees live on
+TransactionEvent: MATCH (e:TransactionEvent)-[:BY_TEAM]->(t) RETURN t.cbs_name,
+sum(e.fee) — never also match (e)-[:ADDS|DROPS]->() in the same sum.
+
+CRITICAL — relationship directions: ALL data edges point INTO Player:
 (d:PlayerDayLine)-[:OF_PLAYER]->(p:Player), (v:PitcherGameVelo)-[:OF_PLAYER]->(p),
 (b:BatterGameEV)-[:OF_PLAYER]->(p), (st:RosterStint)-[:OF_PLAYER]->(p),
 (sig:Signal)-[:ABOUT]->(p), (e:PoolEntry)-[:OF_PLAYER]->(p), (n:NewsItem)-[:ABOUT]->(p).
@@ -291,13 +318,20 @@ primary_position,woba,xwoba,luck_gap,xera,pit_luck_gap), FantasyTeam(cbs_name,ab
 RosterStint(status[active|il|minors],from_date,to_date NULL=current,acquired_via).
 IMPORTANT: 'rostered/taken' = open stint (to_date IS NULL) with ANY status —
 IL and minors players are still rostered; free agent = NO open stint at all.
-Never filter status='active' when checking availability. Pitchers: primary_position='P' or cbs_positions CONTAINS 'P'-[:ON_TEAM]->FantasyTeam,
+Never filter status='active' when checking availability. Pitchers: primary_position='P' or cbs_positions CONTAINS 'P'.
+Relationship PROPERTIES (invisible in triples): (StandingsSnapshot)-[o:OVERALL]->(FantasyTeam)
+carries o.total (+ o.batting,o.pitching,o.rank on ytd/period scopes) — 'overall standings' =
+MATCH snapshot-[o:OVERALL]->team RETURN team, o.total ORDER BY o.total DESC.
+(Player)-[r:SIMILAR_TO]-(Player) has r.score. (FantasyTeam)-[r:SNIPED_BY]->(FantasyTeam) has r.n.
+(TransactionEvent)-[r:ADDS|DROPS|MOVES]->(Player) has r.action, r.via_waivers, r.trade_from-[:ON_TEAM]->FantasyTeam,
 -[:OF_PLAYER]->Player, LineupAssignment(slot,section[active|bench|injured|minors])-[:IN_PERIOD]->
 ScoringPeriod(number,start_date,end_date), -[:BY_TEAM]->FantasyTeam, -[:FILLED_BY]->Player,
 PlayerDayLine(date,side[bat|pit],hr,r,rbi,sb,k,sv,w,qs,outs,er,ha,bbi,ob? h,bb)-[:OF_PLAYER]->Player,
 TransactionEvent(posted_at,effective_date,fee,kinds)-[:BY_TEAM]->FantasyTeam,-[:ADDS|DROPS|MOVES]->Player,
-DraftPick(round,overall)-[:BY_TEAM]->,-[:SELECTED]->Player, StandingsSnapshot(scope[ytd|period])
--[:FOR_PERIOD]->ScoringPeriod,-[:HAS_LINE]->CategoryStandingLine(value_reported,points,rank)
+DraftPick(round,overall)-[:BY_TEAM]->,-[:SELECTED]->Player, StandingsSnapshot(scope) — THREE scopes: 'period' (one week's stats)
+-[:FOR_PERIOD]->ScoringPeriod; 'cumulative' (standings THROUGH period N)
+-[:THROUGH_PERIOD]->ScoringPeriod; 'ytd' (current). 'Standings after/through
+period N' => scope 'cumulative' + THROUGH_PERIOD. Snapshot-[:HAS_LINE]->CategoryStandingLine(value_reported,points,rank)
 -[:FOR_TEAM]->FantasyTeam,-[:IN_CATEGORY]->Category(code), PitcherGameVelo(date,ff_avg,whiff_pct,csw_pct,mix)-[:OF_PLAYER]->Player,
 BatterGameEV(date,bbe,ev_mean,hardhit,barrels)-[:OF_PLAYER]->Player (per-game contact quality),
  Signal(kind,rationale,as_of,agent)-[:ABOUT]->Player — kind values:
@@ -314,6 +348,96 @@ FORBIDDEN = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|LOAD|CALL
 
 
 _ASK_CACHE: dict = {}
+
+
+_TRIPLES = None
+
+
+def _schema_triples() -> set:
+    """Authoritative (SrcLabel, REL, DstLabel) triples from the live DB —
+    the ground truth the generator is held to."""
+    global _TRIPLES
+    if _TRIPLES is None:
+        with session() as s:
+            rec = s.run("CALL db.schema.visualization()").single()
+            labels = {n.element_id: list(n.labels)[0] for n in rec["nodes"]}
+            _TRIPLES = {(labels[r.start_node.element_id], r.type,
+                         labels[r.end_node.element_id])
+                        for r in rec["relationships"]}
+    return _TRIPLES
+
+
+_ONTOLOGY_CACHE: dict = {}
+
+
+def _triples_text() -> str:
+    """Published ontology composite (graph/ontology.py) — the agent's schema
+    context. Reloaded by mtime; falls back to live triples if not built."""
+    p = Path.home() / ".fantasy-assistant" / "ontology-prompt.txt"
+    try:
+        mt = p.stat().st_mtime
+        if _ONTOLOGY_CACHE.get("mtime") != mt:
+            _ONTOLOGY_CACHE.update(mtime=mt, text=p.read_text())
+        return _ONTOLOGY_CACHE["text"]
+    except OSError:
+        return ("Valid relationship triples (ONLY these exist; direction matters):\n"
+                + "\n".join(f"  (:{a})-[:{r}]->(:{b})"
+                            for a, r, b in sorted(_schema_triples())))
+
+
+_PAT = None
+
+
+def _pattern_violations(cypher: str) -> list[str]:
+    """Find directed patterns whose (src, rel, dst) triple doesn't exist.
+
+    Resolves variable->label bindings across the WHOLE query first, so
+    `MATCH (p:Player) ... MATCH (p)-[:X]->(q)` is checked too — invented
+    relationships used to slip through whenever a node was re-used without
+    its inline label.
+    """
+    import re as _re
+    global _PAT
+    if _PAT is None:
+        _PAT = _re.compile(
+            r"\(\s*(\w*)\s*(?::\s*(\w+))?[^)]*\)\s*(<-|-)\s*\[[^\]]*?:(\w+)[^\]]*\]\s*(->|-)\s*\(\s*(\w*)\s*(?::\s*(\w+))?[^)]*\)")
+    triples = _schema_triples()
+    known_rels = {t[1] for t in triples}
+    # variable -> label from every labeled node anywhere in the query
+    binds = dict(_re.findall(r"\(\s*(\w+)\s*:\s*(\w+)", cypher))
+    out = []
+    # manual scan so chained patterns (a)-[:X]->(t)-[:Y]->(s) yield BOTH hops:
+    # restart the search at the shared middle node, which finditer would skip
+    matches, pos = [], 0
+    while True:
+        m = _PAT.search(cypher, pos)
+        if not m:
+            break
+        matches.append(m)
+        pos = cypher.rfind("(", m.start(), m.end())
+        if pos <= m.start():
+            pos = m.end()
+    for m in matches:
+        va, la, larr, rel, rarr, vb, lb = m.groups()
+        a = la or binds.get(va)
+        b = lb or binds.get(vb)
+        if rel not in known_rels:
+            out.append(f"relationship :{rel} does not exist in the schema")
+            continue
+        if a is None or b is None:
+            continue  # unresolvable endpoint — can't judge
+        if larr == "<-":
+            src, dst = b, a
+        elif rarr == "->":
+            src, dst = a, b
+        else:
+            continue  # undirected — always fine
+        if (src, rel, dst) not in triples:
+            hint = ""
+            if (dst, rel, src) in triples:
+                hint = f" (it points the other way: (:{dst})-[:{rel}]->(:{src}))"
+            out.append(f"(:{src})-[:{rel}]->(:{dst}) is not a valid triple{hint}")
+    return out
 
 
 ASK_ENV = None
@@ -333,12 +457,14 @@ def ask():
     import re as _re
     import subprocess as sp
     q = (request.get_json() or {}).get("q", "").strip()
-    if q in _ASK_CACHE:
-        return jsonify(_ASK_CACHE[q] | {"cached": True})
+    hit = _ASK_CACHE.get(q)
+    if hit and time.time() - hit.get("_at", 0) < 600:  # data changes must propagate
+        return jsonify({k: v for k, v in hit.items() if k != "_at"} | {"cached": True})
     t0 = time.time()
     if not q:
         return jsonify({"error": "empty question"})
     prompt = (f"Translate to ONE read-only Cypher query for Neo4j 5.\n{SCHEMA_HINT}\n"
+              f"{_triples_text()}\n"
               f"Team names: Runtime Terror (is_us:true), Rieken Havoc, Young Guns, Big Sticks, "
               f"Maga Doge, Like a Nightmare, Dawg, Guillotine, Long Balls, Gashouse Gang, "
               f"Magnum GI, Simba's Dublin Green Sox, Trex.\n"
@@ -358,23 +484,23 @@ def ask():
     if not claude:
         return jsonify({"error": "claude CLI not found — install with: "
                         "npm install -g @anthropic-ai/claude-code  (then run `claude` once to sign in)"})
-    try:
+    def _gen(text):
         r = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001",
                     "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}'],
-                   input=prompt, capture_output=True, text=True, timeout=90, env=_ask_env())
-        cypher = r.stdout.strip()
-    except Exception as exc:
-        return jsonify({"error": f"claude call failed: {exc}"})
-    m = _re.search(r"```(?:cypher)?\s*(.*?)```", cypher, _re.S)
-    if m:
-        cypher = m.group(1).strip()
-    if not cypher or FORBIDDEN.search(cypher):
-        return jsonify({"error": "refused (write clause or empty)", "cypher": cypher})
-    if not _re.search(r"\bLIMIT\b", cypher, _re.I):
-        cypher = cypher.rstrip("; \n") + " LIMIT 200"
-    try:
+                   input=text, capture_output=True, text=True, timeout=90, env=_ask_env())
+        c = r.stdout.strip()
+        m = _re.search(r"```(?:cypher)?\s*(.*?)```", c, _re.S)
+        if m:
+            c = m.group(1).strip()
+        if not c or FORBIDDEN.search(c):
+            return None
+        if not _re.search(r"\bLIMIT\b", c, _re.I):
+            c = c.rstrip("; \n") + " LIMIT 200"
+        return c
+
+    def _exec(cy):
         with session() as s:
-            res = s.run(cypher)
+            res = s.run(cy)
             keys = res.keys()
             nodes, edges, rows = {}, [], []
             for rec in res:
@@ -395,39 +521,76 @@ def ask():
                     else:
                         row[k] = str(v) if v is not None else ""
                 rows.append(row)
-    except Exception as exc:
-        return jsonify({"error": f"cypher failed: {exc}", "cypher": cypher})
-    if not rows and not request.args.get("retry"):
+            return keys, rows, nodes, edges
+
+    # ONE pipeline for every candidate: generate -> schema-validate -> execute,
+    # with every defect class (violations, runtime error, duplicate rows, zero
+    # rows) feeding the next generation round. All paths share the same gates.
+    MAX_ROUNDS = 4
+    trail, feedback = [], None
+    cypher = keys = None
+    rows, nodes, edges = [], {}, []
+    best = None  # last executable-but-flawed result, kept as fallback
+    for _round in range(MAX_ROUNDS):
         try:
-            r2 = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001",
-                         "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}'],
-                        input=(f"This Cypher returned ZERO rows:\n{cypher}\n"
-                               f"Original question: {q}\n"
-                               f"{SCHEMA_HINT}\n"
-                               f"Likely cause: over-strict filters (sparse Signal flags, "
-                               f"exact string matches, status filters). Write ONE broader "
-                               f"read-only Cypher that ranks/computes from raw data instead. "
-                               f"ONLY the Cypher."),
-                        capture_output=True, text=True, timeout=90, env=_ask_env())
-            c2 = r2.stdout.strip()
-            m2 = _re.search(r"```(?:cypher)?\s*(.*?)```", c2, _re.S)
-            if m2:
-                c2 = m2.group(1).strip()
-            if c2 and not FORBIDDEN.search(c2):
-                if not _re.search(r"\bLIMIT\b", c2, _re.I):
-                    c2 = c2.rstrip("; \n") + " LIMIT 200"
-                with session() as s2:
-                    res2 = s2.run(c2)
-                    keys = res2.keys()
-                    rows = [{k: (str(rec[k]) if rec[k] is not None else "") for k in keys}
-                            for rec in res2]
-                    cypher = cypher + "\n-- retry (0 rows) -->\n" + c2
-        except Exception:
-            pass
+            cand = _gen(feedback if feedback else prompt)
+        except Exception as exc:
+            return jsonify({"error": f"claude call failed: {exc}"})
+        if not cand:
+            feedback = (f"Your previous reply was empty or contained a write "
+                        f"clause. Question: {q}\n{SCHEMA_HINT}\n{_triples_text()}\n"
+                        f"Output ONLY one read-only Cypher query.")
+            continue
+        trail.append(cand)
+        viols = _pattern_violations(cand)
+        if viols:
+            feedback = (f"Your Cypher has invalid relationship patterns:\n"
+                        + "\n".join(f"- {v}" for v in viols)
+                        + f"\n\nQuery:\n{cand}\n\nQuestion: {q}\n{_triples_text()}\n"
+                        f"Rewrite it correctly. ONLY the Cypher.")
+            continue
+        try:
+            keys, rows, nodes, edges = _exec(cand)
+        except Exception as exc:
+            feedback = (f"This Cypher FAILED on Neo4j 5:\n{cand}\nError: {exc}\n"
+                        f"Question: {q}\n{SCHEMA_HINT}\n{_triples_text()}\n"
+                        f"Fix it (Neo4j 5: use EXISTS {{...}} subqueries, never "
+                        f"pattern expressions introducing variables). ONLY the Cypher.")
+            continue
+        cypher = cand
+        distinct = {tuple(sorted(r.items())) for r in rows}
+        if rows and len(distinct) < len(rows) * 0.75:
+            best = best or (cand, keys, rows, nodes, edges)
+            feedback = (f"This Cypher returned {len(rows)} rows but only "
+                        f"{len(distinct)} distinct — the MATCH multiplies rows "
+                        f"(unused clause or extra expanded edge):\n{cand}\n"
+                        f"Question: {q}\n{SCHEMA_HINT}\n"
+                        f"Rewrite MINIMALLY: match only what the question needs. "
+                        f"ONLY the Cypher.")
+            continue
+        if not rows:
+            best = best or (cand, keys, rows, nodes, edges)
+            feedback = (f"This Cypher returned ZERO rows:\n{cand}\n"
+                        f"Question: {q}\n{SCHEMA_HINT}\n"
+                        f"Likely cause: over-strict filters (sparse flags, exact "
+                        f"string matches) or a wrong property name. Write ONE "
+                        f"broader read-only Cypher that STILL answers the question "
+                        f"— do not degrade to returning some entity you already "
+                        f"matched. ONLY the Cypher.")
+            continue
+        break  # clean result
+    else:
+        if best:  # rounds exhausted: fall back to last executable attempt
+            cypher, keys, rows, nodes, edges = best
+        elif cypher is None:
+            return jsonify({"error": "could not produce a valid query",
+                            "cypher": "\n-- then -->\n".join(trail)})
+    if len(trail) > 1:
+        cypher = "\n-- then -->\n".join(trail[:-1] + [cypher or trail[-1]])
     out = {"cypher": cypher, "columns": list(keys), "rows": rows[:200],
            "graph": {"nodes": list(nodes.values()), "edges": edges},
            "elapsed_s": round(time.time() - t0, 1)}
-    _ASK_CACHE[q] = out
+    _ASK_CACHE[q] = out | {"_at": time.time()}
     if len(_ASK_CACHE) > 100:
         _ASK_CACHE.pop(next(iter(_ASK_CACHE)))
     return jsonify(out)

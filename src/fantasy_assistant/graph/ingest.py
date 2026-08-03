@@ -6,6 +6,7 @@ crosswalk lands (cbs_id attached when the FA pool knows it).
 """
 from __future__ import annotations
 
+import json
 from datetime import datetime
 from pathlib import Path
 
@@ -102,13 +103,19 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
             """,
             run=run_uid, uid=snap_uid, as_of=as_of, pp=_pool_target_period(capture_dir),
         )
+        from fantasy_assistant.graph import identity as _identity
+        _splits = {}
+        if _identity._splits_path().exists():
+            _splits = json.loads(_identity._splits_path().read_text())
         for kind, fname in (("bat", "fa_pool_batters_period20.psv"),
                             ("pit", "fa_pool_pitchers_period20.psv")):
             rows, rejects = parsers.parse_pool(capture_dir / fname, kind)
             batch = [
                 {
                     "entry_uid": f"{snap_uid}:{kind}:{r.cbs_id or parsers.normalize_name(r.player_name)}",
-                    "puid": player_uid(r.player_name),
+                    "puid": _splits.get(
+                        f"{parsers.normalize_name(r.player_name)}|{kind}",
+                        player_uid(r.player_name)),
                     "name": r.player_name,
                     "norm": parsers.normalize_name(r.player_name),
                     "cbs_id": r.cbs_id, "pos": r.positions, "mlb": r.mlb_team,
@@ -123,8 +130,14 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
                 UNWIND $batch AS row
                 MERGE (p:Player {uid:row.puid})
                 ON CREATE SET p.name_full=row.name, p.name_normalized=row.norm
-                SET p.cbs_id=row.cbs_id, p.cbs_positions=row.pos,
-                    p.cbs_mlb_team=row.mlb
+                // a DIFFERENT cbs_id on the same name-keyed node means two
+                // humans share the name — never clobber; identity.audit()
+                // surfaces these for a manual split (see Muncy/Julio Rodriguez)
+                SET p.cbs_id = coalesce(p.cbs_id, row.cbs_id),
+                    p.cbs_positions = CASE WHEN p.cbs_id IS NULL OR p.cbs_id = row.cbs_id
+                                           THEN row.pos ELSE p.cbs_positions END,
+                    p.cbs_mlb_team = CASE WHEN p.cbs_id IS NULL OR p.cbs_id = row.cbs_id
+                                          THEN row.mlb ELSE p.cbs_mlb_team END
                 MERGE (e:PoolEntry {uid:row.entry_uid})
                 SET e.avail=row.avail, e.waiver_clear=row.clear,
                     e.sportsline_rank=row.rank, e.side=row.side,

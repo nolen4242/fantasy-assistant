@@ -63,7 +63,12 @@ class Txn:
 
     def __post_init__(self):
         if not self.uid:
-            self.uid = "cbs:txn:" + uid_hash(self.posted_at, self.team, self.raw)
+            # uid from canonical content, NOT the raw line: capture-format
+            # changes (v1 -> v2 delimiters) must not fork event identity.
+            acts = ";".join(sorted(
+                f"{normalize_name(a.player_name)}:{a.action}" for a in self.actions
+            ))
+            self.uid = "cbs:txn:" + uid_hash(self.posted_at, self.team, acts)
 
 
 _DATE_RE = re.compile(r"^(\d{1,2}/\d{1,2}/\d{2}) (\d{1,2}:\d{2} [AP]M) ET (.+)$")

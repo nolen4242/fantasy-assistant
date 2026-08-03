@@ -88,6 +88,10 @@ def cycle(st: dict, n: int) -> None:
         batted.contact_signals()
         heat = hotstreak.run()
         n_heat = sum(len(v) for v in heat.values())
+        from fantasy_assistant.analytics import graphops
+        graphops.stamp_signal_fa()
+        from fantasy_assistant.graph import ontology
+        ontology.build()  # republish deployed-ontology composite for the ask agent
         if n % (SLOW_EVERY * 4) == 0:
             schedule.refresh()
         news = {"news": 0, "our_roster_fresh": []}

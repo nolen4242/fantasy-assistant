@@ -146,3 +146,22 @@ if __name__ == "__main__":
     print("Kwan-like FAs:", similar_free_agents("steven kwan"))
     print("sniping:", waiver_sniping()[:6])
     print("communities:", manager_communities())
+
+
+def stamp_signal_fa() -> int:
+    """Single source of truth for Signal.fa: unrostered = no open stint.
+
+    Generators must not each own this flag (velocity/mix signals shipped
+    without it and fa-filtered queries silently missed them). Run after any
+    signal generation pass.
+    """
+    with session() as s:
+        return s.run(
+            """
+            MATCH (sig:Signal)-[:ABOUT]->(p:Player)
+            SET sig.fa = NOT EXISTS {
+                MATCH (st:RosterStint)-[:OF_PLAYER]->(p) WHERE st.to_date IS NULL
+            }
+            RETURN count(sig) AS n
+            """
+        ).single()["n"]
