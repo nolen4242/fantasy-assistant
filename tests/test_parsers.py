@@ -11,7 +11,9 @@ import pytest
 
 from fantasy_assistant.capture import parsers
 
-RAW = sorted((Path(__file__).resolve().parents[1] / "data" / "raw").iterdir())[-1]
+# FROZEN golden fixture — a specific committed capture, never "latest":
+# live captures grow (new transactions daily) and would drift the pinned counts
+RAW = Path(__file__).resolve().parents[1] / "data" / "raw" / "2026-08-02"
 
 
 @pytest.fixture(scope="module")
