@@ -1,0 +1,399 @@
+source: https://buecker.baseball.cbssports.com/draft/results
+captured: 2026-08-02 ~12:45 ET
+draft: 2026 - BOB UECKER DRAFT, 3/18/26 7:30 PM ET, 23 rounds, 13 teams
+order note: rounds 1-3 straight (no snake), snake begins round 4 (R4 reversed, alternating after)
+legend: * auto-pick, ** queued pick; format: PICK TEAM PLAYER ELAPSED RANK OVERALL
+
+ROUND 1
+1 Runtime Terror Aaron Judge OF • NYY #42 OF 163
+2 Dawg Shohei Ohtani (Batter) DH • LAD 7 sec #7 U 9
+3 Long Balls Juan Soto OF • NYM 46 sec #15 OF 60
+4 Simba's Dublin Green Sox Bobby Witt SS • KC 52 sec #4 SS 26
+5 Young Guns Elly De La Cruz SS • CIN 8 sec #3 SS 20
+6 Gashouse Gang Tarik Skubal P • LAD 24 sec #19 P 81
+7 Magnum GI Kyle Tucker OF • LAD 44 sec #40 OF 158
+8 Trex Ronald Acuna Jr. OF • ATL 15 sec #55 OF 222
+9 Like a Nightmare Paul Skenes P • PIT 7 sec #22 P 91
+10 Big Sticks Julio Rodriguez OF • SEA 55 sec #19 OF 79
+11 Maga Doge Garrett Crochet P • BOS 15 sec #364 P 762
+12 Guillotine Gunnar Henderson SS • BAL 34 sec #16 SS 118
+13 Rieken Havoc Jose Ramirez 3B • CLE 27 sec #5 3B 94
+ROUND 2
+1 Runtime Terror Corbin Carroll OF • ARI 20 sec #10 OF 45
+2 Dawg Fernando Tatis Jr. 2B,OF • SD 30 sec #6 OF 32
+3 Long Balls Nick Kurtz 1B • ATH 41 sec #7 1B 31
+4 Simba's Dublin Green Sox Cal Raleigh C • SEA 37 sec #28 C 499
+5 Young Guns Kyle Schwarber DH • PHI 60 sec #16 U 21
+6 Gashouse Gang Jazz Chisholm Jr. 2B,3B • NYY 12 sec #4 2B 43
+7 Magnum GI Vladimir Guerrero Jr. 1B • TOR 29 sec #21 1B 161
+8 Trex Mookie Betts SS • LAD 54 sec #24 SS 259
+9 Like a Nightmare Ketel Marte 2B • ARI 30 sec #7 2B 63
+10 Big Sticks Junior Caminero 3B • TB 58 sec #1 3B 13
+11 Maga Doge Yoshinobu Yamamoto P • LAD 47 sec #5 P 19
+12 Guillotine Jackson Chourio OF • MIL 26 sec #22 OF 102
+13 Rieken Havoc Francisco Lindor SS • NYM 27 sec #29 SS 381
+ROUND 3
+1 Runtime Terror Pete Alonso 1B • BAL 51 sec #6 1B 29
+2 Dawg James Wood OF • WAS 54 sec #1 OF 1
+3 Long Balls Cristopher Sanchez P • PHI 60 sec #4 P 16
+4 Simba's Dublin Green Sox Bryan Woo P • SEA 22 sec #74 P 232
+5 Young Guns Matt Olson 1B • ATL 45 sec #2 1B 10
+6 Gashouse Gang William Contreras C • MIL 13 sec #6 C 127
+7 Magnum GI Trea Turner SS • PHI 25 sec #5 SS 40
+8 Trex Pete Crow-Armstrong OF • CHC 53 sec #2 OF 5
+9 Like a Nightmare Manny Machado 3B • SD 24 sec #6 3B 95
+10 Big Sticks Hunter Brown P • HOU 57 sec #206 P 491
+11 Maga Doge Rafael Devers 1B • SF 25 sec #58 U 73
+12 Guillotine Logan Gilbert P • SEA 25 sec #15 P 66
+13 Rieken Havoc Chris Sale P • ATL 39 sec #3 P 15
+ROUND 4
+1 Rieken Havoc Wyatt Langford OF • TEX 2 sec #47 OF 194
+2 Guillotine **Zachary Neto SS • LAA 1 min 2 sec #6 SS 52
+3 Maga Doge Yordan Alvarez DH • HOU 34 sec #3 U 3
+4 Big Sticks Bryce Harper 1B • PHI 43 sec #8 1B 34
+5 Like a Nightmare Freddie Freeman 1B • LAD 21 sec #9 1B 46
+6 Trex Logan Webb P • SF 25 sec #84 P 248
+7 Magnum GI Brent Rooker OF • ATH 41 sec #263 U 442
+8 Gashouse Gang Joe Ryan P • MIN 14 sec #37 P 144
+9 Young Guns Roman Anthony OF • BOS 29 sec #162 OF 818
+10 Simba's Dublin Green Sox Cole Ragans P • KC 10 sec #367 P 767
+11 Long Balls Mason Miller P • SD 8 sec #6 P 24
+12 Dawg Max Fried P • NYY 36 sec #93 P 275
+13 Runtime Terror Jacob deGrom P • TEX 19 sec #44 P 168
+ROUND 5
+1 Runtime Terror Brice Turang 2B • MIL 14 sec #1 2B 17
+2 Dawg Edwin Diaz P • LAD 51 sec #409 P 839
+3 Long Balls Eugenio Suarez 3B • CIN 60 sec #22 3B 368
+4 Simba's Dublin Green Sox Josh Naylor 1B • SEA 1 min 2 sec #18 1B 115
+5 Young Guns Austin Riley 3B • ATL 15 sec #14 3B 210
+6 Gashouse Gang Cade Smith P • CLE 12 sec #20 P 82
+7 Magnum GI Andres Munoz P • SEA 27 sec #59 P 205
+8 Trex George Kirby P • SEA 16 sec #87 P 256
+9 Like a Nightmare Jackson Merrill OF • SD 24 sec #17 OF 65
+10 Big Sticks Jesus Luzardo P • PHI 59 sec #24 P 93
+11 Maga Doge Hunter Goodman C • COL 27 sec #1 C 12
+12 Guillotine **Tyler Soderstrom 1B,OF • ATH 0 sec #34 OF 148
+13 Rieken Havoc Jhoan Duran P • PHI 60 sec #46 P 174
+ROUND 6
+1 Rieken Havoc Cody Bellinger OF • NYY 6 sec #23 OF 106
+2 Guillotine Jarren Duran OF • BOS 12 sec #39 OF 156
+3 Maga Doge C.J. Abrams SS • WAS 39 sec #1 SS 2
+4 Big Sticks Geraldo Perdomo SS • ARI 59 sec #17 SS 123
+5 Like a Nightmare Byron Buxton OF • MIN 21 sec #13 OF 50
+6 Trex Framber Valdez P • DET 19 sec #178 P 437
+7 Magnum GI Tyler Glasnow P • LAD 38 sec #132 P 352
+8 Gashouse Gang Bo Bichette 3B,SS • NYM 40 sec #20 SS 170
+9 Young Guns Riley Greene OF • DET 27 sec #20 OF 83
+10 Simba's Dublin Green Sox Maikel Garcia 3B • KC 52 sec #20 3B 337
+11 Long Balls Freddy Peralta P • NYM 52 sec #248 P 572
+12 Dawg Corey Seager SS • TEX 51 sec #33 SS 445
+13 Runtime Terror **Aroldis Chapman P • BOS 1 min 1 sec #40 P 153
+ROUND 7
+1 Runtime Terror Eury Perez P • MIA 52 sec #54 P 195
+2 Dawg Randy Arozarena OF • SEA 60 sec #4 OF 18
+3 Long Balls Dylan Cease P • TOR 7 sec #8 P 38
+4 Simba's Dublin Green Sox David Bednar P • NYY 53 sec #33 P 134
+5 Young Guns Ben Rice C,1B • NYY 16 sec #1 1B 8
+6 Gashouse Gang **George Springer OF • TOR 1 min 1 sec #155 U 224
+7 Magnum GI Raisel Iglesias P • ATL 27 sec #72 P 230
+8 Trex Vinnie Pasquantino 1B • KC 48 sec #31 1B 350
+9 Like a Nightmare Willy Adames SS • SF 29 sec #18 SS 150
+10 Big Sticks Oneil Cruz OF • PIT 4 min 2 sec #16 OF 62
+11 Maga Doge Michael Harris II OF • ATL 59 sec #7 OF 33
+12 Guillotine Devin Williams P • NYM 15 sec #128 P 341
+13 Rieken Havoc Christian Yelich DH • MIL 31 sec #156 U 225
+ROUND 8
+1 Rieken Havoc Kyle Bradish P • BAL 2 sec #94 P 276
+2 Guillotine Nolan McLean P • NYM 13 sec #27 P 104
+3 Maga Doge Ryan Helsley P • BAL 15 sec #292 P 649
+4 Big Sticks Daniel Palencia P • CHC 55 sec #269 P 617
+5 Like a Nightmare Shohei Ohtani (Pitcher) P • LAD 58 sec #17 P 75
+6 Trex Shea Langeliers C • ATH 45 sec #4 C 70
+7 Magnum GI Sandy Alcantara P • MIA 19 sec #34 P 136
+8 Gashouse Gang **Brandon Nimmo OF • TEX 0 sec #43 OF 181
+9 Young Guns Nick Pivetta P • SD 18 sec #347 P 732
+10 Simba's Dublin Green Sox Kyle Stowers 1B,OF • MIA 33 sec #44 OF 188
+11 Long Balls Chase Burns P • CIN 37 sec #7 P 37
+12 Dawg Kevin Gausman P • TOR 44 sec #117 P 320
+13 Runtime Terror Michael Busch 1B • CHC 56 sec #24 1B 167
+ROUND 9
+1 Runtime Terror Griffin Jax P • TB 44 sec #100 P 285
+2 Dawg Seiya Suzuki OF • CHC 49 sec #50 U 64
+3 Long Balls Luke Keaschall 2B,OF • MIN 47 sec #14 2B 175
+4 Simba's Dublin Green Sox Teoscar Hernandez OF • LAD 37 sec #52 OF 217
+5 Young Guns Zack Wheeler P • PHI 54 sec #9 P 39
+6 Gashouse Gang **Alex Bregman 3B • CHC 0 sec #10 3B 169
+7 Magnum GI *Agustin Ramirez C • MIA 2 min 43 sec #39 C 657
+8 Trex Spencer Strider P • ATL 27 sec #263 P 605
+9 Like a Nightmare Jacob Misiorowski P • MIL 35 sec #1 P 4
+10 Big Sticks Salvador Perez C,1B • KC 43 sec #12 C 267
+11 Maga Doge Jeff Hoffman P • TOR 39 sec #109 P 300
+12 Guillotine Nick Lodolo P • CIN 19 sec #345 P 730
+13 Rieken Havoc Cam Schlittler P • NYY 58 sec #2 P 6
+ROUND 10
+1 Rieken Havoc Luis Robert OF • NYM 15 sec #142 OF 706
+2 Guillotine Ryan Pepiot P • TB 21 sec P
+3 Maga Doge Trevor Story SS • BOS 39 sec #41 SS 626
+4 Big Sticks Josh Hader P • HOU 46 sec #81 P 244
+5 Like a Nightmare Emmet Sheehan P • LAD 48 sec #170 P 425
+6 Trex Trevor Megill P • MIL 25 sec #62 P 209
+7 Magnum GI Andy Pages OF • LAD 12 sec #5 OF 23
+8 Gashouse Gang Colton Cowser OF • BAL 11 sec #86 OF 354
+9 Young Guns Brandon Woodruff P • MIL 17 sec #151 P 392
+10 Simba's Dublin Green Sox **Will Smith C • LAD 60 sec #26 C 475
+11 Long Balls Jo Adell OF • LAA 53 sec #30 OF 131
+12 Dawg Jose Altuve 2B,OF • HOU 41 sec #18 2B 263
+13 Runtime Terror Jakob Marsee OF • MIA 54 sec #59 OF 235
+ROUND 11
+1 Runtime Terror Yandy Diaz 1B • TB 24 sec #34 U 44
+2 Dawg Jeremy Pena SS • HOU 60 sec #13 SS 103
+3 Long Balls Lawrence Butler OF • ATH 11 sec #90 OF 367
+4 Simba's Dublin Green Sox Emilio Pagan P • CIN 33 sec #145 P 376
+5 Young Guns Blake Snell P • LAD 4 sec #615 P 1167
+6 Gashouse Gang Drake Baldwin C • ATL 8 sec #3 C 56
+7 Magnum GI Nathan Eovaldi P • TEX 14 sec #42 P 162
+8 Trex Jackson Holliday 2B • BAL 18 sec #27 2B 417
+9 Like a Nightmare Pete Fairbanks P • MIA 29 sec #154 P 396
+10 Big Sticks Nico Hoerner 2B • CHC 52 sec #13 2B 122
+11 Maga Doge Michael King P • SD 46 sec #56 P 197
+12 Guillotine Jac Caglianone 1B,OF • KC 6 sec #33 OF 146
+13 Rieken Havoc Carlos Estevez P • KC 53 sec #682 P 1290
+ROUND 12
+1 Rieken Havoc Trevor Rogers P • BAL 16 sec #137 P 362
+2 Guillotine Drew Rasmussen P • TB 11 sec #10 P 41
+3 Maga Doge Trey Yesavage P • TOR 16 sec #98 P 283
+4 Big Sticks Brandon Lowe 2B • PIT 58 sec #3 2B 30
+5 Like a Nightmare Ryan Walker P • SF 24 sec #691 P 1300
+6 Trex Matt Chapman 3B • SF 53 sec #19 3B 329
+7 Magnum GI Kris Bubic P • KC 33 sec #229 P 535
+8 Gashouse Gang Christian Walker 1B • HOU 17 sec #13 1B 88
+9 Young Guns Shane McClanahan P • TB 7 sec #38 P 145
+10 Simba's Dublin Green Sox Daulton Varsho OF • TOR 4 min 14 sec #69 OF 280
+11 Long Balls Adley Rutschman C • BAL 9 sec #13 C 296
+12 Dawg **Munetaka Murakami 1B • CHW 0 sec #11 1B 71
+13 Runtime Terror Taylor Ward OF • BAL 37 sec #56 OF 223
+ROUND 13
+1 Runtime Terror Sonny Gray P • BOS 8 sec #16 P 74
+2 Dawg Kenley Jansen P • DET 38 sec #152 P 393
+3 Long Balls Sal Stewart 1B,3B • CIN 45 sec #3 1B 14
+4 Simba's Dublin Green Sox **Spencer Torkelson 1B • DET 1 min 1 sec #22 1B 164
+5 Young Guns Luis Castillo P • CHW 11 sec #319 P 693
+6 Gashouse Gang Brenton Doyle OF • COL 12 sec #125 OF 584
+7 Magnum GI Robbie Ray P • SF 17 sec #39 P 149
+8 Trex Mike Trout OF • LAA 50 sec #66 U 87
+9 Like a Nightmare Steven Kwan OF • CLE 6 sec #79 OF 330
+10 Big Sticks MacKenzie Gore P • TEX 18 sec #106 P 297
+11 Maga Doge Gavin Williams P • CLE 13 sec #11 P 49
+12 Guillotine Noelvi Marte 3B,OF • CIN 13 sec #126 OF 594
+13 Rieken Havoc Bubba Chandler P • PIT 15 sec #265 P 610
+ROUND 14
+1 Rieken Havoc Jonathan Aranda 1B • TB 1 sec #14 1B 89
+2 Guillotine Matt McLain 2B,SS • CIN 9 sec #24 2B 345
+3 Maga Doge Ozzie Albies 2B • ATL 29 sec #5 2B 53
+4 Big Sticks Ranger Suarez P • BOS 3 min 47 sec #76 P 236
+5 Like a Nightmare Edward Cabrera P • CHC 41 sec #257 P 589
+6 Trex Konnor Griffin SS • PIT 22 sec #21 SS 183
+7 Magnum GI Xavier Edwards 2B,SS • MIA 23 sec #9 2B 86
+8 Gashouse Gang Matthew Boyd P • CHC 25 sec #116 P 319
+9 Young Guns Shota Imanaga P • CHC 5 sec #36 P 143
+10 Simba's Dublin Green Sox Ceddanne Rafaela 2B,OF • BOS 8 sec #9 OF 36
+11 Long Balls Jacob Wilson SS • ATH 58 sec #25 SS 268
+12 Dawg Willson Contreras 1B • BOS 42 sec #5 1B 28
+13 Runtime Terror Dennis Santana P • PIT 57 sec #445 P 896
+ROUND 15
+1 Runtime Terror Dansby Swanson SS • CHC 18 sec #8 SS 57
+2 Dawg Bryan Abreu P • HOU 41 sec #235 P 548
+3 Long Balls JJ Wetherholt 2B,SS • STL 46 sec #9 SS 68
+4 Simba's Dublin Green Sox Tanner Bibee P • CLE 35 sec #101 P 286
+5 Young Guns Ian Happ OF • CHC 54 sec #26 OF 125
+6 Gashouse Gang Willi Castro 2B,3B,SS,OF • COL 21 sec #27 OF 126
+7 Magnum GI Joshua Lowe OF • LAA 10 sec #114 OF 515
+8 Trex Seranthony Dominguez P • SEA 7 sec #119 P 322
+9 Like a Nightmare Caleb Durbin 3B • BOS 60 sec #9 3B 147
+10 Big Sticks Robert Garcia P • TEX 38 sec #503 P 981
+11 Maga Doge Chandler Simpson OF • TB 10 sec #29 OF 129
+12 Guillotine Jose Caballero 2B,3B,SS,OF • NYY 40 sec #25 OF 110
+13 Rieken Havoc Kazuma Okamoto 3B • TOR 6 sec #3 3B 69
+ROUND 16
+1 Rieken Havoc Tatsuya Imai P • HOU 2 sec #259 P 592
+2 Guillotine Robert Suarez P • ATL 16 sec #108 P 299
+3 Maga Doge Bryan Reynolds OF • PIT 57 sec #8 OF 35
+4 Big Sticks Wilyer Abreu OF • BOS 37 sec #24 OF 108
+5 Like a Nightmare Cade Horton P • CHC 11 sec #376 P 783
+6 Trex Ivan Herrera C • STL 25 sec #90 U 119
+7 Magnum GI Giancarlo Stanton OF • NYY 24 sec #370 U 686
+8 Gashouse Gang **Kevin McGonigle 3B,SS • DET 1 min 2 sec #7 SS 55
+9 Young Guns Gerrit Cole P • NYY 13 sec #118 P 321
+10 Simba's Dublin Green Sox Aaron Nola P • PHI 39 sec #366 P 766
+11 Long Balls Addison Barger 3B,OF • TOR 52 sec #66 3B 1235
+12 Dawg Carlos Rodon P • NYY 28 sec #176 P 433
+13 Runtime Terror Abner Uribe P • MIL 19 sec #99 P 284
+ROUND 17
+1 Runtime Terror Yainer Diaz C • HOU 36 sec #22 C 407
+2 Dawg Royce Lewis 1B,3B • MIN 48 sec #17 3B 247
+3 Long Balls Jack Leiter P • TEX 55 sec #323 P 697
+4 Simba's Dublin Green Sox Marcus Semien 2B • NYM 23 sec #22 2B 294
+5 Young Guns Trent Grisham OF • NYY 31 sec #49 OF 201
+6 Gashouse Gang Sean Manaea P • NYM 11 sec #249 P 573
+7 Magnum GI Riley O'Brien P • STL 7 sec #51 P 184
+8 Trex Kirby Yates P • LAA 40 sec #293 P 650
+9 Like a Nightmare Dylan Crews OF • WAS 28 sec #73 OF 306
+10 Big Sticks Alec Burleson 1B,OF • STL 34 sec #11 OF 47
+11 Maga Doge Ramon Laureano OF • SD 14 sec #103 OF 443
+12 Guillotine Max Muncy 3B • LAD 6 sec #4 3B 85
+13 Rieken Havoc Jorge Polanco 2B • NYM 15 sec #607 U 1280
+ROUND 18
+1 Rieken Havoc Edwin Uceta P • TB 4 sec P
+2 Guillotine Connelly Early P • WAS 22 sec #83 P 246
+3 Maga Doge Kyle Manzardo 1B • CLE 41 sec #193 U 303
+4 Big Sticks Jack Flaherty P • DET 50 sec #225 P 526
+5 Like a Nightmare Sal Frelick OF • MIL 3 sec #83 OF 340
+6 Trex Shane Baz P • BAL 6 sec #155 P 397
+7 Magnum GI Jake Burger 1B • TEX 11 sec #19 1B 117
+8 Gashouse Gang Casey Mize P • DET 38 sec #57 P 202
+9 Young Guns Shane Bieber P • TOR 4 sec #550 P 1050
+10 Simba's Dublin Green Sox Merrill Kelly P • ARI 25 sec #234 P 546
+11 Long Balls Zac Gallen P • ARI 55 sec #719 P 1329
+12 Dawg Alejandro Kirk C • TOR 36 sec #47 C 744
+13 Runtime Terror Colson Montgomery 3B,SS • CHW 1 min 44 sec #14 SS 107
+ROUND 19
+1 Runtime Terror Andrew Abbott P • CIN 47 sec #169 P 424
+2 Dawg Grant Taylor P • CHW 43 sec #69 P 218
+3 Long Balls Adolis Garcia OF • PHI 31 sec #123 OF 578
+4 Simba's Dublin Green Sox Kerry Carpenter OF • DET 26 sec #87 OF 356
+5 Young Guns Gleyber Torres 2B • DET 7 sec #25 2B 383
+6 Gashouse Gang Garrett Cleavinger P • TB 32 sec #187 P 458
+7 Magnum GI Max Muncy 2B,3B • ATH 9 sec #33 3B 501
+8 Trex Carlos Correa 3B,SS • HOU 15 sec #37 SS 525
+9 Like a Nightmare Bryson Stott 2B • PHI 53 sec #10 2B 109
+10 Big Sticks Victor Scott II OF • STL 47 sec #133 OF 622
+11 Maga Doge Dustin May P • STL 12 sec #136 P 361
+12 Guillotine Francisco Alvarez C • NYM 10 sec #17 C 342
+13 Rieken Havoc Xander Bogaerts SS • SD 40 sec #22 SS 199
+ROUND 20
+1 Rieken Havoc Daylen Lile OF • WAS 5 sec #21 OF 99
+2 Guillotine Justin Steele P • CHC 54 sec P
+3 Maga Doge Ryne Nelson P • ARI 3 sec #271 P 619
+4 Big Sticks Yusei Kikuchi P • LAA 57 sec #617 P 1169
+5 Like a Nightmare Braxton Ashcraft P • PIT 6 sec #26 P 100
+6 Trex Ryan Weathers P • NYY 20 sec #104 P 291
+7 Magnum GI Grant Holmes P • ATL 4 sec #141 P 370
+8 Gashouse Gang Shane Smith P • CHW 17 sec #687 P 1295
+9 Young Guns Isaac Paredes 3B • HOU 16 sec #7 3B 139
+10 Simba's Dublin Green Sox Chad Patrick P • MIL 41 sec #90 P 261
+11 Long Balls Grayson Rodriguez P • LAA 58 sec #705 P 1315
+12 Dawg Joey Cantillo P • CLE 40 sec #95 P 277
+13 Runtime Terror Noah Cameron P • KC 14 sec #173 P 428
+ROUND 21
+1 Runtime Terror Alec Bohm 3B • PHI 2 min 41 sec #15 3B 227
+2 Dawg Jeremiah Estrada P • SD 49 sec #287 P 643
+3 Long Balls Kodai Senga P • NYM 49 sec #727 P 1337
+4 Simba's Dublin Green Sox Joe Musgrove P • SD 1 min 53 sec P
+5 Young Guns Otto Lopez 2B,SS • MIA 47 sec #2 SS 11
+6 Gashouse Gang Jose Ferrer P • SEA 47 sec #181 P 448
+7 Magnum GI Tyler Fitzgerald 2B • LAD 29 sec 2B
+8 Trex Jasson Dominguez OF • NYY 8 sec #106 OF 478
+9 Like a Nightmare Samuel Basallo C • BAL 21 sec #9 C 221
+10 Big Sticks Mickey Moniak OF • COL 6 sec #36 OF 152
+11 Maga Doge Nolan Arenado 3B • ARI 7 sec #8 3B 142
+12 Guillotine Heliot Ramos OF • SF 4 sec #63 OF 262
+13 Rieken Havoc Carter Jensen C • KC 3 sec #8 C 172
+ROUND 22
+1 Rieken Havoc Hunter Greene P • CIN 1 min 15 sec #417 P 850
+2 Guillotine Will Vest P • DET 27 sec #334 P 711
+3 Maga Doge Justin Crawford OF • PHI 25 sec #72 OF 305
+4 Big Sticks Mitch Keller P • PIT 53 sec #191 P 464
+5 Like a Nightmare Bryce Miller P • SEA 45 sec #70 P 228
+6 Trex Nolan Gorman 2B,3B • STL 15 sec #37 3B 590
+7 Magnum GI Reynaldo Lopez P • ATL 4 sec #185 P 456
+8 Gashouse Gang Chris Bassitt P • BAL 4 sec #467 P 928
+9 Young Guns Andrew Painter P • PHI 3 sec #720 P 1330
+10 Simba's Dublin Green Sox Luis Garcia 1B,2B • WAS 29 sec #2 2B 27
+11 Long Balls Jordan Lawlar 3B • ARI 26 sec #42 3B 749
+12 Dawg Brendan Donovan 2B,3B • SEA 34 sec #45 2B 717
+13 Runtime Terror Matthew Liberatore P • STL 3 sec #332 P 709
+ROUND 23
+1 Runtime Terror Roki Sasaki P • LAD 1 sec (15 min 0 sec) #157 P 404
+2 Dawg Andrew Vaughn 1B • MIL 13 sec (14 min 55 sec) #32 1B 382
+3 Long Balls Kevin Ginkel P • ARI 58 sec (16 min 4 sec) #160 P 408
+4 Simba's Dublin Green Sox Dylan Moore 2B,OF • PHI 51 sec (19 min 16 sec) #62 2B 1158
+5 Young Guns Payton Tolle P • BOS 5 sec (8 min 16 sec) #52 P 186
+6 Gashouse Gang Brady Singer P • CIN 4 sec (8 min 5 sec) #212 P 504
+7 Magnum GI *Gabriel Moreno C • ARI 1 min 2 sec (11 min 12 sec) #7 C 138
+8 Trex Paul Sewald P • ARI 14 sec (10 min 20 sec) #110 P 302
+9 Like a Nightmare Luis Severino P • ATH 12 sec (10 min 36 sec) #302 P 664
+10 Big Sticks Taylor Rogers P • MIN 3 sec (23 min 17 sec) #252 P 579
+11 Maga Doge Spencer Steer 1B,OF • CIN 20 sec (10 min 32 sec) #23 1B 166
+12 Guillotine Max Meyer P • MIA 5 sec (7 min 30 sec) #21 P 84
+13 Rieken Havoc Quinn Mathews P • STL 4 sec (8 min 26 sec) #542 P 1042
+
+=== DRAFT ROOM CHAT LOG (2026 draft, 3/18/2026; opponent-intelligence source) ===
+10:16pm Bob McCann: LGBs
+10:15pm Joe Rieken: golf inthe morning
+10:15pm Bobby McCann: Thanks, appreciate it
+10:14pm Joe Rieken: yeah smooth
+10:14pm Rick Barnes: Thanks, Commish; good job as always.
+10:14pm Bob McCann: good job Commish
+10:14pm Rick Barnes: Cool; nice time on the draft
+10:14pm erik rieken: Good luck all
+10:14pm Gerald Balmer: That's a Uecker
+10:14pm Bobby McCann: Good stuff all......TIme of game 2:44
+10:06pm Justin Trexler: I bet Justin P leaves soon
+10:04pm Bobby McCann: Ok looks good....let's finish this up
+10:04pm Bobby McCann: Double check rosters now
+10:04pm Bobby McCann: OK, last 2 rounds are Reserve rounds...any position can be selected
+10:02pm Bobby McCann: Trex - OF
+10:02pm Bobby McCann: Gas - P
+10:01pm Bobby McCann: Gary-MI
+10:01pm Bobby McCann: Neil - MI
+10:00pm Bobby McCann: Tovar and Lopez back in pool
+10:00pm Bobby McCann: Backing up
+10:00pm Bobby McCann: Simba...you have to select a P in Rd 21
+09:56pm Bobby McCann: Backing up...Mickey back in pool....Runtime needs a 3B
+09:54pm Bobby McCann: Last regular round before reserve rounds. Fill your last Active spot in RD21
+09:48pm Bobby McCann: got it, thx
+09:46pm Justin Trexler: CI
+09:42pm Bobby McCann: Stott back in pool....go ahead and pick
+09:42pm Nolen Smith: and spencer schwell
+09:42pm Nolen Smith: take colson mont
+09:42pm Nolen Smith: can i revert that last pick
+09:40pm Bobby McCann: OK, getting close to end before Reserves....pay extra attention to your open slots here at end
+09:36pm Joe Rieken: ci
+09:35pm Andrew Sticht: at CI
+09:24pm Joe Rieken: of
+09:22pm Bobby McCann: Willi MI...got it
+09:21pm Rick Barnes: MI actually
+09:21pm Rick Barnes: 3B please
+09:17pm Bobby McCann: going once.....going twice.....2B...sold
+09:15pm Bobby McCann: Gary - X Edwards at 2b?
+09:12pm Bobby McCann: OK, let's roll
+09:11pm Bob McCann: mine sucks but correct
+09:11pm Rick Barnes: Good to go
+09:11pm erik rieken: mines pretty good
+09:10pm Bobby McCann: Take a look at your rosters and verify they are good
+09:09pm Rick Barnes: can we pause for a sec
+09:08pm Joe Rieken: 3b
+09:03pm Bobby McCann: Live
+09:03pm Bobby McCann: Herrera back in pool
+09:01pm Bobby McCann: Herrera was illegal pick....resuming back to Dawg
+08:51pm Bobby McCann: got it, thx
+08:50pm Rick Barnes: Utility
+08:38pm Bobby McCann: OK, live
+08:37pm Rick Barnes: Same, although I did want Bregman
+08:37pm Joe Rieken: it got me too with soderstrom
+08:37pm Joe Rieken: autopilot
+08:36pm Gary Ihms: That is OK / I did not take anyone
+08:27pm Rick Barnes: Sorry I used girls spelling, Bobby :-)
+08:24pm Bobby McCann: Rick - in OF
+08:23pm Rick Barnes: Bobbie, can you put Springer in OF?
+08:21pm Bobby McCann: Resuming now
+08:16pm Andrew Sticht: can you pause at my pick. was kicked out and didnt know it.
+08:15pm Neil Rieken: catcher
+07:50pm Bobby McCann: position listed in draft room, is not only position sometimes. Have to click player
+07:50pm Bobby McCann: Yes, U only
+07:49pm Neil Rieken: is yordon util only?
+07:44pm Bobby McCann: OK, snake starts at end of this round
+07:39pm Rick Barnes: 3b
+07:35pm Bobby McCann: R1-3
+07:34pm Bobby McCann: reminder - no snake R1-2
+07:13pm Bobby McCann: The roster you draft 3/18 is your roster for period 1 (3/25-3/29). You have roster flexibility with 2 reserve spots (any combo). Players can be moved between active and reserve sports freely until lineup lock for each individual player. No players can be put in IL spot or Minors spot effective Period 1. See league message board for full waivers details. 60 Sec clock…..have picks in queue. Reserve Rounds last 2 rounds (Rounds 22-23). For multiple position players -must declare player's position you are drafting them in when you draft them (click player to see CBS eligible positions). Cannot move during the draft. Post in chat if drafting a multiple position player. Look out for U eligible only players to ensure you have U spot open. Appreciate helping commish out on those players. RULES PASSED ARE 2 RESERVE SLOTS (ANY COMBO) AND GOING BACK TO JUST SAVES. If have a problem, text me: 618-698-2221
