@@ -1,5 +1,14 @@
 # Graph Schema
 
+> **Drift note (2026-08-02):** the deployed graph is authoritative and
+> published in [docs/ONTOLOGY.md](docs/ONTOLOGY.md) (auto-generated from the
+> live DB). Known deltas vs this design doc: `TradeEvent` was never
+> implemented (trades are one-sided `TransactionEvent`s with `trade_from` on
+> the ADDS edge); `NewsItem` carries `first_seen`, not `published_at`;
+> OPENED/CLOSED transaction->stint edges are not materialized (replay derives
+> stints directly).
+
+
 Property-graph schema (Neo4j-flavored labels/edges; portable to Memgraph/FalkorDB —
 engine choice is deliberately deferred). Everything the system knows lives here:
 raw events, authoritative snapshots, and derived beliefs, all with provenance.

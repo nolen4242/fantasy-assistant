@@ -87,7 +87,8 @@ async def collect(days_back: int = 3) -> dict:
     sem = asyncio.Semaphore(CONCURRENCY)
     async with httpx.AsyncClient(timeout=60) as client:
         pks = await _game_pks(client, start, end)
-        results = await asyncio.gather(*(_game_velo(client, pk, sem) for pk in pks))
+        from fantasy_assistant.capture.http import gather_ok
+        results, failed = await gather_ok((_game_velo(client, pk, sem) for pk in pks), "velocity")
     rows = [r for game in results for r in game]
     with session() as s:
         uni = {r["m"]: r["uid"] for r in s.run(

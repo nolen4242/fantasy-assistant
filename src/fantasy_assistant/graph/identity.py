@@ -64,10 +64,6 @@ def audit(verbose: bool = True) -> dict[str, int]:
     return counts
 
 
-if __name__ == "__main__":
-    audit()
-
-
 SPLITS_PATH = None  # resolved lazily to repo data/identity_splits.json
 
 
@@ -93,9 +89,9 @@ def split_pool_collisions(capture_dir=None) -> dict:
     if capture_dir is None:
         capture_dir = sorted((repo / "data" / "raw").iterdir())[-1]
     pool = {}
-    for kind, fname in (("bat", "fa_pool_batters_period20.psv"),
-                        ("pit", "fa_pool_pitchers_period20.psv")):
-        rows, _ = parsers.parse_pool(capture_dir / fname, kind)
+    from fantasy_assistant.graph.ingest import _pool_file
+    for kind, stem in (("bat", "fa_pool_batters"), ("pit", "fa_pool_pitchers")):
+        rows, _ = parsers.parse_pool(_pool_file(capture_dir, stem), kind)
         for r in rows:
             pool[(parsers.normalize_name(r.player_name), kind)] = r
     splits = {}
@@ -142,3 +138,7 @@ def split_pool_collisions(capture_dir=None) -> dict:
             fixed.append((uid, primary, new_uid))
     _splits_path().write_text(json.dumps(splits, indent=1, sort_keys=True))
     return {"split": len(fixed), "registry": len(splits)}
+
+
+if __name__ == "__main__":
+    audit()

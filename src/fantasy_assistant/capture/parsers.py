@@ -202,10 +202,11 @@ def parse_pool(path: Path, kind: str) -> tuple[list[PoolRow], list[str]]:
     cols = BAT_COLS if kind == "bat" else PIT_COLS
     rows: list[PoolRow] = []
     rejects: list[str] = []
-    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+    for line in _strip_stamp(path.read_text(encoding="utf-8", errors="replace")).splitlines():
         parts = line.split("|")
         if len(parts) != 5 + len(cols) or parts[3] in ("Player",):
-            if line.strip() and "Avail|Player" not in line:
+            if (line.strip() and "Avail|Player" not in line
+                    and not line.startswith(("ACTION|", "RANK|"))):
                 rejects.append(line)
             continue
         cbs_id, add_pos, avail_raw, player_cell = parts[0], parts[1], parts[2], parts[3]

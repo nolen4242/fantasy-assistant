@@ -34,11 +34,17 @@ def _capture_run(s, capture_dir: Path, agent: str) -> str:
     s.run(
         """
         MERGE (c:CaptureRun {uid:$uid})
-        SET c.agent=$agent, c.source='cbs', c.capture_date=date($d), c.status='complete'
+        SET c.agent=$agent, c.source='cbs', c.capture_date=date($d), c.status='running'
         """,
         uid=uid, agent=agent, d=capture_dir.name,
     )
     return uid
+
+
+def _capture_done(s, run_uid: str) -> None:
+    """Provenance must not lie: 'complete' only after the writes finished."""
+    s.run("MATCH (c:CaptureRun {uid:$uid}) SET c.status='complete', "
+          "c.completed_at=datetime()", uid=run_uid)
 
 
 def ingest_transactions(capture_dir: Path) -> dict:
@@ -79,6 +85,7 @@ def ingest_transactions(capture_dir: Path) -> dict:
                     waiv=a.action == "Added off Waivers",
                     tcp=a.trade_counterparty,
                 )
+        _capture_done(s, run_uid)
     return {"transactions": len(txns), "rejects": len(rejects)}
 
 
@@ -87,6 +94,25 @@ def _pool_target_period(capture_dir: Path) -> int:
     from fantasy_assistant.graph.refdata import period_for_date
     d = _date.fromisoformat(capture_dir.name)
     return period_for_date(d) + (1 if d.weekday() == 6 else 0)
+
+
+def _pool_file(capture_dir: Path, stem: str) -> Path:
+    """Current runner writes '<stem>.psv'; older captures used a period-
+    suffixed name. Prefer current, fall back to any suffixed legacy file."""
+    plain = capture_dir / f"{stem}.psv"
+    if plain.exists():
+        return plain
+    legacy = sorted(capture_dir.glob(f"{stem}_period*.psv"))
+    if legacy:
+        return legacy[-1]
+    return plain  # let the parser raise on the canonical name
+
+
+def latest_closed_period(capture_dir: Path) -> int:
+    """Standings in a capture reflect play through the LAST CLOSED period."""
+    from datetime import date as _date
+    from fantasy_assistant.graph.refdata import period_for_date
+    return max(1, period_for_date(_date.fromisoformat(capture_dir.name)) - 1)
 
 
 def ingest_pool(capture_dir: Path, as_of: str) -> dict:
@@ -107,9 +133,8 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
         _splits = {}
         if _identity._splits_path().exists():
             _splits = json.loads(_identity._splits_path().read_text())
-        for kind, fname in (("bat", "fa_pool_batters_period20.psv"),
-                            ("pit", "fa_pool_pitchers_period20.psv")):
-            rows, rejects = parsers.parse_pool(capture_dir / fname, kind)
+        for kind, stem in (("bat", "fa_pool_batters"), ("pit", "fa_pool_pitchers")):
+            rows, rejects = parsers.parse_pool(_pool_file(capture_dir, stem), kind)
             batch = [
                 {
                     "entry_uid": f"{snap_uid}:{kind}:{r.cbs_id or parsers.normalize_name(r.player_name)}",
@@ -148,6 +173,7 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
                 snap=snap_uid, batch=batch,
             )
             counts[kind] = {"rows": len(rows), "rejects": len(rejects)}
+        _capture_done(s, run_uid)
     return counts
 
 
@@ -193,6 +219,7 @@ def ingest_standings(capture_dir: Path, as_of: str, period: int) -> dict:
                 snap=snap_uid, tuid=team_uid(row["team"]), b=row["batting"],
                 p=row["pitching"], tot=row["total"],
             )
+        _capture_done(s, run_uid)
     n = sum(len(v) for v in data["categories"].values())
     return {"overall_rows": len(data["overall"]), "category_lines": n}
 
@@ -231,6 +258,7 @@ def ingest_roster_grid(capture_dir: Path, as_of: str) -> dict:
             """,
             snap=snap_uid, batch=batch,
         )
+        _capture_done(s, run_uid)
     return {"entries": len(entries)}
 
 
@@ -238,13 +266,9 @@ def ingest_capture(capture_dir: Path) -> None:
     as_of = datetime.fromisoformat(capture_dir.name + "T12:00:00").isoformat()
     print("transactions:", ingest_transactions(capture_dir))
     print("fa pool:", ingest_pool(capture_dir, as_of))
-    print("standings:", ingest_standings(capture_dir, as_of, period=19))
+    print("standings:", ingest_standings(capture_dir, as_of,
+                                          period=latest_closed_period(capture_dir)))
     print("roster grid:", ingest_roster_grid(capture_dir, as_of))
-
-
-if __name__ == "__main__":
-    import sys
-    ingest_capture(Path(sys.argv[1] if len(sys.argv) > 1 else "data/raw/2026-08-02"))
 
 
 def ingest_draft(capture_dir: Path) -> dict:
@@ -282,6 +306,7 @@ def ingest_draft(capture_dir: Path) -> dict:
             """,
             suid=SEASON_2026, run=run_uid, batch=batch,
         )
+        _capture_done(s, run_uid)
     return {"picks": len(picks), "rejects": len(rejects)}
 
 
@@ -339,6 +364,7 @@ def ingest_byperiod(capture_dir: Path) -> dict:
                     b=row["batting"], p=row["pitching"], tot=row["total"],
                     dif=row["dif"], behind=row["behind"],
                 )
+        _capture_done(s, run_uid)
     return {"periods": len(data), "category_lines": n_lines}
 
 
@@ -375,6 +401,7 @@ def ingest_lineups(capture_dir: Path) -> dict:
                 """,
                 run=run_uid, batch=batch[i:i + 2000],
             )
+        _capture_done(s, run_uid)
     return {"lineup_rows": len(rows), "rejects": len(rejects)}
 
 
@@ -441,3 +468,8 @@ def ingest_news(capture_dir: Path) -> dict:
     return {"news": len(rows), "rejects": len(rejects),
             "fresh": sum(1 for c in created if c["fresh"]),
             "our_roster_fresh": [(x["n"], x["h"]) for x in our_new]}
+
+
+if __name__ == "__main__":
+    import sys
+    ingest_capture(Path(sys.argv[1] if len(sys.argv) > 1 else "data/raw/2026-08-02"))

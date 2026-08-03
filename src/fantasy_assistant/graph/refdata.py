@@ -64,6 +64,17 @@ def period_for_date(d: date) -> int:
     return 2 + (d - date(2026, 3, 30)).days // 7
 
 
+def next_open_period(d: date | None = None) -> int:
+    """The next period whose lineup can still be set.
+
+    Periods run Mon-Sun with locks at Monday's first games: on a Monday the
+    just-started period is still settable; any other day the answer is the
+    following period. Single source of truth — brief and schedule previously
+    disagreed on this."""
+    d = d or date.today()
+    return period_for_date(d) + (0 if d.weekday() == 0 else 1)
+
+
 def load_refdata() -> None:
     with session() as s:
         s.run(

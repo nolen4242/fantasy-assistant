@@ -16,7 +16,7 @@ from pathlib import Path
 
 from fantasy_assistant.analytics import races, valuation, variance
 from fantasy_assistant.graph.client import session
-from fantasy_assistant.graph.refdata import period_for_date
+from fantasy_assistant.graph.refdata import next_open_period, period_for_date
 
 REPORTS = Path(__file__).resolve().parents[3] / "reports"
 
@@ -58,8 +58,14 @@ def ip_pace(capture_date: str) -> dict:
            / "my_team_raw.txt").read_text()
     ytd = _re.search(r"Year to Date\s+([\d.]+)", raw)
     pace = _re.search(r"On Pace\s+([\d.]+)", raw)
-    ip = float(ytd.group(1)) if ytd else 0.0
-    pf = float(pace.group(1)) if pace else 0.0
+    if not (ytd and pace):
+        # a parse miss must read as UNKNOWN, not as 1300 IP of headroom
+        return {"ip_used": None, "pace_final": None, "cap": 1300, "floor": 1000,
+                "headroom_vs_cap": None,
+                "note": "IP block NOT FOUND in my_team_raw.txt — capture format "
+                        "changed? fix parser before trusting IP advice"}
+    ip = float(ytd.group(1))
+    pf = float(pace.group(1))
     return {"ip_used": ip, "pace_final": pf, "cap": 1300, "floor": 1000,
             "headroom_vs_cap": round(1300 - pf, 1),
             "note": "source: CBS my-team Min/Max block"}
@@ -86,7 +92,7 @@ def _games_next() -> dict[str, int]:
 
 def compose(as_of: str | None = None) -> str:
     today = as_of or date.today().isoformat()
-    next_period = period_for_date(date.today()) + (1 if True else 0)
+    next_period = next_open_period(date.today())
     race = races.analyze()
     bat, pit = load_pool(f"cbs:fapool:{today}")
     pace = ip_pace(today)

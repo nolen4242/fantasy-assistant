@@ -102,8 +102,9 @@ async def collect(season: int = 2026) -> dict:
             for sp in splits:
                 lines.append((p["uid"], to_line(p["mlbam"], side, sp)))
 
+    from fantasy_assistant.capture.http import gather_ok
     async with httpx.AsyncClient(timeout=30) as client:
-        await asyncio.gather(*(work(client, p) for p in players))
+        _, failed = await gather_ok((work(client, p) for p in players), "gamelogs")
 
     with session() as s:
         for i in range(0, len(lines), 2000):

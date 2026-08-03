@@ -18,7 +18,7 @@ Regenerate: `.venv/bin/python -m fantasy_assistant.graph.ontology`
 - **Manager** (11) — name:STRING, uid:STRING
 - **MlbStatusEvent** (164) — date:DATE, description:STRING, effective:STRING, first_seen:DATE_TIME, from_team:STRING, source:STRING, to_team:STRING, type_desc:STRING, uid:STRING
 - **ModelEval** (9) — detail:STRING, eval_at:INTEGER, model:STRING, our_err:FLOAT, pts_mae:FLOAT, rank_disp:FLOAT, recorded:DATE_TIME, stand_at:INTEGER, uid:STRING
-- **NewsItem** (78) — age_at_capture:STRING, body:STRING, first_seen:DATE_TIME, headline:STRING, is_new:BOOLEAN, source:STRING, uid:STRING
+- **NewsItem** (87) — age_at_capture:STRING, body:STRING, first_seen:DATE_TIME, headline:STRING, is_new:BOOLEAN, source:STRING, uid:STRING
 - **ParkFactor** (30) — as_of:DATE, factor:FLOAT, games:INTEGER, home_team:STRING, runs_pg:FLOAT, uid:STRING
 - **PitcherGameVelo** (13,430) — csw_pct:FLOAT, date:DATE, ff_avg:FLOAT, game_pk:INTEGER, mix:STRING, n_ff:INTEGER, n_pitches:INTEGER, source:STRING, uid:STRING, whiff_pct:FLOAT
 - **Player** (8,377) — bat_speed:FLOAT, bats:STRING, birthdate:STRING, cbs_id:STRING, cbs_mlb_team:STRING, cbs_positions:STRING, chase_pct:FLOAT, era_sv:FLOAT, feat:LIST, feat_side:STRING, luck_gap:FLOAT, mlb_team_current:STRING, mlbam_id:INTEGER, name_full:STRING, name_normalized:STRING, pit_luck_gap:FLOAT, primary_position:STRING, sprint_speed:FLOAT, squared_up:FLOAT, throws:STRING, uid:STRING, whiff_pct_bat:FLOAT, woba:FLOAT, xba:FLOAT, xera:FLOAT, xslg:FLOAT, xwoba:FLOAT

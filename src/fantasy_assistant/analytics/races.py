@@ -35,6 +35,17 @@ FORM_PERIODS = 4
 FINAL_PERIOD = 27
 
 
+def swap_impact(cat: str, denom_f: float) -> float:
+    """|rate change| from converting one roster spot's ROS volume (SWAP[cat])
+    to a player better by `edge`. Derivations (denom_f in outs / PA):
+      ERA:  dER = edge*vol/9;  drate = 27*dER/outs = 3*vol*edge/outs
+      WHIP: dWH = edge*vol;    drate = 3*dWH/outs  = 3*vol*edge/outs
+      OBP:  dOB = edge*vol;    drate = dOB/pa      = vol*edge/pa
+    """
+    sw = SWAP[cat]
+    return (1.0 if cat == "OBP" else 3.0) * sw["vol"] * sw["edge"] / denom_f
+
+
 def _points_for(values: dict[str, float], direction: str) -> dict[str, float]:
     """Roto points with ties sharing the average of tied ranks."""
     reverse = direction == "higher"
@@ -161,13 +172,7 @@ def analyze() -> dict:
                        if our_idx + 1 < len(ordered) else None)
         else:
             # rate curves in one-roster-spot swap equivalents
-            sw = SWAP[cat]
-            denom_f = rate_denoms.get(us) or 1.0
-            scale = 27.0 if cat == "ERA" else (1.0 if cat == "OBP" else 3.0)
-            impact = sw["vol"] * (3.0 if cat != "OBP" else 1.0) * sw["edge"] * scale / (
-                denom_f * (9.0 if cat == "ERA" else (3.0 if cat == "WHIP" else 1.0)))
-            # impact = |rate change| from converting one roster spot's ROS
-            # volume to a player better by `edge`
+            impact = swap_impact(cat, rate_denoms.get(us) or 1.0)
             for i in range(our_idx - 1, -1, -1):
                 gap = abs(ordered[i][1] - proj[us])
                 curve.append({"pass": ordered[i][0],

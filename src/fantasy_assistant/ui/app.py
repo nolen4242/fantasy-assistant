@@ -15,7 +15,7 @@ from pathlib import Path
 
 from flask import Flask, jsonify, render_template_string, request
 
-from fantasy_assistant.graph.client import session
+from fantasy_assistant.graph.client import read_session, session
 
 app = Flask(__name__)
 REPO = Path(__file__).resolve().parents[3]
@@ -202,6 +202,8 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
    <table id="caps" style="margin-top:10px"></table></div>
 </div>
 <script>
+const esc = x => String(x==null?'':x).replace(/[&<>"']/g,
+  c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const S = s => `<span class="${s}"><span class="dot"></span>${s}</span>`;
 async function refresh(){
  const d = await (await fetch('/api/overview')).json();
@@ -214,7 +216,7 @@ async function refresh(){
   ['Reconcile', S(t.reconcile) + (t.reconcile_detail? ` <span class=ts>${t.reconcile_detail.n} diffs</span>`:'')],
   ['launchd bus', S(t.launchd['com.fantasy-assistant.bus']?'healthy':'down')],
  ].map(([k,v])=>`<div class="tile"><b>${k}</b><span>${v}</span></div>`).join('');
- const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${c}</${h?'th':'td'}>`).join('')}</tr>`;
+ const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${esc(c)}</${h?'th':'td'}>`).join('')}</tr>`;
  document.getElementById('alerts').innerHTML = row(['at','src','event'],1)+
    d.alerts.map(a=>row([a.at.slice(5,16),a.src,a.text.slice(0,90)])).join('');
  document.getElementById('buslog').textContent = d.bus_tail;
@@ -252,7 +254,7 @@ async function ask(){
    headers:{'Content-Type':'application/json'}, body:JSON.stringify({q})})).json();
  if(d.error){ document.getElementById('cy').textContent = d.error + (d.cypher? ' | '+d.cypher:''); return; }
  document.getElementById('cy').textContent = d.cypher + (d.elapsed_s? '  -- '+d.elapsed_s+'s'+(d.cached?' (cached)':''):'');
- const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${c}</${h?'th':'td'}>`).join('')}</tr>`;
+ const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${esc(c)}</${h?'th':'td'}>`).join('')}</tr>`;
  document.getElementById('askrows').innerHTML = row(d.columns,1)+
    d.rows.map(r=>row(d.columns.map(c=>r[c]))).join('');
  new vis.Network(document.getElementById('asknet'),
@@ -499,7 +501,7 @@ def ask():
         return c
 
     def _exec(cy):
-        with session() as s:
+        with read_session() as s:
             res = s.run(cy)
             keys = res.keys()
             nodes, edges, rows = {}, [], []

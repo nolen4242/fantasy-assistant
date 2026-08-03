@@ -27,9 +27,12 @@ STATE = Path.home() / ".fantasy-assistant" / "bus-state.json"
 
 
 def _notify(title: str, text: str) -> None:
+    # feed-derived text goes in via argv, never interpolated into the script
     try:
         subprocess.run(["osascript", "-e",
-                        f'display notification "{text[:180]}" with title "{title}"'],
+                        "on run argv\n"
+                        "display notification (item 1 of argv) with title (item 2 of argv)\n"
+                        "end run", text[:180], title],
                        timeout=10, capture_output=True)
     except Exception:
         pass
@@ -37,7 +40,12 @@ def _notify(title: str, text: str) -> None:
 
 def _load_state() -> dict:
     if STATE.exists():
-        return json.loads(STATE.read_text())
+        try:
+            return json.loads(STATE.read_text())
+        except (json.JSONDecodeError, OSError) as exc:
+            # a corrupt state file must not crash-loop the daemon forever;
+            # resetting only re-notifies recent events once
+            print(f"[bus] state file corrupt ({exc}) — resetting", flush=True)
     return {"seen": []}
 
 

@@ -66,7 +66,12 @@ def project(T: int, model: str, period_vals: dict, comps: dict) -> dict:
     for cat, (kind, _) in meta.items():
         for team in teams:
             hist = period_vals.get((cat, team), {})
-            upto = [hist.get(p, 0.0) for p in range(1, T + 1)]
+            missing = [p for p in range(1, T + 1) if p not in hist]
+            if missing:
+                raise ValueError(
+                    f"backtest inputs incomplete: {cat}/{team} missing periods "
+                    f"{missing} — refusing to score against fabricated zeros")
+            upto = [hist[p] for p in range(1, T + 1)]
             if kind == "counting":
                 cum = sum(upto)
                 pace = (sum(upto[-FORM_PERIODS:]) / FORM_PERIODS if model == "form"

@@ -21,8 +21,9 @@ CBS_TO_MLB_ABBREV = {"CHW": "CWS", "WAS": "WSH"}
 
 
 def fetch_mlb_universe(season: int = 2026) -> list[dict]:
+    from fantasy_assistant.capture.http import get_json
     with httpx.Client(timeout=30) as client:
-        teams = client.get(f"{STATSAPI}/teams", params={"sportId": 1, "season": season}).json()["teams"]
+        teams = get_json(f"{STATSAPI}/teams", params={"sportId": 1, "season": season}, client=client)["teams"]
         team_abbrev = {t["id"]: t["abbreviation"] for t in teams}
         players = client.get(f"{STATSAPI}/sports/1/players", params={"season": season}).json()["people"]
     out = []
@@ -184,11 +185,6 @@ def run_crosswalk(season: int = 2026) -> dict:
     }
 
 
-if __name__ == "__main__":
-    import json
-    print(json.dumps(run_crosswalk(), indent=1, default=str)[:2000])
-
-
 # Hand-verified identity overrides for name collisions the automated passes
 # can't safely resolve (same name, same position type, multiple MLB players).
 # Keyed by (normalized CBS name, CBS MLB team) -> mlbam_id.
@@ -206,3 +202,8 @@ def apply_overrides() -> int:
             n += s.run("MATCH (p:Player {uid:$uid}) SET p += $props RETURN count(p) AS c",
                        uid=uid, props=props).single()["c"]
     return n
+
+
+if __name__ == "__main__":
+    import json
+    print(json.dumps(run_crosswalk(), indent=1, default=str)[:2000])

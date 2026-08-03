@@ -29,5 +29,10 @@ Browser at http://localhost:7474 (auth in `.env`, see `.env.example`).
 
 ## Status
 
-Pre-build. Problem statement and schema settled; first raw telemetry snapshots
-captured 2026-08-02. Next: graph bootstrap + CBS capture pipeline.
+Live (2026-08-02). Full-season graph loaded and reconciled against CBS
+(replay 369/369, recompute 98.1% exact); three autonomous loops running
+(daily 07:07 snapshot routine, 3-min MLB event bus, 30-min signal lane);
+backtest-gated projections; weekly brief with pre-registered recommendations
+scored against outcomes; local ops dashboard with NL→Cypher ask box at
+http://127.0.0.1:8347. Deployed schema: [docs/ONTOLOGY.md](docs/ONTOLOGY.md).
+Tests: `.venv/bin/python -m pytest tests/`.

@@ -11,7 +11,7 @@ UID_LABELS = [
     "PlayerDayLine", "PlayerPeriodLine", "StatcastProfile", "ProbableStart",
     "InjuryEvent", "InjuryStint", "RoleState", "MinorsStint",
     "PositionGameCount", "EligibilityState", "NewsItem", "Signal",
-    "TransactionEvent", "TradeEvent", "RosterStint", "LineupAssignment",
+    "TransactionEvent", "RosterStint", "LineupAssignment",
     "DraftPick", "WaiverOrderSnapshot", "StandingsSnapshot",
     "CategoryStandingLine", "FreeAgentPoolSnapshot", "PoolEntry",
     "AnalyticsRun", "ProjectionSet", "PlayerProjection", "TeamStateAssessment",
@@ -32,7 +32,7 @@ RANGE_INDEXES = [
     ("RosterStint", "to_date"),
     ("StandingsSnapshot", "as_of"),
     ("FreeAgentPoolSnapshot", "as_of"),
-    ("NewsItem", "published_at"),
+    ("NewsItem", "first_seen"),
     ("Recommendation", "created_at"),
 ]
 

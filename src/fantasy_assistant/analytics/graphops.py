@@ -19,26 +19,29 @@ FEATS_PIT = ["k", "sv", "wqs", "er", "outs", "wh"]
 
 
 def write_features() -> dict:
+    from fantasy_assistant.graph.refdata import period_for_date
+    from datetime import date as _date
+    weeks = float(max(1, period_for_date(_date.today()) - 1))
     with session() as s:
         n = s.run(
             """
             MATCH (p:Player) WHERE p.mlbam_id IS NOT NULL
             MATCH (d:PlayerDayLine)-[:OF_PLAYER]->(p)
             WITH p, d.side AS side,
-                 sum(coalesce(d.hr,0))/19.0 AS hr, sum(coalesce(d.r,0))/19.0 AS r,
-                 sum(coalesce(d.rbi,0))/19.0 AS rbi, sum(coalesce(d.sb,0))/19.0 AS sb,
-                 sum(coalesce(d.h,0)+coalesce(d.bb,0)+coalesce(d.hbp,0))/19.0 AS ob,
-                 sum(coalesce(d.ab,0)+coalesce(d.bb,0)+coalesce(d.hbp,0)+coalesce(d.sf,0))/19.0 AS pa,
-                 sum(coalesce(d.k,0))/19.0 AS k, sum(coalesce(d.sv,0))/19.0 AS sv,
-                 sum(coalesce(d.w,0)+coalesce(d.qs,0))/19.0 AS wqs,
-                 sum(coalesce(d.er,0))/19.0 AS er, sum(coalesce(d.outs,0))/19.0 AS outs,
-                 sum(coalesce(d.ha,0)+coalesce(d.bbi,0))/19.0 AS wh
+                 sum(coalesce(d.hr,0))/$wk AS hr, sum(coalesce(d.r,0))/$wk AS r,
+                 sum(coalesce(d.rbi,0))/$wk AS rbi, sum(coalesce(d.sb,0))/$wk AS sb,
+                 sum(coalesce(d.h,0)+coalesce(d.bb,0)+coalesce(d.hbp,0))/$wk AS ob,
+                 sum(coalesce(d.ab,0)+coalesce(d.bb,0)+coalesce(d.hbp,0)+coalesce(d.sf,0))/$wk AS pa,
+                 sum(coalesce(d.k,0))/$wk AS k, sum(coalesce(d.sv,0))/$wk AS sv,
+                 sum(coalesce(d.w,0)+coalesce(d.qs,0))/$wk AS wqs,
+                 sum(coalesce(d.er,0))/$wk AS er, sum(coalesce(d.outs,0))/$wk AS outs,
+                 sum(coalesce(d.ha,0)+coalesce(d.bbi,0))/$wk AS wh
             WITH p, side, [hr, r, rbi, sb, ob/10.0, pa/10.0] AS bat,
                  [k, sv, wqs, er, outs/10.0, wh/5.0] AS pit
             SET p.feat = CASE WHEN side='bat' THEN bat ELSE pit END,
                 p.feat_side = side
             RETURN count(p) AS c
-            """
+            """, wk=weeks,
         ).single()["c"]
     return {"features_written": n}
 

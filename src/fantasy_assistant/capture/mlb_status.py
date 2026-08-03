@@ -34,9 +34,11 @@ def _universe(s) -> dict[int, str]:
 
 
 def fetch_status_events(start: str, end: str) -> dict:
+    from fantasy_assistant.capture.http import get_json
     with httpx.Client(timeout=30) as c:
-        txns = c.get(f"{STATSAPI}/transactions",
-                     params={"startDate": start, "endDate": end}).json().get("transactions", [])
+        txns = get_json(f"{STATSAPI}/transactions",
+                        params={"startDate": start, "endDate": end},
+                        client=c).get("transactions", [])
     with session() as s:
         uni = _universe(s)
         rows, alerts = [], []
@@ -81,10 +83,11 @@ def fetch_status_events(start: str, end: str) -> dict:
 def fetch_probables(days_ahead: int = 8) -> dict:
     start = date.today().isoformat()
     end = (date.today() + timedelta(days=days_ahead)).isoformat()
+    from fantasy_assistant.capture.http import get_json
     with httpx.Client(timeout=30) as c:
-        sched = c.get(f"{STATSAPI}/schedule",
-                      params={"sportId": 1, "startDate": start, "endDate": end,
-                              "hydrate": "probablePitcher"}).json()
+        sched = get_json(f"{STATSAPI}/schedule",
+                         params={"sportId": 1, "startDate": start, "endDate": end,
+                                 "hydrate": "probablePitcher"}, client=c)
     rows = []
     for d in sched.get("dates", []):
         for g in d.get("games", []):

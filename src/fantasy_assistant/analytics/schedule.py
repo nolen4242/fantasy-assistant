@@ -13,7 +13,7 @@ from datetime import date, timedelta
 import httpx
 
 from fantasy_assistant.graph.client import session
-from fantasy_assistant.graph.refdata import period_dates, period_for_date
+from fantasy_assistant.graph.refdata import next_open_period, period_dates, period_for_date
 
 STATSAPI = "https://statsapi.mlb.com/api/v1"
 SEASON_END = date(2026, 9, 27)
@@ -33,7 +33,7 @@ def _schedule(start: date, end: date) -> dict[str, int]:
 
 
 def refresh() -> dict:
-    nxt = period_for_date(date.today()) + (1 if date.today().weekday() == 6 else 0)
+    nxt = next_open_period(date.today())
     p_start, p_end = period_dates(nxt)
     week = _schedule(max(p_start, date.today() + timedelta(days=1)), p_end)
     ros = _schedule(date.today() + timedelta(days=1), SEASON_END)

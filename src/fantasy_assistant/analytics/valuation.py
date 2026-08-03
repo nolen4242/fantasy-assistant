@@ -49,12 +49,19 @@ def roster_players(team: str) -> list[dict]:
         ).data()
 
 
-def ros_weekly(p: dict, weeks_played: int = 19) -> dict:
+def ros_weekly(p: dict, weeks_played: int | None = None) -> dict:
     """Per-week ROS contribution from season-to-date rates."""
+    if weeks_played is None:
+        weeks_played = races.analyze()["as_of_period"]  # memoized upstream
     out = {}
     for k in ("hr", "r", "rbi", "sb", "k", "sv", "wqs", "ob", "pa", "er", "outs", "wh"):
         out[k] = (p.get(k) or 0) / weeks_played
     return out
+
+
+# rate category -> (numerator key, denominator key, display scale)
+RATE_COMP = {"OBP": ("ob", "pa", 1.0), "ERA": ("er", "outs", 27.0),
+             "WHIP": ("wh", "outs", 3.0)}
 
 
 class TradeEvaluator:
@@ -79,39 +86,46 @@ class TradeEvaluator:
                 totals[t] += p
         return totals
 
-    def _adjusted(self, team: str, delta_wk: dict, sign: int) -> dict[str, dict[str, float]]:
-        """Apply +/- player weekly contribution to a team's projections."""
+    def _apply(self, deltas: dict[str, dict[str, float]]) -> dict[str, dict[str, float]]:
+        """Rebuild projections with NET weekly-stat deltas per team.
+
+        All of a team's give/get flows are summed BEFORE the rate rebuild, so
+        adjustments compose (the old sequential-swap version recomputed each
+        rate from scratch, discarding the previous adjustment's volume).
+        Numerators come from actual YTD components (rate_in), never from
+        reconstructing final-rate x YTD-denominator.
+        """
         adj = {cat: dict(vals) for cat, vals in self.base.items()}
-        R = self.remaining
-        for cat, key in COUNT_CATS.items():
-            adj[cat][team] = adj[cat][team] + sign * delta_wk[key] * R
-        ri = self.rate_in.get(team, {"ytd": {}, "recent": {}})
-        y, rec = ri["ytd"], ri["recent"]
-        # rate cats: recompute team final rate with player flow added/removed
-        pa_f = y.get("pa", 0) + (rec.get("pa", 0) + sign * delta_wk["pa"]) * R
-        ob_f = (self.base["OBP"][team] * y.get("pa", 1)) + (rec.get("ob", 0) + sign * delta_wk["ob"]) * R
-        if pa_f:
-            adj["OBP"][team] = round(ob_f / pa_f, 4)
-        outs_f = y.get("outs", 0) + (rec.get("outs", 0) + sign * delta_wk["outs"]) * R
-        er_f = (self.base["ERA"][team] * y.get("outs", 1) / 27) + (rec.get("er", 0) + sign * delta_wk["er"]) * R
-        wh_f = (self.base["WHIP"][team] * y.get("outs", 1) / 3) + (rec.get("wh", 0) + sign * delta_wk["wh"]) * R
-        if outs_f:
-            adj["ERA"][team] = round(er_f * 27 / outs_f, 4)
-            adj["WHIP"][team] = round(wh_f * 3 / outs_f, 4)
+        R, W = self.remaining, races.FORM_WEIGHT
+        latest = self.race["as_of_period"]
+        for team, dw in deltas.items():
+            for cat, key in COUNT_CATS.items():
+                adj[cat][team] = adj[cat][team] + dw.get(key, 0.0) * R
+            ri = self.rate_in.get(team)
+            if not ri:
+                continue
+            y, rec = ri["ytd"], ri["recent"]
+            for cat, (nk, dk, scale) in RATE_COMP.items():
+                num0, den0 = y.get(nk, 0.0), y.get(dk, 0.0)
+                num_wk = W * rec.get(nk, 0.0) + (1 - W) * num0 / latest
+                den_wk = W * rec.get(dk, 0.0) + (1 - W) * den0 / latest
+                num_f = num0 + (num_wk + dw.get(nk, 0.0)) * R
+                den_f = den0 + (den_wk + dw.get(dk, 0.0)) * R
+                if den_f:
+                    adj[cat][team] = round(num_f * scale / den_f, 4)
         return adj
 
     def evaluate_trade(self, our_team: str, their_team: str,
                        give: dict, get: dict) -> dict:
-        base_pts = self._team_points(self.base)
         gw, tw = ros_weekly(give), ros_weekly(get)
-        adj = self.base
-        # our side: -give +get ; their side: +give -get
-        for team, wk, sign in ((our_team, gw, -1), (our_team, tw, +1),
-                               (their_team, gw, +1), (their_team, tw, -1)):
-            self_base, self.base = self.base, adj
-            adj = self._adjusted(team, wk, sign)
-            self.base = self_base
-        new_pts = self._team_points(adj)
+        deltas: dict[str, dict[str, float]] = {our_team: {}, their_team: {}}
+        for k in gw:
+            deltas[our_team][k] = deltas[our_team].get(k, 0.0) + tw[k] - gw[k]
+            deltas[their_team][k] = deltas[their_team].get(k, 0.0) + gw[k] - tw[k]
+        # base recomputes the SAME teams through the same component path (zero
+        # deltas), so the rate-model offset vs races' official anchor cancels
+        base_pts = self._team_points(self._apply({t: {} for t in deltas}))
+        new_pts = self._team_points(self._apply(deltas))
         ip_delta_wk = (tw["outs"] - gw["outs"]) / 3
         return {
             "give": give["name"], "get": get["name"],
@@ -121,7 +135,6 @@ class TradeEvaluator:
         }
 
 
-QUALITY_WEEKS = 19.0
 # per-week stat weights approximating market value of production (both sides
 # on one scale so cross-type trades can be compared)
 QUALITY_W = {"hr": 1.0, "r": 0.45, "rbi": 0.45, "sb": 1.1, "ob": 0.30,
@@ -185,34 +198,15 @@ def scan(counterparties: list[str], top: int = 12) -> list[dict]:
     return out[:top]
 
 
-if __name__ == "__main__":
-    targets = ["Gashouse Gang", "Dawg", "Maga Doge"]
-    print(f"TRADE SCAN [{MODEL_VERSION}] vs {', '.join(targets)} — "
-          f"1-for-1, both sides valued in projected final points\n")
-    board = scan(targets)
-    if not board:
-        print("  (no 1-for-1 clears the acceptance tiers under current "
-              "projections — races-v3 shrinkage compresses category gaps; "
-              "consolidation 2-for-1s are the open lane, queued)")
-    for r in board:
-        flag = " [IP-CAP WATCH]" if r["ip_pace_delta"] > 80 else ""
-        fr = " [FRAGILE]" if r.get("fragile") else ""
-        print(f"  [{r['tier']:<15}] give {r['give']:<20} get {r['get']:<20} "
-              f"({r['with']:<13}) us {r['our_delta']:+.1f} them {r['their_delta']:+.1f} "
-              f"q {r['q_give']:.1f}->{r['q_get']:.1f}{fr}{flag}")
-
-
 def evaluate_2for1(ev: TradeEvaluator, us: str, rival: str,
                    give1: dict, give2: dict, get: dict) -> dict:
-    base_pts = ev._team_points(ev.base)
     g1, g2, tw = ros_weekly(give1), ros_weekly(give2), ros_weekly(get)
-    adj = ev.base
-    for team, wk, sign in ((us, g1, -1), (us, g2, -1), (us, tw, +1),
-                           (rival, g1, +1), (rival, g2, +1), (rival, tw, -1)):
-        keep, ev.base = ev.base, adj
-        adj = ev._adjusted(team, wk, sign)
-        ev.base = keep
-    new_pts = ev._team_points(adj)
+    deltas: dict[str, dict[str, float]] = {us: {}, rival: {}}
+    for k in tw:
+        deltas[us][k] = tw[k] - g1[k] - g2[k]
+        deltas[rival][k] = g1[k] + g2[k] - tw[k]
+    base_pts = ev._team_points(ev._apply({t: {} for t in deltas}))
+    new_pts = ev._team_points(ev._apply(deltas))
     return {"give": f"{give1['name']} + {give2['name']}", "get": get["name"],
             "our_delta": round(new_pts[us] - base_pts[us], 1),
             "their_delta": round(new_pts[rival] - base_pts[rival], 1)}
@@ -251,3 +245,20 @@ def scan_2for1(counterparties: list[str], top: int = 10) -> list[dict]:
             out.append(r)
             seen[r["get"]] = seen.get(r["get"], 0) + 1
     return out[:top]
+
+
+if __name__ == "__main__":
+    targets = ["Gashouse Gang", "Dawg", "Maga Doge"]
+    print(f"TRADE SCAN [{MODEL_VERSION}] vs {', '.join(targets)} — "
+          f"1-for-1, both sides valued in projected final points\n")
+    board = scan(targets)
+    if not board:
+        print("  (no 1-for-1 clears the acceptance tiers under current "
+              "projections — races-v3 shrinkage compresses category gaps; "
+              "consolidation 2-for-1s are the open lane, queued)")
+    for r in board:
+        flag = " [IP-CAP WATCH]" if r["ip_pace_delta"] > 80 else ""
+        fr = " [FRAGILE]" if r.get("fragile") else ""
+        print(f"  [{r['tier']:<15}] give {r['give']:<20} get {r['get']:<20} "
+              f"({r['with']:<13}) us {r['our_delta']:+.1f} them {r['their_delta']:+.1f} "
+              f"q {r['q_give']:.1f}->{r['q_get']:.1f}{fr}{flag}")

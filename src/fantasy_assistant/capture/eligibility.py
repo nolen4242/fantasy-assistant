@@ -55,8 +55,9 @@ async def collect(season: int = 2026) -> dict:
             rows.append({"uid": f"pgc:{p['m']}:{pos}:{season}", "puid": p["uid"],
                          "pos": pos, "games": n, "season": season})
 
+    from fantasy_assistant.capture.http import gather_ok
     async with httpx.AsyncClient(timeout=30) as client:
-        await asyncio.gather(*(one(client, p) for p in bats))
+        _, failed = await gather_ok((one(client, p) for p in bats), "eligibility")
     with session() as s:
         for i in range(0, len(rows), 1000):
             s.run(
