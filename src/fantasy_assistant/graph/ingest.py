@@ -211,15 +211,16 @@ def ingest_standings(capture_dir: Path, as_of: str, period: int) -> dict:
                     uid=f"{snap_uid}:{code}:{team_uid(row['team'])}",
                     value=row["value"], points=row["points"], rank=rank,
                 )
-        for row in data["overall"]:
+        for rank, row in enumerate(
+                sorted(data["overall"], key=lambda r: -r["total"]), start=1):
             s.run(
                 """
                 MATCH (st:StandingsSnapshot {uid:$snap}), (t:FantasyTeam {uid:$tuid})
                 MERGE (st)-[r:OVERALL]->(t)
-                SET r.batting=$b, r.pitching=$p, r.total=$tot
+                SET r.batting=$b, r.pitching=$p, r.total=$tot, r.rank=$rank
                 """,
                 snap=snap_uid, tuid=team_uid(row["team"]), b=row["batting"],
-                p=row["pitching"], tot=row["total"],
+                p=row["pitching"], tot=row["total"], rank=rank,
             )
         _capture_done(s, run_uid)
     n = sum(len(v) for v in data["categories"].values())

@@ -120,6 +120,165 @@ def overview():
     return jsonify(out)
 
 
+_MANAGER_CACHE: dict = {}
+
+
+@app.get("/api/manager")
+def manager():
+    """One aggregation for the Manager view. races.analyze() dominates the
+    cost, so the whole payload is cached for 10 minutes."""
+    now = time.time()
+    if _MANAGER_CACHE.get("at", 0) > now - 600:
+        return jsonify(_MANAGER_CACHE["data"] | {"cached": True})
+    from fantasy_assistant.advisory.brief import ip_pace
+    from fantasy_assistant.analytics import races
+    from fantasy_assistant.graph.refdata import next_open_period, period_dates
+
+    race = races.analyze()
+    us = race["us"]
+    nxt = next_open_period()
+    lock_date = period_dates(nxt)[0].isoformat()
+
+    with session() as s:
+        standings = s.run(
+            "MATCH (st:StandingsSnapshot {scope:'ytd'})-[o:OVERALL]->(t:FantasyTeam) "
+            "WITH st, o, t ORDER BY st.as_of DESC, o.total DESC "
+            "WITH st, collect({team: t.cbs_name, total: o.total, rank: o.rank, "
+            "  batting: o.batting, pitching: o.pitching, us: t.is_us}) AS rows "
+            "RETURN rows LIMIT 1").single()["rows"]
+        sim = s.run(
+            "MATCH (sr:SimResult) RETURN sr.p_win AS pw, sr.p_top5 AS pt, "
+            "sr.pts_p10 AS p10, sr.pts_p50 AS p50, sr.pts_p90 AS p90, "
+            "toString(sr.as_of) AS d ORDER BY sr.as_of DESC LIMIT 1").data()
+        alerts = s.run(
+            "MATCH (a:Alert) WHERE a.raised_at >= datetime() - duration('P1D') "
+            "RETURN count(a) AS n, max(a.raised_at) AS last").single()
+        last_alert = s.run(
+            "MATCH (a:Alert) RETURN a.text AS t ORDER BY a.raised_at DESC LIMIT 1"
+        ).single()
+        recs = s.run(
+            """
+            MATCH (r:Recommendation {status:'open'})<-[:CONTAINS]-(:Brief)
+                  -[:FOR_PERIOD]->(p:ScoringPeriod {number:$n})
+            RETURN r.kind AS kind,
+                   apoc.convert.fromJsonMap(r.action_blob)['player'] AS player,
+                   r.rationale AS why
+            """, n=nxt).data()
+        hazards = s.run(
+            """
+            MATCH (t:FantasyTeam {is_us:true})<-[:ON_TEAM]-(st:RosterStint)
+                  -[:OF_PLAYER]->(p:Player)
+            WHERE st.to_date IS NULL AND st.status IN ['il','minors']
+            RETURN p.name_full AS player, st.status AS status
+            ORDER BY st.status, p.name_full
+            """).data()
+        pulse = s.run(
+            """
+            MATCH (t:FantasyTeam {is_us:true})<-[:ON_TEAM]-(st:RosterStint)
+                  -[:OF_PLAYER]->(p:Player)<-[:ABOUT]-(sig:Signal)
+            WHERE st.to_date IS NULL AND sig.as_of >= date() - duration('P3D')
+            WITH p, collect(DISTINCT sig.kind) AS kinds,
+                 collect(DISTINCT sig.rationale)[0] AS why
+            RETURN p.name_full AS player, kinds, why
+            ORDER BY size(kinds) DESC LIMIT 10
+            """).data()
+        my_starts = s.run(
+            """
+            MATCH (t:FantasyTeam {is_us:true})<-[:ON_TEAM]-(st:RosterStint)
+                  -[:OF_PLAYER]->(p:Player)<-[:OF_PLAYER]-(pr:ProbableStart)
+            WHERE st.to_date IS NULL AND pr.date >= date()
+            RETURN p.name_full AS player, collect(toString(pr.date)) AS dates
+            ORDER BY player
+            """).data()
+        hot_fa = s.run(
+            """
+            MATCH (sig:Signal {fa:true})-[:ABOUT]->(p:Player)
+            WHERE sig.kind IN ['hot_arm','hot_bat','contact_hot','velocity_up','csw_up']
+              AND sig.as_of >= date() - duration('P2D')
+            OPTIONAL MATCH (e:PoolEntry)-[:OF_PLAYER]->(p)
+            WITH p, collect(DISTINCT sig.kind) AS kinds, min(e.sportsline_rank) AS rank
+            WHERE rank < 400
+            RETURN p.name_full AS player, kinds, rank ORDER BY rank LIMIT 10
+            """).data()
+        waivers = s.run(
+            """
+            MATCH (e:PoolEntry)-[:OF_PLAYER]->(p:Player) WHERE e.avail='W'
+            RETURN p.name_full AS player, e.waiver_clear AS clears
+            ORDER BY e.waiver_clear, p.name_full LIMIT 15
+            """).data()
+        snipers = s.run(
+            "MATCH (:FantasyTeam)-[r:SNIPED_BY]->(t:FantasyTeam) "
+            "RETURN t.cbs_name AS team, sum(r.n) AS n ORDER BY n DESC LIMIT 3").data()
+        activity = s.run(
+            """
+            MATCH (e:TransactionEvent)-[:BY_TEAM]->(t:FantasyTeam)
+            WHERE e.posted_at >= datetime() - duration('P2D')
+            OPTIONAL MATCH (e)-[a:ADDS]->(p:Player)
+            WITH t, e, collect(p.name_full) AS adds
+            RETURN t.cbs_name AS team, count(e) AS moves,
+                   [x IN collect(adds) WHERE size(x) > 0 | x[0]][..3] AS recent_adds
+            ORDER BY moves DESC
+            """).data()
+        elig = s.run(
+            """
+            MATCH (g:PositionGameCount)-[:OF_PLAYER]->(p:Player)
+            WHERE g.games >= 15
+              AND NOT g.position IN split(coalesce(p.cbs_positions,''), ',')
+            RETURN p.name_full AS player, g.position AS pos, g.games AS games
+            ORDER BY g.games DESC LIMIT 8
+            """).data()
+
+    battle = []
+    for cat, d in race["categories"].items():
+        first = (d.get("curve_up") or [None])[0]
+        battle.append({
+            "cat": cat, "kind": d["kind"], "ytd_pts": d["ytd_pts"],
+            "proj_pts": d["proj_pts"],
+            "next_point": ({"pass": first["pass"],
+                            "cost": (first.get("swaps") if d["kind"] == "rate"
+                                     else round(first.get("units_needed") or 0, 1)),
+                            "unit": "swaps" if d["kind"] == "rate" else "units",
+                            "pts_gain": first["pts_gain"]} if first else None),
+            "cushion": (round(d["cushion_down"], 2)
+                        if d.get("cushion_down") is not None else None),
+            "cushion_unit": d.get("cushion_unit"),
+        })
+    battle.sort(key=lambda b: (b["next_point"] is None,
+                               (b["next_point"] or {}).get("cost") or 9e9))
+
+    try:
+        ip = ip_pace(sorted(p.name for p in (REPO / "data/raw").iterdir())[-1])
+    except Exception as exc:
+        ip = {"note": f"ip_pace failed: {exc}"}
+
+    kinds_order = {"claim": 0, "add": 1, "drop": 2, "trade_proposal": 3}
+    recs.sort(key=lambda r: kinds_order.get(r["kind"], 9))
+    seen_p: set = set()
+    dedup_recs = []
+    for r in recs:  # one row per player, first (highest-priority) rationale
+        if r["player"] in seen_p:
+            continue
+        seen_p.add(r["player"])
+        dedup_recs.append(r)
+
+    data = {
+        "as_of": datetime.now().isoformat(timespec="seconds"),
+        "us": us, "next_period": nxt, "lock_date": lock_date,
+        "standings": standings,
+        "sim": (sim[0] if sim else None),
+        "alerts": {"n_24h": alerts["n"], "latest": (last_alert or {}).get("t", "")},
+        "ip": ip,
+        "recs": dedup_recs[:14], "hazards": hazards,
+        "battle": battle,
+        "pulse": pulse, "my_starts": my_starts,
+        "hot_fa": hot_fa, "waivers": waivers, "snipers": snipers,
+        "activity": activity, "eligibility": elig,
+        "projected_final": race["projected_final"],
+    }
+    _MANAGER_CACHE.update(at=now, data=data)
+    return jsonify(data)
+
+
 @app.get("/api/graph")
 def graph_sample():
     with session() as s:
@@ -158,6 +317,22 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:14px}
  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto}
  .tiles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+ .tabs{display:flex;gap:2px;margin-bottom:14px}
+ .tab{padding:6px 16px;border-radius:8px 8px 0 0;background:var(--panel);color:var(--ink2);
+   font-size:13px;cursor:pointer;border:1px solid var(--line);border-bottom:none}
+ .tab.on{color:var(--ink);border-bottom:2px solid #4f7ec2}
+ .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:14px}
+ .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+ .stat b{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+ .stat .v{font-size:22px;font-weight:600} .stat .d{font-size:12px;color:var(--ink2);margin-top:2px}
+ .k{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;margin-right:4px}
+ .k.add{background:#1f3d31;color:#7fd6ac}.k.claim{background:#42391f;color:#e8c987}
+ .k.hazard{background:#472a26;color:#f0a396}.k.trade_proposal{background:#3a2a47;color:#cfa3e8}
+ .k.drop{background:#3d2a2a;color:#e8a3a3}
+ .hot{color:var(--good)}.coldc{color:#7fb2e8}.warnc{color:var(--warn)}.critc{color:var(--crit)}
+ .why{color:var(--ink2);font-size:12px}
+ .ipbar{height:6px;border-radius:3px;background:#242c35;position:relative;margin-top:6px}
+ .ipbar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#4f7ec2}
  .tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:130px}
  .tile b{display:block;font-size:11px;color:var(--ink2);text-transform:uppercase;letter-spacing:.05em}
  .tile span{font-size:15px}
@@ -171,7 +346,29 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
  #net{height:420px;background:#0c1013;border-radius:8px}
  .ts{color:var(--muted);font-size:12px}
 </style></head><body>
-<h1>fantasy-assistant · ops <span class="ts" id="gen"></span></h1>
+<h1>fantasy-assistant <span class="ts" id="gen"></span></h1>
+<div class="tabs">
+ <div class="tab on" id="tab-mgr" onclick="showTab('mgr')">Manager</div>
+ <div class="tab" id="tab-ops" onclick="showTab('ops')">Ops</div>
+</div>
+<div id="view-mgr">
+ <div class="strip" id="mstrip"></div>
+ <div class="grid" id="mgrid">
+  <div class="panel"><h2 id="mlock">Before the lock</h2><table id="mrecs"></table>
+    <div class="why" id="mrecnote" style="margin-top:8px"></div></div>
+  <div class="panel"><h2>Category battle plan — cheapest points first</h2>
+    <table id="mbattle"></table><div class="why" style="margin-top:8px">races-v3 · swap = one roster spot's ROS volume at a realistic edge</div></div>
+  <div class="panel"><h2>Roster pulse</h2><table id="mpulse"></table>
+    <table id="mil" style="margin-top:10px"></table></div>
+  <div class="panel"><h2>The wire</h2><table id="mfa"></table>
+    <table id="mwaiv" style="margin-top:10px"></table>
+    <div class="why" id="msnipe" style="margin-top:8px"></div></div>
+  <div class="panel"><h2>League activity — last 48h</h2><table id="mact"></table></div>
+  <div class="panel"><h2>Race detail — projected final</h2><table id="mrace"></table>
+    <table id="melig" style="margin-top:10px"></table></div>
+ </div>
+</div>
+<div id="view-ops" style="display:none">
 <div class="tiles" id="tiles"></div>
 <div class="grid">
  <div class="panel"><h2>Event bus (last alerts)</h2><table id="alerts"></table>
@@ -200,6 +397,7 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
    <div id="net"></div></div>
  <div class="panel"><h2>Graph inventory · capture freshness</h2><table id="labels"></table>
    <table id="caps" style="margin-top:10px"></table></div>
+</div>
 </div>
 <script>
 const esc = x => String(x==null?'':x).replace(/[&<>"']/g,
@@ -261,7 +459,78 @@ async function ask(){
   {nodes:new vis.DataSet(d.graph.nodes), edges:new vis.DataSet(d.graph.edges)}, OPTS);
 }
 document.getElementById('q').addEventListener('keydown', e=>{if(e.key==='Enter')ask()});
-refresh(); net('schema'); setInterval(refresh, 30000);
+function showTab(t){
+ document.getElementById('view-mgr').style.display = t==='mgr'?'':'none';
+ document.getElementById('view-ops').style.display = t==='ops'?'':'none';
+ document.getElementById('tab-mgr').classList.toggle('on', t==='mgr');
+ document.getElementById('tab-ops').classList.toggle('on', t==='ops');
+}
+async function manager(){
+ const d = await (await fetch('/api/manager')).json();
+ const rowh=(cells)=>`<tr>${cells.map(c=>`<th>${esc(c)}</th>`).join('')}</tr>`;
+ const rowr=(cells)=>`<tr>${cells.map(c=>`<td>${c}</td>`).join('')}</tr>`; // pre-escaped cells only
+ const us = (d.standings||[]).find(r=>r.us) || {};
+ const sim = d.sim, ip = d.ip||{};
+ const pct = x => x==null?'—':(100*x).toFixed(1)+'%';
+ const ipw = ip.pace_final? Math.min(100, 100*ip.pace_final/1300).toFixed(0) : 0;
+ document.getElementById('mstrip').innerHTML = [
+  ['Standings', `<span class="v">${esc(us.total??'—')} <span style="font-size:14px;color:var(--ink2)">pts · #${esc(us.rank??'?')}</span></span>`,
+    `bat ${esc(us.batting??'—')} · pit ${esc(us.pitching??'—')}`],
+  ['Season odds', `<span class="v">${pct(sim?.pt)} <span style="font-size:14px;color:var(--ink2)">top-5</span></span>`,
+    sim? `P(win) ${pct(sim.pw)} · pts p10/50/90: ${esc(sim.p10)}/${esc(sim.p50)}/${esc(sim.p90)}` : 'run variance.simulate_and_store()'],
+  ['Next lock', `<span class="v warnc">${esc(d.lock_date)}</span>`, `period ${esc(d.next_period)} · claims process overnight`],
+  ['IP pace', `<span class="v">${esc(ip.pace_final??'?')} <span style="font-size:14px;color:var(--ink2)">/ 1300</span></span><div class="ipbar"><i style="width:${ipw}%"></i></div>`,
+    ip.headroom_vs_cap!=null? `${esc(ip.headroom_vs_cap)} IP streaming budget` : esc(ip.note||'')],
+  ['Alerts 24h', `<span class="v">${esc(d.alerts.n_24h)}</span>`, esc((d.alerts.latest||'').slice(0,48))],
+ ].map(([k,v,sub])=>`<div class="stat"><b>${k}</b>${v}<span class="d">${sub}</span></div>`).join('');
+
+ document.getElementById('mlock').textContent = `Before the lock — ${d.lock_date}`;
+ const hz = d.hazards.map(h=>rowr([`<span class="k hazard">${esc(h.status)}</span>`, `<b>${esc(h.player)}</b>`, `<span class="why">on roster — resolve slot before lock</span>`]));
+ const rc = d.recs.map(r=>rowr([`<span class="k ${esc(r.kind)}">${esc(r.kind.replace('_proposal',''))}</span>`, `<b>${esc(r.player)}</b>`, `<span class="why">${esc((r.why||'').slice(0,90))}</span>`]));
+ document.getElementById('mrecs').innerHTML = rowh(['','action','why']) + hz.join('') + rc.join('');
+ document.getElementById('mrecnote').textContent = `${d.recs.length} open recs shown (deduped by player). Adopt by making the move on CBS — the decision matcher confirms it automatically.`;
+
+ document.getElementById('mbattle').innerHTML = rowh(['cat','pts → proj','next point costs','cushion']) +
+  d.battle.map(b=>{
+   const np = b.next_point;
+   const cost = np? `${np.unit==='swaps'? np.cost+' swaps' : '+'+np.cost+' '+b.cat} passes ${np.pass}` : '(leading)';
+   const thin = b.cushion!=null && b.cushion_unit==='swaps' && b.cushion < 1;
+   const cush = b.cushion==null? '' : (thin? `<span class="critc">⚠ ${b.cushion} ${b.cushion_unit}</span>` : `${b.cushion} ${b.cushion_unit}`);
+   return rowr([`<b>${esc(b.cat)}</b>`, `${esc(b.ytd_pts)} → ${esc(b.proj_pts)}`, esc(cost), cush]);
+  }).join('');
+
+ document.getElementById('mpulse').innerHTML = rowh(['player','signals','why']) +
+  d.pulse.map(x=>{
+   const hotish = x.kinds.some(k=>/hot|_up|buy/.test(k)), coldish = x.kinds.some(k=>/cold|_down/.test(k));
+   const cls = hotish&&!coldish? 'hot' : (coldish? 'coldc' : 'warnc');
+   return rowr([esc(x.player), `<span class="${cls}">${esc(x.kinds.join(' · '))}</span>`, `<span class="why">${esc((x.why||'').slice(0,60))}</span>`]);
+  }).join('');
+ document.getElementById('mil').innerHTML = rowh(['IL / minors','my starts next 7d']) +
+  rowr([`<span class="why">${esc(d.hazards.map(h=>h.player+(h.status==='minors'?' (min)':'')).join(', '))}</span>`,
+        `<span class="why">${esc(d.my_starts.map(m=>m.player+' '+m.dates.map(x=>x.slice(5)).join(',')).join(' · '))}</span>`]);
+
+ document.getElementById('mfa').innerHTML = rowh(['hot free agents','signals','SL rank']) +
+  d.hot_fa.map(x=>rowr([`<b>${esc(x.player)}</b>`, `<span class="hot">${esc(x.kinds.join(' · '))}</span>`, esc(x.rank)])).join('');
+ const bywaiv = {};
+ d.waivers.forEach(w=>{(bywaiv[w.clears]=bywaiv[w.clears]||[]).push(w.player)});
+ document.getElementById('mwaiv').innerHTML = rowh(['pending waivers','clears']) +
+  Object.entries(bywaiv).map(([c,ps])=>rowr([esc(ps.join(' · ')), esc(c)])).join('');
+ document.getElementById('msnipe').textContent = d.snipers.length?
+  '⚠ snipe risk — fastest claimers: ' + d.snipers.map(x=>`${x.team} (${x.n})`).join(', ') : '';
+
+ document.getElementById('mact').innerHTML = rowh(['team','moves','recent adds']) +
+  d.activity.map(a=>rowr([esc(a.team), esc(a.moves), `<span class="why">${esc((a.recent_adds||[]).join(', '))}</span>`])).join('');
+
+ document.getElementById('mrace').innerHTML = rowh(['#','team','proj pts']) +
+  d.projected_final.map(([t,v],i)=>{
+   const cls = t===d.us? ' class="warnc"' : '';
+   return `<tr${cls}><td>${i+1}</td><td>${esc(t)}</td><td>${esc(Math.round(v*10)/10)}</td></tr>`;
+  }).join('');
+ document.getElementById('melig').innerHTML = rowh(['eligibility windows opening']) +
+  rowr([`<span class="why">${esc(d.eligibility.map(e=>`${e.player} ${e.pos} (${e.games}g)`).join(' · '))}</span>`]);
+}
+manager();
+refresh(); net('schema'); setInterval(refresh, 30000); setInterval(manager, 300000);
 </script></body></html>"""
 
 

@@ -199,3 +199,26 @@ def report(r: dict) -> str:
 
 if __name__ == "__main__":
     print(report(simulate()))
+
+
+def simulate_and_store(n_sims: int = N_SIMS) -> dict:
+    """Run the sim and persist a SimResult node — the manager view's odds
+    tile and, over time, the odds trend line."""
+    from datetime import date as _date
+    r = simulate(n_sims)
+    us = r["us"]
+    p10, p50, p90 = r["our_pts_p10_p50_p90"]
+    with session() as s:
+        s.run(
+            """
+            MERGE (sr:SimResult {uid:$uid})
+            SET sr.as_of=date($d), sr.as_of_period=$per, sr.model=$model,
+                sr.n_sims=$n, sr.p_win=$pw, sr.p_top5=$pt, sr.mean_rank=$mr,
+                sr.pts_p10=$p10, sr.pts_p50=$p50, sr.pts_p90=$p90
+            """,
+            uid=f"sim:{_date.today()}", d=_date.today().isoformat(),
+            per=r["as_of_period"], model=r["model"], n=r["n_sims"],
+            pw=round(r["p_win"][us], 4), pt=round(r["p_top5"][us], 4),
+            mr=round(r["mean_rank"][us], 2), p10=p10, p50=p50, p90=p90,
+        )
+    return r
