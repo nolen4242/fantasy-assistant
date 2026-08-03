@@ -26,7 +26,7 @@ flowchart LR
         COLL[async collectors<br/>retries + isolation]
     end
 
-    subgraph graph[Neo4j graph — single source of truth]
+    subgraph GDB[Neo4j graph — single source of truth]
         EV[Immutable events<br/>transactions · draft picks · news]
         SNAP[Authoritative snapshots<br/>standings · rosters · lineups · pool]
         DER[Derived beliefs<br/>stints · signals · projections<br/>similarity · eligibility]
@@ -51,7 +51,7 @@ flowchart LR
     RACE --> BRIEF
     VAL & MC --> BRIEF
     DER --> BRIEF & ALERT
-    BRIEF -- Recommendation nodes --> graph
+    BRIEF -- Recommendation nodes --> GDB
 ```
 
 ### The three autonomous loops
