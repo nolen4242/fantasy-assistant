@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/scoring/standard
-captured: 2026-08-03T09:19:29
+captured: 2026-08-03T10:29:39
 ---
 League
 My Team
@@ -91,7 +91,7 @@ S. Kwan OF  
 	 
 Y. Diaz U  	
 TB @ COL 7:40 CDT
-TB -179, COL +145
+TB -169, COL +140
 	 
 S. Cecconi P   	
  

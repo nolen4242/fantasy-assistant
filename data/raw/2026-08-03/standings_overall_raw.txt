@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-03T09:19:24
+captured: 2026-08-03T10:29:33
 ---
 League
 My Team
@@ -194,7 +194,7 @@ Runtime Terror	110	4.0	0.0
 Like a Nightmare	107	3.0	0.0
 Gashouse Gang	101	2.0	0.0
 Trex	100	1.0	0.0
-STANDINGS UPDATED AS OF 08/03/26 10:19 AM ET
+STANDINGS UPDATED AS OF 08/03/26 11:29 AM ET
 More
 Pick'em Games
 Fantasy Sports

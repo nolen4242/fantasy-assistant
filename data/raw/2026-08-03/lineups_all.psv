@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams/roster-report/<team>/<period>/ (periods 1-20)
-captured: 2026-08-03T09:22:20
+captured: 2026-08-03T10:32:37
 ---
 Like a Nightmare|1|active|C|Samuel Basallo C • BAL
 Like a Nightmare|1|active|1B|Freddie Freeman 1B • LAD
@@ -3939,7 +3939,7 @@ Big Sticks|2|active|P|Mitch Keller P • PIT
 Big Sticks|2|active|P|Jesus Luzardo P • PHI
 Big Sticks|2|active|P|Daniel Palencia P • CHC
 Big Sticks|2|active|P|Cole Sands P • MIN
-Big Sticks|2|active|P|Jose Soriano P • LAA
+Big Sticks|2|active|P|Jose Soriano P • TOR
 Big Sticks|2|active|P|Ranger Suarez P • BOS
 Big Sticks|2|active|P|Robert Garcia P • TEX
 Big Sticks|2|active|P|Yusei Kikuchi P • LAA
@@ -3965,7 +3965,7 @@ Big Sticks|3|active|P|Rhett Lowder P • CIN
 Big Sticks|3|active|P|Jesus Luzardo P • PHI
 Big Sticks|3|active|P|Daniel Palencia P • CHC
 Big Sticks|3|active|P|Cole Sands P • MIN
-Big Sticks|3|active|P|Jose Soriano P • LAA
+Big Sticks|3|active|P|Jose Soriano P • TOR
 Big Sticks|3|active|P|Ranger Suarez P • BOS
 Big Sticks|3|bench|P|Hunter Brown P • HOU
 Big Sticks|3|bench|P|Josh Hader P • HOU
@@ -3989,7 +3989,7 @@ Big Sticks|4|active|P|Mitch Keller P • PIT
 Big Sticks|4|active|P|Joel Kuhnel P • MIL
 Big Sticks|4|active|P|Jesus Luzardo P • PHI
 Big Sticks|4|active|P|Daniel Palencia P • CHC
-Big Sticks|4|active|P|Jose Soriano P • LAA
+Big Sticks|4|active|P|Jose Soriano P • TOR
 Big Sticks|4|active|P|Jeffrey Springs P • ATH
 Big Sticks|4|active|P|Ranger Suarez P • BOS
 Big Sticks|4|bench|P|Hunter Brown P • HOU
@@ -4014,7 +4014,7 @@ Big Sticks|5|active|P|Mitch Keller P • PIT
 Big Sticks|5|active|P|Joel Kuhnel P • MIL
 Big Sticks|5|active|P|Jesus Luzardo P • PHI
 Big Sticks|5|active|P|Landen Roupp P • SF
-Big Sticks|5|active|P|Jose Soriano P • LAA
+Big Sticks|5|active|P|Jose Soriano P • TOR
 Big Sticks|5|active|P|Ranger Suarez P • BOS
 Big Sticks|5|active|P|Jeffrey Springs P • ATH
 Big Sticks|5|bench|P|Hunter Brown P • HOU
@@ -4039,7 +4039,7 @@ Big Sticks|6|active|P|Mitch Keller P • PIT
 Big Sticks|6|active|P|Joel Kuhnel P • MIL
 Big Sticks|6|active|P|Jesus Luzardo P • PHI
 Big Sticks|6|active|P|Landen Roupp P • SF
-Big Sticks|6|active|P|Jose Soriano P • LAA
+Big Sticks|6|active|P|Jose Soriano P • TOR
 Big Sticks|6|active|P|Ranger Suarez P • BOS
 Big Sticks|6|active|P|Ryan Walker P • SF
 Big Sticks|6|active|P|Jeffrey Springs P • ATH
@@ -4065,7 +4065,7 @@ Big Sticks|7|active|P|Jacob Latz P • TEX
 Big Sticks|7|active|P|Jesus Luzardo P • PHI
 Big Sticks|7|active|P|Daniel Palencia P • CHC
 Big Sticks|7|active|P|Landen Roupp P • SF
-Big Sticks|7|active|P|Jose Soriano P • LAA
+Big Sticks|7|active|P|Jose Soriano P • TOR
 Big Sticks|7|active|P|Jeffrey Springs P • ATH
 Big Sticks|7|active|P|Ranger Suarez P • BOS
 Big Sticks|7|active|P|Ryan Walker P • SF
@@ -4090,7 +4090,7 @@ Big Sticks|8|active|P|Jacob Latz P • TEX
 Big Sticks|8|active|P|Jesus Luzardo P • PHI
 Big Sticks|8|active|P|Daniel Palencia P • CHC
 Big Sticks|8|active|P|Landen Roupp P • SF
-Big Sticks|8|active|P|Jose Soriano P • LAA
+Big Sticks|8|active|P|Jose Soriano P • TOR
 Big Sticks|8|active|P|Jeffrey Springs P • ATH
 Big Sticks|8|active|P|Ranger Suarez P • BOS
 Big Sticks|8|active|P|Nathan Eovaldi P • TEX
@@ -4117,7 +4117,7 @@ Big Sticks|9|active|P|Jacob Latz P • TEX
 Big Sticks|9|active|P|Jesus Luzardo P • PHI
 Big Sticks|9|active|P|Daniel Palencia P • CHC
 Big Sticks|9|active|P|Landen Roupp P • SF
-Big Sticks|9|active|P|Jose Soriano P • LAA
+Big Sticks|9|active|P|Jose Soriano P • TOR
 Big Sticks|9|active|P|Ranger Suarez P • BOS
 Big Sticks|9|active|P|Jeffrey Springs P • ATH
 Big Sticks|9|bench|P|Hunter Brown P • HOU
@@ -4144,7 +4144,7 @@ Big Sticks|10|active|P|Jacob Latz P • TEX
 Big Sticks|10|active|P|Jesus Luzardo P • PHI
 Big Sticks|10|active|P|Daniel Palencia P • CHC
 Big Sticks|10|active|P|Landen Roupp P • SF
-Big Sticks|10|active|P|Jose Soriano P • LAA
+Big Sticks|10|active|P|Jose Soriano P • TOR
 Big Sticks|10|active|P|Ranger Suarez P • BOS
 Big Sticks|10|active|P|Noah Cameron P • KC
 Big Sticks|10|bench|P|Hunter Brown P • HOU
@@ -4171,7 +4171,7 @@ Big Sticks|11|active|P|Jacob Latz P • TEX
 Big Sticks|11|active|P|Jesus Luzardo P • PHI
 Big Sticks|11|active|P|Daniel Palencia P • CHC
 Big Sticks|11|active|P|Landen Roupp P • SF
-Big Sticks|11|active|P|Jose Soriano P • LAA
+Big Sticks|11|active|P|Jose Soriano P • TOR
 Big Sticks|11|active|P|Luis Castillo P • CHW
 Big Sticks|11|active|P|Ranger Suarez P • BOS
 Big Sticks|11|bench|P|Hunter Brown P • HOU
@@ -4199,7 +4199,7 @@ Big Sticks|12|active|P|Jesus Luzardo P • PHI
 Big Sticks|12|active|P|Daniel Palencia P • CHC
 Big Sticks|12|active|P|Ranger Suarez P • BOS
 Big Sticks|12|active|P|Luis Castillo P • CHW
-Big Sticks|12|active|P|Jose Soriano P • LAA
+Big Sticks|12|active|P|Jose Soriano P • TOR
 Big Sticks|12|bench|P|Hunter Brown P • HOU
 Big Sticks|13|active|C|Salvador Perez C,1B • KC
 Big Sticks|13|active|1B|Bryce Harper 1B • PHI
@@ -4226,7 +4226,7 @@ Big Sticks|13|active|P|Jesus Luzardo P • PHI
 Big Sticks|13|active|P|Daniel Palencia P • CHC
 Big Sticks|13|active|P|Ranger Suarez P • BOS
 Big Sticks|13|active|P|Luis Castillo P • CHW
-Big Sticks|13|active|P|Jose Soriano P • LAA
+Big Sticks|13|active|P|Jose Soriano P • TOR
 Big Sticks|14|active|C|Salvador Perez C,1B • KC
 Big Sticks|14|active|1B|Bryce Harper 1B • PHI
 Big Sticks|14|active|2B|Brandon Lowe 2B • PIT
@@ -4251,7 +4251,7 @@ Big Sticks|14|active|P|MacKenzie Gore P • TEX
 Big Sticks|14|active|P|Josh Hader P • HOU
 Big Sticks|14|active|P|Jacob Latz P • TEX
 Big Sticks|14|active|P|Jesus Luzardo P • PHI
-Big Sticks|14|active|P|Jose Soriano P • LAA
+Big Sticks|14|active|P|Jose Soriano P • TOR
 Big Sticks|14|active|P|Ranger Suarez P • BOS
 Big Sticks|14|bench|P|Daniel Palencia P • CHC
 Big Sticks|15|active|C|Salvador Perez C,1B • KC
@@ -4280,7 +4280,7 @@ Big Sticks|15|active|P|Jacob Latz P • TEX
 Big Sticks|15|active|P|Jesus Luzardo P • PHI
 Big Sticks|15|active|P|Keider Montero P • DET
 Big Sticks|15|active|P|Ranger Suarez P • BOS
-Big Sticks|15|active|P|Jose Soriano P • LAA
+Big Sticks|15|active|P|Jose Soriano P • TOR
 Big Sticks|15|bench|P|Daniel Palencia P • CHC
 Big Sticks|15|bench|P|Tony Santillan P • CIN
 Big Sticks|16|active|C|Salvador Perez C,1B • KC
@@ -4308,7 +4308,7 @@ Big Sticks|16|active|P|MacKenzie Gore P • TEX
 Big Sticks|16|active|P|Josh Hader P • HOU
 Big Sticks|16|active|P|Jacob Latz P • TEX
 Big Sticks|16|active|P|Jesus Luzardo P • PHI
-Big Sticks|16|active|P|Jose Soriano P • LAA
+Big Sticks|16|active|P|Jose Soriano P • TOR
 Big Sticks|16|active|P|Ranger Suarez P • BOS
 Big Sticks|16|bench|P|Daniel Palencia P • CHC
 Big Sticks|16|bench|P|Tony Santillan P • CIN
@@ -4338,7 +4338,7 @@ Big Sticks|17|active|P|Jacob Latz P • TEX
 Big Sticks|17|active|P|Jesus Luzardo P • PHI
 Big Sticks|17|active|P|Jordan Romano P • COL
 Big Sticks|17|active|P|Landen Roupp P • SF
-Big Sticks|17|active|P|Jose Soriano P • LAA
+Big Sticks|17|active|P|Jose Soriano P • TOR
 Big Sticks|17|bench|P|Daniel Palencia P • CHC
 Big Sticks|17|bench|P|Tony Santillan P • CIN
 Big Sticks|17|bench|P|Ranger Suarez P • BOS
@@ -4367,7 +4367,7 @@ Big Sticks|18|active|P|Jacob Latz P • TEX
 Big Sticks|18|active|P|Jesus Luzardo P • PHI
 Big Sticks|18|active|P|Jordan Romano P • COL
 Big Sticks|18|active|P|Landen Roupp P • SF
-Big Sticks|18|active|P|Jose Soriano P • LAA
+Big Sticks|18|active|P|Jose Soriano P • TOR
 Big Sticks|18|active|P|MacKenzie Gore P • TEX
 Big Sticks|18|bench|P|Daniel Palencia P • CHC
 Big Sticks|18|bench|P|Tony Santillan P • CIN
@@ -4395,7 +4395,7 @@ Big Sticks|19|active|P|Jacob Latz P • TEX
 Big Sticks|19|active|P|Jesus Luzardo P • PHI
 Big Sticks|19|active|P|Jordan Romano P • COL
 Big Sticks|19|active|P|Landen Roupp P • SF
-Big Sticks|19|active|P|Jose Soriano P • LAA
+Big Sticks|19|active|P|Jose Soriano P • TOR
 Big Sticks|19|active|P|Ranger Suarez P • BOS
 Big Sticks|19|active|P|MacKenzie Gore P • TEX
 Big Sticks|19|bench|P|Daniel Palencia P • CHC
@@ -4422,7 +4422,7 @@ Big Sticks|20|active|P|Josh Hader P • HOU
 Big Sticks|20|active|P|Jacob Latz P • TEX
 Big Sticks|20|active|P|Jesus Luzardo P • PHI
 Big Sticks|20|active|P|Jordan Romano P • COL
-Big Sticks|20|active|P|Jose Soriano P • LAA
+Big Sticks|20|active|P|Jose Soriano P • TOR
 Big Sticks|20|active|P|Ranger Suarez P • BOS
 Big Sticks|20|active|P|MacKenzie Gore P • TEX
 Big Sticks|20|active|P|Landen Roupp P • SF
@@ -6583,15 +6583,16 @@ Trex|20|bench|C|Shea Langeliers C • ATH
 Trex|20|bench|1B|Vinnie Pasquantino 1B • KC
 Trex|20|bench|3B|Matt Chapman 3B • SF
 Trex|20|bench|MI|Konnor Griffin SS • PIT
-Trex|20|active|P|Ronel Blanco P • HOU
-Trex|20|active|P|Seranthony Dominguez P • SEA
+Trex|20|active|P|Noah Cameron P • KC
 Trex|20|active|P|George Kirby P • SEA
 Trex|20|active|P|Trevor Megill P • MIL
 Trex|20|active|P|Parker Messick P • CLE
+Trex|20|active|P|Connor Prielipp P • MIN
 Trex|20|active|P|Paul Sewald P • ARI
 Trex|20|active|P|Framber Valdez P • DET
 Trex|20|active|P|Ryan Weathers P • NYY
 Trex|20|active|P|Logan Webb P • SF
+Trex|20|active|P|Ronel Blanco P • HOU
 Trex|20|active|P|Seth Lugo P • KC
 Trex|20|bench|P|Spencer Strider P • ATL
 Runtime Terror|1|active|C|Yainer Diaz C • HOU

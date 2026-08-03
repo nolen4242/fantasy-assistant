@@ -1,7 +1,9 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-03T09:19:18
+captured: 2026-08-03T10:29:28
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
+8/3/26 10:35 AM ET|Trex|Noah Cameron P • KC - Added|8/3/26|$2.50
+8/3/26 10:34 AM ET|Trex|Connor Prielipp P • MIN - Added; Seranthony Dominguez P • SEA - Dropped|8/3/26|$2.50
 8/3/26 9:28 AM ET|Maga Doge|Jung Hoo Lee OF • SF - Dropped|8/3/26|$0.00
 8/2/26 7:49 PM ET|Runtime Terror|Erik Miller P • SF - Added; Garrett Mitchell OF • MIL - Dropped|8/3/26|$2.50
 8/2/26 4:08 PM ET|Runtime Terror|Slade Cecconi P • CLE - Added; Abner Uribe P • MIL - Dropped|8/3/26|$2.50
@@ -481,7 +483,7 @@ DATE|TEAM|PLAYERS|EFFECTIVE|COST
 3/29/26 11:43 PM ET|Magnum GI|Dominic Canzone OF • SEA - Added|3/30/26|$2.50
 3/29/26 11:39 PM ET|Magnum GI|Gabriel Moreno C • ARI - Dropped|3/30/26|$0.00
 3/29/26 10:32 PM ET|Guillotine|Luis Arraez 1B,2B • SF - Added; Will Vest P • DET - Dropped|3/30/26|$2.50
-3/29/26 3:24 PM ET|Big Sticks|Jose Soriano P • LAA - Added; Taylor Rogers P • MIN - Dropped|3/30/26|$2.50
+3/29/26 3:24 PM ET|Big Sticks|Jose Soriano P • TOR - Added; Taylor Rogers P • MIN - Dropped|3/30/26|$2.50
 3/29/26 10:09 AM ET|Dawg|Brandon Marsh OF • PHI - Added|3/30/26|$2.50
 3/29/26 9:55 AM ET|Dawg|Jacob Lopez P • ATH - Added|3/30/26|$2.50
 3/29/26 9:47 AM ET|Dawg|Evan Carter OF • TEX - Added|3/30/26|$2.50
