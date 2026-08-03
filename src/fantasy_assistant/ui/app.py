@@ -250,7 +250,7 @@ async function ask(){
  document.getElementById('cy').textContent = 'thinking…';
  const d = await (await fetch('/api/ask', {method:'POST',
    headers:{'Content-Type':'application/json'}, body:JSON.stringify({q})})).json();
- if(d.error){ document.getElementById('cy').textContent = d.error + (d.cypher? '\n'+d.cypher:''); return; }
+ if(d.error){ document.getElementById('cy').textContent = d.error + (d.cypher? ' | '+d.cypher:''); return; }
  document.getElementById('cy').textContent = d.cypher;
  const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${c}</${h?'th':'td'}>`).join('')}</tr>`;
  document.getElementById('askrows').innerHTML = row(d.columns,1)+
@@ -288,7 +288,11 @@ TransactionEvent(posted_at,effective_date,fee,kinds)-[:BY_TEAM]->FantasyTeam,-[:
 DraftPick(round,overall)-[:BY_TEAM]->,-[:SELECTED]->Player, StandingsSnapshot(scope[ytd|period])
 -[:FOR_PERIOD]->ScoringPeriod,-[:HAS_LINE]->CategoryStandingLine(value_reported,points,rank)
 -[:FOR_TEAM]->FantasyTeam,-[:IN_CATEGORY]->Category(code), PitcherGameVelo(date,ff_avg,whiff_pct,
-csw_pct,mix)-[:OF_PLAYER]->Player, Signal(kind,rationale,as_of,agent)-[:ABOUT]->Player,
+csw_pct,mix)-[:OF_PLAYER]->Player, Signal(kind,rationale,as_of,agent)-[:ABOUT]->Player — kind values:
+velocity_up/velocity_down, csw_up/csw_down, mix_change, contact_hot/contact_cold,
+hot_bat/cold_bat, hot_arm/cold_arm, buy_low/sell_high, speed_decline
+(negative-ish: velocity_down, csw_down, contact_cold, cold_bat, cold_arm,
+speed_decline, sell_high; positive-ish: the counterparts),
 ProbableStart(date)-[:OF_PLAYER]->Player, Alert(raised_at,source,text), NewsItem(headline,body)
 -[:ABOUT]->Player, PoolEntry(avail,sportsline_rank,side)-[:OF_PLAYER]->Player,
 MlbStatusEvent(type_desc,date,description)-[:OF_PLAYER]->Player, Recommendation(kind,status,rationale),
