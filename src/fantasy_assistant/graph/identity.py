@@ -20,6 +20,19 @@ _CHECKS = {
           AND NOT any(u IN us WHERE u CONTAINS 'ohtani')
         RETURN k AS key, us AS detail
     """,
+    # a temporal property stored as STRING poisons every date comparison
+    # against it (NULL, silently) — found when 25% of lineup rows appeared
+    # to have no covering stint
+    "stint_dates_not_date_typed": """
+        MATCH (st:RosterStint)
+        WHERE (st.from_date IS NOT NULL
+               AND apoc.meta.cypher.type(st.from_date) <> 'DATE')
+           OR (st.to_date IS NOT NULL
+               AND apoc.meta.cypher.type(st.to_date) <> 'DATE')
+        RETURN st.uid AS key,
+               'from:' + apoc.meta.cypher.type(st.from_date) + ' to:'
+               + coalesce(apoc.meta.cypher.type(st.to_date), 'NULL') AS detail
+    """,
     # pool entries with DIFFERENT embedded cbs ids on one node = two humans
     # sharing a name within one side (Julio Rodriguez SEA CF vs DET C)
     "multi_cbsid_pool_same_node": """

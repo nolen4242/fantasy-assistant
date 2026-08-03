@@ -215,7 +215,7 @@ def _write(state: dict, result: dict, capture_dir: Path) -> None:
             ON CREATE SET p.name_full = row.name,
                           p.name_normalized = row.norm
             MERGE (st:RosterStint {uid: row.uid})
-            SET st.from_date = date(row.from_date), st.to_date = row.to_date,
+            SET st.from_date = date(row.from_date), st.to_date = date(row.to_date),
                 st.status = row.status, st.acquired_via = row.via,
                 st.ended_by = row.ended_by, st.derived = true
             MERGE (st)-[:ON_TEAM]->(t)
@@ -230,6 +230,24 @@ def _write(state: dict, result: dict, capture_dir: Path) -> None:
                 "ended_by": st.get("ended_by"),
             } for st in all_stints],
         )
+        # garbage-collect stints this replay no longer derives — stale stints
+        # from older (buggier) parses otherwise live forever (found: ghost
+        # players like 'Nightmare Shohei Ohtani' from a pre-v2 trade parse)
+        derived_uids = [f"stint:{team_uid(st['team'])}:{st['puid']}:{st['from_date']}"
+                        for st in all_stints]
+        gone = s.run(
+            """
+            MATCH (st:RosterStint) WHERE NOT st.uid IN $uids
+            DETACH DELETE st RETURN count(*) AS n
+            """, uids=derived_uids).single()["n"]
+        if gone:
+            print(f"  replay GC: removed {gone} stale stints")
+        orphans = s.run(
+            """
+            MATCH (p:Player) WHERE NOT (p)--() DETACH DELETE p RETURN count(*) AS n
+            """).single()["n"]
+        if orphans:
+            print(f"  replay GC: removed {orphans} orphaned player nodes")
         run_uid = f"recon:{capture_dir.name}:roster"
         s.run("MATCH (:ReconciliationRun {uid:$u})-[:FOUND]->(d:Discrepancy) "
               "DETACH DELETE d", u=run_uid)

@@ -508,7 +508,7 @@ async function manager(){
   lp.rows.map(r=>{
    const cls = r.player==='(EMPTY)'? ' class="critc"' : (r.change? ' style="background:#1f2733"' : '');
    const benchTag = r.slot==='bench';
-   return `<tr${cls}><td>${benchTag?'<span class="why">bench</span>':`<b>${esc(r.slot)}</b>`}</td><td>${esc(r.player)}</td><td class="why">${esc(r.pos||'')}</td><td>${r.val==null?'':esc(r.val)}</td><td class="why">${r.change? esc(r.was)+' →' : ''}</td></tr>`;
+   return `<tr${cls}><td>${benchTag?'<span class="why">bench</span>':`<b>${esc(r.slot)}</b>`}</td><td>${esc(r.player)}${r.idle?' <span class="critc" title="no MLB games in 14 days">⚠ idle</span>':''}</td><td class="why">${esc(r.pos||'')}</td><td>${r.val==null?'':esc(r.val)}</td><td class="why">${r.change? esc(r.was)+' →' : ''}</td></tr>`;
   }).join('');
  const hz = d.hazards.map(h=>rowr([`<span class="k hazard">${esc(h.status)}</span>`, `<b>${esc(h.player)}</b>`, `<span class="why">IL/minors slot — check activation dates</span>`]));
  const wc = d.wire_recs.map(r=>rowr([`<span class="k ${esc(r.kind)}">${esc(r.kind)}</span>`, `<b>${esc(r.player)}</b>`, `<span class="why">${esc((r.why||'').slice(0,90))}</span>`]));

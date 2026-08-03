@@ -45,6 +45,9 @@ CURATED = """SEMANTICS (curated, verified):
 - Signal kinds: hot_bat cold_bat hot_arm cold_arm contact_hot contact_cold
   velocity_up velocity_down csw_up csw_down mix_change buy_low sell_high
   speed_decline. sig.strength, sig.as_of, sig.rationale, sig.results_based.
+- CategoryStandingLine.rank is the CBS report ROW ORDER, not competition rank:
+  tied teams share averaged points (a 3-way tie for 5th gives each 8.0 pts at
+  rows 5/6/7). points is authoritative; rank+points=14 does NOT hold on ties.
 - Rel props: OVERALL{total,batting,pitching,rank} SIMILAR_TO{score} SNIPED_BY{n}
   ADDS/DROPS/MOVES{action,via_waivers,trade_from}.
 - Teams: Runtime Terror (is_us:true), Rieken Havoc, Young Guns, Big Sticks,

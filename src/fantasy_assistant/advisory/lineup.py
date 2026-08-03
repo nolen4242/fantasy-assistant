@@ -1,6 +1,6 @@
 """Recommended lineup for the next lock: which slot each player should fill.
 
-Greedy assignment over the league's 21-slot template (C/1B/2B/3B/SS/MI/CI/
+Greedy assignment over the league's 22-slot template (C/1B/2B/3B/SS/MI/CI/
 OF×4/U/P×10), specific slots before flex so scarce eligibility is spent
 where it must be.
 
@@ -60,6 +60,13 @@ def recommend(team: str = "Runtime Terror") -> dict:
             RETURN p.name_full AS p, count(pr) AS n
             """, team=team, a=date.today().isoformat(),
             b=(date.today() + timedelta(days=8)).isoformat()).data()}
+        recent = {r["p"] for r in s.run(
+            """
+            MATCH (t:FantasyTeam {cbs_name:$team})<-[:ON_TEAM]-(st:RosterStint)
+                  -[:OF_PLAYER]->(p:Player)<-[:OF_PLAYER]-(d:PlayerDayLine)
+            WHERE st.to_date IS NULL AND d.date >= date() - duration('P14D')
+            RETURN DISTINCT p.name_full AS p
+            """, team=team).data()}
         cur_rows = s.run(
             """
             MATCH (l:LineupAssignment {section:'active'})-[:IN_PERIOD]->(per:ScoringPeriod),
@@ -87,10 +94,13 @@ def recommend(team: str = "Runtime Terror") -> dict:
         q = quality(p)
         pool.append({"name": p["name"], "pos": p["pos"],
                      "val": marginal_pts(p), "q": q,
-                     "bump": 0.3 * starts.get(p["name"], 0)})
+                     "bump": 0.3 * starts.get(p["name"], 0),
+                     "idle": p["name"] not in recent})
     for x in pool:
-        # sort key: marginal pts, then start bump, then quality inside a step
-        x["_key"] = x["val"] + x["bump"] + x["q"] / 1000.0
+        # sort key: marginal pts, then start bump, then quality inside a step.
+        # idle = no MLB games in 14 days: season-average flow is fiction for a
+        # player who isn't playing — haircut hard, don't hide (tag shows why)
+        x["_key"] = (x["val"] + x["bump"] + x["q"] / 1000.0) * (0.4 if x["idle"] else 1.0)
 
     # stickiness: a player already in this slot wins near-ties — advice that
     # shuffles equivalent players between slots is churn, not value
@@ -110,7 +120,8 @@ def recommend(team: str = "Runtime Terror") -> dict:
             was = current.get(x["name"])
             change = was != slot
             rows.append({"slot": slot, "player": x["name"], "pos": x["pos"],
-                         "val": x["val"], "was": was or "bench", "change": change})
+                         "val": x["val"], "was": was or "bench", "change": change,
+                         "idle": x["idle"]})
             if change:
                 moves.append(f"{x['name']}: {was or 'bench'} → {slot}")
         for _ in range(count - len(assigned[slot])):
@@ -122,7 +133,8 @@ def recommend(team: str = "Runtime Terror") -> dict:
     for x in bench:
         was = current.get(x["name"])
         rows.append({"slot": "bench", "player": x["name"], "pos": x["pos"],
-                     "val": x["val"], "was": was or "bench", "change": bool(was)})
+                     "val": x["val"], "was": was or "bench", "change": bool(was),
+                     "idle": x["idle"]})
         if was:
             moves.append(f"{x['name']}: {was} → bench")
     return {"rows": rows, "moves": moves, "vs_period": observed_period,
