@@ -278,7 +278,15 @@ def schema_graph():
     return jsonify({"nodes": nodes, "edges": edges})
 
 
-SCHEMA_HINT = """Labels/properties: Player(name_full,name_normalized,mlbam_id,cbs_id,cbs_positions,
+SCHEMA_HINT = """CRITICAL — relationship directions: ALL data edges point INTO Player:
+(d:PlayerDayLine)-[:OF_PLAYER]->(p:Player), (v:PitcherGameVelo)-[:OF_PLAYER]->(p),
+(b:BatterGameEV)-[:OF_PLAYER]->(p), (st:RosterStint)-[:OF_PLAYER]->(p),
+(sig:Signal)-[:ABOUT]->(p), (e:PoolEntry)-[:OF_PLAYER]->(p), (n:NewsItem)-[:ABOUT]->(p).
+When unsure of a direction, write the pattern UNDIRECTED: (a)-[:REL]-(b).
+Formulas: ERA = sum(er)*27.0/sum(outs); WHIP = (sum(ha)+sum(bbi))*3.0/sum(outs);
+OBP = sum(h+bb+hbp)/sum(ab+bb+hbp+sf); IP = outs/3.0.
+
+Labels/properties: Player(name_full,name_normalized,mlbam_id,cbs_id,cbs_positions,
 primary_position,woba,xwoba,luck_gap,xera,pit_luck_gap), FantasyTeam(cbs_name,abbrev,is_us),
 RosterStint(status[active|il|minors],from_date,to_date NULL=current,acquired_via).
 IMPORTANT: 'rostered/taken' = open stint (to_date IS NULL) with ANY status —
