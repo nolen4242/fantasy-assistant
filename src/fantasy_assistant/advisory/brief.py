@@ -200,6 +200,28 @@ def compose(as_of: str | None = None) -> str:
                      "rationale": f"{t['tier']}: give {t['give']} to {t['with']}, "
                                   f"us {t['our_delta']:+.1f}/them {t['their_delta']:+.1f}"})
     add("")
+    add("## Hot on the wire (unrostered, skill-based heat)")
+    with session() as s_:
+        wire = s_.run(
+            """
+            MATCH (sig:Signal {fa: true})-[:ABOUT]->(p:Player)
+            WHERE sig.kind IN ['contact_hot','hot_bat','velocity_up','csw_up','hot_arm']
+              AND sig.as_of >= date() - duration('P5D')
+              AND NOT EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p) WHERE st.to_date IS NULL}
+            OPTIONAL MATCH (e:PoolEntry)-[:OF_PLAYER]->(p)
+            RETURN p.name_full AS n, p.cbs_positions AS pos, sig.kind AS k,
+                   sig.rationale AS r, min(e.sportsline_rank) AS rank
+            ORDER BY coalesce(rank, 9999) LIMIT 8
+            """
+        ).data()
+    if wire:
+        for x in wire:
+            add(f"- {x['n']} ({x['pos']}, wk-rank {x['rank']}): **{x['k']}** — {x['r']}")
+            recs.append({"kind": "add", "player": x["n"],
+                         "rationale": f"Wire heat: {x['k']} — {x['r']}"})
+    else:
+        add("- none currently")
+    add("")
     add("## Scouting signals on our roster (last 7 days)")
     with session() as s_:
         ours_sig = s_.run(

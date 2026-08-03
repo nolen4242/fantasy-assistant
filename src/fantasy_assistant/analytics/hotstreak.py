@@ -45,7 +45,9 @@ def run() -> dict:
     with session() as s:
         bats = s.run(
             """
-            MATCH (p:Player)<-[:OF_PLAYER]-(st:RosterStint) WHERE st.to_date IS NULL
+            MATCH (p:Player)
+            WHERE EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p) WHERE st.to_date IS NULL}
+               OR EXISTS {MATCH (e:PoolEntry)-[:OF_PLAYER]->(p) WHERE e.sportsline_rank <= 400}
             WITH DISTINCT p
             MATCH (d:PlayerDayLine {side:'bat'})-[:OF_PLAYER]->(p)
             WITH p, d ORDER BY d.date DESC
@@ -84,7 +86,9 @@ def run() -> dict:
                     MERGE (sig:Signal {uid:$suid})
                     SET sig.kind=$kind, sig.strength=$st, sig.as_of=date(),
                         sig.rationale=$why, sig.agent='hotstreak',
-                        sig.model_version='heat-v1', sig.results_based=true
+                        sig.model_version='heat-v1', sig.results_based=true,
+                        sig.fa = NOT EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p)
+                                             WHERE st.to_date IS NULL}
                     MERGE (sig)-[:ABOUT]->(p)
                     """,
                     uid=r["uid"], suid=f"signal:heat:{r['uid']}:{date.today()}",
@@ -92,7 +96,9 @@ def run() -> dict:
                     why=f"10g wOBA~{window:.3f} vs season {season:.3f} (z={z:+.1f}, shrunk)")
         arms = s.run(
             """
-            MATCH (p:Player)<-[:OF_PLAYER]-(st:RosterStint) WHERE st.to_date IS NULL
+            MATCH (p:Player)
+            WHERE EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p) WHERE st.to_date IS NULL}
+               OR EXISTS {MATCH (e:PoolEntry)-[:OF_PLAYER]->(p) WHERE e.sportsline_rank <= 400}
             WITH DISTINCT p
             MATCH (v:PitcherGameVelo)-[:OF_PLAYER]->(p)
             WHERE v.csw_pct IS NOT NULL AND v.n_pitches >= 25
@@ -118,7 +124,9 @@ def run() -> dict:
                     MERGE (sig:Signal {uid:$suid})
                     SET sig.kind=$kind, sig.strength=$st, sig.as_of=date(),
                         sig.rationale=$why, sig.agent='hotstreak',
-                        sig.model_version='heat-v1', sig.results_based=false
+                        sig.model_version='heat-v1', sig.results_based=false,
+                        sig.fa = NOT EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p)
+                                             WHERE st.to_date IS NULL}
                     MERGE (sig)-[:ABOUT]->(p)
                     """,
                     uid=r["uid"], suid=f"signal:heat:{r['uid']}:{date.today()}",

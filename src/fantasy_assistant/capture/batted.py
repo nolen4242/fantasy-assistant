@@ -89,7 +89,9 @@ def contact_signals() -> list[dict]:
     with session() as s:
         rows = s.run(
             """
-            MATCH (p:Player)<-[:OF_PLAYER]-(st:RosterStint) WHERE st.to_date IS NULL
+            MATCH (p:Player)
+            WHERE EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p) WHERE st.to_date IS NULL}
+               OR EXISTS {MATCH (e:PoolEntry)-[:OF_PLAYER]->(p) WHERE e.sportsline_rank <= 400}
             WITH DISTINCT p
             MATCH (v:BatterGameEV)-[:OF_PLAYER]->(p)
             WITH p, v ORDER BY v.date DESC
@@ -122,6 +124,9 @@ def contact_signals() -> list[dict]:
                     SET sig.kind=$kind, sig.strength=$st, sig.as_of=date(),
                         sig.rationale=$why, sig.agent='contact',
                         sig.model_version='ev-v1', sig.results_based=false
+                    WITH sig, p
+                    SET sig.fa = NOT EXISTS {MATCH (st:RosterStint)-[:OF_PLAYER]->(p)
+                                             WHERE st.to_date IS NULL}
                     MERGE (sig)-[:ABOUT]->(p)
                     """,
                     uid=r["uid"], suid=f"signal:ev:{kind}:{r['uid']}:{date.today()}",

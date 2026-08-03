@@ -280,15 +280,19 @@ def schema_graph():
 
 SCHEMA_HINT = """Labels/properties: Player(name_full,name_normalized,mlbam_id,cbs_id,cbs_positions,
 primary_position,woba,xwoba,luck_gap,xera,pit_luck_gap), FantasyTeam(cbs_name,abbrev,is_us),
-RosterStint(status[active|il|minors],from_date,to_date NULL=current,acquired_via)-[:ON_TEAM]->FantasyTeam,
+RosterStint(status[active|il|minors],from_date,to_date NULL=current,acquired_via).
+IMPORTANT: 'rostered/taken' = open stint (to_date IS NULL) with ANY status —
+IL and minors players are still rostered; free agent = NO open stint at all.
+Never filter status='active' when checking availability-[:ON_TEAM]->FantasyTeam,
 -[:OF_PLAYER]->Player, LineupAssignment(slot,section[active|bench|injured|minors])-[:IN_PERIOD]->
 ScoringPeriod(number,start_date,end_date), -[:BY_TEAM]->FantasyTeam, -[:FILLED_BY]->Player,
 PlayerDayLine(date,side[bat|pit],hr,r,rbi,sb,k,sv,w,qs,outs,er,ha,bbi,ob? h,bb)-[:OF_PLAYER]->Player,
 TransactionEvent(posted_at,effective_date,fee,kinds)-[:BY_TEAM]->FantasyTeam,-[:ADDS|DROPS|MOVES]->Player,
 DraftPick(round,overall)-[:BY_TEAM]->,-[:SELECTED]->Player, StandingsSnapshot(scope[ytd|period])
 -[:FOR_PERIOD]->ScoringPeriod,-[:HAS_LINE]->CategoryStandingLine(value_reported,points,rank)
--[:FOR_TEAM]->FantasyTeam,-[:IN_CATEGORY]->Category(code), PitcherGameVelo(date,ff_avg,whiff_pct,
-csw_pct,mix)-[:OF_PLAYER]->Player, Signal(kind,rationale,as_of,agent)-[:ABOUT]->Player — kind values:
+-[:FOR_TEAM]->FantasyTeam,-[:IN_CATEGORY]->Category(code), PitcherGameVelo(date,ff_avg,whiff_pct,csw_pct,mix)-[:OF_PLAYER]->Player,
+BatterGameEV(date,bbe,ev_mean,hardhit,barrels)-[:OF_PLAYER]->Player (per-game contact quality),
+ Signal(kind,rationale,as_of,agent)-[:ABOUT]->Player — kind values:
 velocity_up/velocity_down, csw_up/csw_down, mix_change, contact_hot/contact_cold,
 hot_bat/cold_bat, hot_arm/cold_arm, buy_low/sell_high, speed_decline
 (negative-ish: velocity_down, csw_down, contact_cold, cold_bat, cold_arm,
@@ -312,6 +316,9 @@ def ask():
               f"Team names: Runtime Terror (is_us:true), Rieken Havoc, Young Guns, Big Sticks, "
               f"Maga Doge, Like a Nightmare, Dawg, Guillotine, Long Balls, Gashouse Gang, "
               f"Magnum GI, Simba's Dublin Green Sox, Trex.\n"
+              f"Superlatives ('hottest','best','worst') should RANK from raw per-game data "
+              f"(e.g. hottest bat = highest hard-hit rate over recent BatterGameEV games, "
+              f"min ~15 recent BBE), NOT require a Signal — signals are sparse flags.\n"
               f"Question: {q}\nReply with ONLY the Cypher, no fences, no prose.")
     claude = None
     for cand in ("claude", str(Path.home() / ".claude/local/claude"),
@@ -363,6 +370,32 @@ def ask():
                 rows.append(row)
     except Exception as exc:
         return jsonify({"error": f"cypher failed: {exc}", "cypher": cypher})
+    if not rows and not request.args.get("retry"):
+        try:
+            r2 = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001"],
+                        input=(f"This Cypher returned ZERO rows:\n{cypher}\n"
+                               f"Original question: {q}\n"
+                               f"{SCHEMA_HINT}\n"
+                               f"Likely cause: over-strict filters (sparse Signal flags, "
+                               f"exact string matches, status filters). Write ONE broader "
+                               f"read-only Cypher that ranks/computes from raw data instead. "
+                               f"ONLY the Cypher."),
+                        capture_output=True, text=True, timeout=90)
+            c2 = r2.stdout.strip()
+            m2 = _re.search(r"```(?:cypher)?\s*(.*?)```", c2, _re.S)
+            if m2:
+                c2 = m2.group(1).strip()
+            if c2 and not FORBIDDEN.search(c2):
+                if not _re.search(r"\bLIMIT\b", c2, _re.I):
+                    c2 = c2.rstrip("; \n") + " LIMIT 200"
+                with session() as s2:
+                    res2 = s2.run(c2)
+                    keys = res2.keys()
+                    rows = [{k: (str(rec[k]) if rec[k] is not None else "") for k in keys}
+                            for rec in res2]
+                    cypher = cypher + "\n-- retry (0 rows) -->\n" + c2
+        except Exception:
+            pass
     return jsonify({"cypher": cypher, "columns": list(keys), "rows": rows[:200],
                     "graph": {"nodes": list(nodes.values()), "edges": edges}})
 

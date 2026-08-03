@@ -163,6 +163,9 @@ def reconcile(capture_dir: Path, write_graph: bool = True) -> dict:
     for e in grid:
         grid_by_team.setdefault(e.team, []).append(e)
 
+    GRID_STATUS = {"active": "active", "reserve": "active",
+                   "il": "il", "minors": "minors"}
+    status_fixes: list[dict] = []
     for team, entries in grid_by_team.items():
         pool = dict(derived.get(team, {}))
         for e in entries:
@@ -173,11 +176,19 @@ def reconcile(capture_dir: Path, write_graph: bool = True) -> dict:
                               "detail": f"in grid ({e.status}) but not in replayed roster"})
             else:
                 matched += 1
+                # grid is authoritative for CURRENT status — replay can go
+                # stale when an activation never hits the transaction log
+                want = GRID_STATUS[e.status]
+                if st["status"] != want:
+                    status_fixes.append({"team": st["team"], "puid": st["puid"],
+                                         "from": st["status"], "to": want})
+                    st["status"] = want
         for key, st in pool.items():
             diffs.append({"kind": "replay_only", "team": team, "who": st["name"],
                           "detail": f"replay has open stint (via {st['via']} from {st['from_date']}) but not in grid"})
 
     result = {
+        "status_fixes": status_fixes,
         "teams": len(grid_by_team),
         "grid_entries": len(grid),
         "matched": matched,
