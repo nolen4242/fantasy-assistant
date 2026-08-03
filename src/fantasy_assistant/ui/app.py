@@ -260,6 +260,14 @@ def manager():
             continue
         seen_p.add(r["player"])
         dedup_recs.append(r)
+    wire_recs = [r for r in dedup_recs if r["kind"] in ("claim", "add", "drop")]
+    trade_recs = [r for r in dedup_recs if r["kind"] == "trade_proposal"]
+
+    try:
+        from fantasy_assistant.advisory.lineup import recommend as lineup_recommend
+        lineup_plan = lineup_recommend(us)
+    except Exception as exc:
+        lineup_plan = {"rows": [], "moves": [], "error": str(exc)}
 
     data = {
         "as_of": datetime.now().isoformat(timespec="seconds"),
@@ -268,7 +276,8 @@ def manager():
         "sim": (sim[0] if sim else None),
         "alerts": {"n_24h": alerts["n"], "latest": (last_alert or {}).get("t", "")},
         "ip": ip,
-        "recs": dedup_recs[:14], "hazards": hazards,
+        "wire_recs": wire_recs[:12], "trade_recs": trade_recs[:8],
+        "lineup": lineup_plan, "hazards": hazards,
         "battle": battle,
         "pulse": pulse, "my_starts": my_starts,
         "hot_fa": hot_fa, "waivers": waivers, "snipers": snipers,
@@ -354,8 +363,12 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
 <div id="view-mgr">
  <div class="strip" id="mstrip"></div>
  <div class="grid" id="mgrid">
-  <div class="panel"><h2 id="mlock">Before the lock</h2><table id="mrecs"></table>
+  <div class="panel"><h2 id="mlock">Lineup &amp; personal moves — set by the lock</h2>
+    <div class="why" id="mmoves" style="margin-bottom:8px"></div>
+    <table id="mlineup"></table></div>
+  <div class="panel"><h2>Waiver wire — claims &amp; adds</h2><table id="mwire"></table>
     <div class="why" id="mrecnote" style="margin-top:8px"></div></div>
+  <div class="panel"><h2>Trade desk</h2><table id="mtrades"></table></div>
   <div class="panel"><h2>Category battle plan — cheapest points first</h2>
     <table id="mbattle"></table><div class="why" style="margin-top:8px">races-v3 · swap = one roster spot's ROS volume at a realistic edge</div></div>
   <div class="panel"><h2>Roster pulse</h2><table id="mpulse"></table>
@@ -379,6 +392,15 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
  <div class="panel"><h2>Latest brief</h2><pre id="brief" style="max-height:520px"></pre></div>
  <div class="panel"><h2>Scouting signals</h2><table id="signals"></table>
    <h2 style="margin-top:12px">Integrity (orphans / open discrepancies)</h2><table id="orphans"></table></div>
+ <div class="panel"><h2>Graph
+   <button onclick="net('schema')" style="background:#22303c;color:#cfd8e0;border:0;border-radius:6px;padding:3px 10px">whole schema</button>
+   <button onclick="net('roster')" style="background:#22303c;color:#cfd8e0;border:0;border-radius:6px;padding:3px 10px">my roster</button></h2>
+   <div id="net"></div></div>
+ <div class="panel"><h2>Graph inventory · capture freshness</h2><table id="labels"></table>
+   <table id="caps" style="margin-top:10px"></table></div>
+</div>
+</div>
+<div class="grid" style="margin-top:14px">
  <div class="panel" style="grid-column:1/-1"><h2>Ask the graph
    <span class="ts">natural language → Cypher (claude) → table + graph</span></h2>
    <div style="display:flex;gap:8px;margin-bottom:8px">
@@ -391,13 +413,6 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>fantasy-assist
      <div style="overflow:auto;max-height:420px"><table id="askrows"></table></div>
      <div id="asknet" style="height:420px;background:#0c1013;border-radius:8px"></div>
    </div></div>
- <div class="panel"><h2>Graph
-   <button onclick="net('schema')" style="background:#22303c;color:#cfd8e0;border:0;border-radius:6px;padding:3px 10px">whole schema</button>
-   <button onclick="net('roster')" style="background:#22303c;color:#cfd8e0;border:0;border-radius:6px;padding:3px 10px">my roster</button></h2>
-   <div id="net"></div></div>
- <div class="panel"><h2>Graph inventory · capture freshness</h2><table id="labels"></table>
-   <table id="caps" style="margin-top:10px"></table></div>
-</div>
 </div>
 <script>
 const esc = x => String(x==null?'':x).replace(/[&<>"']/g,
@@ -484,11 +499,24 @@ async function manager(){
   ['Alerts 24h', `<span class="v">${esc(d.alerts.n_24h)}</span>`, esc((d.alerts.latest||'').slice(0,48))],
  ].map(([k,v,sub])=>`<div class="stat"><b>${k}</b>${v}<span class="d">${sub}</span></div>`).join('');
 
- document.getElementById('mlock').textContent = `Before the lock — ${d.lock_date}`;
- const hz = d.hazards.map(h=>rowr([`<span class="k hazard">${esc(h.status)}</span>`, `<b>${esc(h.player)}</b>`, `<span class="why">on roster — resolve slot before lock</span>`]));
- const rc = d.recs.map(r=>rowr([`<span class="k ${esc(r.kind)}">${esc(r.kind.replace('_proposal',''))}</span>`, `<b>${esc(r.player)}</b>`, `<span class="why">${esc((r.why||'').slice(0,90))}</span>`]));
- document.getElementById('mrecs').innerHTML = rowh(['','action','why']) + hz.join('') + rc.join('');
- document.getElementById('mrecnote').textContent = `${d.recs.length} open recs shown (deduped by player). Adopt by making the move on CBS — the decision matcher confirms it automatically.`;
+ document.getElementById('mlock').textContent = `Lineup & personal moves — set by ${d.lock_date} lock`;
+ const lp = d.lineup || {rows:[],moves:[]};
+ document.getElementById('mmoves').innerHTML = lp.moves.length?
+   '<b>moves to click:</b> ' + lp.moves.map(esc).join('  ·  ') : 'no lineup changes recommended';
+ let lastSlot = null;
+ document.getElementById('mlineup').innerHTML = rowh(['slot','player','pos','val','from']) +
+  lp.rows.map(r=>{
+   const cls = r.player==='(EMPTY)'? ' class="critc"' : (r.change? ' style="background:#1f2733"' : '');
+   const benchTag = r.slot==='bench';
+   return `<tr${cls}><td>${benchTag?'<span class="why">bench</span>':`<b>${esc(r.slot)}</b>`}</td><td>${esc(r.player)}</td><td class="why">${esc(r.pos||'')}</td><td>${r.val==null?'':esc(r.val)}</td><td class="why">${r.change? esc(r.was)+' →' : ''}</td></tr>`;
+  }).join('');
+ const hz = d.hazards.map(h=>rowr([`<span class="k hazard">${esc(h.status)}</span>`, `<b>${esc(h.player)}</b>`, `<span class="why">IL/minors slot — check activation dates</span>`]));
+ const wc = d.wire_recs.map(r=>rowr([`<span class="k ${esc(r.kind)}">${esc(r.kind)}</span>`, `<b>${esc(r.player)}</b>`, `<span class="why">${esc((r.why||'').slice(0,90))}</span>`]));
+ document.getElementById('mwire').innerHTML = rowh(['','action','why']) + wc.join('') + hz.join('');
+ document.getElementById('mrecnote').textContent = 'Adopt by making the move on CBS — the decision matcher confirms it automatically. Claims process overnight before the lock.';
+ document.getElementById('mtrades').innerHTML = rowh(['','proposal','why']) +
+  (d.trade_recs.length? d.trade_recs.map(r=>rowr([`<span class="k trade_proposal">trade</span>`, `<b>${esc(r.player)}</b>`, `<span class="why">${esc((r.why||'').slice(0,100))}</span>`])).join('')
+   : rowr(['', '<span class="why">no positive trades under current projections</span>', '']));
 
  document.getElementById('mbattle').innerHTML = rowh(['cat','pts → proj','next point costs','cushion']) +
   d.battle.map(b=>{
