@@ -251,7 +251,7 @@ async function ask(){
  const d = await (await fetch('/api/ask', {method:'POST',
    headers:{'Content-Type':'application/json'}, body:JSON.stringify({q})})).json();
  if(d.error){ document.getElementById('cy').textContent = d.error + (d.cypher? ' | '+d.cypher:''); return; }
- document.getElementById('cy').textContent = d.cypher;
+ document.getElementById('cy').textContent = d.cypher + (d.elapsed_s? '  -- '+d.elapsed_s+'s'+(d.cached?' (cached)':''):'');
  const row=(cells,h)=>`<tr>${cells.map(c=>`<${h?'th':'td'}>${c}</${h?'th':'td'}>`).join('')}</tr>`;
  document.getElementById('askrows').innerHTML = row(d.columns,1)+
    d.rows.map(r=>row(d.columns.map(c=>r[c]))).join('');
@@ -283,7 +283,7 @@ primary_position,woba,xwoba,luck_gap,xera,pit_luck_gap), FantasyTeam(cbs_name,ab
 RosterStint(status[active|il|minors],from_date,to_date NULL=current,acquired_via).
 IMPORTANT: 'rostered/taken' = open stint (to_date IS NULL) with ANY status —
 IL and minors players are still rostered; free agent = NO open stint at all.
-Never filter status='active' when checking availability-[:ON_TEAM]->FantasyTeam,
+Never filter status='active' when checking availability. Pitchers: primary_position='P' or cbs_positions CONTAINS 'P'-[:ON_TEAM]->FantasyTeam,
 -[:OF_PLAYER]->Player, LineupAssignment(slot,section[active|bench|injured|minors])-[:IN_PERIOD]->
 ScoringPeriod(number,start_date,end_date), -[:BY_TEAM]->FantasyTeam, -[:FILLED_BY]->Player,
 PlayerDayLine(date,side[bat|pit],hr,r,rbi,sb,k,sv,w,qs,outs,er,ha,bbi,ob? h,bb)-[:OF_PLAYER]->Player,
@@ -305,11 +305,29 @@ ModelEval(model,stand_at,pts_mae), Brief-[:CONTAINS]->Recommendation."""
 FORBIDDEN = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|LOAD|CALL\s+apoc\.(?!convert))\b", re.I)
 
 
+_ASK_CACHE: dict = {}
+
+
+ASK_ENV = None
+
+
+def _ask_env():
+    global ASK_ENV
+    if ASK_ENV is None:
+        import os
+        # extended thinking turns a 3s translation into a 45s one — cap it
+        ASK_ENV = os.environ | {"MAX_THINKING_TOKENS": "0"}
+    return ASK_ENV
+
+
 @app.post("/api/ask")
 def ask():
     import re as _re
     import subprocess as sp
     q = (request.get_json() or {}).get("q", "").strip()
+    if q in _ASK_CACHE:
+        return jsonify(_ASK_CACHE[q] | {"cached": True})
+    t0 = time.time()
     if not q:
         return jsonify({"error": "empty question"})
     prompt = (f"Translate to ONE read-only Cypher query for Neo4j 5.\n{SCHEMA_HINT}\n"
@@ -333,8 +351,9 @@ def ask():
         return jsonify({"error": "claude CLI not found — install with: "
                         "npm install -g @anthropic-ai/claude-code  (then run `claude` once to sign in)"})
     try:
-        r = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001"],
-                   input=prompt, capture_output=True, text=True, timeout=90)
+        r = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001",
+                    "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}'],
+                   input=prompt, capture_output=True, text=True, timeout=90, env=_ask_env())
         cypher = r.stdout.strip()
     except Exception as exc:
         return jsonify({"error": f"claude call failed: {exc}"})
@@ -372,7 +391,8 @@ def ask():
         return jsonify({"error": f"cypher failed: {exc}", "cypher": cypher})
     if not rows and not request.args.get("retry"):
         try:
-            r2 = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001"],
+            r2 = sp.run([claude, "-p", "--model", "claude-haiku-4-5-20251001",
+                         "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}'],
                         input=(f"This Cypher returned ZERO rows:\n{cypher}\n"
                                f"Original question: {q}\n"
                                f"{SCHEMA_HINT}\n"
@@ -380,7 +400,7 @@ def ask():
                                f"exact string matches, status filters). Write ONE broader "
                                f"read-only Cypher that ranks/computes from raw data instead. "
                                f"ONLY the Cypher."),
-                        capture_output=True, text=True, timeout=90)
+                        capture_output=True, text=True, timeout=90, env=_ask_env())
             c2 = r2.stdout.strip()
             m2 = _re.search(r"```(?:cypher)?\s*(.*?)```", c2, _re.S)
             if m2:
@@ -396,8 +416,13 @@ def ask():
                     cypher = cypher + "\n-- retry (0 rows) -->\n" + c2
         except Exception:
             pass
-    return jsonify({"cypher": cypher, "columns": list(keys), "rows": rows[:200],
-                    "graph": {"nodes": list(nodes.values()), "edges": edges}})
+    out = {"cypher": cypher, "columns": list(keys), "rows": rows[:200],
+           "graph": {"nodes": list(nodes.values()), "edges": edges},
+           "elapsed_s": round(time.time() - t0, 1)}
+    _ASK_CACHE[q] = out
+    if len(_ASK_CACHE) > 100:
+        _ASK_CACHE.pop(next(iter(_ASK_CACHE)))
+    return jsonify(out)
 
 
 @app.get("/")
@@ -406,4 +431,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8347, debug=False)
+    app.run(host="127.0.0.1", port=8347, debug=False, threaded=True)
