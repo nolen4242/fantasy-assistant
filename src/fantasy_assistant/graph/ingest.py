@@ -108,11 +108,12 @@ def _pool_file(capture_dir: Path, stem: str) -> Path:
     return plain  # let the parser raise on the canonical name
 
 
-def latest_closed_period(capture_dir: Path) -> int:
-    """Standings in a capture reflect play through the LAST CLOSED period."""
+def standings_period(capture_dir: Path) -> int:
+    """The period a YTD standings capture belongs to: games through 'now'
+    include the capture date's own (possibly in-progress) period."""
     from datetime import date as _date
     from fantasy_assistant.graph.refdata import period_for_date
-    return max(1, period_for_date(_date.fromisoformat(capture_dir.name)) - 1)
+    return period_for_date(_date.fromisoformat(capture_dir.name))
 
 
 def ingest_pool(capture_dir: Path, as_of: str) -> dict:
@@ -139,8 +140,9 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
                 {
                     "entry_uid": f"{snap_uid}:{kind}:{r.cbs_id or parsers.normalize_name(r.player_name)}",
                     "puid": _splits.get(
-                        f"{parsers.normalize_name(r.player_name)}|{kind}",
-                        player_uid(r.player_name)),
+                        f"cbs:{r.cbs_id}",
+                        _splits.get(f"{parsers.normalize_name(r.player_name)}|{kind}",
+                                    player_uid(r.player_name))),
                     "name": r.player_name,
                     "norm": parsers.normalize_name(r.player_name),
                     "cbs_id": r.cbs_id, "pos": r.positions, "mlb": r.mlb_team,
@@ -267,7 +269,7 @@ def ingest_capture(capture_dir: Path) -> None:
     print("transactions:", ingest_transactions(capture_dir))
     print("fa pool:", ingest_pool(capture_dir, as_of))
     print("standings:", ingest_standings(capture_dir, as_of,
-                                          period=latest_closed_period(capture_dir)))
+                                          period=standings_period(capture_dir)))
     print("roster grid:", ingest_roster_grid(capture_dir, as_of))
 
 
