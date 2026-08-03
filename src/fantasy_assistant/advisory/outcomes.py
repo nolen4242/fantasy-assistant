@@ -59,8 +59,11 @@ def match_decisions() -> dict:
 def score_outcomes() -> dict:
     ts = datetime.now().isoformat(timespec="seconds")
     with session() as s:
+        # belt & braces with the ingest guard: a period is closed only when
+        # its calendar end has passed, regardless of what snapshots exist
         latest_closed = s.run(
             "MATCH (st:StandingsSnapshot {scope:'period'})-[:FOR_PERIOD]->(p) "
+            "WHERE p.end_date < date() "
             "RETURN max(p.number) AS n"
         ).single()["n"]
         rows = s.run(

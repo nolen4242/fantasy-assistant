@@ -316,9 +316,16 @@ def ingest_draft(capture_dir: Path) -> dict:
 def ingest_byperiod(capture_dir: Path) -> dict:
     data = parsers.parse_byperiod(capture_dir / "standings_byperiod_all.txt")
     n_lines = 0
+    # CBS's by-period page lists the IN-PROGRESS period with partial numbers;
+    # ingesting it as a 'period' snapshot made outcome scoring fire against a
+    # week that had barely started. Only closed periods are facts.
+    from datetime import date as _date
+    from fantasy_assistant.graph.refdata import period_dates
     with session() as s:
         run_uid = _capture_run(s, capture_dir, "standings_byperiod")
         for period, pdata in data.items():
+            if period_dates(period)[1] >= _date.today():
+                continue  # period not closed yet
             snap_uid = f"cbs:standings:period:{period}"
             s.run(
                 """

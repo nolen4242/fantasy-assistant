@@ -274,17 +274,24 @@ def _write_graph(period: int, recs: list[dict], race: dict) -> None:
             """,
             puid=f"period:2026:{period}", uid=brief_uid, ts=ts, mv=race["model"],
         )
-        for i, r in enumerate(recs):
+        for r in recs:
+            # uid is CONTENT-keyed (period+kind+player), never positional:
+            # regenerating a brief must re-find the same rec, not re-number
+            # them (a positional uid once reassigned Cecconi's adopted rec to
+            # another player, corrupting the decision ledger). Status is set
+            # ON CREATE only — adoption survives regeneration.
+            from fantasy_assistant.capture.parsers import normalize_name
+            pkey = normalize_name(r.get("player", "")).replace(" ", "_") or "team"
             s.run(
                 """
                 MATCH (b:Brief {uid:$buid})
                 MERGE (rec:Recommendation {uid:$uid})
-                SET rec.created_at=datetime($ts), rec.kind=$kind,
-                    rec.rationale=$rationale, rec.status='open',
+                ON CREATE SET rec.created_at=datetime($ts), rec.status='open'
+                SET rec.kind=$kind, rec.rationale=$rationale,
                     rec.action_blob=$blob
                 MERGE (b)-[:CONTAINS]->(rec)
                 """,
-                buid=brief_uid, uid=f"rec:2026:{period}:{i}:{r['kind']}",
+                buid=brief_uid, uid=f"rec:2026:{period}:{r['kind']}:{pkey}",
                 ts=ts, kind=r["kind"], rationale=r["rationale"],
                 blob=json.dumps(r),
             )
