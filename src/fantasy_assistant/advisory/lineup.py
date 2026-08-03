@@ -2,9 +2,16 @@
 
 Greedy assignment over the league's 21-slot template (C/1B/2B/3B/SS/MI/CI/
 OF×4/U/P×10), specific slots before flex so scarce eligibility is spent
-where it must be. Value = valuation.quality (per-week market-value proxy)
-plus a bump for pitchers with probable starts in the period — the same
-streaming logic the brief uses, applied to slotting.
+where it must be.
+
+Value model (v2, category-marginal): a player's value is the PROJECTED FINAL
+STANDINGS POINTS the team loses if his weekly production vanishes from the
+lineup — computed through the trade evaluator's category machinery, so it
+inherits the portfolio principle: a saves arm scores high exactly when
+saves points are cheap for US, an HR bat scores low when the HR race is
+hopeless. Marginals move in coarse standings-point steps, so the v1 quality
+proxy stays as the tiebreak within a step, and pitchers get a small bump
+per known probable start next period (streaming the weekly volume).
 
 Output is advisory: a slot map plus the delta vs the latest observed lineup
 ("moves you'd actually click").
@@ -13,7 +20,8 @@ from __future__ import annotations
 
 from datetime import date, timedelta
 
-from fantasy_assistant.analytics.valuation import quality, roster_players
+from fantasy_assistant.analytics.valuation import (TradeEvaluator, quality,
+                                                   ros_weekly, roster_players)
 from fantasy_assistant.graph.client import session
 
 SLOT_TEMPLATE = [("C", 1), ("1B", 1), ("2B", 1), ("3B", 1), ("SS", 1),
@@ -64,12 +72,25 @@ def recommend(team: str = "Runtime Terror") -> dict:
     current = {r["p"]: r["slot"] for r in cur_rows}
     observed_period = cur_rows[0]["latest"] if cur_rows else None
 
+    ev = TradeEvaluator()
+    base_pts = ev._team_points(ev._apply({team: {}}))[team]
+
+    def marginal_pts(p: dict) -> float:
+        """Standings points lost if this player's weekly flow disappears."""
+        flow = {k: -v for k, v in ros_weekly(p).items()}
+        return round(base_pts - ev._team_points(ev._apply({team: flow}))[team], 1)
+
     pool = []
     for p in players:
         if status.get(p["name"]) != "active":
             continue
-        val = quality(p) + 0.6 * starts.get(p["name"], 0)
-        pool.append({"name": p["name"], "pos": p["pos"], "val": round(val, 2)})
+        q = quality(p)
+        pool.append({"name": p["name"], "pos": p["pos"],
+                     "val": marginal_pts(p), "q": q,
+                     "bump": 0.3 * starts.get(p["name"], 0)})
+    for x in pool:
+        # sort key: marginal pts, then start bump, then quality inside a step
+        x["_key"] = x["val"] + x["bump"] + x["q"] / 1000.0
 
     # stickiness: a player already in this slot wins near-ties — advice that
     # shuffles equivalent players between slots is churn, not value
@@ -79,7 +100,7 @@ def recommend(team: str = "Runtime Terror") -> dict:
     for slot, count in SLOT_TEMPLATE:
         cands = sorted((x for x in pool if x["name"] not in taken
                         and _eligible(x["pos"], slot)),
-                       key=lambda x: -(x["val"] + (STICKY if current.get(x["name"]) == slot else 0)))
+                       key=lambda x: -(x["_key"] + (STICKY if current.get(x["name"]) == slot else 0)))
         assigned[slot] = cands[:count]
         taken.update(x["name"] for x in cands[:count])
 
@@ -97,7 +118,7 @@ def recommend(team: str = "Runtime Terror") -> dict:
                          "val": None, "was": "", "change": True})
             moves.append(f"{slot}: no eligible player — fill via add/claim")
     bench = sorted((x for x in pool if x["name"] not in taken),
-                   key=lambda x: -x["val"])
+                   key=lambda x: -x["_key"])
     for x in bench:
         was = current.get(x["name"])
         rows.append({"slot": "bench", "player": x["name"], "pos": x["pos"],

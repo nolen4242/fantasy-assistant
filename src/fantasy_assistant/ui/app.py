@@ -504,7 +504,7 @@ async function manager(){
  document.getElementById('mmoves').innerHTML = lp.moves.length?
    '<b>moves to click:</b> ' + lp.moves.map(esc).join('  ·  ') : 'no lineup changes recommended';
  let lastSlot = null;
- document.getElementById('mlineup').innerHTML = rowh(['slot','player','pos','val','from']) +
+ document.getElementById('mlineup').innerHTML = rowh(['slot','player','pos','mPts','from']) +
   lp.rows.map(r=>{
    const cls = r.player==='(EMPTY)'? ' class="critc"' : (r.change? ' style="background:#1f2733"' : '');
    const benchTag = r.slot==='bench';
