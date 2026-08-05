@@ -1,0 +1,170 @@
+source: https://buecker.baseball.cbssports.com/teams
+captured: 2026-08-05T00:41:34
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror 
+Nolen Smith
+(9th)
+ 
+ADD/DROP
+ 
+TRADES
+3 / 13
+WAIVER #
+YEAR
+2026
+PERIOD
+21
+OVERVIEW
+STATS
+PROJECTIONS
+RANKINGS
+SCHEDULE
+MATCHUP
+NEWS
+3 YEAR AVERAGE
+YEAR TO DATE
+YESTERDAY
+LAST 7
+LAST 14
+LAST 21
+LAST 28
+BATTERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	AB	R	H	1B	2B	3B	HR	RBI	BB	KO	SB	CS	BA	OBP	SLG	ROTO RANK
+
+	C	Austin Wells C • NYY	223	23	37	26	3	0	8	16	30	68	1	0	.166	.267	.287	687
+
+	1B	Pete Alonso 1B • BAL	423	68	106	62	21	0	23	71	56	121	5	1	.251	.345	.463	34
+
+	2B	Travis Bazzana 2B • CLE	306	37	75	49	15	2	9	35	42	79	16	4	.245	.341	.395	185
+
+	3B	Caleb Durbin 3B • BOS	348	52	86	54	20	1	11	49	28	52	13	4	.247	.318	.405	117
+
+	SS	Dansby Swanson SS • CHC	374	71	82	48	14	3	17	62	42	98	16	1	.219	.297	.409	45
+
+	MI	Colson Montgomery 3B,SS • CHW	399	52	86	43	18	0	25	63	37	144	1	1	.215	.296	.449	109
+
+	CI	Michael Busch 1B • CHC	427	49	103	69	18	2	14	63	67	115	2	1	.241	.354	.391	149
+
+	OF	Dominic Canzone OF • SEA	288	40	74	38	17	1	18	49	30	66	1	1	.257	.333	.510	161
+
+	OF	Corbin Carroll OF • ARI	414	67	100	50	22	12	16	52	55	109	15	2	.241	.337	.469	53
+
+	OF	Kody Clemens 1B,2B,OF • MIN	365	53	86	42	20	5	19	53	24	89	8	2	.236	.292	.474	101
+
+	OF	Steven Kwan OF • CLE	357	44	93	76	14	2	1	21	55	41	8	2	.261	.363	.319	333
+
+	U	Yandy Diaz 1B • TB 	424	61	127	91	20	1	15	64	43	72	3	1	.299	.373	.458	46
+RESERVES
+INJURED
+
+	C	Dalton Rushing C • LAD 	217	37	55	31	12	0	12	36	23	70	0	0	.254	.335	.475	263
+
+	C	Will Smith C • LAD 	173	23	43	32	5	0	6	23	23	34	0	0	.249	.338	.382	482
+
+	CI	Josh Jung 3B • TEX 	354	46	104	71	23	1	9	35	33	71	1	1	.294	.361	.441	196
+
+	OF	Aaron Judge OF • NYY 	214	43	53	26	10	0	17	38	42	72	5	3	.248	.374	.533	169
+MINORS
+PITCHERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
+
+	P	Slade Cecconi P • CLE 	110	21	5	0	4	7	0	0	88	35	125	4.75	1.45	665
+
+	P	Aroldis Chapman P • BOS	37	0	0	0	2	3	27	2	50	17	28	1.67	1.19	160
+
+	P	Sonny Gray P • BOS	113	20	13	0	13	2	0	0	98	30	103	2.93	1.17	82
+
+	P	Logan Henderson P • MIL 	50	10	2	0	6	1	0	0	62	10	35	2.70	0.90	241
+
+	P	Troy Melton P • DET	74	12	7	0	7	1	0	0	64	23	44	1.58	0.91	140
+
+	P	Erik Miller P • BOS	33	0	0	0	2	0	4	1	46	22	23	2.73	1.36	481
+
+	P	Eury Perez P • MIA	104	19	9	0	5	8	0	0	112	40	75	3.44	1.10	204
+
+	P	Walbert Urena P • LAA	99	18	9	0	7	7	0	0	95	52	72	2.54	1.25	188
+
+	P	Jacob deGrom P • TEX	113	21	8	0	7	7	0	0	135	29	101	3.96	1.14	173
+RESERVES
+
+	P	Dustin May P • MIL	109	21	10	1	5	7	0	0	106	35	105	4.38	1.28	371
+
+	P	Shohei Ohtani (Pitcher) P • LAD	85	14	12	0	8	2	0	0	95	26	55	1.79	0.95	84
+INJURED
+
+	P	Chase Dollander P • COL 	44	3	1	0	3	3	0	0	47	18	39	3.89	1.30	558
+MINORS
+
+	P	Luis Gil P • NYY 
+	19	4	1	0	1	2	0	0	9	11	15	6.05	1.34	1027
+
+	P	River Ryan P • DET 
+	0	0	0	0	0	0	0	0	0	0	0	0.00	0.00	9999
+ACTIVE: 21 RESERVE: 2 INJURED: 5 MINORS: 2
+Min/Max Info
+	IP
+Year to Date	823.0
+On Pace	1184.8
+Rules	1000-1300
+Status	On-Pace
+Note: stats in the 'matchups' view represent each player's career totals vs opponent as labeled.
+Blue = Player is cold vs this pitcher/team.
+Red = Player is hot vs this pitcher/team.
+Probable StartStarting TodayInjurySuspendedPlayer NewsHot PlayerCold Player
+Game may be delayed or rained outGame is likely to be delayed or rained out
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
