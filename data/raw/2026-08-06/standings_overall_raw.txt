@@ -1,0 +1,275 @@
+source: https://buecker.baseball.cbssports.com/standings/overall
+captured: 2026-08-06T12:34:01
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+1
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(7th)
+Standings
+ 
+ADD/DROP
+ 
+TRADES
+1
+3 / 13
+WAIVER #
+OVERALL
+BY PERIOD
+YEAR
+2026
+PERIOD
+PERIOD 20 (MON, AUG 03 - SUN, AUG 09)
+RANK
+	
+TEAM
+	
+BATTING
+	
+PITCHING
+	
+TOTAL
+	
+DIF
+	
+BEHIND
+
+1	Young Guns	48.5	38.0	86.5	-0.5	0.0
+2	Maga Doge	56.5	29.0	85.5	-2.0	1.0
+3	Big Sticks	46.0	39.0	85.0	5.5	1.5
+4	Rieken Havoc	32.5	49.0	81.5	-2.0	5.0
+5	Like a Nightmare	37.5	43.5	81.0	0.5	5.5
+6	Dawg	54.0	26.0	80.0	1.0	6.5
+7	Runtime Terror	38.5	31.0	69.5	4.5	17.0
+8	Guillotine	25.0	44.0	69.0	-3.5	17.5
+9	Long Balls	24.5	42.5	67.0	-3.5	19.5
+10	Gashouse Gang	23.0	38.5	61.5	0.5	25.0
+11	Trex	26.0	23.5	49.5	4.0	37.0
+12	Simba's Dublin Green Sox	26.0	22.5	48.5	1.5	38.0
+13	Magnum GI	17.0	28.5	45.5	-6.0	41.0
+Batting Breakdown
+TEAM	HR	PTS	DIF
+Maga Doge	238	13.0	0.0
+Dawg	214	12.0	1.0
+Young Guns	212	11.0	-1.0
+Big Sticks	211	10.0	0.5
+Like a Nightmare	202	9.0	-0.5
+Runtime Terror	177	7.5	0.5
+Long Balls	177	7.5	-0.5
+Simba's Dublin Green Sox	175	6.0	0.0
+Guillotine	171	5.0	0.0
+Gashouse Gang	156	4.0	0.5
+Rieken Havoc	154	3.0	-0.5
+Trex	147	2.0	0.5
+Magnum GI	144	1.0	-0.5
+TEAM	OBP	PTS	DIF
+Dawg	.3535	13.0	0.0
+Runtime Terror	.3373	12.0	0.0
+Maga Doge	.3368	11.0	0.0
+Young Guns	.3359	10.0	1.0
+Trex	.3345	9.0	-1.0
+Gashouse Gang	.3322	8.0	0.0
+Big Sticks	.3314	7.0	1.0
+Rieken Havoc	.3281	6.0	-1.0
+Long Balls	.3279	5.0	0.0
+Magnum GI	.3199	4.0	0.0
+Like a Nightmare	.3140	3.0	0.0
+Guillotine	.3131	2.0	0.0
+Simba's Dublin Green Sox	.3124	1.0	0.0
+TEAM	R	PTS	DIF
+Dawg	753	13.0	1.0
+Maga Doge	750	12.0	-1.0
+Young Guns	698	11.0	0.0
+Big Sticks	685	10.0	0.0
+Runtime Terror	674	9.0	0.0
+Like a Nightmare	655	8.0	0.0
+Gashouse Gang	646	7.0	1.0
+Guillotine	643	6.0	-1.0
+Rieken Havoc	636	5.0	0.0
+Magnum GI	621	4.0	0.0
+Trex	617	3.0	0.0
+Long Balls	586	2.0	0.0
+Simba's Dublin Green Sox	577	1.0	0.0
+TEAM	RBI	PTS	DIF
+Maga Doge	708	12.5	-0.5
+Big Sticks	708	12.5	0.5
+Dawg	662	11.0	0.0
+Young Guns	642	10.0	0.0
+Simba's Dublin Green Sox	636	9.0	0.0
+Long Balls	629	8.0	0.0
+Runtime Terror	627	7.0	0.0
+Rieken Havoc	604	6.0	0.0
+Like a Nightmare	602	5.0	1.0
+Magnum GI	601	4.0	-1.0
+Gashouse Gang	562	3.0	1.0
+Guillotine	561	2.0	-1.0
+Trex	505	1.0	0.0
+TEAM	SB	PTS	DIF
+Rieken Havoc	132	12.5	-0.5
+Like a Nightmare	132	12.5	0.5
+Trex	112	11.0	0.0
+Guillotine	110	10.0	0.5
+Simba's Dublin Green Sox	109	9.0	-0.5
+Maga Doge	101	8.0	0.5
+Young Guns	100	6.5	0.5
+Big Sticks	100	6.5	-1.0
+Dawg	95	5.0	0.0
+Magnum GI	93	4.0	0.0
+Runtime Terror	92	3.0	0.0
+Long Balls	75	2.0	0.0
+Gashouse Gang	65	1.0	0.0
+	 	
+Pitching Breakdown
+TEAM	ERA	PTS	DIF
+Rieken Havoc	3.385	13.0	0.0
+Runtime Terror	3.515	12.0	2.0
+Gashouse Gang	3.516	11.0	-1.0
+Guillotine	3.544	10.0	-1.0
+Long Balls	3.599	9.0	0.0
+Dawg	3.780	8.0	0.0
+Big Sticks	3.914	7.0	3.0
+Like a Nightmare	3.932	6.0	-1.0
+Young Guns	3.999	5.0	-1.0
+Magnum GI	4.046	4.0	-1.0
+Trex	4.060	3.0	0.0
+Simba's Dublin Green Sox	4.207	2.0	0.0
+Maga Doge	4.297	1.0	0.0
+TEAM	K	PTS	DIF
+Long Balls	1069	13.0	0.0
+Guillotine	986	12.0	0.0
+Like a Nightmare	971	11.0	0.0
+Big Sticks	968	10.0	0.0
+Young Guns	961	9.0	0.0
+Maga Doge	932	8.0	0.0
+Rieken Havoc	929	7.0	0.0
+Gashouse Gang	874	6.0	0.0
+Runtime Terror	857	5.0	1.0
+Magnum GI	854	4.0	-1.0
+Trex	841	2.5	0.5
+Simba's Dublin Green Sox	841	2.5	-0.5
+Dawg	800	1.0	0.0
+TEAM	S	PTS	DIF
+Rieken Havoc	67	13.0	0.0
+Like a Nightmare	64	11.5	0.5
+Magnum GI	64	11.5	-0.5
+Trex	47	10.0	0.0
+Big Sticks	44	9.0	0.0
+Long Balls	40	7.5	0.0
+Gashouse Gang	40	7.5	0.0
+Maga Doge	38	6.0	0.0
+Runtime Terror	35	5.0	0.0
+Simba's Dublin Green Sox	25	4.0	0.5
+Dawg	22	3.0	-0.5
+Guillotine	20	2.0	0.0
+Young Guns	19	1.0	0.0
+TEAM	WHIP	PTS	DIF
+Gashouse Gang	1.1339	13.0	0.0
+Like a Nightmare	1.1618	12.0	0.0
+Rieken Havoc	1.1752	11.0	0.0
+Young Guns	1.1985	10.0	0.0
+Guillotine	1.2086	9.0	0.0
+Dawg	1.2100	8.0	0.0
+Maga Doge	1.2264	7.0	0.0
+Trex	1.2344	6.0	3.0
+Runtime Terror	1.2353	5.0	1.0
+Big Sticks	1.2372	4.0	-1.0
+Long Balls	1.2402	3.0	-3.0
+Simba's Dublin Green Sox	1.2711	2.0	1.0
+Magnum GI	1.2862	1.0	-1.0
+TEAM	WQS	PTS	DIF
+Young Guns	139	13.0	0.0
+Simba's Dublin Green Sox	137	12.0	1.0
+Guillotine	135	11.0	-1.0
+Long Balls	127	10.0	0.0
+Big Sticks	122	9.0	2.5
+Magnum GI	121	8.0	-1.0
+Maga Doge	120	7.0	-1.0
+Dawg	119	6.0	-0.5
+Rieken Havoc	118	5.0	0.0
+Runtime Terror	116	4.0	0.0
+Like a Nightmare	108	3.0	0.0
+Trex	106	2.0	1.0
+Gashouse Gang	104	1.0	-1.0
+STANDINGS UPDATED AS OF 08/06/26 01:33 PM ET
+by Taboola
+Sponsored Links
+RECOMMENDED
+If You Haven't Slept Well Since Your 30s, Read This
+The Dose Review
+Learn More
+Buy 10 Oz Silver Bars - Take A Look!
+SearchConnect | Silver Bars
+Learn More
+2026 Luxury Sedans Are Turning Heads! (Search Now)
+SmartSearches | Luxury Sedan
+Learn More
+Dental Implant Price List For 2026. (Take A Look)
+ProSearches | Dental Implants
+Learn More
+Explore Buy 10 Oz Silver Bars (Search Now)
+SearchConnect | Silver Bars
+Learn More
+VA Assistance For Seniors Over 75 In 2026 (Search Now)
+SmartSearches | Va Assistance
+Learn More
+New Audi Q7 Has Arrived And Is Turning Heads.
+SmartSearches | Audi Q7
+Learn More
+Art-inspired maxi dresses for women who dare to stand out.
+CurveComfy
+Shop Now
+This Simple Trick Turns Any Garden Hose Into a Power Washer
+besyner
+Learn More
+Austin Men Over 40 Are Ditching the Blue Pill For This 7x Stronger Alternative
+Men's Health
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

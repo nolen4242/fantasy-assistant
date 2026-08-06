@@ -1,0 +1,201 @@
+source: https://buecker.baseball.cbssports.com/teams
+captured: 2026-08-06T12:34:03
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+1
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror 
+Nolen Smith
+(7th)
+ 
+ADD/DROP
+ 
+TRADES
+1
+3 / 13
+WAIVER #
+YEAR
+2026
+PERIOD
+21
+OVERVIEW
+STATS
+PROJECTIONS
+RANKINGS
+SCHEDULE
+MATCHUP
+NEWS
+3 YEAR AVERAGE
+YEAR TO DATE
+YESTERDAY
+LAST 7
+LAST 14
+LAST 21
+LAST 28
+BATTERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	AB	R	H	1B	2B	3B	HR	RBI	BB	KO	SB	CS	BA	OBP	SLG	ROTO RANK
+
+	C	Austin Wells C • NYY	225	23	38	27	3	0	8	16	30	68	1	0	.169	.269	.289	683
+
+	1B	Pete Alonso 1B • BAL	427	68	106	62	21	0	23	71	56	123	5	1	.248	.342	.459	36
+
+	2B	Travis Bazzana 2B • CLE	311	37	76	50	15	2	9	36	42	82	16	4	.244	.339	.392	189
+
+	3B	Caleb Durbin 3B • BOS	352	52	87	55	20	1	11	50	28	52	13	5	.247	.317	.403	120
+
+	SS	Dansby Swanson SS • CHC	378	72	83	48	15	3	17	63	42	99	16	1	.220	.296	.410	45
+
+	MI	Colson Montgomery 3B,SS • CHW	402	52	86	43	18	0	25	63	38	146	1	1	.214	.296	.445	116
+
+	CI	Michael Busch 1B • CHC	432	50	105	70	19	2	14	63	67	115	2	1	.243	.355	.394	152
+
+	OF	Dominic Canzone OF • SEA	291	41	74	38	17	1	18	49	31	66	1	1	.254	.332	.505	161
+
+	OF	Corbin Carroll OF • ARI 	417	69	102	52	22	12	16	53	56	109	16	2	.245	.340	.470	49
+
+	OF	Kody Clemens 1B,2B,OF • MIN	369	53	86	42	20	5	19	53	24	91	8	2	.233	.289	.469	106
+
+	OF	Steven Kwan OF • CLE 	362	45	94	77	14	2	1	21	56	43	8	2	.260	.362	.318	335
+
+	U	Yandy Diaz 1B • TB	424	61	127	91	20	1	15	64	43	72	3	1	.299	.373	.458	46
+RESERVES
+INJURED
+
+	C	Dalton Rushing C • LAD 	217	37	55	31	12	0	12	36	23	70	0	0	.254	.335	.475	267
+
+	C	Will Smith C • LAD 	173	23	43	32	5	0	6	23	23	34	0	0	.249	.338	.382	489
+
+	CI	Josh Jung 3B • TEX 	354	46	104	71	23	1	9	35	33	71	1	1	.294	.361	.441	199
+
+	OF	Aaron Judge OF • NYY 	214	43	53	26	10	0	17	38	42	72	5	3	.248	.374	.533	170
+MINORS
+PITCHERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
+
+	P	Aroldis Chapman P • BOS	37	0	0	0	2	3	27	2	50	17	28	1.67	1.19	160
+
+	P	Sonny Gray P • BOS 	119	21	14	0	14	2	0	0	106	32	106	2.78	1.15	53
+
+	P	Logan Henderson P • MIL	50	10	2	0	6	1	0	0	62	10	35	2.70	0.90	244
+
+	P	Dustin May P • MIL 	109	21	10	1	5	7	0	0	106	35	105	4.38	1.28	376
+
+	P	Troy Melton P • DET	74	12	7	0	7	1	0	0	64	23	44	1.58	0.91	142
+
+	P	Erik Miller P • BOS	33	0	0	0	2	0	4	1	46	22	23	2.73	1.36	487
+
+	P	Eury Perez P • MIA 	109	20	9	0	5	9	0	0	121	42	82	3.61	1.13	212
+
+	P	Walbert Urena P • LAA	99	18	9	0	7	7	0	0	95	52	72	2.54	1.25	193
+
+	P	Jacob deGrom P • TEX	113	21	8	0	7	7	0	0	135	29	101	3.96	1.14	176
+RESERVES
+
+	P	Shohei Ohtani (Pitcher) P • LAD 	85	14	12	0	8	2	0	0	95	26	55	1.79	0.95	84
+INJURED
+
+	P	Chase Dollander P • COL 	44	3	1	0	3	3	0	0	47	18	39	3.89	1.30	560
+MINORS
+
+	P	Luis Gil P • NYY 
+	19	4	1	0	1	2	0	0	9	11	15	6.05	1.34	1031
+
+	P	River Ryan P • DET 
+	0	0	0	0	0	0	0	0	0	0	0	0.00	0.00	9999
+ACTIVE: 21 RESERVE: 1 INJURED: 5 MINORS: 2
+Min/Max Info
+	IP
+Year to Date	850.0
+On Pace	1212.9
+Rules	1000-1300
+Status	On-Pace
+Note: stats in the 'matchups' view represent each player's career totals vs opponent as labeled.
+Blue = Player is cold vs this pitcher/team.
+Red = Player is hot vs this pitcher/team.
+Probable StartStarting TodayInjurySuspendedPlayer NewsHot PlayerCold Player
+Game may be delayed or rained outGame is likely to be delayed or rained out
+by Taboola
+Sponsored Links
+RECOMMENDED
+If You Haven't Slept Well Since Your 30s, Read This
+The Dose Review
+Learn More
+Buy 10 Oz Silver Bars - Take A Look!
+SearchConnect | Silver Bars
+Learn More
+2026 Luxury Sedans Are Turning Heads! (Search Now)
+SmartSearches | Luxury Sedan
+Learn More
+Dental Implant Price List For 2026. (Take A Look)
+ProSearches | Dental Implants
+Learn More
+Explore Buy 10 Oz Silver Bars (Search Now)
+SearchConnect | Silver Bars
+Learn More
+New Audi Q7 Has Arrived And Is Turning Heads.
+SmartSearches | Audi Q7
+Learn More
+This Simple Trick Turns Any Garden Hose Into a Power Washer
+besyner
+Learn More
+Art-inspired maxi dresses for women who dare to stand out.
+CurveComfy
+Shop Now
+Austin Men Over 40 Are Ditching the Blue Pill For This 7x Stronger Altern ative
+Men's Health
+Men Over 50 Are Ditching the Blue Pill For This 15-Minute Alternative
+Men's Health
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
