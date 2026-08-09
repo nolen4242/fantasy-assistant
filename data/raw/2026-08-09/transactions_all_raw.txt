@@ -1,0 +1,549 @@
+source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
+captured: 2026-08-09T13:54:01
+---
+DATE|TEAM|PLAYERS|EFFECTIVE|COST
+8/9/26 10:16 AM ET|Dawg|Sean Manaea P • NYM - Dropped|8/10/26|$0.00
+8/9/26 10:10 AM ET|Dawg|Brendan Donovan 2B,3B • SEA - Dropped|8/10/26|$0.00
+8/9/26 9:56 AM ET|Maga Doge|Kyle Leahy P • STL - Added|8/10/26|$2.50
+8/9/26 9:55 AM ET|Long Balls|Jackson Jobe P • DET - Added|8/10/26|$2.50
+8/9/26 9:53 AM ET|Long Balls|Christian Encarnacion-Strand 1B • BAL - Dropped|8/10/26|$0.00
+8/9/26 1:48 AM ET|Like a Nightmare|Hunter Dobbins P • STL - Added; Luis Castillo P • CHW - Dropped|8/10/26|$2.50
+8/9/26 1:42 AM ET|Like a Nightmare|Dean Kremer P • MIN - Added; Griffin Jax P • TB - Dropped|8/10/26|$2.50
+8/8/26 7:44 PM ET|Gashouse Gang|Shane Baz P • BAL - Added; Joe Ryan P • MIN - Moved to IR|8/10/26|$2.50
+8/8/26 9:09 AM ET|Long Balls|Kaelen Culpepper SS • MIN - Added; Jacob Wilson SS • ATH - Dropped|8/10/26|$2.50
+8/7/26 3:35 AM ET|Maga Doge|Brandon Marsh OF • PHI - Added off Waivers|8/10/26|$2.50
+8/6/26 4:09 PM ET|Guillotine|Jeff Hoffman P • MIN - Added; Will Warren P • NYY - Dropped|8/10/26|$2.50
+8/5/26 2:56 PM ET|Gashouse Gang|Jung Hoo Lee OF • SF - Added; Brandon Marsh OF • PHI - Dropped|8/10/26|$2.50
+8/5/26 8:34 AM ET|Rieken Havoc|George Lombard Jr. SS • NYY - Added; Luis Robert OF • NYM - Dropped|8/10/26|$2.50
+8/5/26 3:46 AM ET|Magnum GI|Hayden Wesneski P • HOU - Added; Brandon Sproat P • MIL - Sent to Minors|8/10/26|$2.50
+8/5/26 1:43 AM ET|Runtime Terror|Slade Cecconi P • CLE - Dropped|8/10/26|$0.00
+8/4/26 12:10 PM ET|Runtime Terror|Austin Wells C • NYY - Added|8/10/26|$2.50
+8/4/26 3:37 AM ET|Gashouse Gang|Luis Arraez 1B,2B • PHI - Activated|8/10/26|$0.00
+8/4/26 3:37 AM ET|Maga Doge|Luke Weaver P • PIT - Added off Waivers; Bryce Eldridge DH • SF - Dropped|8/10/26|$2.50
+8/4/26 3:37 AM ET|Gashouse Gang|Luis Arraez 1B,2B • PHI - Added off Waivers; Josh Bell 1B • MIN - Dropped|8/10/26|$2.50
+8/4/26 2:01 AM ET|Like a Nightmare|Andrew Painter P • PHI - Added; Aaron Nola P • PHI - Dropped|8/10/26|$2.50
+8/4/26 1:51 AM ET|Like a Nightmare|Luis Castillo P • CHW - Added|8/10/26|$2.50
+8/3/26 10:35 AM ET|Trex|Noah Cameron P • KC - Added|8/3/26|$2.50
+8/3/26 10:34 AM ET|Trex|Connor Prielipp P • MIN - Added; Seranthony Dominguez P • SEA - Dropped|8/3/26|$2.50
+8/3/26 9:28 AM ET|Maga Doge|Jung Hoo Lee OF • SF - Dropped|8/3/26|$0.00
+8/2/26 7:49 PM ET|Runtime Terror|Erik Miller P • BOS - Added; Garrett Mitchell OF • MIL - Dropped|8/3/26|$2.50
+8/2/26 4:08 PM ET|Runtime Terror|Slade Cecconi P • CLE - Added; Abner Uribe P • MIL - Dropped|8/3/26|$2.50
+8/2/26 11:38 AM ET|Dawg|Jeremiah Estrada P • SD - Dropped|8/3/26|$0.00
+8/2/26 11:37 AM ET|Dawg|Esteury Ruiz OF • MIA - Added|8/3/26|$2.50
+8/2/26 11:33 AM ET|Dawg|Sean Manaea P • NYM - Added|8/3/26|$2.50
+8/2/26 11:16 AM ET|Dawg|Zebby Matthews P • MIN - Dropped|8/3/26|$0.00
+8/2/26 11:13 AM ET|Dawg|Luis Arraez 1B,2B • PHI - Dropped|8/3/26|$0.00
+8/2/26 11:12 AM ET|Dawg|Luke Weaver P • PIT - Dropped|8/3/26|$0.00
+8/2/26 11:07 AM ET|Dawg|Andrew Abbott P • CIN - Dropped|8/3/26|$0.00
+8/1/26 11:51 PM ET|Like a Nightmare|Aaron Nola P • PHI - Added; Shane Bieber P • TOR - Dropped|8/3/26|$2.50
+8/1/26 11:17 PM ET|Like a Nightmare|Lawrence Butler OF • ATH - Added|8/3/26|$2.50
+8/1/26 7:49 PM ET|Guillotine|Brandyn Garcia P • ARI - Added; Bubba Chandler P • PIT - Dropped|8/3/26|$2.50
+8/1/26 7:30 AM ET|Maga Doge|Michael McGreevy P • STL - Added off Waivers; Alex Lange P • KC - Dropped|8/3/26|$2.50
+7/31/26 3:52 AM ET|Maga Doge|Spencer Torkelson 1B • DET - Added off Waivers; Kyle Leahy P • STL - Dropped|8/3/26|$2.50
+7/31/26 2:58 AM ET|Simba's Dublin Green Sox|Steven Cruz P • KC - Added; Chad Patrick P • MIL - Dropped|8/3/26|$2.50
+7/30/26 9:47 AM ET|Long Balls|Max Clark OF • DET - Added; Joseph Ortiz 3B,SS • MIL - Dropped|8/3/26|$2.50
+7/30/26 8:14 AM ET|Young Guns|Colt Emerson SS • SEA - Added|8/3/26|$2.50
+7/30/26 3:11 AM ET|Simba's Dublin Green Sox|Michael McGreevy P • STL - Dropped|8/3/26|$0.00
+7/30/26 3:07 AM ET|Simba's Dublin Green Sox|George Soriano P • STL - Added|8/3/26|$2.50
+7/29/26 9:55 PM ET|Trex|Victor Mesa Jr. OF • TB - Added; Henry Bolte OF • ATH - Dropped|8/3/26|$2.50
+7/29/26 8:24 AM ET|Young Guns|Bailey Ober P • MIN - Dropped|8/3/26|$0.00
+7/29/26 8:14 AM ET|Big Sticks|Clayton Beeter P • WAS - Added; Spencer Torkelson 1B • DET - Dropped|8/3/26|$2.50
+7/27/26 7:36 PM ET|Long Balls|Joseph Ortiz 3B,SS | MIL Added|7/27/26|$2.50
+7/27/26 2:17 PM ET|Guillotine|Bubba Chandler P • PIT - Added; Max Meyer P • MIA - Moved to IR|7/27/26|$2.50
+7/27/26 1:40 PM ET|Long Balls|Colt Emerson SS • SEA - Dropped|7/27/26|$0.00
+7/27/26 9:44 AM ET|Runtime Terror|Caleb Durbin 3B • BOS - Added|7/27/26|$2.50
+7/27/26 9:44 AM ET|Big Sticks|Spencer Steer 1B,OF • CIN - Dropped|7/27/26|$0.00
+7/27/26 9:43 AM ET|Runtime Terror|Steven Kwan OF • CLE - Added|7/27/26|$2.50
+7/27/26 9:39 AM ET|Runtime Terror|Kerry Carpenter OF • DET - Dropped|7/27/26|$0.00
+7/27/26 8:53 AM ET|Rieken Havoc|Zach Thornton P • NYM - Added; Gage Jump P • ATH - Dropped|7/27/26|$2.50
+7/27/26 8:49 AM ET|Rieken Havoc|Jorge Polanco 2B • NYM - Dropped|7/27/26|$0.00
+7/26/26 9:38 PM ET|Magnum GI|Francisco Alvarez C • NYM - Added; Samuel Basallo C • BAL - Moved to IR|7/27/26|$2.50
+7/26/26 6:27 PM ET|Gashouse Gang|Aaron Nola P • PHI - Dropped|7/27/26|$0.00
+7/26/26 6:13 PM ET|Big Sticks|Andrew Kittredge P • BAL - Dropped|7/27/26|$0.00
+7/25/26 9:08 AM ET|Maga Doge|Hogan Harris P • ATH - Added|7/27/26|$2.50
+7/25/26 8:54 AM ET|Long Balls|Christian Encarnacion-Strand 1B • BAL - Added; Luis Lara OF • MIL - Dropped|7/27/26|$2.50
+7/22/26 11:27 PM ET|Long Balls|Ty France 1B • SD - Added|7/27/26|$2.50
+7/22/26 5:48 PM ET|Gashouse Gang|Brady Singer P • CIN - Added; Bryan King P • HOU - Sent to Minors|7/27/26|$2.50
+7/22/26 5:40 PM ET|Like a Nightmare|Chase Meidroth 2B,SS • CHW - Added; Bobby Witt SS • KC - Moved to IR|7/27/26|$2.50
+7/22/26 3:35 AM ET|Young Guns|Pete Fairbanks P • MIA - Added off Waivers|7/27/26|$2.50
+7/22/26 2:28 AM ET|Simba's Dublin Green Sox|Chad Patrick P • MIL - Added; Antonio Senzatela P • MIL - Dropped|7/27/26|$2.50
+7/21/26 4:43 PM ET|Trex|Colt Keith 2B,3B • DET - Added; Kyle Manzardo 1B • CLE - Dropped|7/27/26|$2.50
+7/21/26 4:36 PM ET|Trex|Ronel Blanco P • HOU - Added; Didier Fuentes P • ATL - Dropped|7/27/26|$2.50
+7/20/26 8:12 PM ET|Long Balls|Kumar Rocker P | TEX Dropped|7/20/26|$0.00
+7/20/26 8:11 PM ET|Long Balls|Brandon Pfaadt P | ARI Added|7/20/26|$2.50
+7/20/26 4:00 PM ET|Like a Nightmare|Pete Fairbanks P • MIA - Dropped|7/20/26|$0.00
+7/20/26 2:42 AM ET|Simba's Dublin Green Sox|Keider Montero P • DET - Added; Dylan Lee P • ATL - Dropped|7/20/26|$2.50
+7/19/26 12:10 PM ET|Long Balls|Lane Thomas OF • ATL - Added|7/20/26|$2.50
+7/18/26 6:30 PM ET|Magnum GI|Christian Scott P • NYM - Added; Reynaldo Lopez P • ATL - Dropped|7/20/26|$2.50
+7/17/26 11:15 PM ET|Like a Nightmare|Roki Sasaki P • LAD - Added; Clayton Beeter P • WAS - Dropped|7/20/26|$2.50
+7/17/26 11:03 AM ET|Maga Doge|Kyle Leahy P • STL - Added|7/20/26|$2.50
+7/16/26 6:24 PM ET|Dawg|Alec Bohm 3B • PHI - Dropped|7/20/26|$0.00
+7/16/26 1:36 PM ET|Rieken Havoc|Tatsuya Imai P • HOU - Dropped|7/13/26|$0.00
+7/14/26 5:33 AM ET|Maga Doge|Cooper Pratt SS • MIL - Added|7/13/26|$2.50
+7/14/26 3:34 AM ET|Like a Nightmare|Clayton Beeter P • WAS - Added off Waivers; Roki Sasaki P • LAD - Dropped|7/13/26|$2.50
+7/13/26 2:28 PM ET|Guillotine|Spencer Schwellenbach P • ATL - Added; Nick Lodolo P • CIN - Moved to IR|7/13/26|$2.50
+7/13/26 12:32 PM ET|Big Sticks|Landen Roupp P • SF - Added; Luis Castillo P • CHW - Dropped|7/13/26|$2.50
+7/13/26 3:16 AM ET|Simba's Dublin Green Sox|Stephen Kolek P • KC - Dropped|7/13/26|$0.00
+7/12/26 7:47 PM ET|Dawg|Andrew Abbott P • CIN - Added; Clayton Beeter P • WAS - Dropped|7/13/26|$2.50
+7/12/26 11:27 AM ET|Big Sticks|Taylor Ward OF • SEA - Added; Cedric Mullins OF • TB - Dropped|7/13/26|$2.50
+7/12/26 3:45 AM ET|Like a Nightmare|Alejandro Kirk C • TOR - Dropped|7/13/26|$0.00
+7/12/26 3:43 AM ET|Like a Nightmare|Shane Bieber P • TOR - Added; Spencer Arrighetti P • TOR - Dropped|7/13/26|$2.50
+7/12/26 3:31 AM ET|Rieken Havoc|Gage Jump P • ATH - Added off Waivers|7/13/26|$2.50
+7/11/26 1:49 PM ET|Gashouse Gang|Garrett Whitlock P • BOS - Added; Jose Ferrer P • SEA - Dropped|7/13/26|$2.50
+7/11/26 12:42 PM ET|Long Balls|Heriberto Hernandez OF • MIA - Added; Lawrence Butler OF • ATH - Dropped|7/13/26|$2.50
+7/11/26 7:27 AM ET|Trex|Ernie Clement 2B,3B,SS • TOR - Added; Blaze Jordan 1B,3B • STL - Dropped|7/13/26|$2.50
+7/11/26 6:06 AM ET|Guillotine|Nolan Schanuel 1B • LAA - Dropped|7/13/26|$0.00
+7/11/26 3:31 AM ET|Like a Nightmare|Spencer Arrighetti P • TOR - Added off Waivers; Noah Schultz P • CHW - Dropped|7/13/26|$2.50
+7/10/26 11:46 PM ET|Young Guns|Charlie Condon 1B • COL - Added; Elvis Alvarado P • ATH - Dropped|7/13/26|$2.50
+7/10/26 11:40 PM ET|Big Sticks|Andrew Kittredge P • BAL - Added; Dylan Crews OF • WAS - Dropped|7/13/26|$2.50
+7/10/26 11:19 PM ET|Young Guns|Jacob Webb P • CHC - Added; Shane Bieber P • TOR - Dropped|7/13/26|$2.50
+7/10/26 9:31 PM ET|Dawg|Andres Gimenez 2B,SS • TOR - Dropped|7/13/26|$0.00
+7/10/26 12:23 PM ET|Rieken Havoc|Bubba Chandler P • PIT - Dropped|7/13/26|$0.00
+7/10/26 12:18 PM ET|Rieken Havoc|Anthony Volpe SS • NYY - Dropped|7/13/26|$0.00
+7/10/26 11:22 AM ET|Runtime Terror|Gage Jump P • ATH - Dropped|7/13/26|$0.00
+7/9/26 10:39 PM ET|Big Sticks|Jordan Romano P • COL - Added|7/13/26|$2.50
+7/9/26 11:39 AM ET|Long Balls|Spencer Arrighetti P • TOR - Dropped|7/13/26|$0.00
+7/9/26 12:21 AM ET|Like a Nightmare|Roki Sasaki P • LAD - Added|7/13/26|$2.50
+7/7/26 9:33 PM ET|Maga Doge|Kade Anderson P • SEA - Added; Walker Buehler P • SD - Dropped|7/13/26|$2.50
+7/7/26 4:13 PM ET|Dawg|Jack Flaherty P | DET Added|7/6/26|$2.50
+7/7/26 11:01 AM ET|Long Balls|Luis Lara OF • MIL - Added; Noelvi Marte 3B,OF • CIN - Dropped|7/13/26|$2.50
+7/7/26 4:00 AM ET|Like a Nightmare|Wilyer Abreu OF • BOS - Added off Waivers; Shane Baz P • BAL - Dropped|7/13/26|$2.50
+7/7/26 12:27 AM ET|Like a Nightmare|Jared Jones P • PIT - Added; Landen Roupp P • SF - Dropped|7/13/26|$2.50
+7/6/26 1:49 PM ET|Magnum GI|Kyle Karros 3B • COL - Added; Paul Goldschmidt 1B • NYY - Dropped|7/6/26|$2.50
+7/6/26 1:08 PM ET|Like a Nightmare|Taylor Ward OF • SEA - Dropped|7/6/26|$0.00
+7/6/26 11:02 AM ET|Runtime Terror|Troy Melton P • DET - Added; Roki Sasaki P • LAD - Dropped|7/6/26|$2.50
+7/6/26 10:59 AM ET|Runtime Terror|Dalton Rushing C • LAD - Added; Logan O'Hoppe C • TEX - Dropped|7/6/26|$2.50
+7/6/26 10:58 AM ET|Runtime Terror|Garrett Mitchell OF • MIL - Added; Cooper Pratt SS • MIL - Dropped|7/6/26|$2.50
+7/6/26 9:12 AM ET|Magnum GI|Max Muncy 2B,3B • ATH - Dropped|7/6/26|$0.00
+7/6/26 9:07 AM ET|Magnum GI|Sean Burke P • CHW - Added|7/6/26|$2.50
+7/6/26 9:04 AM ET|Magnum GI|Reynaldo Lopez P • ATL - Added; Martin Perez P • ATL - Dropped|7/6/26|$2.50
+7/5/26 7:34 PM ET|Guillotine|Jake Bennett P • BOS - Added|7/6/26|$2.50
+7/5/26 5:09 PM ET|Big Sticks|Dylan Crews OF • WAS - Added; Rico Garcia P • BAL - Dropped|7/6/26|$2.50
+7/5/26 4:56 PM ET|Big Sticks|Cedric Mullins OF • TB - Added; Wilyer Abreu OF • BOS - Dropped|7/6/26|$2.50
+7/5/26 12:02 PM ET|Long Balls|Ian Seymour P • TB - Added|7/6/26|$2.50
+7/5/26 8:22 AM ET|Maga Doge|Tyler Wells P • TB - Added; Jorge Soler OF • LAA - Dropped|7/6/26|$2.50
+7/4/26 12:41 PM ET|Dawg|Clayton Beeter P • WAS - Added|7/6/26|$2.50
+7/3/26 7:11 PM ET|Big Sticks|Rico Garcia P • BAL - Added; Jake Bennett P • BOS - Dropped|7/6/26|$2.50
+7/3/26 2:11 PM ET|Long Balls|Kumar Rocker P • TEX - Added|7/6/26|$2.50
+7/3/26 2:19 AM ET|Like a Nightmare|Landen Roupp P • SF - Added; Sean Burke P • CHW - Dropped|7/6/26|$2.50
+7/2/26 10:51 PM ET|Simba's Dublin Green Sox|Brad Lord P • WAS - Dropped|7/6/26|$0.00
+7/2/26 10:48 PM ET|Simba's Dublin Green Sox|Cole Ragans P • KC - Dropped|7/6/26|$0.00
+7/2/26 7:41 PM ET|Magnum GI|Esmerlyn Valdez OF • PIT - Added; Samad Taylor OF • SD - Dropped|7/6/26|$2.50
+7/2/26 3:54 PM ET|Simba's Dublin Green Sox|Chris Sale P • ATL - Traded from Rieken Havoc; Christian Yelich DH • MIL - Traded from Rieken Havoc|7/6/26|$2.50
+7/2/26 3:54 PM ET|Rieken Havoc|Kyle Schwarber DH • PHI - Traded from Simba's Dublin Green Sox|7/6/26|$2.50
+7/2/26 8:33 AM ET|Magnum GI|Grant Holmes P • ATL - Dropped|7/6/26|$0.00
+7/2/26 8:32 AM ET|Magnum GI|Shane Drohan P • MIL - Added|7/6/26|$2.50
+7/1/26 11:30 AM ET|Long Balls|Kyle Teel C • CHW - Dropped|7/6/26|$0.00
+7/1/26 11:27 AM ET|Long Balls|Peter Lambert P • HOU - Traded from Maga Doge; Ozzie Albies 2B • ATL - Traded from Maga Doge; Yordan Alvarez DH • HOU - Traded from Maga Doge|7/6/26|$2.50
+7/1/26 11:27 AM ET|Maga Doge|JJ Wetherholt 2B,SS • STL - Traded from Long Balls; Chase Burns P • CIN - Traded from Long Balls; Bryce Eldridge DH • SF - Traded from Long Balls|7/6/26|$2.50
+6/30/26 11:16 PM ET|Guillotine|Cade Cavalli P • WAS - Added; Landen Roupp P • SF - Dropped|7/6/26|$2.50
+6/30/26 9:53 AM ET|Big Sticks|Jake Bennett P • BOS - Added; Keider Montero P • DET - Dropped|7/6/26|$2.50
+6/29/26 5:54 PM ET|Guillotine|Nolan Schanuel 1B • LAA - Added|6/29/26|$2.50
+6/29/26 4:04 PM ET|Young Guns|Denzer Guzman 3B,SS • LAA - Dropped|6/29/26|$0.00
+6/29/26 4:04 PM ET|Young Guns|Clayton Beeter P • WAS - Dropped|6/29/26|$0.00
+6/29/26 8:02 AM ET|Maga Doge|Walker Buehler P • SD - Added; Rico Garcia P • BAL - Dropped|6/29/26|$2.50
+6/28/26 10:27 PM ET|Trex|Jorge Mateo SS,OF • ATL - Dropped|6/29/26|$0.00
+6/28/26 7:17 PM ET|Big Sticks|Luis Castillo P • CHW - Added; Noah Cameron P • KC - Dropped|6/29/26|$2.50
+6/28/26 5:55 PM ET|Magnum GI|Brandon Sproat P • MIL - Added; Randy Vasquez P • SD - Dropped|6/29/26|$2.50
+6/28/26 1:44 PM ET|Gashouse Gang|Josh Bell 1B • MIN - Added; Nate Lowe 1B • CLE - Dropped|6/29/26|$2.50
+6/28/26 2:50 AM ET|Simba's Dublin Green Sox|Erik Sabrowski P • CLE - Dropped|6/29/26|$0.00
+6/26/26 11:28 PM ET|Guillotine|Joey Cantillo P • CLE - Added; Robert Suarez P • ATL - Moved to IR|6/29/26|$2.50
+6/26/26 9:58 PM ET|Big Sticks|Keider Montero P • DET - Added|6/29/26|$2.50
+6/25/26 10:04 PM ET|Trex|Kyle Manzardo 1B • CLE - Added|6/29/26|$2.50
+6/25/26 9:59 PM ET|Trex|Tommy Edman 2B,OF • LAD - Added|6/29/26|$2.50
+6/25/26 9:55 PM ET|Trex|Blaze Jordan 1B,3B • STL - Added|6/29/26|$2.50
+6/25/26 3:04 PM ET|Runtime Terror|Jared Jones P • PIT - Dropped|6/29/26|$0.00
+6/24/26 1:29 PM ET|Like a Nightmare|Sean Burke P • CHW - Added; Edward Cabrera P • CHC - Moved to IR|6/29/26|$2.50
+6/24/26 3:07 AM ET|Maga Doge|Matt McLain 2B,SS • CIN - Added off Waivers; Jeff Hoffman P • MIN - Dropped|6/29/26|$2.50
+6/23/26 1:20 PM ET|Big Sticks|Tony Santillan P • CIN - Added|6/29/26|$2.50
+6/22/26 3:52 PM ET|Long Balls|Kyle Teel C • CHW - Added|6/22/26|$2.50
+6/22/26 12:00 PM ET|Young Guns|Oswald Peraza 2B,3B • LAA - Dropped|6/22/26|$0.00
+6/22/26 12:00 PM ET|Young Guns|Daulton Varsho OF • HOU - Added|6/22/26|$2.50
+6/22/26 11:54 AM ET|Magnum GI|Samad Taylor OF • SD - Added; Jacob Young OF • WAS - Dropped|6/22/26|$2.50
+6/22/26 2:03 AM ET|Guillotine|Landen Roupp P • SF - Added off Waivers; Matt McLain 2B,SS • CIN - Dropped|6/22/26|$2.50
+6/21/26 7:16 PM ET|Runtime Terror|Logan O'Hoppe C • TEX - Added; Dalton Rushing C • LAD - Dropped|6/22/26|$2.50
+6/21/26 6:18 PM ET|Young Guns|Victor Vodnik P • MIA - Dropped|6/22/26|$0.00
+6/21/26 6:17 PM ET|Young Guns|Denzer Guzman 3B,SS • LAA - Added; Luke Raley 1B,OF • SEA - Dropped|6/22/26|$2.50
+6/21/26 1:43 PM ET|Gashouse Gang|Adrian Morejon P • SD - Added; Jack Leiter P • TEX - Moved to IR|6/22/26|$2.50
+6/20/26 1:05 PM ET|Big Sticks|Bryson Stott 2B • PHI - Added; Colton Cowser OF • BAL - Dropped|6/22/26|$2.50
+6/20/26 1:00 PM ET|Big Sticks|Spencer Torkelson 1B • DET - Added; Luis Castillo P • CHW - Dropped|6/22/26|$2.50
+6/20/26 10:39 AM ET|Like a Nightmare|Griffin Jax P • TB - Added; Landen Roupp P • SF - Dropped|6/22/26|$2.50
+6/20/26 9:11 AM ET|Maga Doge|Peter Lambert P • HOU - Added|6/22/26|$2.50
+6/20/26 1:11 AM ET|Like a Nightmare|Alejandro Kirk C • TOR - Added; Keibert Ruiz C • WAS - Dropped|6/22/26|$2.50
+6/19/26 12:52 PM ET|Gashouse Gang|Garrett Cleavinger P • TB - Dropped|6/22/26|$0.00
+6/18/26 8:45 PM ET|Dawg|Andres Gimenez 2B,SS • TOR - Added|6/22/26|$2.50
+6/18/26 8:37 PM ET|Dawg|Alec Bohm 3B • PHI - Added; Ernie Clement 2B,3B,SS • TOR - Dropped|6/22/26|$2.50
+6/18/26 4:05 PM ET|Guillotine|Blaze Jordan 1B,3B • STL - Dropped|6/22/26|$0.00
+6/18/26 2:32 AM ET|Guillotine|Jakob Marsee OF • MIA - Added off Waivers|6/22/26|$2.50
+6/18/26 12:54 AM ET|Guillotine|Francisco Alvarez C • NYM - Dropped|6/22/26|$0.00
+6/17/26 11:16 AM ET|Young Guns|Elvis Alvarado P • ATH - Added; Cade Cavalli P • WAS - Dropped|6/22/26|$2.50
+6/17/26 5:03 AM ET|Simba's Dublin Green Sox|Andre Pallante P • STL - Added; Angel Martinez 2B,OF • CLE - Moved to IR|6/22/26|$2.50
+6/17/26 2:29 AM ET|Like a Nightmare|Chandler Simpson OF • TB - Added off Waivers; Griffin Jax P • TB - Dropped|6/22/26|$2.50
+6/17/26 2:29 AM ET|Maga Doge|Alex Lange P • KC - Added off Waivers; Joey Cantillo P • CLE - Dropped|6/22/26|$2.50
+6/16/26 11:41 PM ET|Big Sticks|Joshua Baez OF • STL - Added|6/22/26|$2.50
+6/16/26 1:01 PM ET|Runtime Terror|Kerry Carpenter OF • DET - Added; Jakob Marsee OF • MIA - Dropped|6/22/26|$2.50
+6/16/26 12:16 PM ET|Runtime Terror|Cooper Pratt SS • MIL - Added; Chase Meidroth 2B,SS • CHW - Dropped|6/22/26|$2.50
+6/16/26 2:04 AM ET|Simba's Dublin Green Sox|Daniel Susac C | SF Dropped|6/15/26|$0.00
+6/15/26 1:23 PM ET|Rieken Havoc|TJ Rumfield 1B • COL - Added; Jose Ramirez 3B • CLE - Moved to IR|6/15/26|$2.50
+6/15/26 1:07 PM ET|Gashouse Gang|Cedric Mullins OF • TB - Dropped|6/15/26|$0.00
+6/15/26 8:27 AM ET|Runtime Terror|Kody Clemens 1B,2B,OF • MIN - Added; Esteury Ruiz OF • MIA - Dropped|6/15/26|$2.50
+6/15/26 8:04 AM ET|Big Sticks|Alex Lange P • KC - Dropped|6/15/26|$0.00
+6/15/26 7:52 AM ET|Maga Doge|Chandler Simpson OF • TB - Dropped|6/15/26|$0.00
+6/15/26 12:51 AM ET|Like a Nightmare|Griffin Jax P • TB - Added; Spencer Torkelson 1B • DET - Dropped|6/15/26|$2.50
+6/14/26 11:57 PM ET|Magnum GI|Paul Goldschmidt 1B • NYY - Added; Ildemaro Vargas 1B,2B • ARI - Dropped|6/15/26|$2.50
+6/14/26 10:15 PM ET|Guillotine|Blaze Jordan 1B,3B • STL - Added; Christian Scott P • NYM - Dropped|6/15/26|$2.50
+6/14/26 9:49 PM ET|Magnum GI|Jeremiah Jackson 2B,OF • BAL - Dropped|6/15/26|$0.00
+6/14/26 9:05 PM ET|Young Guns|Gleyber Torres 2B • DET - Dropped|6/15/26|$0.00
+6/14/26 6:34 PM ET|Long Balls|Grayson Rodriguez P • LAA - Dropped|6/15/26|$0.00
+6/14/26 3:09 AM ET|Simba's Dublin Green Sox|Ezequiel Duran 1B,2B,3B,SS,OF • TEX - Added; Trent Grisham OF • NYY - Moved to IR|6/15/26|$2.50
+6/13/26 6:32 PM ET|Long Balls|Noelvi Marte 3B,OF • CIN - Added; Zac Gallen P • ARI - Dropped|6/15/26|$2.50
+6/13/26 11:44 AM ET|Long Balls|Adolis Garcia OF • PHI - Dropped|6/15/26|$0.00
+6/13/26 9:00 AM ET|Dawg|Alejandro Kirk C • TOR - Dropped|6/15/26|$0.00
+6/13/26 8:55 AM ET|Dawg|Kyle Finnegan P • DET - Dropped|6/15/26|$0.00
+6/13/26 3:16 AM ET|Simba's Dublin Green Sox|Brad Lord P • WAS - Added; Kerry Carpenter OF • DET - Dropped|6/15/26|$2.50
+6/13/26 2:10 AM ET|Magnum GI|Jake Mangum OF • PIT - Added; Brent Rooker OF • ATH - Moved to IR|6/15/26|$2.50
+6/13/26 12:37 AM ET|Like a Nightmare|Andrew Painter P • PHI - Dropped|6/15/26|$0.00
+6/12/26 9:54 AM ET|Runtime Terror|Dalton Rushing C • LAD - Added|6/15/26|$2.50
+6/12/26 8:56 AM ET|Magnum GI|Brandon Young P • BAL - Added; Andrew Abbott P • CIN - Dropped|6/15/26|$2.50
+6/11/26 8:11 PM ET|Big Sticks|Colton Cowser OF • BAL - Added; Brenton Doyle OF • CHW - Moved to IR|6/15/26|$2.50
+6/11/26 6:10 PM ET|Young Guns|Cole Carrigg OF • COL - Added; Ryan Waldschmidt OF • ARI - Dropped|6/15/26|$2.50
+6/10/26 4:09 PM ET|Long Balls|Adolis Garcia OF • PHI - Added; Gavin Sheets 1B,OF • SD - Dropped|6/15/26|$2.50
+6/10/26 9:35 AM ET|Guillotine|Braden Montgomery OF • CHW - Added; Ezequiel Duran 1B,2B,3B,SS,OF • TEX - Dropped|6/15/26|$2.50
+6/9/26 8:44 AM ET|Runtime Terror|Chase Meidroth 2B,SS | CHW Added|6/8/26|$2.50
+6/8/26 8:21 PM ET|Gashouse Gang|Luis Garcia 1B,2B • NYY - Added; J.P. Crawford 3B,SS • SEA - Moved to IR|6/15/26|$2.50
+6/8/26 3:27 PM ET|Maga Doge|Jung Hoo Lee OF • SF - Added|6/8/26|$2.50
+6/8/26 8:54 AM ET|Big Sticks|Ramon Laureano OF • SD - Dropped|6/8/26|$0.00
+6/8/26 8:42 AM ET|Magnum GI|Andrew Abbott P • CIN - Added; David Sandlin P • CHW - Dropped|6/8/26|$2.50
+6/8/26 8:22 AM ET|Rieken Havoc|Brad Keller P • PHI - Dropped|6/8/26|$0.00
+6/8/26 2:05 AM ET|Young Guns|A.J. Ewing OF • NYM - Added off Waivers|6/8/26|$2.50
+6/8/26 12:15 AM ET|Guillotine|Sam Antonacci 2B,OF • CHW - Added; Daulton Varsho OF • HOU - Dropped|6/8/26|$2.50
+6/7/26 11:01 PM ET|Simba's Dublin Green Sox|Colin Holderman P • CLE - Dropped|6/8/26|$0.00
+6/7/26 10:35 PM ET|Long Balls|Bryce Eldridge DH • SF - Added; Mark Vientos 1B,3B • NYM - Dropped|6/8/26|$2.50
+6/7/26 7:36 PM ET|Gashouse Gang|Griffin Jax P • TB - Dropped|6/8/26|$0.00
+6/7/26 2:15 AM ET|Like a Nightmare|Landen Roupp P • SF - Added off Waivers; Merrill Kelly P • ARI - Dropped|6/8/26|$2.50
+6/6/26 5:18 PM ET|Magnum GI|Nick Gonzales 2B,3B • PIT - Added; Miguel Andujar 3B,OF • SD - Dropped|6/8/26|$2.50
+6/6/26 4:29 PM ET|Gashouse Gang|Cedric Mullins OF • TB - Added; Willi Castro 2B,3B,SS,OF • COL - Dropped|6/8/26|$2.50
+6/6/26 4:26 PM ET|Gashouse Gang|Mauricio Dubon 2B,3B,SS,OF • ATL - Added; Steven Kwan OF • CLE - Dropped|6/8/26|$2.50
+6/6/26 1:49 PM ET|Dawg|Noelvi Marte 3B,OF • CIN - Dropped|6/8/26|$0.00
+6/6/26 1:46 PM ET|Dawg|Carlos Cortes OF • ATH - Dropped|6/8/26|$0.00
+6/6/26 1:45 PM ET|Dawg|A.J. Ewing OF • NYM - Dropped|6/8/26|$0.00
+6/6/26 1:21 PM ET|Gashouse Gang|J.P. Crawford 3B,SS • SEA - Added; Colton Cowser OF • BAL - Dropped|6/8/26|$2.50
+6/6/26 2:14 AM ET|Like a Nightmare|Spencer Torkelson 1B • DET - Added off Waivers; Lucas Erceg P • KC - Dropped|6/8/26|$2.50
+6/5/26 3:10 PM ET|Long Balls|Yoendrys Gomez P • MIN - Added; Dalton Rushing C • LAD - Dropped|6/8/26|$2.50
+6/5/26 10:37 AM ET|Runtime Terror|Dustin May P • MIL - Added|6/8/26|$2.50
+6/5/26 9:28 AM ET|Big Sticks|Alex Lange P • KC - Added; Landen Roupp P • SF - Dropped|6/8/26|$2.50
+6/5/26 3:27 AM ET|Simba's Dublin Green Sox|Stephen Kolek P • KC - Added; Matthew Liberatore P • STL - Dropped|6/8/26|$2.50
+6/4/26 11:55 PM ET|Guillotine|Christian Scott P • NYM - Added; Bryson Stott 2B • PHI - Dropped|6/8/26|$2.50
+6/4/26 6:32 PM ET|Young Guns|Gus Varland P • WAS - Dropped|6/8/26|$0.00
+6/4/26 4:45 PM ET|Young Guns|Paul Skenes P • PIT - Traded from Simba's Dublin Green Sox|6/8/26|$2.50
+6/4/26 4:45 PM ET|Simba's Dublin Green Sox|Kyle Schwarber DH • PHI - Traded from Young Guns|6/8/26|$2.50
+6/4/26 3:29 AM ET|Simba's Dublin Green Sox|Eduardo Rodriguez P • ARI - Added; Spencer Torkelson 1B • DET - Dropped|6/8/26|$2.50
+6/2/26 6:35 PM ET|Big Sticks|Brenton Doyle OF • CHW - Added; Ramon Laureano OF • SD - Moved to IR|6/8/26|$2.50
+6/1/26 2:48 PM ET|Big Sticks|Mitch Keller P • PIT - Dropped|6/1/26|$0.00
+6/1/26 1:36 PM ET|Young Guns|Oswald Peraza 2B,3B • LAA - Added|6/1/26|$2.50
+6/1/26 8:27 AM ET|Runtime Terror|River Ryan P • DET - Added|6/1/26|$2.50
+5/31/26 11:15 PM ET|Like a Nightmare|Dylan Crews OF • WAS - Dropped|6/1/26|$0.00
+5/31/26 3:29 PM ET|Trex|Nolan Gorman 2B,3B • STL - Dropped|6/1/26|$0.00
+5/31/26 3:29 PM ET|Trex|Jorge Mateo SS,OF • ATL - Added|6/1/26|$2.50
+5/31/26 3:28 PM ET|Trex|Spencer Horwitz 1B • PIT - Added|6/1/26|$2.50
+5/31/26 3:23 PM ET|Trex|Adolis Garcia OF • PHI - Dropped|6/1/26|$0.00
+5/31/26 3:22 PM ET|Trex|Kirby Yates P • PIT - Dropped|6/1/26|$0.00
+5/31/26 2:58 AM ET|Simba's Dublin Green Sox|Curtis Mead 1B,3B • BOS - Added; Luis Garcia 1B,2B • NYY - Dropped|6/1/26|$2.50
+5/31/26 2:45 AM ET|Simba's Dublin Green Sox|Colin Holderman P • CLE - Added; Erik Sabrowski P • CLE - Moved to IR|6/1/26|$2.50
+5/31/26 2:41 AM ET|Simba's Dublin Green Sox|Jake McCarthy OF • COL - Added; Teoscar Hernandez OF • LAD - Moved to IR|6/1/26|$2.50
+5/30/26 7:36 PM ET|Magnum GI|David Sandlin P • CHW - Added; Andre Pallante P • STL - Dropped|6/1/26|$2.50
+5/30/26 7:34 PM ET|Magnum GI|Jacob Young OF • WAS - Added; Austin Martin OF • MIN - Dropped|6/1/26|$2.50
+5/30/26 2:28 PM ET|Dawg|Luke Weaver P • PIT - Added|6/1/26|$2.50
+5/30/26 2:10 PM ET|Dawg|Carlos Cortes OF • ATH - Added|6/1/26|$2.50
+5/28/26 2:58 PM ET|Gashouse Gang|Colton Cowser OF • BAL - Added; Josh Bell 1B • MIN - Dropped|6/1/26|$2.50
+5/27/26 11:05 PM ET|Dawg|Kyle Finnegan P • DET - Added|6/1/26|$2.50
+5/27/26 2:31 AM ET|Big Sticks|Luis Castillo P • CHW - Added off Waivers; Andres Gimenez 2B,SS • TOR - Dropped|6/1/26|$2.50
+5/27/26 12:45 AM ET|Like a Nightmare|Shane Baz P • BAL - Added|6/1/26|$2.50
+5/26/26 11:37 AM ET|Runtime Terror|Gage Jump P • ATH - Added; Christian Scott P • NYM - Dropped|6/1/26|$2.50
+5/25/26 8:11 AM ET|Young Guns|Luis Castillo P • CHW - Dropped|5/25/26|$0.00
+5/25/26 6:54 AM ET|Maga Doge|Dustin May P • MIL - Dropped|5/25/26|$0.00
+5/25/26 3:10 AM ET|Simba's Dublin Green Sox|Dylan Lee P • ATL - Added; Peter Lambert P • HOU - Dropped|5/25/26|$2.50
+5/24/26 11:52 PM ET|Magnum GI|Miguel Andujar 3B,OF • SD - Added; Daniel Schneemann 2B,3B,OF • CLE - Dropped|5/25/26|$2.50
+5/24/26 11:35 PM ET|Magnum GI|Martin Perez P • ATL - Added|5/25/26|$2.50
+5/24/26 8:00 PM ET|Trex|Brice Matthews 2B,OF • HOU - Dropped|5/25/26|$0.00
+5/24/26 2:48 PM ET|Guillotine|Ezequiel Duran 1B,2B,3B,SS,OF • TEX - Added; Nolan Schanuel 1B • LAA - Dropped|5/25/26|$2.50
+5/24/26 2:38 PM ET|Guillotine|Trevor McDonald P • SF - Dropped|5/25/26|$0.00
+5/24/26 9:00 AM ET|Dawg|Ernie Clement 2B,3B,SS • TOR - Added|5/25/26|$2.50
+5/24/26 1:39 AM ET|Big Sticks|Noah Cameron P • KC - Added; Jeffrey Springs P • ATH - Dropped|5/25/26|$2.50
+5/23/26 6:48 AM ET|Big Sticks|Ramon Laureano OF • SD - Added; Mickey Moniak OF • COL - Moved to IR|5/25/26|$2.50
+5/22/26 8:18 PM ET|Gashouse Gang|Griffin Jax P • TB - Added; Jameson Taillon P • TOR - Dropped|5/25/26|$2.50
+5/22/26 11:05 AM ET|Runtime Terror|Roki Sasaki P • LAD - Added|5/25/26|$2.50
+5/21/26 8:50 PM ET|Gashouse Gang|Josh Bell 1B • MIN - Added; Drake Baldwin C • ATL - Moved to IR|5/25/26|$2.50
+5/21/26 7:27 PM ET|Like a Nightmare|Keibert Ruiz C • WAS - Added; Ryan Jeffers C • MIN - Moved to IR|5/25/26|$2.50
+5/21/26 7:15 PM ET|Maga Doge|James Wood OF • WAS - Traded from Dawg; Joey Cantillo P • CLE - Traded from Dawg|5/25/26|$2.50
+5/21/26 7:15 PM ET|Dawg|Yoshinobu Yamamoto P • LAD - Traded from Maga Doge; Bryan Reynolds OF • PIT - Traded from Maga Doge|5/25/26|$2.50
+5/21/26 6:36 PM ET|Young Guns|Cade Cavalli P • WAS - Added|5/25/26|$2.50
+5/21/26 6:26 PM ET|Dawg|Caleb Thielbar P • CHC - Dropped|5/25/26|$0.00
+5/21/26 6:08 PM ET|Long Balls|Grant Taylor P • CHW - Added; Jack Perkins P • ATH - Dropped|5/25/26|$2.50
+5/21/26 12:50 PM ET|Big Sticks|Spencer Steer 1B,OF • CIN - Added; Brenton Doyle OF • CHW - Dropped|5/25/26|$2.50
+5/20/26 11:28 PM ET|Long Balls|Gavin Sheets 1B,OF • SD - Added|5/25/26|$2.50
+5/19/26 6:00 PM ET|Young Guns|Ryan Waldschmidt OF • ARI - Added; Evan Carter OF • TEX - Dropped|5/25/26|$2.50
+5/18/26 11:44 PM ET|Like a Nightmare|Merrill Kelly P • ARI - Added; Brandon Sproat P • MIL - Dropped|5/25/26|$2.50
+5/18/26 7:13 PM ET|Dawg|Marcus Semien 2B | NYM Added|5/18/26|$2.50
+5/18/26 1:09 PM ET|Big Sticks|Brenton Doyle OF • CHW - Added; Lucas Giolito P • SD - Dropped|5/18/26|$2.50
+5/18/26 9:26 AM ET|Rieken Havoc|Anthony Volpe SS • NYY - Added; Edouard Julien 1B,2B • COL - Dropped|5/18/26|$2.50
+5/18/26 9:17 AM ET|Rieken Havoc|Jakob Junis P • TEX - Dropped|5/18/26|$0.00
+5/18/26 9:17 AM ET|Rieken Havoc|Alex Vesia P • LAD - Dropped|5/18/26|$0.00
+5/18/26 9:14 AM ET|Rieken Havoc|Spencer Steer 1B,OF • CIN - Dropped|5/18/26|$0.00
+5/18/26 9:04 AM ET|Guillotine|Bryson Stott 2B • PHI - Added|5/18/26|$2.50
+5/18/26 7:23 AM ET|Long Balls|Sam Antonacci 2B,OF • CHW - Dropped|5/18/26|$0.00
+5/18/26 3:04 AM ET|Simba's Dublin Green Sox|J.T. Ginn P • ATH - Added; Sean Burke P • CHW - Dropped|5/18/26|$2.50
+5/18/26 1:50 AM ET|Like a Nightmare|Brandon Sproat P • MIL - Added; Luis Severino P • ATH - Dropped|5/18/26|$2.50
+5/18/26 1:49 AM ET|Like a Nightmare|Andrew Painter P • PHI - Added; Moises Ballesteros DH • LAA - Dropped|5/18/26|$2.50
+5/17/26 8:55 PM ET|Big Sticks|Lucas Giolito P • SD - Added|5/18/26|$2.50
+5/17/26 6:36 PM ET|Dawg|Luis Arraez 1B,2B • PHI - Added|5/18/26|$2.50
+5/17/26 5:24 PM ET|Guillotine|Trevor McDonald P • SF - Added|5/18/26|$2.50
+5/17/26 12:52 PM ET|Maga Doge|Zack Gelof 2B,3B,OF • ATH - Added; Trevor Story SS • BOS - Moved to IR|5/18/26|$2.50
+5/17/26 10:30 AM ET|Dawg|Tanner Bibee P • CLE - Added; Grant Taylor P • CHW - Dropped|5/18/26|$2.50
+5/17/26 3:03 AM ET|Simba's Dublin Green Sox|Daniel Susac C • SF - Added; Cal Raleigh C • SEA - Moved to IR|5/18/26|$2.50
+5/16/26 6:29 PM ET|Runtime Terror|Christian Scott P • NYM - Added|5/18/26|$2.50
+5/16/26 6:23 PM ET|Runtime Terror|Walbert Urena P • LAA - Added|5/18/26|$2.50
+5/16/26 6:16 PM ET|Runtime Terror|Dennis Santana P • PIT - Dropped|5/18/26|$0.00
+5/16/26 5:48 PM ET|Gashouse Gang|Brenton Doyle OF • CHW - Dropped|5/18/26|$0.00
+5/16/26 12:22 PM ET|Magnum GI|Austin Martin OF • MIN - Added; Jake McCarthy OF • COL - Dropped|5/18/26|$2.50
+5/16/26 10:28 AM ET|Dawg|Zebby Matthews P • MIN - Added|5/18/26|$2.50
+5/14/26 6:43 PM ET|Maga Doge|J.J. Bleday OF • CIN - Added; Ramon Laureano OF • SD - Dropped|5/18/26|$2.50
+5/14/26 6:57 AM ET|Guillotine|Gabriel Moreno C • ARI - Added; Francisco Alvarez C • NYM - Moved to IR|5/18/26|$2.50
+5/13/26 8:56 PM ET|Long Balls|Sam Antonacci 2B,OF • CHW - Added|5/18/26|$2.50
+5/13/26 7:30 AM ET|Magnum GI|Jake McCarthy OF • COL - Added|5/18/26|$2.50
+5/12/26 6:06 PM ET|Trex|Henry Bolte OF • ATH - Added; Colt Keith 2B,3B • DET - Dropped|5/18/26|$2.50
+5/12/26 3:51 PM ET|Dawg|A.J. Ewing OF • NYM - Added; Hye Seong Kim 2B,SS • LAD - Dropped|5/18/26|$2.50
+5/12/26 12:02 PM ET|Big Sticks|Andres Gimenez 2B,SS • TOR - Added; Marcus Semien 2B • NYM - Dropped|5/18/26|$2.50
+5/12/26 1:05 AM ET|Young Guns|Caleb Kilian P • PHI - Added; Tanner Bibee P • CLE - Dropped|5/18/26|$2.50
+5/11/26 5:14 PM ET|Guillotine|JR Ritchie P • ATL - Dropped|5/11/26|$0.00
+5/11/26 5:13 PM ET|Guillotine|Nolan Schanuel 1B • LAA - Added|5/11/26|$2.50
+5/11/26 4:41 PM ET|Simba's Dublin Green Sox|Erik Sabrowski P • CLE - Added; Kyle Finnegan P • DET - Dropped|5/11/26|$2.50
+5/11/26 10:58 AM ET|Maga Doge|Ryne Nelson P • ARI - Added|5/11/26|$2.50
+5/11/26 10:53 AM ET|Guillotine|Tony Santillan P • CIN - Dropped|5/11/26|$0.00
+5/11/26 10:52 AM ET|Runtime Terror|Esteury Ruiz OF • MIA - Added; Roki Sasaki P • LAD - Dropped|5/11/26|$2.50
+5/11/26 8:43 AM ET|Dawg|Tomoyuki Sugano P • COL - Dropped|5/11/26|$0.00
+5/10/26 9:00 PM ET|Trex|Adolis Garcia OF • PHI - Added|5/11/26|$2.50
+5/10/26 8:58 PM ET|Trex|Carlos Correa 3B,SS • HOU - Dropped|5/11/26|$0.00
+5/10/26 8:01 PM ET|Simba's Dublin Green Sox|Brayan Rocchio 2B,SS • CLE - Added; Kerry Carpenter OF • DET - Moved to IR|5/11/26|$2.50
+5/10/26 1:31 AM ET|Magnum GI|Andre Pallante P • STL - Added; Tyler Glasnow P • LAD - Moved to IR|5/11/26|$2.50
+5/10/26 12:18 AM ET|Like a Nightmare|Matt Wallner OF • MIN - Dropped|5/11/26|$0.00
+5/9/26 7:22 PM ET|Gashouse Gang|Jameson Taillon P • TOR - Added; Matthew Boyd P • CHC - Moved to IR|5/11/26|$2.50
+5/9/26 7:15 PM ET|Gashouse Gang|Nate Lowe 1B • CLE - Added; Dominic Smith 1B • ATL - Dropped|5/11/26|$2.50
+5/9/26 6:01 PM ET|Young Guns|Luke Raley 1B,OF • SEA - Added|5/11/26|$2.50
+5/8/26 5:22 PM ET|Simba's Dublin Green Sox|Willy Adames SS • SF - Traded from Like a Nightmare; Paul Skenes P • PIT - Traded from Like a Nightmare|5/11/26|$2.50
+5/8/26 5:22 PM ET|Like a Nightmare|David Bednar P • NYY - Traded from Simba's Dublin Green Sox; Bobby Witt SS • KC - Traded from Simba's Dublin Green Sox|5/11/26|$2.50
+5/8/26 5:19 PM ET|Simba's Dublin Green Sox|Antonio Senzatela P • MIL - Added|5/11/26|$2.50
+5/7/26 8:47 PM ET|Long Balls|Spencer Jones OF • NYY - Added; Adolis Garcia OF • PHI - Dropped|5/11/26|$2.50
+5/7/26 3:49 PM ET|Long Balls|Robby Snelling P • MIA - Added; Cade Cavalli P • WAS - Dropped|5/11/26|$2.50
+5/7/26 2:59 PM ET|Magnum GI|Samuel Basallo C • BAL - Added|5/11/26|$2.50
+5/7/26 9:56 AM ET|Runtime Terror|Logan Henderson P • MIL - Added; Noah Cameron P • KC - Dropped|5/11/26|$2.50
+5/7/26 8:52 AM ET|Big Sticks|Marcus Semien 2B • NYM - Added; Caleb Kilian P • PHI - Dropped|5/11/26|$2.50
+5/7/26 2:58 AM ET|Simba's Dublin Green Sox|Peter Lambert P • HOU - Added; Emilio Pagan P • CIN - Moved to IR|5/11/26|$2.50
+5/6/26 8:35 PM ET|Young Guns|Casey Schmitt 2B,3B,OF • SF - Added|5/11/26|$2.50
+5/6/26 8:13 PM ET|Big Sticks|Caleb Kilian P • PHI - Added; Ryan Walker P • SF - Dropped|5/11/26|$2.50
+5/6/26 7:14 PM ET|Like a Nightmare|Reid Detmers P • LAA - Added|5/11/26|$2.50
+5/6/26 7:04 PM ET|Like a Nightmare|Justin Crawford OF • PHI - Dropped|5/11/26|$0.00
+5/6/26 6:59 PM ET|Like a Nightmare|Brice Turang 2B • MIL - Traded from Runtime Terror; Taylor Ward OF • SEA - Traded from Runtime Terror|5/11/26|$2.50
+5/6/26 6:59 PM ET|Runtime Terror|Travis Bazzana 2B • CLE - Traded from Like a Nightmare; Shohei Ohtani (Pitcher) P • LAD - Traded from Like a Nightmare|5/11/26|$2.50
+5/6/26 12:34 PM ET|Gashouse Gang|Aaron Nola P • PHI - Added; Rhett Lowder P • CIN - Dropped|5/11/26|$2.50
+5/6/26 10:29 AM ET|Runtime Terror|Andrew Abbott P • CIN - Dropped|5/11/26|$0.00
+5/6/26 10:23 AM ET|Runtime Terror|Jared Jones P • PIT - Added; Jack Kochanowicz P • LAA - Dropped|5/11/26|$2.50
+5/5/26 10:28 PM ET|Guillotine|Tony Santillan P • CIN - Added; Nolan Schanuel 1B • LAA - Dropped|5/11/26|$2.50
+5/5/26 4:25 PM ET|Gashouse Gang|Jack Leiter P • TEX - Added; Tarik Skubal P • LAD - Moved to IR|5/11/26|$2.50
+5/4/26 6:30 PM ET|Long Balls|Mark Vientos 1B,3B • NYM - Added; Coby Mayo 1B,3B • BAL - Dropped|5/11/26|$2.50
+5/4/26 5:04 PM ET|Guillotine|Michael Burrows P • HOU - Dropped|5/4/26|$0.00
+5/4/26 2:45 PM ET|Trex|Brice Matthews 2B,OF • HOU - Added|5/4/26|$2.50
+5/4/26 1:54 PM ET|Trex|Reid Detmers P • LAA - Dropped|5/4/26|$0.00
+5/4/26 1:45 PM ET|Trex|Sal Frelick OF • MIL - Dropped|5/4/26|$0.00
+5/4/26 8:45 AM ET|Rieken Havoc|Spencer Steer 1B,OF • CIN - Added; Luis Robert OF • NYM - Moved to IR|5/4/26|$2.50
+5/4/26 8:26 AM ET|Magnum GI|Garrett Mitchell OF • MIL - Dropped|5/4/26|$0.00
+5/4/26 3:13 AM ET|Simba's Dublin Green Sox|Sean Burke P • CHW - Added; Merrill Kelly P • ARI - Dropped|5/4/26|$2.50
+5/4/26 3:00 AM ET|Simba's Dublin Green Sox|Kyle Finnegan P • DET - Added; Aaron Nola P • PHI - Dropped|5/4/26|$2.50
+5/4/26 12:12 AM ET|Like a Nightmare|Luis Severino P • ATH - Added; Tyler Phillips P • MIA - Dropped|5/4/26|$2.50
+5/4/26 12:05 AM ET|Like a Nightmare|Justin Crawford OF • PHI - Added|5/4/26|$2.50
+5/3/26 11:56 PM ET|Like a Nightmare|Ceddanne Rafaela 2B,OF • BOS - Added; Luke Raley 1B,OF • SEA - Dropped|5/4/26|$2.50
+5/3/26 4:49 PM ET|Big Sticks|Joel Kuhnel P • MIL - Dropped|5/4/26|$0.00
+5/3/26 3:53 PM ET|Long Balls|Jack Perkins P • ATH - Added; Jack Leiter P • TEX - Dropped|5/4/26|$2.50
+5/3/26 2:27 PM ET|Maga Doge|Dustin May P • MIL - Added; Chase Silseth P • TEX - Dropped|5/4/26|$2.50
+5/3/26 9:02 AM ET|Young Guns|Bailey Ober P • MIN - Added; Andrew Painter P • PHI - Dropped|5/4/26|$2.50
+5/2/26 8:28 PM ET|Trex|Shane Baz P • BAL - Dropped|5/4/26|$0.00
+5/2/26 8:36 AM ET|Maga Doge|Rico Garcia P • BAL - Added|5/4/26|$2.50
+5/2/26 7:59 AM ET|Young Guns|Foster Griffin P • CLE - Added|5/4/26|$2.50
+5/2/26 7:47 AM ET|Long Balls|Cade Cavalli P • WAS - Added|5/4/26|$2.50
+5/1/26 11:18 PM ET|Big Sticks|Jacob Latz P • TEX - Added; Andres Gimenez 2B,SS • TOR - Dropped|5/4/26|$2.50
+4/29/26 12:53 PM ET|Gashouse Gang|Jonathan India 2B,3B,OF • KC - Dropped|5/4/26|$0.00
+4/29/26 1:17 AM ET|Like a Nightmare|Tyler Phillips P • MIA - Added|5/4/26|$2.50
+4/28/26 10:39 PM ET|Magnum GI|Daniel Schneemann 2B,3B,OF • CLE - Added; Max Muncy 2B,3B • ATH - Moved to IR|5/4/26|$2.50
+4/28/26 5:44 PM ET|Long Balls|Coby Mayo 1B,3B | BAL Added|4/27/26|$2.50
+4/28/26 12:50 PM ET|Maga Doge|Gregory Soto P • PIT - Added; Dustin May P • MIL - Dropped|5/4/26|$2.50
+4/28/26 3:02 AM ET|Trex|Seth Lugo P • KC - Added off Waivers; Justin Crawford OF • PHI - Dropped|5/4/26|$2.50
+4/28/26 1:25 AM ET|Like a Nightmare|Ryan Jeffers C • MIN - Added; Yainer Diaz C • HOU - Dropped|5/4/26|$2.50
+4/27/26 9:39 PM ET|Like a Nightmare|Travis Bazzana 2B • CLE - Added; Ezequiel Tovar SS • COL - Dropped|5/4/26|$2.50
+4/27/26 5:35 PM ET|Gashouse Gang|Sean Manaea P • NYM - Dropped|4/27/26|$0.00
+4/27/26 10:26 AM ET|Rieken Havoc|Carson Benge OF • NYM - Added; Wyatt Langford OF • TEX - Moved to IR|4/27/26|$2.50
+4/27/26 10:09 AM ET|Rieken Havoc|Nasim Nunez 2B,SS • WAS - Added; Francisco Lindor SS • NYM - Moved to IR|4/27/26|$2.50
+4/27/26 7:49 AM ET|Runtime Terror|Jack Kochanowicz P • LAA - Added|4/27/26|$2.50
+4/27/26 7:48 AM ET|Maga Doge|Chase Silseth P • TEX - Added; Jordan Romano P • COL - Dropped|4/27/26|$2.50
+4/27/26 3:31 AM ET|Simba's Dublin Green Sox|Brooks Lee 2B,3B,SS • MIN - Added; Ceddanne Rafaela 2B,OF • BOS - Dropped|4/27/26|$2.50
+4/27/26 2:52 AM ET|Simba's Dublin Green Sox|Marcus Semien 2B • NYM - Dropped|4/27/26|$0.00
+4/26/26 7:36 PM ET|Magnum GI|Reynaldo Lopez P • ATL - Dropped|4/27/26|$0.00
+4/26/26 7:32 PM ET|Magnum GI|Davis Martin P • CHW - Added; Raisel Iglesias P • ATL - Moved to IR|4/27/26|$2.50
+4/26/26 7:05 PM ET|Long Balls|Kodai Senga P • NYM - Dropped|4/27/26|$0.00
+4/26/26 6:30 PM ET|Young Guns|Gus Varland P • WAS - Added; Gregory Soto P • PIT - Dropped|4/27/26|$2.50
+4/26/26 6:29 PM ET|Guillotine|JR Ritchie P • ATL - Added; Seth Lugo P • KC - Dropped|4/27/26|$2.50
+4/26/26 4:58 PM ET|Long Balls|Owen Caissie OF • MIA - Dropped|4/27/26|$0.00
+4/25/26 10:05 PM ET|Like a Nightmare|Yusei Kikuchi P • LAA - Added; Luis Severino P • ATH - Dropped|4/27/26|$2.50
+4/25/26 9:37 PM ET|Dawg|Nick Martinez P • TB - Added; Jack Flaherty P • DET - Dropped|4/27/26|$2.50
+4/25/26 7:27 PM ET|Magnum GI|Joshua Lowe OF • LAA - Dropped|4/27/26|$0.00
+4/25/26 7:26 PM ET|Magnum GI|Ildemaro Vargas 1B,2B • ARI - Added|4/27/26|$2.50
+4/25/26 10:41 AM ET|Trex|Sal Frelick OF • MIL - Added|4/27/26|$2.50
+4/25/26 9:52 AM ET|Long Balls|Josh Bell 1B • MIN - Dropped|4/27/26|$0.00
+4/24/26 9:22 PM ET|Gashouse Gang|Brandon Marsh OF • PHI - Added; Colton Cowser OF • BAL - Dropped|4/27/26|$2.50
+4/23/26 7:03 PM ET|Young Guns|Walker Buehler P • SD - Dropped|4/27/26|$0.00
+4/23/26 12:58 PM ET|Runtime Terror|Chase Dollander P • COL - Added; Eduardo Rodriguez P • ARI - Dropped|4/27/26|$2.50
+4/22/26 5:55 PM ET|Gashouse Gang|Brady Singer P • CIN - Dropped|4/27/26|$0.00
+4/22/26 11:00 AM ET|Maga Doge|Dustin May P • MIL - Added; Ryne Nelson P • ARI - Dropped|4/27/26|$2.50
+4/22/26 9:00 AM ET|Runtime Terror|Dominic Canzone OF • SEA - Added; Mark Vientos 1B,3B • NYM - Dropped|4/27/26|$2.50
+4/22/26 8:55 AM ET|Runtime Terror|Josh Jung 3B • TEX - Added|4/27/26|$2.50
+4/21/26 10:41 PM ET|Big Sticks|Ryan Walker P • SF - Added; Enyel De Los Santos P • HOU - Dropped|4/27/26|$2.50
+4/21/26 8:45 PM ET|Dawg|Connor Norby 1B,3B • COL - Dropped|4/27/26|$0.00
+4/20/26 7:42 PM ET|Gashouse Gang|Dominic Smith 1B • ATL - Added; Jonathan India 2B,3B,OF • KC - Moved to IR|4/27/26|$2.50
+4/20/26 7:07 PM ET|Dawg|Caleb Thielbar P • CHC - Added|4/20/26|$2.50
+4/20/26 6:52 PM ET|Long Balls|Dalton Rushing C | LAD Added|4/20/26|$2.50
+4/20/26 6:28 PM ET|Rieken Havoc|Tanner Scott P • LAD - Added; Tatsuya Imai P • HOU - Moved to IR|4/27/26|$2.50
+4/20/26 6:27 PM ET|Rieken Havoc|Alex Vesia P | LAD Added|4/20/26|$2.50
+4/20/26 1:00 PM ET|Rieken Havoc|Louie Varland P • TOR - Added; Mick Abel P • MIN - Moved to IR|4/20/26|$2.50
+4/20/26 11:50 AM ET|Rieken Havoc|Jhoan Duran P | PHI Move to Injured|4/20/26|$0.00
+4/20/26 11:49 AM ET|Rieken Havoc|Brad Keller P | PHI Added|4/20/26|$2.50
+4/20/26 11:48 AM ET|Rieken Havoc|Edouard Julien 1B,2B • COL - Added; Jorge Polanco 2B • NYM - Moved to IR|4/20/26|$2.50
+4/20/26 10:24 AM ET|Dawg|Hye Seong Kim 2B,SS • LAD - Added|4/20/26|$2.50
+4/20/26 1:48 AM ET|Young Guns|Tanner Bibee P • CLE - Added off Waivers; Lance McCullers P • MIL - Dropped|4/20/26|$2.50
+4/18/26 10:29 AM ET|Maga Doge|Jake Bauers 1B,OF • MIL - Added; Kyle Manzardo 1B • CLE - Dropped|4/20/26|$2.50
+4/18/26 10:26 AM ET|Maga Doge|Jorge Soler OF • LAA - Added; Carson Benge OF • NYM - Dropped|4/20/26|$2.50
+4/18/26 2:03 AM ET|Simba's Dublin Green Sox|Tanner Bibee P • CLE - Dropped|4/20/26|$0.00
+4/18/26 12:35 AM ET|Young Guns|Justin Wrobleski P • LAD - Added; TJ Rumfield 1B • COL - Dropped|4/20/26|$2.50
+4/17/26 7:03 PM ET|Dawg|Connor Norby 1B,3B • COL - Added|4/20/26|$2.50
+4/17/26 6:03 PM ET|Big Sticks|Enyel De Los Santos P • HOU - Added; Daniel Palencia P • CHC - Moved to IR|4/20/26|$2.50
+4/17/26 1:50 PM ET|Like a Nightmare|Luke Raley 1B,OF • SEA - Added|4/20/26|$2.50
+4/17/26 1:48 PM ET|Like a Nightmare|Jazz Chisholm Jr. 2B,3B • NYY - Traded from Gashouse Gang|4/20/26|$2.50
+4/17/26 1:48 PM ET|Gashouse Gang|Jacob Misiorowski P • MIL - Traded from Like a Nightmare; Steven Kwan OF • CLE - Traded from Like a Nightmare|4/20/26|$2.50
+4/17/26 9:27 AM ET|Trex|Didier Fuentes P • ATL - Added; Cade Cavalli P • WAS - Dropped|4/20/26|$2.50
+4/17/26 1:41 AM ET|Like a Nightmare|Luis Severino P • ATH - Added; Ryan Walker P • SF - Dropped|4/20/26|$2.50
+4/17/26 1:32 AM ET|Like a Nightmare|Moises Ballesteros DH • LAA - Added; Sal Frelick OF • MIL - Dropped|4/20/26|$2.50
+4/16/26 10:33 PM ET|Young Guns|Walker Buehler P • SD - Added|4/20/26|$2.50
+4/16/26 7:34 PM ET|Big Sticks|Landen Roupp P • SF - Added; Jorge Soler OF • LAA - Dropped|4/20/26|$2.50
+4/16/26 3:32 PM ET|Magnum GI|Jeremiah Jackson 2B,OF • BAL - Added; Troy Johnston 1B,OF • COL - Dropped|4/20/26|$2.50
+4/15/26 7:24 PM ET|Long Balls|Spencer Arrighetti P • TOR - Added|4/20/26|$2.50
+4/15/26 1:43 AM ET|Simba's Dublin Green Sox|Trent Grisham OF • NYY - Added off Waivers; James Tibbs OF • LAD - Sent to Minors|4/20/26|$2.50
+4/14/26 12:20 AM ET|Young Guns|Trent Grisham OF | NYY Dropped|4/13/26|$0.00
+4/14/26 12:19 AM ET|Young Guns|Evan Carter OF | TEX Added|4/13/26|$2.50
+4/13/26 10:50 AM ET|Dawg|Jack Flaherty P • DET - Added; Bryan Abreu P • HOU - Dropped|4/13/26|$2.50
+4/13/26 10:26 AM ET|Big Sticks|Joel Kuhnel P • MIL - Added; Robert Garcia P • TEX - Dropped|4/13/26|$2.50
+4/13/26 9:32 AM ET|Runtime Terror|Eduardo Rodriguez P • ARI - Added; Griffin Jax P • TB - Dropped|4/13/26|$2.50
+4/12/26 2:35 AM ET|Simba's Dublin Green Sox|Angel Martinez 2B,OF • CLE - Added; Chad Patrick P • MIL - Dropped|4/13/26|$2.50
+4/12/26 2:26 AM ET|Like a Nightmare|Noah Schultz P • CHW - Added; Bryson Stott 2B • PHI - Dropped|4/13/26|$2.50
+4/12/26 2:22 AM ET|Like a Nightmare|Ezequiel Tovar SS • COL - Added off Waivers; David Hamilton 2B,3B,SS • MIL - Dropped|4/13/26|$2.50
+4/11/26 3:01 PM ET|Dawg|Noelvi Marte 3B,OF • CIN - Added|4/13/26|$2.50
+4/11/26 2:52 PM ET|Dawg|Brandon Marsh OF • PHI - Dropped|4/13/26|$0.00
+4/11/26 2:48 PM ET|Dawg|Aaron Ashby P • MIL - Added|4/13/26|$2.50
+4/11/26 12:22 PM ET|Gashouse Gang|Rhett Lowder P • CIN - Added; Matthew Boyd P • CHC - Moved to IR|4/13/26|$2.50
+4/10/26 11:06 PM ET|Big Sticks|Jorge Soler OF • LAA - Added; Cole Sands P • MIN - Dropped|4/13/26|$2.50
+4/10/26 11:05 PM ET|Big Sticks|Andres Gimenez 2B,SS • TOR - Added; Ezequiel Tovar SS • COL - Dropped|4/13/26|$2.50
+4/10/26 6:26 PM ET|Magnum GI|Troy Johnston 1B,OF • COL - Added; Brent Rooker OF • ATH - Moved to IR|4/13/26|$2.50
+4/10/26 5:44 PM ET|Long Balls|Josh Bell 1B • MIN - Added|4/13/26|$2.50
+4/9/26 10:07 PM ET|Guillotine|Michael Burrows P • HOU - Added; Luis Arraez 1B,2B • PHI - Dropped|4/13/26|$2.50
+4/9/26 3:24 PM ET|Runtime Terror|Mark Vientos 1B,3B • NYM - Added; Alec Bohm 3B • PHI - Dropped|4/13/26|$2.50
+4/9/26 3:20 PM ET|Big Sticks|Jeffrey Springs P • ATH - Added; Rhett Lowder P • CIN - Dropped|4/13/26|$2.50
+4/9/26 11:12 AM ET|Guillotine|Jameson Taillon P • TOR - Dropped|4/13/26|$0.00
+4/9/26 10:27 AM ET|Long Balls|Colt Emerson SS • SEA - Added|4/13/26|$2.50
+4/9/26 9:52 AM ET|Runtime Terror|Luis Gil P • NYY - Added; Joe Boyle P • TB - Dropped|4/13/26|$2.50
+4/9/26 1:42 AM ET|Guillotine|Daulton Varsho OF • HOU - Added off Waivers|4/13/26|$2.50
+4/8/26 2:50 PM ET|Magnum GI|Tyler Fitzgerald 2B • LAD - Dropped|4/13/26|$0.00
+4/8/26 2:49 PM ET|Magnum GI|Garrett Mitchell OF • MIL - Added; Jake Bauers 1B,OF • MIL - Dropped|4/13/26|$2.50
+4/8/26 1:21 PM ET|Gashouse Gang|Jonathan India 2B,3B,OF • KC - Added|4/13/26|$2.50
+4/8/26 12:52 PM ET|Like a Nightmare|Yainer Diaz C • HOU - Added; Samuel Basallo C • BAL - Dropped|4/13/26|$2.50
+4/8/26 12:04 AM ET|Like a Nightmare|David Hamilton 2B,3B,SS • MIL - Added|4/13/26|$2.50
+4/7/26 10:25 PM ET|Rieken Havoc|Jakob Junis P • TEX - Added; Mark Leiter P • ATH - Dropped|4/13/26|$2.50
+4/7/26 7:34 PM ET|Like a Nightmare|Cade Horton P • CHC - Dropped|4/13/26|$0.00
+4/7/26 4:56 PM ET|Simba's Dublin Green Sox|James Tibbs OF • LAD - Added; Daulton Varsho OF • HOU - Dropped|4/13/26|$2.50
+4/7/26 5:13 AM ET|Simba's Dublin Green Sox|Luis Garcia 1B,2B • NYY - Added; Jordan Beck OF • COL - Dropped|4/13/26|$2.50
+4/6/26 10:00 AM ET|Maga Doge|Bryce Elder P • ATL - Added; Dustin May P • MIL - Dropped|4/6/26|$2.50
+4/6/26 9:14 AM ET|Rieken Havoc|Mark Leiter P • ATH - Added; Carlos Estevez P • KC - Moved to IR|4/6/26|$2.50
+4/6/26 8:45 AM ET|Dawg|Tomoyuki Sugano P • COL - Added; Evan Carter OF • TEX - Dropped|4/6/26|$2.50
+4/6/26 1:49 AM ET|Trex|Justin Crawford OF • PHI - Added off Waivers; Denzel Clarke OF • ATH - Dropped|4/6/26|$2.50
+4/5/26 11:26 PM ET|Trex|Reid Detmers P • LAA - Added|4/6/26|$2.50
+4/5/26 11:13 PM ET|Trex|Cade Cavalli P • WAS - Added; Bailey Ober P • MIN - Dropped|4/6/26|$2.50
+4/5/26 10:23 PM ET|Young Guns|TJ Rumfield 1B • COL - Added|4/6/26|$2.50
+4/5/26 7:39 PM ET|Dawg|Clay Holmes P • CHC - Added; Jacob Lopez P • ATH - Dropped|4/6/26|$2.50
+4/5/26 7:29 PM ET|Gashouse Gang|Ben Brown P • CHC - Added; Chris Bassitt P • BAL - Dropped|4/6/26|$2.50
+4/5/26 5:09 PM ET|Guillotine|Will Warren P • NYY - Added; Matt Strahm P • KC - Dropped|4/6/26|$2.50
+4/5/26 4:22 PM ET|Big Sticks|Ryan O'Hearn 1B,OF • PIT - Added; Victor Scott II OF • STL - Dropped|4/6/26|$2.50
+4/5/26 1:48 PM ET|Big Sticks|Rhett Lowder P • CIN - Added; Hunter Brown P • HOU - Moved to IR|4/6/26|$2.50
+4/5/26 7:13 AM ET|Guillotine|Cam Smith OF • HOU - Added; Noelvi Marte 3B,OF • CIN - Dropped|4/6/26|$2.50
+4/4/26 3:08 PM ET|Big Sticks|Jack Flaherty P • DET - Dropped|4/6/26|$0.00
+4/4/26 12:49 PM ET|Dawg|Andrew Vaughn 1B • MIL - Dropped|4/6/26|$0.00
+4/4/26 12:46 PM ET|Dawg|Dillon Dingler C • DET - Added|4/6/26|$2.50
+4/4/26 10:52 AM ET|Young Guns|Lance McCullers P • MIL - Added; Cristian Javier P • HOU - Dropped|4/6/26|$2.50
+4/4/26 10:30 AM ET|Maga Doge|Taj Bradley P • MIN - Added; Justin Crawford OF • PHI - Dropped|4/6/26|$2.50
+4/4/26 9:03 AM ET|Trex|Ryne Stanek P • STL - Dropped|4/6/26|$0.00
+4/3/26 9:01 PM ET|Long Balls|Owen Caissie OF • MIA - Added|4/6/26|$2.50
+4/3/26 6:52 PM ET|Gashouse Gang|Bryan King P • HOU - Added; Garrett Cleavinger P • TB - Moved to IR|4/6/26|$2.50
+4/3/26 6:52 PM ET|Young Guns|Gregory Soto P • PIT - Added|4/6/26|$2.50
+4/3/26 3:05 AM ET|Like a Nightmare|Bryan Baker P • TB - Added; Luis Severino P • ATH - Dropped|4/6/26|$2.50
+4/3/26 1:58 AM ET|Big Sticks|Nathan Eovaldi P • TEX - Added off Waivers; Yusei Kikuchi P • LAA - Dropped|4/6/26|$2.50
+4/2/26 12:12 PM ET|Guillotine|Seth Lugo P • KC - Added; Cody Ponce P • TOR - Moved to IR|4/6/26|$2.50
+4/1/26 10:27 PM ET|Long Balls|Kevin Ginkel P • ARI - Dropped|4/6/26|$0.00
+4/1/26 10:27 PM ET|Long Balls|Liam Hicks C,1B • TB - Added|4/6/26|$2.50
+4/1/26 8:50 PM ET|Magnum GI|Jake Bauers 1B,OF • MIL - Added; Dominic Canzone OF • SEA - Dropped|4/6/26|$2.50
+4/1/26 4:37 PM ET|Magnum GI|Randy Vasquez P • SD - Added; Nathan Eovaldi P • TEX - Dropped|4/6/26|$2.50
+4/1/26 12:47 AM ET|Like a Nightmare|Miguel Vargas 1B,3B • CHW - Added; Caleb Durbin 3B • BOS - Dropped|4/6/26|$2.50
+3/31/26 12:47 AM ET|Simba's Dublin Green Sox|Jordan Walker OF • STL - Added; Dylan Beavers OF • BAL - Dropped|4/6/26|$2.50
+3/30/26 10:41 PM ET|Long Balls|Kyle Harrison P • MIL - Added|4/6/26|$2.50
+3/30/26 2:07 PM ET|Runtime Terror|Joe Boyle P • TB - Added; Yainer Diaz C • HOU - Dropped|3/30/26|$2.50
+3/30/26 1:55 PM ET|Rieken Havoc|Emerson Hancock P • SEA - Added; Quinn Mathews P • STL - Sent to Minors|3/30/26|$2.50
+3/29/26 11:43 PM ET|Magnum GI|Dominic Canzone OF • SEA - Added|3/30/26|$2.50
+3/29/26 11:39 PM ET|Magnum GI|Gabriel Moreno C • ARI - Dropped|3/30/26|$0.00
+3/29/26 10:32 PM ET|Guillotine|Luis Arraez 1B,2B • PHI - Added; Will Vest P • DET - Dropped|3/30/26|$2.50
+3/29/26 3:24 PM ET|Big Sticks|Jose Soriano P • TOR - Added; Taylor Rogers P • MIN - Dropped|3/30/26|$2.50
+3/29/26 10:09 AM ET|Dawg|Brandon Marsh OF • PHI - Added|3/30/26|$2.50
+3/29/26 9:55 AM ET|Dawg|Jacob Lopez P • ATH - Added|3/30/26|$2.50
+3/29/26 9:47 AM ET|Dawg|Evan Carter OF • TEX - Added|3/30/26|$2.50
+3/29/26 7:43 AM ET|Trex|Colt Keith 2B,3B • DET - Added|3/30/26|$2.50
+3/29/26 7:29 AM ET|Trex|Denzel Clarke OF • ATH - Added|3/30/26|$2.50
+3/29/26 6:34 AM ET|Big Sticks|Cole Sands P • MIN - Added; Josh Hader P • HOU - Moved to IR|3/30/26|$2.50
+3/29/26 5:53 AM ET|Simba's Dublin Green Sox|Michael Wacha P • KC - Added; Luis Garcia 1B,2B • NYY - Dropped|3/30/26|$2.50
+3/29/26 3:21 AM ET|Simba's Dublin Green Sox|Dylan Beavers OF • BAL - Added; Dylan Moore 2B,OF • PHI - Dropped|3/30/26|$2.50
+3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Mike Soroka P • ARI - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Guillotine|Jameson Taillon P • TOR - Added off Waivers; Ryan Pepiot P • TB - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Mike Soroka P • ARI - Added off Waivers; Merrill Kelly P • ARI - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Young Guns|Cristian Javier P • HOU - Added off Waivers; Payton Tolle P • BOS - Sent to Minors|3/30/26|$2.50
+3/29/26 2:42 AM ET|Trex|Parker Messick P • CLE - Added off Waivers|3/30/26|$2.50
+3/29/26 2:42 AM ET|Guillotine|Matt Strahm P • KC - Added off Waivers; Justin Steele P • CHC - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Young Guns|Victor Vodnik P • MIA - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Jordan Beck OF • COL - Added off Waivers; Kyle Stowers 1B,OF • MIA - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Young Guns|Victor Vodnik P • MIA - Added off Waivers; Gerrit Cole P • NYY - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Trex|Ryne Stanek P • STL - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Like a Nightmare|Matt Wallner OF • MIN - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Trex|Ryne Stanek P • STL - Added off Waivers; Kirby Yates P • PIT - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Maga Doge|Jordan Romano P • COL - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Like a Nightmare|Matt Wallner OF • MIN - Added off Waivers; Dylan Crews OF • WAS - Sent to Minors|3/30/26|$2.50
+3/29/26 2:42 AM ET|Maga Doge|Jordan Romano P • COL - Added off Waivers; Trey Yesavage P • TOR - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Guillotine|Nolan Schanuel 1B • LAA - Added off Waivers; Jackson Chourio OF • MIL - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Rieken Havoc|Mick Abel P • MIN - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Rieken Havoc|Mick Abel P • MIN - Added off Waivers; Hunter Greene P • CIN - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Michael McGreevy P • STL - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Young Guns|Clayton Beeter P • WAS - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Simba's Dublin Green Sox|Michael McGreevy P • STL - Added off Waivers; Joe Musgrove P • SD - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Young Guns|Clayton Beeter P • WAS - Added off Waivers; Shane Bieber P • TOR - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Magnum GI|Cole Young 2B • SEA - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Magnum GI|Cole Young 2B • SEA - Added off Waivers; Tyler Fitzgerald 2B • LAD - Sent to Minors|3/30/26|$2.50
+3/29/26 2:42 AM ET|Trex|Bailey Ober P • MIN - Added off Waivers|3/30/26|$2.50
+3/29/26 2:42 AM ET|Like a Nightmare|Lucas Erceg P • KC - Added off Waivers; Bryce Miller P • SEA - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Big Sticks|Ezequiel Tovar SS • COL - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Big Sticks|Ezequiel Tovar SS • COL - Added off Waivers; Mickey Moniak OF • COL - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Maga Doge|Carson Benge OF • NYM - Added off Waivers; Spencer Steer 1B,OF • CIN - Dropped|3/30/26|$2.50
+3/29/26 2:42 AM ET|Guillotine|Cody Ponce P • TOR - Activated|3/30/26|$0.00
+3/29/26 2:42 AM ET|Guillotine|Cody Ponce P • TOR - Added off Waivers; Nick Lodolo P • CIN - Moved to IR|3/30/26|$2.50
+3/29/26 2:42 AM ET|Rieken Havoc|Chase DeLauter OF • CLE - Added off Waivers; Edwin Uceta P • TB - Moved to IR|3/30/26|$2.50
+3/27/26 10:30 PM ET|Runtime Terror|Will Smith C • LAD - Traded from Simba's Dublin Green Sox|3/30/26|$2.50
+3/27/26 10:30 PM ET|Simba's Dublin Green Sox|Matthew Liberatore P • STL - Traded from Runtime Terror|3/30/26|$2.50
