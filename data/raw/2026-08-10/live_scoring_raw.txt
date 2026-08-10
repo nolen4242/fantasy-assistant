@@ -1,0 +1,138 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-08-10T07:03:18
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(9th)
+Fantasy Game Tracker
+ 
+ADD/DROP
+ 
+TRADES
+3 / 13
+WAIVER #
+PERIOD
+PERIOD 20 (MON, AUG 03 - SUN, AUG 09)
+
+	
+
+
+		Runtime Terror		
+NCP
+0.00
+		
+YGN	85.50
+BST	84.00
+DWG	83.50
+MD	83.50
+RHV	82.00
+LAN	79.50
+LB	68.00
+GTN	67.00
+		
+RTT	65.00
+GHG	61.50
+TRX	55.50
+SDG	51.00
+MGI	44.00
+	
+
+65.00	
+NCT
+-
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Stats
+D. Rushing C	 
+P. Alonso 1B	6-22, 2B, 2 HR, 6 RBI, 3 R, 3 BB, 0.360 OBP
+T. Bazzana 2B	3-17, 2 RBI, SB, 2 BB, 0.263 OBP
+C. Durbin 3B	8-21, 2 2B, HR, 9 RBI, 5 R, 2 SB, 4 BB, CS, 0.462 OBP
+D. Swanson SS	7-26, 2 2B, HR, 2 RBI, 6 R, SB, 3 BB, CS, 0.345 OBP
+C. Montgomery MI	5-22, HR, 5 RBI, 3 R, 3 BB, 0.333 OBP
+M. Busch CI	10-29, 2 2B, HR, 3 RBI, 4 R, BB, 0.387 OBP
+D. Canzone OF	4-23, R, BB, 0.208 OBP
+C. Carroll OF	4-28, 2B, 3B, 2 RBI, 4 R, SB, 2 BB, 0.200 OBP
+K. Clemens OF	3-24, HR, 2 RBI, 2 R, SB, BB, 0.160 OBP
+S. Kwan OF	8-24, HR, RBI, 4 R, BB, 0.385 OBP
+Y. Diaz U	6-24, 2B, 2 RBI, 3 R, SB, BB, 0.269 OBP
+S. Cecconi P	2.2 INN, 73 PC, 5 HA, 2 BBI, 4 K, 5 ER, 16.875 ERA, 2.625 WHIP
+A. Chapman P	2 INN, 41 PC, 3 HA, BBI, 2 ER, 9.000 ERA, 2.000 WHIP, L
+S. Gray P	6 INN, 83 PC, 3 HA, 2 BBI, 8 K, 0.833 WHIP, W, 2 WQS
+L. Henderson P	6 INN, 83 PC, 4 HA, BBI, 8 K, 2 ER, 3.000 ERA, 0.833 WHIP, W, 2 WQS
+T. Melton P	13 INN, 189 PC, 7 HA, 3 BBI, 9 K, 0.769 WHIP, W, 3 WQS
+E. Miller P	3.1 INN, 54 PC, 3 HA, BBI, 6 K, 1.200 WHIP
+E. Perez P	5 INN, 91 PC, 7 HA, 2 BBI, 9 K, 4 ER, 7.200 ERA, 1.800 WHIP, L
+W. Urena P	2.1 INN, 50 PC, 4 HA, 3 BBI, 2 K, 4 ER, 15.429 ERA, 3.000 WHIP, L
+J. deGrom P	5 INN, 88 PC, 3 HA, BBI, 9 K, ER, 1.800 ERA, 0.800 WHIP, W, WQS
+Total	1170-4763, 220 2B, 30 3B, 182 HR, 645 RBI, 693 R, 94 SB, 598 BB, 31 CS, 0.337 OBP
+868.1 INN, 14274 PC, 750 HA, 329 BBI, 878 K, 343 ER, 3.555 ERA, 1.243 WHIP, 62 W, 45 L, 35 S, 118 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+Stats · Roto Points · Rank
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	YGN	222	660	724	102	0.334	998	4.00	1.20	20	144	85.50
+2nd	BST	216	722	705	105	0.332	992	3.89	1.23	48	124	84.00
+3rd	DWG	221	684	771	97	0.351	841	3.71	1.20	22	127	83.50
+3rd	MD	244	727	768	103	0.337	967	4.31	1.23	38	122	83.50
+5th	RHV	159	626	667	137	0.330	955	3.33	1.17	67	122	82.00
+6th	LAN	207	624	681	139	0.315	1001	4.03	1.17	67	110	79.50
+7th	LB	178	641	597	76	0.326	1106	3.52	1.23	44	132	68.00
+8th	GTN	181	588	662	112	0.314	1024	3.59	1.22	20	141	67.00
+9th	RTT	182	645	693	94	0.337	878	3.56	1.24	35	118	65.00
+10th	GHG	160	588	669	68	0.333	899	3.51	1.13	40	108	61.50
+11th	TRX	154	522	640	116	0.335	867	3.98	1.22	48	111	55.50
+12th	SDG	184	661	595	112	0.313	865	4.20	1.27	25	141	51.00
+13th	MGI	150	622	644	97	0.322	875	4.08	1.30	64	124	44.00
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
