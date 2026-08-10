@@ -20,7 +20,20 @@ from fantasy_assistant.graph.client import session
 from fantasy_assistant.graph.refdata import CATEGORIES
 
 FORM_PERIODS = 4
-EVAL_AT = 19
+EVAL_AT = 19  # fallback only; the live horizon comes from eval_at()
+
+
+def eval_at() -> int:
+    """The period the 'actual' YTD standings represent — the newest period
+    whose end date has passed. Projections are scored against that snapshot,
+    so a fixed horizon would score projections-to-19 against ever-later
+    actuals and inflate MAE as the season runs on."""
+    with session() as s:
+        n = s.run(
+            "MATCH (st:StandingsSnapshot {scope:'period'})-[:FOR_PERIOD]->(p) "
+            "WHERE p.end_date < date() RETURN max(p.number) AS n"
+        ).single()["n"]
+    return int(n) if n is not None else EVAL_AT
 
 
 def load_period_values() -> dict:
@@ -41,11 +54,16 @@ def load_period_values() -> dict:
 
 
 def load_actual_ytd() -> dict:
+    # one ytd snapshot per capture date exists; without pinning to the newest
+    # the rows from every date collapse into one dict last-writer-wins, so the
+    # "actuals" silently became a mix of different days
     with session() as s:
         rows = s.run(
             """
-            MATCH (st:StandingsSnapshot {scope:'ytd'})-[:HAS_LINE]->(l)
-                  -[:FOR_TEAM]->(t:FantasyTeam), (l)-[:IN_CATEGORY]->(c:Category)
+            MATCH (st:StandingsSnapshot {scope:'ytd'})
+            WITH st ORDER BY st.as_of DESC LIMIT 1
+            MATCH (st)-[:HAS_LINE]->(l)-[:FOR_TEAM]->(t:FantasyTeam),
+                  (l)-[:IN_CATEGORY]->(c:Category)
             RETURN c.code AS cat, t.cbs_name AS team, l.value_reported AS v,
                    l.points AS pts
             """
@@ -57,11 +75,12 @@ def load_actual_ytd() -> dict:
     return vals, pts
 
 
-def project(T: int, model: str, period_vals: dict, comps: dict) -> dict:
-    """-> {cat: {team: projected_value_at_19}} using only data <= T."""
+def project(T: int, model: str, period_vals: dict, comps: dict,
+            horizon: int | None = None) -> dict:
+    """-> {cat: {team: projected_value_at_horizon}} using only data <= T."""
     meta = {c[0]: (c[1], c[2]) for c in CATEGORIES}
     teams = sorted({team for (_, team) in period_vals})
-    R = EVAL_AT - T
+    R = (eval_at() if horizon is None else horizon) - T
     out: dict = defaultdict(dict)
     for cat, (kind, _) in meta.items():
         for team in teams:
@@ -129,13 +148,14 @@ def run(stand_at: list[int] = (8, 11, 14)) -> None:
     with session() as s:
         us = s.run("MATCH (t:FantasyTeam {is_us:true}) RETURN t.cbs_name AS n").single()["n"]
 
-    print(f"BACKTEST — project to period {EVAL_AT}, scored vs actual "
+    horizon = eval_at()
+    print(f"BACKTEST — project to period {horizon}, scored vs actual "
           f"(points MAE across 13 teams x 10 cats; lower is better)\n")
     agg = defaultdict(list)
     for T in stand_at:
-        print(f"stand at period {T} ({EVAL_AT - T} periods ahead):")
+        print(f"stand at period {T} ({horizon - T} periods ahead):")
         for model in ("baseline", "form"):
-            proj = project(T, model, period_vals, comps)
+            proj = project(T, model, period_vals, comps, horizon)
             sc = score(proj, actual_vals, actual_pts, us)
             agg[model].append(sc["pts_mae_total"])
             print(f"  {model:<9} pts-MAE {sc['pts_mae_total']:>6}  "

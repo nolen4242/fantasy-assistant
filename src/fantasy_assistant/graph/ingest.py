@@ -25,8 +25,22 @@ ACTION_KIND = {
 }
 
 
+_ALIASES: dict | None = None
+
+
 def player_uid(name: str) -> str:
-    return "player:name:" + parsers.normalize_name(name).replace(" ", "_")
+    """Name-keyed player uid, routed through the merge alias registry.
+
+    CBS renders some players under two names across pages; identity
+    .merge_cbs_id_duplicates() collapses those and records the losing uid
+    here so later captures resolve to the surviving node instead of
+    recreating the duplicate."""
+    global _ALIASES
+    if _ALIASES is None:
+        from fantasy_assistant.graph import identity
+        _ALIASES = identity.load_aliases()
+    uid = "player:name:" + parsers.normalize_name(name).replace(" ", "_")
+    return _ALIASES.get(uid, uid)
 
 
 def _capture_run(s, capture_dir: Path, agent: str) -> str:
@@ -179,8 +193,23 @@ def ingest_pool(capture_dir: Path, as_of: str) -> dict:
     return counts
 
 
+def _standings_file(capture_dir: Path) -> Path:
+    """The transcribed standings file, derived from the raw capture if absent.
+
+    Captures taken before the runner derived it itself carry only the raw
+    page; transcribe on demand so older capture dirs stay ingestable."""
+    path = capture_dir / "standings_overall.txt"
+    if not path.exists():
+        raw = capture_dir / "standings_overall_raw.txt"
+        if raw.exists():
+            path.write_text(parsers.transcribe_standings(
+                raw.read_text(), capture_dir.name,
+                "https://buecker.baseball.cbssports.com/standings/overall"))
+    return path
+
+
 def ingest_standings(capture_dir: Path, as_of: str, period: int) -> dict:
-    data = parsers.parse_standings(capture_dir / "standings_overall.txt")
+    data = parsers.parse_standings(_standings_file(capture_dir))
     snap_uid = f"cbs:standings:{capture_dir.name}"
     with session() as s:
         run_uid = _capture_run(s, capture_dir, "standings")

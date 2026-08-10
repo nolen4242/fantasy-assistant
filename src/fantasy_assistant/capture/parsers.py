@@ -239,6 +239,67 @@ def parse_pool(path: Path, kind: str) -> tuple[list[PoolRow], list[str]]:
 # Standings file (our transcribed format)
 # ---------------------------------------------------------------------------
 
+def transcribe_standings(raw_text: str, capture_date: str,
+                         source_url: str = "") -> str:
+    """Distil standings_overall_raw.txt into the transcribed format that
+    parse_standings reads.
+
+    The raw CBS capture is tab-delimited: an overall rank block, then
+    'Batting Breakdown' / 'Pitching Breakdown' sections of per-category
+    tables. Until this existed the transcribed file was produced by hand,
+    so a missed transcription silently broke standings ingest.
+    """
+    lines = raw_text.splitlines()
+    period = next((l.strip() for l in lines
+                   if l.strip().startswith("PERIOD ") and "(" in l), "")
+    updated = next((l.strip() for l in lines
+                    if l.strip().startswith("STANDINGS UPDATED AS OF")), "")
+
+    overall: list[list[str]] = []
+    categories: list[tuple[str, str, list[tuple[str, str, str]]]] = []
+    side = None
+    cur = None
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped == "Batting Breakdown":
+            side = "BATTING"
+            continue
+        if stripped == "Pitching Breakdown":
+            side = "PITCHING"
+            continue
+
+        cells = line.split("\t")
+        # overall rank row: RANK TEAM BATTING PITCHING TOTAL DIF BEHIND
+        if side is None and len(cells) == 7 and re.fullmatch(r"\d+", cells[0].strip()):
+            overall.append([c.strip() for c in cells])
+            continue
+        # category header: TEAM <CODE> PTS DIF
+        if len(cells) == 4 and cells[0].strip() == "TEAM":
+            cur = (side, cells[1].strip(), [])
+            categories.append(cur)
+            continue
+        # category data row: TEAM VALUE PTS DIF
+        if cur is not None and len(cells) == 4 and cells[0].strip() != "TEAM":
+            team, value, pts = (c.strip() for c in cells[:3])
+            if team and value and pts:
+                cur[2].append((team, value, pts))
+
+    out = [
+        f"source: {source_url}",
+        f'captured: {capture_date} (site: "{updated}")',
+        f"period: {period}",
+        "",
+        "OVERALL",
+        "RANK TEAM BATTING PITCHING TOTAL DIF BEHIND",
+    ]
+    out += [" ".join(r) for r in overall]
+    for side_name, code, rows in categories:
+        out += ["", f"{side_name}: {code}",
+                " | ".join(f"{t} {v} {p}" for t, v, p in rows)]
+    return "\n".join(out) + "\n"
+
+
 def parse_standings(path: Path) -> dict:
     """Returns {overall: [{team, batting, pitching, total}], categories:
     {CODE: [{team, value, points}]}} from standings_overall.txt."""

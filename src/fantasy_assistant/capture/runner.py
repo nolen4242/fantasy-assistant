@@ -17,6 +17,7 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
+from fantasy_assistant.capture import parsers
 from fantasy_assistant.graph.refdata import period_for_date
 
 BASE = "https://buecker.baseball.cbssports.com"
@@ -142,6 +143,23 @@ def snapshot(out_dir: Path | None = None) -> None:
 
         ctx.close()
 
+    # the ingest parser reads a distilled transcription of the standings page;
+    # derive it here so the capture is self-contained (it used to be hand-made,
+    # and a missing transcription broke standings ingest silently)
+    raw_standings = out / "standings_overall_raw.txt"
+    if raw_standings.exists():
+        try:
+            (out / "standings_overall.txt").write_text(
+                parsers.transcribe_standings(
+                    raw_standings.read_text(), out.name, BASE + "/standings/overall")
+            )
+            captured.append(("(derived from standings_overall_raw.txt)",
+                             "standings_overall.txt",
+                             len((out / "standings_overall.txt").read_text())))
+        except Exception as exc:
+            print(f"  ERROR transcribing standings: {exc}", file=sys.stderr)
+            captured.append(("(derived)", "standings_overall.txt", -1))
+
     manifest = out / "MANIFEST.md"
     lines = [f"# Raw capture manifest — {out.name} (runner)", ""]
     lines += [f"- `{f}` <- `{p}` ({n:,} chars)" for p, f, n in captured]
@@ -151,6 +169,52 @@ def snapshot(out_dir: Path | None = None) -> None:
     print(f"snapshot complete: {out}")
 
 
+
+
+# every artifact a complete daily capture leaves behind. draft_results.txt is
+# deliberately absent: it is static pre-season data, not captured daily.
+EXPECTED_ARTIFACTS = (
+    "MANIFEST.md",
+    "transactions_all_raw.txt",
+    "roster_grid.txt",
+    "standings_overall_raw.txt",
+    "standings_overall.txt",
+    "my_team_raw.txt",
+    "live_scoring_raw.txt",
+    "fa_pool_batters.psv",
+    "fa_pool_pitchers.psv",
+    "standings_byperiod_all.txt",
+    "lineups_all.psv",
+    "player_news_raw.txt",
+)
+
+
+def verify_capture(out_dir: Path | None = None) -> dict:
+    """Report what a capture is missing.
+
+    A crashed run still leaves a dated directory behind, so 'the directory
+    exists' is not evidence the day was captured — 2026-08-04 held nothing
+    but the news file and its FA-pool snapshot is gone for good. This checks
+    contents instead: missing artifacts, empty files, and pages the manifest
+    recorded as failed (-1 chars)."""
+    out = out_dir or (RAW_ROOT / date.today().isoformat())
+    missing = [f for f in EXPECTED_ARTIFACTS if not (out / f).exists()]
+    empty = [f for f in EXPECTED_ARTIFACTS
+             if (out / f).exists() and (out / f).stat().st_size == 0]
+    failed = []
+    manifest = out / "MANIFEST.md"
+    if manifest.exists():
+        failed = [l.strip() for l in manifest.read_text().splitlines()
+                  if "(-1 chars)" in l]
+    return {"dir": str(out), "exists": out.exists(), "missing": missing,
+            "empty": empty, "failed_pages": failed,
+            "complete": out.exists() and not missing and not empty and not failed}
+
+
+def verify_all(root: Path | None = None) -> list[dict]:
+    """verify_capture across every captured date, oldest first."""
+    r = root or RAW_ROOT
+    return [verify_capture(d) for d in sorted(r.iterdir()) if d.is_dir()]
 
 
 TEAM_IDS = {  # discovered from the standings page team links, 2026 season
@@ -246,5 +310,17 @@ if __name__ == "__main__":
         capture_news()
     elif cmd == "lineups":
         capture_lineups()
+    elif cmd == "verify":
+        rows = verify_all() if "--all" in sys.argv else [verify_capture()]
+        bad = 0
+        for r in rows:
+            if r["complete"]:
+                continue
+            bad += 1
+            print(f"INCOMPLETE {Path(r['dir']).name}: "
+                  f"missing={r['missing']} empty={r['empty']} "
+                  f"failed={r['failed_pages']}")
+        print(f"{len(rows) - bad}/{len(rows)} captures complete")
+        sys.exit(1 if bad else 0)
     else:
         sys.exit(f"unknown command: {cmd}")

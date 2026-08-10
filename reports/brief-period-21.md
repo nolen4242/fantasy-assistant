@@ -1,5 +1,5 @@
 # Weekly Brief — Period 21 (locks Monday, per-player)
-Generated 2026-08-10T08:04 · model races-v3 · through period 20
+Generated 2026-08-10T08:27 · model races-v3 · through period 20
 
 ## Standings picture
 - Projected final on current pace: **7th, 67.0 pts**
@@ -56,18 +56,18 @@ Generated 2026-08-10T08:04 · model races-v3 · through period 20
 - Grayson Rodriguez (P, wk-rank 34): **hot_arm** — CSW +8.9%, velo +0.3 mph (skill-based)
 
 ## Scouting signals on our roster (last 7 days)
-- Dominic Canzone: **contact_cold** — hard-hit% last 25 BBE 24% vs season 46% (z=-2.2)
-- Walbert Urena: **hot_arm** — CSW +3.8%, velo +1.0 mph (skill-based)
-- Kody Clemens: **cold_bat** — 10g wOBA~0.142 vs season 0.319 (z=-0.9, shrunk)
-- Walbert Urena: **velocity_up** — FF velo last2 vs prior5: +1.17 mph
-- Luis Gil: **cold_arm** — CSW -2.2%, velo -1.3 mph (skill-based)
-- Troy Melton: **cold_arm** — CSW -4.0%, velo -0.3 mph (skill-based)
-- Dansby Swanson: **contact_cold** — hard-hit% last 27 BBE 26% vs season 41% (z=-1.6)
 - Chase Dollander: **cold_arm** — CSW -10.1%, velo -1.3 mph (skill-based)
+- Kody Clemens: **cold_bat** — 10g wOBA~0.142 vs season 0.319 (z=-0.9, shrunk)
+- Dansby Swanson: **contact_cold** — hard-hit% last 27 BBE 26% vs season 41% (z=-1.6)
+- Dansby Swanson: **contact_cold** — hard-hit% last 27 BBE 26% vs season 41% (z=-1.6)
+- Luis Gil: **cold_arm** — CSW -2.2%, velo -1.3 mph (skill-based)
+- Chase Dollander: **cold_arm** — CSW -10.1%, velo -1.3 mph (skill-based)
+- Troy Melton: **cold_arm** — CSW -4.0%, velo -0.3 mph (skill-based)
 - Travis Bazzana: **contact_hot** — hard-hit% last 26 BBE 54% vs season 37% (z=+1.7)
-- Jacob deGrom: **cold_arm** — CSW -5.8%, velo +0.1 mph (skill-based)
-- Dansby Swanson: **contact_cold** — hard-hit% last 25 BBE 24% vs season 42% (z=-1.8)
-- Troy Melton: **cold_arm** — CSW -2.8%, velo -0.4 mph (skill-based)
+- Luis Gil: **cold_arm** — CSW -2.2%, velo -1.3 mph (skill-based)
+- Travis Bazzana: **contact_hot** — hard-hit% last 26 BBE 54% vs season 37% (z=+1.7)
+- Troy Melton: **cold_arm** — CSW -4.0%, velo -0.3 mph (skill-based)
+- Walbert Urena: **hot_arm** — CSW +3.8%, velo +1.0 mph (skill-based)
 
 ## IP pacing
 - 868.3 IP YTD; CBS on-pace 1200 vs cap 1300 (≈100 IP of unused headroom → streaming budget)

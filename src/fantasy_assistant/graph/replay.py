@@ -24,13 +24,31 @@ from fantasy_assistant.graph.refdata import TEAMS, team_uid
 DRAFT_DATE = "2026-03-18"
 
 
+def _draft_file(capture_dir: Path) -> Path:
+    """Draft results for a capture, falling back to the newest prior capture.
+
+    The draft is a one-time pre-season event, so the file is static and the
+    runner does not re-fetch it daily; captures that lack it borrow the most
+    recent one rather than failing reconciliation outright."""
+    own = capture_dir / "draft_results.txt"
+    if own.exists():
+        return own
+    for prior in sorted(capture_dir.parent.iterdir(), reverse=True):
+        if prior.name >= capture_dir.name or not prior.is_dir():
+            continue
+        cand = prior / "draft_results.txt"
+        if cand.exists():
+            return cand
+    return own  # let the parser raise on the canonical name
+
+
 def replay(capture_dir: Path, posted_cutoff: str | None = None) -> dict:
     """Replay to derive roster membership. posted_cutoff (ISO timestamp)
     limits replay to transactions *posted* on or before that instant. CBS's
     roster grid reflects executed transactions immediately — even those with
     a future effective date — so snapshot diffs must cut by posted time, not
     effective date."""
-    picks, _ = parsers.parse_draft(capture_dir / "draft_results.txt")
+    picks, _ = parsers.parse_draft(_draft_file(capture_dir))
     txns, _ = parsers.sniff_and_parse_transactions(capture_dir / "transactions_all_raw.txt")
     # CBS lists newest-first; waiver-run batches share one timestamp, so a
     # plain stable sort would keep newest-first order *within* each batch.

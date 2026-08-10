@@ -104,12 +104,28 @@ def run_crosswalk(season: int = 2026) -> dict:
             last, first = _last_first(m["norm"])
             by_last_fi.setdefault((last, first[:1]), []).append(m)
 
+        # must stay in step with identity._CHECKS['rostered_without_mlbam']:
+        # a player who only ever appears in a lineup (never drafted, never an
+        # add we captured) is still ours, and without this clause he never
+        # reaches the fuzzy/people-search passes and stays mlbam-less forever
         rostered = {
             r["uid"] for r in s.run(
                 "MATCH (p:Player) WHERE (p)<-[:SELECTED]-(:DraftPick) "
-                "OR (p)<-[:ADDS]-(:TransactionEvent) RETURN p.uid AS uid"
+                "OR (p)<-[:ADDS]-(:TransactionEvent) "
+                "OR (p)<-[:FILLED_BY]-(:LineupAssignment {section:'active'}) "
+                "RETURN p.uid AS uid"
             ).data()
         }
+
+        # Nodes minted by identity.split_pool_collisions ('<uid>_bat',
+        # '<uid>_pit', '<uid>_cbs<id>') are the SECOND human behind a shared
+        # name. Name-matching them just re-finds the first human's MLB record,
+        # so they are excluded here and resolved only by explicit override.
+        from fantasy_assistant.graph import identity as _identity
+        split_uids: set[str] = set()
+        if _identity._splits_path().exists():
+            import json as _json
+            split_uids = set(_json.loads(_identity._splits_path().read_text()).values())
 
         matched, ambiguous, unmatched = [], [], []
 
@@ -123,27 +139,70 @@ def run_crosswalk(season: int = 2026) -> dict:
                 narrowed = [c for c in narrowed if c["team"] == mlb_team]
             return narrowed
 
+        # match strength, so a collision can be resolved in favour of the
+        # stronger evidence: 0 exact name, 1 suffix-stripped, 2 last+initial,
+        # 3 people-search
+        strength: dict[str, int] = {}
+
         for gp in graph_players:
+            if gp["uid"] in split_uids:
+                unmatched.append(gp["uid"])
+                continue
             # CBS renders Ohtani as two entities; strip the qualifier for matching
             norm = (gp["norm"] or "").replace(" (batter)", "").replace(" (pitcher)", "")
             cands = narrow(by_norm.get(norm, []), gp)
+            rank = 0
             if not cands and gp["uid"] in rostered:
                 # fuzzy passes are rostered-only: on the 8k pool longtail they
                 # mass-assign wrong ids (seth_gray -> Sonny Gray's mlbam)
                 cands = narrow(by_stripped.get(_strip_suffix(norm), []), gp)
+                rank = 1
                 if not cands:
                     last, first = _last_first(norm)
                     cands = narrow(by_last_fi.get((last, first[:1]), []), gp)
+                    rank = 2
             if len(cands) == 1:
                 matched.append((gp["uid"], cands[0]))
+                strength[gp["uid"]] = rank
             elif len(cands) > 1:
                 ambiguous.append(gp["uid"])
             else:
                 unmatched.append(gp["uid"])
 
+        # One mlbam id belongs to exactly one human. Two nodes claiming the
+        # same one means a fuzzy pass guessed (joshua_baez -> Javier Baez).
+        # Keep only the strongest claim, and only when it is strictly stronger
+        # than the runner-up — an unresolved identity is a discrepancy, never
+        # a wrong edge. Runs BEFORE the people-search pass so a rejected guess
+        # still gets its shot at the authoritative lookup.
+        rejected: set[str] = set()
+        collisions: list[dict] = []
+
+        def resolve_collisions() -> None:
+            by_mlbam: dict[int, list[str]] = {}
+            for uid_, m_ in matched:
+                by_mlbam.setdefault(m_["mlbam_id"], []).append(uid_)
+            for mlbam, uids_ in by_mlbam.items():
+                if len(uids_) < 2 or any("ohtani" in u for u in uids_):
+                    continue
+                ranked = sorted(uids_, key=lambda u: strength.get(u, 99))
+                best = strength.get(ranked[0], 99)
+                keep = ranked[0] if strength.get(ranked[1], 99) > best else None
+                losers = [u for u in uids_ if u != keep]
+                rejected.update(losers)
+                collisions.append({"mlbam_id": mlbam, "uids": uids_, "kept": keep})
+            for uid_ in rejected:
+                matched[:] = [(u, m) for u, m in matched if u != uid_]
+                strength.pop(uid_, None)
+                if uid_ not in unmatched:
+                    unmatched.append(uid_)
+
+        resolve_collisions()
+
         # pass 4: MLB people-search for rostered players still unmatched
         # (60-day IL and minors players are absent from the actives list)
-        still = [uid for uid in unmatched if uid in rostered]
+        still = [uid for uid in unmatched
+                 if uid in rostered and uid not in split_uids]
         if still:
             names = {
                 r["uid"]: (r["name"], r)
@@ -162,7 +221,21 @@ def run_crosswalk(season: int = 2026) -> dict:
                         cands = narrow(search_mlb_player(client, name, None), gp)
                     if len(cands) == 1:
                         matched.append((uid, cands[0]))
+                        strength[uid] = 3
+                        rejected.discard(uid)
                         unmatched.remove(uid)
+
+        # second pass: the people-search results can themselves collide
+        resolve_collisions()
+        rejected -= {uid for uid, _ in matched}
+
+        # a rejected claim may already be on the node from an earlier run
+        if rejected:
+            s.run(
+                "MATCH (p:Player) WHERE p.uid IN $uids "
+                "SET p.mlbam_id = NULL, p.primary_position = NULL",
+                uids=sorted(rejected),
+            )
 
         s.run(
             """
@@ -182,6 +255,8 @@ def run_crosswalk(season: int = 2026) -> dict:
         "matched": len(matched),
         "ambiguous": ambiguous,
         "unmatched_count": len(unmatched),
+        "mlbam_collisions": collisions,
+        "collision_claims_dropped": len(rejected),
     }
 
 

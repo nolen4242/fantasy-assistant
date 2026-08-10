@@ -27,16 +27,17 @@ def record_backtest(stands=(8, 11, 14)) -> list[dict]:
     with session() as s:
         us = s.run("MATCH (t:FantasyTeam {is_us:true}) RETURN t.cbs_name AS n").single()["n"]
     ts = datetime.now().isoformat(timespec="seconds")
+    horizon = bt.eval_at()
     out = []
     for model in ("baseline", "form", "blend35"):
         for T in stands:
             if model == "blend35":
-                base = bt.project(T, "baseline", period_vals, comps)
-                form = bt.project(T, "form", period_vals, comps)
+                base = bt.project(T, "baseline", period_vals, comps, horizon)
+                form = bt.project(T, "form", period_vals, comps, horizon)
                 proj = {c: {t: 0.65 * base[c][t] + 0.35 * form[c][t] for t in base[c]}
                         for c in base}
             else:
-                proj = bt.project(T, model, period_vals, comps)
+                proj = bt.project(T, model, period_vals, comps, horizon)
             sc = bt.score(proj, actual_vals, actual_pts, us)
             out.append({"model": model, "stand_at": T, **sc})
     with session() as s:
@@ -48,8 +49,10 @@ def record_backtest(stands=(8, 11, 14)) -> list[dict]:
                     m.pts_mae=$mae, m.rank_disp=$rd, m.our_err=$oe,
                     m.recorded=datetime($ts), m.detail=$detail
                 """,
-                uid=f"eval:{r['model']}:s{r['stand_at']}:e{bt.EVAL_AT}",
-                model=r["model"], T=r["stand_at"], eval_at=bt.EVAL_AT,
+                # horizon in the uid: without it every Monday re-MERGEd the
+                # same nine nodes and the ledger kept no history to compare
+                uid=f"eval:{r['model']}:s{r['stand_at']}:e{horizon}",
+                model=r["model"], T=r["stand_at"], eval_at=horizon,
                 mae=r["pts_mae_total"], rd=r["mean_rank_displacement"],
                 oe=r["our_total_pts_err"], ts=ts,
                 detail=json.dumps(r["pts_mae_by_cat"]),
@@ -119,18 +122,36 @@ def report() -> str:
     with session() as s:
         evals = s.run(
             "MATCH (m:ModelEval) RETURN m.model AS model, m.stand_at AS T, "
-            "m.pts_mae AS mae ORDER BY m.model, m.stand_at"
+            "m.pts_mae AS mae, m.eval_at AS horizon "
+            "ORDER BY m.eval_at, m.model, m.stand_at"
         ).data()
         scores = s.run(
             "MATCH (sc:SourceScore) RETURN sc.source AS src, sc.stat AS stat, "
             "sc.period AS p, sc.mae AS mae, sc.n AS n ORDER BY p"
         ).data()
+    # grouped by evaluation horizon, newest last, with the delta against the
+    # previous horizon — the whole point of keeping history is spotting a
+    # model that quietly got worse
+    horizons = sorted({e["horizon"] for e in evals})
     lines.append("model evals (projection backtest, pts-MAE by stand-at):")
-    by_model: dict = {}
-    for e in evals:
-        by_model.setdefault(e["model"], []).append((e["T"], e["mae"]))
-    for m, xs in by_model.items():
-        lines.append(f"  {m:<10} " + "  ".join(f"p{t}:{v}" for t, v in xs))
+    for h in horizons:
+        lines.append(f"  eval horizon = period {h}:")
+        by_model: dict = {}
+        for e in evals:
+            if e["horizon"] == h:
+                by_model.setdefault(e["model"], []).append((e["T"], e["mae"]))
+        prev = [x for x in horizons if x < h]
+        prior = {(e["model"], e["T"]): e["mae"] for e in evals
+                 if prev and e["horizon"] == prev[-1]}
+        for m, xs in sorted(by_model.items()):
+            cells = []
+            for t, v in xs:
+                was = prior.get((m, t))
+                delta = f"({v - was:+.2f})" if was is not None else ""
+                cells.append(f"p{t}:{v}{delta}")
+            lines.append(f"    {m:<10} " + "  ".join(cells))
+    if len(horizons) > 1:
+        lines.append("  (deltas vs the previous horizon; + means worse)")
     lines.append("")
     lines.append("source scoreboard:")
     for sc in scores or [{"src": "(none yet — first lands when a projected "

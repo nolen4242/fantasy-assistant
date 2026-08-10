@@ -96,6 +96,74 @@ def _splits_path():
     return Path(__file__).resolve().parents[3] / "data" / "identity_splits.json"
 
 
+def _aliases_path():
+    from pathlib import Path
+    return Path(__file__).resolve().parents[3] / "data" / "identity_aliases.json"
+
+
+def load_aliases() -> dict:
+    """alias player uid -> canonical player uid (see merge_cbs_id_duplicates)."""
+    import json
+    p = _aliases_path()
+    return json.loads(p.read_text()) if p.exists() else {}
+
+
+def merge_cbs_id_duplicates(dry_run: bool = False) -> dict:
+    """Merge name-variant duplicates that share one CBS id.
+
+    CBS renders the same human under different names across pages ("George
+    Lombard" in the FA pool, "George Lombard Jr." on the roster), which the
+    name-keyed uid turns into two nodes. The cbs_id is the strong key: when
+    two nodes carry the same one they are the same person, so the pair is
+    merged and the losing uid recorded in data/identity_aliases.json, which
+    player_uid() consults so future ingests route to the survivor.
+
+    This is the inverse of split_pool_collisions (two humans, one node) and
+    is deliberately NOT wired into the nightly run — merges are destructive,
+    so a human runs `python -m fantasy_assistant.graph.identity merge`.
+    """
+    import json
+    aliases = load_aliases()
+    merged = []
+    with session() as s:
+        for c in s.run(_CHECKS["shared_cbs_id"]).data():
+            uids = c["detail"]
+            rows = s.run(
+                """
+                MATCH (p:Player) WHERE p.uid IN $uids
+                OPTIONAL MATCH (p)<-[r]-()
+                RETURN p.uid AS uid, p.name_full AS name,
+                       p.mlbam_id AS mlbam, count(r) AS rels
+                """, uids=uids).data()
+            # survivor: a resolved mlbam id wins, then the better-connected
+            # node, then the fuller name (CBS's official rendering)
+            rows.sort(key=lambda r: (r["mlbam"] is not None, r["rels"],
+                                     len(r["name"] or "")), reverse=True)
+            canon, losers = rows[0], rows[1:]
+            for lose in losers:
+                if dry_run:
+                    merged.append((lose["uid"], canon["uid"], "dry-run"))
+                    continue
+                # carry over any property the survivor is missing, then merge
+                # relationships onto it and drop the duplicate node
+                s.run(
+                    """
+                    MATCH (c:Player {uid:$canon}), (a:Player {uid:$alias})
+                    SET c += apoc.map.removeKeys(
+                          apoc.map.fromPairs([k IN keys(a)
+                            WHERE c[k] IS NULL | [k, a[k]]]), ['uid'])
+                    WITH c, a
+                    CALL apoc.refactor.mergeNodes([c, a],
+                         {properties:'discard', mergeRels:true}) YIELD node
+                    RETURN node.uid AS uid
+                    """, canon=canon["uid"], alias=lose["uid"])
+                aliases[lose["uid"]] = canon["uid"]
+                merged.append((lose["uid"], canon["uid"], "merged"))
+    if merged and not dry_run:
+        _aliases_path().write_text(json.dumps(aliases, indent=1, sort_keys=True))
+    return {"merged": merged, "aliases": len(aliases)}
+
+
 def split_pool_collisions(capture_dir=None) -> dict:
     """Resolve bat+pit pool name collisions (two humans, one name-keyed node).
 
@@ -211,4 +279,11 @@ def split_pool_collisions(capture_dir=None) -> dict:
 
 
 if __name__ == "__main__":
-    audit()
+    import sys
+    cmd = sys.argv[1] if len(sys.argv) > 1 else "audit"
+    if cmd == "audit":
+        audit()
+    elif cmd in ("merge", "merge-dry"):
+        print(merge_cbs_id_duplicates(dry_run=(cmd == "merge-dry")))
+    else:
+        sys.exit(f"unknown command: {cmd} (audit|merge|merge-dry)")
