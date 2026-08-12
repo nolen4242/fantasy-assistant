@@ -52,6 +52,25 @@ _CHECKS = {
         WITH p, collect(DISTINCT e.side) AS sides WHERE size(sides) > 1
         RETURN p.uid AS key, p.name_full AS detail
     """,
+    # a node that is BOTH rostered (open stint) and sitting in today's FA pool
+    # is two humans merged: the pool row belongs to a same-named minor leaguer
+    # while the stats/stint belong to the rostered player. Caught Cade Smith
+    # (NYY pool id 29351817 fused to CLE's closer, rostered by Gashouse Gang)
+    # and Jacob Webb. Neither multi_cbsid_pool_same_node nor
+    # bat_and_pit_pool_same_node fires here — only ONE pool entry exists on the
+    # node, so the collision is invisible to both. Recommending off such a node
+    # proposes adding a player somebody already owns.
+    "pool_entry_on_rostered_node": """
+        MATCH (e:PoolEntry)-[:OF_PLAYER]->(p:Player)
+        WHERE NOT p.uid CONTAINS 'ohtani'
+          AND e.uid STARTS WITH 'cbs:fapool:' + toString(date())
+        MATCH (r:RosterStint)-[:OF_PLAYER]->(p)
+        WHERE r.to_date IS NULL
+        MATCH (r)-[:ON_TEAM]->(t:FantasyTeam)
+        RETURN p.uid AS key,
+               p.name_full + ' pool=' + e.avail + ' cbs=' + coalesce(p.cbs_id, '?')
+               + ' but rostered by ' + t.cbs_name AS detail
+    """,
     "rostered_without_mlbam": """
         MATCH (p:Player)
         WHERE p.mlbam_id IS NULL AND
