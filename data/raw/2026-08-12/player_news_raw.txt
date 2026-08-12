@@ -1,24 +1,52 @@
 source: https://buecker.baseball.cbssports.com/players/all-player-updates
-captured: 2026-08-12T08:42:11
+captured: 2026-08-12T09:03:13
 ---
+Kevin McGonigle 3B,SS • DET
+Tigers' Kevin McGonigle: Drives in three in Tuesday's win
+by RotoWire
+(12 mins ago) McGonigle went 2-for-4 with a double, a run scored and three RBI in Tuesday's 6-4 win over the Guardians.
+
+The 21-year-old infielder put the Tigers in the lead for good with his two-run double in the fifth inning. McGonigle has hit safely in five straight games, going 9-for-22 (.409), and since the All-Star break the AL Rookie of the Year favorite has compiled a .308/.387/.473 slash line with four homers, 14 RBI and 19 runs in 22 contests.
+
+Michael Fulmer P • SF
+Angels' Michael Fulmer: Goes to Angels on MiLB deal
+by RotoWire
+(14 mins ago) The Angels signed Fulmer to a minor-league contract Tuesday.
+
+Fulmer had been with Triple-A Sacramento in the Giants organization, where he held a 2.98 ERA and 52:21 K:BB over 42.1 innings. The veteran reliever could get an opportunity in the patchwork Angels bullpen down the stretch.
+
+Drew Anderson P • DET
+Tigers' Drew Anderson: Still not fully stretched out
+by RotoWire
+(16 mins ago) Anderson didn't factor into the decision in Tuesday's 6-4 win over the Guardians, allowing one run on four hits and two walks over four innings. He struck out four.
+
+The right-hander pitched well and tossed a season-high 70 pitches (44 for strikes), but Anderson continues to face workload restrictions as a member of the rotation. Over two starts since having his role changed last week, he's worked just 7.2 innings but has given up only one run with a 4:3 K:BB. Jack Flaherty (forearm) remains in his throwing progression and has no target date for his return, while Justin Verlander (hamstring) has yet to throw off a mound and River Ryan (hamstring) is still on the IL at Triple-A, so Anderson will continue patching the hole in the Tigers' rotation for the foreseeable future. He's set to make his next start at home this weekend against the White Sox, and he might get enough leeway to qualify for a win.
+
+Tanner Bibee P • CLE
+Guardians' Tanner Bibee: Bounced by Detroit
+by RotoWire
+(24 mins ago) Bibee (4-12) took the loss Tuesday as the Guardians fell 6-4 to the Tigers, coughing up six runs (five earned) on five hits and two walks over 6.1 innings. He struck out four.
+
+The right-hander did manage to keep the ball in the yard after serving up three homers in his last start, but that was about the only positive takeaway for Bibee, who tossed 62 of 96 pitches for strikes before getting the hook. Since the beginning of July, he's carrying a 4.71 ERA, 1.17 WHIP and 31:11 K:BB through 42 innings over seven outings, and he's struck out more than five batters just once. Bibee will look to get back on track in his next start, which lines up to come at home this weekend against the Padres.
+
 Merrill Kelly P • ARI
 Diamondbacks' Merrill Kelly: Ready to start Wednesday
 by RotoWire
-(11 mins ago) Kelly (leg) is listed as the Diamondbacks' probable starting pitcher for Wednesday's game against the Rockies in Arizona.
+(32 mins ago) Kelly (leg) is listed as the Diamondbacks' probable starting pitcher for Wednesday's game against the Rockies in Arizona.
 
 Kelly was lifted midway through the sixth inning of his latest start Friday against the Dodgers due to right leg cramping, but the veteran right-hander looks ready to return to the hill on four days' rest after receiving treatment for the issue. Though Kelly's ERA (4.88) and WHIP (1.47) currently sit at career-worst levels, he's at least consistently provided the Diamondbacks with length in his starts, working at least five innings in 17 consecutive outings.
 
 Joel Peguero P • SF
 Giants' Joel Peguero: Begins rehab assignment
 by RotoWire
-(13 mins ago) Peguero (hamstring) began a rehab assignment with Triple-A Sacramento on Tuesday, walking all three batters he faced and getting charged with three runs.
+(34 mins ago) Peguero (hamstring) began a rehab assignment with Triple-A Sacramento on Tuesday, walking all three batters he faced and getting charged with three runs.
 
 It certainly wasn't the result Peguero was looking for, but he could be a bit rusty given that it was his first game appearance since late May. The righty reliever is working his way back from a strained hamstring and will need a few more rehab outings before rejoining the Giants' bullpen.
 
 Zebby Matthews P • MIN
 Twins' Zebby Matthews: Available to start Wednesday
 by RotoWire
-(18 mins ago) Matthews (foot) is listed as the Twins' probable starting pitcher for Wednesday's game against the Orioles.
+(39 mins ago) Matthews (foot) is listed as the Twins' probable starting pitcher for Wednesday's game against the Orioles.
 
 Called up from Triple-A St. Paul on Friday to replace the injured Joe Ryan (glute) in the rotation, Matthews picked up a win over the Brewers while striking out four and giving up six runs (three earned) on seven hits and two walks before exiting after five innings due to a right foot blister. The right-hander was apparently able to complete a between-starts bullpen session without incident and won't end up having to miss a turn through the rotation.
 
@@ -42,33 +70,5 @@ by RotoWire
 (1 hr ago) Texas manager Skip Schumaker mentioned Quantrill as a potential rotation fill-in for the injured Nathan Eovaldi (elbow), Kenndi Landry of MLB.com reports.
 
 The thrust of Landry's report was about Jordan Montgomery moving into the rotation, but Schumaker made a point to include Quantrill as a candidate. "Obviously [the replacment is] going to be internal, but as far as who that is, we'll see what these next two games look like... If we do end up going with somebody else internally, as far as Cal or Jordan or whatever we do, that's also going to change things as far as bullpen usage." Quantrill has made seven starts (3.34 ERA) for the Rangers this season, most recently throwing six innings against the Giants on Aug. 3.
-
-Jordan Montgomery P • TEX
-Rangers' Jordan Montgomery: Candidate for rotation
-by RotoWire
-(1 hr ago) Montgomery is considered as a possible replacement for Nathan Eovaldi (elbow) in Texas' rotation, Kennedi Landry of MLB.com reports.
-
-Montgomery was recently activated and pitched four innings (79 pitches) as a reliever Sunday. At the time, manager Skip Schumaker said the left-hander would be used out of the bullpen, but circumstances have changed since. Eovaldi was placed on the injured list Monday, and now Montomery is poised to start. "We have a pretty good idea, but we're going to wait to see what these next couple games look like," Schumaker said. "Obviously it's going to be internal, but as far as who that is, we'll see what these next two games look like." Cal Quantrill is another option to replace Eovaldi.
-
-Jo Adell OF • CLE
-Guardians' Jo Adell: Launches home run in loss
-by RotoWire
-(2 hrs ago) Adell went 1-for-2 with two walks, a home run and two RBI in Tuesday's 6-4 loss to Detroit.
-
-Adell swatted a solo home run in the eighth inning -- his first in a Guardians' uniform -- and then plated another run with a sacrifice fly in the ninth. The RBI were also the first for Adell since Cleveland acquired him at the trade deadline. He's batting .167 (4-for-24) with 10 strikeouts over seven games for the Guards.
-
-Chase DeLauter OF • CLE
-Guardians' Chase DeLauter: Logs HR, three hits in loss
-by RotoWire
-(2 hrs ago) DeLauter went 3-for-5 with a solo home run in Tuesday's 6-4 loss to the Tigers.
-
-DeLauter's blast tied the game in the top of the third inning, and he remains consistent and productive deep into his rookie season. The homer was the 13th of the season for the outfielder, who has an .800 OPS over a career-high 464 plate appearances. Since the break, he has an .820 OPS with four steals, two homers, 11 RBI and 14 runs scored over 22 games.
-
-Elly De La Cruz SS • CIN
-Reds' Elly De La Cruz: Gets job done in win
-by RotoWire
-(2 hrs ago) De La Cruz went 1-for-4 with two RBI in Tuesday's 5-4 extra-inning win over the White Sox.
-
-De La Cruz was part of a late-game, three-run rally in the eighth inning to tie the game. He had a run-scoring single as part of the rally and then hit a sacrifice fly in the 10th to produce the go-ahead run. It was the third time this month with multiple RBI for De La Cruz, who has knocked in eight over eight August contests.
 
 More Player News

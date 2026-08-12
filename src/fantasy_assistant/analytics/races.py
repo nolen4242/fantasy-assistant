@@ -67,10 +67,15 @@ def _points_for(values: dict[str, float], direction: str) -> dict[str, float]:
 
 def load_inputs():
     with session() as s:
+        # one ytd snapshot per capture date; pin to the newest or the rows from
+        # every date collapse last-writer-wins into a silent mix of days (the
+        # same trap backtest.load_actual_ytd documents)
         ytd = s.run(
             """
-            MATCH (st:StandingsSnapshot {scope:'ytd'})-[:HAS_LINE]->(l)
-                  -[:FOR_TEAM]->(t:FantasyTeam), (l)-[:IN_CATEGORY]->(c:Category)
+            MATCH (st:StandingsSnapshot {scope:'ytd'})
+            WITH st ORDER BY st.as_of DESC LIMIT 1
+            MATCH (st)-[:HAS_LINE]->(l)-[:FOR_TEAM]->(t:FantasyTeam),
+                  (l)-[:IN_CATEGORY]->(c:Category)
             RETURN c.code AS cat, t.cbs_name AS team, l.value_reported AS value,
                    l.points AS points
             """
@@ -234,7 +239,9 @@ def report(result: dict) -> str:
     us = result["us"]
     lines = [f"RACE ANALYSIS — through period {result['as_of_period']}, "
              f"{result['remaining_periods']} periods left  [{result['model']}]", ""]
-    lines.append("Projected final standings:")
+    lines.append("Projected final standings (point estimate on current pace — late in "
+                 "the season this is mostly banked YTD and barely moves;")
+    lines.append("run analytics.variance for the p10-p90 finish range):")
     for i, (t, pts) in enumerate(result["projected_final"], 1):
         marker = " <== us" if t == us else ""
         lines.append(f"  {i:>2}. {t:<26} {pts:5.1f}{marker}")

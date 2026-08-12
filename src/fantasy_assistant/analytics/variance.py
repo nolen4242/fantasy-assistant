@@ -137,6 +137,7 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
     win = defaultdict(int)
     top5 = defaultdict(int)
     rank_sum = defaultdict(float)
+    rank_samples: dict = defaultdict(list)
     our_pts_samples = []
     for _ in range(n_sims):
         # correlated shocks per team across categories
@@ -168,32 +169,58 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
             top5[t] += 1
         for i, t in enumerate(order, 1):
             rank_sum[t] += i
+            rank_samples[t].append(i)
         our_pts_samples.append(totals[us])
 
+    def _pct(sorted_vals, p):
+        return sorted_vals[min(int(p * len(sorted_vals)), len(sorted_vals) - 1)]
+
     our_pts_samples.sort()
-    q = lambda p: our_pts_samples[int(p * n_sims)]
+    q = lambda p: _pct(our_pts_samples, p)
+    # p10 rank is the GOOD tail (rank 1 is best), p90 the bad one
+    rank_pcts = {}
+    for t in teams:
+        rs = sorted(rank_samples[t])
+        rank_pcts[t] = (_pct(rs, 0.10), _pct(rs, 0.50), _pct(rs, 0.90))
     return {
         "model": MODEL_VERSION, "n_sims": n_sims, "us": us,
         "as_of_period": race["as_of_period"],
         "p_win": {t: win[t] / n_sims for t in teams},
         "p_top5": {t: top5[t] / n_sims for t in teams},
         "mean_rank": {t: rank_sum[t] / n_sims for t in teams},
+        "rank_p10_p50_p90": rank_pcts,
         "our_pts_p10_p50_p90": (round(q(0.10), 1), round(q(0.50), 1), round(q(0.90), 1)),
     }
+
+
+def ordinal(n: int) -> str:
+    n = int(n)
+    suf = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suf}"
+
+
+def finish_range(r: dict, team: str) -> str:
+    """'7th (5th-9th)' — median finish with the p10-p90 band. The band is the
+    honest headline: the point estimate is anchored by banked YTD and barely
+    moves late in the season, so a bare rank reads as 'no change' every week."""
+    lo, mid, hi = r["rank_p10_p50_p90"][team]
+    return ordinal(mid) if lo == hi else f"{ordinal(mid)} ({ordinal(lo)}-{ordinal(hi)})"
 
 
 def report(r: dict) -> str:
     us = r["us"]
     lines = [f"STANDINGS SIMULATION — {r['n_sims']} seasons from period "
              f"{r['as_of_period']} [{r['model']}]", "",
-             f"{'team':<26}{'P(win)':>8}{'P(top5)':>9}{'E[rank]':>9}"]
+             f"{'team':<26}{'P(win)':>8}{'P(top5)':>9}{'E[rank]':>9}"
+             f"{'finish p10-p90':>18}"]
     for t in sorted(r["p_win"], key=lambda t: r["mean_rank"][t]):
         mark = " <== us" if t == us else ""
         lines.append(f"{t:<26}{r['p_win'][t]:>8.1%}{r['p_top5'][t]:>9.1%}"
-                     f"{r['mean_rank'][t]:>9.1f}{mark}")
+                     f"{r['mean_rank'][t]:>9.1f}{finish_range(r, t):>18}{mark}")
     p10, p50, p90 = r["our_pts_p10_p50_p90"]
     lines.append("")
-    lines.append(f"{us} final-points distribution: p10 {p10} / median {p50} / p90 {p90}")
+    lines.append(f"{us} projected finish: {finish_range(r, us)}   "
+                 f"final points p10/median/p90: {p10} / {p50} / {p90}")
     return "\n".join(lines)
 
 
@@ -208,17 +235,20 @@ def simulate_and_store(n_sims: int = N_SIMS) -> dict:
     r = simulate(n_sims)
     us = r["us"]
     p10, p50, p90 = r["our_pts_p10_p50_p90"]
+    r10, r50, r90 = r["rank_p10_p50_p90"][us]
     with session() as s:
         s.run(
             """
             MERGE (sr:SimResult {uid:$uid})
             SET sr.as_of=date($d), sr.as_of_period=$per, sr.model=$model,
                 sr.n_sims=$n, sr.p_win=$pw, sr.p_top5=$pt, sr.mean_rank=$mr,
-                sr.pts_p10=$p10, sr.pts_p50=$p50, sr.pts_p90=$p90
+                sr.pts_p10=$p10, sr.pts_p50=$p50, sr.pts_p90=$p90,
+                sr.rank_p10=$r10, sr.rank_p50=$r50, sr.rank_p90=$r90
             """,
             uid=f"sim:{_date.today()}", d=_date.today().isoformat(),
             per=r["as_of_period"], model=r["model"], n=r["n_sims"],
             pw=round(r["p_win"][us], 4), pt=round(r["p_top5"][us], 4),
             mr=round(r["mean_rank"][us], 2), p10=p10, p50=p50, p90=p90,
+            r10=r10, r50=r50, r90=r90,
         )
     return r

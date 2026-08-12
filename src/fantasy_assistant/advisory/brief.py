@@ -119,16 +119,20 @@ def compose(as_of: str | None = None) -> str:
     add("")
 
     add("## Standings picture")
-    for i, (t, pts) in enumerate(race["projected_final"], 1):
-        if t == us:
-            add(f"- Projected final on current pace: **{i}th, {pts} pts**")
-            break
-    leader = race["projected_final"][0]
-    add(f"- Projected leader: {leader[0]} ({leader[1]} pts)")
     sim = variance.simulate(n_sims=2000)
     p10, p50, p90 = sim["our_pts_p10_p50_p90"]
+    add(f"- Projected finish: **{variance.finish_range(sim, us)}**, "
+        f"{p50} pts (p10-p90 {p10}-{p90})")
+    pace_rank = next(i for i, (t, _) in enumerate(race["projected_final"], 1) if t == us)
+    pace_pts = dict(race["projected_final"])[us]
+    add(f"- On current pace (point estimate): {variance.ordinal(pace_rank)}, {pace_pts} pts "
+        f"— with {race['remaining_periods']} of {races.FINAL_PERIOD} periods left this is "
+        f"mostly banked YTD, so treat the range above as the signal")
+    leader = race["projected_final"][0]
+    add(f"- Projected leader: {leader[0]} — {leader[1]} pts on pace, "
+        f"sim finish {variance.finish_range(sim, leader[0])}")
     add(f"- Season odds (MC sim): P(win) {sim['p_win'][us]:.1%}, "
-        f"P(top-5 money) {sim['p_top5'][us]:.1%}; points p10/p50/p90 = {p10}/{p50}/{p90}")
+        f"P(top-5 money) {sim['p_top5'][us]:.1%}")
     add(f"- Title race: " + ", ".join(f"{t} {sim['p_win'][t]:.0%}"
         for t in sorted(sim['p_win'], key=lambda t: -sim['p_win'][t])[:3]))
     add("")
