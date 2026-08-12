@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams
-captured: 2026-08-12T08:39:13
+captured: 2026-08-12T11:08:37
 ---
 League
 My Team
@@ -16,6 +16,7 @@ Nolen Smith
 ADD/DROP
  
 TRADES
+1
 2 / 13
 WAIVER #
 YEAR
@@ -92,7 +93,7 @@ EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
 
 	P	Erik Miller P • BOS	36	1	0	0	2	0	4	1	51	23	26	2.50	1.36	476
 
-	P	Eury Perez P • MIA	116	21	10	0	6	9	0	0	128	44	85	3.39	1.11	174
+	P	Eury Perez P • MIA 	116	21	10	0	6	9	0	0	128	44	85	3.39	1.11	174
 
 	P	Walbert Urena P • LAA	101	19	9	0	7	8	0	0	97	55	76	2.83	1.29	233
 

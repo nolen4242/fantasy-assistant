@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/scoring/standard
-captured: 2026-08-12T08:39:15
+captured: 2026-08-12T11:08:39
 ---
 League
 My Team
@@ -16,6 +16,7 @@ Live Scoring
 ADD/DROP
  
 TRADES
+1
 2 / 13
 WAIVER #
 PERIOD
@@ -53,74 +54,94 @@ NCT
 NCP = Net Change Period   NCT = Net Change Today
 Actives	Games	Stats
 A. Wells C  	
-NYY 4 v SEA 1 (F)
-	1-3, 0.333 OBP
+NYY v SEA 6:05 CDT
+SEA +110, NYY -133
+	 
 P. Alonso 1B  	
-BAL 5 @ MIN 2 (F)
-	3-4, HR, 2 RBI, R, BB, 0.800 OBP
+BAL @ MIN 12:40 CDT
+BAL -105, MIN -115
+	 
 T. Bazzana 2B  	
-CLE 4 @ DET 6 (F)
-	1-4, BB, CS, 0.400 OBP
+CLE @ DET 5:40 CDT
+CLE +105, DET -128
+	 
 C. Durbin 3B  	
-BOS 3 @ TOR 5 (F)
-	0-4
+BOS @ TOR 6:07 CDT
+BOS -125, TOR +105
+	 
 D. Swanson SS  	
-CHC 8 @ WAS 6 (F)
-	0-2, RBI, BB, 0.500 OBP
+CHC @ WAS 5:45 CDT
+CHC -169, WAS +140
+	 
 C. Montgomery MI  	
-CHW 4 v CIN 5 (F 10th)
-	0-4
+CHW v CIN 6:40 CDT
+CIN +125, CHW -149
+	 
 M. Busch CI  	
-CHC 8 @ WAS 6 (F)
-	0-5
+CHC @ WAS 5:45 CDT
+CHC -169, WAS +140
+	 
 D. Canzone OF  	
-SEA 1 @ NYY 4 (F)
-	1-3, BB, 0.500 OBP
+SEA @ NYY 6:05 CDT
+SEA +110, NYY -133
+	 
 C. Carroll OF  	
-ARI 2 v COL 3 (F)
-	1-4, HR, RBI, R, 0.250 OBP
+ARI v COL 2:40 CDT
+COL +145, ARI -175
+	 
 K. Clemens OF  	
-MIN 2 v BAL 5 (F)
-	0-3, BB, 0.250 OBP
+MIN v BAL 12:40 CDT
+BAL -105, MIN -115
+	 
 S. Kwan OF  	
-CLE 4 @ DET 6 (F)
-	2-4, 2 R, BB, 0.600 OBP
+CLE @ DET 5:40 CDT
+CLE +105, DET -128
+	 
 Y. Diaz U  	
-TB 12 @ ATH 4 (F)
-	1-5, HR, RBI, 3 R, 0.200 OBP
+TB @ ATH 2:05 CDT
+TB -222, ATH +180
+	 
 A. Chapman P  	
-BOS 3 @ TOR 5 (F)
+BOS @ TOR 6:07 CDT
+BOS -125, TOR +105
 	 
 S. Gray P   	
-BOS 3 @ TOR 5 (F)
+BOS @ TOR 6:07 CDT
+BOS -125, TOR +105
 	 
 L. Henderson P   	
-MIL 2 @ SD 11 (F)
+MIL @ SD 3:10 CDT
+MIL -118, SD -102
 	 
 D. May P   	
-MIL 2 @ SD 11 (F)
+MIL @ SD 3:10 CDT
+MIL -118, SD -102
 	 
 T. Melton P   	
-DET 6 v CLE 4 (F)
+DET v CLE 5:40 CDT
+CLE +105, DET -128
 	 
 E. Miller P  	
-BOS 3 @ TOR 5 (F)
+BOS @ TOR 6:07 CDT
+BOS -125, TOR +105
 	 
 E. Perez P   	
-MIA 2 v PIT 0 (F)
-	7 INN, 100 PC, 3 HA, 2 BBI, 7 K, 0.714 WHIP, W, 2 WQS
+MIA v PIT 5:40 CDT
+PIT -105, MIA -115
+	 
 W. Urena P   	
-LAA 3 v TEX 2 (F)
+LAA v TEX 9:10 CDT
+TEX -139, LAA +115
 	 
 J. deGrom P   	
-TEX 2 @ LAA 3 (F)
+TEX @ LAA 9:10 CDT
+TEX -139, LAA +115
 	 
-Today	10-45, 3 HR, 5 RBI, 7 R, 6 BB, CS, 0.327 OBP
-7 INN, 100 PC, 3 HA, 2 BBI, 7 K, 0.714 WHIP, W, 2 WQS
+Today	 
 Total	1185-4823, 222 2B, 30 3B, 186 HR, 653 RBI, 704 R, 94 SB, 604 BB, 32 CS, 0.336 OBP
 887.2 INN, 14564 PC, 764 HA, 333 BBI, 896 K, 348 ER, 3.528 ERA, 1.236 WHIP, 63 W, 47 L, 35 S, 122 WQS
 Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
-Stats · Roto Points · Rank
+YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
 TEAM RANKINGS
 RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
 1st	BST	219	735	712	107	0.332	1008	3.88	1.23	49	125	86.00

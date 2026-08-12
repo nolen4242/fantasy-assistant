@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-12 (site: "STANDINGS UPDATED AS OF 08/12/26 09:39 AM ET")
+captured: 2026-08-12 (site: "STANDINGS UPDATED AS OF 08/12/26 12:08 PM ET")
 period: PERIOD 21 (MON, AUG 10 - SUN, AUG 16)
 
 OVERALL

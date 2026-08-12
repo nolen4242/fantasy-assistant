@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-12T08:39:10
+captured: 2026-08-12T11:08:34
 ---
 League
 My Team
@@ -16,6 +16,7 @@ Standings
 ADD/DROP
  
 TRADES
+1
 2 / 13
 WAIVER #
 OVERALL
@@ -194,7 +195,35 @@ Runtime Terror	122	5.0	1.0
 Like a Nightmare	114	3.0	1.0
 Trex	111	2.0	-1.0
 Gashouse Gang	109	1.0	0.0
-STANDINGS UPDATED AS OF 08/12/26 09:39 AM ET
+STANDINGS UPDATED AS OF 08/12/26 12:08 PM ET
+by Taboola
+Sponsored Links
+RECOMMENDED
+Sleep Researchers Don't Take Sleeping Pills. Here's What They Take Instead.
+The Dose Review
+Dental Implant Price List For 2026. (Take A Look)
+SmartSearches | Dental Implants
+Learn More
+Ask a Pro: "I'm 65 With $1.1M Saved. What's My Retirement Budget?"
+SmartAsset
+Ask a Pro: “How Much Tax Can I Save Converting $100K to Roth in 2026?”
+SmartAsset
+Texas: Worst ZIP Codes For Car Insurance (Is Yours On The List?)
+OTTO Insurance
+Click Here
+New SUVs With Tiny Price Tags (Take A Look)
+SearchResultOffers | Search Ads
+Learn More
+Texas: Worst Zip Codes for Overc harging Car Insurance (Check Yours Here)
+OTTO Insurance
+Kidney Health: The Question That No Doctor Could Answer
+usa.hydrohealth
+Read More
+US seniors eligible for walk-in tubs if their house has this (Start eligibili ty check)
+Forbes
+Kidney: the 2 AM Discovery That Changed Everything
+usa.hydrohealth
+Read More
 More
 Pick'em Games
 Fantasy Sports

@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-12T08:39:06
+captured: 2026-08-12T11:08:30
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
 8/12/26 3:18 AM ET|Simba's Dublin Green Sox|Josh Bell 1B • MIN - Added|8/17/26|$2.50

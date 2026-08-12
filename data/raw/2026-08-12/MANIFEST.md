@@ -2,9 +2,9 @@
 
 - `transactions_all_raw.txt` <- `/transactions?print_rows=9999` (53,981 chars)
 - `roster_grid.txt` <- `/teams/roster-grid` (4,264 chars)
-- `standings_overall_raw.txt` <- `/standings/overall` (5,377 chars)
-- `my_team_raw.txt` <- `/teams` (4,252 chars)
-- `live_scoring_raw.txt` <- `/scoring/standard` (3,775 chars)
+- `standings_overall_raw.txt` <- `/standings/overall` (6,284 chars)
+- `my_team_raw.txt` <- `/teams` (4,255 chars)
+- `live_scoring_raw.txt` <- `/scoring/standard` (3,878 chars)
 - `fa_pool_batters.psv` <- `/stats/stats-main?print_rows=9999` (457,193 chars)
 - `fa_pool_pitchers.psv` <- `/stats/stats-main/fa:P/period-21:p/standard/projections?print_rows=9999` (379,428 chars)
 - `standings_byperiod_all.txt` <- `/standings/byperiod (all periods)` (145,781 chars)
