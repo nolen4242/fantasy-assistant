@@ -267,6 +267,12 @@ OVERRIDES_BY_UID = {
     "player:name:luis_garcia": {"mlbam_id": 671277, "primary_position": "2B"},
     "player:name:max_muncy": {"mlbam_id": 571970, "primary_position": "3B"},
     "player:name:max_muncy_ath": {"mlbam_id": 691777, "primary_position": "3B"},
+    # PIT RHP (the only Jared Jones in the MLB universe); CBS also lists a
+    # minor-league batter of the same name whose pool rows kept landing on
+    # this node and overwriting cbs_id. Pin the pitcher's id here; the batter
+    # rows route to player:name:jared_jones_bat via identity_splits.json.
+    "player:name:jared_jones": {"mlbam_id": 683003, "primary_position": "P",
+                                "cbs_id": "26615394"},
 }
 
 
