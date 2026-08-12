@@ -14,7 +14,7 @@ import json
 from datetime import date, datetime
 from pathlib import Path
 
-from fantasy_assistant.analytics import races, valuation, variance
+from fantasy_assistant.analytics import activity, races, valuation, variance
 from fantasy_assistant.graph.client import session
 from fantasy_assistant.graph.refdata import next_open_period, period_for_date
 
@@ -41,7 +41,7 @@ def load_pool(snapshot_prefix: str) -> tuple[list[dict], list[dict]]:
             RETURN e.side AS side, e.avail AS avail, e.waiver_clear AS clear,
                    e.sportsline_rank AS rank, e.sportsline_week AS week,
                    p.name_full AS name, p.cbs_positions AS pos,
-                   p.cbs_mlb_team AS mlb
+                   p.cbs_mlb_team AS mlb, p.uid AS uid
             """,
             prefix=snapshot_prefix,
         ).data()
@@ -95,6 +95,16 @@ def compose(as_of: str | None = None) -> str:
     next_period = next_open_period(date.today())
     race = races.analyze()
     bat, pit = load_pool(f"cbs:fapool:{today}")
+    # no player who is not currently playing may be recommended, however good
+    # the season line looks (see analytics.activity)
+    act = activity.load()
+    bat_g, pit_g = activity.gate(act, bat), activity.gate(act, pit)
+    # 'unverified' still gets recommended but carries the flag; only proven
+    # inactive is removed
+    bat = bat_g["ok"] + bat_g["unverified"]
+    pit = pit_g["ok"] + pit_g["unverified"]
+    blocked = bat_g["blocked"] + pit_g["blocked"]
+    unverified = bat_g["unverified"] + pit_g["unverified"]
     pace = ip_pace(today)
     us = race["us"]
 
@@ -163,6 +173,18 @@ def compose(as_of: str | None = None) -> str:
            if e["stats"].get("gs", 0) >= 1 and e["stats"].get("era", 9) < 4.6
            and e["stats"].get("whip", 2) < 1.35]
     sps.sort(key=sp_score, reverse=True)
+    add(f"## Activity gate: {len(bat) + len(pit)} candidates, "
+        f"**{len(blocked)} removed as proven inactive** "
+        f"(game log shows no appearance in {activity.APPEARANCE_WINDOW}d)")
+    for e in sorted(blocked, key=lambda e: e["rank"] or 9999)[:6]:
+        add(f"- ~~{e['name']}~~ ({e['mlb']}, wk-rank {e['rank']}) — {e['activity_note']}")
+    if unverified:
+        top = sorted(unverified, key=lambda e: e["rank"] or 9999)[:3]
+        add(f"- {len(unverified)} candidates carry **activity unverified** "
+            f"(outside the gamelog universe, rank > {activity.POOL_RANK_MAX}); "
+            f"best-ranked: " + ", ".join(f"{e['name']} ({e['rank']})" for e in top))
+    add("")
+
     add("## Stream targets (K/WQS are our cheapest points; IP headroom exists)")
     for e in sps[:6]:
         st = e["stats"]
@@ -177,16 +199,21 @@ def compose(as_of: str | None = None) -> str:
         })
     add("")
 
-    closers = sorted((e for e in pit if e["stats"].get("sv", 0) >= 0.5),
-                     key=lambda e: -e["stats"].get("sv", 0))
-    add("## Saves targets")
+    # SportsLine projects saves for setup men too; the sv-vs-hld split in the
+    # game log is what actually identifies a closer, so rank real closers first
+    closers = [e for e in pit if e["stats"].get("sv", 0) >= 0.5]
+    closers.sort(key=lambda e: (e.get("role") != "closer", -e["stats"].get("sv", 0)))
+    add("## Saves targets (role from sv-vs-hld usage, not depth charts)")
     for e in closers[:4]:
         st = e["stats"]
         avail = f"W until {e['clear']}" if e["avail"] == "W" else "FA"
-        add(f"- {e['name']} ({e['mlb']}{gp(e['mlb'])}){tag(e['name'])} — proj {st.get('sv', 0):g} SV, ERA {st.get('era', 0):g} [{avail}]")
+        role = e.get("role") or "?"
+        warn = "" if role == "closer" else f" — **{role}, not the closer**"
+        add(f"- {e['name']} ({e['mlb']}{gp(e['mlb'])}){tag(e['name'])} — proj {st.get('sv', 0):g} SV, "
+            f"ERA {st.get('era', 0):g} [{avail}] · role {role}{warn}")
         recs.append({"kind": "claim" if e["avail"] == "W" else "add",
                      "player": e["name"],
-                     "rationale": f"Saves target: proj {st.get('sv',0):g} SV wk{next_period}"})
+                     "rationale": f"Saves target ({role}): proj {st.get('sv',0):g} SV wk{next_period}"})
     add("")
 
     pending = [e for e in bat + pit if e["avail"] == "W"]

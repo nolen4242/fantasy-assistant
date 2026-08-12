@@ -15,6 +15,9 @@ from fantasy_assistant.graph.client import session
 
 STATSAPI = "https://statsapi.mlb.com/api/v1"
 CONCURRENCY = 8
+# keep in step with analytics.activity.POOL_RANK_MAX: anything we do not fetch
+# logs for reads as 'activity unverified' downstream
+POOL_RANK_MAX = 600
 
 HIT_FIELDS = {
     "plateAppearances": "pa", "atBats": "ab", "hits": "h", "doubles": "b2",
@@ -71,13 +74,23 @@ def to_line(mlbam_id: int, side: str, split: dict) -> dict:
 
 async def collect(season: int = 2026) -> dict:
     with session() as s:
+        # rostered universe PLUS the meaningful part of the FA pool. Without
+        # the pool arm, analytics.activity cannot verify any add candidate --
+        # only 58 of the 246 pool entries ranked <500 had day lines, so the
+        # activity gate had no evidence to work with for most recommendations.
         players = s.run(
             """
             MATCH (p:Player) WHERE p.mlbam_id IS NOT NULL
-              AND ((p)<-[:SELECTED]-(:DraftPick) OR (p)<-[:ADDS]-(:TransactionEvent))
+              AND ((p)<-[:SELECTED]-(:DraftPick) OR (p)<-[:ADDS]-(:TransactionEvent)
+                   OR EXISTS {
+                       MATCH (e:PoolEntry)-[:OF_PLAYER]->(p)
+                       WHERE e.sportsline_rank IS NOT NULL
+                         AND e.sportsline_rank < $rank_max
+                   })
             RETURN p.uid AS uid, p.mlbam_id AS mlbam, p.primary_position AS pos,
                    p.name_normalized AS norm
-            """
+            """,
+            rank_max=POOL_RANK_MAX,
         ).data()
 
     sem = asyncio.Semaphore(CONCURRENCY)
