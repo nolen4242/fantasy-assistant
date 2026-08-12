@@ -131,8 +131,9 @@ def compose(as_of: str | None = None) -> str:
     leader = race["projected_final"][0]
     add(f"- Projected leader: {leader[0]} — {leader[1]} pts on pace, "
         f"sim finish {variance.finish_range(sim, leader[0])}")
-    add(f"- Season odds (MC sim): P(win) {sim['p_win'][us]:.1%}, "
-        f"P(top-5 money) {sim['p_top5'][us]:.1%}")
+    add(f"- Finish odds: {variance.odds_line(sim, us)}")
+    add(f"- P(top-5 money) {sim['p_top5'][us]:.1%} — no single rank is better than "
+        f"~{max(sim['rank_hist'][us].values()):.0%} likely, so read the buckets, not the median")
     add(f"- Title race: " + ", ".join(f"{t} {sim['p_win'][t]:.0%}"
         for t in sorted(sim['p_win'], key=lambda t: -sim['p_win'][t])[:3]))
     add("")

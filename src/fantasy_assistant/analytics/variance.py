@@ -179,9 +179,16 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
     q = lambda p: _pct(our_pts_samples, p)
     # p10 rank is the GOOD tail (rank 1 is best), p90 the bad one
     rank_pcts = {}
+    rank_hist: dict = {}
     for t in teams:
         rs = sorted(rank_samples[t])
         rank_pcts[t] = (_pct(rs, 0.10), _pct(rs, 0.50), _pct(rs, 0.90))
+        # full P(finish = k) mass; seed is fixed, so day-over-day movement in
+        # these is real data movement, not resampling noise
+        counts = defaultdict(int)
+        for v in rs:
+            counts[v] += 1
+        rank_hist[t] = {k: counts[k] / n_sims for k in range(1, len(teams) + 1)}
     return {
         "model": MODEL_VERSION, "n_sims": n_sims, "us": us,
         "as_of_period": race["as_of_period"],
@@ -189,8 +196,12 @@ def simulate(n_sims: int = N_SIMS, seed: int = 2026) -> dict:
         "p_top5": {t: top5[t] / n_sims for t in teams},
         "mean_rank": {t: rank_sum[t] / n_sims for t in teams},
         "rank_p10_p50_p90": rank_pcts,
+        "rank_hist": rank_hist,
         "our_pts_p10_p50_p90": (round(q(0.10), 1), round(q(0.50), 1), round(q(0.90), 1)),
     }
+
+
+PAYOUT_SPOTS = 5  # league pays top-5; sets the money line the buckets split on
 
 
 def ordinal(n: int) -> str:
@@ -207,6 +218,41 @@ def finish_range(r: dict, team: str) -> str:
     return ordinal(mid) if lo == hi else f"{ordinal(mid)} ({ordinal(lo)}-{ordinal(hi)})"
 
 
+def outcome_buckets(r: dict, team: str) -> tuple:
+    """(win, money 2..N, just-outside, back half) probability mass. Split on the
+    payout line because that is the decision the odds inform; a single modal
+    rank is wrong ~80% of the time here."""
+    h = r["rank_hist"][team]
+    n = len(h)
+    outside_hi = min(n, PAYOUT_SPOTS + 4)
+    return (h[1],
+            sum(h[k] for k in range(2, PAYOUT_SPOTS + 1)),
+            sum(h[k] for k in range(PAYOUT_SPOTS + 1, outside_hi + 1)),
+            sum(h[k] for k in range(outside_hi + 1, n + 1)))
+
+
+def odds_line(r: dict, team: str) -> str:
+    """Compact one-line bucket summary for the brief."""
+    win, money, outside, back = outcome_buckets(r, team)
+    n = len(r["rank_hist"][team])
+    outside_hi = min(n, PAYOUT_SPOTS + 4)
+    _, mid, _ = r["rank_p10_p50_p90"][team]
+    return (f"win {win:.1%} · money (2-{PAYOUT_SPOTS}) {money:.1%} · "
+            f"{PAYOUT_SPOTS + 1}-{outside_hi} {outside:.1%} · "
+            f"{outside_hi + 1}-{n} {back:.1%}   [median {ordinal(mid)}]")
+
+
+def rank_histogram(r: dict, team: str, width: int = 36) -> list[str]:
+    h = r["rank_hist"][team]
+    peak = max(h.values()) or 1.0
+    out = []
+    for k in sorted(h):
+        mark = "  <-- money line" if k == PAYOUT_SPOTS else ""
+        out.append(f"  {ordinal(k):>4} {h[k]:>6.1%}  "
+                   f"{'#' * round(h[k] / peak * width)}{mark}")
+    return out
+
+
 def report(r: dict) -> str:
     us = r["us"]
     lines = [f"STANDINGS SIMULATION — {r['n_sims']} seasons from period "
@@ -221,6 +267,12 @@ def report(r: dict) -> str:
     lines.append("")
     lines.append(f"{us} projected finish: {finish_range(r, us)}   "
                  f"final points p10/median/p90: {p10} / {p50} / {p90}")
+    lines.append(f"  {odds_line(r, us)}")
+    lines.append("")
+    lines.append(f"{us} finish distribution — P(finish = k):")
+    lines.extend(rank_histogram(r, us))
+    lines.append("  (static rosters, teams drawn independently: trust the middle, "
+                 "discount the tails — the 8/24 trade deadline is not modeled)")
     return "\n".join(lines)
 
 
