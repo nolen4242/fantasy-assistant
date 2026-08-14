@@ -1,0 +1,183 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-08-14T07:31:07
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(7th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+1
+2 / 13
+WAIVER #
+PERIOD
+PERIOD 21 (MON, AUG 10 - SUN, AUG 16)
+
+	
+
+
+		Runtime Terror		
+NCP
++7.00
+		
+BST	86.50
+YGN	83.50
+DWG	83.50
+LAN	83.00
+RHV	80.50
+MD	79.00
+RTT	72.00
+GTN	68.50
+		
+LB	68.00
+GHG	61.00
+TRX	53.00
+SDG	48.00
+MGI	43.50
+	
+
+72.00	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+A. Wells C  	
+NYY 0 v SEA 1 (F)
+	 
+P. Alonso 1B  	
+ 
+	 
+T. Bazzana 2B  	
+CLE 0 @ DET 3 (F)
+	0-3
+C. Durbin 3B  	
+BOS 7 @ TOR 0 (F)
+	3-5, HR, 5 RBI, R, 0.600 OBP
+D. Swanson SS  	
+CHC 0 @ WAS 7 (F)
+	0-1, 2 BB, 0.667 OBP
+C. Montgomery MI  	
+CHW 8 v CIN 9 (F)
+	0-5
+M. Busch CI  	
+CHC 0 @ WAS 7 (F)
+	1-3, 0.333 OBP
+D. Canzone OF  	
+SEA 1 @ NYY 0 (F)
+	0-3, BB, 0.250 OBP
+C. Carroll OF  	
+ 
+	 
+K. Clemens OF  	
+MIN 1 v PHI 7 (F)
+	0-4
+S. Kwan OF  	
+CLE 0 @ DET 3 (F)
+	0-4
+Y. Diaz U  	
+ 
+	 
+A. Chapman P  	
+BOS 7 @ TOR 0 (F)
+	 
+S. Gray P   	
+BOS 7 @ TOR 0 (F)
+	 
+L. Henderson P   	
+MIL 5 @ LAD 4 (F)
+	 
+D. May P  	
+MIL 5 @ LAD 4 (F)
+	 
+T. Melton P   	
+DET 3 v CLE 0 (F)
+	 
+E. Miller P  	
+BOS 7 @ TOR 0 (F)
+	 
+E. Perez P   	
+MIA 1 v PIT 13 (F)
+	 
+W. Urena P  	
+LAA 7 v TEX 0 (F)
+	6 INN, 100 PC, 2 HA, 2 BBI, 5 K, 0.667 WHIP, W, 2 WQS
+J. deGrom P  	
+TEX 0 @ LAA 7 (F)
+	2 INN, 53 PC, 6 HA, BBI, 3 K, 2 ER, 9.000 ERA, 3.500 WHIP, L
+Today	4-28, HR, 5 RBI, R, 3 BB, 0.226 OBP
+8 INN, 153 PC, 8 HA, 3 BBI, 8 K, 2 ER, 2.250 ERA, 1.375 WHIP, W, L, 2 WQS
+Total	1206-4893, 224 2B, 31 3B, 190 HR, 665 RBI, 719 R, 94 SB, 614 BB, 32 CS, 0.337 OBP
+903.2 INN, 14817 PC, 777 HA, 338 BBI, 912 K, 351 ER, 3.496 ERA, 1.234 WHIP, 64 W, 48 L, 35 S, 125 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+Stats · Roto Points · Rank
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	BST	220	743	720	107	0.333	1014	3.85	1.23	50	126	86.50
+2nd	YGN	224	668	740	104	0.332	1022	3.97	1.19	22	147	83.50
+2nd	DWG	228	703	793	101	0.349	865	3.78	1.20	25	128	83.50
+4th	LAN	214	647	706	142	0.316	1045	3.96	1.16	68	117	83.00
+5th	RHV	164	640	684	139	0.331	965	3.37	1.18	69	123	80.50
+6th	MD	249	743	789	108	0.336	983	4.36	1.24	38	123	79.00
+7th	RTT	190	665	719	94	0.337	912	3.50	1.23	35	125	72.00
+8th	GTN	185	611	682	118	0.315	1052	3.55	1.21	20	147	68.50
+9th	LB	188	666	618	77	0.327	1127	3.55	1.24	46	133	68.00
+10th	GHG	166	610	688	70	0.333	921	3.54	1.14	41	110	61.00
+11th	TRX	159	540	659	121	0.334	883	3.98	1.22	49	111	53.00
+12th	SDG	186	672	605	115	0.314	879	4.13	1.26	26	145	48.00
+13th	MGI	151	630	658	97	0.320	909	4.07	1.29	65	128	43.50
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
