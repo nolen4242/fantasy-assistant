@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-15T12:34:29
+captured: 2026-08-15T15:03:22
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
 8/14/26 11:10 PM ET|Magnum GI|Agustin Ramirez C • MIA - Dropped|8/17/26|$0.00

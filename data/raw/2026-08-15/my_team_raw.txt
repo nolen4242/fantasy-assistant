@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams
-captured: 2026-08-15T12:34:37
+captured: 2026-08-15T15:03:29
 ---
 League
 My Team

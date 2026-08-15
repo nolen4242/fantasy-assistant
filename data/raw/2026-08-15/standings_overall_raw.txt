@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-15T12:34:35
+captured: 2026-08-15T15:03:26
 ---
 League
 My Team
@@ -194,7 +194,7 @@ Rieken Havoc	123	4.0	-1.5
 Like a Nightmare	117	3.0	1.0
 Trex	111	2.0	-1.0
 Gashouse Gang	110	1.0	0.0
-STANDINGS UPDATED AS OF 08/15/26 01:34 PM ET
+STANDINGS UPDATED AS OF 08/15/26 04:03 PM ET
 More
 Pick'em Games
 Fantasy Sports
