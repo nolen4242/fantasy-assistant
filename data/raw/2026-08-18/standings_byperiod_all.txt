@@ -1,0 +1,3453 @@
+=== Period 1 (Wed, Mar 25 - Sun, Mar 29) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Dawg|51.5|46.5|98.0|98.0|0.0
+2|Rieken Havoc|49.0|39.5|88.5|88.5|9.5
+3|Big Sticks|52.0|35.0|87.0|87.0|11.0
+4|Magnum GI|41.5|40.5|82.0|82.0|16.0
+5|Maga Doge|25.5|53.5|79.0|79.0|19.0
+6|Runtime Terror|39.0|39.0|78.0|78.0|20.0
+7|Long Balls|27.5|45.5|73.0|73.0|25.0
+8|Trex|46.0|24.0|70.0|70.0|28.0
+9|Guillotine|32.0|35.0|67.0|67.0|31.0
+10|Gashouse Gang|38.5|24.5|63.0|63.0|35.0
+11|Simba's Dublin Green Sox|14.5|35.5|50.0|50.0|48.0
+12|Like a Nightmare|9.0|29.5|38.5|38.5|59.5
+13|Young Guns|29.0|7.0|36.0|36.0|62.0
+Batting Breakdown TeamHRPtsDif Dawg812.512.5 Big Sticks812.512.5 Trex711.011.0 Magnum GI69.59.5 Gashouse Gang69.59.5 Rieken Havoc57.57.5 Maga Doge57.57.5 Runtime Terror45.55.5 Young Guns45.55.5 Long Balls33.53.5 Guillotine33.53.5 Simba's Dublin Green Sox21.51.5 Like a Nightmare21.51.5 TeamOBPPtsDif Rieken Havoc.379513.013.0 Dawg.374112.012.0 Guillotine.359411.011.0 Big Sticks.351710.010.0 Runtime Terror.34599.09.0 Trex.34538.08.0 Long Balls.32897.07.0 Magnum GI.32146.06.0 Young Guns.32085.05.0 Maga Doge.31214.04.0 Like a Nightmare.30223.03.0 Gashouse Gang.29032.02.0 Simba's Dublin Green Sox.26901.01.0 TeamRPtsDif Rieken Havoc2713.013.0 Dawg2512.012.0 Runtime Terror2211.011.0 Big Sticks219.59.5 Gashouse Gang219.59.5 Magnum GI208.08.0 Young Guns187.07.0 Trex166.06.0 Maga Doge154.54.5 Guillotine154.54.5 Long Balls143.03.0 Like a Nightmare112.02.0 Simba's Dublin Green Sox101.01.0 TeamRBIPtsDif Trex2613.013.0 Runtime Terror2412.012.0 Rieken Havoc2311.011.0 Long Balls209.59.5 Gashouse Gang209.59.5 Big Sticks187.07.0 Magnum GI187.07.0 Young Guns187.07.0 Maga Doge155.05.0 Dawg144.04.0 Simba's Dublin Green Sox133.03.0 Guillotine82.02.0 Like a Nightmare71.01.0 TeamSBPtsDif Big Sticks613.013.0 Dawg511.011.0 Magnum GI511.011.0 Guillotine511.011.0 Trex38.08.0 Gashouse Gang38.08.0 Simba's Dublin Green Sox38.08.0 Rieken Havoc24.54.5 Maga Doge24.54.5 Long Balls24.54.5 Young Guns24.54.5 Runtime Terror11.51.5 Like a Nightmare11.51.5||Pitching Breakdown TeamERAPtsDif Runtime Terror2.79313.013.0 Guillotine3.10312.012.0 Big Sticks3.14611.011.0 Magnum GI3.89710.010.0 Long Balls4.0309.09.0 Maga Doge4.1548.08.0 Rieken Havoc4.2297.07.0 Simba's Dublin Green Sox4.3956.06.0 Dawg4.6965.05.0 Gashouse Gang4.9094.04.0 Trex5.0403.03.0 Like a Nightmare5.3242.02.0 Young Guns11.2501.01.0 TeamKPtsDif Maga Doge4413.013.0 Big Sticks3511.511.5 Simba's Dublin Green Sox3511.511.5 Dawg3410.010.0 Long Balls339.09.0 Guillotine328.08.0 Magnum GI317.07.0 Rieken Havoc306.06.0 Like a Nightmare295.05.0 Gashouse Gang284.04.0 Runtime Terror242.52.5 Trex242.52.5 Young Guns111.01.0 TeamSPtsDif Dawg312.012.0 Maga Doge312.012.0 Simba's Dublin Green Sox312.012.0 Like a Nightmare210.010.0 Rieken Havoc17.07.0 Runtime Terror17.07.0 Long Balls17.07.0 Trex17.07.0 Gashouse Gang17.07.0 Big Sticks02.52.5 Magnum GI02.52.5 Guillotine02.52.5 Young Guns02.52.5 TeamWHIPPtsDif Long Balls1.074613.013.0 Dawg1.130412.012.0 Guillotine1.137911.011.0 Magnum GI1.144310.010.0 Runtime Terror1.20699.09.0 Maga Doge1.24048.08.0 Rieken Havoc1.26517.07.0 Big Sticks1.33986.06.0 Like a Nightmare1.35215.05.0 Trex1.36004.04.0 Simba's Dublin Green Sox1.39533.03.0 Gashouse Gang1.40912.02.0 Young Guns2.25001.01.0 TeamWQSPtsDif Rieken Havoc512.512.5 Maga Doge512.512.5 Magnum GI411.011.0 Dawg37.57.5 Runtime Terror37.57.5 Long Balls37.57.5 Trex37.57.5 Gashouse Gang37.57.5 Like a Nightmare37.57.5 Big Sticks24.04.0 Simba's Dublin Green Sox13.03.0 Guillotine01.51.5 Young Guns01.51.5
+Team|HR|Pts|Dif
+Dawg|8|12.5|12.5
+Big Sticks|8|12.5|12.5
+Trex|7|11.0|11.0
+Magnum GI|6|9.5|9.5
+Gashouse Gang|6|9.5|9.5
+Rieken Havoc|5|7.5|7.5
+Maga Doge|5|7.5|7.5
+Runtime Terror|4|5.5|5.5
+Young Guns|4|5.5|5.5
+Long Balls|3|3.5|3.5
+Guillotine|3|3.5|3.5
+Simba's Dublin Green Sox|2|1.5|1.5
+Like a Nightmare|2|1.5|1.5
+Team|OBP|Pts|Dif
+Rieken Havoc|.3795|13.0|13.0
+Dawg|.3741|12.0|12.0
+Guillotine|.3594|11.0|11.0
+Big Sticks|.3517|10.0|10.0
+Runtime Terror|.3459|9.0|9.0
+Trex|.3453|8.0|8.0
+Long Balls|.3289|7.0|7.0
+Magnum GI|.3214|6.0|6.0
+Young Guns|.3208|5.0|5.0
+Maga Doge|.3121|4.0|4.0
+Like a Nightmare|.3022|3.0|3.0
+Gashouse Gang|.2903|2.0|2.0
+Simba's Dublin Green Sox|.2690|1.0|1.0
+Team|R|Pts|Dif
+Rieken Havoc|27|13.0|13.0
+Dawg|25|12.0|12.0
+Runtime Terror|22|11.0|11.0
+Big Sticks|21|9.5|9.5
+Gashouse Gang|21|9.5|9.5
+Magnum GI|20|8.0|8.0
+Young Guns|18|7.0|7.0
+Trex|16|6.0|6.0
+Maga Doge|15|4.5|4.5
+Guillotine|15|4.5|4.5
+Long Balls|14|3.0|3.0
+Like a Nightmare|11|2.0|2.0
+Simba's Dublin Green Sox|10|1.0|1.0
+Team|RBI|Pts|Dif
+Trex|26|13.0|13.0
+Runtime Terror|24|12.0|12.0
+Rieken Havoc|23|11.0|11.0
+Long Balls|20|9.5|9.5
+Gashouse Gang|20|9.5|9.5
+Big Sticks|18|7.0|7.0
+Magnum GI|18|7.0|7.0
+Young Guns|18|7.0|7.0
+Maga Doge|15|5.0|5.0
+Dawg|14|4.0|4.0
+Simba's Dublin Green Sox|13|3.0|3.0
+Guillotine|8|2.0|2.0
+Like a Nightmare|7|1.0|1.0
+Team|SB|Pts|Dif
+Big Sticks|6|13.0|13.0
+Dawg|5|11.0|11.0
+Magnum GI|5|11.0|11.0
+Guillotine|5|11.0|11.0
+Trex|3|8.0|8.0
+Gashouse Gang|3|8.0|8.0
+Simba's Dublin Green Sox|3|8.0|8.0
+Rieken Havoc|2|4.5|4.5
+Maga Doge|2|4.5|4.5
+Long Balls|2|4.5|4.5
+Young Guns|2|4.5|4.5
+Runtime Terror|1|1.5|1.5
+Like a Nightmare|1|1.5|1.5
+Team|ERA|Pts|Dif
+Runtime Terror|2.793|13.0|13.0
+Guillotine|3.103|12.0|12.0
+Big Sticks|3.146|11.0|11.0
+Magnum GI|3.897|10.0|10.0
+Long Balls|4.030|9.0|9.0
+Maga Doge|4.154|8.0|8.0
+Rieken Havoc|4.229|7.0|7.0
+Simba's Dublin Green Sox|4.395|6.0|6.0
+Dawg|4.696|5.0|5.0
+Gashouse Gang|4.909|4.0|4.0
+Trex|5.040|3.0|3.0
+Like a Nightmare|5.324|2.0|2.0
+Young Guns|11.250|1.0|1.0
+Team|K|Pts|Dif
+Maga Doge|44|13.0|13.0
+Big Sticks|35|11.5|11.5
+Simba's Dublin Green Sox|35|11.5|11.5
+Dawg|34|10.0|10.0
+Long Balls|33|9.0|9.0
+Guillotine|32|8.0|8.0
+Magnum GI|31|7.0|7.0
+Rieken Havoc|30|6.0|6.0
+Like a Nightmare|29|5.0|5.0
+Gashouse Gang|28|4.0|4.0
+Runtime Terror|24|2.5|2.5
+Trex|24|2.5|2.5
+Young Guns|11|1.0|1.0
+Team|S|Pts|Dif
+Dawg|3|12.0|12.0
+Maga Doge|3|12.0|12.0
+Simba's Dublin Green Sox|3|12.0|12.0
+Like a Nightmare|2|10.0|10.0
+Rieken Havoc|1|7.0|7.0
+Runtime Terror|1|7.0|7.0
+Long Balls|1|7.0|7.0
+Trex|1|7.0|7.0
+Gashouse Gang|1|7.0|7.0
+Big Sticks|0|2.5|2.5
+Magnum GI|0|2.5|2.5
+Guillotine|0|2.5|2.5
+Young Guns|0|2.5|2.5
+Team|WHIP|Pts|Dif
+Long Balls|1.0746|13.0|13.0
+Dawg|1.1304|12.0|12.0
+Guillotine|1.1379|11.0|11.0
+Magnum GI|1.1443|10.0|10.0
+Runtime Terror|1.2069|9.0|9.0
+Maga Doge|1.2404|8.0|8.0
+Rieken Havoc|1.2651|7.0|7.0
+Big Sticks|1.3398|6.0|6.0
+Like a Nightmare|1.3521|5.0|5.0
+Trex|1.3600|4.0|4.0
+Simba's Dublin Green Sox|1.3953|3.0|3.0
+Gashouse Gang|1.4091|2.0|2.0
+Young Guns|2.2500|1.0|1.0
+Team|WQS|Pts|Dif
+Rieken Havoc|5|12.5|12.5
+Maga Doge|5|12.5|12.5
+Magnum GI|4|11.0|11.0
+Dawg|3|7.5|7.5
+Runtime Terror|3|7.5|7.5
+Long Balls|3|7.5|7.5
+Trex|3|7.5|7.5
+Gashouse Gang|3|7.5|7.5
+Like a Nightmare|3|7.5|7.5
+Big Sticks|2|4.0|4.0
+Simba's Dublin Green Sox|1|3.0|3.0
+Guillotine|0|1.5|1.5
+Young Guns|0|1.5|1.5
+
+=== Period 2 (Mon, Mar 30 - Sun, Apr 05) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Magnum GI|56.5|57.5|114.0|32.0|0.0
+2|Young Guns|51.0|29.0|80.0|44.0|34.0
+3|Trex|39.0|40.0|79.0|9.0|35.0
+4|Long Balls|19.5|56.5|76.0|3.0|38.0
+5|Rieken Havoc|21.5|50.0|71.5|-17.0|42.5
+6|Simba's Dublin Green Sox|26.5|43.0|69.5|19.5|44.5
+7|Runtime Terror|53.0|13.5|66.5|-11.5|47.5
+8|Dawg|29.0|37.0|66.0|-32.0|48.0
+9|Big Sticks|30.5|34.0|64.5|-22.5|49.5
+10|Maga Doge|43.0|20.0|63.0|-16.0|51.0
+11|Like a Nightmare|23.5|30.5|54.0|15.5|60.0
+12|Guillotine|24.0|29.0|53.0|-14.0|61.0
+12|Gashouse Gang|38.0|15.0|53.0|-10.0|61.0
+Batting Breakdown TeamHRPtsDif Young Guns1413.07.5 Maga Doge1011.54.0 Like a Nightmare1011.510.0 Magnum GI99.0-0.5 Runtime Terror99.03.5 Big Sticks99.0-3.5 Simba's Dublin Green Sox76.55.0 Dawg76.5-6.0 Trex63.5-7.5 Long Balls63.50.0 Guillotine63.50.0 Gashouse Gang63.5-6.0 Rieken Havoc51.0-6.5 TeamOBPPtsDif Magnum GI.402113.07.0 Young Guns.367912.07.0 Runtime Terror.342111.02.0 Gashouse Gang.333310.08.0 Dawg.33089.0-3.0 Trex.32758.00.0 Big Sticks.31887.0-3.0 Long Balls.31426.0-1.0 Simba's Dublin Green Sox.31235.04.0 Maga Doge.29634.00.0 Rieken Havoc.28283.0-10.0 Guillotine.28142.0-9.0 Like a Nightmare.25091.0-2.0 TeamRPtsDif Young Guns5013.06.0 Magnum GI4412.04.0 Trex3911.05.0 Runtime Terror3610.0-1.0 Guillotine358.54.0 Gashouse Gang358.5-1.0 Maga Doge337.02.5 Big Sticks326.0-3.5 Dawg315.0-7.0 Like a Nightmare294.02.0 Long Balls283.00.0 Rieken Havoc242.0-11.0 Simba's Dublin Green Sox211.00.0 TeamRBIPtsDif Magnum GI4313.06.0 Young Guns3911.54.5 Runtime Terror3911.5-0.5 Gashouse Gang3810.00.5 Maga Doge339.04.0 Simba's Dublin Green Sox328.05.0 Trex317.0-6.0 Big Sticks295.5-1.5 Like a Nightmare295.54.5 Guillotine264.02.0 Rieken Havoc242.5-8.5 Dawg242.5-1.5 Long Balls211.0-8.5 TeamSBPtsDif Rieken Havoc713.08.5 Runtime Terror611.510.0 Maga Doge611.57.0 Magnum GI59.5-1.5 Trex59.51.5 Long Balls46.01.5 Simba's Dublin Green Sox46.0-2.0 Dawg46.0-5.0 Guillotine46.0-5.0 Gashouse Gang46.0-2.0 Big Sticks33.0-10.0 Young Guns21.5-3.0 Like a Nightmare21.50.0||Pitching Breakdown TeamERAPtsDif Long Balls2.23813.04.0 Rieken Havoc2.34812.05.0 Simba's Dublin Green Sox2.45411.05.0 Magnum GI2.68210.00.0 Trex2.7309.06.0 Guillotine3.0288.0-4.0 Dawg3.1157.02.0 Young Guns3.4776.05.0 Like a Nightmare3.7675.03.0 Big Sticks3.9654.0-7.0 Maga Doge4.8213.0-5.0 Runtime Terror5.0082.0-11.0 Gashouse Gang5.4001.0-3.0 TeamKPtsDif Long Balls8213.04.0 Trex5712.09.5 Magnum GI5311.04.0 Big Sticks5010.0-1.5 Young Guns489.08.0 Dawg478.0-2.0 Rieken Havoc467.01.0 Runtime Terror456.03.5 Simba's Dublin Green Sox434.5-7.0 Like a Nightmare434.5-0.5 Maga Doge403.0-10.0 Guillotine381.5-6.5 Gashouse Gang381.5-2.5 TeamSPtsDif Simba's Dublin Green Sox413.01.0 Magnum GI311.59.0 Long Balls311.54.5 Trex27.00.0 Rieken Havoc27.00.0 Dawg27.0-5.0 Maga Doge27.0-5.0 Like a Nightmare27.0-3.0 Guillotine27.04.5 Gashouse Gang27.00.0 Young Guns12.0-0.5 Runtime Terror12.0-5.0 Big Sticks12.0-0.5 TeamWHIPPtsDif Magnum GI0.874213.03.0 Rieken Havoc1.021712.05.0 Guillotine1.093511.00.0 Long Balls1.093910.0-3.0 Dawg1.10779.0-3.0 Young Guns1.13647.56.5 Simba's Dublin Green Sox1.13647.54.5 Big Sticks1.15386.00.0 Like a Nightmare1.20935.00.0 Maga Doge1.23214.0-4.0 Trex1.24723.0-1.0 Runtime Terror1.35482.0-7.0 Gashouse Gang1.50001.0-1.0 TeamWQSPtsDif Magnum GI912.01.0 Rieken Havoc912.0-0.5 Big Sticks912.08.0 Trex79.01.5 Long Balls79.01.5 Like a Nightmare79.01.5 Simba's Dublin Green Sox67.04.0 Dawg56.0-1.5 Young Guns44.53.0 Gashouse Gang44.5-3.0 Maga Doge33.0-9.5 Runtime Terror21.5-6.0 Guillotine21.50.0
+Team|HR|Pts|Dif
+Young Guns|14|13.0|7.5
+Maga Doge|10|11.5|4.0
+Like a Nightmare|10|11.5|10.0
+Magnum GI|9|9.0|-0.5
+Runtime Terror|9|9.0|3.5
+Big Sticks|9|9.0|-3.5
+Simba's Dublin Green Sox|7|6.5|5.0
+Dawg|7|6.5|-6.0
+Trex|6|3.5|-7.5
+Long Balls|6|3.5|0.0
+Guillotine|6|3.5|0.0
+Gashouse Gang|6|3.5|-6.0
+Rieken Havoc|5|1.0|-6.5
+Team|OBP|Pts|Dif
+Magnum GI|.4021|13.0|7.0
+Young Guns|.3679|12.0|7.0
+Runtime Terror|.3421|11.0|2.0
+Gashouse Gang|.3333|10.0|8.0
+Dawg|.3308|9.0|-3.0
+Trex|.3275|8.0|0.0
+Big Sticks|.3188|7.0|-3.0
+Long Balls|.3142|6.0|-1.0
+Simba's Dublin Green Sox|.3123|5.0|4.0
+Maga Doge|.2963|4.0|0.0
+Rieken Havoc|.2828|3.0|-10.0
+Guillotine|.2814|2.0|-9.0
+Like a Nightmare|.2509|1.0|-2.0
+Team|R|Pts|Dif
+Young Guns|50|13.0|6.0
+Magnum GI|44|12.0|4.0
+Trex|39|11.0|5.0
+Runtime Terror|36|10.0|-1.0
+Guillotine|35|8.5|4.0
+Gashouse Gang|35|8.5|-1.0
+Maga Doge|33|7.0|2.5
+Big Sticks|32|6.0|-3.5
+Dawg|31|5.0|-7.0
+Like a Nightmare|29|4.0|2.0
+Long Balls|28|3.0|0.0
+Rieken Havoc|24|2.0|-11.0
+Simba's Dublin Green Sox|21|1.0|0.0
+Team|RBI|Pts|Dif
+Magnum GI|43|13.0|6.0
+Young Guns|39|11.5|4.5
+Runtime Terror|39|11.5|-0.5
+Gashouse Gang|38|10.0|0.5
+Maga Doge|33|9.0|4.0
+Simba's Dublin Green Sox|32|8.0|5.0
+Trex|31|7.0|-6.0
+Big Sticks|29|5.5|-1.5
+Like a Nightmare|29|5.5|4.5
+Guillotine|26|4.0|2.0
+Rieken Havoc|24|2.5|-8.5
+Dawg|24|2.5|-1.5
+Long Balls|21|1.0|-8.5
+Team|SB|Pts|Dif
+Rieken Havoc|7|13.0|8.5
+Runtime Terror|6|11.5|10.0
+Maga Doge|6|11.5|7.0
+Magnum GI|5|9.5|-1.5
+Trex|5|9.5|1.5
+Long Balls|4|6.0|1.5
+Simba's Dublin Green Sox|4|6.0|-2.0
+Dawg|4|6.0|-5.0
+Guillotine|4|6.0|-5.0
+Gashouse Gang|4|6.0|-2.0
+Big Sticks|3|3.0|-10.0
+Young Guns|2|1.5|-3.0
+Like a Nightmare|2|1.5|0.0
+Team|ERA|Pts|Dif
+Long Balls|2.238|13.0|4.0
+Rieken Havoc|2.348|12.0|5.0
+Simba's Dublin Green Sox|2.454|11.0|5.0
+Magnum GI|2.682|10.0|0.0
+Trex|2.730|9.0|6.0
+Guillotine|3.028|8.0|-4.0
+Dawg|3.115|7.0|2.0
+Young Guns|3.477|6.0|5.0
+Like a Nightmare|3.767|5.0|3.0
+Big Sticks|3.965|4.0|-7.0
+Maga Doge|4.821|3.0|-5.0
+Runtime Terror|5.008|2.0|-11.0
+Gashouse Gang|5.400|1.0|-3.0
+Team|K|Pts|Dif
+Long Balls|82|13.0|4.0
+Trex|57|12.0|9.5
+Magnum GI|53|11.0|4.0
+Big Sticks|50|10.0|-1.5
+Young Guns|48|9.0|8.0
+Dawg|47|8.0|-2.0
+Rieken Havoc|46|7.0|1.0
+Runtime Terror|45|6.0|3.5
+Simba's Dublin Green Sox|43|4.5|-7.0
+Like a Nightmare|43|4.5|-0.5
+Maga Doge|40|3.0|-10.0
+Guillotine|38|1.5|-6.5
+Gashouse Gang|38|1.5|-2.5
+Team|S|Pts|Dif
+Simba's Dublin Green Sox|4|13.0|1.0
+Magnum GI|3|11.5|9.0
+Long Balls|3|11.5|4.5
+Trex|2|7.0|0.0
+Rieken Havoc|2|7.0|0.0
+Dawg|2|7.0|-5.0
+Maga Doge|2|7.0|-5.0
+Like a Nightmare|2|7.0|-3.0
+Guillotine|2|7.0|4.5
+Gashouse Gang|2|7.0|0.0
+Young Guns|1|2.0|-0.5
+Runtime Terror|1|2.0|-5.0
+Big Sticks|1|2.0|-0.5
+Team|WHIP|Pts|Dif
+Magnum GI|0.8742|13.0|3.0
+Rieken Havoc|1.0217|12.0|5.0
+Guillotine|1.0935|11.0|0.0
+Long Balls|1.0939|10.0|-3.0
+Dawg|1.1077|9.0|-3.0
+Young Guns|1.1364|7.5|6.5
+Simba's Dublin Green Sox|1.1364|7.5|4.5
+Big Sticks|1.1538|6.0|0.0
+Like a Nightmare|1.2093|5.0|0.0
+Maga Doge|1.2321|4.0|-4.0
+Trex|1.2472|3.0|-1.0
+Runtime Terror|1.3548|2.0|-7.0
+Gashouse Gang|1.5000|1.0|-1.0
+Team|WQS|Pts|Dif
+Magnum GI|9|12.0|1.0
+Rieken Havoc|9|12.0|-0.5
+Big Sticks|9|12.0|8.0
+Trex|7|9.0|1.5
+Long Balls|7|9.0|1.5
+Like a Nightmare|7|9.0|1.5
+Simba's Dublin Green Sox|6|7.0|4.0
+Dawg|5|6.0|-1.5
+Young Guns|4|4.5|3.0
+Gashouse Gang|4|4.5|-3.0
+Maga Doge|3|3.0|-9.5
+Runtime Terror|2|1.5|-6.0
+Guillotine|2|1.5|0.0
+
+=== Period 3 (Mon, Apr 06 - Sun, Apr 12) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Maga Doge|50.0|50.0|100.0|29.0|0.0
+2|Big Sticks|47.5|41.5|89.0|5.5|11.0
+3|Guillotine|39.5|48.0|87.5|35.5|12.5
+4|Dawg|52.0|32.0|84.0|-1.5|16.0
+5|Simba's Dublin Green Sox|39.5|35.5|75.0|20.5|25.0
+6|Young Guns|47.0|26.5|73.5|15.5|26.5
+7|Gashouse Gang|35.0|38.0|73.0|21.0|27.0
+8|Like a Nightmare|31.5|40.0|71.5|27.5|28.5
+9|Magnum GI|11.0|56.5|67.5|-44.5|32.5
+10|Runtime Terror|39.5|27.0|66.5|2.5|33.5
+11|Rieken Havoc|26.0|30.0|56.0|-24.5|44.0
+12|Long Balls|23.0|14.0|37.0|-38.5|63.0
+13|Trex|13.5|16.0|29.5|-48.0|70.5
+Batting Breakdown TeamHRPtsDif Guillotine1312.510.5 Simba's Dublin Green Sox1312.510.5 Dawg1211.01.0 Big Sticks1110.0-2.0 Maga Doge108.5-1.5 Rieken Havoc108.54.5 Gashouse Gang97.01.5 Young Guns86.0-7.0 Like a Nightmare75.0-0.5 Runtime Terror64.0-3.5 Long Balls53.01.0 Magnum GI42.0-8.0 Trex21.0-6.5 TeamOBPPtsDif Dawg.395313.02.0 Young Guns.362712.00.0 Big Sticks.353511.03.0 Gashouse Gang.346710.04.0 Runtime Terror.33339.0-1.0 Simba's Dublin Green Sox.33108.06.0 Maga Doge.33097.04.0 Long Balls.32196.0-1.0 Like a Nightmare.32015.04.0 Trex.31714.0-5.0 Guillotine.31103.0-1.0 Rieken Havoc.30152.0-3.0 Magnum GI.29821.0-12.0 TeamRPtsDif Young Guns4613.00.0 Runtime Terror4212.01.0 Like a Nightmare3911.09.0 Maga Doge3810.06.0 Guillotine369.04.0 Gashouse Gang358.0-1.5 Dawg346.5-3.0 Trex346.5-1.5 Simba's Dublin Green Sox325.04.0 Big Sticks313.5-3.5 Long Balls313.50.5 Magnum GI271.5-10.5 Rieken Havoc271.5-4.5 TeamRBIPtsDif Dawg4513.010.0 Maga Doge4211.53.5 Big Sticks4211.55.0 Guillotine4010.09.0 Simba's Dublin Green Sox389.04.0 Young Guns337.5-2.0 Gashouse Gang337.5-3.5 Like a Nightmare295.53.5 Rieken Havoc295.5-1.0 Magnum GI284.0-8.0 Runtime Terror273.0-10.0 Long Balls242.0-2.0 Trex231.0-8.5 TeamSBPtsDif Maga Doge1313.05.5 Big Sticks1211.51.0 Runtime Terror1211.56.5 Dawg88.5-2.0 Young Guns88.56.5 Rieken Havoc88.5-2.0 Long Balls88.55.5 Guillotine75.0-5.5 Simba's Dublin Green Sox75.00.0 Like a Nightmare75.04.0 Gashouse Gang52.5-2.5 Magnum GI52.5-10.5 Trex31.0-6.5||Pitching Breakdown TeamERAPtsDif Maga Doge2.33113.010.0 Magnum GI2.71712.02.0 Guillotine2.91511.00.0 Dawg2.92510.04.0 Big Sticks2.9599.02.0 Gashouse Gang3.1978.07.0 Like a Nightmare3.2407.03.0 Simba's Dublin Green Sox3.5146.0-3.0 Runtime Terror4.7965.00.0 Young Guns4.9564.02.0 Long Balls5.4733.0-10.0 Rieken Havoc5.8622.0-10.0 Trex6.0001.0-7.0 TeamKPtsDif Guillotine6113.09.0 Rieken Havoc5912.06.0 Magnum GI5711.00.5 Young Guns5610.09.0 Maga Doge549.0-1.5 Big Sticks537.5-4.5 Gashouse Gang537.55.5 Long Balls506.0-7.0 Like a Nightmare455.00.0 Runtime Terror424.01.0 Simba's Dublin Green Sox403.0-4.0 Dawg372.0-6.5 Trex301.0-7.5 TeamSPtsDif Like a Nightmare513.03.5 Maga Doge411.50.0 Magnum GI411.55.0 Dawg28.0-3.5 Simba's Dublin Green Sox28.0-5.0 Runtime Terror28.04.5 Rieken Havoc28.01.5 Trex28.01.5 Young Guns15.03.5 Big Sticks02.51.0 Guillotine02.5-1.0 Gashouse Gang02.5-4.0 Long Balls02.5-7.0 TeamWHIPPtsDif Magnum GI1.018913.00.0 Gashouse Gang1.085512.011.0 Big Sticks1.089011.03.0 Guillotine1.090910.00.0 Like a Nightmare1.12809.04.0 Dawg1.15008.0-1.0 Simba's Dublin Green Sox1.17127.01.0 Young Guns1.23426.04.0 Maga Doge1.27345.0-2.0 Runtime Terror1.36184.01.0 Trex1.47623.0-1.0 Rieken Havoc1.51972.0-9.0 Long Balls1.74321.0-11.0 TeamWQSPtsDif Maga Doge911.55.0 Big Sticks911.50.5 Guillotine911.510.5 Simba's Dublin Green Sox911.57.0 Magnum GI89.0-3.0 Gashouse Gang78.03.5 Like a Nightmare56.0-3.0 Runtime Terror56.03.0 Rieken Havoc56.0-7.0 Dawg44.0-2.5 Trex33.0-6.0 Young Guns21.5-0.5 Long Balls21.5-7.5
+Team|HR|Pts|Dif
+Guillotine|13|12.5|10.5
+Simba's Dublin Green Sox|13|12.5|10.5
+Dawg|12|11.0|1.0
+Big Sticks|11|10.0|-2.0
+Maga Doge|10|8.5|-1.5
+Rieken Havoc|10|8.5|4.5
+Gashouse Gang|9|7.0|1.5
+Young Guns|8|6.0|-7.0
+Like a Nightmare|7|5.0|-0.5
+Runtime Terror|6|4.0|-3.5
+Long Balls|5|3.0|1.0
+Magnum GI|4|2.0|-8.0
+Trex|2|1.0|-6.5
+Team|OBP|Pts|Dif
+Dawg|.3953|13.0|2.0
+Young Guns|.3627|12.0|0.0
+Big Sticks|.3535|11.0|3.0
+Gashouse Gang|.3467|10.0|4.0
+Runtime Terror|.3333|9.0|-1.0
+Simba's Dublin Green Sox|.3310|8.0|6.0
+Maga Doge|.3309|7.0|4.0
+Long Balls|.3219|6.0|-1.0
+Like a Nightmare|.3201|5.0|4.0
+Trex|.3171|4.0|-5.0
+Guillotine|.3110|3.0|-1.0
+Rieken Havoc|.3015|2.0|-3.0
+Magnum GI|.2982|1.0|-12.0
+Team|R|Pts|Dif
+Young Guns|46|13.0|0.0
+Runtime Terror|42|12.0|1.0
+Like a Nightmare|39|11.0|9.0
+Maga Doge|38|10.0|6.0
+Guillotine|36|9.0|4.0
+Gashouse Gang|35|8.0|-1.5
+Dawg|34|6.5|-3.0
+Trex|34|6.5|-1.5
+Simba's Dublin Green Sox|32|5.0|4.0
+Big Sticks|31|3.5|-3.5
+Long Balls|31|3.5|0.5
+Magnum GI|27|1.5|-10.5
+Rieken Havoc|27|1.5|-4.5
+Team|RBI|Pts|Dif
+Dawg|45|13.0|10.0
+Maga Doge|42|11.5|3.5
+Big Sticks|42|11.5|5.0
+Guillotine|40|10.0|9.0
+Simba's Dublin Green Sox|38|9.0|4.0
+Young Guns|33|7.5|-2.0
+Gashouse Gang|33|7.5|-3.5
+Like a Nightmare|29|5.5|3.5
+Rieken Havoc|29|5.5|-1.0
+Magnum GI|28|4.0|-8.0
+Runtime Terror|27|3.0|-10.0
+Long Balls|24|2.0|-2.0
+Trex|23|1.0|-8.5
+Team|SB|Pts|Dif
+Maga Doge|13|13.0|5.5
+Big Sticks|12|11.5|1.0
+Runtime Terror|12|11.5|6.5
+Dawg|8|8.5|-2.0
+Young Guns|8|8.5|6.5
+Rieken Havoc|8|8.5|-2.0
+Long Balls|8|8.5|5.5
+Guillotine|7|5.0|-5.5
+Simba's Dublin Green Sox|7|5.0|0.0
+Like a Nightmare|7|5.0|4.0
+Gashouse Gang|5|2.5|-2.5
+Magnum GI|5|2.5|-10.5
+Trex|3|1.0|-6.5
+Team|ERA|Pts|Dif
+Maga Doge|2.331|13.0|10.0
+Magnum GI|2.717|12.0|2.0
+Guillotine|2.915|11.0|0.0
+Dawg|2.925|10.0|4.0
+Big Sticks|2.959|9.0|2.0
+Gashouse Gang|3.197|8.0|7.0
+Like a Nightmare|3.240|7.0|3.0
+Simba's Dublin Green Sox|3.514|6.0|-3.0
+Runtime Terror|4.796|5.0|0.0
+Young Guns|4.956|4.0|2.0
+Long Balls|5.473|3.0|-10.0
+Rieken Havoc|5.862|2.0|-10.0
+Trex|6.000|1.0|-7.0
+Team|K|Pts|Dif
+Guillotine|61|13.0|9.0
+Rieken Havoc|59|12.0|6.0
+Magnum GI|57|11.0|0.5
+Young Guns|56|10.0|9.0
+Maga Doge|54|9.0|-1.5
+Big Sticks|53|7.5|-4.5
+Gashouse Gang|53|7.5|5.5
+Long Balls|50|6.0|-7.0
+Like a Nightmare|45|5.0|0.0
+Runtime Terror|42|4.0|1.0
+Simba's Dublin Green Sox|40|3.0|-4.0
+Dawg|37|2.0|-6.5
+Trex|30|1.0|-7.5
+Team|S|Pts|Dif
+Like a Nightmare|5|13.0|3.5
+Maga Doge|4|11.5|0.0
+Magnum GI|4|11.5|5.0
+Dawg|2|8.0|-3.5
+Simba's Dublin Green Sox|2|8.0|-5.0
+Runtime Terror|2|8.0|4.5
+Rieken Havoc|2|8.0|1.5
+Trex|2|8.0|1.5
+Young Guns|1|5.0|3.5
+Big Sticks|0|2.5|1.0
+Guillotine|0|2.5|-1.0
+Gashouse Gang|0|2.5|-4.0
+Long Balls|0|2.5|-7.0
+Team|WHIP|Pts|Dif
+Magnum GI|1.0189|13.0|0.0
+Gashouse Gang|1.0855|12.0|11.0
+Big Sticks|1.0890|11.0|3.0
+Guillotine|1.0909|10.0|0.0
+Like a Nightmare|1.1280|9.0|4.0
+Dawg|1.1500|8.0|-1.0
+Simba's Dublin Green Sox|1.1712|7.0|1.0
+Young Guns|1.2342|6.0|4.0
+Maga Doge|1.2734|5.0|-2.0
+Runtime Terror|1.3618|4.0|1.0
+Trex|1.4762|3.0|-1.0
+Rieken Havoc|1.5197|2.0|-9.0
+Long Balls|1.7432|1.0|-11.0
+Team|WQS|Pts|Dif
+Maga Doge|9|11.5|5.0
+Big Sticks|9|11.5|0.5
+Guillotine|9|11.5|10.5
+Simba's Dublin Green Sox|9|11.5|7.0
+Magnum GI|8|9.0|-3.0
+Gashouse Gang|7|8.0|3.5
+Like a Nightmare|5|6.0|-3.0
+Runtime Terror|5|6.0|3.0
+Rieken Havoc|5|6.0|-7.0
+Dawg|4|4.0|-2.5
+Trex|3|3.0|-6.0
+Young Guns|2|1.5|-0.5
+Long Balls|2|1.5|-7.5
+
+=== Period 4 (Mon, Apr 13 - Sun, Apr 19) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Trex|36.5|56.5|93.0|49.0|0.0
+2|Rieken Havoc|43.0|39.5|82.5|18.5|10.5
+3|Long Balls|40.0|38.5|78.5|30.5|14.5
+4|Big Sticks|44.5|31.5|76.0|-15.5|17.0
+5|Maga Doge|41.5|31.5|73.0|-19.5|20.0
+5|Magnum GI|41.5|31.5|73.0|-28.5|20.0
+7|Young Guns|45.0|23.0|68.0|4.0|25.0
+8|Dawg|47.5|19.5|67.0|-22.5|26.0
+9|Runtime Terror|46.0|18.5|64.5|2.5|28.5
+10|Guillotine|24.5|37.0|61.5|-4.0|31.5
+10|Like a Nightmare|14.5|47.0|61.5|11.0|31.5
+12|Gashouse Gang|19.0|39.0|58.0|-9.0|35.0
+13|Simba's Dublin Green Sox|11.5|42.0|53.5|-16.5|39.5
+Batting Breakdown TeamHRPtsDif Maga Doge1613.03.0 Young Guns1512.01.0 Runtime Terror1411.07.0 Big Sticks129.5-3.5 Dawg129.5-2.5 Trex117.05.0 Rieken Havoc117.01.0 Long Balls117.06.0 Magnum GI95.01.0 Guillotine83.5-5.0 Like a Nightmare83.5-0.5 Simba's Dublin Green Sox62.0-6.5 Gashouse Gang21.0-6.0 TeamOBPPtsDif Dawg.375513.00.0 Rieken Havoc.359412.08.0 Maga Doge.358611.06.0 Young Guns.354610.0-2.0 Magnum GI.34449.0-2.0 Trex.34438.01.0 Long Balls.34387.01.0 Runtime Terror.33976.0-4.0 Big Sticks.33225.0-4.0 Gashouse Gang.30864.0-4.0 Guillotine.30543.01.0 Simba's Dublin Green Sox.27562.0-1.0 Like a Nightmare.27431.00.0 TeamRPtsDif Runtime Terror5013.01.0 Dawg4712.03.0 Trex4610.52.5 Young Guns4610.5-2.5 Magnum GI419.0-1.5 Rieken Havoc398.05.0 Big Sticks386.51.5 Like a Nightmare386.52.5 Long Balls365.03.0 Maga Doge354.0-2.5 Guillotine323.0-3.5 Gashouse Gang292.0-8.5 Simba's Dublin Green Sox211.00.0 TeamRBIPtsDif Long Balls4713.011.5 Maga Doge4612.01.0 Big Sticks4410.52.0 Magnum GI4410.52.0 Young Guns439.0-2.0 Runtime Terror408.0-3.0 Dawg387.00.5 Trex366.01.0 Rieken Havoc325.01.0 Guillotine304.01.0 Simba's Dublin Green Sox223.0-3.5 Like a Nightmare192.00.5 Gashouse Gang141.0-12.0 TeamSBPtsDif Big Sticks913.00.5 Rieken Havoc711.01.5 Guillotine711.03.0 Gashouse Gang711.07.5 Long Balls68.02.5 Magnum GI68.01.0 Runtime Terror68.0-3.0 Dawg56.0-3.5 Trex45.03.0 Young Guns33.50.0 Simba's Dublin Green Sox33.5-2.0 Maga Doge21.5-11.0 Like a Nightmare21.50.5||Pitching Breakdown TeamERAPtsDif Gashouse Gang2.59213.010.0 Long Balls2.97912.05.0 Rieken Havoc3.24011.06.0 Trex3.25610.06.0 Like a Nightmare3.5449.03.0 Simba's Dublin Green Sox3.8378.0-3.0 Young Guns4.1377.06.0 Runtime Terror4.3556.04.0 Big Sticks4.3865.0-5.0 Guillotine4.4184.0-8.0 Magnum GI4.9263.0-10.0 Maga Doge5.4002.0-6.0 Dawg5.6841.0-8.0 TeamKPtsDif Trex7113.011.5 Guillotine6512.04.0 Maga Doge6411.00.5 Like a Nightmare6310.06.0 Big Sticks589.0-1.5 Magnum GI548.0-4.0 Rieken Havoc477.0-2.0 Long Balls465.5-7.5 Simba's Dublin Green Sox465.50.0 Dawg424.0-1.5 Gashouse Gang383.0-4.0 Young Guns372.0-1.0 Runtime Terror321.0-0.5 TeamSPtsDif Magnum GI713.03.5 Trex411.54.0 Long Balls411.56.0 Dawg38.5-1.0 Runtime Terror38.53.0 Like a Nightmare38.5-3.5 Simba's Dublin Green Sox38.5-3.5 Maga Doge25.0-7.0 Young Guns25.02.5 Gashouse Gang25.01.0 Big Sticks12.51.5 Guillotine12.50.0 Rieken Havoc01.0-6.5 TeamWHIPPtsDif Gashouse Gang1.032013.09.0 Like a Nightmare1.087512.03.0 Guillotine1.090911.0-1.0 Rieken Havoc1.100010.05.0 Trex1.10059.08.0 Simba's Dublin Green Sox1.16848.00.0 Long Balls1.26217.05.0 Big Sticks1.27926.0-4.0 Magnum GI1.31765.0-8.0 Young Guns1.35484.0-2.0 Maga Doge1.45453.0-4.0 Runtime Terror1.57262.0-1.0 Dawg1.57891.0-10.0 TeamWQSPtsDif Trex1213.07.0 Simba's Dublin Green Sox1012.03.0 Rieken Havoc910.5-0.5 Maga Doge910.50.5 Big Sticks89.0-3.0 Guillotine77.54.5 Like a Nightmare77.5-0.5 Young Guns65.04.0 Dawg65.00.5 Gashouse Gang65.0-2.0 Long Balls52.5-2.0 Magnum GI52.5-10.5 Runtime Terror31.0-1.0
+Team|HR|Pts|Dif
+Maga Doge|16|13.0|3.0
+Young Guns|15|12.0|1.0
+Runtime Terror|14|11.0|7.0
+Big Sticks|12|9.5|-3.5
+Dawg|12|9.5|-2.5
+Trex|11|7.0|5.0
+Rieken Havoc|11|7.0|1.0
+Long Balls|11|7.0|6.0
+Magnum GI|9|5.0|1.0
+Guillotine|8|3.5|-5.0
+Like a Nightmare|8|3.5|-0.5
+Simba's Dublin Green Sox|6|2.0|-6.5
+Gashouse Gang|2|1.0|-6.0
+Team|OBP|Pts|Dif
+Dawg|.3755|13.0|0.0
+Rieken Havoc|.3594|12.0|8.0
+Maga Doge|.3586|11.0|6.0
+Young Guns|.3546|10.0|-2.0
+Magnum GI|.3444|9.0|-2.0
+Trex|.3443|8.0|1.0
+Long Balls|.3438|7.0|1.0
+Runtime Terror|.3397|6.0|-4.0
+Big Sticks|.3322|5.0|-4.0
+Gashouse Gang|.3086|4.0|-4.0
+Guillotine|.3054|3.0|1.0
+Simba's Dublin Green Sox|.2756|2.0|-1.0
+Like a Nightmare|.2743|1.0|0.0
+Team|R|Pts|Dif
+Runtime Terror|50|13.0|1.0
+Dawg|47|12.0|3.0
+Trex|46|10.5|2.5
+Young Guns|46|10.5|-2.5
+Magnum GI|41|9.0|-1.5
+Rieken Havoc|39|8.0|5.0
+Big Sticks|38|6.5|1.5
+Like a Nightmare|38|6.5|2.5
+Long Balls|36|5.0|3.0
+Maga Doge|35|4.0|-2.5
+Guillotine|32|3.0|-3.5
+Gashouse Gang|29|2.0|-8.5
+Simba's Dublin Green Sox|21|1.0|0.0
+Team|RBI|Pts|Dif
+Long Balls|47|13.0|11.5
+Maga Doge|46|12.0|1.0
+Big Sticks|44|10.5|2.0
+Magnum GI|44|10.5|2.0
+Young Guns|43|9.0|-2.0
+Runtime Terror|40|8.0|-3.0
+Dawg|38|7.0|0.5
+Trex|36|6.0|1.0
+Rieken Havoc|32|5.0|1.0
+Guillotine|30|4.0|1.0
+Simba's Dublin Green Sox|22|3.0|-3.5
+Like a Nightmare|19|2.0|0.5
+Gashouse Gang|14|1.0|-12.0
+Team|SB|Pts|Dif
+Big Sticks|9|13.0|0.5
+Rieken Havoc|7|11.0|1.5
+Guillotine|7|11.0|3.0
+Gashouse Gang|7|11.0|7.5
+Long Balls|6|8.0|2.5
+Magnum GI|6|8.0|1.0
+Runtime Terror|6|8.0|-3.0
+Dawg|5|6.0|-3.5
+Trex|4|5.0|3.0
+Young Guns|3|3.5|0.0
+Simba's Dublin Green Sox|3|3.5|-2.0
+Maga Doge|2|1.5|-11.0
+Like a Nightmare|2|1.5|0.5
+Team|ERA|Pts|Dif
+Gashouse Gang|2.592|13.0|10.0
+Long Balls|2.979|12.0|5.0
+Rieken Havoc|3.240|11.0|6.0
+Trex|3.256|10.0|6.0
+Like a Nightmare|3.544|9.0|3.0
+Simba's Dublin Green Sox|3.837|8.0|-3.0
+Young Guns|4.137|7.0|6.0
+Runtime Terror|4.355|6.0|4.0
+Big Sticks|4.386|5.0|-5.0
+Guillotine|4.418|4.0|-8.0
+Magnum GI|4.926|3.0|-10.0
+Maga Doge|5.400|2.0|-6.0
+Dawg|5.684|1.0|-8.0
+Team|K|Pts|Dif
+Trex|71|13.0|11.5
+Guillotine|65|12.0|4.0
+Maga Doge|64|11.0|0.5
+Like a Nightmare|63|10.0|6.0
+Big Sticks|58|9.0|-1.5
+Magnum GI|54|8.0|-4.0
+Rieken Havoc|47|7.0|-2.0
+Long Balls|46|5.5|-7.5
+Simba's Dublin Green Sox|46|5.5|0.0
+Dawg|42|4.0|-1.5
+Gashouse Gang|38|3.0|-4.0
+Young Guns|37|2.0|-1.0
+Runtime Terror|32|1.0|-0.5
+Team|S|Pts|Dif
+Magnum GI|7|13.0|3.5
+Trex|4|11.5|4.0
+Long Balls|4|11.5|6.0
+Dawg|3|8.5|-1.0
+Runtime Terror|3|8.5|3.0
+Like a Nightmare|3|8.5|-3.5
+Simba's Dublin Green Sox|3|8.5|-3.5
+Maga Doge|2|5.0|-7.0
+Young Guns|2|5.0|2.5
+Gashouse Gang|2|5.0|1.0
+Big Sticks|1|2.5|1.5
+Guillotine|1|2.5|0.0
+Rieken Havoc|0|1.0|-6.5
+Team|WHIP|Pts|Dif
+Gashouse Gang|1.0320|13.0|9.0
+Like a Nightmare|1.0875|12.0|3.0
+Guillotine|1.0909|11.0|-1.0
+Rieken Havoc|1.1000|10.0|5.0
+Trex|1.1005|9.0|8.0
+Simba's Dublin Green Sox|1.1684|8.0|0.0
+Long Balls|1.2621|7.0|5.0
+Big Sticks|1.2792|6.0|-4.0
+Magnum GI|1.3176|5.0|-8.0
+Young Guns|1.3548|4.0|-2.0
+Maga Doge|1.4545|3.0|-4.0
+Runtime Terror|1.5726|2.0|-1.0
+Dawg|1.5789|1.0|-10.0
+Team|WQS|Pts|Dif
+Trex|12|13.0|7.0
+Simba's Dublin Green Sox|10|12.0|3.0
+Rieken Havoc|9|10.5|-0.5
+Maga Doge|9|10.5|0.5
+Big Sticks|8|9.0|-3.0
+Guillotine|7|7.5|4.5
+Like a Nightmare|7|7.5|-0.5
+Young Guns|6|5.0|4.0
+Dawg|6|5.0|0.5
+Gashouse Gang|6|5.0|-2.0
+Long Balls|5|2.5|-2.0
+Magnum GI|5|2.5|-10.5
+Runtime Terror|3|1.0|-1.0
+
+=== Period 5 (Mon, Apr 20 - Sun, Apr 26) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Guillotine|43.0|51.5|94.5|26.0|0.0
+2|Long Balls|36.0|47.5|83.5|24.5|11.0
+3|Young Guns|54.0|24.5|78.5|16.5|16.0
+3|Dawg|40.5|38.0|78.5|1.0|16.0
+5|Rieken Havoc|36.0|37.5|73.5|3.5|21.0
+5|Maga Doge|35.5|38.0|73.5|-11.5|21.0
+7|Like a Nightmare|9.5|62.0|71.5|17.5|23.0
+8|Simba's Dublin Green Sox|53.5|12.0|65.5|2.0|29.0
+8|Runtime Terror|40.5|25.0|65.5|1.5|29.0
+10|Magnum GI|17.5|44.0|61.5|-39.0|33.0
+11|Gashouse Gang|22.5|36.0|58.5|10.5|36.0
+12|Trex|37.5|18.0|55.5|-8.5|39.0
+13|Big Sticks|29.0|21.0|50.0|-44.0|44.5
+Batting Breakdown TeamHRPtsDif Young Guns1712.50.0 Simba's Dublin Green Sox1712.57.0 Dawg1511.01.0 Guillotine1410.03.0 Long Balls128.56.5 Big Sticks128.5-2.5 Runtime Terror117.0-2.0 Rieken Havoc105.5-2.5 Trex105.52.5 Maga Doge83.5-9.0 Like a Nightmare83.5-0.5 Gashouse Gang72.01.0 Magnum GI51.0-4.5 TeamOBPPtsDif Rieken Havoc.387113.08.0 Runtime Terror.373412.02.0 Trex.369311.03.0 Maga Doge.366710.04.0 Young Guns.36349.0-3.0 Gashouse Gang.36158.04.0 Simba's Dublin Green Sox.35717.05.0 Guillotine.32096.03.0 Dawg.31615.0-8.0 Big Sticks.31164.0-5.0 Long Balls.30583.0-4.0 Magnum GI.30182.0-9.0 Like a Nightmare.28121.00.0 TeamRPtsDif Young Guns5313.00.0 Simba's Dublin Green Sox4712.011.0 Guillotine4310.55.5 Rieken Havoc4310.57.0 Maga Doge429.02.0 Dawg388.0-3.0 Trex377.0-3.0 Gashouse Gang365.5-0.5 Big Sticks365.5-2.5 Long Balls323.01.0 Runtime Terror323.0-9.0 Magnum GI323.0-6.0 Like a Nightmare271.0-2.5 TeamRBIPtsDif Young Guns4813.02.0 Runtime Terror4412.03.0 Long Balls4111.05.0 Maga Doge4010.0-3.0 Simba's Dublin Green Sox399.05.5 Big Sticks378.0-3.0 Guillotine366.04.0 Dawg366.0-2.0 Rieken Havoc366.01.0 Magnum GI293.5-7.5 Trex293.5-3.5 Gashouse Gang262.0-1.5 Like a Nightmare241.00.0 TeamSBPtsDif Simba's Dublin Green Sox1213.09.0 Guillotine810.51.0 Long Balls810.54.5 Dawg810.52.5 Trex810.58.0 Magnum GI78.01.0 Young Guns66.54.0 Runtime Terror66.5-5.5 Gashouse Gang45.00.0 Maga Doge33.0-6.5 Like a Nightmare33.02.0 Big Sticks33.0-10.0 Rieken Havoc21.0-10.0||Pitching Breakdown TeamERAPtsDif Like a Nightmare1.91613.05.0 Dawg3.04512.08.0 Long Balls3.24711.01.0 Magnum GI3.31610.0-2.0 Guillotine3.5749.0-4.0 Gashouse Gang3.7178.01.0 Rieken Havoc4.2537.01.0 Young Guns4.2996.05.0 Trex5.0505.00.0 Runtime Terror5.0774.02.0 Maga Doge5.1853.00.0 Big Sticks5.4382.0-7.0 Simba's Dublin Green Sox8.6641.0-10.0 TeamKPtsDif Guillotine6913.02.5 Long Balls6612.0-1.0 Like a Nightmare5411.05.0 Maga Doge4710.0-2.0 Rieken Havoc468.51.0 Gashouse Gang468.55.5 Big Sticks427.0-3.5 Simba's Dublin Green Sox416.01.0 Dawg404.50.5 Trex404.5-3.0 Young Guns382.50.5 Runtime Terror382.51.5 Magnum GI321.0-8.0 TeamSPtsDif Rieken Havoc312.07.5 Like a Nightmare312.00.5 Magnum GI312.0-1.0 Guillotine27.55.5 Long Balls27.50.5 Dawg27.5-1.5 Runtime Terror27.51.5 Gashouse Gang27.53.0 Big Sticks27.56.5 Young Guns13.00.0 Maga Doge13.0-7.0 Simba's Dublin Green Sox13.0-8.5 Trex01.0-7.0 TeamWHIPPtsDif Like a Nightmare0.890313.02.0 Maga Doge1.192112.010.0 Magnum GI1.236811.0-2.0 Guillotine1.279410.0-2.0 Long Balls1.29119.06.0 Dawg1.35348.02.0 Runtime Terror1.35907.06.0 Gashouse Gang1.36966.0-2.0 Trex1.40295.00.0 Rieken Havoc1.43844.0-3.0 Young Guns1.45223.0-1.0 Big Sticks1.50002.0-7.0 Simba's Dublin Green Sox1.83581.0-9.0 TeamWQSPtsDif Like a Nightmare1113.06.0 Guillotine912.07.5 Young Guns810.09.0 Maga Doge810.00.0 Magnum GI810.00.0 Long Balls78.05.0 Dawg66.01.5 Rieken Havoc66.0-6.5 Gashouse Gang66.00.0 Runtime Terror44.02.0 Trex32.5-5.5 Big Sticks32.5-10.0 Simba's Dublin Green Sox11.0-9.0
+Team|HR|Pts|Dif
+Young Guns|17|12.5|0.0
+Simba's Dublin Green Sox|17|12.5|7.0
+Dawg|15|11.0|1.0
+Guillotine|14|10.0|3.0
+Long Balls|12|8.5|6.5
+Big Sticks|12|8.5|-2.5
+Runtime Terror|11|7.0|-2.0
+Rieken Havoc|10|5.5|-2.5
+Trex|10|5.5|2.5
+Maga Doge|8|3.5|-9.0
+Like a Nightmare|8|3.5|-0.5
+Gashouse Gang|7|2.0|1.0
+Magnum GI|5|1.0|-4.5
+Team|OBP|Pts|Dif
+Rieken Havoc|.3871|13.0|8.0
+Runtime Terror|.3734|12.0|2.0
+Trex|.3693|11.0|3.0
+Maga Doge|.3667|10.0|4.0
+Young Guns|.3634|9.0|-3.0
+Gashouse Gang|.3615|8.0|4.0
+Simba's Dublin Green Sox|.3571|7.0|5.0
+Guillotine|.3209|6.0|3.0
+Dawg|.3161|5.0|-8.0
+Big Sticks|.3116|4.0|-5.0
+Long Balls|.3058|3.0|-4.0
+Magnum GI|.3018|2.0|-9.0
+Like a Nightmare|.2812|1.0|0.0
+Team|R|Pts|Dif
+Young Guns|53|13.0|0.0
+Simba's Dublin Green Sox|47|12.0|11.0
+Guillotine|43|10.5|5.5
+Rieken Havoc|43|10.5|7.0
+Maga Doge|42|9.0|2.0
+Dawg|38|8.0|-3.0
+Trex|37|7.0|-3.0
+Gashouse Gang|36|5.5|-0.5
+Big Sticks|36|5.5|-2.5
+Long Balls|32|3.0|1.0
+Runtime Terror|32|3.0|-9.0
+Magnum GI|32|3.0|-6.0
+Like a Nightmare|27|1.0|-2.5
+Team|RBI|Pts|Dif
+Young Guns|48|13.0|2.0
+Runtime Terror|44|12.0|3.0
+Long Balls|41|11.0|5.0
+Maga Doge|40|10.0|-3.0
+Simba's Dublin Green Sox|39|9.0|5.5
+Big Sticks|37|8.0|-3.0
+Guillotine|36|6.0|4.0
+Dawg|36|6.0|-2.0
+Rieken Havoc|36|6.0|1.0
+Magnum GI|29|3.5|-7.5
+Trex|29|3.5|-3.5
+Gashouse Gang|26|2.0|-1.5
+Like a Nightmare|24|1.0|0.0
+Team|SB|Pts|Dif
+Simba's Dublin Green Sox|12|13.0|9.0
+Guillotine|8|10.5|1.0
+Long Balls|8|10.5|4.5
+Dawg|8|10.5|2.5
+Trex|8|10.5|8.0
+Magnum GI|7|8.0|1.0
+Young Guns|6|6.5|4.0
+Runtime Terror|6|6.5|-5.5
+Gashouse Gang|4|5.0|0.0
+Maga Doge|3|3.0|-6.5
+Like a Nightmare|3|3.0|2.0
+Big Sticks|3|3.0|-10.0
+Rieken Havoc|2|1.0|-10.0
+Team|ERA|Pts|Dif
+Like a Nightmare|1.916|13.0|5.0
+Dawg|3.045|12.0|8.0
+Long Balls|3.247|11.0|1.0
+Magnum GI|3.316|10.0|-2.0
+Guillotine|3.574|9.0|-4.0
+Gashouse Gang|3.717|8.0|1.0
+Rieken Havoc|4.253|7.0|1.0
+Young Guns|4.299|6.0|5.0
+Trex|5.050|5.0|0.0
+Runtime Terror|5.077|4.0|2.0
+Maga Doge|5.185|3.0|0.0
+Big Sticks|5.438|2.0|-7.0
+Simba's Dublin Green Sox|8.664|1.0|-10.0
+Team|K|Pts|Dif
+Guillotine|69|13.0|2.5
+Long Balls|66|12.0|-1.0
+Like a Nightmare|54|11.0|5.0
+Maga Doge|47|10.0|-2.0
+Rieken Havoc|46|8.5|1.0
+Gashouse Gang|46|8.5|5.5
+Big Sticks|42|7.0|-3.5
+Simba's Dublin Green Sox|41|6.0|1.0
+Dawg|40|4.5|0.5
+Trex|40|4.5|-3.0
+Young Guns|38|2.5|0.5
+Runtime Terror|38|2.5|1.5
+Magnum GI|32|1.0|-8.0
+Team|S|Pts|Dif
+Rieken Havoc|3|12.0|7.5
+Like a Nightmare|3|12.0|0.5
+Magnum GI|3|12.0|-1.0
+Guillotine|2|7.5|5.5
+Long Balls|2|7.5|0.5
+Dawg|2|7.5|-1.5
+Runtime Terror|2|7.5|1.5
+Gashouse Gang|2|7.5|3.0
+Big Sticks|2|7.5|6.5
+Young Guns|1|3.0|0.0
+Maga Doge|1|3.0|-7.0
+Simba's Dublin Green Sox|1|3.0|-8.5
+Trex|0|1.0|-7.0
+Team|WHIP|Pts|Dif
+Like a Nightmare|0.8903|13.0|2.0
+Maga Doge|1.1921|12.0|10.0
+Magnum GI|1.2368|11.0|-2.0
+Guillotine|1.2794|10.0|-2.0
+Long Balls|1.2911|9.0|6.0
+Dawg|1.3534|8.0|2.0
+Runtime Terror|1.3590|7.0|6.0
+Gashouse Gang|1.3696|6.0|-2.0
+Trex|1.4029|5.0|0.0
+Rieken Havoc|1.4384|4.0|-3.0
+Young Guns|1.4522|3.0|-1.0
+Big Sticks|1.5000|2.0|-7.0
+Simba's Dublin Green Sox|1.8358|1.0|-9.0
+Team|WQS|Pts|Dif
+Like a Nightmare|11|13.0|6.0
+Guillotine|9|12.0|7.5
+Young Guns|8|10.0|9.0
+Maga Doge|8|10.0|0.0
+Magnum GI|8|10.0|0.0
+Long Balls|7|8.0|5.0
+Dawg|6|6.0|1.5
+Rieken Havoc|6|6.0|-6.5
+Gashouse Gang|6|6.0|0.0
+Runtime Terror|4|4.0|2.0
+Trex|3|2.5|-5.5
+Big Sticks|3|2.5|-10.0
+Simba's Dublin Green Sox|1|1.0|-9.0
+
+=== Period 6 (Mon, Apr 27 - Sun, May 03) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Big Sticks|51.0|50.0|101.0|21.0|0.0
+2|Rieken Havoc|46.5|53.5|100.0|29.0|1.0
+3|Trex|50.5|43.5|94.0|30.0|7.0
+4|Young Guns|52.0|36.0|88.0|24.5|13.0
+5|Maga Doge|43.0|24.0|67.0|-19.0|34.0
+6|Gashouse Gang|32.5|33.5|66.0|18.5|35.0
+7|Long Balls|25.5|38.5|64.0|0.0|37.0
+8|Runtime Terror|32.5|28.0|60.5|-4.0|40.5
+9|Dawg|22.5|36.5|59.0|-25.0|42.0
+10|Guillotine|21.5|35.5|57.0|-17.5|44.0
+11|Magnum GI|22.5|33.0|55.5|-34.5|45.5
+12|Like a Nightmare|23.5|31.5|55.0|-11.0|46.0
+13|Simba's Dublin Green Sox|31.5|11.5|43.0|-12.0|58.0
+Batting Breakdown TeamHRPtsDif Big Sticks1313.02.0 Trex1211.57.5 Young Guns1211.5-1.5 Like a Nightmare1110.07.0 Rieken Havoc109.03.0 Maga Doge98.0-2.0 Runtime Terror76.5-1.0 Simba's Dublin Green Sox76.5-2.5 Long Balls64.0-1.0 Dawg64.0-8.0 Guillotine64.0-3.5 Magnum GI52.00.0 Gashouse Gang41.00.0 TeamOBPPtsDif Runtime Terror.408413.02.0 Gashouse Gang.393912.07.0 Young Guns.388711.0-2.0 Trex.378810.00.0 Big Sticks.37179.03.0 Rieken Havoc.34778.0-1.0 Maga Doge.33457.0-1.0 Magnum GI.32446.0-1.0 Dawg.32355.0-7.0 Long Balls.30254.00.0 Like a Nightmare.28523.02.0 Simba's Dublin Green Sox.27822.0-1.0 Guillotine.26621.0-1.0 TeamRPtsDif Big Sticks4913.08.0 Trex4712.02.0 Young Guns4411.0-2.0 Maga Doge4110.02.0 Gashouse Gang389.05.0 Runtime Terror358.0-4.0 Long Balls337.05.0 Rieken Havoc305.0-1.0 Magnum GI305.0-4.0 Simba's Dublin Green Sox305.04.0 Dawg262.5-8.5 Guillotine262.5-4.5 Like a Nightmare221.0-2.0 TeamRBIPtsDif Big Sticks4913.03.0 Rieken Havoc3912.07.5 Maga Doge3510.5-1.5 Simba's Dublin Green Sox3510.56.0 Young Guns349.0-4.0 Gashouse Gang317.55.5 Long Balls317.50.5 Trex296.00.0 Runtime Terror284.0-7.0 Magnum GI284.0-5.0 Like a Nightmare284.03.0 Dawg211.5-6.5 Guillotine211.5-1.5 TeamSBPtsDif Rieken Havoc712.57.0 Guillotine712.51.0 Trex611.07.5 Young Guns59.57.5 Dawg59.5-0.5 Maga Doge47.52.0 Simba's Dublin Green Sox47.5-1.5 Magnum GI35.5-2.0 Like a Nightmare35.54.5 Big Sticks23.0-10.0 Gashouse Gang23.0-0.5 Long Balls23.0-4.5 Runtime Terror11.0-10.5||Pitching Breakdown TeamERAPtsDif Rieken Havoc1.73413.06.0 Big Sticks2.62312.06.0 Dawg2.63011.03.0 Trex2.68110.05.0 Guillotine3.0989.0-2.5 Young Guns3.1228.07.0 Maga Doge3.1647.03.0 Gashouse Gang3.9716.0-3.0 Long Balls4.0635.0-5.0 Magnum GI4.1684.0-7.5 Like a Nightmare4.3203.0-10.0 Runtime Terror4.3682.00.0 Simba's Dublin Green Sox8.3791.0-2.0 TeamKPtsDif Long Balls7213.00.0 Big Sticks6112.02.0 Rieken Havoc5911.03.0 Like a Nightmare5510.01.0 Trex549.03.0 Magnum GI528.01.0 Guillotine427.0-5.0 Dawg416.03.0 Young Guns395.03.0 Runtime Terror384.03.0 Gashouse Gang343.0-1.0 Maga Doge332.0-9.0 Simba's Dublin Green Sox291.0-4.0 TeamSPtsDif Like a Nightmare513.01.0 Gashouse Gang412.08.0 Rieken Havoc310.55.5 Magnum GI310.5-2.5 Trex27.51.0 Runtime Terror27.51.0 Guillotine27.55.0 Simba's Dublin Green Sox27.5-3.5 Young Guns14.01.5 Maga Doge14.0-5.5 Long Balls14.0-4.0 Big Sticks01.50.5 Dawg01.5-8.0 TeamWHIPPtsDif Rieken Havoc0.880713.05.0 Big Sticks1.045712.03.0 Trex1.085111.06.0 Gashouse Gang1.088210.00.0 Young Guns1.16339.07.0 Guillotine1.20498.0-3.0 Dawg1.24687.00.0 Runtime Terror1.25746.05.0 Maga Doge1.28915.0-1.0 Long Balls1.33984.00.0 Like a Nightmare1.34403.0-10.0 Magnum GI1.38932.0-10.0 Simba's Dublin Green Sox1.91381.0-2.0 TeamWQSPtsDif Big Sticks1012.53.5 Long Balls1012.59.0 Dawg911.07.5 Young Guns810.08.0 Runtime Terror68.57.5 Magnum GI68.5-3.5 Rieken Havoc56.0-6.0 Trex56.0-2.0 Maga Doge56.0-6.0 Guillotine44.0-2.5 Gashouse Gang32.5-2.5 Like a Nightmare32.5-7.5 Simba's Dublin Green Sox21.0-5.5
+Team|HR|Pts|Dif
+Big Sticks|13|13.0|2.0
+Trex|12|11.5|7.5
+Young Guns|12|11.5|-1.5
+Like a Nightmare|11|10.0|7.0
+Rieken Havoc|10|9.0|3.0
+Maga Doge|9|8.0|-2.0
+Runtime Terror|7|6.5|-1.0
+Simba's Dublin Green Sox|7|6.5|-2.5
+Long Balls|6|4.0|-1.0
+Dawg|6|4.0|-8.0
+Guillotine|6|4.0|-3.5
+Magnum GI|5|2.0|0.0
+Gashouse Gang|4|1.0|0.0
+Team|OBP|Pts|Dif
+Runtime Terror|.4084|13.0|2.0
+Gashouse Gang|.3939|12.0|7.0
+Young Guns|.3887|11.0|-2.0
+Trex|.3788|10.0|0.0
+Big Sticks|.3717|9.0|3.0
+Rieken Havoc|.3477|8.0|-1.0
+Maga Doge|.3345|7.0|-1.0
+Magnum GI|.3244|6.0|-1.0
+Dawg|.3235|5.0|-7.0
+Long Balls|.3025|4.0|0.0
+Like a Nightmare|.2852|3.0|2.0
+Simba's Dublin Green Sox|.2782|2.0|-1.0
+Guillotine|.2662|1.0|-1.0
+Team|R|Pts|Dif
+Big Sticks|49|13.0|8.0
+Trex|47|12.0|2.0
+Young Guns|44|11.0|-2.0
+Maga Doge|41|10.0|2.0
+Gashouse Gang|38|9.0|5.0
+Runtime Terror|35|8.0|-4.0
+Long Balls|33|7.0|5.0
+Rieken Havoc|30|5.0|-1.0
+Magnum GI|30|5.0|-4.0
+Simba's Dublin Green Sox|30|5.0|4.0
+Dawg|26|2.5|-8.5
+Guillotine|26|2.5|-4.5
+Like a Nightmare|22|1.0|-2.0
+Team|RBI|Pts|Dif
+Big Sticks|49|13.0|3.0
+Rieken Havoc|39|12.0|7.5
+Maga Doge|35|10.5|-1.5
+Simba's Dublin Green Sox|35|10.5|6.0
+Young Guns|34|9.0|-4.0
+Gashouse Gang|31|7.5|5.5
+Long Balls|31|7.5|0.5
+Trex|29|6.0|0.0
+Runtime Terror|28|4.0|-7.0
+Magnum GI|28|4.0|-5.0
+Like a Nightmare|28|4.0|3.0
+Dawg|21|1.5|-6.5
+Guillotine|21|1.5|-1.5
+Team|SB|Pts|Dif
+Rieken Havoc|7|12.5|7.0
+Guillotine|7|12.5|1.0
+Trex|6|11.0|7.5
+Young Guns|5|9.5|7.5
+Dawg|5|9.5|-0.5
+Maga Doge|4|7.5|2.0
+Simba's Dublin Green Sox|4|7.5|-1.5
+Magnum GI|3|5.5|-2.0
+Like a Nightmare|3|5.5|4.5
+Big Sticks|2|3.0|-10.0
+Gashouse Gang|2|3.0|-0.5
+Long Balls|2|3.0|-4.5
+Runtime Terror|1|1.0|-10.5
+Team|ERA|Pts|Dif
+Rieken Havoc|1.734|13.0|6.0
+Big Sticks|2.623|12.0|6.0
+Dawg|2.630|11.0|3.0
+Trex|2.681|10.0|5.0
+Guillotine|3.098|9.0|-2.5
+Young Guns|3.122|8.0|7.0
+Maga Doge|3.164|7.0|3.0
+Gashouse Gang|3.971|6.0|-3.0
+Long Balls|4.063|5.0|-5.0
+Magnum GI|4.168|4.0|-7.5
+Like a Nightmare|4.320|3.0|-10.0
+Runtime Terror|4.368|2.0|0.0
+Simba's Dublin Green Sox|8.379|1.0|-2.0
+Team|K|Pts|Dif
+Long Balls|72|13.0|0.0
+Big Sticks|61|12.0|2.0
+Rieken Havoc|59|11.0|3.0
+Like a Nightmare|55|10.0|1.0
+Trex|54|9.0|3.0
+Magnum GI|52|8.0|1.0
+Guillotine|42|7.0|-5.0
+Dawg|41|6.0|3.0
+Young Guns|39|5.0|3.0
+Runtime Terror|38|4.0|3.0
+Gashouse Gang|34|3.0|-1.0
+Maga Doge|33|2.0|-9.0
+Simba's Dublin Green Sox|29|1.0|-4.0
+Team|S|Pts|Dif
+Like a Nightmare|5|13.0|1.0
+Gashouse Gang|4|12.0|8.0
+Rieken Havoc|3|10.5|5.5
+Magnum GI|3|10.5|-2.5
+Trex|2|7.5|1.0
+Runtime Terror|2|7.5|1.0
+Guillotine|2|7.5|5.0
+Simba's Dublin Green Sox|2|7.5|-3.5
+Young Guns|1|4.0|1.5
+Maga Doge|1|4.0|-5.5
+Long Balls|1|4.0|-4.0
+Big Sticks|0|1.5|0.5
+Dawg|0|1.5|-8.0
+Team|WHIP|Pts|Dif
+Rieken Havoc|0.8807|13.0|5.0
+Big Sticks|1.0457|12.0|3.0
+Trex|1.0851|11.0|6.0
+Gashouse Gang|1.0882|10.0|0.0
+Young Guns|1.1633|9.0|7.0
+Guillotine|1.2049|8.0|-3.0
+Dawg|1.2468|7.0|0.0
+Runtime Terror|1.2574|6.0|5.0
+Maga Doge|1.2891|5.0|-1.0
+Long Balls|1.3398|4.0|0.0
+Like a Nightmare|1.3440|3.0|-10.0
+Magnum GI|1.3893|2.0|-10.0
+Simba's Dublin Green Sox|1.9138|1.0|-2.0
+Team|WQS|Pts|Dif
+Big Sticks|10|12.5|3.5
+Long Balls|10|12.5|9.0
+Dawg|9|11.0|7.5
+Young Guns|8|10.0|8.0
+Runtime Terror|6|8.5|7.5
+Magnum GI|6|8.5|-3.5
+Rieken Havoc|5|6.0|-6.0
+Trex|5|6.0|-2.0
+Maga Doge|5|6.0|-6.0
+Guillotine|4|4.0|-2.5
+Gashouse Gang|3|2.5|-2.5
+Like a Nightmare|3|2.5|-7.5
+Simba's Dublin Green Sox|2|1.0|-5.5
+
+=== Period 7 (Mon, May 04 - Sun, May 10) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Long Balls|43.0|45.0|88.0|25.5|0.0
+2|Maga Doge|32.5|54.5|87.0|8.0|1.0
+3|Like a Nightmare|49.5|35.5|85.0|19.5|3.0
+4|Young Guns|41.5|42.0|83.5|16.5|4.5
+5|Rieken Havoc|44.0|37.5|81.5|2.0|6.5
+6|Simba's Dublin Green Sox|38.5|41.0|79.5|31.5|8.5
+7|Big Sticks|48.5|26.0|74.5|-21.0|13.5
+8|Runtime Terror|50.0|18.5|68.5|8.0|19.5
+9|Magnum GI|28.0|39.5|67.5|-14.5|20.5
+10|Dawg|37.5|22.5|60.0|-24.0|28.0
+11|Guillotine|12.0|40.5|52.5|-19.5|35.5
+12|Gashouse Gang|10.0|40.0|50.0|1.0|38.0
+13|Trex|20.0|12.5|32.5|-33.0|55.5
+Batting Breakdown TeamHRPtsDif Big Sticks1413.01.0 Young Guns1312.0-1.0 Like a Nightmare1210.56.5 Runtime Terror1210.53.0 Long Balls98.05.0 Maga Doge98.0-2.0 Magnum GI98.06.0 Dawg76.0-5.0 Rieken Havoc64.0-3.5 Simba's Dublin Green Sox64.0-5.0 Trex64.0-1.0 Guillotine52.0-4.0 Gashouse Gang41.00.0 TeamOBPPtsDif Rieken Havoc.365213.06.0 Simba's Dublin Green Sox.339212.09.0 Young Guns.338511.0-2.0 Long Balls.335610.06.0 Runtime Terror.33129.0-3.0 Dawg.30748.0-3.0 Magnum GI.30577.02.0 Like a Nightmare.30336.05.0 Maga Doge.30305.0-1.0 Trex.30084.0-6.0 Gashouse Gang.30073.0-6.0 Big Sticks.30002.0-6.0 Guillotine.29691.0-1.0 TeamRPtsDif Big Sticks4213.03.0 Runtime Terror4112.01.0 Long Balls3510.57.5 Dawg3510.52.5 Like a Nightmare348.06.0 Young Guns348.0-5.0 Simba's Dublin Green Sox348.07.0 Maga Doge326.0-3.0 Guillotine315.01.0 Rieken Havoc304.0-1.0 Gashouse Gang283.0-3.5 Magnum GI242.0-4.5 Trex231.0-11.0 TeamRBIPtsDif Runtime Terror4113.03.0 Like a Nightmare3812.011.0 Rieken Havoc3511.04.0 Big Sticks3310.0-3.0 Magnum GI329.00.0 Maga Doge318.0-3.0 Long Balls306.5-1.5 Young Guns306.5-5.5 Dawg295.00.0 Simba's Dublin Green Sox264.0-2.0 Trex243.0-1.0 Guillotine182.00.0 Gashouse Gang151.0-2.0 TeamSBPtsDif Like a Nightmare1213.012.0 Rieken Havoc1012.02.5 Simba's Dublin Green Sox810.51.0 Big Sticks810.5-1.0 Long Balls68.02.5 Dawg68.0-3.5 Trex68.04.0 Maga Doge55.50.0 Runtime Terror55.5-2.5 Young Guns44.01.0 Magnum GI32.0-5.0 Guillotine32.0-11.0 Gashouse Gang32.00.0||Pitching Breakdown TeamERAPtsDif Long Balls1.90613.04.0 Gashouse Gang2.14812.06.0 Simba's Dublin Green Sox2.91411.010.0 Rieken Havoc2.92410.02.0 Maga Doge3.0869.05.0 Guillotine3.4208.0-5.0 Like a Nightmare3.5367.0-5.0 Dawg3.6356.0-5.0 Magnum GI3.7125.0-5.0 Young Guns3.7544.01.0 Big Sticks4.4693.0-4.0 Runtime Terror4.4702.00.0 Trex5.3461.0-4.0 TeamKPtsDif Maga Doge7213.05.0 Young Guns6512.010.0 Magnum GI6011.04.0 Long Balls5710.0-3.0 Like a Nightmare559.0-1.0 Guillotine528.0-4.0 Rieken Havoc496.5-2.5 Big Sticks496.5-4.5 Simba's Dublin Green Sox475.02.0 Runtime Terror454.03.0 Dawg433.0-2.0 Trex372.0-4.0 Gashouse Gang331.0-3.0 TeamSPtsDif Gashouse Gang513.07.0 Maga Doge411.01.0 Rieken Havoc411.05.0 Magnum GI411.0-1.5 Like a Nightmare39.0-3.5 Big Sticks26.55.5 Runtime Terror26.50.5 Guillotine26.53.5 Trex26.50.5 Long Balls12.5-3.5 Young Guns12.50.5 Simba's Dublin Green Sox12.5-8.5 Dawg12.5-6.5 TeamWHIPPtsDif Gashouse Gang0.886413.05.0 Young Guns0.994712.08.0 Simba's Dublin Green Sox1.036011.010.0 Maga Doge1.045710.05.0 Guillotine1.10009.0-3.0 Long Balls1.12948.05.0 Dawg1.13467.01.0 Rieken Havoc1.16566.0-4.0 Magnum GI1.20005.0-6.0 Big Sticks1.28284.0-5.0 Like a Nightmare1.30363.0-10.0 Runtime Terror1.31132.00.0 Trex1.45541.0-6.0 TeamWQSPtsDif Long Balls911.53.5 Maga Doge911.51.0 Young Guns911.59.5 Simba's Dublin Green Sox911.58.0 Guillotine89.04.0 Like a Nightmare77.5-1.5 Magnum GI77.5-4.5 Big Sticks66.0-7.0 Rieken Havoc54.0-6.5 Runtime Terror54.03.0 Dawg54.0-2.5 Trex42.0-4.5 Gashouse Gang31.0-2.5
+Team|HR|Pts|Dif
+Big Sticks|14|13.0|1.0
+Young Guns|13|12.0|-1.0
+Like a Nightmare|12|10.5|6.5
+Runtime Terror|12|10.5|3.0
+Long Balls|9|8.0|5.0
+Maga Doge|9|8.0|-2.0
+Magnum GI|9|8.0|6.0
+Dawg|7|6.0|-5.0
+Rieken Havoc|6|4.0|-3.5
+Simba's Dublin Green Sox|6|4.0|-5.0
+Trex|6|4.0|-1.0
+Guillotine|5|2.0|-4.0
+Gashouse Gang|4|1.0|0.0
+Team|OBP|Pts|Dif
+Rieken Havoc|.3652|13.0|6.0
+Simba's Dublin Green Sox|.3392|12.0|9.0
+Young Guns|.3385|11.0|-2.0
+Long Balls|.3356|10.0|6.0
+Runtime Terror|.3312|9.0|-3.0
+Dawg|.3074|8.0|-3.0
+Magnum GI|.3057|7.0|2.0
+Like a Nightmare|.3033|6.0|5.0
+Maga Doge|.3030|5.0|-1.0
+Trex|.3008|4.0|-6.0
+Gashouse Gang|.3007|3.0|-6.0
+Big Sticks|.3000|2.0|-6.0
+Guillotine|.2969|1.0|-1.0
+Team|R|Pts|Dif
+Big Sticks|42|13.0|3.0
+Runtime Terror|41|12.0|1.0
+Long Balls|35|10.5|7.5
+Dawg|35|10.5|2.5
+Like a Nightmare|34|8.0|6.0
+Young Guns|34|8.0|-5.0
+Simba's Dublin Green Sox|34|8.0|7.0
+Maga Doge|32|6.0|-3.0
+Guillotine|31|5.0|1.0
+Rieken Havoc|30|4.0|-1.0
+Gashouse Gang|28|3.0|-3.5
+Magnum GI|24|2.0|-4.5
+Trex|23|1.0|-11.0
+Team|RBI|Pts|Dif
+Runtime Terror|41|13.0|3.0
+Like a Nightmare|38|12.0|11.0
+Rieken Havoc|35|11.0|4.0
+Big Sticks|33|10.0|-3.0
+Magnum GI|32|9.0|0.0
+Maga Doge|31|8.0|-3.0
+Long Balls|30|6.5|-1.5
+Young Guns|30|6.5|-5.5
+Dawg|29|5.0|0.0
+Simba's Dublin Green Sox|26|4.0|-2.0
+Trex|24|3.0|-1.0
+Guillotine|18|2.0|0.0
+Gashouse Gang|15|1.0|-2.0
+Team|SB|Pts|Dif
+Like a Nightmare|12|13.0|12.0
+Rieken Havoc|10|12.0|2.5
+Simba's Dublin Green Sox|8|10.5|1.0
+Big Sticks|8|10.5|-1.0
+Long Balls|6|8.0|2.5
+Dawg|6|8.0|-3.5
+Trex|6|8.0|4.0
+Maga Doge|5|5.5|0.0
+Runtime Terror|5|5.5|-2.5
+Young Guns|4|4.0|1.0
+Magnum GI|3|2.0|-5.0
+Guillotine|3|2.0|-11.0
+Gashouse Gang|3|2.0|0.0
+Team|ERA|Pts|Dif
+Long Balls|1.906|13.0|4.0
+Gashouse Gang|2.148|12.0|6.0
+Simba's Dublin Green Sox|2.914|11.0|10.0
+Rieken Havoc|2.924|10.0|2.0
+Maga Doge|3.086|9.0|5.0
+Guillotine|3.420|8.0|-5.0
+Like a Nightmare|3.536|7.0|-5.0
+Dawg|3.635|6.0|-5.0
+Magnum GI|3.712|5.0|-5.0
+Young Guns|3.754|4.0|1.0
+Big Sticks|4.469|3.0|-4.0
+Runtime Terror|4.470|2.0|0.0
+Trex|5.346|1.0|-4.0
+Team|K|Pts|Dif
+Maga Doge|72|13.0|5.0
+Young Guns|65|12.0|10.0
+Magnum GI|60|11.0|4.0
+Long Balls|57|10.0|-3.0
+Like a Nightmare|55|9.0|-1.0
+Guillotine|52|8.0|-4.0
+Rieken Havoc|49|6.5|-2.5
+Big Sticks|49|6.5|-4.5
+Simba's Dublin Green Sox|47|5.0|2.0
+Runtime Terror|45|4.0|3.0
+Dawg|43|3.0|-2.0
+Trex|37|2.0|-4.0
+Gashouse Gang|33|1.0|-3.0
+Team|S|Pts|Dif
+Gashouse Gang|5|13.0|7.0
+Maga Doge|4|11.0|1.0
+Rieken Havoc|4|11.0|5.0
+Magnum GI|4|11.0|-1.5
+Like a Nightmare|3|9.0|-3.5
+Big Sticks|2|6.5|5.5
+Runtime Terror|2|6.5|0.5
+Guillotine|2|6.5|3.5
+Trex|2|6.5|0.5
+Long Balls|1|2.5|-3.5
+Young Guns|1|2.5|0.5
+Simba's Dublin Green Sox|1|2.5|-8.5
+Dawg|1|2.5|-6.5
+Team|WHIP|Pts|Dif
+Gashouse Gang|0.8864|13.0|5.0
+Young Guns|0.9947|12.0|8.0
+Simba's Dublin Green Sox|1.0360|11.0|10.0
+Maga Doge|1.0457|10.0|5.0
+Guillotine|1.1000|9.0|-3.0
+Long Balls|1.1294|8.0|5.0
+Dawg|1.1346|7.0|1.0
+Rieken Havoc|1.1656|6.0|-4.0
+Magnum GI|1.2000|5.0|-6.0
+Big Sticks|1.2828|4.0|-5.0
+Like a Nightmare|1.3036|3.0|-10.0
+Runtime Terror|1.3113|2.0|0.0
+Trex|1.4554|1.0|-6.0
+Team|WQS|Pts|Dif
+Long Balls|9|11.5|3.5
+Maga Doge|9|11.5|1.0
+Young Guns|9|11.5|9.5
+Simba's Dublin Green Sox|9|11.5|8.0
+Guillotine|8|9.0|4.0
+Like a Nightmare|7|7.5|-1.5
+Magnum GI|7|7.5|-4.5
+Big Sticks|6|6.0|-7.0
+Rieken Havoc|5|4.0|-6.5
+Runtime Terror|5|4.0|3.0
+Dawg|5|4.0|-2.5
+Trex|4|2.0|-4.5
+Gashouse Gang|3|1.0|-2.5
+
+=== Period 8 (Mon, May 11 - Sun, May 17) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Rieken Havoc|45.5|48.5|94.0|7.5|0.0
+2|Young Guns|51.0|42.5|93.5|19.5|0.5
+3|Simba's Dublin Green Sox|41.0|51.0|92.0|45.5|2.0
+4|Long Balls|37.5|53.5|91.0|25.5|3.0
+5|Magnum GI|45.0|42.0|87.0|10.0|7.0
+6|Dawg|40.5|27.0|67.5|-8.0|26.5
+7|Runtime Terror|38.5|23.0|61.5|-2.5|32.5
+8|Maga Doge|29.5|30.0|59.5|-27.0|34.5
+8|Big Sticks|35.5|24.0|59.5|-32.5|34.5
+10|Guillotine|27.5|31.0|58.5|-13.0|35.5
+11|Like a Nightmare|41.5|16.5|58.0|-7.5|36.0
+12|Gashouse Gang|14.5|36.5|51.0|1.5|43.0
+13|Trex|7.5|29.5|37.0|-19.0|57.0
+Batting Breakdown TeamHRPtsDif Young Guns1613.00.0 Runtime Terror1011.52.5 Big Sticks1011.5-0.5 Simba's Dublin Green Sox98.51.0 Dawg98.5-2.0 Guillotine98.53.5 Like a Nightmare98.51.0 Long Balls86.03.0 Rieken Havoc74.5-1.5 Magnum GI74.52.5 Maga Doge62.5-8.0 Gashouse Gang62.51.5 Trex41.0-3.0 TeamOBPPtsDif Runtime Terror.359413.01.0 Maga Doge.347512.06.0 Young Guns.346511.0-2.0 Like a Nightmare.345610.09.0 Dawg.33579.0-2.0 Long Balls.33338.04.0 Rieken Havoc.32207.0-3.0 Big Sticks.31666.0-1.0 Magnum GI.30885.00.0 Guillotine.30774.02.0 Simba's Dublin Green Sox.30293.00.0 Gashouse Gang.30102.0-6.0 Trex.29451.0-8.0 TeamRPtsDif Rieken Havoc4713.07.0 Magnum GI4112.07.5 Young Guns3811.0-2.0 Dawg368.50.0 Runtime Terror368.5-3.5 Maga Doge368.50.0 Like a Nightmare368.56.5 Simba's Dublin Green Sox355.54.5 Gashouse Gang355.5-1.5 Long Balls314.01.0 Big Sticks303.0-8.0 Guillotine282.0-2.5 Trex251.0-9.0 TeamRBIPtsDif Magnum GI4713.04.0 Simba's Dublin Green Sox4012.07.0 Young Guns3911.0-1.0 Big Sticks3710.0-3.0 Long Balls359.02.0 Rieken Havoc328.00.0 Dawg276.50.5 Like a Nightmare276.55.5 Guillotine265.02.0 Runtime Terror244.0-7.0 Gashouse Gang223.01.0 Maga Doge201.5-8.5 Trex201.5-2.5 TeamSBPtsDif Rieken Havoc1113.00.5 Simba's Dublin Green Sox912.02.0 Long Balls710.53.5 Magnum GI710.56.5 Dawg68.0-2.0 Guillotine68.0-2.0 Like a Nightmare68.05.5 Young Guns55.02.5 Maga Doge55.0-0.5 Big Sticks55.0-7.5 Trex43.0-2.5 Runtime Terror31.5-6.5 Gashouse Gang31.50.5||Pitching Breakdown TeamERAPtsDif Rieken Havoc1.43413.03.0 Long Balls1.46012.0-1.0 Magnum GI2.52511.03.0 Young Guns3.22810.07.0 Simba's Dublin Green Sox3.5109.08.0 Dawg3.5418.0-1.0 Gashouse Gang3.7027.00.0 Maga Doge4.0416.01.0 Runtime Terror4.0915.03.0 Big Sticks4.5304.0-2.0 Like a Nightmare4.8903.0-8.0 Guillotine4.9742.0-10.0 Trex5.1431.0-3.0 TeamKPtsDif Simba's Dublin Green Sox7413.010.0 Long Balls5912.0-1.0 Guillotine5310.5-1.5 Trex5310.54.5 Young Guns509.04.0 Rieken Havoc498.01.0 Dawg457.03.0 Maga Doge446.0-5.0 Big Sticks434.5-5.5 Gashouse Gang434.52.5 Magnum GI423.0-5.0 Like a Nightmare362.0-7.0 Runtime Terror351.00.0 TeamSPtsDif Magnum GI513.00.0 Gashouse Gang412.02.5 Rieken Havoc39.51.5 Runtime Terror39.53.5 Like a Nightmare39.5-2.5 Trex39.53.5 Long Balls26.52.5 Big Sticks26.55.5 Simba's Dublin Green Sox13.5-6.0 Dawg13.5-2.5 Maga Doge13.5-7.5 Guillotine13.50.5 Young Guns01.0-1.0 TeamWHIPPtsDif Simba's Dublin Green Sox0.990013.012.0 Long Balls1.013512.09.0 Gashouse Gang1.016111.01.0 Young Guns1.043510.03.0 Rieken Havoc1.06199.00.0 Maga Doge1.12248.02.0 Magnum GI1.18717.0-5.0 Big Sticks1.20816.0-2.0 Guillotine1.22375.0-8.0 Dawg1.25414.0-1.0 Runtime Terror1.27273.01.0 Trex1.28572.0-2.0 Like a Nightmare1.39371.0-10.0 TeamWQSPtsDif Young Guns1212.59.0 Simba's Dublin Green Sox1212.57.0 Long Balls1011.02.5 Guillotine910.03.0 Rieken Havoc89.0-1.0 Magnum GI78.0-3.5 Maga Doge66.5-6.5 Trex66.53.0 Dawg54.5-1.0 Runtime Terror54.53.5 Big Sticks43.0-8.5 Gashouse Gang32.00.0 Like a Nightmare21.0-7.5
+Team|HR|Pts|Dif
+Young Guns|16|13.0|0.0
+Runtime Terror|10|11.5|2.5
+Big Sticks|10|11.5|-0.5
+Simba's Dublin Green Sox|9|8.5|1.0
+Dawg|9|8.5|-2.0
+Guillotine|9|8.5|3.5
+Like a Nightmare|9|8.5|1.0
+Long Balls|8|6.0|3.0
+Rieken Havoc|7|4.5|-1.5
+Magnum GI|7|4.5|2.5
+Maga Doge|6|2.5|-8.0
+Gashouse Gang|6|2.5|1.5
+Trex|4|1.0|-3.0
+Team|OBP|Pts|Dif
+Runtime Terror|.3594|13.0|1.0
+Maga Doge|.3475|12.0|6.0
+Young Guns|.3465|11.0|-2.0
+Like a Nightmare|.3456|10.0|9.0
+Dawg|.3357|9.0|-2.0
+Long Balls|.3333|8.0|4.0
+Rieken Havoc|.3220|7.0|-3.0
+Big Sticks|.3166|6.0|-1.0
+Magnum GI|.3088|5.0|0.0
+Guillotine|.3077|4.0|2.0
+Simba's Dublin Green Sox|.3029|3.0|0.0
+Gashouse Gang|.3010|2.0|-6.0
+Trex|.2945|1.0|-8.0
+Team|R|Pts|Dif
+Rieken Havoc|47|13.0|7.0
+Magnum GI|41|12.0|7.5
+Young Guns|38|11.0|-2.0
+Dawg|36|8.5|0.0
+Runtime Terror|36|8.5|-3.5
+Maga Doge|36|8.5|0.0
+Like a Nightmare|36|8.5|6.5
+Simba's Dublin Green Sox|35|5.5|4.5
+Gashouse Gang|35|5.5|-1.5
+Long Balls|31|4.0|1.0
+Big Sticks|30|3.0|-8.0
+Guillotine|28|2.0|-2.5
+Trex|25|1.0|-9.0
+Team|RBI|Pts|Dif
+Magnum GI|47|13.0|4.0
+Simba's Dublin Green Sox|40|12.0|7.0
+Young Guns|39|11.0|-1.0
+Big Sticks|37|10.0|-3.0
+Long Balls|35|9.0|2.0
+Rieken Havoc|32|8.0|0.0
+Dawg|27|6.5|0.5
+Like a Nightmare|27|6.5|5.5
+Guillotine|26|5.0|2.0
+Runtime Terror|24|4.0|-7.0
+Gashouse Gang|22|3.0|1.0
+Maga Doge|20|1.5|-8.5
+Trex|20|1.5|-2.5
+Team|SB|Pts|Dif
+Rieken Havoc|11|13.0|0.5
+Simba's Dublin Green Sox|9|12.0|2.0
+Long Balls|7|10.5|3.5
+Magnum GI|7|10.5|6.5
+Dawg|6|8.0|-2.0
+Guillotine|6|8.0|-2.0
+Like a Nightmare|6|8.0|5.5
+Young Guns|5|5.0|2.5
+Maga Doge|5|5.0|-0.5
+Big Sticks|5|5.0|-7.5
+Trex|4|3.0|-2.5
+Runtime Terror|3|1.5|-6.5
+Gashouse Gang|3|1.5|0.5
+Team|ERA|Pts|Dif
+Rieken Havoc|1.434|13.0|3.0
+Long Balls|1.460|12.0|-1.0
+Magnum GI|2.525|11.0|3.0
+Young Guns|3.228|10.0|7.0
+Simba's Dublin Green Sox|3.510|9.0|8.0
+Dawg|3.541|8.0|-1.0
+Gashouse Gang|3.702|7.0|0.0
+Maga Doge|4.041|6.0|1.0
+Runtime Terror|4.091|5.0|3.0
+Big Sticks|4.530|4.0|-2.0
+Like a Nightmare|4.890|3.0|-8.0
+Guillotine|4.974|2.0|-10.0
+Trex|5.143|1.0|-3.0
+Team|K|Pts|Dif
+Simba's Dublin Green Sox|74|13.0|10.0
+Long Balls|59|12.0|-1.0
+Guillotine|53|10.5|-1.5
+Trex|53|10.5|4.5
+Young Guns|50|9.0|4.0
+Rieken Havoc|49|8.0|1.0
+Dawg|45|7.0|3.0
+Maga Doge|44|6.0|-5.0
+Big Sticks|43|4.5|-5.5
+Gashouse Gang|43|4.5|2.5
+Magnum GI|42|3.0|-5.0
+Like a Nightmare|36|2.0|-7.0
+Runtime Terror|35|1.0|0.0
+Team|S|Pts|Dif
+Magnum GI|5|13.0|0.0
+Gashouse Gang|4|12.0|2.5
+Rieken Havoc|3|9.5|1.5
+Runtime Terror|3|9.5|3.5
+Like a Nightmare|3|9.5|-2.5
+Trex|3|9.5|3.5
+Long Balls|2|6.5|2.5
+Big Sticks|2|6.5|5.5
+Simba's Dublin Green Sox|1|3.5|-6.0
+Dawg|1|3.5|-2.5
+Maga Doge|1|3.5|-7.5
+Guillotine|1|3.5|0.5
+Young Guns|0|1.0|-1.0
+Team|WHIP|Pts|Dif
+Simba's Dublin Green Sox|0.9900|13.0|12.0
+Long Balls|1.0135|12.0|9.0
+Gashouse Gang|1.0161|11.0|1.0
+Young Guns|1.0435|10.0|3.0
+Rieken Havoc|1.0619|9.0|0.0
+Maga Doge|1.1224|8.0|2.0
+Magnum GI|1.1871|7.0|-5.0
+Big Sticks|1.2081|6.0|-2.0
+Guillotine|1.2237|5.0|-8.0
+Dawg|1.2541|4.0|-1.0
+Runtime Terror|1.2727|3.0|1.0
+Trex|1.2857|2.0|-2.0
+Like a Nightmare|1.3937|1.0|-10.0
+Team|WQS|Pts|Dif
+Young Guns|12|12.5|9.0
+Simba's Dublin Green Sox|12|12.5|7.0
+Long Balls|10|11.0|2.5
+Guillotine|9|10.0|3.0
+Rieken Havoc|8|9.0|-1.0
+Magnum GI|7|8.0|-3.5
+Maga Doge|6|6.5|-6.5
+Trex|6|6.5|3.0
+Dawg|5|4.5|-1.0
+Runtime Terror|5|4.5|3.5
+Big Sticks|4|3.0|-8.5
+Gashouse Gang|3|2.0|0.0
+Like a Nightmare|2|1.0|-7.5
+
+=== Period 9 (Mon, May 18 - Sun, May 24) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Maga Doge|48.0|54.5|102.5|17.0|0.0
+2|Long Balls|44.5|55.0|99.5|28.0|3.0
+3|Like a Nightmare|57.5|37.5|95.0|39.5|7.5
+4|Gashouse Gang|49.5|42.5|92.0|42.0|10.5
+5|Trex|30.0|45.0|75.0|25.5|27.5
+6|Runtime Terror|24.0|43.5|67.5|7.0|35.0
+7|Guillotine|34.0|30.5|64.5|-2.5|38.0
+8|Dawg|34.0|29.0|63.0|-9.0|39.5
+9|Big Sticks|31.0|30.0|61.0|-25.0|41.5
+10|Simba's Dublin Green Sox|37.5|22.0|59.5|6.0|43.0
+11|Rieken Havoc|19.5|30.0|49.5|-45.0|53.0
+12|Magnum GI|34.0|9.5|43.5|-43.0|59.0
+13|Young Guns|11.5|26.0|37.5|-40.5|65.0
+Batting Breakdown TeamHRPtsDif Gashouse Gang1513.012.0 Long Balls1211.57.5 Like a Nightmare1211.54.0 Maga Doge1110.00.5 Guillotine98.02.5 Simba's Dublin Green Sox98.00.5 Magnum GI98.06.0 Runtime Terror86.0-3.5 Dawg74.0-7.0 Big Sticks74.0-8.0 Young Guns74.0-9.0 Trex62.0-1.0 Rieken Havoc31.0-4.5 TeamOBPPtsDif Like a Nightmare.373113.012.0 Long Balls.366012.08.0 Gashouse Gang.355111.04.0 Big Sticks.350010.04.0 Dawg.32999.0-2.0 Guillotine.32558.06.0 Simba's Dublin Green Sox.32557.04.0 Runtime Terror.32446.0-6.0 Trex.31765.0-4.0 Magnum GI.30234.0-1.0 Maga Doge.29303.0-5.0 Young Guns.27072.0-11.0 Rieken Havoc.25511.0-9.0 TeamRPtsDif Like a Nightmare4313.011.0 Maga Doge4011.52.0 Trex4011.54.0 Magnum GI3810.04.0 Gashouse Gang369.04.0 Simba's Dublin Green Sox358.07.0 Long Balls346.53.5 Dawg346.5-3.0 Big Sticks325.0-6.0 Runtime Terror314.0-8.0 Guillotine303.0-1.0 Rieken Havoc282.0-5.5 Young Guns201.0-12.0 TeamRBIPtsDif Maga Doge4513.04.0 Gashouse Gang4112.011.0 Long Balls3710.03.0 Dawg3710.05.0 Simba's Dublin Green Sox3710.04.0 Like a Nightmare348.06.0 Runtime Terror327.0-3.0 Guillotine296.03.0 Big Sticks284.5-8.5 Magnum GI284.5-6.5 Rieken Havoc262.5-5.5 Young Guns262.5-9.5 Trex211.0-3.0 TeamSBPtsDif Rieken Havoc1013.00.0 Like a Nightmare912.09.0 Maga Doge710.55.0 Trex710.56.5 Guillotine69.0-0.5 Big Sticks57.5-3.5 Magnum GI57.50.5 Long Balls44.5-3.5 Gashouse Gang44.53.5 Dawg44.5-5.0 Simba's Dublin Green Sox44.5-7.5 Young Guns32.00.0 Runtime Terror21.0-4.5||Pitching Breakdown TeamERAPtsDif Maga Doge2.10713.09.0 Dawg2.23312.02.0 Runtime Terror2.54711.09.0 Big Sticks2.98110.04.0 Long Balls3.0009.0-4.0 Gashouse Gang3.0928.00.0 Trex3.2517.04.0 Simba's Dublin Green Sox3.3966.05.0 Rieken Havoc4.0005.0-7.0 Guillotine4.3884.0-5.0 Like a Nightmare4.6603.0-4.0 Young Guns6.4602.0-3.0 Magnum GI6.5911.0-10.0 TeamKPtsDif Long Balls7313.00.0 Like a Nightmare6912.05.0 Maga Doge6611.00.0 Trex5810.04.0 Runtime Terror559.08.0 Young Guns528.04.0 Gashouse Gang507.05.0 Rieken Havoc496.0-3.0 Simba's Dublin Green Sox485.00.0 Guillotine473.5-8.5 Big Sticks473.5-6.5 Dawg382.0-1.0 Magnum GI341.0-7.0 TeamSPtsDif Gashouse Gang713.02.0 Rieken Havoc412.02.5 Runtime Terror311.04.5 Long Balls29.04.5 Like a Nightmare29.0-3.0 Trex29.02.5 Maga Doge15.5-4.0 Guillotine15.52.5 Magnum GI15.5-7.5 Young Guns15.54.5 Dawg02.0-2.5 Big Sticks02.00.0 Simba's Dublin Green Sox02.0-6.0 TeamWHIPPtsDif Long Balls1.033313.09.0 Maga Doge1.053712.05.0 Gashouse Gang1.076311.0-1.0 Like a Nightmare1.081210.01.0 Guillotine1.12509.0-4.0 Dawg1.12788.03.0 Trex1.13097.04.0 Big Sticks1.14946.00.0 Rieken Havoc1.15565.0-5.0 Runtime Terror1.18874.03.0 Simba's Dublin Green Sox1.30193.01.0 Young Guns1.34362.0-6.0 Magnum GI1.55911.0-10.0 TeamWQSPtsDif Maga Doge1313.00.5 Trex1012.08.5 Long Balls911.00.0 Runtime Terror88.57.5 Guillotine88.52.5 Big Sticks88.5-0.5 Young Guns88.51.5 Simba's Dublin Green Sox76.0-2.0 Dawg65.01.5 Like a Nightmare53.5-1.5 Gashouse Gang53.51.5 Rieken Havoc42.0-8.0 Magnum GI31.0-11.5
+Team|HR|Pts|Dif
+Gashouse Gang|15|13.0|12.0
+Long Balls|12|11.5|7.5
+Like a Nightmare|12|11.5|4.0
+Maga Doge|11|10.0|0.5
+Guillotine|9|8.0|2.5
+Simba's Dublin Green Sox|9|8.0|0.5
+Magnum GI|9|8.0|6.0
+Runtime Terror|8|6.0|-3.5
+Dawg|7|4.0|-7.0
+Big Sticks|7|4.0|-8.0
+Young Guns|7|4.0|-9.0
+Trex|6|2.0|-1.0
+Rieken Havoc|3|1.0|-4.5
+Team|OBP|Pts|Dif
+Like a Nightmare|.3731|13.0|12.0
+Long Balls|.3660|12.0|8.0
+Gashouse Gang|.3551|11.0|4.0
+Big Sticks|.3500|10.0|4.0
+Dawg|.3299|9.0|-2.0
+Guillotine|.3255|8.0|6.0
+Simba's Dublin Green Sox|.3255|7.0|4.0
+Runtime Terror|.3244|6.0|-6.0
+Trex|.3176|5.0|-4.0
+Magnum GI|.3023|4.0|-1.0
+Maga Doge|.2930|3.0|-5.0
+Young Guns|.2707|2.0|-11.0
+Rieken Havoc|.2551|1.0|-9.0
+Team|R|Pts|Dif
+Like a Nightmare|43|13.0|11.0
+Maga Doge|40|11.5|2.0
+Trex|40|11.5|4.0
+Magnum GI|38|10.0|4.0
+Gashouse Gang|36|9.0|4.0
+Simba's Dublin Green Sox|35|8.0|7.0
+Long Balls|34|6.5|3.5
+Dawg|34|6.5|-3.0
+Big Sticks|32|5.0|-6.0
+Runtime Terror|31|4.0|-8.0
+Guillotine|30|3.0|-1.0
+Rieken Havoc|28|2.0|-5.5
+Young Guns|20|1.0|-12.0
+Team|RBI|Pts|Dif
+Maga Doge|45|13.0|4.0
+Gashouse Gang|41|12.0|11.0
+Long Balls|37|10.0|3.0
+Dawg|37|10.0|5.0
+Simba's Dublin Green Sox|37|10.0|4.0
+Like a Nightmare|34|8.0|6.0
+Runtime Terror|32|7.0|-3.0
+Guillotine|29|6.0|3.0
+Big Sticks|28|4.5|-8.5
+Magnum GI|28|4.5|-6.5
+Rieken Havoc|26|2.5|-5.5
+Young Guns|26|2.5|-9.5
+Trex|21|1.0|-3.0
+Team|SB|Pts|Dif
+Rieken Havoc|10|13.0|0.0
+Like a Nightmare|9|12.0|9.0
+Maga Doge|7|10.5|5.0
+Trex|7|10.5|6.5
+Guillotine|6|9.0|-0.5
+Big Sticks|5|7.5|-3.5
+Magnum GI|5|7.5|0.5
+Long Balls|4|4.5|-3.5
+Gashouse Gang|4|4.5|3.5
+Dawg|4|4.5|-5.0
+Simba's Dublin Green Sox|4|4.5|-7.5
+Young Guns|3|2.0|0.0
+Runtime Terror|2|1.0|-4.5
+Team|ERA|Pts|Dif
+Maga Doge|2.107|13.0|9.0
+Dawg|2.233|12.0|2.0
+Runtime Terror|2.547|11.0|9.0
+Big Sticks|2.981|10.0|4.0
+Long Balls|3.000|9.0|-4.0
+Gashouse Gang|3.092|8.0|0.0
+Trex|3.251|7.0|4.0
+Simba's Dublin Green Sox|3.396|6.0|5.0
+Rieken Havoc|4.000|5.0|-7.0
+Guillotine|4.388|4.0|-5.0
+Like a Nightmare|4.660|3.0|-4.0
+Young Guns|6.460|2.0|-3.0
+Magnum GI|6.591|1.0|-10.0
+Team|K|Pts|Dif
+Long Balls|73|13.0|0.0
+Like a Nightmare|69|12.0|5.0
+Maga Doge|66|11.0|0.0
+Trex|58|10.0|4.0
+Runtime Terror|55|9.0|8.0
+Young Guns|52|8.0|4.0
+Gashouse Gang|50|7.0|5.0
+Rieken Havoc|49|6.0|-3.0
+Simba's Dublin Green Sox|48|5.0|0.0
+Guillotine|47|3.5|-8.5
+Big Sticks|47|3.5|-6.5
+Dawg|38|2.0|-1.0
+Magnum GI|34|1.0|-7.0
+Team|S|Pts|Dif
+Gashouse Gang|7|13.0|2.0
+Rieken Havoc|4|12.0|2.5
+Runtime Terror|3|11.0|4.5
+Long Balls|2|9.0|4.5
+Like a Nightmare|2|9.0|-3.0
+Trex|2|9.0|2.5
+Maga Doge|1|5.5|-4.0
+Guillotine|1|5.5|2.5
+Magnum GI|1|5.5|-7.5
+Young Guns|1|5.5|4.5
+Dawg|0|2.0|-2.5
+Big Sticks|0|2.0|0.0
+Simba's Dublin Green Sox|0|2.0|-6.0
+Team|WHIP|Pts|Dif
+Long Balls|1.0333|13.0|9.0
+Maga Doge|1.0537|12.0|5.0
+Gashouse Gang|1.0763|11.0|-1.0
+Like a Nightmare|1.0812|10.0|1.0
+Guillotine|1.1250|9.0|-4.0
+Dawg|1.1278|8.0|3.0
+Trex|1.1309|7.0|4.0
+Big Sticks|1.1494|6.0|0.0
+Rieken Havoc|1.1556|5.0|-5.0
+Runtime Terror|1.1887|4.0|3.0
+Simba's Dublin Green Sox|1.3019|3.0|1.0
+Young Guns|1.3436|2.0|-6.0
+Magnum GI|1.5591|1.0|-10.0
+Team|WQS|Pts|Dif
+Maga Doge|13|13.0|0.5
+Trex|10|12.0|8.5
+Long Balls|9|11.0|0.0
+Runtime Terror|8|8.5|7.5
+Guillotine|8|8.5|2.5
+Big Sticks|8|8.5|-0.5
+Young Guns|8|8.5|1.5
+Simba's Dublin Green Sox|7|6.0|-2.0
+Dawg|6|5.0|1.5
+Like a Nightmare|5|3.5|-1.5
+Gashouse Gang|5|3.5|1.5
+Rieken Havoc|4|2.0|-8.0
+Magnum GI|3|1.0|-11.5
+
+=== Period 10 (Mon, May 25 - Sun, May 31) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Guillotine|46.5|43.5|90.0|25.0|0.0
+2|Rieken Havoc|38.0|51.0|89.0|6.5|1.0
+3|Dawg|58.5|29.5|88.0|20.0|2.0
+4|Like a Nightmare|35.0|48.5|83.5|21.5|6.5
+5|Trex|46.5|34.0|80.5|25.0|9.5
+6|Runtime Terror|38.5|39.0|77.5|15.0|12.5
+7|Maga Doge|55.0|17.5|72.5|-24.5|17.5
+8|Gashouse Gang|13.5|57.0|70.5|13.5|19.5
+9|Young Guns|36.5|31.0|67.5|-7.0|22.5
+10|Big Sticks|37.5|28.0|65.5|-21.5|24.5
+11|Long Balls|17.5|33.0|50.5|-25.0|39.5
+12|Simba's Dublin Green Sox|11.5|27.0|38.5|-14.5|51.5
+13|Magnum GI|20.5|16.0|36.5|-34.0|53.5
+Batting Breakdown TeamHRPtsDif Maga Doge1913.02.0 Dawg1712.02.0 Trex1411.08.0 Guillotine139.03.0 Like a Nightmare139.01.0 Young Guns139.0-4.0 Rieken Havoc127.03.0 Runtime Terror116.0-3.0 Big Sticks105.0-7.0 Long Balls94.0-1.0 Magnum GI83.01.0 Simba's Dublin Green Sox72.0-5.0 Gashouse Gang61.00.0 TeamOBPPtsDif Maga Doge.405813.07.0 Dawg.396712.01.0 Runtime Terror.374211.0-2.0 Trex.361810.01.0 Guillotine.34159.07.0 Rieken Havoc.33118.01.0 Long Balls.32617.02.0 Big Sticks.32086.0-2.0 Young Guns.31965.0-7.0 Simba's Dublin Green Sox.31704.01.0 Gashouse Gang.31103.0-7.0 Like a Nightmare.30232.01.0 Magnum GI.29141.0-3.0 TeamRPtsDif Dawg5113.05.0 Maga Doge4612.01.0 Guillotine4511.08.0 Runtime Terror4310.0-2.0 Rieken Havoc419.03.0 Big Sticks408.0-2.0 Like a Nightmare397.03.0 Trex375.0-4.0 Gashouse Gang375.00.0 Magnum GI375.0-2.0 Young Guns353.0-10.0 Long Balls332.00.0 Simba's Dublin Green Sox291.00.0 TeamRBIPtsDif Young Guns4813.01.0 Maga Doge4512.01.0 Rieken Havoc4310.54.5 Dawg4310.55.5 Guillotine429.08.0 Trex397.54.5 Big Sticks397.5-5.5 Like a Nightmare366.04.0 Runtime Terror355.0-5.0 Long Balls313.0-5.0 Simba's Dublin Green Sox313.0-4.0 Magnum GI313.0-6.0 Gashouse Gang291.0-3.0 TeamSBPtsDif Trex913.07.5 Dawg711.02.0 Like a Nightmare711.07.0 Big Sticks711.00.5 Guillotine68.5-2.0 Magnum GI68.53.0 Runtime Terror56.53.5 Young Guns56.54.5 Maga Doge45.0-2.5 Rieken Havoc33.5-9.5 Gashouse Gang33.52.5 Long Balls21.5-6.0 Simba's Dublin Green Sox21.5-10.5||Pitching Breakdown TeamERAPtsDif Runtime Terror1.64313.010.0 Gashouse Gang1.86212.02.0 Rieken Havoc2.04111.0-1.0 Like a Nightmare2.59610.04.0 Long Balls2.7469.0-4.0 Guillotine3.5418.0-1.0 Simba's Dublin Green Sox3.6277.06.0 Young Guns4.0596.04.0 Trex4.0695.01.0 Dawg4.3834.0-7.0 Big Sticks5.0943.0-2.0 Maga Doge5.5932.0-6.0 Magnum GI6.9431.0-6.0 TeamKPtsDif Gashouse Gang7113.011.0 Guillotine5612.01.0 Big Sticks5511.02.0 Dawg539.56.5 Like a Nightmare539.5-0.5 Trex528.01.0 Young Guns497.03.0 Simba's Dublin Green Sox476.01.0 Runtime Terror465.04.0 Rieken Havoc424.0-4.0 Long Balls373.0-10.0 Maga Doge312.0-10.0 Magnum GI251.0-5.0 TeamSPtsDif Trex613.06.0 Rieken Havoc512.02.0 Like a Nightmare310.5-1.5 Magnum GI310.5-2.5 Maga Doge28.0-0.5 Gashouse Gang28.0-3.0 Big Sticks28.06.5 Guillotine15.52.5 Long Balls15.50.5 Dawg02.5-1.5 Runtime Terror02.5-6.0 Young Guns02.51.0 Simba's Dublin Green Sox02.5-3.5 TeamWHIPPtsDif Gashouse Gang0.827613.01.0 Rieken Havoc0.941912.02.0 Runtime Terror1.043511.010.0 Long Balls1.067810.05.0 Like a Nightmare1.11549.0-2.0 Young Guns1.11768.02.0 Trex1.15077.04.0 Simba's Dublin Green Sox1.20906.04.0 Guillotine1.26235.0-8.0 Dawg1.26624.00.0 Maga Doge1.35003.0-6.0 Big Sticks1.50942.0-5.0 Magnum GI1.62861.0-7.0 TeamWQSPtsDif Guillotine1213.06.5 Rieken Havoc1112.05.5 Gashouse Gang1011.010.0 Dawg99.56.5 Like a Nightmare99.55.5 Runtime Terror87.55.5 Young Guns87.5-1.5 Long Balls75.5-6.5 Simba's Dublin Green Sox75.5-3.5 Big Sticks44.0-7.0 Maga Doge32.5-10.5 Magnum GI32.5-6.5 Trex21.0-4.0
+Team|HR|Pts|Dif
+Maga Doge|19|13.0|2.0
+Dawg|17|12.0|2.0
+Trex|14|11.0|8.0
+Guillotine|13|9.0|3.0
+Like a Nightmare|13|9.0|1.0
+Young Guns|13|9.0|-4.0
+Rieken Havoc|12|7.0|3.0
+Runtime Terror|11|6.0|-3.0
+Big Sticks|10|5.0|-7.0
+Long Balls|9|4.0|-1.0
+Magnum GI|8|3.0|1.0
+Simba's Dublin Green Sox|7|2.0|-5.0
+Gashouse Gang|6|1.0|0.0
+Team|OBP|Pts|Dif
+Maga Doge|.4058|13.0|7.0
+Dawg|.3967|12.0|1.0
+Runtime Terror|.3742|11.0|-2.0
+Trex|.3618|10.0|1.0
+Guillotine|.3415|9.0|7.0
+Rieken Havoc|.3311|8.0|1.0
+Long Balls|.3261|7.0|2.0
+Big Sticks|.3208|6.0|-2.0
+Young Guns|.3196|5.0|-7.0
+Simba's Dublin Green Sox|.3170|4.0|1.0
+Gashouse Gang|.3110|3.0|-7.0
+Like a Nightmare|.3023|2.0|1.0
+Magnum GI|.2914|1.0|-3.0
+Team|R|Pts|Dif
+Dawg|51|13.0|5.0
+Maga Doge|46|12.0|1.0
+Guillotine|45|11.0|8.0
+Runtime Terror|43|10.0|-2.0
+Rieken Havoc|41|9.0|3.0
+Big Sticks|40|8.0|-2.0
+Like a Nightmare|39|7.0|3.0
+Trex|37|5.0|-4.0
+Gashouse Gang|37|5.0|0.0
+Magnum GI|37|5.0|-2.0
+Young Guns|35|3.0|-10.0
+Long Balls|33|2.0|0.0
+Simba's Dublin Green Sox|29|1.0|0.0
+Team|RBI|Pts|Dif
+Young Guns|48|13.0|1.0
+Maga Doge|45|12.0|1.0
+Rieken Havoc|43|10.5|4.5
+Dawg|43|10.5|5.5
+Guillotine|42|9.0|8.0
+Trex|39|7.5|4.5
+Big Sticks|39|7.5|-5.5
+Like a Nightmare|36|6.0|4.0
+Runtime Terror|35|5.0|-5.0
+Long Balls|31|3.0|-5.0
+Simba's Dublin Green Sox|31|3.0|-4.0
+Magnum GI|31|3.0|-6.0
+Gashouse Gang|29|1.0|-3.0
+Team|SB|Pts|Dif
+Trex|9|13.0|7.5
+Dawg|7|11.0|2.0
+Like a Nightmare|7|11.0|7.0
+Big Sticks|7|11.0|0.5
+Guillotine|6|8.5|-2.0
+Magnum GI|6|8.5|3.0
+Runtime Terror|5|6.5|3.5
+Young Guns|5|6.5|4.5
+Maga Doge|4|5.0|-2.5
+Rieken Havoc|3|3.5|-9.5
+Gashouse Gang|3|3.5|2.5
+Long Balls|2|1.5|-6.0
+Simba's Dublin Green Sox|2|1.5|-10.5
+Team|ERA|Pts|Dif
+Runtime Terror|1.643|13.0|10.0
+Gashouse Gang|1.862|12.0|2.0
+Rieken Havoc|2.041|11.0|-1.0
+Like a Nightmare|2.596|10.0|4.0
+Long Balls|2.746|9.0|-4.0
+Guillotine|3.541|8.0|-1.0
+Simba's Dublin Green Sox|3.627|7.0|6.0
+Young Guns|4.059|6.0|4.0
+Trex|4.069|5.0|1.0
+Dawg|4.383|4.0|-7.0
+Big Sticks|5.094|3.0|-2.0
+Maga Doge|5.593|2.0|-6.0
+Magnum GI|6.943|1.0|-6.0
+Team|K|Pts|Dif
+Gashouse Gang|71|13.0|11.0
+Guillotine|56|12.0|1.0
+Big Sticks|55|11.0|2.0
+Dawg|53|9.5|6.5
+Like a Nightmare|53|9.5|-0.5
+Trex|52|8.0|1.0
+Young Guns|49|7.0|3.0
+Simba's Dublin Green Sox|47|6.0|1.0
+Runtime Terror|46|5.0|4.0
+Rieken Havoc|42|4.0|-4.0
+Long Balls|37|3.0|-10.0
+Maga Doge|31|2.0|-10.0
+Magnum GI|25|1.0|-5.0
+Team|S|Pts|Dif
+Trex|6|13.0|6.0
+Rieken Havoc|5|12.0|2.0
+Like a Nightmare|3|10.5|-1.5
+Magnum GI|3|10.5|-2.5
+Maga Doge|2|8.0|-0.5
+Gashouse Gang|2|8.0|-3.0
+Big Sticks|2|8.0|6.5
+Guillotine|1|5.5|2.5
+Long Balls|1|5.5|0.5
+Dawg|0|2.5|-1.5
+Runtime Terror|0|2.5|-6.0
+Young Guns|0|2.5|1.0
+Simba's Dublin Green Sox|0|2.5|-3.5
+Team|WHIP|Pts|Dif
+Gashouse Gang|0.8276|13.0|1.0
+Rieken Havoc|0.9419|12.0|2.0
+Runtime Terror|1.0435|11.0|10.0
+Long Balls|1.0678|10.0|5.0
+Like a Nightmare|1.1154|9.0|-2.0
+Young Guns|1.1176|8.0|2.0
+Trex|1.1507|7.0|4.0
+Simba's Dublin Green Sox|1.2090|6.0|4.0
+Guillotine|1.2623|5.0|-8.0
+Dawg|1.2662|4.0|0.0
+Maga Doge|1.3500|3.0|-6.0
+Big Sticks|1.5094|2.0|-5.0
+Magnum GI|1.6286|1.0|-7.0
+Team|WQS|Pts|Dif
+Guillotine|12|13.0|6.5
+Rieken Havoc|11|12.0|5.5
+Gashouse Gang|10|11.0|10.0
+Dawg|9|9.5|6.5
+Like a Nightmare|9|9.5|5.5
+Runtime Terror|8|7.5|5.5
+Young Guns|8|7.5|-1.5
+Long Balls|7|5.5|-6.5
+Simba's Dublin Green Sox|7|5.5|-3.5
+Big Sticks|4|4.0|-7.0
+Maga Doge|3|2.5|-10.5
+Magnum GI|3|2.5|-6.5
+Trex|2|1.0|-4.0
+
+=== Period 11 (Mon, June 01 - Sun, June 07) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Maga Doge|53.5|29.5|83.0|-10.0|0.0
+2|Dawg|52.5|27.5|80.0|6.0|3.0
+2|Like a Nightmare|53.5|26.5|80.0|12.0|3.0
+2|Rieken Havoc|39.0|41.0|80.0|-9.5|3.0
+5|Big Sticks|43.0|33.5|76.5|-1.5|6.5
+5|Guillotine|34.0|42.5|76.5|4.5|6.5
+7|Simba's Dublin Green Sox|32.5|43.5|76.0|29.5|7.0
+8|Runtime Terror|24.0|50.0|74.0|11.5|9.0
+9|Young Guns|37.0|34.5|71.5|-5.5|11.5
+10|Trex|38.0|23.0|61.0|2.5|22.0
+11|Gashouse Gang|26.0|33.0|59.0|3.0|24.0
+12|Magnum GI|14.0|33.5|47.5|-12.0|35.5
+13|Long Balls|8.0|37.0|45.0|-30.5|38.0
+Batting Breakdown TeamHRPtsDif Maga Doge1513.02.0 Like a Nightmare1412.03.5 Young Guns1311.0-2.0 Dawg1210.00.0 Simba's Dublin Green Sox118.52.5 Trex118.55.5 Rieken Havoc96.02.0 Big Sticks96.0-6.0 Runtime Terror96.0-2.5 Guillotine83.5-3.5 Gashouse Gang83.52.5 Long Balls72.0-3.0 Magnum GI51.0-1.0 TeamOBPPtsDif Dawg.379513.01.0 Big Sticks.349612.05.0 Guillotine.343611.09.0 Maga Doge.343410.00.0 Runtime Terror.33879.0-4.0 Gashouse Gang.32868.00.0 Trex.32767.0-2.0 Like a Nightmare.32446.05.0 Young Guns.31355.0-6.0 Rieken Havoc.30504.0-2.0 Simba's Dublin Green Sox.30143.00.0 Magnum GI.26672.0-2.0 Long Balls.24791.0-4.0 TeamRPtsDif Dawg4913.03.0 Maga Doge4312.01.0 Like a Nightmare3910.57.5 Big Sticks3910.51.5 Rieken Havoc379.02.0 Young Guns358.0-5.0 Trex337.0-1.0 Gashouse Gang326.01.0 Simba's Dublin Green Sox315.04.0 Guillotine304.00.0 Runtime Terror263.0-9.0 Long Balls242.00.0 Magnum GI221.0-5.0 TeamRBIPtsDif Maga Doge4713.02.0 Like a Nightmare4312.010.0 Dawg3911.05.0 Young Guns3310.0-3.0 Rieken Havoc328.00.0 Guillotine328.05.0 Trex328.04.0 Simba's Dublin Green Sox305.50.5 Gashouse Gang305.54.5 Big Sticks294.0-8.0 Runtime Terror273.0-7.0 Long Balls222.0-5.0 Magnum GI181.0-8.0 TeamSBPtsDif Like a Nightmare1113.06.5 Rieken Havoc1012.0-1.0 Big Sticks810.5-1.5 Simba's Dublin Green Sox810.51.5 Magnum GI79.02.5 Guillotine67.5-3.5 Trex67.5-0.5 Maga Doge55.50.5 Dawg55.5-4.5 Runtime Terror33.00.0 Young Guns33.01.0 Gashouse Gang33.02.0 Long Balls21.0-3.0||Pitching Breakdown TeamERAPtsDif Runtime Terror1.45413.07.0 Guillotine3.07312.04.0 Young Guns3.46611.09.0 Rieken Havoc3.80010.0-2.0 Simba's Dublin Green Sox4.0189.08.0 Gashouse Gang4.0258.0-3.0 Dawg4.2437.0-3.0 Long Balls4.5006.0-7.0 Big Sticks4.5765.00.0 Trex5.3514.01.0 Like a Nightmare5.4003.0-6.0 Maga Doge5.7572.0-5.0 Magnum GI6.0911.0-3.0 TeamKPtsDif Big Sticks6013.04.0 Gashouse Gang5612.09.0 Simba's Dublin Green Sox5411.05.0 Long Balls5010.0-3.0 Rieken Havoc489.01.5 Magnum GI478.04.0 Guillotine456.5-5.5 Runtime Terror456.55.5 Young Guns435.00.0 Maga Doge404.0-6.0 Like a Nightmare393.0-8.0 Dawg352.00.0 Trex291.0-6.5 TeamSPtsDif Rieken Havoc713.03.0 Magnum GI612.0-1.0 Big Sticks311.09.0 Maga Doge29.01.0 Like a Nightmare29.0-3.0 Long Balls29.03.5 Runtime Terror15.5-1.5 Young Guns15.54.5 Trex15.5-3.5 Gashouse Gang15.5-5.5 Dawg02.0-2.0 Guillotine02.0-1.0 Simba's Dublin Green Sox02.0-3.5 TeamWHIPPtsDif Guillotine0.926813.02.0 Runtime Terror1.015412.011.0 Dawg1.050011.05.0 Simba's Dublin Green Sox1.107110.08.0 Maga Doge1.19129.02.0 Rieken Havoc1.20008.0-4.0 Trex1.24327.03.0 Like a Nightmare1.26436.0-4.0 Gashouse Gang1.28575.0-8.0 Young Guns1.29734.0-4.0 Long Balls1.33333.0-6.0 Big Sticks1.37292.0-1.0 Magnum GI1.62801.0-4.0 TeamWQSPtsDif Runtime Terror1113.012.0 Simba's Dublin Green Sox711.53.5 Magnum GI711.55.5 Guillotine69.0-2.0 Young Guns69.00.0 Long Balls69.0-3.0 Maga Doge55.5-7.5 Dawg55.51.5 Like a Nightmare55.50.5 Trex55.52.5 Big Sticks42.5-4.5 Gashouse Gang42.50.5 Rieken Havoc31.0-9.0
+Team|HR|Pts|Dif
+Maga Doge|15|13.0|2.0
+Like a Nightmare|14|12.0|3.5
+Young Guns|13|11.0|-2.0
+Dawg|12|10.0|0.0
+Simba's Dublin Green Sox|11|8.5|2.5
+Trex|11|8.5|5.5
+Rieken Havoc|9|6.0|2.0
+Big Sticks|9|6.0|-6.0
+Runtime Terror|9|6.0|-2.5
+Guillotine|8|3.5|-3.5
+Gashouse Gang|8|3.5|2.5
+Long Balls|7|2.0|-3.0
+Magnum GI|5|1.0|-1.0
+Team|OBP|Pts|Dif
+Dawg|.3795|13.0|1.0
+Big Sticks|.3496|12.0|5.0
+Guillotine|.3436|11.0|9.0
+Maga Doge|.3434|10.0|0.0
+Runtime Terror|.3387|9.0|-4.0
+Gashouse Gang|.3286|8.0|0.0
+Trex|.3276|7.0|-2.0
+Like a Nightmare|.3244|6.0|5.0
+Young Guns|.3135|5.0|-6.0
+Rieken Havoc|.3050|4.0|-2.0
+Simba's Dublin Green Sox|.3014|3.0|0.0
+Magnum GI|.2667|2.0|-2.0
+Long Balls|.2479|1.0|-4.0
+Team|R|Pts|Dif
+Dawg|49|13.0|3.0
+Maga Doge|43|12.0|1.0
+Like a Nightmare|39|10.5|7.5
+Big Sticks|39|10.5|1.5
+Rieken Havoc|37|9.0|2.0
+Young Guns|35|8.0|-5.0
+Trex|33|7.0|-1.0
+Gashouse Gang|32|6.0|1.0
+Simba's Dublin Green Sox|31|5.0|4.0
+Guillotine|30|4.0|0.0
+Runtime Terror|26|3.0|-9.0
+Long Balls|24|2.0|0.0
+Magnum GI|22|1.0|-5.0
+Team|RBI|Pts|Dif
+Maga Doge|47|13.0|2.0
+Like a Nightmare|43|12.0|10.0
+Dawg|39|11.0|5.0
+Young Guns|33|10.0|-3.0
+Rieken Havoc|32|8.0|0.0
+Guillotine|32|8.0|5.0
+Trex|32|8.0|4.0
+Simba's Dublin Green Sox|30|5.5|0.5
+Gashouse Gang|30|5.5|4.5
+Big Sticks|29|4.0|-8.0
+Runtime Terror|27|3.0|-7.0
+Long Balls|22|2.0|-5.0
+Magnum GI|18|1.0|-8.0
+Team|SB|Pts|Dif
+Like a Nightmare|11|13.0|6.5
+Rieken Havoc|10|12.0|-1.0
+Big Sticks|8|10.5|-1.5
+Simba's Dublin Green Sox|8|10.5|1.5
+Magnum GI|7|9.0|2.5
+Guillotine|6|7.5|-3.5
+Trex|6|7.5|-0.5
+Maga Doge|5|5.5|0.5
+Dawg|5|5.5|-4.5
+Runtime Terror|3|3.0|0.0
+Young Guns|3|3.0|1.0
+Gashouse Gang|3|3.0|2.0
+Long Balls|2|1.0|-3.0
+Team|ERA|Pts|Dif
+Runtime Terror|1.454|13.0|7.0
+Guillotine|3.073|12.0|4.0
+Young Guns|3.466|11.0|9.0
+Rieken Havoc|3.800|10.0|-2.0
+Simba's Dublin Green Sox|4.018|9.0|8.0
+Gashouse Gang|4.025|8.0|-3.0
+Dawg|4.243|7.0|-3.0
+Long Balls|4.500|6.0|-7.0
+Big Sticks|4.576|5.0|0.0
+Trex|5.351|4.0|1.0
+Like a Nightmare|5.400|3.0|-6.0
+Maga Doge|5.757|2.0|-5.0
+Magnum GI|6.091|1.0|-3.0
+Team|K|Pts|Dif
+Big Sticks|60|13.0|4.0
+Gashouse Gang|56|12.0|9.0
+Simba's Dublin Green Sox|54|11.0|5.0
+Long Balls|50|10.0|-3.0
+Rieken Havoc|48|9.0|1.5
+Magnum GI|47|8.0|4.0
+Guillotine|45|6.5|-5.5
+Runtime Terror|45|6.5|5.5
+Young Guns|43|5.0|0.0
+Maga Doge|40|4.0|-6.0
+Like a Nightmare|39|3.0|-8.0
+Dawg|35|2.0|0.0
+Trex|29|1.0|-6.5
+Team|S|Pts|Dif
+Rieken Havoc|7|13.0|3.0
+Magnum GI|6|12.0|-1.0
+Big Sticks|3|11.0|9.0
+Maga Doge|2|9.0|1.0
+Like a Nightmare|2|9.0|-3.0
+Long Balls|2|9.0|3.5
+Runtime Terror|1|5.5|-1.5
+Young Guns|1|5.5|4.5
+Trex|1|5.5|-3.5
+Gashouse Gang|1|5.5|-5.5
+Dawg|0|2.0|-2.0
+Guillotine|0|2.0|-1.0
+Simba's Dublin Green Sox|0|2.0|-3.5
+Team|WHIP|Pts|Dif
+Guillotine|0.9268|13.0|2.0
+Runtime Terror|1.0154|12.0|11.0
+Dawg|1.0500|11.0|5.0
+Simba's Dublin Green Sox|1.1071|10.0|8.0
+Maga Doge|1.1912|9.0|2.0
+Rieken Havoc|1.2000|8.0|-4.0
+Trex|1.2432|7.0|3.0
+Like a Nightmare|1.2643|6.0|-4.0
+Gashouse Gang|1.2857|5.0|-8.0
+Young Guns|1.2973|4.0|-4.0
+Long Balls|1.3333|3.0|-6.0
+Big Sticks|1.3729|2.0|-1.0
+Magnum GI|1.6280|1.0|-4.0
+Team|WQS|Pts|Dif
+Runtime Terror|11|13.0|12.0
+Simba's Dublin Green Sox|7|11.5|3.5
+Magnum GI|7|11.5|5.5
+Guillotine|6|9.0|-2.0
+Young Guns|6|9.0|0.0
+Long Balls|6|9.0|-3.0
+Maga Doge|5|5.5|-7.5
+Dawg|5|5.5|1.5
+Like a Nightmare|5|5.5|0.5
+Trex|5|5.5|2.5
+Big Sticks|4|2.5|-4.5
+Gashouse Gang|4|2.5|0.5
+Rieken Havoc|3|1.0|-9.0
+
+=== Period 12 (Mon, June 08 - Sun, June 14) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Like a Nightmare|50.0|55.5|105.5|35.0|0.0
+2|Dawg|45.5|45.0|90.5|12.0|15.0
+3|Long Balls|48.5|41.0|89.5|19.5|16.0
+4|Guillotine|50.5|37.5|88.0|16.5|17.5
+5|Runtime Terror|34.0|46.0|80.0|15.5|25.5
+6|Trex|44.5|33.0|77.5|18.0|28.0
+7|Gashouse Gang|23.0|41.0|64.0|8.0|41.5
+8|Maga Doge|51.0|11.0|62.0|-32.5|43.5
+9|Young Guns|25.5|30.0|55.5|-21.0|50.0
+10|Rieken Havoc|30.0|22.0|52.0|-36.5|53.5
+11|Magnum GI|13.5|38.0|51.5|3.0|54.0
+12|Big Sticks|17.5|33.0|50.5|-31.0|55.0
+13|Simba's Dublin Green Sox|21.5|22.0|43.5|-6.5|62.0
+Batting Breakdown TeamHRPtsDif Guillotine1913.06.5 Long Balls1711.58.0 Maga Doge1711.5-0.5 Dawg1610.00.0 Like a Nightmare149.00.0 Trex138.03.0 Runtime Terror126.5-1.5 Big Sticks126.5-4.5 Simba's Dublin Green Sox115.0-1.5 Young Guns104.0-9.0 Gashouse Gang93.02.0 Magnum GI52.00.0 Rieken Havoc41.0-2.5 TeamOBPPtsDif Long Balls.409413.08.0 Runtime Terror.382512.0-1.0 Trex.375911.02.0 Dawg.367910.0-2.0 Guillotine.36549.06.0 Maga Doge.36398.0-2.0 Gashouse Gang.36057.00.0 Like a Nightmare.35626.05.0 Rieken Havoc.31485.0-1.0 Simba's Dublin Green Sox.30204.02.0 Young Guns.29143.0-8.0 Magnum GI.28032.0-2.0 Big Sticks.27201.0-7.0 TeamRPtsDif Maga Doge5513.02.0 Like a Nightmare4712.07.0 Long Balls4510.08.0 Guillotine4510.07.0 Trex4510.02.0 Dawg428.0-4.0 Rieken Havoc377.00.0 Gashouse Gang335.5-0.5 Young Guns335.5-7.5 Big Sticks324.0-5.0 Magnum GI303.0-1.0 Runtime Terror262.0-8.0 Simba's Dublin Green Sox241.00.0 TeamRBIPtsDif Long Balls5213.08.0 Dawg4312.03.0 Guillotine4211.09.0 Like a Nightmare4110.06.0 Maga Doge409.0-4.0 Rieken Havoc367.5-0.5 Simba's Dublin Green Sox367.51.5 Runtime Terror346.0-4.0 Gashouse Gang325.04.0 Trex293.50.5 Big Sticks293.5-7.5 Young Guns262.0-10.0 Magnum GI251.0-6.0 TeamSBPtsDif Like a Nightmare1213.04.5 Trex912.05.0 Young Guns811.09.0 Maga Doge79.54.5 Rieken Havoc79.5-3.5 Guillotine67.5-3.5 Runtime Terror67.54.5 Dawg55.5-3.0 Magnum GI55.5-0.5 Simba's Dublin Green Sox44.0-6.0 Gashouse Gang32.51.5 Big Sticks32.5-9.5 Long Balls01.0-3.0||Pitching Breakdown TeamERAPtsDif Like a Nightmare3.04513.06.0 Runtime Terror3.40212.04.0 Dawg3.60011.01.0 Gashouse Gang3.69210.0-1.0 Guillotine3.7039.00.0 Magnum GI3.7248.06.0 Big Sticks3.9167.01.0 Simba's Dublin Green Sox4.0696.05.0 Young Guns4.1255.02.0 Trex4.8754.00.0 Long Balls5.1303.0-10.0 Rieken Havoc6.0222.0-10.0 Maga Doge7.8921.0-4.0 TeamKPtsDif Guillotine6813.01.0 Long Balls6712.0-1.0 Like a Nightmare4910.50.5 Young Guns4910.56.5 Runtime Terror458.57.5 Trex458.51.5 Dawg446.04.0 Gashouse Gang446.01.0 Big Sticks446.0-5.0 Magnum GI424.01.0 Rieken Havoc413.0-5.0 Simba's Dublin Green Sox342.0-4.0 Maga Doge321.0-8.0 TeamSPtsDif Like a Nightmare512.01.0 Rieken Havoc512.00.0 Big Sticks512.09.0 Long Balls39.53.5 Trex39.50.5 Guillotine27.05.0 Gashouse Gang27.0-3.0 Maga Doge27.0-1.0 Runtime Terror14.5-2.5 Magnum GI14.5-8.5 Dawg02.0-2.0 Young Guns02.01.0 Simba's Dublin Green Sox02.0-3.0 TeamWHIPPtsDif Dawg0.800013.06.0 Like a Nightmare0.857112.02.0 Magnum GI1.179311.010.0 Gashouse Gang1.205110.0-3.0 Runtime Terror1.22839.07.0 Trex1.25008.03.0 Young Guns1.29177.0-1.0 Long Balls1.32006.00.0 Big Sticks1.37405.01.0 Simba's Dublin Green Sox1.37674.01.0 Guillotine1.49143.0-9.0 Rieken Havoc1.55402.0-9.0 Maga Doge1.70771.0-8.0 TeamWQSPtsDif Dawg913.09.0 Runtime Terror812.09.5 Long Balls710.5-2.0 Magnum GI710.54.0 Like a Nightmare68.03.0 Gashouse Gang68.07.0 Simba's Dublin Green Sox68.0-1.5 Guillotine55.5-5.5 Young Guns55.5-4.0 Trex43.00.5 Rieken Havoc43.0-5.0 Big Sticks43.0-3.5 Maga Doge21.0-11.5
+Team|HR|Pts|Dif
+Guillotine|19|13.0|6.5
+Long Balls|17|11.5|8.0
+Maga Doge|17|11.5|-0.5
+Dawg|16|10.0|0.0
+Like a Nightmare|14|9.0|0.0
+Trex|13|8.0|3.0
+Runtime Terror|12|6.5|-1.5
+Big Sticks|12|6.5|-4.5
+Simba's Dublin Green Sox|11|5.0|-1.5
+Young Guns|10|4.0|-9.0
+Gashouse Gang|9|3.0|2.0
+Magnum GI|5|2.0|0.0
+Rieken Havoc|4|1.0|-2.5
+Team|OBP|Pts|Dif
+Long Balls|.4094|13.0|8.0
+Runtime Terror|.3825|12.0|-1.0
+Trex|.3759|11.0|2.0
+Dawg|.3679|10.0|-2.0
+Guillotine|.3654|9.0|6.0
+Maga Doge|.3639|8.0|-2.0
+Gashouse Gang|.3605|7.0|0.0
+Like a Nightmare|.3562|6.0|5.0
+Rieken Havoc|.3148|5.0|-1.0
+Simba's Dublin Green Sox|.3020|4.0|2.0
+Young Guns|.2914|3.0|-8.0
+Magnum GI|.2803|2.0|-2.0
+Big Sticks|.2720|1.0|-7.0
+Team|R|Pts|Dif
+Maga Doge|55|13.0|2.0
+Like a Nightmare|47|12.0|7.0
+Long Balls|45|10.0|8.0
+Guillotine|45|10.0|7.0
+Trex|45|10.0|2.0
+Dawg|42|8.0|-4.0
+Rieken Havoc|37|7.0|0.0
+Gashouse Gang|33|5.5|-0.5
+Young Guns|33|5.5|-7.5
+Big Sticks|32|4.0|-5.0
+Magnum GI|30|3.0|-1.0
+Runtime Terror|26|2.0|-8.0
+Simba's Dublin Green Sox|24|1.0|0.0
+Team|RBI|Pts|Dif
+Long Balls|52|13.0|8.0
+Dawg|43|12.0|3.0
+Guillotine|42|11.0|9.0
+Like a Nightmare|41|10.0|6.0
+Maga Doge|40|9.0|-4.0
+Rieken Havoc|36|7.5|-0.5
+Simba's Dublin Green Sox|36|7.5|1.5
+Runtime Terror|34|6.0|-4.0
+Gashouse Gang|32|5.0|4.0
+Trex|29|3.5|0.5
+Big Sticks|29|3.5|-7.5
+Young Guns|26|2.0|-10.0
+Magnum GI|25|1.0|-6.0
+Team|SB|Pts|Dif
+Like a Nightmare|12|13.0|4.5
+Trex|9|12.0|5.0
+Young Guns|8|11.0|9.0
+Maga Doge|7|9.5|4.5
+Rieken Havoc|7|9.5|-3.5
+Guillotine|6|7.5|-3.5
+Runtime Terror|6|7.5|4.5
+Dawg|5|5.5|-3.0
+Magnum GI|5|5.5|-0.5
+Simba's Dublin Green Sox|4|4.0|-6.0
+Gashouse Gang|3|2.5|1.5
+Big Sticks|3|2.5|-9.5
+Long Balls|0|1.0|-3.0
+Team|ERA|Pts|Dif
+Like a Nightmare|3.045|13.0|6.0
+Runtime Terror|3.402|12.0|4.0
+Dawg|3.600|11.0|1.0
+Gashouse Gang|3.692|10.0|-1.0
+Guillotine|3.703|9.0|0.0
+Magnum GI|3.724|8.0|6.0
+Big Sticks|3.916|7.0|1.0
+Simba's Dublin Green Sox|4.069|6.0|5.0
+Young Guns|4.125|5.0|2.0
+Trex|4.875|4.0|0.0
+Long Balls|5.130|3.0|-10.0
+Rieken Havoc|6.022|2.0|-10.0
+Maga Doge|7.892|1.0|-4.0
+Team|K|Pts|Dif
+Guillotine|68|13.0|1.0
+Long Balls|67|12.0|-1.0
+Like a Nightmare|49|10.5|0.5
+Young Guns|49|10.5|6.5
+Runtime Terror|45|8.5|7.5
+Trex|45|8.5|1.5
+Dawg|44|6.0|4.0
+Gashouse Gang|44|6.0|1.0
+Big Sticks|44|6.0|-5.0
+Magnum GI|42|4.0|1.0
+Rieken Havoc|41|3.0|-5.0
+Simba's Dublin Green Sox|34|2.0|-4.0
+Maga Doge|32|1.0|-8.0
+Team|S|Pts|Dif
+Like a Nightmare|5|12.0|1.0
+Rieken Havoc|5|12.0|0.0
+Big Sticks|5|12.0|9.0
+Long Balls|3|9.5|3.5
+Trex|3|9.5|0.5
+Guillotine|2|7.0|5.0
+Gashouse Gang|2|7.0|-3.0
+Maga Doge|2|7.0|-1.0
+Runtime Terror|1|4.5|-2.5
+Magnum GI|1|4.5|-8.5
+Dawg|0|2.0|-2.0
+Young Guns|0|2.0|1.0
+Simba's Dublin Green Sox|0|2.0|-3.0
+Team|WHIP|Pts|Dif
+Dawg|0.8000|13.0|6.0
+Like a Nightmare|0.8571|12.0|2.0
+Magnum GI|1.1793|11.0|10.0
+Gashouse Gang|1.2051|10.0|-3.0
+Runtime Terror|1.2283|9.0|7.0
+Trex|1.2500|8.0|3.0
+Young Guns|1.2917|7.0|-1.0
+Long Balls|1.3200|6.0|0.0
+Big Sticks|1.3740|5.0|1.0
+Simba's Dublin Green Sox|1.3767|4.0|1.0
+Guillotine|1.4914|3.0|-9.0
+Rieken Havoc|1.5540|2.0|-9.0
+Maga Doge|1.7077|1.0|-8.0
+Team|WQS|Pts|Dif
+Dawg|9|13.0|9.0
+Runtime Terror|8|12.0|9.5
+Long Balls|7|10.5|-2.0
+Magnum GI|7|10.5|4.0
+Like a Nightmare|6|8.0|3.0
+Gashouse Gang|6|8.0|7.0
+Simba's Dublin Green Sox|6|8.0|-1.5
+Guillotine|5|5.5|-5.5
+Young Guns|5|5.5|-4.0
+Trex|4|3.0|0.5
+Rieken Havoc|4|3.0|-5.0
+Big Sticks|4|3.0|-3.5
+Maga Doge|2|1.0|-11.5
+
+=== Period 13 (Mon, June 15 - Sun, June 21) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Rieken Havoc|60.5|59.5|120.0|37.5|0.0
+2|Guillotine|41.5|46.5|88.0|12.5|32.0
+3|Big Sticks|32.5|53.0|85.5|8.5|34.5
+4|Long Balls|49.0|31.5|80.5|3.0|39.5
+4|Trex|38.5|42.0|80.5|18.0|39.5
+6|Runtime Terror|36.5|40.5|77.0|13.5|43.0
+7|Young Guns|23.5|45.5|69.0|-8.0|51.0
+8|Like a Nightmare|32.0|30.5|62.5|-13.5|57.5
+9|Dawg|34.5|27.5|62.0|-21.0|58.0
+10|Simba's Dublin Green Sox|30.5|20.5|51.0|4.5|69.0
+11|Maga Doge|38.5|10.0|48.5|-39.0|71.5
+12|Gashouse Gang|24.0|23.0|47.0|-9.0|73.0
+13|Magnum GI|13.5|25.0|38.5|-7.0|81.5
+Batting Breakdown TeamHRPtsDif Guillotine1613.05.5 Rieken Havoc1411.58.5 Simba's Dublin Green Sox1411.56.0 Runtime Terror139.01.5 Dawg139.0-2.0 Maga Doge139.0-3.0 Long Balls126.51.0 Trex126.52.5 Like a Nightmare115.0-4.0 Big Sticks104.0-6.0 Gashouse Gang93.01.0 Magnum GI82.01.0 Young Guns61.0-12.0 TeamOBPPtsDif Rieken Havoc.409113.08.0 Young Guns.389612.03.0 Trex.378411.01.0 Long Balls.353110.03.0 Runtime Terror.34049.0-4.0 Gashouse Gang.33948.00.0 Big Sticks.33787.01.0 Guillotine.33336.02.0 Dawg.32955.0-7.0 Simba's Dublin Green Sox.32824.02.0 Maga Doge.31543.0-8.0 Like a Nightmare.30942.01.0 Magnum GI.28791.0-2.0 TeamRPtsDif Maga Doge4513.00.0 Rieken Havoc4412.05.0 Guillotine4111.06.0 Long Balls4010.08.0 Dawg399.0-2.0 Big Sticks367.5-2.0 Trex367.5-2.0 Like a Nightmare356.00.0 Runtime Terror344.5-3.5 Simba's Dublin Green Sox344.53.5 Gashouse Gang313.0-1.0 Young Guns262.0-10.0 Magnum GI251.0-2.0 TeamRBIPtsDif Long Balls4513.05.0 Rieken Havoc4112.05.0 Guillotine409.56.5 Big Sticks409.5-1.5 Runtime Terror409.50.5 Simba's Dublin Green Sox409.53.5 Dawg397.0-3.0 Like a Nightmare346.02.0 Magnum GI325.00.0 Maga Doge304.0-9.0 Trex282.50.5 Gashouse Gang282.51.5 Young Guns261.0-11.0 TeamSBPtsDif Like a Nightmare1113.01.0 Rieken Havoc912.0-1.0 Trex611.02.0 Long Balls59.57.5 Maga Doge59.54.5 Young Guns47.54.5 Gashouse Gang47.56.5 Big Sticks24.5-6.0 Runtime Terror24.50.5 Dawg24.5-3.0 Magnum GI24.5-1.5 Guillotine12.0-8.5 Simba's Dublin Green Sox01.0-6.5||Pitching Breakdown TeamERAPtsDif Rieken Havoc1.76113.02.0 Trex2.34812.08.0 Guillotine2.64711.02.0 Young Guns2.71710.05.0 Big Sticks2.7189.03.0 Runtime Terror4.1668.00.0 Gashouse Gang4.3307.0-5.0 Like a Nightmare4.4366.0-1.0 Long Balls4.5735.0-8.0 Simba's Dublin Green Sox4.7874.02.0 Magnum GI5.5533.00.0 Dawg5.6512.0-8.0 Maga Doge6.7501.00.0 TeamKPtsDif Rieken Havoc7113.05.0 Big Sticks6212.01.0 Guillotine5911.0-1.0 Young Guns5810.05.0 Runtime Terror569.08.0 Long Balls487.5-5.5 Dawg487.55.5 Like a Nightmare456.0-4.0 Trex405.0-2.0 Magnum GI394.01.0 Gashouse Gang363.0-1.0 Simba's Dublin Green Sox352.0-4.0 Maga Doge341.0-8.0 TeamSPtsDif Rieken Havoc513.01.0 Big Sticks412.07.0 Long Balls29.52.5 Trex29.50.5 Dawg29.57.0 Magnum GI29.5-3.5 Guillotine15.02.5 Young Guns15.04.0 Like a Nightmare15.0-6.0 Maga Doge15.0-3.0 Gashouse Gang15.0-5.0 Runtime Terror01.5-4.5 Simba's Dublin Green Sox01.5-2.5 TeamWHIPPtsDif Rieken Havoc0.782613.04.0 Runtime Terror1.011412.08.0 Trex1.043511.05.0 Big Sticks1.047010.07.0 Like a Nightmare1.07149.0-3.0 Young Guns1.13218.00.0 Guillotine1.15697.0-3.0 Gashouse Gang1.27366.0-7.0 Long Balls1.30655.0-2.0 Dawg1.41864.0-7.0 Simba's Dublin Green Sox1.46813.01.0 Maga Doge1.52502.0-3.0 Magnum GI1.68091.00.0 TeamWQSPtsDif Guillotine1012.50.5 Young Guns1012.53.5 Big Sticks910.05.0 Runtime Terror910.07.0 Simba's Dublin Green Sox910.0-0.5 Rieken Havoc87.50.0 Magnum GI87.50.0 Long Balls64.5-8.5 Trex64.52.5 Like a Nightmare64.50.5 Dawg64.5-1.5 Gashouse Gang52.01.0 Maga Doge41.0-9.5
+Team|HR|Pts|Dif
+Guillotine|16|13.0|5.5
+Rieken Havoc|14|11.5|8.5
+Simba's Dublin Green Sox|14|11.5|6.0
+Runtime Terror|13|9.0|1.5
+Dawg|13|9.0|-2.0
+Maga Doge|13|9.0|-3.0
+Long Balls|12|6.5|1.0
+Trex|12|6.5|2.5
+Like a Nightmare|11|5.0|-4.0
+Big Sticks|10|4.0|-6.0
+Gashouse Gang|9|3.0|1.0
+Magnum GI|8|2.0|1.0
+Young Guns|6|1.0|-12.0
+Team|OBP|Pts|Dif
+Rieken Havoc|.4091|13.0|8.0
+Young Guns|.3896|12.0|3.0
+Trex|.3784|11.0|1.0
+Long Balls|.3531|10.0|3.0
+Runtime Terror|.3404|9.0|-4.0
+Gashouse Gang|.3394|8.0|0.0
+Big Sticks|.3378|7.0|1.0
+Guillotine|.3333|6.0|2.0
+Dawg|.3295|5.0|-7.0
+Simba's Dublin Green Sox|.3282|4.0|2.0
+Maga Doge|.3154|3.0|-8.0
+Like a Nightmare|.3094|2.0|1.0
+Magnum GI|.2879|1.0|-2.0
+Team|R|Pts|Dif
+Maga Doge|45|13.0|0.0
+Rieken Havoc|44|12.0|5.0
+Guillotine|41|11.0|6.0
+Long Balls|40|10.0|8.0
+Dawg|39|9.0|-2.0
+Big Sticks|36|7.5|-2.0
+Trex|36|7.5|-2.0
+Like a Nightmare|35|6.0|0.0
+Runtime Terror|34|4.5|-3.5
+Simba's Dublin Green Sox|34|4.5|3.5
+Gashouse Gang|31|3.0|-1.0
+Young Guns|26|2.0|-10.0
+Magnum GI|25|1.0|-2.0
+Team|RBI|Pts|Dif
+Long Balls|45|13.0|5.0
+Rieken Havoc|41|12.0|5.0
+Guillotine|40|9.5|6.5
+Big Sticks|40|9.5|-1.5
+Runtime Terror|40|9.5|0.5
+Simba's Dublin Green Sox|40|9.5|3.5
+Dawg|39|7.0|-3.0
+Like a Nightmare|34|6.0|2.0
+Magnum GI|32|5.0|0.0
+Maga Doge|30|4.0|-9.0
+Trex|28|2.5|0.5
+Gashouse Gang|28|2.5|1.5
+Young Guns|26|1.0|-11.0
+Team|SB|Pts|Dif
+Like a Nightmare|11|13.0|1.0
+Rieken Havoc|9|12.0|-1.0
+Trex|6|11.0|2.0
+Long Balls|5|9.5|7.5
+Maga Doge|5|9.5|4.5
+Young Guns|4|7.5|4.5
+Gashouse Gang|4|7.5|6.5
+Big Sticks|2|4.5|-6.0
+Runtime Terror|2|4.5|0.5
+Dawg|2|4.5|-3.0
+Magnum GI|2|4.5|-1.5
+Guillotine|1|2.0|-8.5
+Simba's Dublin Green Sox|0|1.0|-6.5
+Team|ERA|Pts|Dif
+Rieken Havoc|1.761|13.0|2.0
+Trex|2.348|12.0|8.0
+Guillotine|2.647|11.0|2.0
+Young Guns|2.717|10.0|5.0
+Big Sticks|2.718|9.0|3.0
+Runtime Terror|4.166|8.0|0.0
+Gashouse Gang|4.330|7.0|-5.0
+Like a Nightmare|4.436|6.0|-1.0
+Long Balls|4.573|5.0|-8.0
+Simba's Dublin Green Sox|4.787|4.0|2.0
+Magnum GI|5.553|3.0|0.0
+Dawg|5.651|2.0|-8.0
+Maga Doge|6.750|1.0|0.0
+Team|K|Pts|Dif
+Rieken Havoc|71|13.0|5.0
+Big Sticks|62|12.0|1.0
+Guillotine|59|11.0|-1.0
+Young Guns|58|10.0|5.0
+Runtime Terror|56|9.0|8.0
+Long Balls|48|7.5|-5.5
+Dawg|48|7.5|5.5
+Like a Nightmare|45|6.0|-4.0
+Trex|40|5.0|-2.0
+Magnum GI|39|4.0|1.0
+Gashouse Gang|36|3.0|-1.0
+Simba's Dublin Green Sox|35|2.0|-4.0
+Maga Doge|34|1.0|-8.0
+Team|S|Pts|Dif
+Rieken Havoc|5|13.0|1.0
+Big Sticks|4|12.0|7.0
+Long Balls|2|9.5|2.5
+Trex|2|9.5|0.5
+Dawg|2|9.5|7.0
+Magnum GI|2|9.5|-3.5
+Guillotine|1|5.0|2.5
+Young Guns|1|5.0|4.0
+Like a Nightmare|1|5.0|-6.0
+Maga Doge|1|5.0|-3.0
+Gashouse Gang|1|5.0|-5.0
+Runtime Terror|0|1.5|-4.5
+Simba's Dublin Green Sox|0|1.5|-2.5
+Team|WHIP|Pts|Dif
+Rieken Havoc|0.7826|13.0|4.0
+Runtime Terror|1.0114|12.0|8.0
+Trex|1.0435|11.0|5.0
+Big Sticks|1.0470|10.0|7.0
+Like a Nightmare|1.0714|9.0|-3.0
+Young Guns|1.1321|8.0|0.0
+Guillotine|1.1569|7.0|-3.0
+Gashouse Gang|1.2736|6.0|-7.0
+Long Balls|1.3065|5.0|-2.0
+Dawg|1.4186|4.0|-7.0
+Simba's Dublin Green Sox|1.4681|3.0|1.0
+Maga Doge|1.5250|2.0|-3.0
+Magnum GI|1.6809|1.0|0.0
+Team|WQS|Pts|Dif
+Guillotine|10|12.5|0.5
+Young Guns|10|12.5|3.5
+Big Sticks|9|10.0|5.0
+Runtime Terror|9|10.0|7.0
+Simba's Dublin Green Sox|9|10.0|-0.5
+Rieken Havoc|8|7.5|0.0
+Magnum GI|8|7.5|0.0
+Long Balls|6|4.5|-8.5
+Trex|6|4.5|2.5
+Like a Nightmare|6|4.5|0.5
+Dawg|6|4.5|-1.5
+Gashouse Gang|5|2.0|1.0
+Maga Doge|4|1.0|-9.5
+
+=== Period 14 (Mon, June 22 - Sun, June 28) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Rieken Havoc|45.0|56.0|101.0|8.0|0.0
+2|Big Sticks|54.0|46.5|100.5|21.0|0.5
+3|Magnum GI|45.5|45.5|91.0|50.5|10.0
+4|Like a Nightmare|44.5|41.0|85.5|11.5|15.5
+5|Gashouse Gang|53.0|26.5|79.5|24.5|21.5
+6|Young Guns|28.0|38.5|66.5|-14.0|34.5
+7|Simba's Dublin Green Sox|33.5|30.5|64.0|17.0|37.0
+8|Guillotine|23.0|38.5|61.5|-15.5|39.5
+9|Trex|20.5|40.0|60.5|-4.0|40.5
+10|Dawg|34.0|24.5|58.5|-20.0|42.5
+11|Runtime Terror|35.5|19.0|54.5|-9.0|46.5
+12|Maga Doge|22.5|26.5|49.0|-32.0|52.0
+13|Long Balls|16.0|22.0|38.0|-38.0|63.0
+Batting Breakdown TeamHRPtsDif Big Sticks1713.03.0 Gashouse Gang1612.010.0 Like a Nightmare1211.02.0 Simba's Dublin Green Sox1010.04.0 Maga Doge99.0-3.5 Runtime Terror88.01.0 Rieken Havoc76.03.0 Magnum GI76.05.0 Young Guns76.0-6.5 Dawg63.5-7.5 Long Balls63.5-1.5 Guillotine51.5-6.5 Trex51.5-2.5 TeamOBPPtsDif Rieken Havoc.353313.06.0 Gashouse Gang.352612.04.0 Magnum GI.349811.010.0 Big Sticks.345510.05.0 Trex.33709.0-1.0 Dawg.33458.0-4.0 Simba's Dublin Green Sox.33217.04.0 Like a Nightmare.32206.04.0 Young Guns.31805.0-6.0 Long Balls.30004.0-2.0 Runtime Terror.29033.0-10.0 Guillotine.27402.0-2.0 Maga Doge.27241.0-8.0 TeamRPtsDif Gashouse Gang4713.09.0 Big Sticks4012.02.5 Dawg3811.0-1.0 Magnum GI379.57.5 Runtime Terror379.52.0 Like a Nightmare368.02.0 Guillotine347.02.0 Young Guns326.0-5.0 Rieken Havoc294.5-3.0 Long Balls294.51.5 Maga Doge273.0-10.0 Simba's Dublin Green Sox262.01.0 Trex121.0-8.5 TeamRBIPtsDif Big Sticks5613.01.0 Runtime Terror4012.03.5 Rieken Havoc3911.04.0 Gashouse Gang3610.09.0 Magnum GI328.53.5 Dawg328.50.0 Like a Nightmare316.53.5 Maga Doge316.5-6.5 Young Guns305.0-6.0 Simba's Dublin Green Sox274.0-2.0 Long Balls253.0-7.0 Guillotine232.0-2.0 Trex211.0-1.0 TeamSBPtsDif Like a Nightmare1013.01.0 Rieken Havoc810.5-2.5 Magnum GI810.55.5 Simba's Dublin Green Sox810.54.0 Guillotine810.51.5 Trex68.0-3.0 Big Sticks56.0-4.0 Gashouse Gang56.05.0 Young Guns56.02.5 Dawg43.0-5.0 Runtime Terror43.0-0.5 Maga Doge43.0-3.5 Long Balls21.0-1.0||Pitching Breakdown TeamERAPtsDif Magnum GI1.21913.011.0 Rieken Havoc1.25212.0-1.0 Trex2.82111.07.0 Big Sticks3.37510.04.0 Guillotine3.5899.0-1.0 Dawg3.6738.00.0 Like a Nightmare3.7627.00.0 Simba's Dublin Green Sox3.8346.03.0 Gashouse Gang4.0625.0-6.0 Young Guns4.5254.0-1.0 Maga Doge4.6803.02.0 Runtime Terror5.0182.0-7.0 Long Balls5.9771.0-11.0 TeamKPtsDif Big Sticks6913.02.0 Long Balls6712.0-1.0 Rieken Havoc6611.01.0 Young Guns5610.03.0 Maga Doge549.01.0 Like a Nightmare508.0-1.0 Guillotine497.0-5.0 Simba's Dublin Green Sox466.01.0 Gashouse Gang454.50.5 Trex454.5-1.5 Magnum GI422.0-1.0 Dawg422.00.0 Runtime Terror422.01.0 TeamSPtsDif Rieken Havoc613.00.0 Big Sticks511.05.0 Magnum GI511.0-1.0 Like a Nightmare511.00.0 Maga Doge39.01.0 Gashouse Gang26.5-3.5 Young Guns26.55.5 Runtime Terror26.51.5 Long Balls26.5-0.5 Trex14.0-5.0 Simba's Dublin Green Sox02.0-2.0 Guillotine02.00.0 Dawg02.0-1.0 TeamWHIPPtsDif Magnum GI1.006513.012.0 Rieken Havoc1.033112.01.0 Guillotine1.082311.01.0 Like a Nightmare1.131110.0-2.0 Gashouse Gang1.14169.0-4.0 Trex1.14188.01.0 Young Guns1.17327.0-1.0 Dawg1.24496.0-3.0 Runtime Terror1.32745.00.0 Simba's Dublin Green Sox1.33144.02.0 Big Sticks1.33933.0-1.0 Maga Doge1.36002.0-1.0 Long Balls1.41981.0-5.0 TeamWQSPtsDif Simba's Dublin Green Sox1012.52.0 Trex1012.510.5 Young Guns911.00.5 Big Sticks89.53.5 Guillotine89.5-3.5 Rieken Havoc78.0-0.5 Magnum GI66.5-2.0 Dawg66.51.5 Like a Nightmare45.02.0 Runtime Terror33.5-0.5 Maga Doge33.5-3.5 Gashouse Gang21.50.5 Long Balls21.5-10.5
+Team|HR|Pts|Dif
+Big Sticks|17|13.0|3.0
+Gashouse Gang|16|12.0|10.0
+Like a Nightmare|12|11.0|2.0
+Simba's Dublin Green Sox|10|10.0|4.0
+Maga Doge|9|9.0|-3.5
+Runtime Terror|8|8.0|1.0
+Rieken Havoc|7|6.0|3.0
+Magnum GI|7|6.0|5.0
+Young Guns|7|6.0|-6.5
+Dawg|6|3.5|-7.5
+Long Balls|6|3.5|-1.5
+Guillotine|5|1.5|-6.5
+Trex|5|1.5|-2.5
+Team|OBP|Pts|Dif
+Rieken Havoc|.3533|13.0|6.0
+Gashouse Gang|.3526|12.0|4.0
+Magnum GI|.3498|11.0|10.0
+Big Sticks|.3455|10.0|5.0
+Trex|.3370|9.0|-1.0
+Dawg|.3345|8.0|-4.0
+Simba's Dublin Green Sox|.3321|7.0|4.0
+Like a Nightmare|.3220|6.0|4.0
+Young Guns|.3180|5.0|-6.0
+Long Balls|.3000|4.0|-2.0
+Runtime Terror|.2903|3.0|-10.0
+Guillotine|.2740|2.0|-2.0
+Maga Doge|.2724|1.0|-8.0
+Team|R|Pts|Dif
+Gashouse Gang|47|13.0|9.0
+Big Sticks|40|12.0|2.5
+Dawg|38|11.0|-1.0
+Magnum GI|37|9.5|7.5
+Runtime Terror|37|9.5|2.0
+Like a Nightmare|36|8.0|2.0
+Guillotine|34|7.0|2.0
+Young Guns|32|6.0|-5.0
+Rieken Havoc|29|4.5|-3.0
+Long Balls|29|4.5|1.5
+Maga Doge|27|3.0|-10.0
+Simba's Dublin Green Sox|26|2.0|1.0
+Trex|12|1.0|-8.5
+Team|RBI|Pts|Dif
+Big Sticks|56|13.0|1.0
+Runtime Terror|40|12.0|3.5
+Rieken Havoc|39|11.0|4.0
+Gashouse Gang|36|10.0|9.0
+Magnum GI|32|8.5|3.5
+Dawg|32|8.5|0.0
+Like a Nightmare|31|6.5|3.5
+Maga Doge|31|6.5|-6.5
+Young Guns|30|5.0|-6.0
+Simba's Dublin Green Sox|27|4.0|-2.0
+Long Balls|25|3.0|-7.0
+Guillotine|23|2.0|-2.0
+Trex|21|1.0|-1.0
+Team|SB|Pts|Dif
+Like a Nightmare|10|13.0|1.0
+Rieken Havoc|8|10.5|-2.5
+Magnum GI|8|10.5|5.5
+Simba's Dublin Green Sox|8|10.5|4.0
+Guillotine|8|10.5|1.5
+Trex|6|8.0|-3.0
+Big Sticks|5|6.0|-4.0
+Gashouse Gang|5|6.0|5.0
+Young Guns|5|6.0|2.5
+Dawg|4|3.0|-5.0
+Runtime Terror|4|3.0|-0.5
+Maga Doge|4|3.0|-3.5
+Long Balls|2|1.0|-1.0
+Team|ERA|Pts|Dif
+Magnum GI|1.219|13.0|11.0
+Rieken Havoc|1.252|12.0|-1.0
+Trex|2.821|11.0|7.0
+Big Sticks|3.375|10.0|4.0
+Guillotine|3.589|9.0|-1.0
+Dawg|3.673|8.0|0.0
+Like a Nightmare|3.762|7.0|0.0
+Simba's Dublin Green Sox|3.834|6.0|3.0
+Gashouse Gang|4.062|5.0|-6.0
+Young Guns|4.525|4.0|-1.0
+Maga Doge|4.680|3.0|2.0
+Runtime Terror|5.018|2.0|-7.0
+Long Balls|5.977|1.0|-11.0
+Team|K|Pts|Dif
+Big Sticks|69|13.0|2.0
+Long Balls|67|12.0|-1.0
+Rieken Havoc|66|11.0|1.0
+Young Guns|56|10.0|3.0
+Maga Doge|54|9.0|1.0
+Like a Nightmare|50|8.0|-1.0
+Guillotine|49|7.0|-5.0
+Simba's Dublin Green Sox|46|6.0|1.0
+Gashouse Gang|45|4.5|0.5
+Trex|45|4.5|-1.5
+Magnum GI|42|2.0|-1.0
+Dawg|42|2.0|0.0
+Runtime Terror|42|2.0|1.0
+Team|S|Pts|Dif
+Rieken Havoc|6|13.0|0.0
+Big Sticks|5|11.0|5.0
+Magnum GI|5|11.0|-1.0
+Like a Nightmare|5|11.0|0.0
+Maga Doge|3|9.0|1.0
+Gashouse Gang|2|6.5|-3.5
+Young Guns|2|6.5|5.5
+Runtime Terror|2|6.5|1.5
+Long Balls|2|6.5|-0.5
+Trex|1|4.0|-5.0
+Simba's Dublin Green Sox|0|2.0|-2.0
+Guillotine|0|2.0|0.0
+Dawg|0|2.0|-1.0
+Team|WHIP|Pts|Dif
+Magnum GI|1.0065|13.0|12.0
+Rieken Havoc|1.0331|12.0|1.0
+Guillotine|1.0823|11.0|1.0
+Like a Nightmare|1.1311|10.0|-2.0
+Gashouse Gang|1.1416|9.0|-4.0
+Trex|1.1418|8.0|1.0
+Young Guns|1.1732|7.0|-1.0
+Dawg|1.2449|6.0|-3.0
+Runtime Terror|1.3274|5.0|0.0
+Simba's Dublin Green Sox|1.3314|4.0|2.0
+Big Sticks|1.3393|3.0|-1.0
+Maga Doge|1.3600|2.0|-1.0
+Long Balls|1.4198|1.0|-5.0
+Team|WQS|Pts|Dif
+Simba's Dublin Green Sox|10|12.5|2.0
+Trex|10|12.5|10.5
+Young Guns|9|11.0|0.5
+Big Sticks|8|9.5|3.5
+Guillotine|8|9.5|-3.5
+Rieken Havoc|7|8.0|-0.5
+Magnum GI|6|6.5|-2.0
+Dawg|6|6.5|1.5
+Like a Nightmare|4|5.0|2.0
+Runtime Terror|3|3.5|-0.5
+Maga Doge|3|3.5|-3.5
+Gashouse Gang|2|1.5|0.5
+Long Balls|2|1.5|-10.5
+
+=== Period 15 (Mon, June 29 - Sun, July 05) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Like a Nightmare|45.0|51.0|96.0|21.0|0.0
+2|Gashouse Gang|34.5|49.5|84.0|24.0|12.0
+2|Dawg|45.0|39.0|84.0|5.5|12.0
+4|Simba's Dublin Green Sox|52.0|30.5|82.5|34.5|13.5
+5|Maga Doge|52.5|24.5|77.0|1.5|19.0
+6|Big Sticks|30.5|42.5|73.0|-11.5|23.0
+7|Young Guns|43.0|26.5|69.5|-7.5|26.5
+8|Guillotine|23.5|45.0|68.5|-9.0|27.5
+9|Magnum GI|40.5|27.0|67.5|21.5|28.5
+10|Runtime Terror|29.5|37.0|66.5|1.0|29.5
+11|Long Balls|19.0|41.0|60.0|-5.0|36.0
+12|Trex|24.5|20.5|45.0|-16.0|51.0
+13|Rieken Havoc|15.5|21.0|36.5|-60.0|59.5
+Batting Breakdown TeamHRPtsDif Maga Doge2113.00.0 Young Guns1711.5-0.5 Runtime Terror1711.54.0 Gashouse Gang1510.08.0 Like a Nightmare138.5-0.5 Dawg138.5-1.5 Simba's Dublin Green Sox127.01.0 Guillotine104.5-3.0 Magnum GI104.53.5 Long Balls104.5-0.5 Rieken Havoc104.51.5 Big Sticks92.0-9.0 Trex61.0-3.0 TeamOBPPtsDif Magnum GI.388913.011.0 Like a Nightmare.367512.011.0 Simba's Dublin Green Sox.348711.08.0 Maga Doge.345910.03.0 Dawg.34179.0-4.0 Gashouse Gang.34168.0-1.0 Trex.32957.0-4.0 Long Balls.32776.01.0 Big Sticks.32755.0-1.0 Young Guns.31884.0-6.0 Guillotine.31273.0-1.0 Rieken Havoc.30932.0-6.0 Runtime Terror.30771.0-11.0 TeamRPtsDif Maga Doge4913.00.0 Dawg4812.00.0 Simba's Dublin Green Sox4711.010.0 Magnum GI4410.07.0 Young Guns429.0-2.0 Like a Nightmare406.5-0.5 Big Sticks406.5-3.5 Guillotine406.51.5 Runtime Terror406.5-2.5 Gashouse Gang383.5-2.5 Trex383.5-0.5 Rieken Havoc362.0-6.0 Long Balls321.0-1.0 TeamRBIPtsDif Maga Doge5413.01.0 Simba's Dublin Green Sox5212.06.0 Gashouse Gang4611.09.0 Young Guns449.5-0.5 Runtime Terror449.5-1.5 Big Sticks418.0-5.0 Dawg396.5-2.0 Magnum GI396.51.5 Like a Nightmare335.01.0 Long Balls324.0-3.0 Guillotine293.00.0 Rieken Havoc262.0-6.5 Trex251.00.0 TeamSBPtsDif Like a Nightmare1513.01.0 Trex1312.01.0 Simba's Dublin Green Sox811.03.0 Dawg59.02.5 Big Sticks59.00.0 Young Guns59.05.0 Guillotine46.5-3.5 Magnum GI46.50.0 Rieken Havoc35.0-8.0 Maga Doge23.5-1.5 Long Balls23.51.5 Gashouse Gang12.01.0 Runtime Terror01.0-2.0||Pitching Breakdown TeamERAPtsDif Gashouse Gang2.61313.01.0 Guillotine2.96312.01.0 Dawg3.00011.02.0 Like a Nightmare3.25310.03.0 Long Balls3.4299.0-1.0 Simba's Dublin Green Sox3.7508.06.0 Runtime Terror4.2357.0-1.0 Magnum GI4.4456.02.0 Rieken Havoc4.4565.0-8.0 Big Sticks4.5334.0-2.0 Maga Doge4.8903.02.0 Young Guns5.6332.0-1.0 Trex6.3641.0-4.0 TeamKPtsDif Like a Nightmare6813.04.0 Gashouse Gang5911.07.0 Young Guns5911.04.0 Runtime Terror5911.010.0 Big Sticks569.0-2.0 Guillotine498.0-4.0 Maga Doge477.0-1.0 Dawg405.03.0 Long Balls405.0-8.0 Trex405.0-1.0 Magnum GI393.00.0 Rieken Havoc312.0-8.0 Simba's Dublin Green Sox271.0-4.0 TeamSPtsDif Big Sticks512.55.5 Trex512.53.5 Magnum GI411.0-1.0 Like a Nightmare39.0-2.0 Long Balls39.03.0 Rieken Havoc39.0-4.0 Young Guns26.05.0 Guillotine26.04.0 Runtime Terror26.01.0 Dawg13.00.0 Simba's Dublin Green Sox13.0-1.0 Maga Doge13.0-5.0 Gashouse Gang01.0-9.0 TeamWHIPPtsDif Gashouse Gang0.948413.00.0 Dawg0.979212.03.0 Like a Nightmare1.066311.0-1.0 Long Balls1.071410.05.0 Big Sticks1.11689.05.0 Maga Doge1.15758.05.0 Simba's Dublin Green Sox1.16677.06.0 Guillotine1.24396.0-4.0 Runtime Terror1.25495.0-1.0 Young Guns1.38134.0-4.0 Rieken Havoc1.39813.0-8.0 Magnum GI1.60982.00.0 Trex1.77861.0-6.0 TeamWQSPtsDif Guillotine1013.00.0 Gashouse Gang911.510.5 Simba's Dublin Green Sox911.5-0.5 Like a Nightmare88.05.0 Dawg88.02.5 Big Sticks88.00.5 Runtime Terror88.05.0 Long Balls88.0-2.0 Magnum GI75.0-2.5 Maga Doge63.5-2.0 Young Guns63.5-7.5 Rieken Havoc52.0-7.0 Trex31.0-2.0
+Team|HR|Pts|Dif
+Maga Doge|21|13.0|0.0
+Young Guns|17|11.5|-0.5
+Runtime Terror|17|11.5|4.0
+Gashouse Gang|15|10.0|8.0
+Like a Nightmare|13|8.5|-0.5
+Dawg|13|8.5|-1.5
+Simba's Dublin Green Sox|12|7.0|1.0
+Guillotine|10|4.5|-3.0
+Magnum GI|10|4.5|3.5
+Long Balls|10|4.5|-0.5
+Rieken Havoc|10|4.5|1.5
+Big Sticks|9|2.0|-9.0
+Trex|6|1.0|-3.0
+Team|OBP|Pts|Dif
+Magnum GI|.3889|13.0|11.0
+Like a Nightmare|.3675|12.0|11.0
+Simba's Dublin Green Sox|.3487|11.0|8.0
+Maga Doge|.3459|10.0|3.0
+Dawg|.3417|9.0|-4.0
+Gashouse Gang|.3416|8.0|-1.0
+Trex|.3295|7.0|-4.0
+Long Balls|.3277|6.0|1.0
+Big Sticks|.3275|5.0|-1.0
+Young Guns|.3188|4.0|-6.0
+Guillotine|.3127|3.0|-1.0
+Rieken Havoc|.3093|2.0|-6.0
+Runtime Terror|.3077|1.0|-11.0
+Team|R|Pts|Dif
+Maga Doge|49|13.0|0.0
+Dawg|48|12.0|0.0
+Simba's Dublin Green Sox|47|11.0|10.0
+Magnum GI|44|10.0|7.0
+Young Guns|42|9.0|-2.0
+Like a Nightmare|40|6.5|-0.5
+Big Sticks|40|6.5|-3.5
+Guillotine|40|6.5|1.5
+Runtime Terror|40|6.5|-2.5
+Gashouse Gang|38|3.5|-2.5
+Trex|38|3.5|-0.5
+Rieken Havoc|36|2.0|-6.0
+Long Balls|32|1.0|-1.0
+Team|RBI|Pts|Dif
+Maga Doge|54|13.0|1.0
+Simba's Dublin Green Sox|52|12.0|6.0
+Gashouse Gang|46|11.0|9.0
+Young Guns|44|9.5|-0.5
+Runtime Terror|44|9.5|-1.5
+Big Sticks|41|8.0|-5.0
+Dawg|39|6.5|-2.0
+Magnum GI|39|6.5|1.5
+Like a Nightmare|33|5.0|1.0
+Long Balls|32|4.0|-3.0
+Guillotine|29|3.0|0.0
+Rieken Havoc|26|2.0|-6.5
+Trex|25|1.0|0.0
+Team|SB|Pts|Dif
+Like a Nightmare|15|13.0|1.0
+Trex|13|12.0|1.0
+Simba's Dublin Green Sox|8|11.0|3.0
+Dawg|5|9.0|2.5
+Big Sticks|5|9.0|0.0
+Young Guns|5|9.0|5.0
+Guillotine|4|6.5|-3.5
+Magnum GI|4|6.5|0.0
+Rieken Havoc|3|5.0|-8.0
+Maga Doge|2|3.5|-1.5
+Long Balls|2|3.5|1.5
+Gashouse Gang|1|2.0|1.0
+Runtime Terror|0|1.0|-2.0
+Team|ERA|Pts|Dif
+Gashouse Gang|2.613|13.0|1.0
+Guillotine|2.963|12.0|1.0
+Dawg|3.000|11.0|2.0
+Like a Nightmare|3.253|10.0|3.0
+Long Balls|3.429|9.0|-1.0
+Simba's Dublin Green Sox|3.750|8.0|6.0
+Runtime Terror|4.235|7.0|-1.0
+Magnum GI|4.445|6.0|2.0
+Rieken Havoc|4.456|5.0|-8.0
+Big Sticks|4.533|4.0|-2.0
+Maga Doge|4.890|3.0|2.0
+Young Guns|5.633|2.0|-1.0
+Trex|6.364|1.0|-4.0
+Team|K|Pts|Dif
+Like a Nightmare|68|13.0|4.0
+Gashouse Gang|59|11.0|7.0
+Young Guns|59|11.0|4.0
+Runtime Terror|59|11.0|10.0
+Big Sticks|56|9.0|-2.0
+Guillotine|49|8.0|-4.0
+Maga Doge|47|7.0|-1.0
+Dawg|40|5.0|3.0
+Long Balls|40|5.0|-8.0
+Trex|40|5.0|-1.0
+Magnum GI|39|3.0|0.0
+Rieken Havoc|31|2.0|-8.0
+Simba's Dublin Green Sox|27|1.0|-4.0
+Team|S|Pts|Dif
+Big Sticks|5|12.5|5.5
+Trex|5|12.5|3.5
+Magnum GI|4|11.0|-1.0
+Like a Nightmare|3|9.0|-2.0
+Long Balls|3|9.0|3.0
+Rieken Havoc|3|9.0|-4.0
+Young Guns|2|6.0|5.0
+Guillotine|2|6.0|4.0
+Runtime Terror|2|6.0|1.0
+Dawg|1|3.0|0.0
+Simba's Dublin Green Sox|1|3.0|-1.0
+Maga Doge|1|3.0|-5.0
+Gashouse Gang|0|1.0|-9.0
+Team|WHIP|Pts|Dif
+Gashouse Gang|0.9484|13.0|0.0
+Dawg|0.9792|12.0|3.0
+Like a Nightmare|1.0663|11.0|-1.0
+Long Balls|1.0714|10.0|5.0
+Big Sticks|1.1168|9.0|5.0
+Maga Doge|1.1575|8.0|5.0
+Simba's Dublin Green Sox|1.1667|7.0|6.0
+Guillotine|1.2439|6.0|-4.0
+Runtime Terror|1.2549|5.0|-1.0
+Young Guns|1.3813|4.0|-4.0
+Rieken Havoc|1.3981|3.0|-8.0
+Magnum GI|1.6098|2.0|0.0
+Trex|1.7786|1.0|-6.0
+Team|WQS|Pts|Dif
+Guillotine|10|13.0|0.0
+Gashouse Gang|9|11.5|10.5
+Simba's Dublin Green Sox|9|11.5|-0.5
+Like a Nightmare|8|8.0|5.0
+Dawg|8|8.0|2.5
+Big Sticks|8|8.0|0.5
+Runtime Terror|8|8.0|5.0
+Long Balls|8|8.0|-2.0
+Magnum GI|7|5.0|-2.5
+Maga Doge|6|3.5|-2.0
+Young Guns|6|3.5|-7.5
+Rieken Havoc|5|2.0|-7.0
+Trex|3|1.0|-2.0
+
+=== Period 16 (Mon, July 06 - Sun, July 12) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Young Guns|51.5|53.0|104.5|26.5|0.0
+2|Rieken Havoc|42.5|55.0|97.5|8.0|7.0
+3|Magnum GI|44.5|45.5|90.0|41.0|14.5
+4|Maga Doge|56.5|27.5|84.0|9.0|20.5
+5|Dawg|50.0|26.5|76.5|-2.0|28.0
+6|Long Balls|26.5|40.5|67.0|0.5|37.5
+7|Gashouse Gang|16.5|45.0|61.5|2.0|43.0
+8|Simba's Dublin Green Sox|46.5|14.5|61.0|11.5|43.5
+9|Big Sticks|29.0|27.5|56.5|-29.5|48.0
+10|Guillotine|39.0|17.0|56.0|-18.5|48.5
+11|Like a Nightmare|22.5|32.5|55.0|-24.5|49.5
+12|Runtime Terror|18.5|32.5|51.0|-16.5|53.5
+13|Trex|11.5|38.0|49.5|-7.5|55.0
+Batting Breakdown TeamHRPtsDif Maga Doge1713.00.0 Magnum GI1512.011.0 Young Guns1410.5-1.5 Dawg1410.50.5 Long Balls138.53.5 Simba's Dublin Green Sox138.52.5 Rieken Havoc127.04.0 Big Sticks116.0-5.0 Gashouse Gang74.02.0 Guillotine74.0-3.0 Like a Nightmare74.0-5.0 Trex62.0-2.0 Runtime Terror41.0-7.0 TeamOBPPtsDif Maga Doge.376913.05.0 Rieken Havoc.341712.05.0 Dawg.339211.0-2.0 Guillotine.336710.09.0 Young Guns.33439.0-1.0 Simba's Dublin Green Sox.33128.05.0 Long Balls.32237.02.0 Magnum GI.32126.02.0 Trex.29735.0-6.0 Gashouse Gang.29534.0-5.0 Like a Nightmare.29193.01.0 Runtime Terror.28722.0-10.0 Big Sticks.28121.0-5.0 TeamRPtsDif Maga Doge5013.00.0 Young Guns4512.01.0 Magnum GI4111.08.0 Dawg409.5-2.5 Guillotine409.54.0 Big Sticks377.5-2.5 Runtime Terror377.5-1.5 Simba's Dublin Green Sox356.05.0 Like a Nightmare345.0-2.0 Rieken Havoc334.0-4.0 Gashouse Gang273.0-2.5 Long Balls252.00.0 Trex221.0-3.0 TeamRBIPtsDif Magnum GI4813.08.0 Simba's Dublin Green Sox4512.04.0 Young Guns3911.01.0 Dawg3810.01.0 Maga Doge378.5-4.5 Big Sticks378.5-3.5 Rieken Havoc366.50.0 Long Balls366.50.0 Guillotine334.51.5 Like a Nightmare334.50.5 Gashouse Gang313.01.0 Runtime Terror202.0-9.0 Trex171.00.0 TeamSBPtsDif Rieken Havoc913.01.0 Simba's Dublin Green Sox812.02.5 Guillotine711.01.5 Young Guns69.05.0 Maga Doge69.04.0 Dawg69.02.0 Big Sticks46.0-2.0 Like a Nightmare46.0-7.0 Runtime Terror46.03.0 Magnum GI32.5-3.5 Long Balls32.50.5 Gashouse Gang32.51.5 Trex32.5-8.5||Pitching Breakdown TeamERAPtsDif Runtime Terror1.46013.06.0 Young Guns1.94912.09.0 Rieken Havoc2.07711.0-2.0 Trex3.54710.06.0 Magnum GI3.9769.04.0 Gashouse Gang4.0428.0-4.0 Guillotine4.1927.0-4.0 Big Sticks4.5966.00.0 Like a Nightmare4.6505.0-3.0 Dawg4.7054.0-5.0 Long Balls5.1803.0-7.0 Maga Doge5.8272.01.0 Simba's Dublin Green Sox6.4391.0-1.0 TeamKPtsDif Young Guns8513.05.0 Long Balls6812.0-1.0 Like a Nightmare6311.01.0 Gashouse Gang6210.05.0 Rieken Havoc529.00.0 Magnum GI508.04.0 Simba's Dublin Green Sox486.04.0 Big Sticks486.0-5.0 Guillotine486.0-6.0 Trex444.0-2.0 Dawg433.02.0 Maga Doge422.0-5.0 Runtime Terror371.0-2.0 TeamSPtsDif Rieken Havoc513.00.0 Magnum GI411.5-0.5 Long Balls411.55.5 Dawg39.57.0 Trex39.5-0.5 Gashouse Gang27.0-2.0 Like a Nightmare27.0-4.0 Runtime Terror27.02.0 Maga Doge14.5-2.5 Big Sticks14.5-3.5 Young Guns02.01.0 Simba's Dublin Green Sox02.0-2.0 Guillotine02.0-0.5 TeamWHIPPtsDif Young Guns0.943313.05.0 Rieken Havoc0.944112.01.0 Trex1.094911.07.0 Magnum GI1.122710.09.0 Gashouse Gang1.14979.0-4.0 Runtime Terror1.24328.02.0 Maga Doge1.31657.04.0 Like a Nightmare1.33336.0-6.0 Long Balls1.36055.0-2.0 Big Sticks1.36174.0-1.0 Dawg1.38643.0-6.0 Simba's Dublin Green Sox1.54622.00.0 Guillotine1.58391.0-9.0 TeamWQSPtsDif Young Guns1513.02.0 Maga Doge1012.07.0 Gashouse Gang911.010.0 Rieken Havoc810.03.0 Long Balls79.0-1.0 Magnum GI67.0-1.0 Dawg67.01.0 Big Sticks67.0-2.0 Simba's Dublin Green Sox53.5-8.5 Like a Nightmare53.50.0 Runtime Terror53.50.0 Trex53.51.5 Guillotine41.0-12.0
+Team|HR|Pts|Dif
+Maga Doge|17|13.0|0.0
+Magnum GI|15|12.0|11.0
+Young Guns|14|10.5|-1.5
+Dawg|14|10.5|0.5
+Long Balls|13|8.5|3.5
+Simba's Dublin Green Sox|13|8.5|2.5
+Rieken Havoc|12|7.0|4.0
+Big Sticks|11|6.0|-5.0
+Gashouse Gang|7|4.0|2.0
+Guillotine|7|4.0|-3.0
+Like a Nightmare|7|4.0|-5.0
+Trex|6|2.0|-2.0
+Runtime Terror|4|1.0|-7.0
+Team|OBP|Pts|Dif
+Maga Doge|.3769|13.0|5.0
+Rieken Havoc|.3417|12.0|5.0
+Dawg|.3392|11.0|-2.0
+Guillotine|.3367|10.0|9.0
+Young Guns|.3343|9.0|-1.0
+Simba's Dublin Green Sox|.3312|8.0|5.0
+Long Balls|.3223|7.0|2.0
+Magnum GI|.3212|6.0|2.0
+Trex|.2973|5.0|-6.0
+Gashouse Gang|.2953|4.0|-5.0
+Like a Nightmare|.2919|3.0|1.0
+Runtime Terror|.2872|2.0|-10.0
+Big Sticks|.2812|1.0|-5.0
+Team|R|Pts|Dif
+Maga Doge|50|13.0|0.0
+Young Guns|45|12.0|1.0
+Magnum GI|41|11.0|8.0
+Dawg|40|9.5|-2.5
+Guillotine|40|9.5|4.0
+Big Sticks|37|7.5|-2.5
+Runtime Terror|37|7.5|-1.5
+Simba's Dublin Green Sox|35|6.0|5.0
+Like a Nightmare|34|5.0|-2.0
+Rieken Havoc|33|4.0|-4.0
+Gashouse Gang|27|3.0|-2.5
+Long Balls|25|2.0|0.0
+Trex|22|1.0|-3.0
+Team|RBI|Pts|Dif
+Magnum GI|48|13.0|8.0
+Simba's Dublin Green Sox|45|12.0|4.0
+Young Guns|39|11.0|1.0
+Dawg|38|10.0|1.0
+Maga Doge|37|8.5|-4.5
+Big Sticks|37|8.5|-3.5
+Rieken Havoc|36|6.5|0.0
+Long Balls|36|6.5|0.0
+Guillotine|33|4.5|1.5
+Like a Nightmare|33|4.5|0.5
+Gashouse Gang|31|3.0|1.0
+Runtime Terror|20|2.0|-9.0
+Trex|17|1.0|0.0
+Team|SB|Pts|Dif
+Rieken Havoc|9|13.0|1.0
+Simba's Dublin Green Sox|8|12.0|2.5
+Guillotine|7|11.0|1.5
+Young Guns|6|9.0|5.0
+Maga Doge|6|9.0|4.0
+Dawg|6|9.0|2.0
+Big Sticks|4|6.0|-2.0
+Like a Nightmare|4|6.0|-7.0
+Runtime Terror|4|6.0|3.0
+Magnum GI|3|2.5|-3.5
+Long Balls|3|2.5|0.5
+Gashouse Gang|3|2.5|1.5
+Trex|3|2.5|-8.5
+Team|ERA|Pts|Dif
+Runtime Terror|1.460|13.0|6.0
+Young Guns|1.949|12.0|9.0
+Rieken Havoc|2.077|11.0|-2.0
+Trex|3.547|10.0|6.0
+Magnum GI|3.976|9.0|4.0
+Gashouse Gang|4.042|8.0|-4.0
+Guillotine|4.192|7.0|-4.0
+Big Sticks|4.596|6.0|0.0
+Like a Nightmare|4.650|5.0|-3.0
+Dawg|4.705|4.0|-5.0
+Long Balls|5.180|3.0|-7.0
+Maga Doge|5.827|2.0|1.0
+Simba's Dublin Green Sox|6.439|1.0|-1.0
+Team|K|Pts|Dif
+Young Guns|85|13.0|5.0
+Long Balls|68|12.0|-1.0
+Like a Nightmare|63|11.0|1.0
+Gashouse Gang|62|10.0|5.0
+Rieken Havoc|52|9.0|0.0
+Magnum GI|50|8.0|4.0
+Simba's Dublin Green Sox|48|6.0|4.0
+Big Sticks|48|6.0|-5.0
+Guillotine|48|6.0|-6.0
+Trex|44|4.0|-2.0
+Dawg|43|3.0|2.0
+Maga Doge|42|2.0|-5.0
+Runtime Terror|37|1.0|-2.0
+Team|S|Pts|Dif
+Rieken Havoc|5|13.0|0.0
+Magnum GI|4|11.5|-0.5
+Long Balls|4|11.5|5.5
+Dawg|3|9.5|7.0
+Trex|3|9.5|-0.5
+Gashouse Gang|2|7.0|-2.0
+Like a Nightmare|2|7.0|-4.0
+Runtime Terror|2|7.0|2.0
+Maga Doge|1|4.5|-2.5
+Big Sticks|1|4.5|-3.5
+Young Guns|0|2.0|1.0
+Simba's Dublin Green Sox|0|2.0|-2.0
+Guillotine|0|2.0|-0.5
+Team|WHIP|Pts|Dif
+Young Guns|0.9433|13.0|5.0
+Rieken Havoc|0.9441|12.0|1.0
+Trex|1.0949|11.0|7.0
+Magnum GI|1.1227|10.0|9.0
+Gashouse Gang|1.1497|9.0|-4.0
+Runtime Terror|1.2432|8.0|2.0
+Maga Doge|1.3165|7.0|4.0
+Like a Nightmare|1.3333|6.0|-6.0
+Long Balls|1.3605|5.0|-2.0
+Big Sticks|1.3617|4.0|-1.0
+Dawg|1.3864|3.0|-6.0
+Simba's Dublin Green Sox|1.5462|2.0|0.0
+Guillotine|1.5839|1.0|-9.0
+Team|WQS|Pts|Dif
+Young Guns|15|13.0|2.0
+Maga Doge|10|12.0|7.0
+Gashouse Gang|9|11.0|10.0
+Rieken Havoc|8|10.0|3.0
+Long Balls|7|9.0|-1.0
+Magnum GI|6|7.0|-1.0
+Dawg|6|7.0|1.0
+Big Sticks|6|7.0|-2.0
+Simba's Dublin Green Sox|5|3.5|-8.5
+Like a Nightmare|5|3.5|0.0
+Runtime Terror|5|3.5|0.0
+Trex|5|3.5|1.5
+Guillotine|4|1.0|-12.0
+
+=== Period 17 (Mon, July 13 - Sun, July 19) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Guillotine|36.0|49.0|85.0|13.0|0.0
+2|Like a Nightmare|48.0|36.0|84.0|8.5|1.0
+3|Runtime Terror|36.5|46.0|82.5|16.0|2.5
+4|Big Sticks|45.0|33.5|78.5|-4.0|6.5
+5|Young Guns|41.5|35.5|77.0|-9.0|8.0
+6|Magnum GI|28.5|48.0|76.5|27.5|8.5
+7|Gashouse Gang|36.5|38.0|74.5|16.5|10.5
+8|Maga Doge|47.5|21.0|68.5|-7.5|16.5
+9|Simba's Dublin Green Sox|32.5|33.5|66.0|16.0|19.0
+10|Rieken Havoc|26.0|39.5|65.5|-27.5|19.5
+11|Trex|17.5|36.5|54.0|1.0|31.0
+12|Long Balls|23.0|26.0|49.0|-19.0|36.0
+12|Dawg|36.5|12.5|49.0|-31.5|36.0
+Batting Breakdown TeamHRPtsDif Maga Doge1013.00.0 Like a Nightmare812.03.0 Magnum GI710.59.5 Gashouse Gang710.58.5 Runtime Terror68.00.0 Big Sticks68.0-2.5 Young Guns68.0-4.0 Dawg56.0-4.5 Rieken Havoc45.01.0 Guillotine33.0-3.0 Simba's Dublin Green Sox33.0-4.0 Long Balls33.0-2.0 Trex21.0-2.0 TeamOBPPtsDif Young Guns.381713.02.0 Dawg.372412.0-1.0 Big Sticks.352911.06.0 Gashouse Gang.333310.03.0 Long Balls.32899.03.0 Rieken Havoc.32658.00.0 Like a Nightmare.29877.06.0 Maga Doge.29686.0-3.0 Runtime Terror.29665.0-7.0 Simba's Dublin Green Sox.28954.01.0 Magnum GI.28573.0-1.0 Trex.28472.0-8.0 Guillotine.28081.0-1.0 TeamRPtsDif Big Sticks2313.03.0 Guillotine2210.53.5 Like a Nightmare2210.54.5 Maga Doge2210.5-2.5 Dawg2210.5-1.5 Young Guns218.0-3.0 Simba's Dublin Green Sox187.06.0 Runtime Terror165.0-4.0 Magnum GI165.01.0 Trex165.02.0 Gashouse Gang153.0-2.0 Long Balls132.00.0 Rieken Havoc111.0-7.0 TeamRBIPtsDif Maga Doge2513.00.0 Big Sticks2412.00.0 Gashouse Gang2311.09.0 Like a Nightmare2110.06.0 Guillotine209.06.0 Runtime Terror198.00.0 Rieken Havoc187.00.5 Simba's Dublin Green Sox176.0-3.0 Magnum GI165.00.0 Long Balls154.0-2.5 Dawg143.0-7.0 Young Guns122.0-9.0 Trex91.00.0 TeamSBPtsDif Guillotine612.53.5 Simba's Dublin Green Sox612.52.5 Runtime Terror410.57.5 Young Guns410.56.5 Like a Nightmare38.5-4.5 Trex38.5-2.5 Magnum GI25.0-1.0 Maga Doge25.00.0 Rieken Havoc25.0-7.0 Long Balls25.03.0 Dawg25.0-2.0 Gashouse Gang12.01.0 Big Sticks01.0-7.0||Pitching Breakdown TeamERAPtsDif Magnum GI2.01113.09.0 Runtime Terror2.27412.03.0 Gashouse Gang2.31411.0-1.0 Young Guns2.38210.05.0 Trex2.8429.06.0 Guillotine3.0007.5-3.5 Long Balls3.0007.5-2.5 Simba's Dublin Green Sox3.1946.04.0 Rieken Havoc3.8575.0-8.0 Big Sticks3.9794.0-2.0 Like a Nightmare4.1013.0-4.0 Maga Doge5.2602.01.0 Dawg6.1881.0-7.0 TeamKPtsDif Runtime Terror3913.011.0 Guillotine3612.00.0 Like a Nightmare3510.50.5 Magnum GI3510.56.5 Maga Doge349.02.0 Simba's Dublin Green Sox337.54.5 Rieken Havoc337.5-0.5 Big Sticks286.0-5.0 Young Guns275.0-4.0 Gashouse Gang244.0-2.0 Long Balls183.0-10.0 Dawg162.01.0 Trex111.0-4.0 TeamSPtsDif Runtime Terror211.56.5 Rieken Havoc211.5-1.5 Trex211.51.5 Long Balls211.54.0 Guillotine17.05.0 Like a Nightmare17.0-4.0 Big Sticks17.0-0.5 Magnum GI17.0-5.0 Maga Doge17.01.0 Young Guns02.51.5 Gashouse Gang02.5-6.5 Simba's Dublin Green Sox02.5-0.5 Dawg02.5-1.5 TeamWHIPPtsDif Trex0.552613.08.0 Gashouse Gang0.942912.0-1.0 Guillotine1.000011.03.0 Rieken Havoc1.071410.0-2.0 Magnum GI1.11709.07.0 Big Sticks1.13688.04.0 Like a Nightmare1.13927.0-4.0 Simba's Dublin Green Sox1.19356.05.0 Young Guns1.20595.0-4.0 Runtime Terror1.26324.0-3.0 Dawg1.31253.0-7.0 Long Balls1.33332.0-4.0 Maga Doge1.36361.0-2.0 TeamWQSPtsDif Young Guns713.00.0 Guillotine611.5-0.5 Simba's Dublin Green Sox611.50.5 Like a Nightmare58.55.0 Big Sticks58.50.0 Magnum GI58.51.5 Gashouse Gang58.57.5 Runtime Terror35.52.0 Rieken Havoc35.5-3.0 Dawg24.0-1.0 Maga Doge12.0-4.0 Trex12.00.0 Long Balls12.0-8.0
+Team|HR|Pts|Dif
+Maga Doge|10|13.0|0.0
+Like a Nightmare|8|12.0|3.0
+Magnum GI|7|10.5|9.5
+Gashouse Gang|7|10.5|8.5
+Runtime Terror|6|8.0|0.0
+Big Sticks|6|8.0|-2.5
+Young Guns|6|8.0|-4.0
+Dawg|5|6.0|-4.5
+Rieken Havoc|4|5.0|1.0
+Guillotine|3|3.0|-3.0
+Simba's Dublin Green Sox|3|3.0|-4.0
+Long Balls|3|3.0|-2.0
+Trex|2|1.0|-2.0
+Team|OBP|Pts|Dif
+Young Guns|.3817|13.0|2.0
+Dawg|.3724|12.0|-1.0
+Big Sticks|.3529|11.0|6.0
+Gashouse Gang|.3333|10.0|3.0
+Long Balls|.3289|9.0|3.0
+Rieken Havoc|.3265|8.0|0.0
+Like a Nightmare|.2987|7.0|6.0
+Maga Doge|.2968|6.0|-3.0
+Runtime Terror|.2966|5.0|-7.0
+Simba's Dublin Green Sox|.2895|4.0|1.0
+Magnum GI|.2857|3.0|-1.0
+Trex|.2847|2.0|-8.0
+Guillotine|.2808|1.0|-1.0
+Team|R|Pts|Dif
+Big Sticks|23|13.0|3.0
+Guillotine|22|10.5|3.5
+Like a Nightmare|22|10.5|4.5
+Maga Doge|22|10.5|-2.5
+Dawg|22|10.5|-1.5
+Young Guns|21|8.0|-3.0
+Simba's Dublin Green Sox|18|7.0|6.0
+Runtime Terror|16|5.0|-4.0
+Magnum GI|16|5.0|1.0
+Trex|16|5.0|2.0
+Gashouse Gang|15|3.0|-2.0
+Long Balls|13|2.0|0.0
+Rieken Havoc|11|1.0|-7.0
+Team|RBI|Pts|Dif
+Maga Doge|25|13.0|0.0
+Big Sticks|24|12.0|0.0
+Gashouse Gang|23|11.0|9.0
+Like a Nightmare|21|10.0|6.0
+Guillotine|20|9.0|6.0
+Runtime Terror|19|8.0|0.0
+Rieken Havoc|18|7.0|0.5
+Simba's Dublin Green Sox|17|6.0|-3.0
+Magnum GI|16|5.0|0.0
+Long Balls|15|4.0|-2.5
+Dawg|14|3.0|-7.0
+Young Guns|12|2.0|-9.0
+Trex|9|1.0|0.0
+Team|SB|Pts|Dif
+Guillotine|6|12.5|3.5
+Simba's Dublin Green Sox|6|12.5|2.5
+Runtime Terror|4|10.5|7.5
+Young Guns|4|10.5|6.5
+Like a Nightmare|3|8.5|-4.5
+Trex|3|8.5|-2.5
+Magnum GI|2|5.0|-1.0
+Maga Doge|2|5.0|0.0
+Rieken Havoc|2|5.0|-7.0
+Long Balls|2|5.0|3.0
+Dawg|2|5.0|-2.0
+Gashouse Gang|1|2.0|1.0
+Big Sticks|0|1.0|-7.0
+Team|ERA|Pts|Dif
+Magnum GI|2.011|13.0|9.0
+Runtime Terror|2.274|12.0|3.0
+Gashouse Gang|2.314|11.0|-1.0
+Young Guns|2.382|10.0|5.0
+Trex|2.842|9.0|6.0
+Guillotine|3.000|7.5|-3.5
+Long Balls|3.000|7.5|-2.5
+Simba's Dublin Green Sox|3.194|6.0|4.0
+Rieken Havoc|3.857|5.0|-8.0
+Big Sticks|3.979|4.0|-2.0
+Like a Nightmare|4.101|3.0|-4.0
+Maga Doge|5.260|2.0|1.0
+Dawg|6.188|1.0|-7.0
+Team|K|Pts|Dif
+Runtime Terror|39|13.0|11.0
+Guillotine|36|12.0|0.0
+Like a Nightmare|35|10.5|0.5
+Magnum GI|35|10.5|6.5
+Maga Doge|34|9.0|2.0
+Simba's Dublin Green Sox|33|7.5|4.5
+Rieken Havoc|33|7.5|-0.5
+Big Sticks|28|6.0|-5.0
+Young Guns|27|5.0|-4.0
+Gashouse Gang|24|4.0|-2.0
+Long Balls|18|3.0|-10.0
+Dawg|16|2.0|1.0
+Trex|11|1.0|-4.0
+Team|S|Pts|Dif
+Runtime Terror|2|11.5|6.5
+Rieken Havoc|2|11.5|-1.5
+Trex|2|11.5|1.5
+Long Balls|2|11.5|4.0
+Guillotine|1|7.0|5.0
+Like a Nightmare|1|7.0|-4.0
+Big Sticks|1|7.0|-0.5
+Magnum GI|1|7.0|-5.0
+Maga Doge|1|7.0|1.0
+Young Guns|0|2.5|1.5
+Gashouse Gang|0|2.5|-6.5
+Simba's Dublin Green Sox|0|2.5|-0.5
+Dawg|0|2.5|-1.5
+Team|WHIP|Pts|Dif
+Trex|0.5526|13.0|8.0
+Gashouse Gang|0.9429|12.0|-1.0
+Guillotine|1.0000|11.0|3.0
+Rieken Havoc|1.0714|10.0|-2.0
+Magnum GI|1.1170|9.0|7.0
+Big Sticks|1.1368|8.0|4.0
+Like a Nightmare|1.1392|7.0|-4.0
+Simba's Dublin Green Sox|1.1935|6.0|5.0
+Young Guns|1.2059|5.0|-4.0
+Runtime Terror|1.2632|4.0|-3.0
+Dawg|1.3125|3.0|-7.0
+Long Balls|1.3333|2.0|-4.0
+Maga Doge|1.3636|1.0|-2.0
+Team|WQS|Pts|Dif
+Young Guns|7|13.0|0.0
+Guillotine|6|11.5|-0.5
+Simba's Dublin Green Sox|6|11.5|0.5
+Like a Nightmare|5|8.5|5.0
+Big Sticks|5|8.5|0.0
+Magnum GI|5|8.5|1.5
+Gashouse Gang|5|8.5|7.5
+Runtime Terror|3|5.5|2.0
+Rieken Havoc|3|5.5|-3.0
+Dawg|2|4.0|-1.0
+Maga Doge|1|2.0|-4.0
+Trex|1|2.0|0.0
+Long Balls|1|2.0|-8.0
+
+=== Period 18 (Mon, July 20 - Sun, July 26) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Maga Doge|63.5|51.0|114.5|38.5|0.0
+2|Big Sticks|36.5|59.5|96.0|13.5|18.5
+3|Dawg|53.5|37.5|91.0|13.0|23.5
+4|Long Balls|36.0|47.0|83.0|18.5|31.5
+4|Young Guns|45.0|38.0|83.0|-3.0|31.5
+6|Like a Nightmare|41.5|30.0|71.5|-5.5|43.0
+7|Gashouse Gang|20.0|39.5|59.5|-1.0|55.0
+7|Simba's Dublin Green Sox|20.5|39.0|59.5|9.0|55.0
+9|Trex|34.5|23.0|57.5|5.5|57.0
+10|Runtime Terror|34.5|21.0|55.5|-11.0|59.0
+11|Magnum GI|35.0|19.5|54.5|3.0|60.0
+12|Rieken Havoc|22.5|27.5|50.0|-40.0|64.5
+13|Guillotine|12.0|22.5|34.5|-40.5|80.0
+Batting Breakdown TeamHRPtsDif Maga Doge1913.00.0 Long Balls1712.07.0 Like a Nightmare1611.02.0 Dawg1510.00.0 Young Guns129.0-3.0 Big Sticks97.5-3.5 Magnum GI97.56.5 Trex86.04.0 Simba's Dublin Green Sox75.0-2.0 Gashouse Gang63.50.5 Runtime Terror63.5-4.5 Guillotine52.0-4.0 Rieken Havoc41.0-3.0 TeamOBPPtsDif Maga Doge.363013.04.0 Trex.362012.02.0 Dawg.356011.0-2.0 Big Sticks.333310.05.0 Magnum GI.32849.05.0 Rieken Havoc.31748.00.0 Gashouse Gang.31687.00.0 Like a Nightmare.31396.05.0 Young Guns.30725.0-6.0 Runtime Terror.30584.0-8.0 Guillotine.30253.01.0 Long Balls.29922.0-4.0 Simba's Dublin Green Sox.27091.0-2.0 TeamRPtsDif Maga Doge5113.00.0 Dawg4812.00.0 Like a Nightmare3911.04.0 Runtime Terror3710.01.0 Young Guns369.0-2.0 Big Sticks358.0-2.0 Gashouse Gang346.51.5 Trex346.53.5 Long Balls315.03.0 Magnum GI303.0-1.0 Rieken Havoc303.0-3.0 Guillotine303.0-5.0 Simba's Dublin Green Sox281.00.0 TeamRBIPtsDif Maga Doge5113.00.0 Dawg4912.03.5 Young Guns3910.5-0.5 Like a Nightmare3910.56.5 Long Balls358.52.5 Simba's Dublin Green Sox358.5-1.5 Magnum GI317.02.0 Big Sticks306.0-6.0 Trex275.04.0 Runtime Terror264.0-4.5 Guillotine253.00.5 Rieken Havoc232.0-5.0 Gashouse Gang211.0-1.5 TeamSBPtsDif Runtime Terror913.010.0 Maga Doge811.56.5 Young Guns811.57.5 Dawg58.51.0 Long Balls58.56.5 Magnum GI58.52.5 Rieken Havoc58.5-3.5 Big Sticks45.0-2.5 Simba's Dublin Green Sox45.0-5.0 Trex45.0-6.0 Like a Nightmare33.0-10.0 Gashouse Gang22.01.0 Guillotine11.0-8.0||Pitching Breakdown TeamERAPtsDif Big Sticks1.46013.08.0 Maga Doge1.96712.011.0 Dawg2.72911.03.0 Gashouse Gang3.06810.0-2.0 Simba's Dublin Green Sox3.3999.07.0 Long Balls3.4478.0-1.0 Rieken Havoc3.5867.0-6.0 Young Guns3.6386.00.0 Runtime Terror3.7765.0-5.0 Guillotine4.2314.0-7.0 Like a Nightmare4.2633.0-4.0 Magnum GI4.3282.0-2.0 Trex4.6181.0-2.0 TeamKPtsDif Long Balls6813.00.0 Maga Doge6312.05.0 Big Sticks5611.00.0 Young Guns529.50.5 Trex529.55.5 Guillotine508.0-4.0 Dawg496.05.0 Gashouse Gang496.00.0 Simba's Dublin Green Sox496.03.0 Runtime Terror484.02.0 Magnum GI473.0-2.0 Like a Nightmare452.0-8.0 Rieken Havoc421.0-7.0 TeamSPtsDif Big Sticks512.55.5 Like a Nightmare512.51.5 Maga Doge38.02.0 Long Balls38.00.0 Simba's Dublin Green Sox38.05.5 Trex38.0-2.0 Runtime Terror38.03.0 Magnum GI38.0-4.0 Rieken Havoc38.0-5.0 Dawg13.5-0.5 Gashouse Gang13.5-5.5 Young Guns01.50.5 Guillotine01.5-1.0 TeamWHIPPtsDif Big Sticks0.790513.09.0 Maga Doge0.874212.09.0 Young Guns0.978711.03.0 Gashouse Gang1.022710.0-3.0 Simba's Dublin Green Sox1.02809.08.0 Like a Nightmare1.07028.0-3.0 Rieken Havoc1.10167.0-5.0 Long Balls1.21286.01.0 Magnum GI1.23665.03.0 Dawg1.27664.0-5.0 Trex1.34213.0-4.0 Guillotine1.38812.0-8.0 Runtime Terror1.46851.0-5.0 TeamWQSPtsDif Dawg1313.08.0 Long Balls912.03.5 Big Sticks810.00.0 Young Guns810.0-3.0 Gashouse Gang810.08.0 Maga Doge77.01.0 Simba's Dublin Green Sox77.0-4.0 Guillotine77.0-5.0 Like a Nightmare64.50.5 Rieken Havoc64.5-2.5 Runtime Terror53.00.0 Trex41.50.5 Magnum GI41.5-7.0
+Team|HR|Pts|Dif
+Maga Doge|19|13.0|0.0
+Long Balls|17|12.0|7.0
+Like a Nightmare|16|11.0|2.0
+Dawg|15|10.0|0.0
+Young Guns|12|9.0|-3.0
+Big Sticks|9|7.5|-3.5
+Magnum GI|9|7.5|6.5
+Trex|8|6.0|4.0
+Simba's Dublin Green Sox|7|5.0|-2.0
+Gashouse Gang|6|3.5|0.5
+Runtime Terror|6|3.5|-4.5
+Guillotine|5|2.0|-4.0
+Rieken Havoc|4|1.0|-3.0
+Team|OBP|Pts|Dif
+Maga Doge|.3630|13.0|4.0
+Trex|.3620|12.0|2.0
+Dawg|.3560|11.0|-2.0
+Big Sticks|.3333|10.0|5.0
+Magnum GI|.3284|9.0|5.0
+Rieken Havoc|.3174|8.0|0.0
+Gashouse Gang|.3168|7.0|0.0
+Like a Nightmare|.3139|6.0|5.0
+Young Guns|.3072|5.0|-6.0
+Runtime Terror|.3058|4.0|-8.0
+Guillotine|.3025|3.0|1.0
+Long Balls|.2992|2.0|-4.0
+Simba's Dublin Green Sox|.2709|1.0|-2.0
+Team|R|Pts|Dif
+Maga Doge|51|13.0|0.0
+Dawg|48|12.0|0.0
+Like a Nightmare|39|11.0|4.0
+Runtime Terror|37|10.0|1.0
+Young Guns|36|9.0|-2.0
+Big Sticks|35|8.0|-2.0
+Gashouse Gang|34|6.5|1.5
+Trex|34|6.5|3.5
+Long Balls|31|5.0|3.0
+Magnum GI|30|3.0|-1.0
+Rieken Havoc|30|3.0|-3.0
+Guillotine|30|3.0|-5.0
+Simba's Dublin Green Sox|28|1.0|0.0
+Team|RBI|Pts|Dif
+Maga Doge|51|13.0|0.0
+Dawg|49|12.0|3.5
+Young Guns|39|10.5|-0.5
+Like a Nightmare|39|10.5|6.5
+Long Balls|35|8.5|2.5
+Simba's Dublin Green Sox|35|8.5|-1.5
+Magnum GI|31|7.0|2.0
+Big Sticks|30|6.0|-6.0
+Trex|27|5.0|4.0
+Runtime Terror|26|4.0|-4.5
+Guillotine|25|3.0|0.5
+Rieken Havoc|23|2.0|-5.0
+Gashouse Gang|21|1.0|-1.5
+Team|SB|Pts|Dif
+Runtime Terror|9|13.0|10.0
+Maga Doge|8|11.5|6.5
+Young Guns|8|11.5|7.5
+Dawg|5|8.5|1.0
+Long Balls|5|8.5|6.5
+Magnum GI|5|8.5|2.5
+Rieken Havoc|5|8.5|-3.5
+Big Sticks|4|5.0|-2.5
+Simba's Dublin Green Sox|4|5.0|-5.0
+Trex|4|5.0|-6.0
+Like a Nightmare|3|3.0|-10.0
+Gashouse Gang|2|2.0|1.0
+Guillotine|1|1.0|-8.0
+Team|ERA|Pts|Dif
+Big Sticks|1.460|13.0|8.0
+Maga Doge|1.967|12.0|11.0
+Dawg|2.729|11.0|3.0
+Gashouse Gang|3.068|10.0|-2.0
+Simba's Dublin Green Sox|3.399|9.0|7.0
+Long Balls|3.447|8.0|-1.0
+Rieken Havoc|3.586|7.0|-6.0
+Young Guns|3.638|6.0|0.0
+Runtime Terror|3.776|5.0|-5.0
+Guillotine|4.231|4.0|-7.0
+Like a Nightmare|4.263|3.0|-4.0
+Magnum GI|4.328|2.0|-2.0
+Trex|4.618|1.0|-2.0
+Team|K|Pts|Dif
+Long Balls|68|13.0|0.0
+Maga Doge|63|12.0|5.0
+Big Sticks|56|11.0|0.0
+Young Guns|52|9.5|0.5
+Trex|52|9.5|5.5
+Guillotine|50|8.0|-4.0
+Dawg|49|6.0|5.0
+Gashouse Gang|49|6.0|0.0
+Simba's Dublin Green Sox|49|6.0|3.0
+Runtime Terror|48|4.0|2.0
+Magnum GI|47|3.0|-2.0
+Like a Nightmare|45|2.0|-8.0
+Rieken Havoc|42|1.0|-7.0
+Team|S|Pts|Dif
+Big Sticks|5|12.5|5.5
+Like a Nightmare|5|12.5|1.5
+Maga Doge|3|8.0|2.0
+Long Balls|3|8.0|0.0
+Simba's Dublin Green Sox|3|8.0|5.5
+Trex|3|8.0|-2.0
+Runtime Terror|3|8.0|3.0
+Magnum GI|3|8.0|-4.0
+Rieken Havoc|3|8.0|-5.0
+Dawg|1|3.5|-0.5
+Gashouse Gang|1|3.5|-5.5
+Young Guns|0|1.5|0.5
+Guillotine|0|1.5|-1.0
+Team|WHIP|Pts|Dif
+Big Sticks|0.7905|13.0|9.0
+Maga Doge|0.8742|12.0|9.0
+Young Guns|0.9787|11.0|3.0
+Gashouse Gang|1.0227|10.0|-3.0
+Simba's Dublin Green Sox|1.0280|9.0|8.0
+Like a Nightmare|1.0702|8.0|-3.0
+Rieken Havoc|1.1016|7.0|-5.0
+Long Balls|1.2128|6.0|1.0
+Magnum GI|1.2366|5.0|3.0
+Dawg|1.2766|4.0|-5.0
+Trex|1.3421|3.0|-4.0
+Guillotine|1.3881|2.0|-8.0
+Runtime Terror|1.4685|1.0|-5.0
+Team|WQS|Pts|Dif
+Dawg|13|13.0|8.0
+Long Balls|9|12.0|3.5
+Big Sticks|8|10.0|0.0
+Young Guns|8|10.0|-3.0
+Gashouse Gang|8|10.0|8.0
+Maga Doge|7|7.0|1.0
+Simba's Dublin Green Sox|7|7.0|-4.0
+Guillotine|7|7.0|-5.0
+Like a Nightmare|6|4.5|0.5
+Rieken Havoc|6|4.5|-2.5
+Runtime Terror|5|3.0|0.0
+Trex|4|1.5|0.5
+Magnum GI|4|1.5|-7.0
+
+=== Period 19 (Mon, July 27 - Sun, Aug 02) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Maga Doge|49.0|54.0|103.0|25.0|0.0
+2|Long Balls|39.5|44.0|83.5|15.5|19.5
+3|Runtime Terror|34.5|48.0|82.5|19.5|20.5
+4|Like a Nightmare|45.0|35.5|80.5|3.5|22.5
+5|Magnum GI|27.0|51.5|78.5|33.5|24.5
+6|Dawg|52.5|18.5|71.0|-13.0|32.0
+6|Young Guns|30.0|41.0|71.0|-13.5|32.0
+6|Guillotine|26.0|45.0|71.0|-1.0|32.0
+6|Gashouse Gang|39.0|32.0|71.0|12.5|32.0
+10|Big Sticks|47.5|17.0|64.5|-24.0|38.5
+11|Simba's Dublin Green Sox|25.5|32.0|57.5|8.0|45.5
+12|Rieken Havoc|30.0|19.0|49.0|-40.0|54.0
+13|Trex|9.5|17.5|27.0|-26.0|76.0
+Batting Breakdown TeamHRPtsDif Dawg1413.02.0 Like a Nightmare1312.03.0 Maga Doge1211.0-2.0 Big Sticks1110.00.0 Long Balls98.51.5 Gashouse Gang98.55.5 Guillotine86.01.0 Simba's Dublin Green Sox86.00.0 Rieken Havoc86.02.0 Runtime Terror74.0-4.0 Magnum GI63.02.0 Young Guns52.0-10.0 Trex21.0-1.0 TeamOBPPtsDif Dawg.395113.00.0 Magnum GI.362112.08.0 Long Balls.361311.06.0 Big Sticks.356510.04.0 Gashouse Gang.34489.02.0 Maga Doge.33338.0-2.0 Runtime Terror.33017.0-5.0 Like a Nightmare.32896.05.0 Trex.31055.0-6.0 Young Guns.30514.0-5.0 Rieken Havoc.28473.0-5.0 Simba's Dublin Green Sox.28082.00.0 Guillotine.27481.0-2.0 TeamRPtsDif Dawg5013.01.0 Gashouse Gang4212.07.0 Maga Doge3710.5-2.5 Runtime Terror3710.51.5 Big Sticks359.0-1.0 Like a Nightmare338.00.0 Young Guns326.5-4.5 Rieken Havoc326.50.5 Magnum GI304.51.5 Simba's Dublin Green Sox304.53.5 Long Balls283.01.0 Guillotine272.0-5.0 Trex261.0-3.0 TeamRBIPtsDif Long Balls4112.05.0 Like a Nightmare4112.08.0 Dawg4112.01.5 Big Sticks4010.0-2.0 Maga Doge329.0-4.0 Simba's Dublin Green Sox318.0-1.0 Guillotine306.53.5 Gashouse Gang306.54.5 Runtime Terror274.5-3.5 Young Guns274.5-6.0 Magnum GI262.5-2.5 Rieken Havoc262.5-3.5 Trex211.00.0 TeamSBPtsDif Young Guns1213.09.0 Rieken Havoc1012.00.0 Maga Doge910.54.5 Guillotine910.51.5 Runtime Terror88.55.5 Big Sticks88.51.5 Like a Nightmare77.0-6.0 Long Balls55.03.0 Magnum GI55.00.0 Simba's Dublin Green Sox55.0-5.0 Gashouse Gang43.02.0 Dawg31.5-6.5 Trex31.5-9.5||Pitching Breakdown TeamERAPtsDif Long Balls1.21813.04.0 Runtime Terror1.88012.02.0 Magnum GI2.45411.07.0 Maga Doge2.51810.09.0 Guillotine2.8039.0-2.0 Gashouse Gang2.8548.0-4.0 Young Guns3.6967.02.0 Simba's Dublin Green Sox3.7556.04.0 Like a Nightmare4.5005.0-1.0 Trex4.5664.01.0 Dawg5.0623.0-5.0 Rieken Havoc5.4002.0-11.0 Big Sticks6.7501.0-6.0 TeamKPtsDif Maga Doge7113.06.0 Young Guns6812.03.0 Guillotine5711.0-1.0 Like a Nightmare5610.00.0 Magnum GI559.05.0 Long Balls538.0-5.0 Runtime Terror527.05.0 Simba's Dublin Green Sox456.03.0 Gashouse Gang424.5-1.5 Rieken Havoc424.5-3.5 Dawg383.02.0 Trex342.0-3.0 Big Sticks281.0-10.0 TeamSPtsDif Like a Nightmare713.02.0 Big Sticks512.03.0 Magnum GI410.5-1.5 Young Guns410.59.5 Maga Doge38.02.0 Runtime Terror38.03.0 Rieken Havoc38.0-5.0 Long Balls25.0-2.5 Guillotine25.03.0 Gashouse Gang25.0-2.5 Dawg12.0-1.5 Simba's Dublin Green Sox12.0-1.5 Trex12.0-8.0 TeamWHIPPtsDif Maga Doge0.994813.09.0 Runtime Terror1.006312.09.0 Gashouse Gang1.048811.0-2.0 Long Balls1.060210.04.0 Magnum GI1.07279.08.0 Guillotine1.16398.00.0 Dawg1.18757.0-2.0 Simba's Dublin Green Sox1.19216.04.0 Young Guns1.19645.0-5.0 Like a Nightmare1.30954.0-7.0 Trex1.32353.0-2.0 Big Sticks1.52782.0-5.0 Rieken Havoc1.56001.0-11.0 TeamWQSPtsDif Magnum GI1112.06.0 Guillotine1112.00.0 Simba's Dublin Green Sox1112.01.0 Maga Doge1010.05.0 Runtime Terror99.06.0 Long Balls88.0-1.5 Young Guns76.5-6.5 Trex76.55.5 Like a Nightmare33.5-0.5 Dawg33.5-4.5 Gashouse Gang33.51.5 Rieken Havoc33.5-3.5 Big Sticks11.0-8.5
+Team|HR|Pts|Dif
+Dawg|14|13.0|2.0
+Like a Nightmare|13|12.0|3.0
+Maga Doge|12|11.0|-2.0
+Big Sticks|11|10.0|0.0
+Long Balls|9|8.5|1.5
+Gashouse Gang|9|8.5|5.5
+Guillotine|8|6.0|1.0
+Simba's Dublin Green Sox|8|6.0|0.0
+Rieken Havoc|8|6.0|2.0
+Runtime Terror|7|4.0|-4.0
+Magnum GI|6|3.0|2.0
+Young Guns|5|2.0|-10.0
+Trex|2|1.0|-1.0
+Team|OBP|Pts|Dif
+Dawg|.3951|13.0|0.0
+Magnum GI|.3621|12.0|8.0
+Long Balls|.3613|11.0|6.0
+Big Sticks|.3565|10.0|4.0
+Gashouse Gang|.3448|9.0|2.0
+Maga Doge|.3333|8.0|-2.0
+Runtime Terror|.3301|7.0|-5.0
+Like a Nightmare|.3289|6.0|5.0
+Trex|.3105|5.0|-6.0
+Young Guns|.3051|4.0|-5.0
+Rieken Havoc|.2847|3.0|-5.0
+Simba's Dublin Green Sox|.2808|2.0|0.0
+Guillotine|.2748|1.0|-2.0
+Team|R|Pts|Dif
+Dawg|50|13.0|1.0
+Gashouse Gang|42|12.0|7.0
+Maga Doge|37|10.5|-2.5
+Runtime Terror|37|10.5|1.5
+Big Sticks|35|9.0|-1.0
+Like a Nightmare|33|8.0|0.0
+Young Guns|32|6.5|-4.5
+Rieken Havoc|32|6.5|0.5
+Magnum GI|30|4.5|1.5
+Simba's Dublin Green Sox|30|4.5|3.5
+Long Balls|28|3.0|1.0
+Guillotine|27|2.0|-5.0
+Trex|26|1.0|-3.0
+Team|RBI|Pts|Dif
+Long Balls|41|12.0|5.0
+Like a Nightmare|41|12.0|8.0
+Dawg|41|12.0|1.5
+Big Sticks|40|10.0|-2.0
+Maga Doge|32|9.0|-4.0
+Simba's Dublin Green Sox|31|8.0|-1.0
+Guillotine|30|6.5|3.5
+Gashouse Gang|30|6.5|4.5
+Runtime Terror|27|4.5|-3.5
+Young Guns|27|4.5|-6.0
+Magnum GI|26|2.5|-2.5
+Rieken Havoc|26|2.5|-3.5
+Trex|21|1.0|0.0
+Team|SB|Pts|Dif
+Young Guns|12|13.0|9.0
+Rieken Havoc|10|12.0|0.0
+Maga Doge|9|10.5|4.5
+Guillotine|9|10.5|1.5
+Runtime Terror|8|8.5|5.5
+Big Sticks|8|8.5|1.5
+Like a Nightmare|7|7.0|-6.0
+Long Balls|5|5.0|3.0
+Magnum GI|5|5.0|0.0
+Simba's Dublin Green Sox|5|5.0|-5.0
+Gashouse Gang|4|3.0|2.0
+Dawg|3|1.5|-6.5
+Trex|3|1.5|-9.5
+Team|ERA|Pts|Dif
+Long Balls|1.218|13.0|4.0
+Runtime Terror|1.880|12.0|2.0
+Magnum GI|2.454|11.0|7.0
+Maga Doge|2.518|10.0|9.0
+Guillotine|2.803|9.0|-2.0
+Gashouse Gang|2.854|8.0|-4.0
+Young Guns|3.696|7.0|2.0
+Simba's Dublin Green Sox|3.755|6.0|4.0
+Like a Nightmare|4.500|5.0|-1.0
+Trex|4.566|4.0|1.0
+Dawg|5.062|3.0|-5.0
+Rieken Havoc|5.400|2.0|-11.0
+Big Sticks|6.750|1.0|-6.0
+Team|K|Pts|Dif
+Maga Doge|71|13.0|6.0
+Young Guns|68|12.0|3.0
+Guillotine|57|11.0|-1.0
+Like a Nightmare|56|10.0|0.0
+Magnum GI|55|9.0|5.0
+Long Balls|53|8.0|-5.0
+Runtime Terror|52|7.0|5.0
+Simba's Dublin Green Sox|45|6.0|3.0
+Gashouse Gang|42|4.5|-1.5
+Rieken Havoc|42|4.5|-3.5
+Dawg|38|3.0|2.0
+Trex|34|2.0|-3.0
+Big Sticks|28|1.0|-10.0
+Team|S|Pts|Dif
+Like a Nightmare|7|13.0|2.0
+Big Sticks|5|12.0|3.0
+Magnum GI|4|10.5|-1.5
+Young Guns|4|10.5|9.5
+Maga Doge|3|8.0|2.0
+Runtime Terror|3|8.0|3.0
+Rieken Havoc|3|8.0|-5.0
+Long Balls|2|5.0|-2.5
+Guillotine|2|5.0|3.0
+Gashouse Gang|2|5.0|-2.5
+Dawg|1|2.0|-1.5
+Simba's Dublin Green Sox|1|2.0|-1.5
+Trex|1|2.0|-8.0
+Team|WHIP|Pts|Dif
+Maga Doge|0.9948|13.0|9.0
+Runtime Terror|1.0063|12.0|9.0
+Gashouse Gang|1.0488|11.0|-2.0
+Long Balls|1.0602|10.0|4.0
+Magnum GI|1.0727|9.0|8.0
+Guillotine|1.1639|8.0|0.0
+Dawg|1.1875|7.0|-2.0
+Simba's Dublin Green Sox|1.1921|6.0|4.0
+Young Guns|1.1964|5.0|-5.0
+Like a Nightmare|1.3095|4.0|-7.0
+Trex|1.3235|3.0|-2.0
+Big Sticks|1.5278|2.0|-5.0
+Rieken Havoc|1.5600|1.0|-11.0
+Team|WQS|Pts|Dif
+Magnum GI|11|12.0|6.0
+Guillotine|11|12.0|0.0
+Simba's Dublin Green Sox|11|12.0|1.0
+Maga Doge|10|10.0|5.0
+Runtime Terror|9|9.0|6.0
+Long Balls|8|8.0|-1.5
+Young Guns|7|6.5|-6.5
+Trex|7|6.5|5.5
+Like a Nightmare|3|3.5|-0.5
+Dawg|3|3.5|-4.5
+Gashouse Gang|3|3.5|1.5
+Rieken Havoc|3|3.5|-3.5
+Big Sticks|1|1.0|-8.5
+
+=== Period 20 (Mon, Aug 03 - Sun, Aug 09) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Big Sticks|55.0|44.5|99.5|20.0|0.0
+2|Dawg|38.5|52.5|91.0|12.0|8.5
+3|Trex|35.5|55.0|90.5|45.0|9.0
+4|Rieken Havoc|42.5|41.5|84.0|0.5|15.5
+5|Simba's Dublin Green Sox|37.0|34.0|71.0|24.0|28.5
+6|Runtime Terror|32.0|36.5|68.5|3.5|31.0
+7|Like a Nightmare|40.5|27.5|68.0|-12.5|31.5
+8|Gashouse Gang|46.5|20.5|67.0|6.0|32.5
+9|Guillotine|46.5|18.5|65.0|-7.5|34.5
+10|Young Guns|29.0|31.5|60.5|-26.5|39.0
+11|Long Balls|5.0|51.5|56.5|-14.0|43.0
+12|Maga Doge|22.5|30.5|53.0|-34.5|46.5
+13|Magnum GI|24.5|11.0|35.5|-16.0|64.0
+Batting Breakdown TeamHRPtsDif Big Sticks1613.03.5 Guillotine1412.07.0 Dawg1310.5-0.5 Young Guns1310.5-1.5 Simba's Dublin Green Sox129.03.0 Trex118.06.5 Gashouse Gang97.03.5 Rieken Havoc85.01.5 Runtime Terror85.0-2.0 Maga Doge85.0-8.0 Like a Nightmare72.5-7.0 Magnum GI72.51.0 Long Balls31.0-7.0 TeamOBPPtsDif Big Sticks.370213.07.0 Guillotine.345712.010.0 Simba's Dublin Green Sox.340911.010.0 Gashouse Gang.339810.02.0 Rieken Havoc.33669.02.0 Magnum GI.33008.04.0 Dawg.32767.0-6.0 Maga Doge.32456.0-5.0 Like a Nightmare.32155.02.0 Runtime Terror.30904.0-8.0 Trex.30423.0-7.0 Young Guns.30302.0-7.0 Long Balls.27411.0-4.0 TeamRPtsDif Rieken Havoc4213.08.0 Gashouse Gang4012.06.0 Dawg3810.0-2.0 Like a Nightmare3810.02.0 Young Guns3810.0-1.0 Big Sticks378.0-2.0 Runtime Terror356.5-2.5 Magnum GI356.52.5 Trex345.02.0 Guillotine324.0-3.0 Maga Doge313.0-10.0 Simba's Dublin Green Sox282.01.0 Long Balls231.0-1.0 TeamRBIPtsDif Gashouse Gang4213.011.0 Big Sticks4012.00.0 Guillotine3811.08.0 Like a Nightmare3710.06.0 Dawg369.0-2.0 Trex357.56.5 Simba's Dublin Green Sox357.5-1.5 Runtime Terror346.0-1.0 Rieken Havoc305.0-1.0 Maga Doge284.0-9.0 Magnum GI273.0-2.0 Young Guns262.0-8.0 Long Balls211.0-7.0 TeamSBPtsDif Like a Nightmare1113.01.0 Trex812.01.0 Rieken Havoc710.5-2.5 Runtime Terror710.57.5 Big Sticks69.01.5 Simba's Dublin Green Sox57.5-2.0 Guillotine57.5-2.0 Gashouse Gang44.53.5 Young Guns44.5-1.5 Maga Doge44.5-3.0 Magnum GI44.50.5 Dawg22.0-3.0 Long Balls11.0-1.0||Pitching Breakdown TeamERAPtsDif Trex1.25613.010.0 Dawg2.10412.04.0 Long Balls2.51611.02.0 Rieken Havoc2.77410.0-3.0 Big Sticks2.9569.05.0 Runtime Terror3.5748.0-2.0 Simba's Dublin Green Sox3.5767.05.0 Maga Doge3.7606.05.0 Guillotine4.5665.0-6.0 Gashouse Gang5.0314.0-8.0 Young Guns5.4003.0-3.0 Like a Nightmare6.2932.0-5.0 Magnum GI7.4251.0-4.0 TeamKPtsDif Dawg6613.012.0 Young Guns5612.03.0 Runtime Terror5510.56.5 Maga Doge5510.52.5 Rieken Havoc539.02.0 Long Balls528.0-5.0 Trex517.05.0 Like a Nightmare496.0-5.0 Big Sticks484.0-6.0 Gashouse Gang484.0-2.0 Guillotine484.0-8.0 Simba's Dublin Green Sox442.0-1.0 Magnum GI391.0-4.0 TeamSPtsDif Like a Nightmare513.02.0 Big Sticks411.52.5 Long Balls411.54.0 Trex39.5-0.5 Simba's Dublin Green Sox39.56.0 Young Guns28.07.0 Rieken Havoc16.5-6.5 Magnum GI16.5-5.5 Dawg03.0-0.5 Runtime Terror03.0-2.0 Gashouse Gang03.0-4.5 Guillotine03.01.0 Maga Doge03.0-3.0 TeamWHIPPtsDif Trex0.784913.010.0 Dawg1.051912.04.0 Big Sticks1.073011.06.0 Long Balls1.136610.04.0 Simba's Dublin Green Sox1.17229.08.0 Maga Doge1.17728.01.0 Rieken Havoc1.21237.0-4.0 Runtime Terror1.21326.02.0 Like a Nightmare1.37595.0-7.0 Young Guns1.38464.0-6.0 Gashouse Gang1.39753.0-10.0 Guillotine1.47792.0-7.0 Magnum GI1.85001.0-1.0 TeamWQSPtsDif Dawg1112.56.0 Trex1112.511.5 Long Balls911.01.0 Big Sticks89.02.5 Rieken Havoc89.04.0 Runtime Terror89.05.0 Simba's Dublin Green Sox76.5-4.5 Gashouse Gang76.54.5 Guillotine64.5-7.5 Young Guns64.5-8.5 Maga Doge43.0-5.0 Like a Nightmare31.5-1.5 Magnum GI31.5-7.5
+Team|HR|Pts|Dif
+Big Sticks|16|13.0|3.5
+Guillotine|14|12.0|7.0
+Dawg|13|10.5|-0.5
+Young Guns|13|10.5|-1.5
+Simba's Dublin Green Sox|12|9.0|3.0
+Trex|11|8.0|6.5
+Gashouse Gang|9|7.0|3.5
+Rieken Havoc|8|5.0|1.5
+Runtime Terror|8|5.0|-2.0
+Maga Doge|8|5.0|-8.0
+Like a Nightmare|7|2.5|-7.0
+Magnum GI|7|2.5|1.0
+Long Balls|3|1.0|-7.0
+Team|OBP|Pts|Dif
+Big Sticks|.3702|13.0|7.0
+Guillotine|.3457|12.0|10.0
+Simba's Dublin Green Sox|.3409|11.0|10.0
+Gashouse Gang|.3398|10.0|2.0
+Rieken Havoc|.3366|9.0|2.0
+Magnum GI|.3300|8.0|4.0
+Dawg|.3276|7.0|-6.0
+Maga Doge|.3245|6.0|-5.0
+Like a Nightmare|.3215|5.0|2.0
+Runtime Terror|.3090|4.0|-8.0
+Trex|.3042|3.0|-7.0
+Young Guns|.3030|2.0|-7.0
+Long Balls|.2741|1.0|-4.0
+Team|R|Pts|Dif
+Rieken Havoc|42|13.0|8.0
+Gashouse Gang|40|12.0|6.0
+Dawg|38|10.0|-2.0
+Like a Nightmare|38|10.0|2.0
+Young Guns|38|10.0|-1.0
+Big Sticks|37|8.0|-2.0
+Runtime Terror|35|6.5|-2.5
+Magnum GI|35|6.5|2.5
+Trex|34|5.0|2.0
+Guillotine|32|4.0|-3.0
+Maga Doge|31|3.0|-10.0
+Simba's Dublin Green Sox|28|2.0|1.0
+Long Balls|23|1.0|-1.0
+Team|RBI|Pts|Dif
+Gashouse Gang|42|13.0|11.0
+Big Sticks|40|12.0|0.0
+Guillotine|38|11.0|8.0
+Like a Nightmare|37|10.0|6.0
+Dawg|36|9.0|-2.0
+Trex|35|7.5|6.5
+Simba's Dublin Green Sox|35|7.5|-1.5
+Runtime Terror|34|6.0|-1.0
+Rieken Havoc|30|5.0|-1.0
+Maga Doge|28|4.0|-9.0
+Magnum GI|27|3.0|-2.0
+Young Guns|26|2.0|-8.0
+Long Balls|21|1.0|-7.0
+Team|SB|Pts|Dif
+Like a Nightmare|11|13.0|1.0
+Trex|8|12.0|1.0
+Rieken Havoc|7|10.5|-2.5
+Runtime Terror|7|10.5|7.5
+Big Sticks|6|9.0|1.5
+Simba's Dublin Green Sox|5|7.5|-2.0
+Guillotine|5|7.5|-2.0
+Gashouse Gang|4|4.5|3.5
+Young Guns|4|4.5|-1.5
+Maga Doge|4|4.5|-3.0
+Magnum GI|4|4.5|0.5
+Dawg|2|2.0|-3.0
+Long Balls|1|1.0|-1.0
+Team|ERA|Pts|Dif
+Trex|1.256|13.0|10.0
+Dawg|2.104|12.0|4.0
+Long Balls|2.516|11.0|2.0
+Rieken Havoc|2.774|10.0|-3.0
+Big Sticks|2.956|9.0|5.0
+Runtime Terror|3.574|8.0|-2.0
+Simba's Dublin Green Sox|3.576|7.0|5.0
+Maga Doge|3.760|6.0|5.0
+Guillotine|4.566|5.0|-6.0
+Gashouse Gang|5.031|4.0|-8.0
+Young Guns|5.400|3.0|-3.0
+Like a Nightmare|6.293|2.0|-5.0
+Magnum GI|7.425|1.0|-4.0
+Team|K|Pts|Dif
+Dawg|66|13.0|12.0
+Young Guns|56|12.0|3.0
+Runtime Terror|55|10.5|6.5
+Maga Doge|55|10.5|2.5
+Rieken Havoc|53|9.0|2.0
+Long Balls|52|8.0|-5.0
+Trex|51|7.0|5.0
+Like a Nightmare|49|6.0|-5.0
+Big Sticks|48|4.0|-6.0
+Gashouse Gang|48|4.0|-2.0
+Guillotine|48|4.0|-8.0
+Simba's Dublin Green Sox|44|2.0|-1.0
+Magnum GI|39|1.0|-4.0
+Team|S|Pts|Dif
+Like a Nightmare|5|13.0|2.0
+Big Sticks|4|11.5|2.5
+Long Balls|4|11.5|4.0
+Trex|3|9.5|-0.5
+Simba's Dublin Green Sox|3|9.5|6.0
+Young Guns|2|8.0|7.0
+Rieken Havoc|1|6.5|-6.5
+Magnum GI|1|6.5|-5.5
+Dawg|0|3.0|-0.5
+Runtime Terror|0|3.0|-2.0
+Gashouse Gang|0|3.0|-4.5
+Guillotine|0|3.0|1.0
+Maga Doge|0|3.0|-3.0
+Team|WHIP|Pts|Dif
+Trex|0.7849|13.0|10.0
+Dawg|1.0519|12.0|4.0
+Big Sticks|1.0730|11.0|6.0
+Long Balls|1.1366|10.0|4.0
+Simba's Dublin Green Sox|1.1722|9.0|8.0
+Maga Doge|1.1772|8.0|1.0
+Rieken Havoc|1.2123|7.0|-4.0
+Runtime Terror|1.2132|6.0|2.0
+Like a Nightmare|1.3759|5.0|-7.0
+Young Guns|1.3846|4.0|-6.0
+Gashouse Gang|1.3975|3.0|-10.0
+Guillotine|1.4779|2.0|-7.0
+Magnum GI|1.8500|1.0|-1.0
+Team|WQS|Pts|Dif
+Dawg|11|12.5|6.0
+Trex|11|12.5|11.5
+Long Balls|9|11.0|1.0
+Big Sticks|8|9.0|2.5
+Rieken Havoc|8|9.0|4.0
+Runtime Terror|8|9.0|5.0
+Simba's Dublin Green Sox|7|6.5|-4.5
+Gashouse Gang|7|6.5|4.5
+Guillotine|6|4.5|-7.5
+Young Guns|6|4.5|-8.5
+Maga Doge|4|3.0|-5.0
+Like a Nightmare|3|1.5|-1.5
+Magnum GI|3|1.5|-7.5
+
+=== Period 21 (Mon, Aug 10 - Sun, Aug 16) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Like a Nightmare|48.0|49.0|97.0|17.5|0.0
+2|Runtime Terror|40.0|48.0|88.0|23.0|9.0
+3|Dawg|53.0|33.0|86.0|2.5|11.0
+4|Guillotine|52.5|31.5|84.0|17.0|13.0
+5|Big Sticks|40.5|37.5|78.0|-6.0|19.0
+6|Long Balls|38.5|34.0|72.5|4.5|24.5
+7|Rieken Havoc|33.5|36.0|69.5|-12.5|27.5
+8|Maga Doge|47.5|17.5|65.0|-18.5|32.0
+9|Simba's Dublin Green Sox|16.0|48.5|64.5|13.5|32.5
+10|Trex|30.0|26.5|56.5|1.0|40.5
+11|Gashouse Gang|27.0|26.5|53.5|-8.0|43.5
+12|Magnum GI|15.5|35.5|51.0|7.0|46.0
+13|Young Guns|13.0|31.5|44.5|-41.0|52.5
+Batting Breakdown TeamHRPtsDif Like a Nightmare1413.04.0 Dawg1312.01.0 Long Balls1211.06.0 Runtime Terror109.52.5 Maga Doge109.5-3.5 Trex98.06.0 Guillotine85.5-0.5 Big Sticks85.5-4.5 Rieken Havoc85.52.5 Gashouse Gang85.51.5 Simba's Dublin Green Sox73.0-5.0 Magnum GI62.01.0 Young Guns51.0-11.0 TeamOBPPtsDif Runtime Terror.379913.02.0 Long Balls.360712.07.0 Rieken Havoc.356911.05.0 Guillotine.342510.08.0 Like a Nightmare.34169.06.0 Maga Doge.32758.0-4.0 Big Sticks.32717.00.0 Dawg.31026.0-7.0 Magnum GI.30565.01.0 Simba's Dublin Green Sox.30494.03.0 Trex.28913.0-7.0 Gashouse Gang.28762.0-6.0 Young Guns.25791.0-8.0 TeamRPtsDif Dawg4613.00.0 Guillotine4412.07.0 Like a Nightmare4111.03.0 Maga Doge3910.0-2.0 Runtime Terror389.00.0 Big Sticks338.0-2.0 Gashouse Gang327.00.0 Rieken Havoc315.5-0.5 Magnum GI315.51.5 Long Balls304.02.0 Trex283.00.0 Young Guns252.0-9.0 Simba's Dublin Green Sox211.00.0 TeamRBIPtsDif Guillotine4112.510.0 Big Sticks4112.50.5 Dawg3611.00.0 Long Balls3510.03.0 Gashouse Gang339.06.5 Like a Nightmare327.52.5 Maga Doge327.5-5.5 Trex316.05.0 Runtime Terror305.0-3.0 Rieken Havoc274.0-2.0 Simba's Dublin Green Sox233.0-7.0 Magnum GI221.5-2.5 Young Guns221.5-7.5 TeamSBPtsDif Guillotine812.53.0 Maga Doge812.55.5 Dawg711.06.5 Trex610.0-1.0 Like a Nightmare57.5-5.5 Big Sticks57.5-0.5 Rieken Havoc57.5-4.5 Young Guns57.51.5 Simba's Dublin Green Sox45.0-4.5 Runtime Terror33.50.5 Gashouse Gang33.52.5 Long Balls21.5-0.5 Magnum GI21.5-3.0||Pitching Breakdown TeamERAPtsDif Runtime Terror1.75113.03.0 Simba's Dublin Green Sox2.23612.010.0 Big Sticks2.75211.04.0 Young Guns2.90810.05.0 Like a Nightmare3.0289.05.0 Long Balls3.4968.0-3.0 Guillotine3.5847.0-2.0 Rieken Havoc3.7246.0-7.0 Trex3.9665.0-1.0 Gashouse Gang4.0414.0-8.0 Dawg4.1813.0-5.0 Magnum GI4.8962.0-1.0 Maga Doge5.1921.00.0 TeamKPtsDif Like a Nightmare7313.02.0 Runtime Terror5912.07.0 Magnum GI5411.07.0 Long Balls5210.0-3.0 Big Sticks519.00.0 Rieken Havoc458.01.0 Trex446.53.5 Gashouse Gang446.50.5 Maga Doge435.0-3.0 Dawg424.03.0 Simba's Dublin Green Sox413.01.0 Guillotine382.0-10.0 Young Guns341.0-9.0 TeamSPtsDif Dawg512.59.5 Rieken Havoc512.50.0 Big Sticks39.50.0 Simba's Dublin Green Sox39.55.5 Magnum GI39.5-1.5 Young Guns39.58.0 Long Balls27.0-1.0 Like a Nightmare14.0-8.5 Guillotine14.02.5 Maga Doge14.0-2.0 Trex14.0-5.5 Gashouse Gang14.0-3.0 Runtime Terror01.0-4.0 TeamWHIPPtsDif Simba's Dublin Green Sox0.898113.011.0 Guillotine1.008812.04.0 Like a Nightmare1.009311.0-1.0 Young Guns1.015410.01.0 Runtime Terror1.03789.06.0 Trex1.13568.01.0 Dawg1.16137.0-3.0 Long Balls1.27346.01.0 Big Sticks1.28035.01.0 Magnum GI1.28574.03.0 Rieken Havoc1.36553.0-8.0 Gashouse Gang1.36732.0-11.0 Maga Doge1.52311.0-5.0 TeamWQSPtsDif Runtime Terror1213.09.0 Like a Nightmare1112.010.0 Simba's Dublin Green Sox911.0-0.5 Gashouse Gang810.09.0 Magnum GI79.01.5 Dawg66.5-2.5 Guillotine66.5-5.0 Rieken Havoc66.51.0 Maga Doge66.51.0 Big Sticks53.0-4.5 Long Balls53.0-7.0 Trex53.00.0 Young Guns41.0-12.0
+Team|HR|Pts|Dif
+Like a Nightmare|14|13.0|4.0
+Dawg|13|12.0|1.0
+Long Balls|12|11.0|6.0
+Runtime Terror|10|9.5|2.5
+Maga Doge|10|9.5|-3.5
+Trex|9|8.0|6.0
+Guillotine|8|5.5|-0.5
+Big Sticks|8|5.5|-4.5
+Rieken Havoc|8|5.5|2.5
+Gashouse Gang|8|5.5|1.5
+Simba's Dublin Green Sox|7|3.0|-5.0
+Magnum GI|6|2.0|1.0
+Young Guns|5|1.0|-11.0
+Team|OBP|Pts|Dif
+Runtime Terror|.3799|13.0|2.0
+Long Balls|.3607|12.0|7.0
+Rieken Havoc|.3569|11.0|5.0
+Guillotine|.3425|10.0|8.0
+Like a Nightmare|.3416|9.0|6.0
+Maga Doge|.3275|8.0|-4.0
+Big Sticks|.3271|7.0|0.0
+Dawg|.3102|6.0|-7.0
+Magnum GI|.3056|5.0|1.0
+Simba's Dublin Green Sox|.3049|4.0|3.0
+Trex|.2891|3.0|-7.0
+Gashouse Gang|.2876|2.0|-6.0
+Young Guns|.2579|1.0|-8.0
+Team|R|Pts|Dif
+Dawg|46|13.0|0.0
+Guillotine|44|12.0|7.0
+Like a Nightmare|41|11.0|3.0
+Maga Doge|39|10.0|-2.0
+Runtime Terror|38|9.0|0.0
+Big Sticks|33|8.0|-2.0
+Gashouse Gang|32|7.0|0.0
+Rieken Havoc|31|5.5|-0.5
+Magnum GI|31|5.5|1.5
+Long Balls|30|4.0|2.0
+Trex|28|3.0|0.0
+Young Guns|25|2.0|-9.0
+Simba's Dublin Green Sox|21|1.0|0.0
+Team|RBI|Pts|Dif
+Guillotine|41|12.5|10.0
+Big Sticks|41|12.5|0.5
+Dawg|36|11.0|0.0
+Long Balls|35|10.0|3.0
+Gashouse Gang|33|9.0|6.5
+Like a Nightmare|32|7.5|2.5
+Maga Doge|32|7.5|-5.5
+Trex|31|6.0|5.0
+Runtime Terror|30|5.0|-3.0
+Rieken Havoc|27|4.0|-2.0
+Simba's Dublin Green Sox|23|3.0|-7.0
+Magnum GI|22|1.5|-2.5
+Young Guns|22|1.5|-7.5
+Team|SB|Pts|Dif
+Guillotine|8|12.5|3.0
+Maga Doge|8|12.5|5.5
+Dawg|7|11.0|6.5
+Trex|6|10.0|-1.0
+Like a Nightmare|5|7.5|-5.5
+Big Sticks|5|7.5|-0.5
+Rieken Havoc|5|7.5|-4.5
+Young Guns|5|7.5|1.5
+Simba's Dublin Green Sox|4|5.0|-4.5
+Runtime Terror|3|3.5|0.5
+Gashouse Gang|3|3.5|2.5
+Long Balls|2|1.5|-0.5
+Magnum GI|2|1.5|-3.0
+Team|ERA|Pts|Dif
+Runtime Terror|1.751|13.0|3.0
+Simba's Dublin Green Sox|2.236|12.0|10.0
+Big Sticks|2.752|11.0|4.0
+Young Guns|2.908|10.0|5.0
+Like a Nightmare|3.028|9.0|5.0
+Long Balls|3.496|8.0|-3.0
+Guillotine|3.584|7.0|-2.0
+Rieken Havoc|3.724|6.0|-7.0
+Trex|3.966|5.0|-1.0
+Gashouse Gang|4.041|4.0|-8.0
+Dawg|4.181|3.0|-5.0
+Magnum GI|4.896|2.0|-1.0
+Maga Doge|5.192|1.0|0.0
+Team|K|Pts|Dif
+Like a Nightmare|73|13.0|2.0
+Runtime Terror|59|12.0|7.0
+Magnum GI|54|11.0|7.0
+Long Balls|52|10.0|-3.0
+Big Sticks|51|9.0|0.0
+Rieken Havoc|45|8.0|1.0
+Trex|44|6.5|3.5
+Gashouse Gang|44|6.5|0.5
+Maga Doge|43|5.0|-3.0
+Dawg|42|4.0|3.0
+Simba's Dublin Green Sox|41|3.0|1.0
+Guillotine|38|2.0|-10.0
+Young Guns|34|1.0|-9.0
+Team|S|Pts|Dif
+Dawg|5|12.5|9.5
+Rieken Havoc|5|12.5|0.0
+Big Sticks|3|9.5|0.0
+Simba's Dublin Green Sox|3|9.5|5.5
+Magnum GI|3|9.5|-1.5
+Young Guns|3|9.5|8.0
+Long Balls|2|7.0|-1.0
+Like a Nightmare|1|4.0|-8.5
+Guillotine|1|4.0|2.5
+Maga Doge|1|4.0|-2.0
+Trex|1|4.0|-5.5
+Gashouse Gang|1|4.0|-3.0
+Runtime Terror|0|1.0|-4.0
+Team|WHIP|Pts|Dif
+Simba's Dublin Green Sox|0.8981|13.0|11.0
+Guillotine|1.0088|12.0|4.0
+Like a Nightmare|1.0093|11.0|-1.0
+Young Guns|1.0154|10.0|1.0
+Runtime Terror|1.0378|9.0|6.0
+Trex|1.1356|8.0|1.0
+Dawg|1.1613|7.0|-3.0
+Long Balls|1.2734|6.0|1.0
+Big Sticks|1.2803|5.0|1.0
+Magnum GI|1.2857|4.0|3.0
+Rieken Havoc|1.3655|3.0|-8.0
+Gashouse Gang|1.3673|2.0|-11.0
+Maga Doge|1.5231|1.0|-5.0
+Team|WQS|Pts|Dif
+Runtime Terror|12|13.0|9.0
+Like a Nightmare|11|12.0|10.0
+Simba's Dublin Green Sox|9|11.0|-0.5
+Gashouse Gang|8|10.0|9.0
+Magnum GI|7|9.0|1.5
+Dawg|6|6.5|-2.5
+Guillotine|6|6.5|-5.0
+Rieken Havoc|6|6.5|1.0
+Maga Doge|6|6.5|1.0
+Big Sticks|5|3.0|-4.5
+Long Balls|5|3.0|-7.0
+Trex|5|3.0|0.0
+Young Guns|4|1.0|-12.0
+
+=== Period 22 (Mon, Aug 17 - Sun, Aug 23) ===
+Rank|Team|Batting|Pitching|Total|Dif|Behind
+1|Like a Nightmare|57.0|46.5|103.5|20.5|0.0
+2|Trex|54.5|37.5|92.0|40.5|11.5
+3|Simba's Dublin Green Sox|31.0|53.0|84.0|32.0|19.5
+4|Guillotine|41.0|42.5|83.5|16.5|20.0
+5|Young Guns|26.5|54.5|81.0|-1.0|22.5
+6|Dawg|48.0|29.5|77.5|-6.5|26.0
+7|Rieken Havoc|22.5|46.5|69.0|-12.5|34.5
+8|Long Balls|15.5|51.0|66.5|-2.5|37.0
+9|Big Sticks|35.0|25.5|60.5|-25.5|43.0
+10|Runtime Terror|49.0|11.0|60.0|-14.0|43.5
+11|Magnum GI|30.5|23.5|54.0|11.0|49.5
+12|Gashouse Gang|32.5|11.0|43.5|-15.0|60.0
+13|Maga Doge|12.0|17.0|29.0|-49.5|74.5
+Batting Breakdown TeamHRPtsDif Dawg413.01.0 Trex312.010.0 Runtime Terror211.03.0 Like a Nightmare19.00.0 Guillotine19.04.0 Gashouse Gang19.05.0 Simba's Dublin Green Sox04.0-3.0 Young Guns04.0-7.0 Rieken Havoc04.01.0 Long Balls04.0-2.0 Big Sticks04.0-6.0 Magnum GI04.03.0 Maga Doge04.0-9.0 TeamOBPPtsDif Like a Nightmare.511613.010.0 Runtime Terror.451612.00.0 Guillotine.424211.09.0 Big Sticks.395810.01.0 Trex.39479.0-1.0 Gashouse Gang.39298.01.0 Dawg.38467.0-6.0 Simba's Dublin Green Sox.37505.54.5 Magnum GI.37505.51.5 Rieken Havoc.35714.0-4.0 Young Guns.35003.0-3.0 Long Balls.30432.0-3.0 Maga Doge.28571.0-10.0 TeamRPtsDif Like a Nightmare1213.05.0 Dawg1012.0-1.0 Magnum GI811.07.0 Trex69.56.5 Young Guns69.5-1.5 Guillotine57.00.0 Rieken Havoc57.02.0 Runtime Terror57.0-2.0 Big Sticks45.0-5.0 Simba's Dublin Green Sox33.52.5 Gashouse Gang33.5-2.5 Long Balls22.00.0 Maga Doge11.0-11.0 TeamRBIPtsDif Trex913.012.0 Like a Nightmare711.05.0 Dawg711.00.0 Big Sticks711.0-2.0 Guillotine69.06.0 Runtime Terror58.01.0 Gashouse Gang47.05.0 Simba's Dublin Green Sox35.0-5.0 Young Guns35.0-4.0 Magnum GI35.01.0 Rieken Havoc22.5-2.5 Long Balls22.5-5.5 Maga Doge01.0-11.0 TeamSBPtsDif Simba's Dublin Green Sox213.04.0 Like a Nightmare111.0-2.0 Trex111.00.0 Runtime Terror111.08.0 Guillotine05.0-5.0 Young Guns05.0-1.0 Dawg05.00.0 Rieken Havoc05.0-7.0 Long Balls05.03.0 Big Sticks05.0-2.0 Magnum GI05.01.0 Gashouse Gang05.04.0 Maga Doge05.0-3.0||Pitching Breakdown TeamERAPtsDif Guillotine1.28612.53.5 Long Balls1.28612.52.5 Young Guns2.76911.05.0 Rieken Havoc3.60010.0-3.0 Like a Nightmare4.6739.04.0 Simba's Dublin Green Sox5.5388.05.0 Trex6.3537.03.0 Big Sticks7.2006.0-1.0 Magnum GI9.0005.03.0 Dawg13.5004.0-4.0 Maga Doge27.0003.02.0 Runtime Terror0.0000.0-12.0 Gashouse Gang0.0000.0-11.0 TeamKPtsDif Young Guns1713.04.0 Like a Nightmare1212.00.0 Simba's Dublin Green Sox1011.09.0 Rieken Havoc710.03.0 Long Balls69.0-4.0 Trex58.05.0 Guillotine47.0-4.0 Big Sticks35.5-4.5 Magnum GI35.51.5 Dawg24.03.0 Runtime Terror02.0-3.0 Gashouse Gang02.0-4.0 Maga Doge02.0-6.0 TeamSPtsDif Like a Nightmare111.0-1.0 Simba's Dublin Green Sox111.07.0 Dawg111.08.0 Rieken Havoc111.0-2.0 Long Balls111.03.0 Trex04.5-4.5 Guillotine04.53.5 Young Guns04.52.5 Big Sticks04.5-5.5 Runtime Terror04.5-0.5 Magnum GI04.5-6.5 Gashouse Gang04.5-2.5 Maga Doge04.5-1.5 TeamWHIPPtsDif Young Guns0.923113.03.0 Simba's Dublin Green Sox1.384612.010.0 Rieken Havoc1.400011.00.0 Like a Nightmare1.557710.0-2.0 Trex1.58829.02.0 Guillotine1.71437.5-0.5 Long Balls1.71437.52.5 Dawg2.00006.0-3.0 Big Sticks2.20005.01.0 Magnum GI2.28574.03.0 Maga Doge3.00003.00.0 Runtime Terror0.00000.0-6.0 Gashouse Gang0.00000.0-13.0 TeamWQSPtsDif Young Guns413.01.0 Simba's Dublin Green Sox211.0-2.0 Guillotine211.00.0 Long Balls211.01.0 Trex19.07.5 Like a Nightmare04.51.5 Dawg04.5-4.5 Rieken Havoc04.50.0 Big Sticks04.5-1.5 Runtime Terror04.5-2.5 Magnum GI04.5-3.5 Gashouse Gang04.53.0 Maga Doge04.50.0
+Team|HR|Pts|Dif
+Dawg|4|13.0|1.0
+Trex|3|12.0|10.0
+Runtime Terror|2|11.0|3.0
+Like a Nightmare|1|9.0|0.0
+Guillotine|1|9.0|4.0
+Gashouse Gang|1|9.0|5.0
+Simba's Dublin Green Sox|0|4.0|-3.0
+Young Guns|0|4.0|-7.0
+Rieken Havoc|0|4.0|1.0
+Long Balls|0|4.0|-2.0
+Big Sticks|0|4.0|-6.0
+Magnum GI|0|4.0|3.0
+Maga Doge|0|4.0|-9.0
+Team|OBP|Pts|Dif
+Like a Nightmare|.5116|13.0|10.0
+Runtime Terror|.4516|12.0|0.0
+Guillotine|.4242|11.0|9.0
+Big Sticks|.3958|10.0|1.0
+Trex|.3947|9.0|-1.0
+Gashouse Gang|.3929|8.0|1.0
+Dawg|.3846|7.0|-6.0
+Simba's Dublin Green Sox|.3750|5.5|4.5
+Magnum GI|.3750|5.5|1.5
+Rieken Havoc|.3571|4.0|-4.0
+Young Guns|.3500|3.0|-3.0
+Long Balls|.3043|2.0|-3.0
+Maga Doge|.2857|1.0|-10.0
+Team|R|Pts|Dif
+Like a Nightmare|12|13.0|5.0
+Dawg|10|12.0|-1.0
+Magnum GI|8|11.0|7.0
+Trex|6|9.5|6.5
+Young Guns|6|9.5|-1.5
+Guillotine|5|7.0|0.0
+Rieken Havoc|5|7.0|2.0
+Runtime Terror|5|7.0|-2.0
+Big Sticks|4|5.0|-5.0
+Simba's Dublin Green Sox|3|3.5|2.5
+Gashouse Gang|3|3.5|-2.5
+Long Balls|2|2.0|0.0
+Maga Doge|1|1.0|-11.0
+Team|RBI|Pts|Dif
+Trex|9|13.0|12.0
+Like a Nightmare|7|11.0|5.0
+Dawg|7|11.0|0.0
+Big Sticks|7|11.0|-2.0
+Guillotine|6|9.0|6.0
+Runtime Terror|5|8.0|1.0
+Gashouse Gang|4|7.0|5.0
+Simba's Dublin Green Sox|3|5.0|-5.0
+Young Guns|3|5.0|-4.0
+Magnum GI|3|5.0|1.0
+Rieken Havoc|2|2.5|-2.5
+Long Balls|2|2.5|-5.5
+Maga Doge|0|1.0|-11.0
+Team|SB|Pts|Dif
+Simba's Dublin Green Sox|2|13.0|4.0
+Like a Nightmare|1|11.0|-2.0
+Trex|1|11.0|0.0
+Runtime Terror|1|11.0|8.0
+Guillotine|0|5.0|-5.0
+Young Guns|0|5.0|-1.0
+Dawg|0|5.0|0.0
+Rieken Havoc|0|5.0|-7.0
+Long Balls|0|5.0|3.0
+Big Sticks|0|5.0|-2.0
+Magnum GI|0|5.0|1.0
+Gashouse Gang|0|5.0|4.0
+Maga Doge|0|5.0|-3.0
+Team|ERA|Pts|Dif
+Guillotine|1.286|12.5|3.5
+Long Balls|1.286|12.5|2.5
+Young Guns|2.769|11.0|5.0
+Rieken Havoc|3.600|10.0|-3.0
+Like a Nightmare|4.673|9.0|4.0
+Simba's Dublin Green Sox|5.538|8.0|5.0
+Trex|6.353|7.0|3.0
+Big Sticks|7.200|6.0|-1.0
+Magnum GI|9.000|5.0|3.0
+Dawg|13.500|4.0|-4.0
+Maga Doge|27.000|3.0|2.0
+Runtime Terror|0.000|0.0|-12.0
+Gashouse Gang|0.000|0.0|-11.0
+Team|K|Pts|Dif
+Young Guns|17|13.0|4.0
+Like a Nightmare|12|12.0|0.0
+Simba's Dublin Green Sox|10|11.0|9.0
+Rieken Havoc|7|10.0|3.0
+Long Balls|6|9.0|-4.0
+Trex|5|8.0|5.0
+Guillotine|4|7.0|-4.0
+Big Sticks|3|5.5|-4.5
+Magnum GI|3|5.5|1.5
+Dawg|2|4.0|3.0
+Runtime Terror|0|2.0|-3.0
+Gashouse Gang|0|2.0|-4.0
+Maga Doge|0|2.0|-6.0
+Team|S|Pts|Dif
+Like a Nightmare|1|11.0|-1.0
+Simba's Dublin Green Sox|1|11.0|7.0
+Dawg|1|11.0|8.0
+Rieken Havoc|1|11.0|-2.0
+Long Balls|1|11.0|3.0
+Trex|0|4.5|-4.5
+Guillotine|0|4.5|3.5
+Young Guns|0|4.5|2.5
+Big Sticks|0|4.5|-5.5
+Runtime Terror|0|4.5|-0.5
+Magnum GI|0|4.5|-6.5
+Gashouse Gang|0|4.5|-2.5
+Maga Doge|0|4.5|-1.5
+Team|WHIP|Pts|Dif
+Young Guns|0.9231|13.0|3.0
+Simba's Dublin Green Sox|1.3846|12.0|10.0
+Rieken Havoc|1.4000|11.0|0.0
+Like a Nightmare|1.5577|10.0|-2.0
+Trex|1.5882|9.0|2.0
+Guillotine|1.7143|7.5|-0.5
+Long Balls|1.7143|7.5|2.5
+Dawg|2.0000|6.0|-3.0
+Big Sticks|2.2000|5.0|1.0
+Magnum GI|2.2857|4.0|3.0
+Maga Doge|3.0000|3.0|0.0
+Runtime Terror|0.0000|0.0|-6.0
+Gashouse Gang|0.0000|0.0|-13.0
+Team|WQS|Pts|Dif
+Young Guns|4|13.0|1.0
+Simba's Dublin Green Sox|2|11.0|-2.0
+Guillotine|2|11.0|0.0
+Long Balls|2|11.0|1.0
+Trex|1|9.0|7.5
+Like a Nightmare|0|4.5|1.5
+Dawg|0|4.5|-4.5
+Rieken Havoc|0|4.5|0.0
+Big Sticks|0|4.5|-1.5
+Runtime Terror|0|4.5|-2.5
+Magnum GI|0|4.5|-3.5
+Gashouse Gang|0|4.5|3.0
+Maga Doge|0|4.5|0.0

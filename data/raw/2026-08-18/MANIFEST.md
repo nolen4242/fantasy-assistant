@@ -1,0 +1,11 @@
+# Raw capture manifest — 2026-08-18 (runner)
+
+- `transactions_all_raw.txt` <- `/transactions?print_rows=9999` (56,622 chars)
+- `roster_grid.txt` <- `/teams/roster-grid` (4,312 chars)
+- `standings_overall_raw.txt` <- `/standings/overall` (5,356 chars)
+- `my_team_raw.txt` <- `/teams` (4,329 chars)
+- `live_scoring_raw.txt` <- `/scoring/standard` (3,906 chars)
+- `fa_pool_batters.psv` <- `/stats/stats-main?print_rows=9999` (456,544 chars)
+- `fa_pool_pitchers.psv` <- `/stats/stats-main/fa:P/period-22:p/standard/projections?print_rows=9999` (379,625 chars)
+- `standings_byperiod_all.txt` <- `/standings/byperiod (all periods)` (152,686 chars)
+- `standings_overall.txt` <- `(derived from standings_overall_raw.txt)` (3,856 chars)
