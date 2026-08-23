@@ -7,7 +7,8 @@ Then scores each rival's trade complementarity with us — mutual gain exists
 when their surplus feeds our chase and vice versa — and names candidate
 players on both sides from actual season production.
 
-Trade context: commissioner-approved trades only, deadline Sun 2026-08-24.
+Trade context: commissioner-approved trades only; deadline read from the
+Season node (site countdown is authoritative — the constitution date was stale).
 """
 from __future__ import annotations
 
@@ -108,8 +109,13 @@ def analyze() -> dict:
                             "they_can_give": gives_us, "they_want": wants_ours,
                             "trades_made": p["trades_made"]})
     matches.sort(key=lambda m: -m["score"])
+    with session() as s:
+        deadline = s.run(
+            "MATCH (se:Season) RETURN toString(se.trade_deadline) AS d"
+        ).single()["d"]
     return {"model": MODEL_VERSION, "as_of_period": race["as_of_period"],
-            "us": us, "profiles": dict(profiles), "matches": matches}
+            "us": us, "profiles": dict(profiles), "matches": matches,
+            "deadline": deadline}
 
 
 def player_candidates(team: str, cats: list[str], top: int = 4) -> list[dict]:
@@ -150,7 +156,7 @@ def player_candidates(team: str, cats: list[str], top: int = 4) -> list[dict]:
 def report(result: dict) -> str:
     us = result["us"]
     lines = [f"RIVAL NEEDS & TRADE MARKET — through period {result['as_of_period']} "
-             f"[{result['model']}] · trade deadline Sun 8/24 (commish approval required)", ""]
+             f"[{result['model']}] · trade deadline {result.get('deadline', '?')} (commish approval required)", ""]
     ours = result["profiles"][us]
     lines.append(f"{us}: chasing " +
                  ", ".join(f"{c['cat']} (+{c['pts']} pts for {c['gap']})" for c in ours["chasing"]) )
