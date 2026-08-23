@@ -1,5 +1,5 @@
 # Weekly Brief — Period 23 (locks Monday, per-player)
-Generated 2026-08-23T12:52 · model races-v3 · through period 21
+Generated 2026-08-23T13:00 · model races-v3 · through period 21
 
 ## Standings picture
 - Projected finish: **6th (3rd-9th)**, 76.0 pts (p10-p90 67.0-83.0)
@@ -42,12 +42,9 @@ Generated 2026-08-23T12:52 · model races-v3 · through period 21
 - Martin Perez (P, ATL) — clears 8/24, SportsLine wk rank 87
 
 ## Trade board (deadline 2026-08-30; both sides priced via trades-v2 displacement model; accept = revealed-preference fit)
-- give **Sonny Gray** for **Jake Bauers + Chase Burns** (Maga Doge): us +6.0 pts, them +1.5, accept 3.3
-- give **Sonny Gray** for **Matt McLain + Chase Burns** (Maga Doge): us +6.0 pts, them +1.5, accept 3.3
-- give **Sonny Gray** for **JJ Wetherholt + Chase Burns** (Maga Doge): us +6.0 pts, them +1.5, accept 3.3
-- give **Pete Alonso + Eury Perez** for **Wilyer Abreu + Braxton Ashcraft** (Like a Nightmare): us +6.0 pts, them +1.0, accept 1.9
-- give **Eury Perez + Colson Montgomery** for **Bobby Witt + Braxton Ashcraft** (Like a Nightmare): us +6.0 pts, them +1.0, accept 1.9
-- give **Aroldis Chapman + Sonny Gray** for **Cam Schlittler + Kyle Schwarber** (Rieken Havoc): us +6.0 pts, them +0.5, accept 1.6
+- give **Pete Alonso + Sonny Gray** for **Cam Schlittler + Kyle Schwarber** (Rieken Havoc): us +3.0 pts, them +0.5, accept 1.8
+- give **Aroldis Chapman + Sonny Gray** for **Cam Schlittler + Daylen Lile** (Rieken Havoc): us +3.0 pts, them +0.5, accept 1.6
+- give **Aroldis Chapman + Sonny Gray** for **Cam Schlittler + Wyatt Langford** (Rieken Havoc): us +3.0 pts, them +0.5, accept 1.6
 
 ## Hot on the wire (unrostered, skill-based heat)
 - Dean Kremer (P, wk-rank 18): **hot_arm** — CSW +10.9%, velo +0.5 mph (skill-based)

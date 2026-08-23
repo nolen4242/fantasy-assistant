@@ -46,9 +46,15 @@ MIN_THEIR_GAIN = 0.5
 MAX_BUNDLE = 2
 TOP_ASSETS = 12
 FA_TOP = 15
-STAR_RANK = 15          # top-N overall = "star"
-STAR_GAP_RANK = 40      # star-for-(nothing-better-than-rank-40) = implausible
 ALIGN_WEIGHT = 0.75     # acceptance-score weight on revealed-preference fit
+GAIN_MARGIN = 0.10      # fraction of typical ROS production a threshold
+                        # crossing must clear before a point gain is credited
+                        # (kills knife-edge +1s stacking into fantasy +6s)
+PARITY_RATIO = 1.6      # a side sending > ratio x received perceived value
+PARITY_SLACK = 0.15     # (plus slack) is an implausible offer — humans anchor
+                        # on name/draft-capital parity, not marginal points
+BODY_GAIN_MIN = 1.0     # a side giving more bodies than it gets needs this
+                        # much gain (roster spots have option value)
 RAW_ROOT = Path(__file__).resolve().parents[3] / "data" / "raw"
 
 
@@ -105,7 +111,12 @@ class Market:
         self._base: dict[str, dict] = {}
         self._pursuit: dict[str, dict[str, float]] = {}
         self._zstats = None
-        self._star_rank: dict[str, int] | None = None
+        self._perceived: dict[str, float] | None = None
+        # projection-noise margin per category: a gain must clear this to count
+        self.margin = {c: GAIN_MARGIN * self.scales[c] for c in COUNTING}
+        for cat in RATES:
+            swap = self.race["categories"][cat].get("swap_impact") or 0.01
+            self.margin[cat] = 0.5 * swap
 
     def roster(self, team: str) -> list[dict]:
         if team not in self._rosters:
@@ -131,8 +142,15 @@ class Market:
             idx = teams.index(team)
             hb = RATES[cat][2] if cat in RATES else True
             base = _points_for_values(values, hb)[idx]
+            # pessimism: a favorable delta must beat the noise margin before
+            # any crossing is credited; unfavorable deltas count in full
+            m = self.margin.get(cat, 0.0)
+            favorable = d > 0 if hb else d < 0
+            d_eff = (d - m if d > 0 else d + m) if favorable else d
+            if favorable and (d_eff > 0) != (d > 0):
+                continue   # gain entirely inside the noise band
             shifted = values.copy()
-            shifted[idx] += d
+            shifted[idx] += d_eff
             pts = _points_for_values(shifted, hb)[idx] - base
             if abs(pts) > 1e-9:
                 out.append({"cat": cat, "delta_units": round(d, 3),
@@ -264,15 +282,41 @@ class Market:
                 wanted += [c for c in top if z[c] > 0.5]
         return wanted
 
-    def star_rank(self, uid: str) -> int:
-        if self._star_rank is None:
+    def perceived(self, uid: str) -> float:
+        """Human trade-market value in [0,1]: how managers price a NAME.
+
+        max(draft-capital percentile, season z-sum percentile) — a player is
+        valued at the higher of his preseason reputation (draft round) and
+        his current production. This is deliberately NOT the marginal-points
+        scalar: scarcity math thinks a mediocre closer outranks a prized
+        young starter; no manager prices names that way (the 8/23 board
+        offered a rd-13 veteran for a rd-8 arm plus change and called it
+        acceptable — it wasn't)."""
+        if self._perceived is None:
             allp = []
             for team in {t for t, _, _ in
                          self.race["categories"]["HR"]["proj_leaderboard"]}:
                 allp += self.roster(team)
-            allp.sort(key=lambda p: -lineup.scalar(p, self.scales))
-            self._star_rank = {p["uid"]: i + 1 for i, p in enumerate(allp)}
-        return self._star_rank.get(uid, 999)
+            with read_session() as s:
+                rounds = {r["uid"]: r["rd"] for r in s.run(
+                    """
+                    MATCH (dp:DraftPick)-[:SELECTED]->(p:Player)
+                    RETURN p.uid AS uid, min(dp.round) AS rd
+                    """)}
+            zsums = {p["uid"]: sum(max(z, 0.0) for z in self.zvec(p).values())
+                     for p in allp}
+            # magnitude-normalized, NOT percentile-ranked: percentiles
+            # compress the top (a journeyman and a 1st-rounder both land
+            # at 0.9 because most rostered players cluster low), which
+            # let star-for-scraps bundles through the parity gate
+            zmax = max(zsums.values()) or 1.0
+            self._perceived = {}
+            for p in allp:
+                rd = rounds.get(p["uid"])
+                draft_val = max(0.0, (24 - rd) / 23.0) if rd else 0.0
+                self._perceived[p["uid"]] = max(draft_val,
+                                                zsums[p["uid"]] / zmax)
+        return self._perceived.get(uid, 0.0)
 
     def acceptance(self, them: str, they_give: list[str],
                    they_get: list[dict], their_delta: float) -> dict:
@@ -282,12 +326,20 @@ class Market:
             z = self.zvec(p)
             align += sum(pv[c] * max(z[c], 0.0) for c in COUNTING)
         align /= max(len(they_get), 1)
-        best_given = min((self.star_rank(u) for u in they_give), default=999)
-        best_gotten = min((self.star_rank(p["uid"]) for p in they_get),
-                          default=999)
-        implausible = best_given <= STAR_RANK and best_gotten > STAR_GAP_RANK
-        score = their_delta + ALIGN_WEIGHT * align - (3.0 if implausible else 0)
+        # perceived-value parity, checked from BOTH chairs: an offer where
+        # either side ships far more name value than it receives is dead on
+        # arrival regardless of marginal points
+        pv_they_give = sum(self.perceived(u) for u in they_give)
+        pv_they_get = sum(self.perceived(p["uid"]) for p in they_get)
+        implausible = (
+            pv_they_give > pv_they_get * PARITY_RATIO + PARITY_SLACK
+            or pv_they_get > pv_they_give * PARITY_RATIO + PARITY_SLACK)
+        # a side giving more bodies than it gets pays roster-spot option value
+        body_penalty = 1.0 if len(they_give) > len(they_get) else 0.0
+        score = (their_delta + ALIGN_WEIGHT * align - body_penalty
+                 - (3.0 if implausible else 0))
         return {"align": round(align, 2), "implausible": implausible,
+                "parity": round(pv_they_get - pv_they_give, 2),
                 "score": round(score, 2)}
 
 
@@ -315,7 +367,9 @@ def counter_search(them: str, market: Market | None = None) -> dict:
             searched += 1
             ev = mkt.eval_trade(us, give, them, get)
             d_us, d_them = ev["teams"][us], ev["teams"][them]
-            if d_us <= 0 or d_them < MIN_THEIR_GAIN:
+            their_floor = (BODY_GAIN_MIN if len(get) > len(give)
+                           else MIN_THEIR_GAIN)
+            if d_us <= 0 or d_them < their_floor:
                 continue
             acc = mkt.acceptance(them, get, [by_uid[u] for u in give], d_them)
             viable.append({"we_give": [names[u] for u in give],
@@ -350,10 +404,13 @@ def report(result: dict, top: int = 12) -> str:
     if not plaus:
         lines.append("  none plausible — no bundle helps both sides without "
                      "an implausible star gap.")
-    lines += ["", "v2 scores all 10 categories with displacement + FA "
-              "replacement; remaining limits: IL returners priced at zero,",
-              "uniform YTD rate denominators, heuristic acceptance weights, "
-              "greedy (approximate) lineup assignment."]
+    lines += ["", "v2.1: gains must clear a projection-noise margin "
+              f"({GAIN_MARGIN:.0%} of typical ROS production) before a point "
+              "is credited; offers must pass",
+              "perceived-value parity from both chairs (draft capital + "
+              "season z-sum). Remaining limits: IL returners priced",
+              "at zero, uniform YTD rate denominators, heuristic acceptance "
+              "weights, greedy lineup assignment."]
     return "\n".join(lines)
 
 
