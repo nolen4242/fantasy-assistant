@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-22T20:24:15
+captured: 2026-08-22T21:03:46
 ---
 League
 My Team
@@ -196,7 +196,7 @@ Maga Doge	131	4.0	-0.5
 Like a Nightmare	124	3.0	0.0
 Gashouse Gang	119	1.5	0.0
 Trex	119	1.5	0.0
-STANDINGS UPDATED AS OF 08/22/26 08:24 PM ET
+STANDINGS UPDATED AS OF 08/22/26 09:03 PM ET
 More
 Pick'em Games
 Fantasy Sports

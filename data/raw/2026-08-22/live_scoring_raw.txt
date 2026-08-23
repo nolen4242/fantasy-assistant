@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/scoring/standard
-captured: 2026-08-22T20:24:21
+captured: 2026-08-22T21:03:53
 ---
 League
 My Team
@@ -28,27 +28,27 @@ PERIOD 22 (MON, AUG 17 - SUN, AUG 23)
 
 		Runtime Terror		
 NCP
--1.00
++2.50
 		
-BST	88.50
-DWG	83.50
+BST	86.00
 LAN	83.00
 YGN	83.00
-RHV	81.50
-MD	77.00
-RTT	73.00
-LB	71.00
+DWG	82.50
+RHV	80.50
+MD	76.50
+RTT	76.50
+LB	74.50
 		
-GTN	69.50
-GHG	59.50
-SDG	51.00
-TRX	48.00
-MGI	41.50
+GTN	69.00
+GHG	60.50
+SDG	50.50
+TRX	46.50
+MGI	41.00
 	
 
-73.00	
+76.50	
 NCT
-0.00
++3.50
 
 
 
@@ -56,54 +56,50 @@ NCP = Net Change Period   NCT = Net Change Today
 Actives	Games	Stats
 A. Wells C  	
 NYY 3 v TOR 4 (F)
-	 
+	1-3, RBI, BB, 0.500 OBP
 P. Alonso 1B  	
-BAL 0 v TB 1 Top 6th
-	 
+BAL 0 v TB 2 Mid 8th
+	2-3, 0.667 OBP
 T. Bazzana 2B  	
-CLE 0 @ COL 0 Bot 1st
-	 
+CLE 3 @ COL 0 Top 4th
+	0-1
 C. Durbin 3B  	
-BOS 0 v SF 2 Bot 4th
-  In the Hole
-	 
+BOS 0 v SF 2 Bot 6th
+	1-2, 0.500 OBP
 C. Montgomery SS  	
-CHW 2 v NYM 4 Bot 3rd
-  In the Hole
-	 
+CHW 3 v NYM 7 Bot 5th
+	0-2
 K. Clemens MI  	
-MIN @ SD 8:40 EDT
-MIN +120, SD -143
-	 
+MIN 3 @ SD 0 Mid 2nd
+	0-1
 M. Busch CI  	
-CHC 0 @ SEA 1 Top 5th
-	 
+CHC 4 @ SEA 2 Bot 6th
+	1-3, HR, RBI, R, 0.333 OBP
 D. Canzone OF  	
-SEA 1 v CHC 0 Top 5th
-	 
+SEA 2 v CHC 4 Bot 6th
+	0-3, RBI
 C. Carroll OF  	
-ARI 0 v CIN 1 Bot 1st
-	 
+ARI 0 v CIN 3 Bot 3rd
+  In the Hole
+	0-1
 G. Conine OF  	
 MIA 4 v WAS 2 (F)
-	 
+	0-3, R, BB, 0.250 OBP
 S. Kwan OF  	
-CLE 0 @ COL 0 Bot 1st
-	 
+CLE 3 @ COL 0 Top 4th
+	0-2
 Y. Diaz U  	
-TB 1 @ BAL 0 Top 6th
-vs. B. Young
-  On Deck
-	 
+TB 2 @ BAL 0 Mid 8th
+	2-4, R, 0.500 OBP
 A. Chapman P  	
-BOS 0 v SF 2 Bot 4th
+BOS 0 v SF 2 Bot 6th
 	 
 S. Gray P  	
-BOS 0 v SF 2 Bot 4th
+BOS 0 v SF 2 Bot 6th
 	 
 L. Henderson P   	
 MIL 4 v ATL 1 (F)
-	 
+	100 PC, 6 INN, 5 HA, 2 BBI, 4 K, ER, 1.500 ERA, 1.167 WHIP, W, 2 WQS
 T. Mahle P   	
 ATL 1 @ MIL 4 (F)
 	 
@@ -111,37 +107,38 @@ D. May P  
 MIL 4 v ATL 1 (F)
 	 
 T. Melton P  	
-DET 1 @ KC 2 Bot 5th
+DET 1 @ KC 3 Top 8th
 	 
 E. Miller P  	
-BOS 0 v SF 2 Bot 4th
+BOS 0 v SF 2 Bot 6th
 	 
 E. Perez P   	
 MIA 4 v WAS 2 (F)
-	 
+	100 PC, 5 INN, 3 HA, 3 BBI, 4 K, ER, 1.800 ERA, 1.200 WHIP, W, WQS
 W. Urena P  	
-LAA 1 @ TEX 0 Top 6th
+LAA 3 @ TEX 0 Top 8th
 	 
-Today	 
-Total	1296-5188, 239 2B, 33 3B, 200 HR, 703 RBI, 765 R, 101 SB, 650 BB, 33 CS, 0.340 OBP
-960.1 INN, 15724 PC, 826 HA, 360 BBI, 966 K, 371 ER, 3.477 ERA, 1.235 WHIP, 67 W, 52 L, 36 S, 132 WQS
+Today	7-28, HR, 3 RBI, 3 R, 2 BB, 0.300 OBP
+11 INN, 8 HA, 5 BBI, 8 K, 2 ER, 1.636 ERA, 1.182 WHIP, 2 W, 3 WQS
+Total	1303-5216, 239 2B, 33 3B, 201 HR, 706 RBI, 768 R, 101 SB, 652 BB, 33 CS, 0.340 OBP
+971.1 INN, 15724 PC, 834 HA, 365 BBI, 974 K, 373 ER, 3.456 ERA, 1.234 WHIP, 69 W, 52 L, 36 S, 135 WQS
 Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
 YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
 TEAM RANKINGS
 RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
-1st	BST	229	791	766	114	0.332	1078	3.84	1.23	54	133	88.50
-2nd	DWG	244	744	844	106	0.348	913	3.79	1.20	28	134	83.50
-3rd	LAN	225	677	758	149	0.318	1109	3.93	1.16	73	124	83.00
-3rd	YGN	230	697	770	112	0.330	1084	3.92	1.19	23	158	83.00
-5th	RHV	171	668	718	143	0.330	1045	3.36	1.19	74	133	81.50
-6th	MD	257	771	831	113	0.335	1047	4.32	1.24	41	131	77.00
-7th	RTT	200	703	765	101	0.340	966	3.48	1.24	36	132	73.00
-8th	LB	195	702	649	79	0.328	1204	3.48	1.23	51	141	71.00
-9th	GTN	195	666	726	127	0.317	1098	3.62	1.22	21	153	69.50
-10th	GHG	175	647	722	72	0.332	973	3.55	1.15	42	119	59.50
-11th	SDG	198	714	646	123	0.315	934	4.12	1.25	30	154	51.00
-12th	TRX	170	573	693	124	0.331	942	4.05	1.23	51	119	48.00
-13th	MGI	156	655	694	100	0.320	947	4.15	1.30	69	134	41.50
+1st	BST	231	799	770	114	0.331	1084	3.82	1.24	54	133	86.00
+2nd	LAN	225	677	758	151	0.318	1112	3.95	1.17	73	124	83.00
+2nd	YGN	230	699	773	113	0.329	1084	3.92	1.19	23	158	83.00
+4th	DWG	245	745	846	106	0.348	916	3.78	1.20	29	134	82.50
+5th	RHV	173	672	727	144	0.329	1050	3.40	1.19	75	133	80.50
+6th	MD	259	777	834	113	0.335	1048	4.31	1.24	41	131	76.50
+6th	RTT	201	706	768	101	0.340	974	3.46	1.23	36	135	76.50
+8th	LB	200	709	655	80	0.329	1212	3.47	1.23	51	143	74.50
+9th	GTN	196	668	734	128	0.318	1098	3.62	1.22	21	153	69.00
+10th	GHG	178	653	729	72	0.332	984	3.58	1.15	42	119	60.50
+11th	SDG	199	716	647	125	0.315	943	4.12	1.25	30	155	50.50
+12th	TRX	171	576	697	125	0.331	945	4.05	1.23	51	119	46.50
+13th	MGI	156	657	698	101	0.320	955	4.16	1.30	69	134	41.00
 More
 Pick'em Games
 Fantasy Sports

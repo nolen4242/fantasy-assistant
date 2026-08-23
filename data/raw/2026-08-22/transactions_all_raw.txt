@@ -1,7 +1,8 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-22T20:24:11
+captured: 2026-08-22T21:03:42
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
+8/22/26 8:34 PM ET|Like a Nightmare|Shane Bieber P • TOR - Added|8/24/26|$2.50
 8/22/26 8:06 PM ET|Big Sticks|Aaron Nola P • PHI - Added|8/24/26|$2.50
 8/22/26 7:52 PM ET|Big Sticks|Martin Perez P • ATL - Dropped|8/24/26|$0.00
 8/21/26 6:04 PM ET|Magnum GI|Rafael Flores 1B • PIT - Added; Nolan Schanuel 1B • LAA - Dropped|8/24/26|$2.50
