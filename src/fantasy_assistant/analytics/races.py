@@ -119,6 +119,18 @@ def analyze() -> dict:
 
     result: dict = {"model": MODEL_VERSION, "as_of_period": latest_period,
                     "remaining_periods": remaining, "categories": {}, "us": us}
+
+    # ACTUAL current standings, not a projection. Reported alongside the
+    # projection because the two are routinely confused: the projection can
+    # differ from where the team actually sits by several places, and reading
+    # the projection as "our rank" has produced wrong conclusions.
+    current_totals: dict[str, float] = {}
+    for row in ytd:
+        if row.get("points") is not None:
+            current_totals[row["team"]] = (
+                current_totals.get(row["team"], 0.0) + row["points"])
+    result["current_standings"] = sorted(
+        current_totals.items(), key=lambda kv: -kv[1])
     projected_totals: dict[str, float] = {}
     rate_in = team_rate_inputs()
 
@@ -239,8 +251,17 @@ def report(result: dict) -> str:
     us = result["us"]
     lines = [f"RACE ANALYSIS — through period {result['as_of_period']}, "
              f"{result['remaining_periods']} periods left  [{result['model']}]", ""]
-    lines.append("Projected final standings (point estimate on current pace — late in "
-                 "the season this is mostly banked YTD and barely moves;")
+    if result.get("current_standings"):
+        lines.append(f"CURRENT standings (actual, through period "
+                     f"{result['as_of_period']}) — this is where the team sits today:")
+        for i, (t, pts) in enumerate(result["current_standings"], 1):
+            marker = " <== us" if t == us else ""
+            lines.append(f"  {i:>2}. {t:<26} {pts:5.1f}{marker}")
+        lines.append("")
+
+    lines.append("PROJECTED final standings — NOT the current rank; a pace estimate "
+                 "for the end of the season (late in")
+    lines.append("the season this is mostly banked YTD and barely moves;")
     lines.append("run analytics.variance for the p10-p90 finish range):")
     for i, (t, pts) in enumerate(result["projected_final"], 1):
         marker = " <== us" if t == us else ""
