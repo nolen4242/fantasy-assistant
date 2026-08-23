@@ -31,6 +31,9 @@ PAGES = {
     "/standings/overall": "standings_overall_raw.txt",
     "/teams": "my_team_raw.txt",
     "/scoring/standard": "live_scoring_raw.txt",
+    # pending trade offers (both directions); the /teams header only carries a
+    # count badge, so without this page offers are invisible to the pipeline
+    "/transactions/trade?show_pending=1": "pending_trades_raw.txt",
 }
 
 TABLE_EXTRACT_JS = """
