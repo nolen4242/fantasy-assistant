@@ -1,64 +1,55 @@
-"""Two-sided trade evaluation + Pareto counter search (v1).
+"""Two-sided trade evaluation + Pareto counter search (v2).
 
-Why this exists (2026-08-22): a counter-offer (a mid-rotation starter for a
-good bat) was proposed to Like a Nightmare using curve math for OUR side and
-nothing for theirs. Their rival profile — chasing R/RBI/HR, surplus WHIP,
-44 of 68 transactions churning pitchers, Bieber added off waivers the same
-night — made the counter obviously dead: they price starting pitching at
-$2.50, and the offer asked them to pay a real bat for it. The failure mode
-is structural: every analysis pipeline in this repo prices Runtime Terror's
-side only. A trade is two optimization problems joined by a constraint —
-the counterparty accepts only if THEY gain — so any counter proposed
-without pricing their side is a guess.
+v1 (2026-08-22) fixed the structural failure — counters proposed without
+pricing the counterparty — but carried four caveats doing load-bearing work.
+v2 retires three of them:
 
-This module prices both sides in each team's own marginal points:
+  * displacement & replacement — team value now comes from the slot-aware
+    lineup model (analytics.lineup): a gained player only adds his margin
+    over whoever he displaces, a lost player's slot refills from the bench,
+    and freed roster spots refill from the FA pool priced at SportsLine
+    weekly projections. Deltas are whole-TEAM lineup diffs.
+  * rate categories — OBP/ERA/WHIP scored from component sums (ob/PA-den,
+    ER/outs, walks+hits/outs) over the assigned lineup, layered on each
+    team's live YTD rate. YTD denominators are uniform league-typical
+    (only ours are directly observable); this scales rate deltas by up to
+    ~15 percent for extreme-volume teams but does not reorder bundles.
+  * acceptance realism — a counterparty's willingness is scored, not just
+    their point delta: revealed preferences from their last-30d adds and
+    any live inbound offer (pending_trades capture), plus a star-gap
+    plausibility filter (nobody trades a top-tier player for role players,
+    whatever the curve math says).
 
-  eval_trade(a, gives_a, b, gives_b) -> both teams' projected point deltas,
-      by category, using races.analyze()'s projected leaderboards re-ranked
-      after shifting each team's totals by the players' ROS contributions.
-  counter_search(them) -> enumerate 1-1 / 2-1 / 1-2 / 2-2 bundles between
-      our roster and theirs, keep the Pareto-viable set (both sides gain,
-      counterparty gain >= MIN_THEIR_GAIN so they'd plausibly act), rank by
-      our gain. This is the "weigh the alternatives computationally" loop:
-      ~6k bundles scored per counterparty instead of one hand-picked guess.
-
-Honest limits of v1 (all deliberately visible in the report footer):
-  * Counting categories only (HR R RBI SB K S WQS). Rate cats (OBP ERA WHIP)
-    need per-team ROS denominators and replacement-level modeling to score
-    honestly; v1 flags rate-relevant players qualitatively instead of
-    pretending precision. This UNDERVALUES elite-ratio arms and OBP bats.
-  * Replacement level = 0: a traded-away player's ROS production is counted
-    as fully lost, though the freed slot gets a waiver body. Overstates the
-    cost of giving depth; scarce stats (S, SB) are least affected, which is
-    the right direction of error for this league.
-  * ROS pace = 50/50 blend of last-30d and season weekly rates. Players with
-    zero recent appearances (IL) project ~half their season rate — crude but
-    it keeps injured stars from being priced at full health.
-  * Acceptance is modeled as point-gain only. Managers also weigh positional
-    fit, name value, and standings pressure; treat the viable set as a
-    shortlist, not a prediction.
+Remaining v2 limits: IL return dates aren't modeled (pending returners are
+priced at zero); acceptance weights are heuristics, not fitted; the greedy
+lineup assignment is approximate. All three are visible in the report.
 """
 from __future__ import annotations
 
+import re
 from datetime import date, timedelta
 from itertools import combinations
+from pathlib import Path
 
-from fantasy_assistant.analytics import races
+from fantasy_assistant.analytics import lineup, races
 from fantasy_assistant.graph.client import read_session
 
-MODEL_VERSION = "trades-v1"
-COUNTING = ["HR", "R", "RBI", "SB", "K", "S", "WQS"]
-_FIELDS = {  # cat -> (side, cypher expr over day line d)
-    "HR": ("bat", "coalesce(d.hr,0)"), "R": ("bat", "coalesce(d.r,0)"),
-    "RBI": ("bat", "coalesce(d.rbi,0)"), "SB": ("bat", "coalesce(d.sb,0)"),
-    "K": ("pit", "coalesce(d.k,0)"), "S": ("pit", "coalesce(d.sv,0)"),
-    "WQS": ("pit", "coalesce(d.w,0)+coalesce(d.qs,0)"),
-}
-SEASON_WEEKS_ELAPSED = 21.0
-RECENT_DAYS = 30
-MIN_THEIR_GAIN = 0.5   # counterparty must clear this to plausibly accept
+MODEL_VERSION = "trades-v2"
+COUNTING = lineup.COUNTING
+RATES = {"OBP": ("ob", "paden", True), "ERA": ("er", "outs", False),
+         "WHIP": ("wh", "outs", False)}
+# uniform YTD denominators (league-typical; ours observed 8/22: 5868 PA-den,
+# 971 IP -> 2914 outs). Per-team real values are a v3 scrape.
+YTD_PADEN = 5900.0
+YTD_OUTS = 2915.0
+MIN_THEIR_GAIN = 0.5
 MAX_BUNDLE = 2
-TOP_ASSETS = 12        # per side, ranked by total ROS counting value
+TOP_ASSETS = 12
+FA_TOP = 15
+STAR_RANK = 15          # top-N overall = "star"
+STAR_GAP_RANK = 40      # star-for-(nothing-better-than-rank-40) = implausible
+ALIGN_WEIGHT = 0.75     # acceptance-score weight on revealed-preference fit
+RAW_ROOT = Path(__file__).resolve().parents[3] / "data" / "raw"
 
 
 def _points_for_values(values: list[float], higher_better: bool = True) -> list[float]:
@@ -78,100 +69,239 @@ def _points_for_values(values: list[float], higher_better: bool = True) -> list[
     return pts
 
 
-def roster(team: str) -> list[dict]:
-    with read_session() as s:
-        return s.run(
-            """
-            MATCH (st:RosterStint)-[:ON_TEAM]->(t:FantasyTeam {cbs_name:$team}),
-                  (st)-[:OF_PLAYER]->(p:Player)
-            WHERE st.to_date IS NULL
-            RETURN DISTINCT p.name_full AS name, p.uid AS uid,
-                   p.cbs_positions AS pos, st.status AS status
-            """, team=team).data()
+def _era(er: float, outs: float) -> float:
+    return er * 27.0 / outs if outs else 0.0
 
 
-def ros_values(uids: list[str], remaining: int) -> dict[str, dict[str, float]]:
-    """player uid -> {cat: projected rest-of-season units} via pace blend."""
-    cutoff = (date.today() - timedelta(days=RECENT_DAYS)).isoformat()
-    projs: dict[str, dict[str, float]] = {c: {} for c in uids}
-    with read_session() as s:
-        for cat in COUNTING:
-            side, expr = _FIELDS[cat]
-            rows = s.run(
-                f"""
-                UNWIND $ids AS uid
-                MATCH (p:Player {{uid:uid}})
-                OPTIONAL MATCH (d:PlayerDayLine)-[:OF_PLAYER]->(p)
-                WHERE d.side=$side
-                WITH uid, sum({expr}) AS season,
-                     sum(CASE WHEN d.date >= date($cutoff)
-                         THEN {expr} ELSE 0 END) AS recent
-                RETURN uid, season, recent
-                """, ids=uids, side=side, cutoff=cutoff).data()
-            for r in rows:
-                wk_season = (r["season"] or 0) / SEASON_WEEKS_ELAPSED
-                wk_recent = (r["recent"] or 0) / (RECENT_DAYS / 7.0)
-                projs[r["uid"]][cat] = round(
-                    remaining * (0.5 * wk_season + 0.5 * wk_recent), 2)
-    return projs
+def _rate_value(cat: str, ytd_value: float, comps: dict) -> float:
+    """Projected final rate = (ytd_num + ros_num) / (ytd_den + ros_den)."""
+    num_k, den_k, _ = RATES[cat]
+    if cat == "OBP":
+        ytd_num, ytd_den = ytd_value * YTD_PADEN, YTD_PADEN
+    elif cat == "ERA":
+        ytd_num, ytd_den = ytd_value * YTD_OUTS / 27.0, YTD_OUTS
+    else:  # WHIP: value = wh / IP = wh / (outs/3)
+        ytd_num, ytd_den = ytd_value * YTD_OUTS / 3.0, YTD_OUTS
+    ros_num, ros_den = comps[num_k], comps[den_k]
+    num, den = ytd_num + ros_num, ytd_den + ros_den
+    if cat == "ERA":
+        return _era(num, den) if den else 0.0
+    if cat == "WHIP":
+        return num / (den / 3.0) if den else 0.0
+    return num / den if den else 0.0
 
 
-def eval_trade(team_a: str, gives_a: list[str], team_b: str,
-               gives_b: list[str], race: dict | None = None,
-               projs: dict | None = None) -> dict:
-    """Both-side point deltas for team_a sending gives_a for team_b's gives_b.
+class Market:
+    """Cached league state for a run: rosters, projections, curves, prefs."""
 
-    gives_* are player uids. Counting categories only — see module docstring.
-    """
-    race = race or races.analyze()
-    remaining = race["remaining_periods"]
-    projs = projs or ros_values(gives_a + gives_b, remaining)
+    def __init__(self):
+        self.race = races.analyze()
+        self.us = self.race["us"]
+        self.remaining = self.race["remaining_periods"]
+        self.scales = lineup.league_scales(self.remaining)
+        self.fa = sorted(lineup.fa_pool(self.remaining),
+                         key=lambda p: -lineup.scalar(p, self.scales))[:FA_TOP]
+        self._rosters: dict[str, list[dict]] = {}
+        self._base: dict[str, dict] = {}
+        self._pursuit: dict[str, dict[str, float]] = {}
+        self._zstats = None
+        self._star_rank: dict[str, int] | None = None
 
-    out = {"model": MODEL_VERSION, "teams": {team_a: {}, team_b: {}},
-           "detail": []}
-    for team, gained, lost in ((team_a, gives_b, gives_a),
-                               (team_b, gives_a, gives_b)):
-        total = 0.0
-        for cat in COUNTING:
-            board = race["categories"][cat]["proj_leaderboard"]
+    def roster(self, team: str) -> list[dict]:
+        if team not in self._rosters:
+            self._rosters[team] = lineup.roster_players(team, self.remaining)
+        return self._rosters[team]
+
+    def base(self, team: str) -> dict:
+        if team not in self._base:
+            self._base[team] = lineup.team_totals(self.roster(team), self.scales)
+        return self._base[team]
+
+    # ---- category points ----------------------------------------------
+    def cat_delta_pts(self, team: str, deltas: dict[str, float]) -> list[dict]:
+        """Point changes from shifting this team's projected values."""
+        out = []
+        for cat in COUNTING + list(RATES):
+            d = deltas.get(cat, 0.0)
+            if abs(d) < 1e-9:
+                continue
+            board = self.race["categories"][cat]["proj_leaderboard"]
             teams = [t for t, _, _ in board]
             values = [v for _, v, _ in board]
             idx = teams.index(team)
-            base_pts = _points_for_values(values)[idx]
-            delta_units = (sum(projs[c].get(cat, 0) for c in gained)
-                           - sum(projs[c].get(cat, 0) for c in lost))
-            if abs(delta_units) < 1e-9:
-                continue
+            hb = RATES[cat][2] if cat in RATES else True
+            base = _points_for_values(values, hb)[idx]
             shifted = values.copy()
-            shifted[idx] += delta_units
-            new_pts = _points_for_values(shifted)[idx]
-            if abs(new_pts - base_pts) > 1e-9:
-                out["detail"].append(
-                    {"team": team, "cat": cat, "delta_units": round(delta_units, 1),
-                     "pts": round(new_pts - base_pts, 2)})
-            total += new_pts - base_pts
-        out["teams"][team] = round(total, 2)
-    return out
+            shifted[idx] += d
+            pts = _points_for_values(shifted, hb)[idx] - base
+            if abs(pts) > 1e-9:
+                out.append({"cat": cat, "delta_units": round(d, 3),
+                            "pts": round(pts, 2)})
+        return out
+
+    def eval_trade(self, team_a: str, gives_a: list[str], team_b: str,
+                   gives_b: list[str]) -> dict:
+        """Both-side point deltas; gives_* are player uids on each roster."""
+        out = {"model": MODEL_VERSION, "teams": {}, "detail": []}
+        for team, lose, gain_from in ((team_a, gives_a, team_b),
+                                      (team_b, gives_b, team_a)):
+            lose_set = set(lose)
+            gained = [p for p in self.roster(gain_from)
+                      if p["uid"] in (gives_b if team == team_a else gives_a)]
+            roster2 = [p for p in self.roster(team)
+                       if p["uid"] not in lose_set] + gained
+            quota = max(0, len(lose) - len(gained))
+            after = lineup.team_totals(roster2, self.scales,
+                                       fa_quota=quota, fa_candidates=self.fa)
+            base = self.base(team)
+            deltas = {c: after["totals"][c] - base["totals"][c]
+                      for c in COUNTING}
+            for cat in RATES:
+                ytd = self._ytd_rate(team, cat)
+                deltas[cat] = (_rate_value(cat, ytd, after["totals"])
+                               - _rate_value(cat, ytd, base["totals"]))
+            detail = self.cat_delta_pts(team, deltas)
+            for d in detail:
+                d["team"] = team
+            out["detail"] += detail
+            out["teams"][team] = round(sum(d["pts"] for d in detail), 2)
+        return out
+
+    def _ytd_rate(self, team: str, cat: str) -> float:
+        for t, v, _ in self.race["categories"][cat]["proj_leaderboard"]:
+            if t == team:
+                return v
+        return 0.0
+
+    # ---- acceptance ----------------------------------------------------
+    def _z(self):
+        """League per-cat mean/std of rostered players' season units."""
+        if self._zstats is None:
+            import statistics as st
+            vals = {c: [] for c in COUNTING}
+            for team in {t for t, _, _ in
+                         self.race["categories"]["HR"]["proj_leaderboard"]}:
+                for p in self.roster(team):
+                    for c in COUNTING:
+                        vals[c].append(p["season"].get(c, 0) or 0)
+            self._zstats = {c: (st.mean(v), st.pstdev(v) or 1.0)
+                            for c, v in vals.items()}
+        return self._zstats
+
+    def zvec(self, player: dict) -> dict[str, float]:
+        return {c: ((player["season"].get(c, 0) or 0) - m) / s
+                for c, (m, s) in self._z().items()}
+
+    def pursuit(self, team: str) -> dict[str, float]:
+        """Revealed preferences: category z-profile of their recent adds,
+        plus categories of any player they asked us for in a live offer."""
+        if team in self._pursuit:
+            return self._pursuit[team]
+        cutoff = (date.today() - timedelta(days=30)).isoformat() + "T00:00:00Z"
+        with read_session() as s:
+            names = [r["nm"] for r in s.run(
+                """
+                MATCH (e:TransactionEvent)-[:BY_TEAM]->
+                      (t:FantasyTeam {cbs_name:$team}),
+                      (e)-[:ADDS]->(p:Player)
+                WHERE e.posted_at >= datetime($cutoff)
+                RETURN p.name_full AS nm
+                """, team=team, cutoff=cutoff)]
+        vec = {c: 0.0 for c in COUNTING}
+        # adds may no longer be rostered anywhere; look them up directly
+        if names:
+            with read_session() as s:
+                rows = s.run(
+                    """
+                    UNWIND $names AS nm MATCH (p:Player {name_full:nm})
+                    OPTIONAL MATCH (d:PlayerDayLine)-[:OF_PLAYER]->(p)
+                    RETURN nm,
+                      sum(CASE WHEN d.side='bat' THEN coalesce(d.hr,0) ELSE 0 END) AS HR,
+                      sum(CASE WHEN d.side='bat' THEN coalesce(d.r,0) ELSE 0 END) AS R,
+                      sum(CASE WHEN d.side='bat' THEN coalesce(d.rbi,0) ELSE 0 END) AS RBI,
+                      sum(CASE WHEN d.side='bat' THEN coalesce(d.sb,0) ELSE 0 END) AS SB,
+                      sum(CASE WHEN d.side='pit' THEN coalesce(d.k,0) ELSE 0 END) AS K,
+                      sum(CASE WHEN d.side='pit' THEN coalesce(d.sv,0) ELSE 0 END) AS S,
+                      sum(CASE WHEN d.side='pit' THEN coalesce(d.w,0)+coalesce(d.qs,0) ELSE 0 END) AS WQS
+                    """, names=names).data()
+            for r in rows:
+                z = self.zvec({"season": r})
+                for c in COUNTING:
+                    vec[c] += max(z[c], 0.0)
+        # waiver adds show what a team fills for $2.50; a live trade OFFER
+        # shows what it will pay real assets for. Weight offers to dominate:
+        # unit-normalize the adds signal, then stack offer-wants on top.
+        norm = sum(v * v for v in vec.values()) ** 0.5 or 1.0
+        vec = {c: 0.5 * v / norm for c, v in vec.items()}
+        for c in self._pending_wants(team):
+            vec[c] += 1.0
+        norm = sum(v * v for v in vec.values()) ** 0.5 or 1.0
+        self._pursuit[team] = {c: v / norm for c, v in vec.items()}
+        return self._pursuit[team]
+
+    def _pending_wants(self, team: str) -> list[str]:
+        """Categories of our players a team asked for in a live offer."""
+        f = None
+        for d in sorted(RAW_ROOT.iterdir(), reverse=True):
+            cand = d / "pending_trades_raw.txt"
+            if cand.exists():
+                f = cand
+                break
+        if not f:
+            return []
+        txt = f.read_text()
+        # scope to the offers section — the page body also carries a stats
+        # widget naming dozens of unrelated players
+        m = re.search(r"PENDING TRADES(.*?)(?:\nMore\n|\Z)", txt, re.S)
+        if not m or team not in m.group(1):
+            return []
+        section = m.group(1)
+        wanted = []
+        for p in self.roster(self.us):
+            if p["name"] in section:
+                z = self.zvec(p)
+                top = sorted(z, key=lambda c: -z[c])[:2]
+                wanted += [c for c in top if z[c] > 0.5]
+        return wanted
+
+    def star_rank(self, uid: str) -> int:
+        if self._star_rank is None:
+            allp = []
+            for team in {t for t, _, _ in
+                         self.race["categories"]["HR"]["proj_leaderboard"]}:
+                allp += self.roster(team)
+            allp.sort(key=lambda p: -lineup.scalar(p, self.scales))
+            self._star_rank = {p["uid"]: i + 1 for i, p in enumerate(allp)}
+        return self._star_rank.get(uid, 999)
+
+    def acceptance(self, them: str, they_give: list[str],
+                   they_get: list[dict], their_delta: float) -> dict:
+        pv = self.pursuit(them)
+        align = 0.0
+        for p in they_get:
+            z = self.zvec(p)
+            align += sum(pv[c] * max(z[c], 0.0) for c in COUNTING)
+        align /= max(len(they_get), 1)
+        best_given = min((self.star_rank(u) for u in they_give), default=999)
+        best_gotten = min((self.star_rank(p["uid"]) for p in they_get),
+                          default=999)
+        implausible = best_given <= STAR_RANK and best_gotten > STAR_GAP_RANK
+        score = their_delta + ALIGN_WEIGHT * align - (3.0 if implausible else 0)
+        return {"align": round(align, 2), "implausible": implausible,
+                "score": round(score, 2)}
 
 
-def counter_search(them: str, us: str | None = None) -> dict:
-    """Pareto-viable bundles vs one counterparty, ranked by our gain."""
-    race = races.analyze()
-    us = us or race["us"]
-    remaining = race["remaining_periods"]
-
-    ours, theirs = roster(us), roster(them)
-    ids = [p["uid"] for p in ours + theirs if p["uid"]]
-    projs = ros_values(ids, remaining)
+def counter_search(them: str, market: Market | None = None) -> dict:
+    mkt = market or Market()
+    us = mkt.us
+    ours, theirs = mkt.roster(us), mkt.roster(them)
     names = {p["uid"]: p["name"] for p in ours + theirs}
+    by_uid = {p["uid"]: p for p in ours + theirs}
 
     def top_assets(players):
-        scored = [(sum(projs.get(p["uid"], {}).values()), p["uid"])
-                  for p in players if p["uid"]]
-        scored.sort(reverse=True)
-        return [cid for _, cid in scored[:TOP_ASSETS]]
-
-    our_ids, their_ids = top_assets(ours), top_assets(theirs)
+        act = [p for p in players if p["status"] not in ("minors",)]
+        act.sort(key=lambda p: -lineup.scalar(p, mkt.scales))
+        return [p["uid"] for p in act[:TOP_ASSETS]]
 
     def bundles(pool):
         out = [[c] for c in pool]
@@ -179,45 +309,51 @@ def counter_search(them: str, us: str | None = None) -> dict:
             out += [list(pair) for pair in combinations(pool, 2)]
         return out
 
-    viable = []
-    for give in bundles(our_ids):
-        for get in bundles(their_ids):
-            ev = eval_trade(us, give, them, get, race=race, projs=projs)
+    viable, searched = [], 0
+    for give in bundles(top_assets(ours)):
+        for get in bundles(top_assets(theirs)):
+            searched += 1
+            ev = mkt.eval_trade(us, give, them, get)
             d_us, d_them = ev["teams"][us], ev["teams"][them]
-            if d_us > 0 and d_them >= MIN_THEIR_GAIN:
-                viable.append({
-                    "we_give": [names[c] for c in give],
-                    "we_get": [names[c] for c in get],
-                    "our_delta": d_us, "their_delta": d_them,
-                    "detail": ev["detail"]})
-    viable.sort(key=lambda v: (-v["our_delta"], -v["their_delta"]))
+            if d_us <= 0 or d_them < MIN_THEIR_GAIN:
+                continue
+            acc = mkt.acceptance(them, get, [by_uid[u] for u in give], d_them)
+            viable.append({"we_give": [names[u] for u in give],
+                           "we_get": [names[u] for u in get],
+                           "our_delta": d_us, "their_delta": d_them,
+                           **acc, "detail": ev["detail"]})
+    viable.sort(key=lambda v: (v["implausible"], -v["our_delta"], -v["score"]))
     return {"model": MODEL_VERSION, "us": us, "them": them,
-            "as_of_period": race["as_of_period"], "viable": viable,
-            "searched": len(bundles(our_ids)) * len(bundles(their_ids))}
+            "as_of_period": mkt.race["as_of_period"],
+            "pursuit": mkt.pursuit(them), "viable": viable,
+            "searched": searched}
 
 
 def report(result: dict, top: int = 12) -> str:
-    lines = [f"PARETO COUNTER SEARCH — {result['us']} <-> {result['them']} "
-             f"(through period {result['as_of_period']}) [{result['model']}]",
-             f"{result['searched']} bundles searched; "
-             f"{len(result['viable'])} viable (both sides gain, "
-             f"theirs >= {MIN_THEIR_GAIN})", ""]
-    for v in result["viable"][:top]:
-        gives = " + ".join(v["we_give"])
-        gets = " + ".join(v["we_get"])
-        lines.append(f"  us {v['our_delta']:+5.2f} / them {v['their_delta']:+5.2f}"
-                     f"   give: {gives:<38} get: {gets}")
-    if not result["viable"]:
-        lines.append("  none — no bundle in the searched space helps both "
-                     "sides on counting stats.")
-    lines += ["", "caveats: counting cats only (OBP/ERA/WHIP unscored — "
-              "elite-ratio arms and OBP bats are undervalued);",
-              "replacement level = 0 (giving depth is over-penalized); "
-              "acceptance modeled as point-gain only;",
-              "displacement ignored (a gained player is scored as pure "
-              "addition even when the lineup slot he'd take is occupied —",
-              "gains are overstated for full lineups; net against the "
-              "displaced player's ROS before offering)."]
+    pv = result["pursuit"]
+    hot = ", ".join(f"{c} {v:.2f}" for c, v in
+                    sorted(pv.items(), key=lambda kv: -kv[1]) if v > 0.15)
+    plaus = [v for v in result["viable"] if not v["implausible"]]
+    lines = [
+        f"PARETO COUNTER SEARCH — {result['us']} <-> {result['them']} "
+        f"(through period {result['as_of_period']}) [{result['model']}]",
+        f"{result['searched']} bundles searched; {len(result['viable'])} "
+        f"Pareto-viable, {len(plaus)} plausible after star-gap filter",
+        f"their revealed pursuit (recent adds + live offers): {hot or 'none'}",
+        ""]
+    for v in plaus[:top]:
+        lines.append(
+            f"  us {v['our_delta']:+5.2f} / them {v['their_delta']:+5.2f} "
+            f"accept {v['score']:>5.2f}  "
+            f"give: {' + '.join(v['we_give']):<38} "
+            f"get: {' + '.join(v['we_get'])}")
+    if not plaus:
+        lines.append("  none plausible — no bundle helps both sides without "
+                     "an implausible star gap.")
+    lines += ["", "v2 scores all 10 categories with displacement + FA "
+              "replacement; remaining limits: IL returners priced at zero,",
+              "uniform YTD rate denominators, heuristic acceptance weights, "
+              "greedy (approximate) lineup assignment."]
     return "\n".join(lines)
 
 
