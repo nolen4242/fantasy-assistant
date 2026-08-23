@@ -104,17 +104,26 @@ def snapshot(out_dir: Path | None = None) -> None:
         pages[f"/stats/stats-main/fa:P/period-{period}:p/standard/projections?print_rows=9999"] = "fa_pool_pitchers.psv"
 
         for path, fname in pages.items():
-            try:
-                page.goto(BASE + path, wait_until="domcontentloaded")
-                page.wait_for_timeout(2500 if "stats-main" in path else 1500)
-                text = page.evaluate(TABLE_EXTRACT_JS) if ("print_rows" in path or "roster" in path) \
-                    else page.inner_text("body")
-                stamp = f"source: {BASE + path}\ncaptured: {datetime.now().isoformat(timespec='seconds')}\n---\n"
-                (out / fname).write_text(stamp + text)
-                captured.append((path, fname, len(text)))
-            except Exception as exc:  # one bad page must not kill the snapshot
-                captured.append((path, fname, -1))
-                print(f"  ERROR capturing {path}: {exc}", file=sys.stderr)
+            # the stats-main pool dumps render 44 pages of rows and routinely
+            # blow past the default 30s goto timeout (three -1 captures the
+            # week of 8/22); give them longer and retry every page once
+            slow = "stats-main" in path
+            for attempt in (1, 2):
+                try:
+                    page.goto(BASE + path, wait_until="domcontentloaded",
+                              timeout=90_000 if slow else 30_000)
+                    page.wait_for_timeout(2500 if slow else 1500)
+                    text = page.evaluate(TABLE_EXTRACT_JS) if ("print_rows" in path or "roster" in path) \
+                        else page.inner_text("body")
+                    stamp = f"source: {BASE + path}\ncaptured: {datetime.now().isoformat(timespec='seconds')}\n---\n"
+                    (out / fname).write_text(stamp + text)
+                    captured.append((path, fname, len(text)))
+                    break
+                except Exception as exc:  # one bad page must not kill the snapshot
+                    if attempt == 2:
+                        captured.append((path, fname, -1))
+                    print(f"  ERROR capturing {path} (attempt {attempt}): {exc}",
+                          file=sys.stderr)
 
         # by-period standings: every closed period via the page's own select
         page.goto(BASE + "/standings/byperiod", wait_until="domcontentloaded")

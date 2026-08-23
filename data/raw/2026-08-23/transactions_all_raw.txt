@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/transactions?print_rows=9999
-captured: 2026-08-23T10:21:07
+captured: 2026-08-23T12:44:53
 ---
 DATE|TEAM|PLAYERS|EFFECTIVE|COST
 8/22/26 8:34 PM ET|Like a Nightmare|Shane Bieber P • TOR - Added|8/24/26|$2.50

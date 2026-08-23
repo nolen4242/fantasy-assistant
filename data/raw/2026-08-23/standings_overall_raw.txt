@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/standings/overall
-captured: 2026-08-23T10:21:11
+captured: 2026-08-23T12:44:58
 ---
 League
 My Team
@@ -7,7 +7,6 @@ Players
 Scores
 Standings
 Advice
-1
 Bob Uecker Imaginary Baseball League
 Runtime Terror
 Runtime Terror
@@ -17,7 +16,6 @@ Standings
 ADD/DROP
  
 TRADES
-1
 2 / 13
 WAIVER #
 OVERALL
@@ -196,7 +194,7 @@ Maga Doge	131	4.0	-0.5
 Like a Nightmare	126	3.0	0.0
 Gashouse Gang	121	2.0	0.5
 Trex	119	1.0	-0.5
-STANDINGS UPDATED AS OF 08/23/26 10:21 AM ET
+STANDINGS UPDATED AS OF 08/23/26 12:44 PM ET
 More
 Pick'em Games
 Fantasy Sports

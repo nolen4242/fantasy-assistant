@@ -14,7 +14,7 @@ import json
 from datetime import date, datetime
 from pathlib import Path
 
-from fantasy_assistant.analytics import activity, races, valuation, variance
+from fantasy_assistant.analytics import activity, races, variance
 from fantasy_assistant.graph.client import session
 from fantasy_assistant.graph.refdata import next_open_period, period_for_date
 
@@ -226,17 +226,32 @@ def compose(as_of: str | None = None) -> str:
         add("- none")
     add("")
 
-    add("## Trade board (deadline Sun 8/24; both sides valued; tiers model acceptance)")
-    board = valuation.scan(["Gashouse Gang", "Dawg", "Maga Doge"], top=6)
+    with session() as s:
+        deadline = s.run(
+            "MATCH (se:Season) RETURN toString(se.trade_deadline) AS d"
+        ).single()["d"]
+    add(f"## Trade board (deadline {deadline}; both sides priced via trades-v2 "
+        "displacement model; accept = revealed-preference fit)")
+    from fantasy_assistant.analytics import trades as trades_mod
+    mkt = trades_mod.Market()
+    board = []
+    for rival in ["Like a Nightmare", "Maga Doge", "Dawg", "Rieken Havoc"]:
+        found = trades_mod.counter_search(rival, market=mkt)
+        for v in [x for x in found["viable"] if not x["implausible"]][:3]:
+            board.append({**v, "with": rival})
+    board.sort(key=lambda v: (-v["our_delta"], -v["score"]))
     if not board:
-        add("- no 1-for-1 clears acceptance under current projections — points "
+        add("- no bundle clears both sides under current projections — points "
             "this week live on the wire (streams above), not the trade market")
-    for t in board:
-        add(f"- [{t['tier']}] give **{t['give']}** for **{t['get']}** ({t['with']}): "
-            f"us {t['our_delta']:+.1f} pts, them {t['their_delta']:+.1f}")
-        recs.append({"kind": "trade_proposal", "player": t["get"],
-                     "rationale": f"{t['tier']}: give {t['give']} to {t['with']}, "
-                                  f"us {t['our_delta']:+.1f}/them {t['their_delta']:+.1f}"})
+    for t in board[:6]:
+        give, get = " + ".join(t["we_give"]), " + ".join(t["we_get"])
+        add(f"- give **{give}** for **{get}** ({t['with']}): "
+            f"us {t['our_delta']:+.1f} pts, them {t['their_delta']:+.1f}, "
+            f"accept {t['score']:.1f}")
+        recs.append({"kind": "trade_proposal", "player": t["we_get"][0],
+                     "rationale": f"give {give} to {t['with']}, "
+                                  f"us {t['our_delta']:+.1f}/them {t['their_delta']:+.1f}"
+                                  f" accept {t['score']:.1f}"})
     add("")
     add("## Hot on the wire (unrostered, skill-based heat)")
     with session() as s_:

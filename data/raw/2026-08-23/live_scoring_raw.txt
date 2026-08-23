@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/scoring/standard
-captured: 2026-08-23T10:21:18
+captured: 2026-08-23T12:45:05
 ---
 League
 My Team
@@ -7,7 +7,6 @@ Players
 Scores
 Standings
 Advice
-1
 Bob Uecker Imaginary Baseball League
 Runtime Terror
 Runtime Terror
@@ -17,7 +16,6 @@ Live Scoring
 ADD/DROP
  
 TRADES
-1
 2 / 13
 WAIVER #
 PERIOD
@@ -56,15 +54,15 @@ NCP = Net Change Period   NCT = Net Change Today
 Actives	Games	Stats
 A. Wells C  	
 NYY v TOR 1:35 EDT
-TOR +118, NYY -143
+TOR +110, NYY -133
 	 
 P. Alonso 1B  	
 BAL v TB 1:35 EDT
-TB -110, BAL -110
+TB -102, BAL -118
 	 
 T. Bazzana 2B  	
 CLE @ COL 3:10 EDT
-CLE -169, COL +140
+CLE -161, COL +135
 	 
 C. Durbin 3B  	
 BOS v SF 3:15 EDT
@@ -88,19 +86,19 @@ CHC -120, SEA +100
 	 
 C. Carroll OF  	
 ARI v CIN 4:15 EDT
-CIN +115, ARI -135
+CIN +118, ARI -139
 	 
 G. Conine OF  	
 MIA v WAS 1:40 EDT
-WAS +140, MIA -167
+WAS +135, MIA -161
 	 
 S. Kwan OF  	
 CLE @ COL 3:10 EDT
-CLE -169, COL +140
+CLE -161, COL +135
 	 
 Y. Diaz U  	
 TB @ BAL 1:35 EDT
-TB -110, BAL -110
+TB -102, BAL -118
 	 
 A. Chapman P  	
 BOS v SF 3:15 EDT
@@ -112,15 +110,15 @@ SF +180, BOS -222
 	 
 L. Henderson P  	
 MIL v ATL 7:10 EDT
-ATL +105, MIL -125
+ATL -102, MIL -118
 	 
 T. Mahle P   	
 ATL @ MIL 7:10 EDT
-ATL +105, MIL -125
+ATL -102, MIL -118
 	 
 D. May P  	
 MIL v ATL 7:10 EDT
-ATL +105, MIL -125
+ATL -102, MIL -118
 	 
 T. Melton P  	
 DET @ KC 2:10 EDT
@@ -132,11 +130,11 @@ SF +180, BOS -222
 	 
 E. Perez P  	
 MIA v WAS 1:40 EDT
-WAS +140, MIA -167
+WAS +135, MIA -161
 	 
 W. Urena P  	
 LAA @ TEX 2:35 EDT
-LAA +135, TEX -167
+LAA +140, TEX -167
 	 
 Today	 
 Total	1309-5237, 239 2B, 33 3B, 201 HR, 707 RBI, 769 R, 101 SB, 653 BB, 33 CS, 0.340 OBP

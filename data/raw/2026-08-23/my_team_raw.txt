@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/teams
-captured: 2026-08-23T10:21:14
+captured: 2026-08-23T12:45:01
 ---
 League
 My Team
@@ -7,7 +7,6 @@ Players
 Scores
 Standings
 Advice
-1
 Bob Uecker Imaginary Baseball League
 Runtime Terror
 Runtime Terror 
@@ -17,7 +16,6 @@ Nolen Smith
 ADD/DROP
  
 TRADES
-1
 2 / 13
 WAIVER #
 YEAR
@@ -51,7 +49,7 @@ EDIT	POS	PLAYERS	AB	R	H	1B	2B	3B	HR	RBI	BB	KO	SB	CS	BA	OBP	SLG	ROTO RANK
 
 	3B	Caleb Durbin 3B • BOS	412	64	106	71	22	1	12	62	35	62	16	5	.257	.328	.403	75
 
-	SS	Colson Montgomery 3B,SS • CHW 	461	58	99	52	20	0	27	72	42	173	1	1	.215	.293	.434	118
+	SS	Colson Montgomery 3B,SS • CHW	461	58	99	52	20	0	27	72	42	173	1	1	.215	.293	.434	118
 
 	MI	Kody Clemens 1B,2B,OF • MIN	418	58	100	52	21	6	21	64	28	102	8	2	.239	.295	.469	93
 

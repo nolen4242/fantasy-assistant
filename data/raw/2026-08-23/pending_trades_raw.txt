@@ -1,5 +1,5 @@
 source: https://buecker.baseball.cbssports.com/transactions/trade?show_pending=1
-captured: 2026-08-23T10:21:22
+captured: 2026-08-23T12:45:08
 ---
 League
 My Team
@@ -7,7 +7,6 @@ Players
 Scores
 Standings
 Advice
-1
 Bob Uecker Imaginary Baseball League
 Runtime Terror
 Runtime Terror
@@ -17,7 +16,6 @@ Trade
 ADD/DROP
  
 TRADES
-1
 2 / 13
 WAIVER #
 Runtime Terror
@@ -28,85 +26,78 @@ Positions Wanted:None
 Trade Deadline:August 30, 2026VIEW TRADE POLICIES
 Select Team To Trade With 
 ACTIVES
-	PLAYER	BA	R	HR	RBI	SB	ERA	WHIP	W	K	S				PLAYER	BA	R	HR	RBI	SB	ERA	WHIP	W	K	S
+	PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB				PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB
 	Austin Wells
-C • NYY	0.177	26	8	18	2																			
+C • NYY						0.177	26	8	18	2														
 	Pete Alonso
-1B • BAL	0.273	79	30	85	5																			
+1B • BAL						0.273	79	30	85	5														
 	Travis Bazzana
-2B • CLE	0.242	40	9	39	18																			
+2B • CLE						0.242	40	9	39	18														
 	Caleb Durbin
-3B • BOS	0.257	64	12	62	16																			
+3B • BOS						0.257	64	12	62	16														
 	Colson Montgomery
-SS • CHW 	0.215	58	27	72	1																			
+SS • CHW						0.215	58	27	72	1														
 	Kody Clemens
-1B • MIN	0.239	58	21	64	8																			
+1B • MIN						0.239	58	21	64	8														
 	Michael Busch
-1B • CHC 	0.244	55	16	65	2																			
+1B • CHC 						0.244	55	16	65	2														
 	Corbin Carroll
-RF • ARI	0.250	80	18	57	18																			
+RF • ARI						0.250	80	18	57	18														
 	Dominic Canzone
-RF • SEA	0.256	45	19	56	1																			
+RF • SEA						0.256	45	19	56	1														
 	Griffin Conine
-LF • MIA	0.263	29	14	31	2																			
+LF • MIA						0.263	29	14	31	2														
 	Steven Kwan
-LF • CLE	0.262	59	2	25	9																			
+LF • CLE						0.262	59	2	25	9														
 	Yandy Diaz
-DH • TB	0.306	74	19	72	3																			
+DH • TB						0.306	74	19	72	3														
 	Aroldis Chapman
-RP • BOS						1.90	1.20	2	56	28														
+RP • BOS	1.90	1.20	2	56	28																			
 	Dustin May
-SP • MIL						4.57	1.30	6	118	0														
+SP • MIL	4.57	1.30	6	118	0																			
 	Erik Miller
-RP • BOS						2.19	1.29	2	59	4														
+RP • BOS	2.19	1.29	2	59	4																			
 	Eury Perez
-SP • MIA 						3.17	1.11	7	137	0														
+SP • MIA 	3.17	1.11	7	137	0																			
 	Logan Henderson
-SP • MIL 						2.60	0.89	8	79	0														
+SP • MIL 	2.60	0.89	8	79	0																			
 	Sonny Gray
-SP • BOS						2.79	1.16	16	123	0														
+SP • BOS	2.79	1.16	16	123	0																			
 	Troy Melton
-RP • DET						1.60	1.00	7	76	0														
+RP • DET	1.60	1.00	7	76	0																			
 	Tyler Mahle
-SP • ATL						4.53	1.31	4	108	0														
+SP • ATL	4.53	1.31	4	108	0																			
 	Walbert Urena
-SP • LAA						2.80	1.24	8	109	0														
+SP • LAA	2.80	1.24	8	109	0																			
 BENCH
-	PLAYER	BA	R	HR	RBI	SB	ERA	WHIP	W	K	S				PLAYER	BA	R	HR	RBI	SB	ERA	WHIP	W	K	S
+	PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB				PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB
 	Jacob deGrom
-SP • TEX						3.77	1.13	9	157	0														
+SP • TEX	3.77	1.13	9	157	0																			
 	Dalton Rushing
-C • LAD 	0.254	37	12	36	0																			
+C • LAD 						0.254	37	12	36	0														
 	Will Smith
-C • LAD 	0.249	23	6	23	0																			
+C • LAD 						0.249	23	6	23	0														
 	Dansby Swanson
-SS • CHC 	0.216	78	18	66	17																			
+SS • CHC 						0.216	78	18	66	17														
 	Josh Jung
-3B • TEX 	0.294	46	9	35	1																			
+3B • TEX 						0.294	46	9	35	1														
 	Aaron Judge
-RF • NYY 	0.248	43	17	38	5																			
+RF • NYY 						0.248	43	17	38	5														
 	Chase Dollander
-SP • COL 						3.89	1.30	3	47	0														
+SP • COL 	3.89	1.30	3	47	0																			
 	Luis Gil
-SP • NYY						6.05	1.34	1	9	0														
+SP • NYY	6.05	1.34	1	9	0																			
 	River Ryan
-SP • DET 						0.00	0.00	0	0	0														
+SP • DET 	0.00	0.00	0	0	0																			
 TRANSACTION DETAILS
 PENDING TRADES
-1
+0
 OFFERED BY ME
 ACTION	DATE & TIME	OFFERED BY	OFFERED TO	STATUS
 No Trades Offered By Me
 OFFERED TO ME
 ACTION	DATE & TIME	OFFERED BY	OFFERED TO	STATUS
-
- REVIEW
-	08/22/26 08:24 pm ET	Like a Nightmare
-Brice Turang 2B • MIL
-	Runtime Terror
-Aroldis Chapman P • BOS
-	
-PENDING ACCEPTANCE
+No Trades Offered To Me
 More
 Pick'em Games
 Fantasy Sports
