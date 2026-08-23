@@ -1,0 +1,204 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-08-23T10:21:18
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+1
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(8th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+1
+2 / 13
+WAIVER #
+PERIOD
+PERIOD 22 (MON, AUG 17 - SUN, AUG 23)
+
+	
+
+
+		Runtime Terror		
+NCP
++1.50
+		
+BST	85.50
+DWG	84.00
+YGN	83.50
+LAN	83.00
+RHV	79.00
+MD	77.00
+LB	76.00
+RTT	75.50
+		
+GTN	69.00
+GHG	61.00
+SDG	50.50
+TRX	46.00
+MGI	40.00
+	
+
+75.50	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+A. Wells C  	
+NYY v TOR 1:35 EDT
+TOR +118, NYY -143
+	 
+P. Alonso 1B  	
+BAL v TB 1:35 EDT
+TB -110, BAL -110
+	 
+T. Bazzana 2B  	
+CLE @ COL 3:10 EDT
+CLE -169, COL +140
+	 
+C. Durbin 3B  	
+BOS v SF 3:15 EDT
+SF +180, BOS -222
+	 
+C. Montgomery SS  	
+CHW v NYM 2:10 EDT
+NYM -110, CHW -110
+	 
+K. Clemens MI  	
+MIN @ SD 4:10 EDT
+MIN +120, SD -143
+	 
+M. Busch CI  	
+CHC @ SEA 4:10 EDT
+CHC -120, SEA +100
+	 
+D. Canzone OF  	
+SEA v CHC 4:10 EDT
+CHC -120, SEA +100
+	 
+C. Carroll OF  	
+ARI v CIN 4:15 EDT
+CIN +115, ARI -135
+	 
+G. Conine OF  	
+MIA v WAS 1:40 EDT
+WAS +140, MIA -167
+	 
+S. Kwan OF  	
+CLE @ COL 3:10 EDT
+CLE -169, COL +140
+	 
+Y. Diaz U  	
+TB @ BAL 1:35 EDT
+TB -110, BAL -110
+	 
+A. Chapman P  	
+BOS v SF 3:15 EDT
+SF +180, BOS -222
+	 
+S. Gray P  	
+BOS v SF 3:15 EDT
+SF +180, BOS -222
+	 
+L. Henderson P  	
+MIL v ATL 7:10 EDT
+ATL +105, MIL -125
+	 
+T. Mahle P   	
+ATL @ MIL 7:10 EDT
+ATL +105, MIL -125
+	 
+D. May P  	
+MIL v ATL 7:10 EDT
+ATL +105, MIL -125
+	 
+T. Melton P  	
+DET @ KC 2:10 EDT
+DET -115, KC -105
+	 
+E. Miller P  	
+BOS v SF 3:15 EDT
+SF +180, BOS -222
+	 
+E. Perez P  	
+MIA v WAS 1:40 EDT
+WAS +140, MIA -167
+	 
+W. Urena P  	
+LAA @ TEX 2:35 EDT
+LAA +135, TEX -167
+	 
+Today	 
+Total	1309-5237, 239 2B, 33 3B, 201 HR, 707 RBI, 769 R, 101 SB, 653 BB, 33 CS, 0.340 OBP
+971.1 INN, 15924 PC, 834 HA, 365 BBI, 974 K, 373 ER, 3.456 ERA, 1.234 WHIP, 69 W, 52 L, 36 S, 135 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	BST	232	800	771	114	0.331	1084	3.82	1.24	54	133	85.50
+2nd	DWG	246	749	848	106	0.348	919	3.79	1.20	29	136	84.00
+3rd	YGN	232	701	778	113	0.329	1084	3.94	1.19	23	158	83.50
+4th	LAN	226	680	761	151	0.319	1113	3.96	1.17	73	126	83.00
+5th	RHV	173	672	727	144	0.329	1050	3.40	1.19	75	133	79.00
+6th	MD	261	780	837	113	0.335	1050	4.30	1.24	42	131	77.00
+7th	LB	200	712	657	80	0.329	1213	3.47	1.23	52	143	76.00
+8th	RTT	201	707	769	101	0.340	974	3.46	1.23	36	135	75.50
+9th	GTN	196	670	734	128	0.317	1098	3.62	1.22	21	153	69.00
+10th	GHG	178	653	729	73	0.332	986	3.59	1.14	43	121	61.00
+11th	SDG	199	716	648	125	0.315	943	4.14	1.25	30	156	50.50
+12th	TRX	172	577	699	125	0.331	945	4.05	1.23	51	119	46.00
+13th	MGI	157	659	699	101	0.320	956	4.16	1.30	69	134	40.00
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

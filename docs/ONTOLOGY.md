@@ -2,48 +2,48 @@
 Regenerate: `.venv/bin/python -m fantasy_assistant.graph.ontology`
 
 ## Node labels
-- **Alert** (272) — raised_at:DATE_TIME, source:STRING, text:STRING, uid:STRING, urgency:STRING
-- **AnalyticsRun** (20) — agent:STRING, as_of_period:INTEGER, finished_at:DATE_TIME, model_version:STRING, status:STRING, uid:STRING
-- **BatterGameEV** (33,365) — barrels:INTEGER, bbe:INTEGER, date:DATE, ev_mean:FLOAT, game_pk:INTEGER, hardhit:INTEGER, source:STRING, uid:STRING
+- **Alert** (448) — raised_at:DATE_TIME, source:STRING, text:STRING, uid:STRING, urgency:STRING
+- **AnalyticsRun** (41) — agent:STRING, as_of_period:INTEGER, finished_at:DATE_TIME, model_version:STRING, status:STRING, uid:STRING
+- **BatterGameEV** (36,114) — barrels:INTEGER, bbe:INTEGER, date:DATE, ev_mean:FLOAT, game_pk:INTEGER, hardhit:INTEGER, source:STRING, uid:STRING
 - **Brief** (2) — model_version:STRING, published_at:DATE_TIME, uid:STRING
-- **CaptureRun** (42) — agent:STRING, capture_date:DATE, completed_at:DATE_TIME, source:STRING, status:STRING, uid:STRING
+- **CaptureRun** (67) — agent:STRING, capture_date:DATE, completed_at:DATE_TIME, source:STRING, status:STRING, uid:STRING
 - **Category** (10) — code:STRING, components:LIST, direction:STRING, kind:STRING, side:STRING, uid:STRING
-- **CategoryStandingLine** (6,240) — dif:FLOAT, points:FLOAT, rank:INTEGER, uid:STRING, value_reported:FLOAT
+- **CategoryStandingLine** (7,150) — dif:FLOAT, points:FLOAT, rank:INTEGER, uid:STRING, value_reported:FLOAT
 - **DecisionRecord** (2) — decided_at:DATE_TIME, matches_recommendation:STRING, recorded_at:DATE_TIME, uid:STRING
 - **DraftPick** (299) — auto:BOOLEAN, overall:INTEGER, pick_in_round:INTEGER, queued:BOOLEAN, round:INTEGER, uid:STRING
 - **FantasyTeam** (13) — abbrev:STRING, cbs_name:STRING, is_us:BOOLEAN, uid:STRING
-- **FreeAgentPoolSnapshot** (8) — as_of:DATE_TIME, period_projected:INTEGER, uid:STRING
+- **FreeAgentPoolSnapshot** (13) — as_of:DATE_TIME, period_projected:INTEGER, uid:STRING
 - **League** (1) — cbs_slug:STRING, name:STRING, platform:STRING, uid:STRING
-- **LineupAssignment** (7,495) — section:STRING, slot:STRING, uid:STRING
+- **LineupAssignment** (7,885) — section:STRING, slot:STRING, uid:STRING
 - **Manager** (11) — name:STRING, uid:STRING
-- **MlbStatusEvent** (662) — date:DATE, description:STRING, effective:STRING, first_seen:DATE_TIME, from_team:STRING, source:STRING, to_team:STRING, type_desc:STRING, uid:STRING
+- **MlbStatusEvent** (1,081) — date:DATE, description:STRING, effective:STRING, first_seen:DATE_TIME, from_team:STRING, source:STRING, to_team:STRING, type_desc:STRING, uid:STRING
 - **ModelEval** (9) — detail:STRING, eval_at:INTEGER, model:STRING, our_err:FLOAT, pts_mae:FLOAT, rank_disp:FLOAT, recorded:DATE_TIME, stand_at:INTEGER, uid:STRING
-- **NewsItem** (483) — age_at_capture:STRING, body:STRING, first_seen:DATE_TIME, headline:STRING, is_new:BOOLEAN, source:STRING, uid:STRING
-- **OutcomeReview** (14) — followed:BOOLEAN, horizon:STRING, realized_blob:STRING, reviewed_at:DATE_TIME, score:FLOAT, uid:STRING
+- **NewsItem** (852) — age_at_capture:STRING, body:STRING, first_seen:DATE_TIME, headline:STRING, is_new:BOOLEAN, source:STRING, uid:STRING
+- **OutcomeReview** (27) — followed:BOOLEAN, horizon:STRING, realized_blob:STRING, reviewed_at:DATE_TIME, score:FLOAT, uid:STRING
 - **ParkFactor** (30) — as_of:DATE, factor:FLOAT, games:INTEGER, home_team:STRING, runs_pg:FLOAT, uid:STRING
-- **PitcherGameVelo** (14,167) — csw_pct:FLOAT, date:DATE, ff_avg:FLOAT, game_pk:INTEGER, mix:STRING, n_ff:INTEGER, n_pitches:INTEGER, source:STRING, uid:STRING, whiff_pct:FLOAT
-- **Player** (8,422) — bat_speed:FLOAT, bats:STRING, birthdate:STRING, cbs_id:STRING, cbs_mlb_team:STRING, cbs_positions:STRING, chase_pct:FLOAT, era_sv:FLOAT, feat:LIST, feat_side:STRING, luck_gap:FLOAT, mlb_team_current:STRING, mlbam_id:INTEGER, name_full:STRING, name_normalized:STRING, pit_luck_gap:FLOAT, primary_position:STRING, sprint_speed:FLOAT, squared_up:FLOAT, throws:STRING, uid:STRING, whiff_pct_bat:FLOAT, woba:FLOAT, xba:FLOAT, xera:FLOAT, xslg:FLOAT, xwoba:FLOAT
-- **PlayerDayLine** (30,536) — ab:INTEGER, b2:INTEGER, b3:INTEGER, batters_faced:INTEGER, bb:INTEGER, bbi:INTEGER, bs:INTEGER, cs:INTEGER, date:DATE, er:INTEGER, game_pk:INTEGER, gs:INTEGER, h:INTEGER, ha:INTEGER, hbp:INTEGER, hld:INTEGER, hr:INTEGER, ibb:INTEGER, k:INTEGER, l:INTEGER, mlbam_id:INTEGER, outs:INTEGER, pa:INTEGER, pitches:INTEGER, qs:INTEGER, r:INTEGER, rbi:INTEGER, sb:INTEGER, sf:INTEGER, side:STRING, so:INTEGER, sv:INTEGER, uid:STRING, w:INTEGER
-- **PoolEntry** (64,469) — avail:STRING, side:STRING, sportsline_rank:INTEGER, sportsline_week:LIST, uid:STRING, waiver_clear:STRING
-- **PositionGameCount** (402) — as_of:DATE, games:INTEGER, position:STRING, season:INTEGER, uid:STRING
-- **ProbableStart** (306) — confirmed:BOOLEAN, date:DATE, game_pk:INTEGER, source:STRING, uid:STRING
-- **RaceAnalysis** (40) — as_of_period:INTEGER, computed_at:DATE_TIME, model_version:STRING, payload:STRING, uid:STRING
+- **PitcherGameVelo** (15,347) — csw_pct:FLOAT, date:DATE, ff_avg:FLOAT, game_pk:INTEGER, mix:STRING, n_ff:INTEGER, n_pitches:INTEGER, source:STRING, uid:STRING, whiff_pct:FLOAT
+- **Player** (8,437) — bat_speed:FLOAT, bats:STRING, birthdate:STRING, cbs_id:STRING, cbs_mlb_team:STRING, cbs_positions:STRING, chase_pct:FLOAT, era_sv:FLOAT, feat:LIST, feat_side:STRING, luck_gap:FLOAT, mlb_team_current:STRING, mlbam_id:INTEGER, name_full:STRING, name_normalized:STRING, pit_luck_gap:FLOAT, primary_position:STRING, sprint_speed:FLOAT, squared_up:FLOAT, throws:STRING, uid:STRING, whiff_pct_bat:FLOAT, woba:FLOAT, xba:FLOAT, xera:FLOAT, xslg:FLOAT, xwoba:FLOAT
+- **PlayerDayLine** (42,996) — ab:INTEGER, b2:INTEGER, b3:INTEGER, batters_faced:INTEGER, bb:INTEGER, bbi:INTEGER, bs:INTEGER, cs:INTEGER, date:DATE, er:INTEGER, game_pk:INTEGER, gs:INTEGER, h:INTEGER, ha:INTEGER, hbp:INTEGER, hld:INTEGER, hr:INTEGER, ibb:INTEGER, k:INTEGER, l:INTEGER, mlbam_id:INTEGER, outs:INTEGER, pa:INTEGER, pitches:INTEGER, qs:INTEGER, r:INTEGER, rbi:INTEGER, sb:INTEGER, sf:INTEGER, side:STRING, so:INTEGER, sv:INTEGER, uid:STRING, w:INTEGER
+- **PoolEntry** (104,798) — avail:STRING, side:STRING, sportsline_rank:INTEGER, sportsline_week:LIST, uid:STRING, waiver_clear:STRING
+- **PositionGameCount** (420) — as_of:DATE, games:INTEGER, position:STRING, season:INTEGER, uid:STRING
+- **ProbableStart** (546) — confirmed:BOOLEAN, date:DATE, game_pk:INTEGER, source:STRING, uid:STRING
+- **RaceAnalysis** (50) — as_of_period:INTEGER, computed_at:DATE_TIME, model_version:STRING, payload:STRING, uid:STRING
 - **Recommendation** (44) — action_blob:STRING, created_at:DATE_TIME, kind:STRING, rationale:STRING, status:STRING, uid:STRING
-- **ReconciliationRun** (8) — anomaly_count:INTEGER, diffs_json:STRING, discrepancy_count:INTEGER, kind:STRING, ran_at:DATE_TIME, uid:STRING
-- **RivalNeedsAssessment** (26) — as_of_period:INTEGER, computed_at:DATE_TIME, model_version:STRING, payload:STRING, uid:STRING
+- **ReconciliationRun** (13) — anomaly_count:INTEGER, diffs_json:STRING, discrepancy_count:INTEGER, kind:STRING, ran_at:DATE_TIME, uid:STRING
+- **RivalNeedsAssessment** (52) — as_of_period:INTEGER, computed_at:DATE_TIME, model_version:STRING, payload:STRING, uid:STRING
 - **RosterGridEntry** (369) — label:STRING, slot_group:STRING, status:STRING, uid:STRING
 - **RosterGridSnapshot** (1) — as_of:DATE_TIME, uid:STRING
-- **RosterStint** (728) — acquired_via:STRING, derived:BOOLEAN, ended_by:STRING, from_date:DATE, status:STRING, to_date:DATE, uid:STRING
+- **RosterStint** (765) — acquired_via:STRING, derived:BOOLEAN, ended_by:STRING, from_date:DATE, status:STRING, to_date:DATE, uid:STRING
 - **ScheduleFactor** (30) — as_of:DATE, games_next_period:INTEGER, games_ros:INTEGER, mlb_team:STRING, next_period:INTEGER, ros_factor:FLOAT, uid:STRING
 - **ScoringPeriod** (27) — end_date:DATE, is_final:BOOLEAN, number:INTEGER, start_date:DATE, uid:STRING
 - **Season** (1) — draft_date:DATE, draft_rounds:INTEGER, fee_add:FLOAT, fee_trade:FLOAT, ip_max:INTEGER, ip_min:INTEGER, start_date:DATE, trade_deadline:DATE, uid:STRING, year:INTEGER
 - **ShadowRoster** (1) — created:DATE_TIME, note:STRING, period:INTEGER, players:LIST, uid:STRING
-- **Signal** (2,163) — agent:STRING, as_of:DATE, fa:BOOLEAN, kind:STRING, model_version:STRING, rationale:STRING, results_based:BOOLEAN, strength:FLOAT, uid:STRING
+- **Signal** (3,524) — agent:STRING, as_of:DATE, fa:BOOLEAN, kind:STRING, model_version:STRING, rationale:STRING, results_based:BOOLEAN, strength:FLOAT, uid:STRING
 - **SignalEval** (4) — baseline_move:FLOAT, edge:FLOAT, flagged_move:FLOAT, n:INTEGER, recorded:DATE_TIME, rule:STRING, threshold:FLOAT, uid:STRING
-- **SimResult** (8) — as_of:DATE, as_of_period:INTEGER, mean_rank:FLOAT, model:STRING, n_sims:INTEGER, p_top5:FLOAT, p_win:FLOAT, pts_p10:FLOAT, pts_p50:FLOAT, pts_p90:FLOAT, uid:STRING
+- **SimResult** (13) — as_of:DATE, as_of_period:INTEGER, mean_rank:FLOAT, model:STRING, n_sims:INTEGER, p_top5:FLOAT, p_win:FLOAT, pts_p10:FLOAT, pts_p50:FLOAT, pts_p90:FLOAT, rank_p10:INTEGER, rank_p50:INTEGER, rank_p90:INTEGER, uid:STRING
 - **SourceScore** (1) — mae:FLOAT, n:INTEGER, period:INTEGER, recorded:DATE_TIME, source:STRING, stat:STRING, uid:STRING
-- **StandingsSnapshot** (48) — as_of:DATE_TIME, scope:STRING, uid:STRING
-- **TransactionEvent** (547) — effective_date:STRING, fee:FLOAT, kinds:LIST, posted_at:DATE_TIME, raw:STRING, source:STRING, uid:STRING
+- **StandingsSnapshot** (55) — as_of:DATE_TIME, scope:STRING, uid:STRING
+- **TransactionEvent** (593) — effective_date:STRING, fee:FLOAT, kinds:LIST, posted_at:DATE_TIME, raw:STRING, source:STRING, uid:STRING
 
 ## Relationships (src -> dst)
 - (BatterGameEV)-[:OF_PLAYER]->(Player)
@@ -121,9 +121,6 @@ SEMANTICS (curated, verified):
 - Signal kinds: hot_bat cold_bat hot_arm cold_arm contact_hot contact_cold
   velocity_up velocity_down csw_up csw_down mix_change buy_low sell_high
   speed_decline. sig.strength, sig.as_of, sig.rationale, sig.results_based.
-- CategoryStandingLine.rank is the CBS report ROW ORDER, not competition rank:
-  tied teams share averaged points (a 3-way tie for 5th gives each 8.0 pts at
-  rows 5/6/7). points is authoritative; rank+points=14 does NOT hold on ties.
 - Rel props: OVERALL{total,batting,pitching,rank} SIMILAR_TO{score} SNIPED_BY{n}
   ADDS/DROPS/MOVES{action,via_waivers,trade_from}.
 - Teams: Runtime Terror (is_us:true), Rieken Havoc, Young Guns, Big Sticks,
