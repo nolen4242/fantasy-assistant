@@ -1,0 +1,197 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-08-24T09:32:59
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(8th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+PERIOD
+PERIOD 23 (MON, AUG 24 - SUN, AUG 30)
+
+	
+
+
+		Runtime Terror		
+NCP
+0.00
+		
+DWG	86.00
+BST	83.50
+LAN	83.00
+YGN	82.50
+RHV	80.50
+MD	78.50
+LB	76.00
+RTT	73.00
+		
+GTN	68.50
+GHG	59.50
+SDG	53.50
+TRX	45.50
+MGI	40.00
+	
+
+73.00	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+A. Wells C  	
+ 
+	 
+P. Alonso 1B  	
+ 
+	 
+T. Bazzana 2B  	
+CLE @ LAA 8:38 CDT
+CLE -169, LAA +140
+	 
+C. Durbin 3B  	
+BOS @ MIA 5:40 CDT
+BOS -128, MIA +105
+	 
+C. Montgomery SS  	
+CHW v TEX 6:40 CDT
+TEX +115, CHW -139
+	 
+K. Clemens MI  	
+MIN @ ATH 8:40 CDT
+MIN -161, ATH +135
+	 
+M. Busch CI  	
+CHC @ ARI 8:40 CDT
+CHC -143, ARI +120
+	 
+D. Canzone OF  	
+SEA v PHI 8:40 CDT
+PHI -115, SEA -105
+	 
+C. Carroll OF  	
+ARI v CHC 8:40 CDT
+CHC -143, ARI +120
+	 
+G. Conine OF  	
+MIA v BOS 5:40 CDT
+BOS -128, MIA +105
+	 
+S. Kwan OF  	
+CLE @ LAA 8:38 CDT
+CLE -169, LAA +140
+	 
+Y. Diaz U  	
+TB @ DET 5:40 CDT
+TB -143, DET +118
+	 
+A. Chapman P  	
+BOS @ MIA 5:40 CDT
+BOS -128, MIA +105
+	 
+S. Gray P   	
+BOS @ MIA 5:40 CDT
+BOS -128, MIA +105
+	 
+L. Henderson P   	
+ 
+	 
+T. Mahle P   	
+ 
+	 
+D. May P   	
+ 
+	 
+T. Melton P   	
+DET v TB 5:40 CDT
+TB -143, DET +118
+	 
+E. Miller P  	
+BOS @ MIA 5:40 CDT
+BOS -128, MIA +105
+	 
+E. Perez P   	
+MIA v BOS 5:40 CDT
+BOS -128, MIA +105
+	 
+W. Urena P   	
+LAA v CLE 8:38 CDT
+CLE -169, LAA +140
+	 
+Today	 
+Total	1318-5279, 241 2B, 34 3B, 201 HR, 709 RBI, 777 R, 101 SB, 657 BB, 33 CS, 0.340 OBP
+977.1 INN, 16033 PC, 840 HA, 367 BBI, 979 K, 374 ER, 3.444 ERA, 1.235 WHIP, 70 W, 52 L, 37 S, 136 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	DWG	250	757	859	109	0.348	926	3.76	1.20	29	138	86.00
+2nd	BST	232	804	775	115	0.331	1095	3.84	1.24	55	133	83.50
+3rd	LAN	228	685	767	153	0.319	1121	3.99	1.17	74	126	83.00
+4th	YGN	234	712	783	114	0.329	1099	3.92	1.20	23	161	82.50
+5th	RHV	174	677	736	144	0.329	1056	3.42	1.20	75	133	80.50
+6th	MD	262	784	843	114	0.335	1056	4.28	1.23	43	131	78.50
+7th	LB	200	720	663	81	0.330	1222	3.48	1.23	52	144	76.00
+8th	RTT	201	709	777	101	0.340	979	3.44	1.24	37	136	73.00
+9th	GTN	197	673	736	128	0.317	1111	3.62	1.22	21	156	68.50
+10th	GHG	179	660	735	73	0.332	990	3.60	1.15	43	121	59.50
+11th	SDG	202	722	655	128	0.315	945	4.14	1.25	30	156	53.50
+12th	TRX	173	580	702	127	0.331	945	4.05	1.23	51	119	45.50
+13th	MGI	157	661	701	103	0.319	964	4.17	1.31	70	134	40.00
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
