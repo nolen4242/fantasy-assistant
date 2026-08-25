@@ -1,0 +1,144 @@
+source: https://buecker.baseball.cbssports.com/transactions/trade?show_pending=1
+captured: 2026-08-25T06:58:54
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(8th)
+Trade
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+Runtime Terror
+Nolen Smith (0-0-0)
+On the Block:None
+Positions Wanted:None
+ 
+Trade Deadline:August 30, 2026VIEW TRADE POLICIES
+Select Team To Trade With 
+ACTIVES
+	PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB				PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB
+	Austin Wells
+C • NYY						0.179	26	8	19	2														
+	Pete Alonso
+1B • BAL						0.270	79	30	85	5														
+	Travis Bazzana
+2B • CLE 						0.240	40	9	39	18														
+	Caleb Durbin
+3B • BOS						0.255	64	12	62	16														
+	Colson Montgomery
+SS • CHW						0.211	58	27	72	1														
+	Kody Clemens
+1B • MIN						0.239	58	21	66	8														
+	Michael Busch
+1B • CHC						0.243	59	16	65	2														
+	Corbin Carroll
+RF • ARI 						0.251	81	18	58	20														
+	Dominic Canzone
+RF • SEA						0.256	46	19	56	1														
+	Griffin Conine
+LF • MIA 						0.261	30	14	31	2														
+	Steven Kwan
+LF • CLE						0.265	62	2	25	9														
+	Yandy Diaz
+DH • TB						0.305	76	19	72	3														
+	Aroldis Chapman
+RP • BOS 	1.81	1.16	2	58	30																			
+	Dustin May
+SP • MIL	4.57	1.30	6	118	0																			
+	Erik Miller
+RP • BOS	2.14	1.31	3	60	4																			
+	Eury Perez
+SP • MIA	3.17	1.11	7	137	0																			
+	Jacob deGrom
+SP • TEX	3.77	1.13	9	157	0																			
+	Logan Henderson
+SP • MIL	2.60	0.89	8	79	0																			
+	Sonny Gray
+SP • BOS	2.79	1.16	16	123	0																			
+	Troy Melton
+RP • DET	1.60	1.00	7	76	0																			
+	Walbert Urena
+SP • LAA	2.80	1.24	8	109	0																			
+BENCH
+	PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB				PLAYER	ERA	WHIP	W	K	S	BA	R	HR	RBI	SB
+	Tyler Mahle
+SP • ATL	4.41	1.32	5	112	0																			
+	Dalton Rushing
+C • LAD 						0.254	37	12	36	0														
+	Will Smith
+C • LAD 						0.249	23	6	23	0														
+	Dansby Swanson
+SS • CHC 						0.216	78	18	66	17														
+	Josh Jung
+3B • TEX 						0.294	46	9	35	1														
+	Aaron Judge
+RF • NYY 						0.248	43	17	38	5														
+	Chase Dollander
+SP • COL 	3.89	1.30	3	47	0																			
+	Luis Gil
+SP • NYY	6.05	1.34	1	9	0																			
+	River Ryan
+SP • DET 	0.00	0.00	0	0	0																			
+TRANSACTION DETAILS
+PENDING TRADES
+0
+OFFERED BY ME
+ACTION	DATE & TIME	OFFERED BY	OFFERED TO	STATUS
+No Trades Offered By Me
+OFFERED TO ME
+ACTION	DATE & TIME	OFFERED BY	OFFERED TO	STATUS
+No Trades Offered To Me
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Betting Analysis
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
