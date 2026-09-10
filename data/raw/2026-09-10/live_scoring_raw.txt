@@ -1,0 +1,183 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-09-10T07:08:36
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(8th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+PERIOD
+PERIOD 25 (MON, SEP 07 - SUN, SEP 13)
+
+	
+
+
+		Runtime Terror		
+NCP
+-1.00
+		
+BST	87.00
+DWG	84.00
+RHV	81.50
+YGN	80.00
+MD	79.50
+LAN	78.00
+LB	76.00
+RTT	75.00
+		
+GTN	74.00
+SDG	57.50
+GHG	57.00
+TRX	46.50
+MGI	34.00
+	
+
+75.00	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+W. Smith C  	
+LAD 14 v CIN 1 (F)
+	1-3, 2B, 2 R, BB, 0.500 OBP
+P. Alonso 1B  	
+BAL 9 v CLE 5 (F)
+	1-3, R, 2 BB, 0.600 OBP
+K. Clemens 2B  	
+MIN 2 @ DET 7 (F)
+	1-4, HR, RBI, R, 0.250 OBP
+P. Ramirez 3B  	
+CHC 6 @ MIL 8 (F)
+	0-4, RBI
+C. Montgomery SS  	
+CHW 2 v PIT 4 (F)
+	0-4
+N. Sogard MI  	
+BOS 4 v LAA 6 (F)
+	1-4, 0.250 OBP
+M. Busch CI  	
+CHC 6 @ MIL 8 (F)
+	0-3, RBI, R, BB, 0.250 OBP
+D. Canzone OF  	
+SEA 3 v TEX 2 (F)
+	0-4
+C. Carroll OF  	
+ARI 2 @ KC 5 (F)
+	 
+A. Judge OF  	
+NYY 6 v COL 1 (F)
+	2-4, R, 0.500 OBP
+S. Kwan OF  	
+CLE 5 @ BAL 9 (F)
+	2-5, R, 0.400 OBP
+Y. Diaz U  	
+TB 7 @ ATL 2 (F)
+	1-4, RBI, 0.200 OBP
+A. Chapman P  	
+BOS 4 v LAA 6 (F)
+	 
+L. Gil P  	
+NYY 6 v COL 1 (F)
+	 
+S. Gray P   	
+BOS 4 v LAA 6 (F)
+	 
+L. Henderson P  	
+MIL 8 v CHC 6 (F)
+	5 INN, 95 PC, 2 HA, BBI, 6 K, 0.600 WHIP, W, WQS
+T. Mahle P   	
+ATL 2 v TB 7 (F)
+	 
+T. Melton P   	
+DET 7 v MIN 2 (F)
+	 
+E. Perez P   	
+MIA 14 v NYM 15 (F)
+	 
+W. Urena P   	
+LAA 6 @ BOS 4 (F)
+	 
+J. deGrom P   	
+TEX 2 @ SEA 3 (F)
+	 
+Today	9-42, 2B, HR, 4 RBI, 7 R, 4 BB, 0.277 OBP
+5 INN, 95 PC, 2 HA, BBI, 6 K, 0.600 WHIP, W, WQS
+Total	1464-5917, 268 2B, 36 3B, 227 HR, 793 RBI, 866 R, 109 SB, 728 BB, 34 CS, 0.336 OBP
+1093 INN, 17915 PC, 939 HA, 401 BBI, 1089 K, 430 ER, 3.541 ERA, 1.226 WHIP, 78 W, 61 L, 41 S, 153 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+Stats · Roto Points · Rank
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	BST	249	886	848	130	0.331	1226	3.71	1.23	64	157	87.00
+2nd	DWG	269	814	948	118	0.343	1039	3.79	1.19	31	155	84.00
+3rd	RHV	207	770	846	155	0.329	1185	3.52	1.20	81	145	81.50
+4th	YGN	258	799	876	131	0.331	1215	4.07	1.21	23	175	80.00
+5th	MD	287	866	928	137	0.332	1185	4.32	1.25	46	147	79.50
+6th	LAN	247	771	858	172	0.322	1224	4.17	1.21	78	139	78.00
+7th	LB	226	809	755	96	0.331	1340	3.58	1.24	57	159	76.00
+8th	RTT	227	793	866	109	0.336	1089	3.54	1.23	41	153	75.00
+9th	GTN	221	758	832	136	0.320	1231	3.58	1.20	25	172	74.00
+10th	SDG	230	819	748	143	0.317	1040	4.03	1.24	38	170	57.50
+11th	GHG	202	754	813	82	0.331	1107	3.64	1.15	47	133	57.00
+12th	TRX	198	675	802	143	0.331	1043	4.11	1.24	54	136	46.50
+13th	MGI	175	724	762	111	0.318	1068	4.26	1.31	77	144	34.00
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

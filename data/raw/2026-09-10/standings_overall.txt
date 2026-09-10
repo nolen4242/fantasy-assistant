@@ -1,0 +1,49 @@
+source: https://buecker.baseball.cbssports.com/standings/overall
+captured: 2026-09-10 (site: "STANDINGS UPDATED AS OF 09/10/26 08:08 AM ET")
+period: PERIOD 25 (MON, SEP 07 - SUN, SEP 13)
+
+OVERALL
+RANK TEAM BATTING PITCHING TOTAL DIF BEHIND
+1 Big Sticks 43.0 44.0 87.0 0.0 0.0
+2 Dawg 53.0 31.0 84.0 -1.0 3.0
+3 Rieken Havoc 33.0 48.5 81.5 1.5 5.5
+4 Young Guns 44.0 36.0 80.0 -1.5 7.0
+5 Maga Doge 57.0 22.5 79.5 0.0 7.5
+6 Like a Nightmare 41.0 37.0 78.0 0.0 9.0
+7 Long Balls 29.0 47.0 76.0 -1.0 11.0
+8 Runtime Terror 39.0 36.0 75.0 -1.0 12.0
+9 Guillotine 26.0 48.0 74.0 2.0 13.0
+10 Simba's Dublin Green Sox 31.5 26.0 57.5 -2.5 29.5
+11 Gashouse Gang 21.0 36.0 57.0 1.5 30.0
+12 Trex 25.5 21.0 46.5 3.5 40.5
+13 Magnum GI 12.0 22.0 34.0 -1.5 53.0
+
+BATTING: HR
+Maga Doge 287 13.0 | Dawg 269 12.0 | Young Guns 258 11.0 | Big Sticks 249 10.0 | Like a Nightmare 247 9.0 | Simba's Dublin Green Sox 230 8.0 | Runtime Terror 227 7.0 | Long Balls 226 6.0 | Guillotine 221 5.0 | Rieken Havoc 207 4.0 | Gashouse Gang 202 3.0 | Trex 198 2.0 | Magnum GI 175 1.0
+
+BATTING: OBP
+Dawg .3435 13.0 | Runtime Terror .3364 12.0 | Maga Doge .3320 11.0 | Long Balls .3315 10.0 | Gashouse Gang .3312 9.0 | Trex .3312 8.0 | Young Guns .3311 7.0 | Big Sticks .3309 6.0 | Rieken Havoc .3293 5.0 | Like a Nightmare .3219 4.0 | Guillotine .3195 3.0 | Magnum GI .3184 2.0 | Simba's Dublin Green Sox .3172 1.0
+
+BATTING: R
+Dawg 948 13.0 | Maga Doge 928 12.0 | Young Guns 876 11.0 | Runtime Terror 866 10.0 | Like a Nightmare 858 9.0 | Big Sticks 848 8.0 | Rieken Havoc 846 7.0 | Guillotine 832 6.0 | Gashouse Gang 813 5.0 | Trex 802 4.0 | Magnum GI 762 3.0 | Long Balls 755 2.0 | Simba's Dublin Green Sox 748 1.0
+
+BATTING: RBI
+Big Sticks 886 13.0 | Maga Doge 866 12.0 | Simba's Dublin Green Sox 819 11.0 | Dawg 814 10.0 | Long Balls 809 9.0 | Young Guns 799 8.0 | Runtime Terror 793 7.0 | Like a Nightmare 771 6.0 | Rieken Havoc 770 5.0 | Guillotine 758 4.0 | Gashouse Gang 754 3.0 | Magnum GI 724 2.0 | Trex 675 1.0
+
+BATTING: SB
+Like a Nightmare 172 13.0 | Rieken Havoc 155 12.0 | Simba's Dublin Green Sox 143 10.5 | Trex 143 10.5 | Maga Doge 137 9.0 | Guillotine 136 8.0 | Young Guns 131 7.0 | Big Sticks 130 6.0 | Dawg 118 5.0 | Magnum GI 111 4.0 | Runtime Terror 109 3.0 | Long Balls 96 2.0 | Gashouse Gang 82 1.0
+
+PITCHING: ERA
+Rieken Havoc 3.521 13.0 | Runtime Terror 3.541 12.0 | Guillotine 3.577 11.0 | Long Balls 3.580 10.0 | Gashouse Gang 3.637 9.0 | Big Sticks 3.707 8.0 | Dawg 3.789 7.0 | Simba's Dublin Green Sox 4.032 6.0 | Young Guns 4.068 5.0 | Trex 4.115 4.0 | Like a Nightmare 4.170 3.0 | Magnum GI 4.263 2.0 | Maga Doge 4.324 1.0
+
+PITCHING: K
+Long Balls 1340 13.0 | Guillotine 1231 12.0 | Big Sticks 1226 11.0 | Like a Nightmare 1224 10.0 | Young Guns 1215 9.0 | Rieken Havoc 1185 7.5 | Maga Doge 1185 7.5 | Gashouse Gang 1107 6.0 | Runtime Terror 1089 5.0 | Magnum GI 1068 4.0 | Trex 1043 3.0 | Simba's Dublin Green Sox 1040 2.0 | Dawg 1039 1.0
+
+PITCHING: S
+Rieken Havoc 81 13.0 | Like a Nightmare 78 12.0 | Magnum GI 77 11.0 | Big Sticks 64 10.0 | Long Balls 57 9.0 | Trex 54 8.0 | Gashouse Gang 47 7.0 | Maga Doge 46 6.0 | Runtime Terror 41 5.0 | Simba's Dublin Green Sox 38 4.0 | Dawg 31 3.0 | Guillotine 25 2.0 | Young Guns 23 1.0
+
+PITCHING: WHIP
+Gashouse Gang 1.1465 13.0 | Dawg 1.1897 12.0 | Guillotine 1.2000 11.0 | Rieken Havoc 1.2041 10.0 | Like a Nightmare 1.2057 9.0 | Young Guns 1.2147 8.0 | Runtime Terror 1.2260 7.0 | Big Sticks 1.2272 6.0 | Long Balls 1.2354 5.0 | Trex 1.2431 4.0 | Simba's Dublin Green Sox 1.2445 3.0 | Maga Doge 1.2528 2.0 | Magnum GI 1.3149 1.0
+
+PITCHING: WQS
+Young Guns 175 13.0 | Guillotine 172 12.0 | Simba's Dublin Green Sox 170 11.0 | Long Balls 159 10.0 | Big Sticks 157 9.0 | Dawg 155 8.0 | Runtime Terror 153 7.0 | Maga Doge 147 6.0 | Rieken Havoc 145 5.0 | Magnum GI 144 4.0 | Like a Nightmare 139 3.0 | Trex 136 2.0 | Gashouse Gang 133 1.0

@@ -1,0 +1,183 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-09-04T07:22:28
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(8th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+PERIOD
+PERIOD 24 (MON, AUG 31 - SUN, SEP 06)
+
+	
+
+
+		Runtime Terror		
+NCP
++4.00
+		
+DWG	88.00
+BST	86.50
+RHV	82.00
+LB	82.00
+LAN	81.00
+YGN	77.50
+MD	75.50
+RTT	73.50
+		
+GTN	70.00
+SDG	57.00
+GHG	56.50
+TRX	42.00
+MGI	38.50
+	
+
+73.50	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+A. Wells C  	
+ 
+	 
+P. Alonso 1B  	
+BAL 5 v BOS 6 (F)
+	1-3, HR, 2 RBI, R, 0.250 OBP
+K. Clemens 2B  	
+ 
+	 
+P. Ramirez 3B  	
+CHC 2 v MIL 1 (F)
+	0-2, BB, 0.333 OBP
+C. Montgomery SS  	
+CHW 2 @ HOU 6 (F)
+	0-4, R
+N. Sogard MI  	
+BOS 6 @ BAL 5 (F)
+	1-3, HR, 2 RBI, R, BB, 0.500 OBP
+M. Busch CI  	
+CHC 2 v MIL 1 (F)
+	0-3
+D. Canzone OF  	
+SEA 4 v ATH 7 (F)
+	1-4, BB, 0.400 OBP
+C. Carroll OF  	
+ 
+	 
+S. Kwan OF  	
+CLE 3 v TOR 6 (F)
+	2-5, 0.400 OBP
+T. Peters OF  	
+CHW 2 @ HOU 6 (F)
+	0-2, R
+Y. Diaz U  	
+TB 0 @ TEX 6 (F)
+	2-4, 0.500 OBP
+A. Chapman P  	
+BOS 6 @ BAL 5 (F)
+	INN, 13 PC, 2 HA, 2 K, 2 ER, 18.000 ERA, 2.000 WHIP, S
+L. Gil P  	
+ 
+	 
+S. Gray P   	
+BOS 6 @ BAL 5 (F)
+	 
+L. Henderson P  	
+MIL 1 @ CHC 2 (F)
+	7 INN, 102 PC, 3 HA, 7 K, 2 ER, 2.571 ERA, 0.429 WHIP, L, WQS
+T. Mahle P   	
+ 
+	 
+T. Melton P  	
+ 
+	 
+E. Perez P  	
+MIA 3 @ KC 7 (F)
+	 
+W. Urena P   	
+ 
+	 
+J. deGrom P   	
+TEX 6 v TB 0 (F)
+	 
+Today	7-30, 2 HR, 4 RBI, 4 R, 3 BB, 0.294 OBP
+8 INN, 115 PC, 5 HA, 9 K, 4 ER, 4.500 ERA, 0.625 WHIP, L, S, WQS
+Total	1406-5674, 255 2B, 36 3B, 218 HR, 764 RBI, 832 R, 109 SB, 706 BB, 34 CS, 0.338 OBP
+1049.1 INN, 17243 PC, 905 HA, 390 BBI, 1051 K, 418 ER, 3.585 ERA, 1.234 WHIP, 75 W, 59 L, 39 S, 146 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+Stats · Roto Points · Rank
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	DWG	262	796	924	117	0.345	1003	3.72	1.19	30	150	88.00
+2nd	BST	244	857	822	128	0.331	1177	3.73	1.24	62	148	86.50
+3rd	RHV	192	730	797	149	0.330	1137	3.47	1.20	79	141	82.00
+3rd	LB	220	783	721	88	0.332	1298	3.52	1.23	53	153	82.00
+5th	LAN	238	734	827	168	0.322	1190	4.12	1.20	77	133	81.00
+6th	YGN	246	758	845	128	0.330	1164	4.08	1.22	23	166	77.50
+7th	MD	275	831	893	127	0.333	1143	4.34	1.25	44	141	75.50
+8th	RTT	218	764	832	109	0.338	1051	3.59	1.23	39	146	73.50
+9th	GTN	210	723	795	133	0.316	1185	3.54	1.20	22	167	70.00
+10th	SDG	219	785	712	135	0.316	1007	4.07	1.25	35	165	57.00
+11th	GHG	192	720	785	81	0.331	1050	3.65	1.16	45	126	56.50
+12th	TRX	186	628	758	136	0.330	998	4.11	1.24	52	130	42.00
+13th	MGI	165	703	729	109	0.318	1032	4.08	1.30	73	142	38.50
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
