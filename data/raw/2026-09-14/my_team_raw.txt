@@ -1,0 +1,160 @@
+source: https://buecker.baseball.cbssports.com/teams
+captured: 2026-09-14T08:58:04
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror 
+Nolen Smith
+(5th)
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+YEAR
+2026
+PERIOD
+26
+OVERVIEW
+STATS
+PROJECTIONS
+RANKINGS
+SCHEDULE
+MATCHUP
+NEWS
+3 YEAR AVERAGE
+YEAR TO DATE
+YESTERDAY
+LAST 7
+LAST 14
+LAST 21
+LAST 28
+BATTERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	AB	R	H	1B	2B	3B	HR	RBI	BB	KO	SB	CS	BA	OBP	SLG	ROTO RANK
+
+	C	Will Smith C • LAD	204	30	49	34	8	0	7	29	29	39	0	0	.240	.338	.382	503
+
+	1B	Pete Alonso 1B • BAL	561	89	151	92	24	0	35	100	76	156	5	1	.269	.363	.499	13
+
+	2B	Kody Clemens 1B,2B,OF • MIN	485	70	118	64	22	6	26	76	37	120	8	2	.243	.304	.474	69
+
+	3B	Josh Jung 3B • TEX 	363	48	108	75	23	1	9	37	33	71	1	1	.297	.363	.441	271
+
+	SS	Colson Montgomery 3B,SS • CHW	529	67	109	55	23	0	31	84	52	206	1	1	.206	.291	.425	118
+
+	MI	Pedro Ramirez 2B,3B • CHC	206	35	54	34	12	2	6	29	18	41	7	1	.262	.322	.427	386
+
+	CI	Michael Busch 1B • CHC	560	70	134	86	27	2	19	76	82	152	2	1	.239	.346	.396	144
+
+	OF	Dominic Canzone OF • SEA	432	52	111	61	25	3	22	68	40	104	2	1	.257	.326	.481	151
+
+	OF	Corbin Carroll OF • ARI	537	87	128	62	30	16	20	64	69	141	21	3	.238	.331	.466	52
+
+	OF	Aaron Judge OF • NYY	231	44	56	29	10	0	17	38	43	81	5	3	.242	.365	.506	256
+
+	OF	Steven Kwan OF • CLE 	500	75	139	113	21	2	3	30	75	59	10	3	.278	.375	.346	217
+
+	U	Yandy Diaz 1B • TB	574	86	173	125	25	1	22	81	52	92	3	1	.301	.366	.463	37
+RESERVES
+INJURED
+
+	MI	Dansby Swanson SS • CHC 	403	78	87	50	16	3	18	66	48	106	17	1	.216	.300	.405	87
+MINORS
+PITCHERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
+
+	P	Aroldis Chapman P • BOS 	50	0	0	0	3	4	34	2	68	23	35	1.95	1.14	156
+
+	P	Sonny Gray P • BOS	156	27	18	0	17	5	0	0	140	42	141	2.76	1.17	57
+
+	P	Logan Henderson P • MIL	88	16	7	0	10	3	0	0	99	15	54	2.34	0.78	124
+
+	P	Tyler Mahle P • ATL	138	25	9	0	6	10	0	0	127	43	129	3.91	1.25	337
+
+	P	Dustin May P • MIL	138	28	13	1	7	9	0	0	133	46	132	4.49	1.29	380
+
+	P	Troy Melton P • DET	108	18	9	0	8	4	0	0	87	30	83	2.42	1.05	202
+
+	P	Eury Perez P • MIA 	144	27	11	0	7	11	0	0	155	64	115	3.99	1.24	272
+
+	P	Walbert Urena P • LAA	137	25	12	1	9	10	0	0	131	67	103	2.88	1.24	197
+
+	P	Jacob deGrom P • TEX	149	28	12	0	10	9	0	0	186	38	123	3.80	1.08	115
+RESERVES
+
+	P	Luis Gil P • NYY	23	4	1	0	1	2	0	0	14	13	20	5.40	1.41	1079
+INJURED
+
+	P	Chase Dollander P • COL 	44	3	1	0	3	3	0	0	47	18	39	3.89	1.30	637
+MINORS
+
+	P	River Ryan P • DET
+	0	0	0	0	0	0	0	0	0	0	0	0.00	0.00	9999
+ACTIVE: 21 RESERVE: 1 INJURED: 2 MINORS: 1
+Min/Max Info
+	IP
+Year to Date	1127.0
+On Pace	1231.4
+Rules	1000-1300
+Status	173.0 left
+Note: stats in the 'matchups' view represent each player's career totals vs opponent as labeled.
+Blue = Player is cold vs this pitcher/team.
+Red = Player is hot vs this pitcher/team.
+Probable StartStarting TodayInjurySuspendedPlayer NewsHot PlayerCold Player
+Game may be delayed or rained outGame is likely to be delayed or rained out
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
