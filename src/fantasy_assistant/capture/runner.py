@@ -11,6 +11,7 @@ Usage:
 """
 from __future__ import annotations
 
+import json
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -130,13 +131,20 @@ def snapshot(out_dir: Path | None = None) -> None:
         page.wait_for_timeout(1500)
         hist = page.evaluate("""
             async () => {
+              __FETCH_DEADLINE__
               const sel = Array.from(document.querySelectorAll('select'))
                 .find(s => Array.from(s.options).some(o => /Period \\d+ \\(/i.test(o.text)));
               if (!sel) return 'NO-PERIOD-SELECT';
               const chunks = [];
               for (const o of Array.from(sel.options).filter(o => /Period \\d+ \\(/.test(o.text))) {
-                const r = await fetch(o.value, {credentials: 'same-origin'});
-                const doc = new DOMParser().parseFromString(await r.text(), 'text/html');
+                let html;
+                try {
+                  html = await fetchDeadline(o.value);
+                } catch (e) {
+                  chunks.push('=== ' + o.text + ' ===\\nFETCH-FAILED: ' + e);
+                  continue;
+                }
+                const doc = new DOMParser().parseFromString(html, 'text/html');
                 const rows = [];
                 for (const tr of doc.querySelectorAll('table tr')) {
                   const cells = tr.cells;
@@ -149,7 +157,7 @@ def snapshot(out_dir: Path | None = None) -> None:
               }
               return chunks.join('\\n\\n');
             }
-        """)
+        """.replace("__FETCH_DEADLINE__", FETCH_WITH_DEADLINE_JS))
         (out / "standings_byperiod_all.txt").write_text(hist)
         captured.append(("/standings/byperiod (all periods)", "standings_byperiod_all.txt", len(hist)))
 
@@ -236,12 +244,43 @@ TEAM_IDS = {  # discovered from the standings page team links, 2026 season
     "Trex": 16, "Runtime Terror": 18,
 }
 
+# CBS occasionally accepts a connection and then never responds. A bare
+# in-page fetch() has no deadline, so one such request hangs the whole
+# evaluate() forever (it stalled the 2026-09-15 run for 1h52m at the
+# by-period step). Every in-page fetch goes through this instead.
+FETCH_WITH_DEADLINE_JS = """
+  const fetchDeadline = async (url, ms = 20000, tries = 2) => {
+    let lastErr;
+    for (let i = 0; i < tries; i++) {
+      const ac = new AbortController();
+      const t = setTimeout(() => ac.abort(), ms);
+      try {
+        const r = await fetch(url, {credentials: 'same-origin', signal: ac.signal});
+        return await r.text();
+      } catch (e) {
+        lastErr = e;
+      } finally {
+        clearTimeout(t);
+      }
+    }
+    throw lastErr;
+  };
+"""
+
 LINEUP_FETCH_JS = """
 async (pairs) => {
+  __FETCH_DEADLINE__
   const out = [];
+  const failed = [];
   for (const [team, tid, period] of pairs) {
-    const r = await fetch(`/teams/roster-report/${tid}/${period}/`, {credentials: 'same-origin'});
-    const doc = new DOMParser().parseFromString(await r.text(), 'text/html');
+    let html;
+    try {
+      html = await fetchDeadline(`/teams/roster-report/${tid}/${period}/`);
+    } catch (e) {
+      failed.push(`${team}/${period}`);
+      continue;
+    }
+    const doc = new DOMParser().parseFromString(html, 'text/html');
     let section = 'active';
     for (const tr of doc.querySelectorAll('table tr')) {
       const cells = tr.cells; if (!cells || cells.length < 3) continue;
@@ -255,7 +294,8 @@ async (pairs) => {
       out.push([team, period, section, pos, player].join('|'));
     }
   }
-  return out.join('\\n');
+  if (failed.length) console.warn('lineup fetch failures: ' + failed.join(', '));
+  return JSON.stringify({rows: out.join('\\n'), failed});
 }
 """
 
@@ -272,12 +312,19 @@ def capture_lineups(out_dir: Path | None = None, through_period: int | None = No
         page.goto(BASE, wait_until="domcontentloaded")
         if not _logged_in(page):
             sys.exit("Session expired — run `runner login` first.")
-        text = page.evaluate(LINEUP_FETCH_JS, pairs)
+        raw = page.evaluate(
+            LINEUP_FETCH_JS.replace("__FETCH_DEADLINE__", FETCH_WITH_DEADLINE_JS), pairs)
+        result = json.loads(raw)
+        text = result["rows"]
+        failed = result.get("failed", [])
         ctx.close()
     stamp = (f"source: {BASE}/teams/roster-report/<team>/<period>/ (periods 1-{n})\n"
              f"captured: {datetime.now().isoformat(timespec='seconds')}\n---\n")
     (out / "lineups_all.psv").write_text(stamp + text)
     print(f"lineups: {len(text.splitlines()):,} rows across {len(pairs)} team-periods -> {out / 'lineups_all.psv'}")
+    if failed:
+        print(f"  WARNING: {len(failed)} team-period fetches failed: {', '.join(failed[:10])}"
+              + (" ..." if len(failed) > 10 else ""), file=sys.stderr)
 
 
 

@@ -457,7 +457,7 @@ def parse_transactions_v2(path: Path) -> tuple[list[Txn], list[str]]:
     '|' can appear inside the players cell (CBS sometimes renders 'POS | TEAM')
     so middle columns are re-joined before parsing."""
     seg_re = re.compile(
-        r"^(?P<name>.+?) (?P<pos>[A-Z0-9]{1,3}(?:,[A-Z0-9]{1,3})*) ?[\u2022\ufffd|] ?"
+        r"^(?P<name>.+?) (?:\| )?(?P<pos>[A-Z0-9]{1,3}(?:,[A-Z0-9]{1,3})*) ?[\u2022\ufffd|] ?"
         r"(?P<team>[A-Z]{2,3}) ?-? ?"
         r"(?P<action>Added off Waivers|Added|Dropped|Moved to IR|Move to Injured|"
         r"Moved to Minors|Sent to Minors|Activated|Called Up|Traded (?:from|to) .+)$"
@@ -469,7 +469,7 @@ def parse_transactions_v2(path: Path) -> tuple[list[Txn], list[str]]:
         if len(parts) < 5 or parts[0] in ("DATE", "Date"):
             continue
         if len(parts) > 5:
-            parts = [parts[0], parts[1], "|".join(parts[2:-2]), parts[-2], parts[-1]]
+            parts = [parts[0], parts[1], " | ".join(parts[2:-2]), parts[-2], parts[-1]]
         date_time, team, players, effective, cost_s = parts
         m = re.match(r"^(\d{1,2}/\d{1,2}/\d{2}) (\d{1,2}:\d{2} [AP]M) ET$", date_time)
         if not m or team not in TEAM_NAMES:
