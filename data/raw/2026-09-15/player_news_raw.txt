@@ -1,74 +1,74 @@
 source: https://buecker.baseball.cbssports.com/players/all-player-updates
-captured: 2026-09-15T11:04:24
+captured: 2026-09-15T23:46:08
 ---
-Garrett Cleavinger P • TB
-Rays' Garrett Cleavinger: Playing catch, but no timetable
+Nolan Arenado 3B • ARI
+Diamondbacks' Nolan Arenado: Pulled with thumb injury
 by RotoWire
-(38 mins ago) Cleavinger (forearm) has resumed playing catch but still doesn't have a timetable for a return from the 15-day injured list, Marc Topkin of the Tampa Bay Times reports.
+(26 mins ago) Arenado was removed from Tuesday's game against the Marlins due to right thumb inflammation.
 
-Cleavinger landed on the IL in early September with left forearm tightness. A timeline for the reliever's return won't come into focus until he's throwing off the mound, and it's unclear when he'll be cleared for that. Cleavinger has logged a 4.79 ERA and 54:22 K:BB over 41.1 frames in 2026.
+Arenado went 1-for-3 before his thumb forced him out of the game in the seventh inning. The severity of his injury remains unknown, but if the 35-year-old has to miss time beyond Tuesday, Ildemaro Vargas would likely be the next man up to start at the hot corner.
 
-Shane McClanahan P • TB
-Rays' Shane McClanahan: Timeline remains uncertain
+Braydon Fisher P • TOR
+Blue Jays' Braydon Fisher: Yields two walks as Tuesday's opener
 by RotoWire
-(43 mins ago) Rays manager Kevin Cash said recently that McClanahan (forearm) has resumed playing catch but still has "a long way to go" before returning to the active roster, Marc Topkin of the Tampa Bay Times reports.
+(1 hr ago) Fisher allowed two walks while striking out one batter across 1.1 innings during the Blue Jays' 10-1 loss to the Tigers on Tuesday.
 
-McClanahan has been out since early September with left forearm tightness, and while Cash is "encouraged" the southpaw is progressing, the manager is unsure whether the hurler will make it back before the end of the regular season. If McClanahan does make a start later this month, it would likely be during the final week and would involve a pitch count.
+Fisher served as the Blue Jays' opener in Tuesday's bullpen game, and he was able to work his way out of back-to-back walks to start the first inning to keep the Tigers off the board. The 26-year-old right-hander has been a steady presence in Toronto's bullpen this season, sporting a 3.16 ERA, 1.23 WHIP, one save, 13 holds and a 73:40 K:BB over 74 innings.
+
+Drew Anderson P • DET
+Tigers' Drew Anderson: Tosses five scoreless frames in Toronto
+by RotoWire
+(1 hr ago) Anderson (5-6) earned the win against the Blue Jays on Tuesday, allowing two hits and three walks while striking out four across five scoreless innings.
+
+Tuesday was the first time this season that Anderson kept his opponent off the board while completing five innings. He was able to get out of a bases-loaded situation unscathed in the third frame, finishing his outing with seven whiffs and six groundouts on 88 pitches (58 strikes). It was Anderson's first win since July 23 and first victory since joining the rotation in early August. His start in Toronto might be his last of the regular season, but that largely depends on whether the Tigers activate Jack Flaherty (forearm) from the 15-day injured list during the final days of the regular season.
+
+Miguel Vargas 1B,3B • CHW
+White Sox's Miguel Vargas: Drives in three runs Tuesday
+by RotoWire
+(1 hr ago) Vargas went 1-for-3 with a sacrifice fly and a two-run single during the White Sox's 7-6 loss to the Guardians on Tuesday.
+
+Vargas has collected five RBI over his last two games, and Tuesday's contest was the 10th time this season that he's driven in at least three runs. The 27-year-old third baseman is in the midst of a career year, ranking second in the American League in runs (98), sixth in home runs (31), eighth in OPS (.833) and 11th in RBI (84) across 658 plate appearances.
 
 Chris Murphy P • CHW
-White Sox's Chris Murphy: Serving as opener Tuesday
+White Sox's Chris Murphy: Gives up two homers as opener
 by RotoWire
-(1 hr ago) Murphy will be used as an opener in Tuesday's contest in Cleveland, Jesse Rogers of ESPN.com reports.
+(1 hr ago) Murphy allowed three runs on two hits and one walk over two-thirds of an inning during the White Sox's 7-6 loss to the Guardians on Tuesday.
 
-Murphy will work the first inning or so before handing things off to bulk reliever Davis Martin. The left-handed Murphy has tossed two scoreless frames with a 5:0 K:BB in his two outings since being recalled from Triple-A Charlotte last week.
+Murphy served as the White Sox's opener Tuesday for the third time this season, but he couldn't make it out of the first inning after giving up home runs to both Jo Adell and Travis Bazzana. It was the first time Murphy gave up multiple homers in an outing this season and his first instance since July 25, 2025, against the Dodgers, when he gave up three deep balls. He now sits at a 4.68 ERA and 1.41 WHIP across 32.2 innings this year, and it's unclear whether he'll be used as an opener over the final games of the regular season.
 
-Davis Martin P • CHW
-White Sox's Davis Martin: Following opener Tuesday
+Cade Smith P • CLE
+Guardians' Cade Smith: Collects sixth win of 2026
 by RotoWire
-(1 hr ago) Martin will be utilized as a bulk reliever in Tuesday's game versus the Guardians, Jesse Rogers of ESPN.com reports.
+(1 hr ago) Smith (6-1) was credited with the win against the White Sox on Tuesday, striking out one batter across 1.2 innings.
 
-All 26 of Martin's appearances to this point have been traditional starts, but the White Sox have elected to throw Chris Murphy as an opener in Tuesday's showdown in Cleveland. Martin has pitched well in two starts since coming back from the injured list, yielding a total of just one run over 10.2 innings.
+Smith got the call with one out in the eighth inning with the Guardians down 6-5. He needed only 16 pitches (12 strikes) to get through five batters, and he ended up collecting the win thanks to Brayan Rocchio's walk-off, two-run double in the bottom of the ninth. Smith has come away with the win in three of his last five outings and sits at a 2.13 ERA, 1.02 WHIP, 36 saves and a 96:22 K:BB over 67.2 innings this season.
 
-Connelly Early P • WAS
-Nationals' Connelly Early: Likely to make first rehab start Tuesday
+Foster Griffin P • CLE
+Guardians' Foster Griffin: No-decision against South Siders
 by RotoWire
-(1 hr ago) Early (elbow) is expected to begin his rehab assignment Tuesday with Triple-A Rochester, Spencer Nusbaum of The Athletic reports.
+(1 hr ago) Griffin did not factor into the decision Tuesday against the Guardians, allowing two runs on five hits and two walks while striking out five across four innings.
 
-Early had been scheduled to kick off his rehab assignment and make his organizational debut Sunday with Double-A Harrisburg, but the affiliate's game was rained out that day. The Nationals will now look to have Early report to their Triple-A affiliate to continue building on his workload, after he tossed 30 pitches in a bridge league game one week earlier. After his upcoming rehab start, the Nationals could elect to bring Early back from the 60-day injured list for his next outing, though he likely wouldn't be stretched out enough to handle a traditional starting role.
+Griffin kept the White Sox off the board until a Sam Antonacci RBI single in the fourth inning. The former was brought back out for the fifth but was quickly pulled after letting the first two batters he faced on base, one of which came home to score. Griffin ran up his pitch count to 83 (47 strikes), and it's his second consecutive outing in which he failed to complete at least five innings. In eight games since being acquired by the Guardians from the Nationals in August, Griffin has a 3-2 record with a 5.79 ERA and 1.61 WHIP across 37.1 innings. He's lined up to take on the Red Sox on the road next week in what currently projects to be his penultimate start of the regular season.
 
-Reynaldo Lopez P • ATL
-Braves' Reynaldo Lopez: Moves to injured list
+Jo Adell OF • CLE
+Guardians' Jo Adell: Cracks two-run homer Tuesday
 by RotoWire
-(1 hr ago) Atlanta placed Lopez on the 15-day injured list Tuesday due to right shoulder inflammation.
+(1 hr ago) Adell went 1-for-4 with a two-run home run during the Guardians' 7-6 win over the Guardians on Tuesday.
 
-The right-hander took the loss Saturday against the Cubs after giving up five runs across three innings, leaving him with a 7.94 ERA, 1.85 WHIP and 0-4 record in his past five starts. Following the game, manager Walt Weiss indicated the Lopez has dealt with shoulder discomfort at times throughout the season, and he'll now be sidelined for at least the final two weeks of the regular season. The 32-year-old closes out the 2026 regular season with a 4.54 ERA, 1.44 WHIP and 73:34 K:BB across 79.1 innings, with his late struggles spoiling what had been a strong start to the campaign. It remains to be seen if he'll be able to rejoin Atlanta during the playoffs.
+In a crucial game for control of the AL Central division, Adell got the Guardians on the board early with a two-run homer off Chris Murphy in the first inning. Adell has gone deep in two of his last three outings and has reached base safely in seven of his last eight games, going 9-for-33 (.273) with six RBI, four extra-base hits and seven runs scored in that span.
 
-Joe Jimenez P • ATL
-Braves' Joe Jimenez: Cleared to begin rehab assignment
+Travis Bazzana 2B • CLE
+Guardians' Travis Bazzana: Goes deep twice in Tuesday's win
 by RotoWire
-(1 hr ago) Jimenez (knee) will begin a rehab assignment at Triple-A Gwinnett on Tuesday.
+(1 hr ago) Bazzana went 2-for-4 with two solo home runs during the Guardians' 7-6 win over the White Sox on Tuesday.
 
-It will be the first game appearance for Jimenez since the end of the 2024 campaign, as he's worked his way back from multiple knee surgeries. Atlanta has not ruled out adding Jimenez to its bullpen before the end of the regular season, but it will depend on how he looks and feels in his rehab outings.
+Bazzana helped put the Guardians up 3-0 early in the first inning with a solo homer to right-center field before going deep again in the sixth to reduce the deficit to one run. It's the second multi-homer game of the season for Bazzana, with five of his 13 homers coming over his last 10 games. In that 10-game span, he has gone 15-for-34 (.441) with one steal, 14 RBI, eight extra-base hits and 10 runs scored.
 
-JR Ritchie P • ATL
-Braves' JR Ritchie: Summoned from Gwinnett
+Turner Hill OF • SF
+Giants' Turner Hill: Blasts first career homer
 by RotoWire
-(1 hr ago) Atlanta recalled Ritchie from Triple-A Gwinnett on Tuesday.
+(1 hr ago) Hill went 2-for-4 with a solo homer, three RBI, and a walk during Tuesday's 10-3 win over the Cardinals.
 
-He's slated to start Wednesday's game against the Cubs, and with Reynaldo Lopez (shoulder) landing on the 15-day injured list and AJ Smith-Shawver demoted to the bullpen, Ritchie is a good bet to make additional starts down the stretch. The rookie hurler had been on a roll at Gwinnett, authoring a 2.14 ERA, 1.01 WHIP and 44:14 K:BB in 33.2 innings across his last six starts. Ritchie has logged a 4.50 ERA and 53:36 K:BB over 58 frames covering eight starts and six relief outings with the big club.
-
-Kyle Harrison P • MIL
-Brewers' Kyle Harrison: Struggles in first relief appearance
-by RotoWire
-(1 hr ago) Harrison failed to record an out and was charged with four earned runs on four hits in a relief appearance in Saturday's 13-9 win over the Reds.
-
-After Harrison was lit up for 15 runs (13 earned) in his prior two starts, Brewers manager Pat Murphy elected to shift the left-hander to a relief role with the hope that the change would provide a needed reset. Though Harrison's velocity ticked back up Saturday, his command was still lacking, as he gave up a double and three base hits on 17 pitches before Murphy lifted him from the game. Per Todd Rosiak of the Milwaukee Journal Sentinel, Murphy expressed optimism after the game that Harrison would be able to bounce back from his recent rough patch, but the southpaw's recent form makes it unlikely that he'll resurface in the rotation in the near future.
-
-Justin Wrobleski P • LAD
-Dodgers' Justin Wrobleski: Works in bullpen over weekend
-by RotoWire
-(1 hr ago) Wrobleski struck out a batter and allowed two hits and one walk over two scoreless innings of relief in Saturday's 4-3 loss to the Marlins.
-
-After making his previous appearance as a starter Sept. 6 versus the Nationals, Wrobleski shifted back to the bullpen for the Dodgers' weekend series in Miami. He ended up being called upon Saturday in relief of starter Tyler Glasnow, who was chased after yielding four runs across four innings. Assuming the Dodgers elect to maintain a six-man rotation through the end of the season, Wrobleski could have a chance to start or pitch bulk innings again next weekend versus the Giants. The Dodgers reopened a rotation spot after optioning Emmet Sheehan to Triple-A Oklahoma City on Monday.
+Hill belted his first career home run in the ninth inning off Cade Winquest to extend the Giants' lead. The 27-year-old also contributed an RBI single and an RBI groundout earlier in the game. Hill is now slashing .250/.351/.363 with one homer and 15 RBI over 97 plate appearances this season.
 
 More Player News
