@@ -35,6 +35,10 @@ PAGES = {
     # pending trade offers (both directions); the /teams header only carries a
     # count badge, so without this page offers are invisible to the pipeline
     "/transactions/trade?show_pending=1": "pending_trades_raw.txt",
+    # league constitution: the repo's own docs have twice gone stale against
+    # it (IP band, trade deadline), and it is the only source for the draft
+    # order rule (6th place takes the 1st overall pick)
+    "/rules": "rules_raw.txt",
 }
 
 TABLE_EXTRACT_JS = """
@@ -206,6 +210,7 @@ EXPECTED_ARTIFACTS = (
     "standings_byperiod_all.txt",
     "lineups_all.psv",
     "player_news_raw.txt",
+    "rules_raw.txt",
 )
 
 
