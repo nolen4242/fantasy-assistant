@@ -1,0 +1,195 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-09-17T10:07:13
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(6th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+PERIOD
+PERIOD 26 (MON, SEP 14 - SUN, SEP 20)
+
+	
+
+
+		Runtime Terror		
+NCP
+-1.50
+		
+BST	90.00
+DWG	88.00
+YGN	85.50
+LAN	82.00
+MD	81.00
+RTT	76.50
+RHV	74.50
+GTN	74.00
+		
+LB	69.50
+SDG	58.50
+GHG	56.00
+TRX	40.00
+MGI	34.50
+	
+
+76.50	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+W. Smith C  	
+LAD @ CIN 11:40 CDT
+LAD -167, CIN +140
+	 
+P. Alonso 1B  	
+ 
+	 
+K. Clemens 2B  	
+MIN @ LAA 8:38 CDT
+MIN -110, LAA -110
+	 
+J. Jung 3B  	
+TEX v BOS 7:05 CDT
+BOS -125, TEX +105
+	 
+C. Montgomery SS  	
+CHW v DET 6:40 CDT
+DET -105, CHW -115
+	 
+P. Ramirez MI  	
+ 
+	 
+M. Busch CI  	
+ 
+	 
+D. Canzone OF  	
+ 
+	 
+C. Carroll OF  	
+ 
+	 
+A. Judge OF  	
+ 
+	 
+S. Kwan OF  	
+ 
+	 
+Y. Diaz U  	
+TB v ATH 12:10 CDT
+ATH +220, TB -278
+	 
+A. Chapman P  	
+BOS @ TEX 7:05 CDT
+BOS -125, TEX +105
+	 
+S. Gray P   	
+BOS @ TEX 7:05 CDT
+BOS -125, TEX +105
+	 
+L. Henderson P  	
+MIL @ PIT 11:35 CDT
+MIL -139, PIT +115
+	 
+D. Kremer P   	
+MIN @ LAA 8:38 CDT
+MIN -110, LAA -110
+	 
+T. Mahle P   	
+ 
+	 
+D. May P   	
+MIL @ PIT 11:35 CDT
+MIL -139, PIT +115
+	 
+T. Melton P   	
+DET @ CHW 6:40 CDT
+DET -105, CHW -115
+	 
+W. Urena P   	
+LAA v MIN 8:38 CDT
+MIN -110, LAA -110
+	 
+J. deGrom P   	
+TEX v BOS 7:05 CDT
+BOS -125, TEX +105
+	 
+Today	 
+Total	1523-6174, 281 2B, 39 3B, 237 HR, 827 RBI, 904 R, 112 SB, 756 BB, 35 CS, 0.335 OBP
+1145.1 INN, 18822 PC, 985 HA, 418 BBI, 1150 K, 449 ER, 3.528 ERA, 1.225 WHIP, 80 W, 62 L, 42 S, 158 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	BST	260	920	881	135	0.332	1268	3.68	1.22	66	163	90.00
+2nd	DWG	282	853	986	125	0.343	1105	3.70	1.18	33	166	88.00
+3rd	YGN	274	845	916	134	0.334	1268	4.02	1.21	23	183	85.50
+4th	LAN	258	808	886	181	0.323	1282	4.10	1.20	82	149	82.00
+5th	MD	296	893	968	149	0.332	1240	4.29	1.25	48	152	81.00
+6th	RTT	237	827	904	112	0.335	1150	3.53	1.23	42	158	76.50
+7th	RHV	222	807	879	163	0.329	1225	3.59	1.22	82	148	74.50
+8th	GTN	231	781	866	143	0.320	1291	3.57	1.20	25	177	74.00
+9th	LB	234	840	786	99	0.332	1396	3.65	1.25	60	163	69.50
+10th	SDG	235	855	782	150	0.317	1068	4.02	1.24	42	171	58.50
+11th	GHG	210	796	844	84	0.331	1138	3.64	1.15	49	139	56.00
+12th	TRX	208	701	835	147	0.330	1098	4.05	1.25	55	146	40.00
+13th	MGI	181	745	790	116	0.319	1115	4.29	1.32	81	149	34.50
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

@@ -1,0 +1,242 @@
+source: https://buecker.baseball.cbssports.com/standings/overall
+captured: 2026-09-20T20:42:57
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(7th)
+Standings
+ 
+ADD/DROP
+ 
+TRADES
+2 / 13
+WAIVER #
+OVERALL
+BY PERIOD
+YEAR
+2026
+PERIOD
+PERIOD 26 (MON, SEP 14 - SUN, SEP 20)
+RANK
+	
+TEAM
+	
+BATTING
+	
+PITCHING
+	
+TOTAL
+	
+DIF
+	
+BEHIND
+
+1	Big Sticks	44.5	46.5	91.0	3.5	0.0
+2	Young Guns	49.0	38.5	87.5	0.0	3.5
+3	Dawg	53.0	33.5	86.5	0.5	4.5
+4	Maga Doge	56.0	24.5	80.5	0.5	10.5
+5	Rieken Havoc	35.0	43.5	78.5	2.5	12.5
+6	Like a Nightmare	40.5	36.5	77.0	-1.0	14.0
+7	Runtime Terror	40.0	36.0	76.0	-2.0	15.0
+8	Guillotine	25.5	49.0	74.5	0.5	16.5
+9	Long Balls	28.5	42.0	70.5	-4.5	20.5
+10	Simba's Dublin Green Sox	29.5	27.0	56.5	1.0	34.5
+11	Gashouse Gang	18.0	34.0	52.0	-3.0	39.0
+12	Trex	23.5	20.0	43.5	-1.0	47.5
+13	Magnum GI	12.0	24.0	36.0	3.0	55.0
+Batting Breakdown
+TEAM	HR	PTS	DIF
+Maga Doge	299	13.0	0.0
+Dawg	287	12.0	0.0
+Young Guns	282	11.0	0.0
+Big Sticks	262	9.5	0.5
+Like a Nightmare	262	9.5	-0.5
+Runtime Terror	244	8.0	0.0
+Long Balls	238	6.5	0.5
+Simba's Dublin Green Sox	238	6.5	-0.5
+Guillotine	233	5.0	0.0
+Rieken Havoc	228	4.0	0.0
+Trex	213	3.0	1.0
+Gashouse Gang	211	2.0	-1.0
+Magnum GI	184	1.0	0.0
+TEAM	OBP	PTS	DIF
+Dawg	.3435	13.0	0.0
+Runtime Terror	.3361	12.0	0.0
+Young Guns	.3350	11.0	0.0
+Long Balls	.3324	10.0	1.0
+Big Sticks	.3322	9.0	1.0
+Maga Doge	.3319	8.0	-2.0
+Trex	.3313	7.0	1.0
+Gashouse Gang	.3306	6.0	-1.0
+Rieken Havoc	.3297	5.0	0.0
+Like a Nightmare	.3232	4.0	0.0
+Guillotine	.3214	3.0	0.0
+Magnum GI	.3191	2.0	0.0
+Simba's Dublin Green Sox	.3167	1.0	0.0
+TEAM	R	PTS	DIF
+Dawg	1002	13.0	0.0
+Maga Doge	980	12.0	0.0
+Young Guns	934	11.0	0.0
+Runtime Terror	919	10.0	0.0
+Like a Nightmare	903	9.0	0.0
+Rieken Havoc	901	8.0	1.0
+Big Sticks	892	7.0	-1.0
+Guillotine	877	6.0	0.0
+Gashouse Gang	853	5.0	0.0
+Trex	849	4.0	0.0
+Magnum GI	803	3.0	0.0
+Long Balls	799	2.0	0.0
+Simba's Dublin Green Sox	796	1.0	0.0
+TEAM	RBI	PTS	DIF
+Big Sticks	935	13.0	0.0
+Maga Doge	907	12.0	0.0
+Simba's Dublin Green Sox	875	11.0	1.0
+Dawg	874	10.0	-1.0
+Young Guns	870	9.0	0.0
+Long Balls	856	8.0	0.0
+Runtime Terror	844	7.0	0.0
+Rieken Havoc	827	6.0	0.0
+Like a Nightmare	818	5.0	0.0
+Gashouse Gang	806	4.0	0.0
+Guillotine	792	3.0	0.0
+Magnum GI	754	2.0	0.0
+Trex	723	1.0	0.0
+TEAM	SB	PTS	DIF
+Like a Nightmare	183	13.0	0.0
+Rieken Havoc	166	12.0	0.0
+Maga Doge	154	11.0	2.0
+Simba's Dublin Green Sox	152	10.0	-0.5
+Guillotine	147	8.5	0.5
+Trex	147	8.5	-2.0
+Young Guns	138	7.0	0.5
+Big Sticks	137	6.0	-0.5
+Dawg	127	5.0	0.0
+Magnum GI	117	4.0	0.0
+Runtime Terror	112	3.0	0.0
+Long Balls	101	2.0	0.0
+Gashouse Gang	84	1.0	0.0
+	 	
+Pitching Breakdown
+TEAM	ERA	PTS	DIF
+Runtime Terror	3.517	13.0	0.0
+Guillotine	3.518	12.0	0.0
+Rieken Havoc	3.644	11.0	1.0
+Long Balls	3.663	10.0	-1.0
+Big Sticks	3.666	9.0	1.0
+Gashouse Gang	3.669	8.0	-1.0
+Dawg	3.761	7.0	0.0
+Young Guns	4.021	6.0	1.0
+Simba's Dublin Green Sox	4.078	5.0	-1.0
+Trex	4.094	4.0	0.0
+Like a Nightmare	4.113	3.0	0.0
+Magnum GI	4.252	2.0	1.0
+Maga Doge	4.278	1.0	-1.0
+TEAM	K	PTS	DIF
+Long Balls	1422	13.0	0.0
+Guillotine	1312	12.0	0.0
+Big Sticks	1288	11.0	1.0
+Young Guns	1287	9.5	-1.5
+Like a Nightmare	1287	9.5	0.5
+Maga Doge	1259	7.5	-0.5
+Rieken Havoc	1259	7.5	0.5
+Runtime Terror	1175	6.0	0.0
+Gashouse Gang	1159	5.0	0.0
+Magnum GI	1146	4.0	0.0
+Trex	1118	3.0	0.0
+Dawg	1112	2.0	0.0
+Simba's Dublin Green Sox	1081	1.0	0.0
+TEAM	S	PTS	DIF
+Rieken Havoc	83	12.5	0.5
+Magnum GI	83	12.5	1.5
+Like a Nightmare	82	11.0	-2.0
+Big Sticks	68	10.0	0.0
+Long Balls	62	9.0	0.0
+Trex	55	8.0	0.0
+Gashouse Gang	51	7.0	0.0
+Maga Doge	48	6.0	0.0
+Simba's Dublin Green Sox	44	5.0	1.0
+Runtime Terror	42	4.0	-1.0
+Dawg	34	3.0	0.0
+Guillotine	25	2.0	0.0
+Young Guns	23	1.0	0.0
+TEAM	WHIP	PTS	DIF
+Gashouse Gang	1.1642	13.0	0.0
+Dawg	1.1818	12.0	0.0
+Guillotine	1.1992	11.0	0.0
+Like a Nightmare	1.2043	10.0	0.0
+Young Guns	1.2080	9.0	0.0
+Rieken Havoc	1.2145	8.0	0.0
+Big Sticks	1.2189	7.0	1.0
+Runtime Terror	1.2202	6.0	-1.0
+Simba's Dublin Green Sox	1.2451	5.0	1.0
+Maga Doge	1.2476	4.0	2.0
+Trex	1.2558	3.0	0.0
+Long Balls	1.2562	2.0	-3.0
+Magnum GI	1.3191	1.0	0.0
+TEAM	WQS	PTS	DIF
+Young Guns	186	13.0	0.0
+Guillotine	180	12.0	0.0
+Simba's Dublin Green Sox	171	11.0	0.0
+Big Sticks	166	9.5	0.5
+Dawg	166	9.5	1.5
+Long Balls	163	8.0	-2.0
+Runtime Terror	162	7.0	0.0
+Maga Doge	155	6.0	0.0
+Rieken Havoc	153	4.5	-0.5
+Magnum GI	153	4.5	0.5
+Like a Nightmare	150	3.0	1.0
+Trex	147	2.0	-1.0
+Gashouse Gang	141	1.0	0.0
+STANDINGS UPDATED AS OF 09/20/26 09:42 PM ET
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
