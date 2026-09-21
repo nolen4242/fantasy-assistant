@@ -1,5 +1,5 @@
 # Weekly Brief — Period 27 (locks Monday, per-player)
-Generated 2026-09-21T08:41 · model races-v3 · through period 26
+Generated 2026-09-21T09:10 · model races-v3 · through period 26
 
 ## Standings picture
 - Projected finish: **7th (5th-8th)**, 76.0 pts (p10-p90 71.0-80.0)
