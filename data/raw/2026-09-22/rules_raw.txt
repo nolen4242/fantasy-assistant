@@ -1,0 +1,424 @@
+source: https://buecker.baseball.cbssports.com/rules
+captured: 2026-09-22T08:29:08
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(6th)
+League Details
+ 
+ADD/DROP
+ 
+TRADES
+13 / 13
+WAIVER #
+RULES
+TEAMS & MANAGERS
+FINANCES
+GLOSSARY
+WARNINGS
+LEAGUE IDENTITY
+ 
+DESCRIPTION	SETTING
+League Name	Bob Uecker Imaginary Baseball League
+League URL	https://buecker.baseball.cbssports.com
+League E-mail Address	buecker@baseball.cbssports.com
+Teams	13
+League Entry Fee	$85
+ROSTER LIMITS
+ 
+STATUS	MIN	MAX	
+Active Players	21	21	
+Reserve Players	0	2	
+Injured Players	0	No Limit	
+Minors Players	0	No Limit	
+Total Players	21	No Limit	
+POSITION	ACTIVE MIN	ACTIVE MAX	ROSTER TOTAL
+C	1	1	No Limit
+1B	1	1	No Limit
+2B	1	1	No Limit
+3B	1	1	No Limit
+SS	1	1	No Limit
+MI	1	1	No Limit
+CI	1	1	No Limit
+OF	4	4	No Limit
+U	1	1	No Limit
+P	9	9	No Limit
+EXTRA ROSTER SETTINGS
+Injured players do not count against positional roster limits.
+Minor league players do not count against positional roster limits.
+TRANSACTION SETTINGS
+ 
+DESCRIPTION	SETTING
+Lineup Policy	Managers may set lineups and change players' positions from a list of their eligible positions.
+Lineup Deadline	Lineups are set for each period. Deadline for each player is 5 minutes before gametime on the first game of the period for that player.
+IL Options	Only players who are on the injured list may be placed into Injured status.
+ML Options	Only players in the minor leagues may be placed into Minors status.
+Add/Drop Policy	Add/Drops are handled by a waivers process.
+Waivers Run	The waiver process runs on Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday night.
+Waiver Reset	The waiver order doesn't reset (always based on prior waivers run).
+Waiver Period	Dropped players remain on waivers for at least 1 day(s).
+Waiver Limits	No limit on the number of waiver offers per period.
+Trade Policy	Trades must be approved by the commissioner.
+Trade Deadline	No trades can be made after the trade deadline of 11:59 pm et 8/30/26.
+Offseason Trades	Managers may not make trades during the offseason.
+PLAYER POLICIES
+ 
+DESCRIPTION	SETTING
+Player Eligibility	Players are eligible at their primary position, plus positions they've played 20 games last year or 20 games this year.
+Pitcher Minimums	Pitchers must accumulate at least 1000 innings pitched and can not accumulate more then 1300 innings pitched over the course of the season. If the minimum of 1000 is not reached at the end of the season, the team will be placed in last place in the team ERA and WHIP categories. If the maximum of 1300 is exceeded then the team will stop accruing stats for pitchers after the innings are exceeded.
+Player Pool	AL and NL Players.
+FEES SETTINGS
+ 
+DESCRIPTION	SETTING
+League Entry Fee	85
+Add Fee	2.50
+Trade Flat Fee	2.50
+COMMISH MESSAGE
+ 
+
+
+
+
+
+****************************************************************************
+My phone # is 618-698-2221.
+My email is rjmccann75@gmail.com
+
+Call/text/email with any problems/questions.
+
+
+Thanks, Commish
+
+
+DRAFT SETTINGS
+ 
+DESCRIPTION	SETTING
+Draft Format	Live Draft
+Draft Order Type	Snake
+Draft Date/Time	3/18/26 07:30 pm ET
+Draft Rounds	23 Rounds, with 60 seconds between picks.
+Draft Robot	enabled - picks are made automatically for teams that let the clock expire.
+SCORING SYSTEM
+ 
+BATTING	NAME	SETTINGS
+HR	Home Runs	
+OBP	On Base Pct	
+R	Runs	
+RBI	Runs Batted In	
+SB	Stolen Bases	
+PITCHING	NAME	SETTINGS
+ERA	Earned Run Average	
+K	Strikeouts (Pitcher)	
+S	Saves	
+WHIP	Walks + Hits / Inning	
+WQS	Wins plus Quality Starts	
+SCORING POLICIES
+ 
+DESCRIPTION	SETTING
+Scoring System	Rotisserie
+SCORING PERIODS
+ 
+DESCRIPTION	SETTING
+Period Length	Weekly scoring periods, starting on Mondays
+Periods Start	Monday
+Season Starts	Wed, Mar 25, 2026
+Season Ends	Period 27
+Combine All-Star Period with Following Period	No
+Constitution
+UNDER CONSTRUCTION.......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bob Uecker Imaginary Baseball League Constitution
+A. League Fees
+1) Team owners will pay $85.00 entry fee.
+2) All team owners will prepay minimum $60.00 in transaction fees for season.
+3) Entry fee and minimum transaction fees are due before an owner can draft ($145).
+4) Transactions are $2.50/transaction.
+5) A transaction is a waiver wire addition or trade.
+6) The Commissioner reserves the right to freeze a delinquent owner’s roster until fees are paid.
+7) All owners must pay their own league fees. At no time can the payment of transaction fees be made part of a trade.
+B. Draft
+1) The draft positions are determined by the final standings the previous season (6-last,5-1).
+6th place 1st pick
+7th place 2nd pick
+8th place 3rd pick
+9th place 4th pick
+10th place 5th pick
+11th place 6th pick
+12th place 7th pick
+13th place 8th pick
+14th place 9th pick
+15th place 10th pick
+16th place. 11th pick
+5th place 12th pick
+4th place 13th pick
+3rd place 14th pick
+2nd place 15th pick
+1st place 16th pick
+*NOTE New/Expansion team(s) will pick after 1st place team
+
+*NOTE Ties are broken by:
+1.Most categories won head to head.
+2.Coin flip
+
+
+NOTE:xxxxxxxxx
+
+2) The draft order is as follows:
+Round 1 1-16
+Round 2 16-1
+Round 3 1-16
+Round 4 16-1
+Round 5 1-16
+Round 6 16-1
+and so on...
+(Snake entire draft)
+
+3) Draft is 21 rounds. The following must be selected:
+1 C
+1 1B
+1 3B
+1 2B
+1 SS
+4 OF
+2 Utility (any offensive position)
+9 P (any combination of SP-RP)
+1 Reserve
+
+4) No keepers from previous season.
+
+C. Prize fund
+1) The distribution of the pot (fees-expenses) is as follows:
+1st Place 40% of pot
+2nd Place 21% of pot
+3rd Place 16% of pot
+4th Place 13% of pot
+5th Place 10% of pot
+*Note Ties are broken by:
+1. Most categories won head to head.
+2. If still tied prizes will be split.
+2) At all league monthly meetings $25 from the pot will be used for beverages. The exception to this amount is the pre-season draft, where there is no max. If an owner brings food or drink for the league the amount will be deducted from the owner’s league fees.
+D. The Roster and Roster Maintenance
+1) Each Uecker League owner is responsible for ensuring that his roster meets the position requirements of the League.
+2) Player Pool is NL and AL players.
+3) Each active roster contains 20 players: 11 position players and 9 pitchers. Plus 1 Reserve spot.
+
+
+4) The position players must contain the following:
+1 C
+1 1B
+1 3B
+1 2B
+1 SS
+4 OF
+2 U
+9 P
+
+
+5) A player is eligible at any position that he appeared in 20 games the previous season at MLB level. When a player who is eligible at multiple positions is drafted, that player can only be drafted at one position. The owner must declare a position he is drafting the player at when he is picked. The player can be moved to another position he is eligible after the draft is complete or during the season.
+
+Primary Position & Games Played - Players are eligible at their Primary Position and any positions for which they qualify as a result of Games Played eligibility rules. Primary Position is defined by the CBSSports.com Fantasy Experts prior to the season start and is usually a player's natural position or the position they are supposed to be playing during the upcoming season.
+
+6) In season - If a player who is eligible at a position appears in 20 games at a different position, the owner has the option of moving that player to the new position if he so chooses. There are no limitations on the number of times this player can be switched, but it is the owner’s responsibility to ensure that his roster maintains the proper mix of positions. It is also the owner’s responsibility to provide proof, if challenged, on a particular player’s right to be switched to another position.
+7) There is no longer a SP-RP requirement for the 9 Pitching slots. The following minimum (1000 IP) and maximum (1,400) innings pitched limits will be in place:
+Pitchers must accumulate at least 1000 innings pitched and cannot accumulate more than 1,400 innings pitched over the course of the season. If the minimum of 1000 is not reached at the end of the season, the team will receive zeros in both categories. If the maximum of 1,400 is exceeded then the team will stop accruing stats for pitchers after the innings are exceeded.
+Note: When a team meets the maximum IP, all stats accrued for the rest of that day will count.
+8) When a team meets the maximum IP limit, no transactions involving a pitcher can be made for the rest of the season.
+9) Each owner is responsible to make sure they have the proper mix of position players. If it is discovered at a later date that an owner had an illegal roster, any stats obtained from the player or players that made the roster illegal will be forfeited. Any moves that made the roster illegal will be reversed.
+E. Stats
+1) Stat service-CBS Sports
+2) Stat period runs Monday-Sunday.
+NOTE: 2021, first stat period runs Thu-Sun.
+
+(All lineups are locked for the week 5 minutes prior to the first MLB game of the week)..
+Note: If there are any regular season playoff tiebreaker games the stats count in the standings. The tiebreaker games do not start a new stat period. The last stat period of the regular season is extended to include any tiebreaker games. No lineup moves can be made after the lineup lock of the final stat period.
+3) Scoring-rotisserie style (OBP*,HR,RBI,R,SB,Wins+QS,SV,K,ERA,WHIP).
+4) Pitchers offensive stats do not count, nor do pitching stats of position players.
+F. DL (10-day. 60-day, 7-day***)
+1) In the event that a player goes on the Disabled List, the owner has the following options:
+a) Leave the player active on the roster
+*NOTE: Although league rules do not require replacement of a player who has been placed on the DL, it is considered to be in bad taste if a player who is expected to be out for an extended period of time is not placed on the owner’s DL and replaced.
+b) DL that player and replace him with a player from either the free agent pool, waiver wire, reserve spot or via trade.
+*NOTE: A player cannot be placed on the DL until he is officially placed on the DL by the major league team. The same applies to players sent to the minor leagues.
+2) When a player is removed from the DL, suspended list or called up to the majors from the minors by the major league team the owner has until the end of the following stat period to activate, waive, or trade the player. Failure to do so will result in the player being waived by the Commissioner.
+*NOTE: A player who is suspended by MLB for 10 games or more can be put on teams reserve list. The same applies for any special roster exemption obtained by a major league team for a player. The exemption must be longer than 10 days for a player to be moved to reserve. This “Reserve” spot in this case is not the same as the “Bench” spot.
+***Rules for 7-Day DL for concussions will be treated the same as the 10-day or 60-day DL.
+Note: MLB changed 15-Day DL to 10-Day DL beginning in 2017.
+
+G. Waiver Process
+1) Waiver process-Owners' requests to add players on waivers to their roster are not executed immediately, but are put in a pending status for at least 24 hours. This allows multiple teams to request the same players. The Waiver Process will run between 11:00 PM CST and 5:00 AM CST, executing the pending requests in Waiver Rank order.
+When a transaction is made during the Waiver Process, the team's rank is set to last and everyone else's rank moves up one.
+2) During a waiver process, pending transactions are processed in an order determined by each team's waiver rank. The team with the highest waiver rank will get its first requested player. If that team's highest pending transaction can't be executed because another team has the requested player, the transaction gets deleted and the team's next transaction, if one exists, is then executed. When a team gets a requested player, the team's waiver rank is dropped to the end and every other team moves up one and the process is continued. If a team doesn't have any pending transactions because all players requested were taken by other teams, or the owner simply didn't request any players, the team's turn is skipped but the waiver rank is not dropped. If a team has the highest waiver rank after Monday night and doesn't request any players for Tuesday night's waiver process, that team will still have the highest rank for the next process. The waiver rank for all teams at the end of one waiver process will be the starting rank for the next process.
+3) Dropped players remain on waivers for 1 day before a claim will be processed.
+4) Making a Waivers Claim:
+If you want to drop a player and pick up a player off of waivers follow these steps:
+Let’s say you have a player that you want to drop (player A) and several players that you would like to add (players B and C), depending on their availability when your turn comes up. If player B is not available you would like to pick up player C. In order to accomplish this you would submit two Add/Drop requests:
+Drop player A, Add player B, and
+Drop player A, Add player C.
+Let’s say your turn comes up and player B has already been picked up off waivers by another team. A request cannot be executed if either the add or drop player is not available. Requests will be skipped until the first valid roster move is found. In this case, your second request would be executed and you would get player C (provided he is not also already picked up off waivers).
+The same is true in the reverse. If you dropped player A and added player B, then during your next round of waiver selections it will skip over the second waiver request involving Player A and go down your list to see if you have any other waiver requests.
+Any waivers request that would cause your roster to exceed the maximum players allowed will be skipped.
+5) All transactions during the waiver process are effective for the next scoring period.
+
+H. Free Agent Pool
+*Free Agents are available on a "first come, first serve" basis.
+
+1) No waiver wire player, DL player, or player acquired via trade can be added to a roster without first making room for that player on the active roster. If an owner chooses to pick up a free agent or waiver wire player who is on the DL at the time the player is acquired, the owner must first make room for that player on his active roster and maintain that player on the active roster for at least one stat period. This also pertains to any player who is not currently on a Major League team’s 25-man roster (i.e. minor league player).
+
+
+I. Trades
+1) No trade is official until the League Commissioner has been notified by both teams involved.
+2) In order to have a player acquired in a trade on a team’s active roster for the next stat period, the
+League Commissioner must be notified by both teams before the start of the next stat period.
+3) Each team involved in a trade must ensure that their rosters comply with league rules.
+4) Trades are considered one transaction for each team regardless of number of players involved in the trade.
+5) If a player involved in a trade is currently on the original owners DL, the player can be put on new owners DL at time of trade.
+*NOTE: Same rule in F2 applies regarding the time when player on owners DL must be activated, waived, or traded by new owner.
+6) Trade deadline is 11:59 PM Central the last Sunday in August.
+7) Draft picks, future rights, money, or any other compensation cannot be part of a trade.
+J. League Officer
+1) Commissioner– Primary duties are to act as an arbitrator in any conflicts that may arise, interpret league rules as to their application in a given situation; has authority to invoke “In the best interest of the league” general rule in all situations not covered by league rules. Is responsible for collecting and maintaining league funds. Is responsible for recording and maintaining records of all league transactions. Is responsible for coordination with stat service. Commissioner’s entry fee is waived.
+2) In the case of a disputed trade, the Commissioner will choose two owners at random to arbitrate the trade along with commissioner. These two owners will not be those involved in the trade(if the Commissioner is one of the owners involved in the disputed trade, then a third owner will be chosen at random). Majority rules.
+3) No league rule can be changed during the current season. Rule changes approved by league vote will not take effect until the following season. Majority rules for all rule changes.
+
+
+
+
+
+
+
+
+
+K. Current league members
+
+1.Magnum GI* Gary Ihms
+2.Guillotine* Joe Rieken
+3.Bashers* John Rieken
+4.Roy Hobbs* Bob McCann
+5.Gashouse Gang* Rick Barnes
+6.Simba Jerry Balmer
+7.Like a Nightmare Bobby McCann
+8.Southpaw Joseph Rieken Sr
+9.Big Sticks Drew Sticht
+10.Rieken Havoc Erik Rieken
+11.Young Guns Neil Rieken
+12. Long Balls Justin Palmer
+13. 7th Inning Nachos Ryan Magouirk
+14. Trex Justin Trexler
+15. Carolina Reapers John "Woody" Woodside
+16. Full Send Nolen Smith
+
+
+
+
+
+
+
+
+Some Quotes from HOF BOB UECKER:
+
+"The biggest thrill a ballplayer can have is when your
+son takes after you. That happened when my Bobby was
+in his championship Little League game. He really
+showed me something. Struck out three times. Made an
+error that lost the game. Parents were throwing things
+at our car and swearing at us as we drove off. Gosh, I
+was proud.”
+
+
+“If a guy hits .300 every year, what does he have to
+look forward to? I always tried to stay around .190,
+with three or four RBI. And I tried to get them all in
+September. That way I always had something to talk
+about during the winter.”
+
+“In 1962 I was named Minor League Player of the Year.
+It was my second season in the Bigs.”
+
+"Career highlights? I had two. I got an intentional walk from Sandy
+Koufax and I got out of a rundown against the Mets."
+
+
+
+Refer to the Terms of Use for more information
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

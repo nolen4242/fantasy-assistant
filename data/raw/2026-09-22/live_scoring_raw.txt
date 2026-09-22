@@ -1,0 +1,182 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-09-22T08:29:02
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(6th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+13 / 13
+WAIVER #
+PERIOD
+PERIOD 27 (MON, SEP 21 - SUN, SEP 27)
+
+	
+
+
+		Runtime Terror		
+NCP
+0.00
+		
+BST	94.50
+YGN	87.00
+DWG	87.00
+MD	83.00
+LAN	81.00
+RTT	76.00
+GTN	74.00
+RHV	72.50
+		
+LB	67.50
+SDG	56.50
+GHG	54.00
+TRX	41.00
+MGI	36.00
+	
+
+76.00	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+W. Smith C  	
+ 
+	 
+P. Alonso 1B  	
+BAL 4 v TOR 3 (F)
+	2-4, 2 HR, 3 RBI, 2 R, 0.500 OBP
+K. Clemens 2B  	
+MIN 2 @ SF 5 (F)
+	0-4
+J. Jung 3B  	
+ 
+	 
+D. Swanson SS  	
+ 
+	 
+P. Ramirez MI  	
+ 
+	 
+M. Busch CI  	
+ 
+	 
+D. Canzone OF  	
+ 
+	 
+C. Carroll OF  	
+ 
+	 
+S. Kwan OF  	
+ 
+	 
+G. Mitchell OF  	
+ 
+	 
+Y. Diaz U  	
+ 
+	 
+A. Abbott P   	
+ 
+	 
+S. Gray P   	
+ 
+	 
+L. Henderson P   	
+ 
+	 
+T. Mahle P   	
+ 
+	 
+S. Manaea P   	
+ 
+	 
+D. May P   	
+ 
+	 
+E. Perez P   	
+ 
+	 
+W. Urena P   	
+ 
+	 
+J. deGrom P   	
+ 
+	 
+Today	2-8, 2 HR, 3 RBI, 2 R, 0.250 OBP
+Total	1555-6295, 285 2B, 39 3B, 246 HR, 853 RBI, 927 R, 112 SB, 775 BB, 36 CS, 0.336 OBP
+1181 INN, 19444 PC, 1011 HA, 433 BBI, 1189 K, 463 ER, 3.528 ERA, 1.223 WHIP, 82 W, 64 L, 42 S, 164 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+Stats · Roto Points · Rank
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	BST	264	942	898	137	0.332	1310	3.64	1.21	69	169	94.50
+2nd	YGN	282	871	937	139	0.334	1292	4.01	1.21	23	187	87.00
+2nd	DWG	290	879	1009	127	0.344	1112	3.76	1.18	34	166	87.00
+4th	MD	302	913	987	158	0.332	1275	4.28	1.25	49	157	83.00
+5th	LAN	264	824	908	183	0.323	1306	4.08	1.20	83	153	81.00
+6th	RTT	246	853	927	112	0.336	1189	3.53	1.22	42	164	76.00
+7th	GTN	234	797	883	151	0.322	1313	3.54	1.20	25	180	74.00
+8th	RHV	229	830	906	167	0.330	1268	3.67	1.22	83	153	72.50
+9th	LB	239	859	802	101	0.332	1428	3.66	1.25	62	165	67.50
+10th	SDG	239	878	804	152	0.317	1089	4.08	1.25	45	171	56.50
+11th	GHG	213	812	858	84	0.331	1166	3.65	1.16	52	141	54.00
+12th	TRX	218	731	856	148	0.331	1123	4.09	1.26	56	148	41.00
+13th	MGI	186	759	806	117	0.319	1158	4.26	1.32	83	154	36.00
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn

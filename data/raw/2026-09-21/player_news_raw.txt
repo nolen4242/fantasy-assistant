@@ -1,74 +1,74 @@
 source: https://buecker.baseball.cbssports.com/players/all-player-updates
-captured: 2026-09-21T08:37:48
+captured: 2026-09-21T12:45:17
 ---
+Davidjohn Herz P • WAS
+Nationals' DJ Herz: Activated ahead of Monday's start
+by RotoWire
+(4 mins ago) The Nationals activated Herz (elbow) from the 60-day injured list Monday.
+
+Herz is set to start Monday's game against the Tigers in what will be his first appearance at the major-league level since 2024, as he's completed the long road back from April 2025 Tommy John surgery. The left-hander made 10 rehab starts, posting a 3.16 ERA and 30:7 K:BB over 25.2 innings. Herz threw 4.1 innings and 65 pitches in his last start Sept. 11, so he'll be on a relatively limited workload versus the Tigers.
+
+Aaron Sabato 1B • MIN
+Twins' Aaron Sabato: Added to roster
+by RotoWire
+(8 mins ago) The Twins selected Sabato's contract from Triple-A St. Paul on Monday.
+
+Sabato slashed .273/.349/.528 with 25 home runs and a 41:119 BB:K over 113 games this season with St. Paul to earn his first big-league promotion. The 27-year-old first baseman could eat into the playing time of Royce Lewis, who is slashing just .184/.218/.248 over his last 33 games.
+
+Alex Jackson C • MIN
+Twins' Alex Jackson: Removed from 40-man roster
+by RotoWire
+(11 mins ago) The Twins designated Jackson for assignment Monday.
+
+A spot on the 40-man roster was needed for the addition of Aaron Sabato. Jackson has collected a .748 OPS with one home run and a 2:24 BB:K across 73 plate appearances for the Twins this season. There's a good chance he will clear waivers.
+
+Felix Bautista P • BAL
+Orioles' Felix Bautista: Fans two in season debut
+by RotoWire
+(16 mins ago) Bautista struck out two while allowing one run on two hits and a walk over two-thirds of an inning Sunday against the Brewers.
+
+Bautista made his first appearance for the Orioles in over a year after completing his rehab from 2025 shoulder surgery. The hard-throwing right-hander topped out at 98.1 mph on his sinker, an encouraging sign in spite of a shaky season debut. Bautista could see some high-leverage work in the final week of the campaign, but the focus for him is likely to simply finish the year healthy with an eye toward reclaiming the closer position in 2027.
+
+Sam Hentges P • SF
+Giants' Sam Hentges: Picks up loss Sunday
+by RotoWire
+(1 hr ago) Hentges (1-7) took the loss in Sunday's 3-1 defeat to the Dodgers, allowing an earned run on three hits in one-third of an inning.
+
+Hentges was activated from the 15-day injured list Saturday and returned to big-league action Sunday. The southpaw entered in the seventh inning and retired the first batter he faced before giving up two singles and a double. He now owns a 3.51 ERA, 1.68 WHIP and 35:23 K:BB across 33.1 innings in 41 outings this season.
+
+Jonah Cox OF • SF
+Giants' Jonah Cox: Logs stolen base in Sunday's loss
+by RotoWire
+(1 hr ago) Cox went 0-for-3 with a walk, a stolen base and a run scored in Sunday's 3-1 loss to the Dodgers.
+
+Cox reached base on a leadoff walk in the first inning and later stole third base before coming around to score. Although he's gone hitless in back-to-back outings, the 25-year-old had recorded at least one hit in each of the eight games prior. He's batting .289 with seven runs scored, five RBI and five stolen bases in 43 plate appearances over the last 10 games. On the campaign, Cox is slashing .281/.324/.422 with 25 runs scored, 15 RBI, a team-high 14 stolen bases and four long balls across 143 plate appearances.
+
+Aaron Sabato 1B • MIN
+Twins' Aaron Sabato: Poised for promotion
+by RotoWire
+(3 hrs ago) The Twins will call up Sabato from Triple-A St. Paul prior to Monday's game against the Giants, Bobby Nightengale of the Minneapolis Star-Tribune reports.
+
+A first-round pick in the 2020 First-Year Player Draft, Sabato will receive his first promotion to the big leagues after slashing .273/.349/.528 with 25 home runs and a 41:119 BB:K over 113 games this season with St. Paul. The 27-year-old could get regular reps at first base during the final week of the regular season in place of the struggling Royce Lewis.
+
+Andrew Benintendi OF • CHW
+White Sox's Andrew Benintendi: Enduring tough September
+by RotoWire
+(3 hrs ago) Benintendi went 0-for-2 on Sunday against the Tigers.
+
+Benintendi grounded out and struck out before being lifted for a pinch hitter in the fourth inning. The performance prolonged his sluggish September, as he now has hit .105 with three doubles, two RBI and six runs scored across 16 games. Benintendi also hasn't been in the lineup since July 22 against a lefty, making it difficult to trust him for volume or quality performance down the stretch.
+
+Jesus Luzardo P • PHI
+Phillies' Jesus Luzardo: Resumes throwing Sunday
+by RotoWire
+(4 hrs ago) Luzardo (shoulder) played catch on flat ground Sunday, Matt Gelb of The Athletic reports.
+
+Luzardo was shut down for nine days due to left shoulder inflammation, but he was cleared to play catch after the stiffness dissipated and he regained range of motion in the shoulder. The left-hander will not return from the 15-day injured list before the end of the regular season, but the Phillies are "very optimistic" about Luzardo's progress, per president of baseball operations Dave Dombrowski. If Luzardo is ready for the wild card round, the Phillies could use him in a relief role since he won't have his stamina rebuilt yet.
+
 Yainer Diaz C • HOU
 Astros' Yainer Diaz: Goes deep Sunday
 by RotoWire
-(2 hrs ago) Diaz went 2-for-4 with a solo home run in Sunday's 4-2 loss to Atlanta.
+(6 hrs ago) Diaz went 2-for-4 with a solo home run in Sunday's 4-2 loss to Atlanta.
 
 Diaz cut Houston's deficit to 4-2 in the eighth inning with an opposite-field shot off Ray Kerr, his 13th homer this season. The 28-year-old Diaz has been hot down the stretch, going 19-for-48 (.396) with three homers and a 1.056 OPS in his last 15 games. He's now slashing .278/.309/.446 with 40 RBI and 35 runs scored across 333 plate appearances this season.
-
-Tommy Edman 2B,OF • LAD
-Dodgers' Tommy Edman: Goes yard in Sunday's win
-by RotoWire
-(9 hrs ago) Edman went 1-for-4 with a solo home run in Sunday's 3-1 win over the Giants.
-
-Edman got the Dodgers on the board with a solo shot in the sixth inning. It marked the utility man's first homer since Sept. 5, as he went just 4-for-43 (.093) in 13 games during the dry spell. In 92 contests this season, Edman is slashing .245/.328/.376 with seven homers, 38 RBI, 41 runs and six stolen bases.
-
-Cooper Pratt SS • MIL
-Brewers' Cooper Pratt: Picks up pair of steals
-by RotoWire
-(9 hrs ago) Pratt went 2-for-3 with a walk, two RBI and two stolen bases in Sunday's 3-0 win over the Orioles.
-
-Pratt has gone 11-for-27 (.407) over his last eight games, adding four steals in that stretch. The shortstop is up to 17 thefts on 20 attempts this year as he provides decent speed from the lower third of the order. He's batting .282 with a .721 OPS, three home runs, 33 RBI, 33 runs scored, six doubles and two triples through 69 contests.
-
-Jackson Chourio OF • MIL
-Brewers' Jackson Chourio: Secures 20-20 season again
-by RotoWire
-(9 hrs ago) Chourio went 1-for-3 with a walk and two stolen bases in Sunday's 3-0 win over the Orioles.
-
-With the pair of steals, Chourio is up to 21 thefts on the year. He's secured a third straight 20-20 campaign to begin his career -- he also has a personal-best 24 home runs through just 121 contests. Chourio has picked up the running with seven steals in September alone. He's batting .285 with an .825 OPS across 553 plate appearances.
-
-William Contreras C • MIL
-Brewers' William Contreras: Belts homer in win
-by RotoWire
-(9 hrs ago) Contreras went 1-for-3 with a solo home run and a walk in Sunday's 3-0 win over the Orioles.
-
-Contreras has hit safely in his last nine games, going 11-for-36 (.306) with four homers and 14 RBI in that span. The catcher has been given a couple of full off days down the stretch, and that may continue as the Brewers are running out of things to clinch. Contreras is batting .271 with a .765 OPS, 18 homers, 88 RBI, 82 runs scored, 27 doubles, one triple and one stolen base across 142 contests.
-
-Trevor Megill P • MIL
-Brewers' Trevor Megill: Clean inning for save
-by RotoWire
-(9 hrs ago) Megill struck out one in a perfect inning to earn the save in Sunday's 3-0 win over the Orioles.
-
-Megill has allowed five runs over his last 4.1 innings, including a blown save versus Baltimore on Friday. The closer was sharp in this outing, picking up his 29th save in 32 chances this year. He's added a 2.72 ERA, 0.91 WHIP, 67:15 K:BB and seven holds over 59.2 innings. With one more save over the final week of the campaign, he'll match his career-best total from last year.
-
-Tanner Scott P • LAD
-Dodgers' Tanner Scott: Secures 23rd save
-by RotoWire
-(9 hrs ago) Scott picked up the save in Sunday's 3-1 win over the Giants. He allowed no hits and a walk while striking out one over a scoreless inning.
-
-Entering with a two-run cushion, Scott worked through a two-out walk to secure his 23rd save in 27 opportunities this season. The southpaw has posted a 4.61 ERA, 1.32 WHIP and 18:4 K:BB across 13.2 innings in his past 15 appearances, though much of that damage came in a three-run outing Sept. 13 against the Marlins. On the year, Scott owns a 2.77 ERA, 1.01 WHIP and 78:15 K:BB over 61.2 frames.
-
-Jacob Misiorowski P • MIL
-Brewers' Jacob Misiorowski: Works well in planned short outing
-by RotoWire
-(9 hrs ago) Misiorowski allowed a hit and struck out four without walking a batter over three shutout innings in a no-decision versus the Orioles on Sunday. Per Adam McCalvy of MLB.com, this was an intentionally planned short outing for Misiorowski to keep his innings in check ahead of the postseason.
-
-McCalvy adds that Misiorowski is expected to see more regular usage in his last projected start of the regular season at home versus the Cardinals, which will line him up to take the mound during the ALDS. Since the All-Star break, Misiorowski has allowed just 16 runs (15 earned) over 58.1 innings, adding an 80:15 K:BB in that span. For the year, he's at a 1.86 ERA, 0.80 WHIP and 247:42 K:BB through 169.1 innings over 29 starts. The good news for fantasy managers is that Misiorowski is expected to have one more start even if the Brewers clinch everything they can before it's his turn to pitch again.
-
-Matt Wilkinson P • SF
-Giants' Matt Wilkinson: Fires five scoreless innings Sunday
-by RotoWire
-(10 hrs ago) Wilkinson did not factor into the decision Sunday, allowing three hits and no walks over five scoreless innings against the Dodgers. He struck out six.
-
-Wilkinson silenced the Dodgers offense, spinning five shutout innings before departing at 76 pitches (51 strikes). Sunday marked the rookie's first start since Sept. 4, as his previous two outings came from the bullpen. In seven appearances (five starts), the southpaw owns a 1-3 record with a 3.65 ERA, 1.01 WHIP and 18:4 K:BB in 24.2 frames. Should Wilkinson remain in the rotation, he's lined up to start Saturday in a rematch with Los Angeles.
-
-Brandon Young P • BAL
-Orioles' Brandon Young: Takes fifth loss
-by RotoWire
-(10 hrs ago) Young (9-5) allowed two runs on three hits and three walks while striking out nine over six innings to take the loss versus the Brewers on Sunday.
-
-Young had a decent performance, but he didn't get any run support. The nine strikeouts were a season high for the right-hander, who continues to produce mostly good outings despite being winless over his last seven games. He's at a 3.62 ERA, 1.36 WHIP and 127:58 K:BB through 151.2 innings over 27 starts this season. He's projected to wrap up his campaign with a road matchup against the Yankees.
 
 More Player News
