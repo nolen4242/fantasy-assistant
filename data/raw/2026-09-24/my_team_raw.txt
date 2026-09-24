@@ -1,0 +1,155 @@
+source: https://buecker.baseball.cbssports.com/teams
+captured: 2026-09-24T07:02:26
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror 
+Nolen Smith
+(5th)
+ 
+ADD/DROP
+ 
+TRADES
+13 / 13
+WAIVER #
+YEAR
+2026
+PERIOD
+OFF SEASON
+OVERVIEW
+STATS
+PROJECTIONS
+RANKINGS
+SCHEDULE
+MATCHUP
+NEWS
+3 YEAR AVERAGE
+YEAR TO DATE
+YESTERDAY
+LAST 7
+LAST 14
+LAST 21
+LAST 28
+BATTERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	AB	R	H	1B	2B	3B	HR	RBI	BB	KO	SB	CS	BA	OBP	SLG	ROTO RANK
+
+	C	Will Smith C • LAD 	228	34	57	38	9	0	10	34	34	43	0	0	.250	.349	.421	437
+
+	1B	Pete Alonso 1B • BAL	594	96	157	92	24	0	41	110	79	167	5	1	.264	.359	.512	8
+
+	2B	Kody Clemens 1B,2B,OF • MIN 	519	73	122	67	22	7	26	76	39	127	9	2	.235	.296	.455	86
+
+	3B	Josh Jung 3B • TEX	395	52	116	78	26	1	11	40	34	80	1	1	.294	.358	.448	250
+
+	SS	Dansby Swanson SS • CHC 	418	81	91	53	16	3	19	69	50	111	17	1	.218	.302	.407	94
+
+	MI	Pedro Ramirez 2B,3B • CHC	231	36	60	40	12	2	6	32	19	46	7	1	.260	.316	.407	392
+
+	CI	Michael Busch 1B • CHC	586	77	141	92	27	2	20	77	91	162	3	2	.241	.352	.396	137
+
+	OF	Dominic Canzone OF • SEA	461	57	121	68	27	4	22	75	45	108	2	1	.263	.333	.482	141
+
+	OF	Corbin Carroll OF • ARI	567	90	136	65	32	17	22	75	72	147	21	3	.240	.330	.473	47
+
+	OF	Steven Kwan OF • CLE	529	78	149	123	21	2	3	31	81	62	10	3	.282	.379	.346	211
+
+	OF	Garrett Mitchell OF • MIL	448	71	118	73	30	4	11	65	58	162	14	9	.263	.355	.422	127
+
+	U	Yandy Diaz 1B • TB 	602	88	175	127	25	1	22	85	55	98	3	1	.291	.357	.445	42
+RESERVES
+
+	OF	Aaron Judge OF • NYY 	237	45	57	29	10	0	18	41	43	85	5	3	.240	.360	.510	255
+INJURED
+MINORS
+PITCHERS
+SET YOUR DEFAULT VIEW
+
+EDIT	POS	PLAYERS	INNS	GS	QS	CG	W	L	S	BS	K	BBI	HA	ERA	WHIP	ROTO RANK
+
+	P	Andrew Abbott P • CIN 	166	32	12	0	6	11	0	0	131	76	165	4.61	1.45	622
+
+	P	Sonny Gray P • BOS 	169	29	20	0	18	5	0	0	149	46	148	2.72	1.15	52
+
+	P	Logan Henderson P • MIL 	98	18	7	0	11	3	0	0	110	19	64	2.47	0.84	124
+
+	P	Tyler Mahle P • ATL	144	26	10	0	7	10	0	0	133	44	132	3.81	1.22	302
+
+	P	Sean Manaea P • NYM 	144	18	7	0	6	7	0	0	141	43	145	4.67	1.30	451
+
+	P	Eury Perez P • MIA	150	28	11	0	7	11	0	0	162	67	123	4.14	1.27	299
+
+	P	Mike Soroka P • ARI 	111	20	8	0	9	5	0	0	110	27	94	3.31	1.09	224
+
+	P	Walbert Urena P • LAA 	148	27	13	1	9	11	0	0	142	68	114	2.97	1.23	196
+
+	P	Jacob deGrom P • TEX	158	30	12	0	11	10	0	0	196	43	131	3.86	1.10	120
+RESERVES
+INJURED
+
+	P	Chase Dollander P • COL 	44	3	1	0	3	3	0	0	47	18	39	3.89	1.30	657
+MINORS
+ACTIVE: 21 RESERVE: 1 INJURED: 1
+Min/Max Info
+	IP
+Year to Date	1217.0
+On Pace	1258.4
+Rules	1000-1300
+Status	83.0 left
+Note: stats in the 'matchups' view represent each player's career totals vs opponent as labeled.
+Blue = Player is cold vs this pitcher/team.
+Red = Player is hot vs this pitcher/team.
+Probable StartStarting TodayInjurySuspendedPlayer NewsHot PlayerCold Player
+Game may be delayed or rained outGame is likely to be delayed or rained out
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
