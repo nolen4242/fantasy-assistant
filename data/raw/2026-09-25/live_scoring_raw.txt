@@ -1,0 +1,203 @@
+source: https://buecker.baseball.cbssports.com/scoring/standard
+captured: 2026-09-25T12:37:50
+---
+League
+My Team
+Players
+Scores
+Standings
+Advice
+Bob Uecker Imaginary Baseball League
+Runtime Terror
+Runtime Terror
+(5th)
+Live Scoring
+ 
+ADD/DROP
+ 
+TRADES
+13 / 13
+WAIVER #
+PERIOD
+PERIOD 27 (MON, SEP 21 - SUN, SEP 27)
+
+	
+
+
+		Runtime Terror		
+NCP
++5.00
+		
+YGN	90.00
+BST	88.00
+DWG	86.00
+MD	82.00
+LAN	81.00
+RTT	81.00
+GTN	76.00
+RHV	71.50
+		
+LB	67.50
+SDG	56.50
+GHG	55.00
+TRX	42.00
+MGI	33.50
+	
+
+81.00	
+NCT
+0.00
+
+
+
+NCP = Net Change Period   NCT = Net Change Today
+Actives	Games	Stats
+W. Smith C  	
+LAD @ SF 9:15 CDT
+LAD -333, SF +260
+	 
+P. Alonso 1B  	
+BAL @ NYY 6:35 CDT
+BAL +100, NYY -120
+	 
+K. Clemens 2B  	
+MIN v TEX 7:10 CDT
+TEX -115, MIN -105
+	 
+J. Jung 3B  	
+TEX @ MIN 7:10 CDT
+TEX -115, MIN -105
+	 
+D. Swanson SS  	
+CHC @ BOS 4:35 CDT
+CHC -115, BOS -105
+	0-1, R
+P. Ramirez MI  	
+CHC @ BOS 4:35 CDT
+CHC -115, BOS -105
+	 
+M. Busch CI  	
+CHC @ BOS 4:35 CDT
+CHC -115, BOS -105
+	1-1, R, 1.000 OBP
+D. Canzone OF  	
+SEA v LAA 9:10 CDT
+LAA +100, SEA -120
+	 
+C. Carroll OF  	
+ARI @ SD 8:40 CDT
+ARI +110, SD -133
+	 
+S. Kwan OF  	
+CLE @ KC 6:40 CDT
+CLE -143, KC +118
+	 
+G. Mitchell OF  	
+MIL v STL 6:40 CDT
+STL +155, MIL -189
+	 
+Y. Diaz U  	
+TB @ PHI 5:40 CDT
+TB +150, PHI -182
+	 
+A. Abbott P  	
+CIN @ TOR 6:07 CDT
+CIN +110, TOR -133
+	 
+S. Gray P  	
+BOS v CHC 4:35 CDT
+CHC -115, BOS -105
+	 
+L. Henderson P  	
+MIL v STL 6:40 CDT
+STL +155, MIL -189
+	 
+T. Mahle P  	
+ATL @ MIA 6:10 CDT
+ATL -118, MIA -102
+	 
+S. Manaea P   	
+NYM @ WAS 5:45 CDT
+NYM -110, WAS -110
+	 
+E. Perez P   	
+MIA v ATL 6:10 CDT
+ATL -118, MIA -102
+	 
+M. Soroka P   	
+ARI @ SD 8:40 CDT
+ARI +110, SD -133
+	 
+W. Urena P  	
+LAA @ SEA 9:10 CDT
+LAA +100, SEA -120
+	 
+J. deGrom P   	
+TEX @ MIN 7:10 CDT
+TEX -115, MIN -105
+	 
+Today	1-2, 2 R, 0.500 OBP
+Total	1586-6422, 288 2B, 40 3B, 249 HR, 871 RBI, 939 R, 114 SB, 788 BB, 36 CS, 0.336 OBP
+1222 INN, 20086 PC, 1043 HA, 444 BBI, 1228 K, 479 ER, 3.528 ERA, 1.217 WHIP, 86 W, 65 L, 42 S, 172 WQS
+Show Reserves  ·  Show Scout Team  ·  Show Legend  ·  Show Scoring System  ·  Yesterday's Stats
+YTD Stats · YTD Roto Points · YTD Rank · Daily Stats · Daily Trend
+TEAM RANKINGS
+RANK	TEAM	HR	RBI	R	SB	OBP	K	ERA	WHIP	S	WQS	TOTAL
+1st	YGN	292	889	955	142	0.334	1332	3.98	1.21	23	189	90.00
+2nd	BST	268	958	908	140	0.331	1310	3.64	1.21	69	169	88.00
+3rd	DWG	293	888	1023	134	0.344	1149	3.72	1.17	34	170	86.00
+4th	MD	307	930	1002	164	0.333	1292	4.29	1.25	50	159	82.00
+5th	LAN	269	841	927	184	0.323	1311	4.10	1.20	84	153	81.00
+5th	RTT	249	871	939	114	0.336	1228	3.53	1.22	42	172	81.00
+7th	GTN	236	811	906	156	0.322	1338	3.54	1.20	27	184	76.00
+8th	RHV	232	840	919	169	0.329	1291	3.67	1.22	84	155	71.50
+9th	LB	243	873	815	103	0.331	1452	3.64	1.25	63	168	67.50
+10th	SDG	243	891	821	154	0.317	1112	4.06	1.24	47	171	56.50
+11th	GHG	215	822	870	85	0.331	1175	3.63	1.16	54	143	55.00
+12th	TRX	220	740	869	152	0.332	1143	4.11	1.26	57	148	42.00
+13th	MGI	187	763	809	119	0.318	1174	4.25	1.32	84	155	33.50
+More
+Pick'em Games
+Fantasy Sports
+Free Sports TV
+Best Betting Apps
+Best Prediction Apps
+March Madness
+Mobile Apps
+Company
+About Us
+Careers
+About Paramount
+Paramount+
+CBS TV
+Regulation
+Terms Of Use
+Privacy Policy
+Minors' Privacy Policy
+Your Privacy Choices
+Closed Captioning
+California Notice
+Contact Us
+Help
+Customer Care
+Social Media
+YouTube
+TikTok
+Instagram
+Facebook
+X
+Threads
+Flipboard
+Account
+Manage My Account
+Newsletters
+My Teams
+Forgot Password
+
+© 2004-2025 CBS Interactive. ALL RIGHTS RESERVED.
+
+CBS Sports is a registered trademark of CBS Broadcasting Inc. Commissioner is a registered service mark of CBS Interactive Inc. Scout Fantasy is a registered service mark of CBS 247 Inc.
+
+The content on this site is for entertainment purposes only and CBS Sports makes no representation or warranty as to the accuracy of the information given or the outcome of any game or event. There is no gambling offered on this site. This site contains commercial content and CBS Sports may be compensated for the links provided on this site.
+
+Images by Getty Images and Imagn
